@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,49 +6,46 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 26% 10%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 210 20% 98%;
-    --card-foreground: 220 26% 10%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 10%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 347 77% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 98%;
-    --secondary-foreground: 220 26% 10%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 14% 45%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 53%;
 
     --accent: 347 77% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
     --ring: 347 77% 50%;
 
-    --radius: 0.25rem;
+    --radius: 0px;
 
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Montserrat', 'Helvetica Neue', sans-serif;
 
-    --shadow-editorial: 0 2px 40px -12px hsl(220 26% 10% / 0.12);
-    --shadow-card-hover: 0 8px 50px -16px hsl(220 26% 10% / 0.18);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 0% 90%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 13%;
     --sidebar-ring: 347 77% 50%;
   }
 }
@@ -79,30 +76,25 @@
     font-family: var(--font-body);
   }
 
+  .card-editorial {
+    @apply border-b border-border pb-10 transition-all duration-500 ease-out;
+  }
+
+  .card-editorial:hover img {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+
+  .card-promo {
+    @apply bg-primary text-primary-foreground flex flex-col items-center justify-center text-center p-12 md:p-16;
+  }
+
+  .badge-category {
+    @apply text-xs font-black tracking-[2px] uppercase text-primary;
+  }
+
   .nav-frosted {
     @apply backdrop-blur-xl;
-    background: hsl(0 0% 100% / 0.85);
-  }
-
-  .card-editorial {
-    @apply overflow-hidden transition-all duration-500 ease-out;
-    box-shadow: var(--shadow-editorial);
-  }
-
-  .card-editorial:hover {
-    box-shadow: var(--shadow-card-hover);
-    transform: translateY(-4px);
-  }
-
-  .badge-boutique {
-    @apply text-xs font-semibold tracking-widest uppercase px-3 py-1;
-    font-family: var(--font-body);
-    color: hsl(var(--primary));
-    border: 1px solid hsl(var(--primary) / 0.3);
-    background: hsl(var(--primary) / 0.05);
-  }
-
-  .border-accent-subtle {
-    border-color: hsl(var(--primary) / 0.2);
+    background: hsl(0 0% 0% / 0.85);
   }
 }

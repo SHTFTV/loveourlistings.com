@@ -8,32 +8,23 @@ const AdCard = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5 }}
-      className="card-editorial border border-accent-subtle bg-background"
+      className="card-promo"
     >
-      <div className="overflow-hidden aspect-[4/3]">
-        <img
-          src={heartSign}
-          alt="The Unforgettable Heart-Shaped Sign"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="p-6">
-        <div className="mb-3">
-          <span className="badge-boutique">Boutique Pick</span>
-        </div>
-        <h3 className="font-display text-xl md:text-2xl text-foreground leading-snug mb-2">
-          The Unforgettable Heart-Shaped Sign
-        </h3>
-        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-          Don't just list a home. Make them fall in love with it.
-        </p>
-        <a
-          href="/shop/heart-sign"
-          className="inline-block font-body text-sm font-semibold tracking-widest uppercase text-primary hover:text-primary/80 transition-colors duration-300"
-        >
-          Shop Now →
-        </a>
-      </div>
+      <p className="font-body text-xs tracking-[5px] uppercase text-primary-foreground/80 mb-5">
+        The Signature Collection
+      </p>
+      <h2 className="font-display text-4xl md:text-5xl font-black text-primary-foreground leading-none mb-6">
+        THE HEART-SHAPED SIGN.
+      </h2>
+      <p className="font-body text-base text-primary-foreground/90 max-w-md mb-8">
+        Unforgettable branding for the world's most prestigious listings.
+      </p>
+      <a
+        href="/shop/heart-sign"
+        className="inline-block border-2 border-primary-foreground text-primary-foreground font-black text-xs tracking-[2px] uppercase py-5 px-10 hover:bg-primary-foreground hover:text-primary transition-all duration-300"
+      >
+        Shop Signs
+      </a>
     </motion.div>
   );
 };
