@@ -1,17 +1,25 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import EditorialFeed from "@/components/EditorialFeed";
-import FeaturedRealtors from "@/components/FeaturedRealtors";
-import Footer from "@/components/Footer";
+import HeroSearch from "@/components/HeroSearch";
+import FeaturedProfessionals from "@/components/FeaturedProfessionals";
+import RecentNews from "@/components/RecentNews";
+import FeaturedDestinations from "@/components/FeaturedDestinations";
+import NoteworthyListings from "@/components/NoteworthyListings";
+import DiscoverCards from "@/components/DiscoverCards";
+import WorldwideLuxury from "@/components/WorldwideLuxury";
+import FooterFull from "@/components/FooterFull";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <Hero />
-      <FeaturedRealtors />
-      <EditorialFeed />
-      <Footer />
+      <HeroSearch />
+      <FeaturedProfessionals />
+      <RecentNews />
+      <FeaturedDestinations />
+      <NoteworthyListings />
+      <DiscoverCards />
+      <WorldwideLuxury />
+      <FooterFull />
     </div>
   );
 };
