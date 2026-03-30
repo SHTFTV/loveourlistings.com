@@ -28,12 +28,18 @@ const Navbar = () => {
           {["Journal", "Celebrity Estates", "Shop Signs"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
+              href={`/#${item.toLowerCase().replace(/\s/g, "-")}`}
               className="font-body text-xs font-semibold tracking-[3px] uppercase text-foreground/50 hover:text-primary transition-colors duration-300"
             >
               {item}
             </a>
           ))}
+          <a
+            href="/realtor/becky-zhou-hill"
+            className="font-body text-xs font-semibold tracking-[3px] uppercase text-foreground/50 hover:text-primary transition-colors duration-300"
+          >
+            Realtors
+          </a>
         </nav>
       </div>
     </motion.header>
