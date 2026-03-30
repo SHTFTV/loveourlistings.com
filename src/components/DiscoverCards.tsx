@@ -9,7 +9,7 @@ const cards = [
   {
     title: "Destinations",
     description: "Noteworthy cities and regions.",
-    image: "https://images.unsplash.com/photo-1559511260-66a68e7e3764?w=800&q=80",
+    image: "/9bbbf923-25e7-44ee-838e-a881a37445a7.png",
   },
   {
     title: "Heart Signs",
