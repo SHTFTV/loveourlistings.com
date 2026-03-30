@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 const featuredListings = [
   {
@@ -30,31 +31,62 @@ const featuredListings = [
 
 const HeroSearch = () => {
   return (
-    <section className="pt-24 pb-8 bg-background">
-      {/* Search Bar */}
-      <div className="max-w-4xl mx-auto px-6 mb-10">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center border border-border bg-card"
-        >
-          <select className="bg-transparent text-foreground font-body text-xs tracking-wider uppercase px-5 py-4 border-r border-border outline-none cursor-pointer">
-            <option>Homes For Sale</option>
-            <option>Homes For Rent</option>
-          </select>
-          <div className="flex-1 flex items-center px-4">
-            <Search className="w-4 h-4 text-muted-foreground mr-3 shrink-0" />
-            <input
-              type="text"
-              placeholder="Search by location, company, or description"
-              className="w-full bg-transparent text-foreground font-body text-sm py-4 outline-none placeholder:text-muted-foreground"
-            />
-          </div>
-          <button className="bg-primary text-primary-foreground font-body text-xs font-bold tracking-[2px] uppercase px-8 py-4 hover:opacity-90 transition-opacity">
-            Search
-          </button>
-        </motion.div>
+    <section className="relative bg-background">
+      {/* Video Hero */}
+      <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          src={heroVideo.url}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+
+        {/* Hero Content Overlay */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-primary text-5xl md:text-6xl mb-3">♥</div>
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none">
+              LUXURY HEART
+            </h1>
+            <p className="font-body text-xs tracking-[4px] uppercase text-white/60 mt-3">
+              The Fraser Valley's Premier Real Estate &amp; Lifestyle Portfolio
+            </p>
+          </motion.div>
+
+          {/* Search Bar overlaid on video */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-10 w-full max-w-3xl"
+          >
+            <div className="flex items-center bg-white/95 backdrop-blur-sm shadow-2xl">
+              <select className="bg-transparent text-foreground font-body text-xs tracking-wider uppercase px-5 py-4 border-r border-border outline-none cursor-pointer">
+                <option>Homes For Sale</option>
+                <option>Homes For Rent</option>
+              </select>
+              <div className="flex-1 flex items-center px-4">
+                <Search className="w-4 h-4 text-muted-foreground mr-3 shrink-0" />
+                <input
+                  type="text"
+                  placeholder="Search by location, company, or description"
+                  className="w-full bg-transparent text-foreground font-body text-sm py-4 outline-none placeholder:text-muted-foreground"
+                />
+              </div>
+              <button className="bg-primary text-primary-foreground font-body text-xs font-bold tracking-[2px] uppercase px-8 py-4 hover:opacity-90 transition-opacity">
+                Search
+              </button>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Featured Listings Row */}
