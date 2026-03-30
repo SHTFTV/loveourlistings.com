@@ -7,6 +7,7 @@ const listings = [
     agent: "Mauricio Umansky — The Agency",
     location: "Bel Air, Los Angeles, CA",
     badge: null,
+    url: "https://www.theagencyre.com/listing/bel-air/",
   },
   {
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
@@ -14,6 +15,7 @@ const listings = [
     agent: "Ryan Serhant — SERHANT.",
     location: "Manhattan, New York, NY",
     badge: null,
+    url: "https://www.serhant.com/sales",
   },
   {
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
@@ -21,6 +23,7 @@ const listings = [
     agent: "Knight Frank",
     location: "Cap Ferrat, Côte d'Azur, France",
     badge: "LUXURY PROPERTY AUCTION",
+    url: "https://www.knightfrank.com/properties/residential",
   },
   {
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
@@ -28,6 +31,7 @@ const listings = [
     agent: "Compass — Josh Flagg",
     location: "Holmby Hills, Los Angeles, CA",
     badge: null,
+    url: "https://www.compass.com/agents/josh-flagg/",
   },
   {
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
@@ -35,6 +39,7 @@ const listings = [
     agent: "Sotheby's International Realty",
     location: "Palm Beach, FL",
     badge: null,
+    url: "https://www.sothebysrealty.com/eng/sales/palm-beach-fl-usa",
   },
   {
     image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
@@ -42,6 +47,7 @@ const listings = [
     agent: "Douglas Elliman",
     location: "Miami Beach, FL",
     badge: null,
+    url: "https://www.elliman.com/miami-beach",
   },
   {
     image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80",
@@ -49,6 +55,7 @@ const listings = [
     agent: "Christie's International Real Estate",
     location: "Aspen, CO",
     badge: null,
+    url: "https://www.christiesrealestate.com/search/aspen-co",
   },
   {
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
@@ -56,6 +63,7 @@ const listings = [
     agent: "Hilton & Hyland",
     location: "Malibu, CA",
     badge: null,
+    url: "https://www.hiltonhyland.com/listings/",
   },
 ];
 
@@ -79,13 +87,16 @@ const NoteworthyListings = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {listings.map((listing, i) => (
-            <motion.div
+            <motion.a
               key={i}
+              href={listing.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer block"
             >
               <div className="relative overflow-hidden h-[200px] lg:h-[220px] bg-card">
                 <img
@@ -105,7 +116,7 @@ const NoteworthyListings = () => {
                 <p className="font-body text-xs text-primary mt-0.5">{listing.agent}</p>
                 <p className="font-body text-xs text-muted-foreground">{listing.location}</p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </motion.div>
