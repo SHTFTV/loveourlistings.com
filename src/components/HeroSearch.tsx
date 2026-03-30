@@ -55,7 +55,7 @@ const HeroSearch = () => {
           >
             <img src={siteLogo} alt="Luxury Heart Portfolio" className="h-16 md:h-24 mx-auto mb-3" />
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none">
-              LUXURY HEART
+              Love Our Listings
             </h1>
             <p className="font-body text-xs tracking-[4px] uppercase text-white/60 mt-3">
               The Fraser Valley's Premier Real Estate &amp; Lifestyle Portfolio
