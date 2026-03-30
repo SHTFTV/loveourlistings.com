@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import destinationsImage from "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png";
+import worldwideSearchImage from "@/assets/6ea6dd66-8c0d-4af2-a853-91f69f6e31e0.png";
 
 const cards = [
   {
     title: "Worldwide Search",
     description: "Homes for Sale and for rent.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    image: worldwideSearchImage,
   },
   {
     title: "Destinations",
