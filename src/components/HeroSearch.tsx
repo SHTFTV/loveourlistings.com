@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import siteLogo from "@/assets/logo.png";
 
 const featuredListings = [
   {
