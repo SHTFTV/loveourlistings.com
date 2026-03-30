@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import destinationsImage from "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png";
 
 const cards = [
   {
@@ -9,7 +10,7 @@ const cards = [
   {
     title: "Destinations",
     description: "Noteworthy cities and regions.",
-    image: "/9bbbf923-25e7-44ee-838e-a881a37445a7.png",
+    image: destinationsImage,
   },
   {
     title: "Heart Signs",
