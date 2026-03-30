@@ -14,7 +14,7 @@ const cards = [
   {
     title: "Heart Signs",
     description: "Unforgettable boutique branding.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    image: "/5bc6627e-6f18-42aa-b9d4-5a22d1c20b63.png",
   },
 ];
 
