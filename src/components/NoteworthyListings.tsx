@@ -87,13 +87,16 @@ const NoteworthyListings = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {listings.map((listing, i) => (
-            <motion.div
+            <motion.a
               key={i}
+              href={listing.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer block"
             >
               <div className="relative overflow-hidden h-[200px] lg:h-[220px] bg-card">
                 <img
@@ -113,7 +116,7 @@ const NoteworthyListings = () => {
                 <p className="font-body text-xs text-primary mt-0.5">{listing.agent}</p>
                 <p className="font-body text-xs text-muted-foreground">{listing.location}</p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </motion.div>
