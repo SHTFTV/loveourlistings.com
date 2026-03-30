@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import siteLogo from "@/assets/logo.png";
 
 const featuredListings = [
   {
@@ -52,7 +53,7 @@ const HeroSearch = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-primary text-5xl md:text-6xl mb-3">♥</div>
+            <img src={siteLogo} alt="Luxury Heart Portfolio" className="h-16 md:h-24 mx-auto mb-3" />
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none">
               LUXURY HEART
             </h1>
