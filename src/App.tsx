@@ -172,6 +172,7 @@ const agentRoutes = [
   { path: "/agents/marrakech", component: lazy(() => import("./pages/agents/MarrakechAgents.tsx")) },
   { path: "/agents/cape-town", component: lazy(() => import("./pages/agents/CapeTownAgents.tsx")) },
   { path: "/agents/mykonos", component: lazy(() => import("./pages/agents/MykonosAgents.tsx")) },
+  { path: "/agents/new-york", component: lazy(() => import("./pages/agents/NewYorkAgents.tsx")) },
 ];
 
 const countryRoutes = [
