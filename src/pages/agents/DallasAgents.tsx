@@ -30,10 +30,10 @@ const agents = [
 const DallasAgents = () => (
   <CityAgentsPage
     city="Dallas"
-    region="TX, US"
+    region="Texas, United States"
     heroImage="https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=1920&h=1080&fit=crop"
-    intro="Dallas offers a distinguished luxury real estate market with exceptional properties ranging from Highland Park estates to modern Turtle Creek high-rises. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Dallas, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Dallas-Fort Worth is Texas' premier luxury real estate market, anchored by the historic estates of Highland Park, the gated compounds of Preston Hollow, and the soaring high-rises of Turtle Creek — where single-family homes routinely trade above $5 million. The city's top luxury agents leverage deep local knowledge and Sotheby's International reach to represent some of the most architecturally significant properties in the American South."
+    whyContact="Whether you're acquiring a Highland Park estate on Beverly Drive or marketing a Preston Hollow compound, these top-ranked Dallas agents deliver the pricing strategy, buyer networks, and bespoke marketing that ultra-luxury properties require. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

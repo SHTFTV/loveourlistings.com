@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Star, ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -33,8 +34,42 @@ const CityAgentsPage = ({
   whyContact,
   agents,
 }: CityAgentsPageProps) => {
+  const pageTitle = `Top Luxury Real Estate Agents in ${city} — Love Our Listings`;
+  const metaDesc = `Find the best luxury real estate agents in ${city}, ${region}. Love Our Listings connects you with top-producing realtors specializing in ultra-luxury homes, waterfront estates, and exclusive properties.`;
+
+  useEffect(() => {
+    document.title = pageTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) metaDescription.setAttribute("content", metaDesc);
+    else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = metaDesc;
+      document.head.appendChild(meta);
+    }
+    return () => { document.title = "Love Our Listings — Luxury Real Estate Agents & Homes for Sale Worldwide"; };
+  }, [city, region]);
+
+  // JSON-LD for city agent pages
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": `Love Our Listings — ${city}`,
+    "url": `https://loveourlistings.com/agents/${city.toLowerCase().replace(/\s+/g, '-')}`,
+    "description": metaDesc,
+    "areaServed": { "@type": "City", "name": city },
+    "address": { "@type": "PostalAddress", "addressLocality": city, "addressRegion": region },
+    "member": agents.map(a => ({
+      "@type": "RealEstateAgent",
+      "name": a.name,
+      "worksFor": { "@type": "Organization", "name": a.brokerage },
+      "knowsAbout": a.specialty,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* Hero */}

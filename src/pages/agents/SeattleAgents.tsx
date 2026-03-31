@@ -30,10 +30,10 @@ const agents = [
 const SeattleAgents = () => (
   <CityAgentsPage
     city="Seattle"
-    region="WA, US"
+    region="Washington, United States"
     heroImage="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&h=1080&fit=crop"
-    intro="Seattle offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates on Lake Washington to modern high-rises in Belltown. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Seattle, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Seattle's luxury real estate market blends Pacific Northwest natural beauty with tech-driven wealth, spanning waterfront estates on Lake Washington, architecturally stunning homes in Mercer Island, and modern penthouses in Belltown and Capitol Hill. Home to Amazon, Microsoft, and a thriving tech ecosystem, Seattle's $5M+ segment has seen sustained demand from executives and entrepreneurs who value privacy, design, and proximity to the outdoors."
+    whyContact="Whether you're acquiring a Medina waterfront estate or marketing a Queen Anne architectural gem, these top-ranked Seattle agents deliver the pricing intelligence, tech-forward marketing, and buyer networks that luxury properties demand. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

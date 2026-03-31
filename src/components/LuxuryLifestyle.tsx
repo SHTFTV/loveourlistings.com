@@ -35,11 +35,11 @@ const LuxuryLifestyle = () => {
         <div className="flex items-center gap-3 mb-8">
           <Newspaper className="h-6 w-6 text-primary" />
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
-            Luxury Lifestyle
+            Luxury Real Estate News &amp; Market Insights
           </h2>
         </div>
         <p className="text-muted-foreground mb-8 max-w-2xl">
-          The latest from the world of luxury real estate — powered live from Mansion Global.
+          Breaking luxury real estate news, market analysis, and lifestyle features — curated live from leading industry sources.
         </p>
 
         {isLoading ? (

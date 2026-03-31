@@ -30,10 +30,10 @@ const agents = [
 const HoustonAgents = () => (
   <CityAgentsPage
     city="Houston"
-    region="TX, US"
+    region="Texas, United States"
     heroImage="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&h=1080&fit=crop"
-    intro="Houston offers a distinguished luxury real estate market with exceptional properties ranging from River Oaks estates to modern Memorial mansions. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Houston, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Houston's luxury real estate market is defined by the stately mansions of River Oaks — Texas' most prestigious address — alongside sprawling Memorial estates, European-influenced Tanglewood properties, and modern high-rises in the Galleria and Upper Kirby districts. With luxury home prices ranging from $2 million to $30 million+, Houston's top agents navigate a market driven by energy executives, medical professionals, and international investors."
+    whyContact="Whether you're acquiring a River Oaks estate or marketing a Memorial compound, these top-producing Houston agents bring decades of luxury expertise, exclusive buyer networks, and the white-glove service that ultra-luxury properties demand. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

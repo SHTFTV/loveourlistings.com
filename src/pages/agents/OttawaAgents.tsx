@@ -36,8 +36,8 @@ const OttawaAgents = () => (
     city="Ottawa"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Ottawa's luxury real estate market offers distinguished estate homes in Rockcliffe Park, heritage properties in The Glebe, and waterfront estates along the Rideau Canal. As Canada's capital, the city attracts diplomats, executives, and discerning buyers seeking refined living. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're acquiring a Rockcliffe Park estate or marketing a Westboro luxury home, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Ottawa's luxury real estate market is uniquely shaped by its role as Canada's capital. Rockcliffe Park — home to embassies and the Governor General's residence — features some of the country's most distinguished estate properties. The Glebe offers character-rich heritage homes, while New Edinburgh and Westboro attract buyers seeking modern luxury along the Rideau Canal. Diplomats, senior government officials, and tech executives from the Kanata corridor drive a discreet but sophisticated $2M+ market."
+    whyContact="Whether you're acquiring a Rockcliffe Park estate or marketing a Westboro luxury home, these top-ranked Ottawa agents bring the diplomatic-level discretion, government-sector buyer networks, and refined marketing approach that the capital's luxury market demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -6,28 +6,28 @@ const destinations = [
     name: "Waterfront Estates",
     badge: "WATERFRONT",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-    description: "Oceanfront mansions & lakeside retreats across the world's most coveted coastlines.",
+    description: "Oceanfront mansions, lakeside retreats, and beachfront estates along the world's most exclusive coastlines.",
     path: "/destinations/waterfront",
   },
   {
     name: "Ski Villages",
     badge: "SKI & ALPINE",
     image: "https://images.unsplash.com/photo-1520984032042-162d526883e0?w=800&q=80",
-    description: "Luxury chalets in Whistler, Aspen, St. Moritz, and beyond.",
+    description: "Ski-in/ski-out chalets and alpine luxury homes in Whistler, Aspen, St. Moritz, and beyond.",
     path: "/destinations/ski-villages",
   },
   {
     name: "Wine Country",
     badge: "VINEYARD LIVING",
     image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80",
-    description: "Estate properties in Napa Valley, Okanagan, Tuscany, and Bordeaux.",
+    description: "Vineyard estates and luxury country homes in Napa Valley, Okanagan, Tuscany, and Bordeaux.",
     path: "/destinations/wine-country",
   },
   {
     name: "Island Retreats",
     badge: "ISLAND & TROPICAL",
     image: "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&q=80",
-    description: "Private island estates and tropical luxury in the Caribbean, Maldives & Hawaii.",
+    description: "Private island homes and tropical luxury estates in the Caribbean, Maldives, Hawaii, and Fiji.",
     path: "/destinations/island-retreats",
   },
 ];
@@ -43,7 +43,7 @@ const FeaturedDestinations = () => {
       >
         <div className="flex items-center justify-between mb-8">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground italic">
-            Featured Destinations
+            Luxury Homes by Destination
           </h2>
           <a href="#" className="font-body text-xs text-primary hover:underline tracking-wider uppercase">
             View All Destinations →
