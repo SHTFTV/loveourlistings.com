@@ -239,24 +239,36 @@ const RealtorProfile = ({
         </section>
       )}
 
-      {/* Heart Sign CTA */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
-        <div className="card-promo">
+      {/* Get Listed CTA */}
+      <section id="get-listed" className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        <div className="card-promo text-center">
           <p className="font-body text-xs tracking-[5px] uppercase text-primary-foreground/80 mb-5">
-            Exclusive Partnership
+            Featured Agent
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-black text-primary-foreground leading-none mb-6">
-            THE HEART-SHAPED SIGN.
+            GET LISTED.
           </h2>
-          <p className="font-body text-base text-primary-foreground/90 max-w-md mb-8">
-            Stand out in {region} with unforgettable boutique branding for your luxury listings.
+          <p className="font-body text-base text-primary-foreground/90 max-w-md mx-auto mb-8">
+            Want to be featured alongside {name} on this platform? Contact us to advertise your luxury listings in {region}.
           </p>
-          <a
-            href="/pricing"
-            className="inline-block border-2 border-primary-foreground text-primary-foreground font-black text-xs tracking-[2px] uppercase py-5 px-10 hover:bg-primary-foreground hover:text-primary transition-all duration-300"
-          >
-            View Pricing
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {website && (
+              <a
+                href={website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary-foreground text-primary font-black text-xs tracking-[2px] uppercase py-5 px-10 hover:opacity-90 transition-opacity"
+              >
+                Visit {websiteLabel || "Agent Website"}
+              </a>
+            )}
+            <a
+              href="/pricing"
+              className="inline-block border-2 border-primary-foreground text-primary-foreground font-black text-xs tracking-[2px] uppercase py-5 px-10 hover:bg-primary-foreground hover:text-primary transition-all duration-300"
+            >
+              View Pricing
+            </a>
+          </div>
         </div>
       </section>
 
