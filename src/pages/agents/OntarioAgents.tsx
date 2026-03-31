@@ -35,7 +35,7 @@ const OntarioAgents = () => (
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop"
     intro="Ontario's luxury real estate market features impressive estate homes in Ontario Ranch, mountain-view properties, and premium new developments in the heart of the Inland Empire. With excellent connectivity, a thriving economy, and proximity to both Los Angeles and the mountains, Ontario offers compelling luxury living in Southern California."
-    whyContact="Whether you're buying or selling luxury property in Ontario, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    whyContact="Ontario, California sits at the nexus of Inland Empire growth — the Ontario International Airport expansion, the Metrolink connectivity improvements, and the $1.4B Ontario Ranch master-planned community have repositioned the city as a serious luxury contender in Southern California. These agents understand the premium dynamics between Haven Avenue corridor estates, the gated communities of Ontario Ranch, and the emerging mixed-use luxury developments near the Ontario Convention Center. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
