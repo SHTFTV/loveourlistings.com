@@ -97,6 +97,38 @@ const ListingDetailPage = ({
         </div>
       </section>
 
+      {/* Get Listed CTA */}
+      {agentWebsite && (
+        <section className="border-t border-border">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="font-body text-xs tracking-[5px] uppercase text-primary font-bold mb-3">
+                ❤️ Love Our Listings
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl font-black text-foreground leading-tight">
+                Get Listed
+              </h2>
+              <p className="font-body text-sm text-muted-foreground mt-3 max-w-lg mx-auto">
+                Stand out with unforgettable boutique branding for your luxury listings. Feature your property on Love Our Listings.
+              </p>
+              <a
+                href={agentWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-xs font-bold tracking-wider uppercase py-3 px-8 hover:opacity-90 transition-opacity"
+              >
+                Visit {agentWebsiteLabel || "Agent Website"} <ExternalLink className="w-3 h-3" />
+              </a>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       <FooterFull />
     </div>
   );
