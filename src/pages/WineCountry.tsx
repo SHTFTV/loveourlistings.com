@@ -2,7 +2,7 @@ import DestinationPage from "@/components/DestinationPage";
 
 const listings = [
   {
-    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
     price: "$22,000,000 USD",
     agent: "Compass — Napa Valley",
     location: "St. Helena, Napa Valley, CA",
@@ -10,14 +10,14 @@ const listings = [
     url: "https://www.compass.com/homes-for-sale/st-helena-ca/",
   },
   {
-    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
     price: "$18,500,000 USD",
     agent: "Sotheby's International Realty",
     location: "Sonoma, CA",
     url: "https://www.sothebysrealty.com/eng/sales/sonoma-ca-usa",
   },
   {
-    image: "https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80",
     price: "$14,900,000 CAD",
     agent: "Sotheby's International Realty Canada",
     location: "Okanagan Valley, BC",
@@ -25,35 +25,35 @@ const listings = [
     url: "https://sothebysrealty.ca/en/property/british-columbia/okanagan-real-estate/kelowna",
   },
   {
-    image: "https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80",
     price: "€12,000,000 EUR",
     agent: "Knight Frank",
     location: "Chianti, Tuscany, Italy",
     url: "https://www.knightfrank.com/properties/residential/for-sale/tuscany",
   },
   {
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=800&q=80",
     price: "€9,500,000 EUR",
     agent: "Savills",
     location: "Saint-Émilion, Bordeaux, France",
     url: "https://www.savills.com/property/bordeaux",
   },
   {
-    image: "https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
     price: "$8,200,000 USD",
     agent: "Christie's International Real Estate",
     location: "Willamette Valley, OR",
     url: "https://www.christiesrealestate.com/oregon",
   },
   {
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
     price: "$6,900,000 CAD",
     agent: "Engel & Völkers",
     location: "Niagara-on-the-Lake, ON",
     url: "https://www.engelvoelkers.com/en-ca/niagara/",
   },
   {
-    image: "https://images.unsplash.com/photo-1566903451935-7196f5aad6cb?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80",
     price: "NZ$15,000,000",
     agent: "Sotheby's International Realty — NZ",
     location: "Marlborough, New Zealand",

@@ -2,7 +2,7 @@ import DestinationPage from "@/components/DestinationPage";
 
 const listings = [
   {
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
     price: "$58,800,000 CAD",
     agent: "Malcolm Hasman — Angell, Hasman & Associates",
     location: "West Vancouver, BC",
@@ -10,14 +10,14 @@ const listings = [
     url: "https://www.buywaterfrontcanada.com/real-estate-news/canadas-most-expensive-home-for-sale-a-588m-oceanfront-estate-in-west-vancouver-listed-by-malcolm-hasman",
   },
   {
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
     price: "$39,980,000 CAD",
     agent: "Sotheby's International Realty Canada",
     location: "Bellevue Ave, West Vancouver, BC",
     url: "https://sothebysrealty.ca/en/property/british-columbia/greater-vancouver-real-estate/west-vancouver",
   },
   {
-    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
     price: "$85,000,000 USD",
     agent: "Sotheby's International Realty",
     location: "Palm Beach, FL",
@@ -25,21 +25,21 @@ const listings = [
     url: "https://www.sothebysrealty.com/eng/sales/palm-beach-fl-usa",
   },
   {
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
     price: "$78,000,000 USD",
     agent: "Douglas Elliman",
     location: "Miami Beach, FL",
     url: "https://www.elliman.com/miami-beach",
   },
   {
-    image: "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80",
     price: "$45,000,000 USD",
     agent: "Christie's International Real Estate",
     location: "Malibu, CA",
     url: "https://www.christiesrealestate.com/malibu",
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
     price: "$29,500,000 CAD",
     agent: "RE/MAX Collection",
     location: "White Rock, BC",
@@ -47,14 +47,14 @@ const listings = [
     url: "https://www.remax.ca/bc/white-rock-real-estate",
   },
   {
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
     price: "$22,000,000 USD",
     agent: "Windermere Real Estate",
     location: "Lake Washington, Bellevue, WA",
     url: "https://www.windermere.com/bellevue",
   },
   {
-    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
     price: "$18,900,000 CAD",
     agent: "Engel & Völkers",
     location: "Okanagan Lake, BC",
