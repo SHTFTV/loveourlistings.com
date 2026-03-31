@@ -11,6 +11,8 @@ const BellevueWashington = () => (
     description="Washington State's most expensive home listing at $79M, this Bellevue estate redefines Pacific Northwest luxury. Set on a sprawling lakefront lot with private dock access to Lake Washington, the compound includes a 20,000+ sq ft main residence, separate guest house, and grounds designed by a landscape architecture firm that has shaped some of the region's most important private estates. Tech industry executives have made Bellevue the new epicenter of West Coast wealth."
     features={["20,000+ sq ft lakefront estate", "Private dock on Lake Washington", "Separate guest house", "Indoor basketball court", "Wine cave & tasting lounge", "Smart home throughout", "Helipad-ready grounds", "Most expensive listing in WA history"]}
     neighborhood="Bellevue has transformed from a Seattle suburb into one of America's wealthiest cities, home to tech headquarters including Microsoft, Meta, and Amazon satellite campuses. The Points neighborhoods along Lake Washington feature some of the most expensive residential real estate on the West Coast, combining natural beauty with proximity to the region's economic engine."
+    agentWebsite="https://whiterock.io"
+    agentWebsiteLabel="WhiteRock.io"
   />
 );
 
