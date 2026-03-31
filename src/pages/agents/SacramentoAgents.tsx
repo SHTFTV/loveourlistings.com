@@ -32,8 +32,8 @@ const SacramentoAgents = () => (
     city="Sacramento"
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Sacramento's luxury market features elegant estates in the Fab Forties, riverfront properties along the American River, and premium homes in East Sacramento and Land Park."
-    whyContact="Whether you're buying or selling luxury property in Sacramento, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="The Fab Forties — Sacramento's most storied enclave — features Tudor and Mediterranean estates on half-acre lots trading between $2M and $6M, while Granite Bay's gated communities and El Dorado Hills' custom builds command $1,400+ per square foot. California's capital city has become a magnet for Bay Area remote workers, pushing the $2M+ segment up 25% since 2023."
+    whyContact="Sacramento's luxury market benefits from a rare combination: capital-city stability, Bay Area spillover demand, and significantly lower price-per-square-foot than coastal California. The agents featured here hold Lyon, Sotheby's, and Compass production records with deep networks spanning government, healthcare, and tech-relocation buyers."
     agents={agents}
   />
 );

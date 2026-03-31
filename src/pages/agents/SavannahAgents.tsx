@@ -32,8 +32,8 @@ const SavannahAgents = () => (
     city="Savannah"
     region="Georgia, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Savannah's luxury market features stunning historic mansions on the city's iconic squares, waterfront estates on Tybee Island, and elegant properties in the Landmark Historic District."
-    whyContact="Whether you're buying or selling luxury property in Savannah, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Landmark Historic District mansions overlooking Savannah's 22 original squares trade between $1.5M and $8M, while Isle of Hope and Skidaway Island waterfront estates command $1,200+ per square foot with marsh and Intracoastal views. Savannah's luxury market benefits from Georgia's favorable tax structure, SCAD-driven cultural renaissance, and a growing remote-work migration from the Northeast."
+    whyContact="Savannah's historic luxury properties require agents who navigate HDBR (Historic District Board of Review) regulations, preservation easements, and the unique appraisal challenges of 200-year-old architecture. The agents featured here — led by Cora Bett Thomas' legendary brokerage — bring decades of Landmark District expertise and verified buyer networks spanning second-home and investment purchasers."
     agents={agents}
   />
 );

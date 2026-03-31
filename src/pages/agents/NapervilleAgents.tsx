@@ -32,8 +32,8 @@ const NapervilleAgents = () => (
     city="Naperville"
     region="Illinois, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Naperville's luxury market features grand estates in White Eagle, premium properties near the Riverwalk, and executive homes in one of America's most desirable suburban communities."
-    whyContact="Whether you're buying or selling luxury property in Naperville, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="White Eagle's guard-gated estates on 1-to-3-acre lots trade between $1.5M and $5M, while Ashwood Creek and Cress Creek properties average $400+ per square foot — making Naperville DuPage County's premier luxury address. Consistently ranked among America's best places to live, Naperville draws Fortune 500 executives, medical professionals, and families seeking top-rated District 203/204 schools paired with estate-level living."
+    whyContact="Naperville's $1.5M+ market moves fast — desirable White Eagle and Cress Creek listings average under 30 days on market. The agents featured here hold Compass, Berkshire Hathaway, and RE/MAX production records with deep corporate-relocation networks spanning Chicago's western-suburb executive buyer pool."
     agents={agents}
   />
 );

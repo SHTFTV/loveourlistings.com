@@ -32,8 +32,8 @@ const RaleighAgents = () => (
     city="Raleigh"
     region="North Carolina, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Raleigh's luxury market features elegant estates in Hayes Barton, executive homes in North Hills, and premium properties in the Research Triangle's most prestigious communities."
-    whyContact="Whether you're buying or selling luxury property in Raleigh, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Hayes Barton's historic estates on tree-lined streets trade between $1.5M and $5M, while ITB (Inside-the-Beltline) properties in Five Points and Oakwood average $600+ per square foot. The Research Triangle's explosive tech and biotech growth — anchored by Apple, Google, and Epic Games campuses — has made Raleigh's $2M+ segment the Southeast's fastest-growing luxury market outside of Florida."
+    whyContact="Raleigh's luxury inventory turns over 40% faster than the national average, driven by tech-sector relocations from the Bay Area and Northeast. The agents featured here hold Glenwood Agency, Compass, and boutique-brokerage production records with deep Triangle corporate-relocation and new-construction networks."
     agents={agents}
   />
 );

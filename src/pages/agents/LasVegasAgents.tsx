@@ -32,8 +32,8 @@ const LasVegasAgents = () => (
     city="Las Vegas"
     region="NV, US"
     heroImage="https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?w=1920&h=1080&fit=crop"
-    intro="Las Vegas offers a distinguished luxury real estate market with exceptional properties from guard-gated estates in The Summit to modern penthouses overlooking the Strip. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Las Vegas, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="The Summit Club estates list between $8M and $30M behind guard gates in Summerlin, while MacDonald Highlands' custom builds in Henderson command $1,500+ per square foot with panoramic Strip and mountain views. Nevada's zero state income tax continues driving California and New York wealth migration — pushing Las Vegas' $5M+ segment to record transaction volume in 2025, with The Ridges and Seven Hills anchoring ultra-luxury demand."
+    whyContact="Las Vegas' $5M+ market recorded 31% volume growth in 2025, the fastest of any major U.S. luxury market. The agents featured here — led by IS Luxury, BrokerMetrics' #1 ranked Las Vegas luxury brokerage — hold verified production records exceeding $100M annually, ensuring your property reaches qualified buyers through both Strip-adjacent networks and global wealth channels."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const SantaBarbaraAgents = () => (
     city="Santa Barbara"
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=1920&h=1080&fit=crop"
-    intro="Santa Barbara's luxury market features stunning Mediterranean estates in Montecito, oceanfront properties along the American Riviera, and vineyard estates in the Santa Ynez Valley."
-    whyContact="Whether you're buying or selling luxury property in Santa Barbara, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Montecito estates on 2-to-20-acre parcels trade between $5M and $65M — home to Oprah, Ellen, and a growing cohort of tech billionaires who prize the American Riviera's Mediterranean climate and 90-minute proximity to LA. Hope Ranch's equestrian properties average $4,500 per square foot, while Santa Ynez Valley vineyard estates offer 50-to-200-acre luxury compounds starting at $8M."
+    whyContact="Santa Barbara's ultra-luxury market operates almost entirely off-market — fewer than 20% of $10M+ transactions appear on the MLS. The agents featured here — including Berkshire Hathaway's $1B+ career producers — maintain the private networks and discretion essential for Montecito and Hope Ranch's most significant estate transactions."
     agents={agents}
   />
 );

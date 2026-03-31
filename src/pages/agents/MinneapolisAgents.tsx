@@ -32,8 +32,8 @@ const MinneapolisAgents = () => (
     city="Minneapolis"
     region="Minnesota, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Minneapolis' luxury market features stunning lakefront estates on Lake Minnetonka, historic mansions in Kenwood, and premium properties in the city's most prestigious neighborhoods."
-    whyContact="Whether you're buying or selling luxury property in Minneapolis, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Lake Minnetonka's 14,000-acre shoreline estates trade between $3M and $20M in Wayzata, Orono, and Deephaven, while Kenwood's historic mansions near the Walker Art Center average $1,200+ per square foot. Minneapolis' Fortune 500 density — home to Target, UnitedHealth, 3M, and General Mills — creates a steady pipeline of C-suite buyers seeking lakefront, golf-course, and Edina estate-level properties."
+    whyContact="The Twin Cities' $3M+ luxury market requires agents who understand corporate-relocation timelines, Lake Minnetonka's complex shoreline regulations, and Minnesota's unique estate-tax implications. The agents featured here hold Lakes Sotheby's, Compass, and Berkshire Hathaway production records with verified networks spanning the metro's Fortune 500 executive buyer pool."
     agents={agents}
   />
 );

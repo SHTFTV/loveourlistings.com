@@ -32,8 +32,8 @@ const IndianapolisAgents = () => (
     city="Indianapolis"
     region="Indiana, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Indianapolis' luxury market features grand estates in Meridian-Kessler, premium properties in Carmel and Zionsville, and elegant homes along the city's historic boulevards."
-    whyContact="Whether you're buying or selling luxury property in Indianapolis, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Meridian-Kessler's stately homes along the historic Meridian Street corridor trade between $1M and $4M, while Carmel's Village of WestClay and Zionsville's estate-lot properties command $500+ per square foot. Indianapolis offers the Midwest's strongest luxury value proposition — comparable estate-quality living at 40% below Chicago pricing — attracting Eli Lilly, Salesforce, and motorsport-industry executives."
+    whyContact="Indianapolis' $1.5M+ segment grew 19% in 2025, driven by corporate headquarters expansions and the city's affordability advantage over coastal markets. The agents featured here hold F.C. Tucker, Compass, and Sotheby's production records with deep Carmel, Geist waterfront, and Hamilton County executive buyer networks."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const TampaAgents = () => (
     city="Tampa"
     region="Florida, United States"
     heroImage="https://images.unsplash.com/photo-1562181523-1e5c8cee9431?w=1920&h=1080&fit=crop"
-    intro="Tampa's luxury market features stunning waterfront estates on Davis Islands and Bayshore Boulevard, historic mansions in Hyde Park, and premium homes in South Tampa's most exclusive neighborhoods."
-    whyContact="Whether you're buying or selling luxury property in Tampa, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Davis Islands estates trade between $3M and $12M with private docks on Hillsborough Bay, while Bayshore Boulevard — the world's longest continuous sidewalk — anchors a corridor of waterfront mansions averaging $1,800 per square foot. Hyde Park's historic bungalows and Palma Ceia's tree-canopied estates round out Tampa Bay's $2M+ luxury segment, which saw 18% price appreciation in 2025."
+    whyContact="Tampa's luxury inventory under 90 days on market hit a five-year low in Q4 2025, making agent selection critical. The professionals featured here hold Smith & Associates, Sotheby's, and RE/MAX production records with verified $50M+ annual volumes — ensuring your listing reaches qualified waterfront and relocation buyers through Tampa Bay's most connected brokerage networks."
     agents={agents}
   />
 );

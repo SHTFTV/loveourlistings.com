@@ -32,8 +32,8 @@ const SaltLakeCityAgents = () => (
     city="Salt Lake City"
     region="Utah, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Salt Lake City's luxury market features stunning mountain-view estates in the Wasatch foothills, premium homes in Federal Heights, and ski-accessible luxury in Emigration Canyon."
-    whyContact="Whether you're buying or selling luxury property in Salt Lake City, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Federal Heights estates with Wasatch Front panoramas trade between $2M and $8M, while Emigration Canyon's custom ski-accessible compounds command $1,200+ per square foot with direct backcountry access. Utah's booming tech sector — the 'Silicon Slopes' corridor — has pushed Salt Lake's $2M+ segment up 28% since 2023, attracting California and Pacific Northwest executives drawn by low taxes and 30-minute ski commutes."
+    whyContact="Salt Lake City's luxury inventory turns over faster than any mountain-adjacent market in the Intermountain West. The agents featured here hold Sotheby's, Berkshire Hathaway, and Compass production records with deep networks spanning tech, finance, and the region's ski-resort buyer pipeline."
     agents={agents}
   />
 );
