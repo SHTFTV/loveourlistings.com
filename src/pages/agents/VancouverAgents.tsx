@@ -1,0 +1,45 @@
+import CityAgentsPage from "@/components/CityAgentsPage";
+
+const agents = [
+  {
+    name: "Leo Wilk",
+    brokerage: "RE/MAX Masters Realty",
+    specialty: "Luxury Residential · Westside · Downtown",
+    bio: "With over 25 years of experience and 100+ five-star Google reviews, Leo Wilk is one of Vancouver's most trusted luxury realtors. His deep knowledge of the Westside and Downtown markets, combined with a client-first approach, consistently delivers results for discerning buyers and sellers.",
+    phone: "(604) 722-6982",
+    website: "https://leowilkrealestate.com",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "100+ Five-Star Google Reviews",
+  },
+  {
+    name: "Tanis Fritz",
+    brokerage: "Sotheby's International Realty Canada",
+    specialty: "Ultra-Luxury · West Vancouver · Shaughnessy",
+    bio: "With a reputation for discretion, grace, and unwavering integrity, Tanis Fritz has established herself as a leading luxury agent serving Vancouver and West Vancouver. Her Sotheby's affiliation provides unmatched global exposure for her exclusive portfolio of estate properties.",
+    website: "https://sothebysrealty.ca",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
+    accolades: "Sotheby's International Realty",
+  },
+  {
+    name: "Mike Lai",
+    brokerage: "RE/MAX Crest Realty",
+    specialty: "Presale · Resale · Property Management",
+    bio: "An award-winning Top 10% realtor in Vancouver, Mike Lai brings creativity and efficiency to every transaction. Known for his integrity-driven approach, Mike specializes in luxury resale, presale developments, and property management across Metro Vancouver's most sought-after neighbourhoods.",
+    website: "https://www.mikelai.ca",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
+    accolades: "Award-Winning · Top 10% Realtor",
+  },
+];
+
+const VancouverAgents = () => (
+  <CityAgentsPage
+    city="Vancouver"
+    region="British Columbia, Canada"
+    heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
+    intro="Vancouver's luxury real estate market is among the most dynamic in the world, with waterfront estates, architectural masterpieces, and prestige addresses spanning from the Westside to Coal Harbour. These are the city's most trusted luxury listing agents — professionals who consistently deliver exceptional results for high-net-worth clients."
+    whyContact="Whether you're acquiring a Shaughnessy mansion or marketing a Point Grey estate, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    agents={agents}
+  />
+);
+
+export default VancouverAgents;
