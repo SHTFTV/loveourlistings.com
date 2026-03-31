@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Punta Cana with deep local expertise and a proven track record of representing exceptional properties in the DO market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Punta Cana's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in DO.",
+    name: "Melissa Conde",
+    brokerage: "MC Punta Cana Realty",
+    specialty: "Luxury Condos · Villas · Beachfront",
+    bio: "Born in Honduras and drawn to the Dominican Republic's potential, Melissa founded MC Punta Cana Realty and has become one of the region's most prolific luxury agents, specializing in resort-style residences and investment properties.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "CEO & Founder",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Punta Cana's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Salvatore Balzano",
+    brokerage: "MC Punta Cana Realty",
+    specialty: "Villas · Investment · Italian Expertise",
+    bio: "Born and raised in Northern Italy, Salvatore brings a European perspective to Punta Cana's luxury market. His passion for fine living and deep knowledge of the Dominican Republic's premier developments make him a sought-after advisor for international buyers.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "International Specialist",
+  },
+  {
+    name: "Johanna Frischbutter",
+    brokerage: "Turnkey in Punta Cana",
+    specialty: "Relocation · Resort Properties · New Construction",
+    bio: "Originally from Canada, Johanna has enjoyed Caribbean life since 1981. Her career as a destination supervisor across sunny locales led her to the Dominican Republic, where she now excels in luxury real estate and relocation services.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "Relocation Expert",
   },
 ];
 
@@ -31,8 +31,8 @@ const PuntaCanaAgents = () => (
   <CityAgentsPage
     city="Punta Cana"
     region="DO, INT"
-    heroImage="https://images.unsplash.com/photo-1580237541049-2d715a09486e?w=1920&h=1080&fit=crop"
-    intro="Punta Cana offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    heroImage="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1920&h=1080&fit=crop"
+    intro="Punta Cana offers a distinguished luxury real estate market with exceptional beachfront villas, resort residences, and investment properties along the Dominican Republic's stunning Caribbean coastline. These are the region's most trusted luxury listing agents."
     whyContact="Whether you're buying or selling luxury property in Punta Cana, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

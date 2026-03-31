@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Perth with deep local expertise and a proven track record of representing exceptional properties in the AU market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Perth's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in AU.",
+    name: "Vivien Yap",
+    brokerage: "Ray White Dalkeith | Claremont",
+    specialty: "Dalkeith · Peppermint Grove · Cottesloe",
+    bio: "The go-to agent for Perth's rich listers, Vivien Yap has become a dominant force in Western Australia's luxury market, consistently handling multi-million dollar transactions in Perth's affluent western suburbs with unmatched market knowledge.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Perth's #1 Luxury Agent",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Perth's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Perth Top 50 WA Agents",
+    brokerage: "Various Premier Brokerages",
+    specialty: "Nedlands · Mosman Park · City Beach",
+    bio: "Real Estate Business reveals Western Australia's Top 50 agents annually, recognizing the state's highest performers in sales volume, client service, and market expertise across Perth's most prestigious suburbs.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Top 50 WA Agents 2024",
+  },
+  {
+    name: "Perth Sotheby's Team",
+    brokerage: "Perth Sotheby's International Realty",
+    specialty: "Swan River · Kings Park · Waterfront",
+    bio: "Sotheby's International Realty represents Perth's finest luxury properties, from Swan River waterfront estates to architecturally significant homes, connecting local expertise with a global network of affluent buyers.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "Sotheby's Global Network",
   },
 ];
 
@@ -31,8 +31,8 @@ const PerthAgents = () => (
   <CityAgentsPage
     city="Perth"
     region="AU, INT"
-    heroImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&h=1080&fit=crop"
-    intro="Perth offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    heroImage="https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?w=1920&h=1080&fit=crop"
+    intro="Perth offers Western Australia's premier luxury real estate market, with exceptional waterfront properties along the Swan River and prestigious suburbs like Dalkeith and Peppermint Grove. These are the city's most trusted luxury listing agents."
     whyContact="Whether you're buying or selling luxury property in Perth, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
