@@ -2,37 +2,37 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Philadelphia with deep local expertise and a proven track record of representing exceptional properties in the Pennsylvania market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Philadelphia's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Pennsylvania.",
+    name: "Tracy Slowik",
+    brokerage: "COMPASS",
+    specialty: "Main Line · Rittenhouse · Society Hill",
+    bio: "Named to America's Top 100 Real Estate Agents, Tracy specializes in Philadelphia's luxury market from the prestigious Main Line to Center City's most coveted addresses, bringing deep market expertise and a client-first approach.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "America's Top 100 Agents",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Philadelphia's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Philadelphia Five Star Agents",
+    brokerage: "Various Premier Brokerages",
+    specialty: "Chestnut Hill · Gladwyne · Bryn Mawr",
+    bio: "The Five Star Real Estate Agent Award recognizes Philadelphia's top agents based on client satisfaction, market share, and overall excellence. These award winners represent the highest standard of luxury real estate service in the Philadelphia metro.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Five Star Award Winners",
+  },
+  {
+    name: "Philadelphia Sotheby's Team",
+    brokerage: "Sotheby's International Realty Philadelphia",
+    specialty: "Washington Square · Art Museum · Merion",
+    bio: "Sotheby's International Realty represents Philadelphia's finest luxury properties, from historic Society Hill townhouses to contemporary penthouses along the Schuylkill, connecting local expertise with a global buyer network.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "Sotheby's Global Network",
   },
 ];
 
 const PhiladelphiaAgents = () => (
   <CityAgentsPage
     city="Philadelphia"
-    region="Pennsylvania, United States"
-    heroImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&h=1080&fit=crop"
-    intro="Philadelphia offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    region="PA, US"
+    heroImage="https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?w=1920&h=1080&fit=crop"
+    intro="Philadelphia offers a distinguished luxury real estate market with exceptional properties from Rittenhouse Square penthouses to Main Line estates. These are the city's most trusted luxury listing agents."
     whyContact="Whether you're buying or selling luxury property in Philadelphia, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
