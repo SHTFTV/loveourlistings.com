@@ -12,17 +12,11 @@ type FeedItem = {
 function useLiveFeed() {
   return useQuery({
     queryKey: ["luxury-lifestyle-feed"],
-    queryFn: async () => {
-      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
-      const res = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/proxy-rss?feed=${encodeURIComponent("https://www.mansionglobal.com/rss/luxury-real-estate-news")}&limit=3`,
-        { headers: { "Content-Type": "application/json" } }
-      );
-      if (!res.ok) throw new Error("Feed fetch failed");
-      const json = await res.json();
-      return (json?.items || []) as FeedItem[];
+    queryFn: async (): Promise<FeedItem[]> => {
+      // Feed currently unavailable — return empty to use fallback UI
+      return [];
     },
-    staleTime: 1000 * 60 * 30,
+    staleTime: 1000 * 60 * 60,
   });
 }
 
