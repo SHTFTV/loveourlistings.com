@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Milton with deep local expertise and a proven track record of representing exceptional properties in the Ontario market.",
+    name: "Greg Chicken",
+    brokerage: "RE/MAX Real Estate Centre",
+    specialty: "Escarpment Estates · Bronte Creek · Old Milton",
+    bio: "Milton's leading luxury agent specializing in Escarpment estates and premium properties in Bronte Creek. Known for exceptional results in Halton Region's competitive market.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Milton's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Ontario.",
+    name: "Susan Chicken",
+    brokerage: "Royal LePage Meadowtowne Realty",
+    specialty: "Country Estates · New Construction · Executive Homes",
+    bio: "A top-producing luxury agent in Milton with expertise in country estates and premium new construction throughout Halton Region.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Director's Platinum",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Milton's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "David Chicken",
+    brokerage: "Harvey Kalles Real Estate",
+    specialty: "Premium Residential · Investment · Relocation",
+    bio: "Representing Harvey Kalles in Milton, David brings prestigious brand marketing and refined service to the community's growing luxury segment.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Harvey Kalles Top Producer",
+  }
 ];
 
 const MiltonAgents = () => (
@@ -32,7 +32,7 @@ const MiltonAgents = () => (
     city="Milton"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Milton offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Milton's luxury real estate market features executive estates along the Niagara Escarpment, premium homes in Bronte Creek, and modern luxury in one of Canada's fastest-growing communities."
     whyContact="Whether you're buying or selling luxury property in Milton, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

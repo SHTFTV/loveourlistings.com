@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Markham with deep local expertise and a proven track record of representing exceptional properties in the Ontario market.",
+    name: "Andrew Kim",
+    brokerage: "RE/MAX Hallmark Realty Ltd.",
+    specialty: "Luxury Residential · Unionville · Cachet",
+    bio: "One of Markham's top luxury agents specializing in the prestigious Unionville and Cachet communities with a data-driven approach to pricing and extensive buyer network.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Chairman's Club",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Markham's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Ontario.",
+    name: "Linda Chen",
+    brokerage: "Royal LePage Your Community Realty",
+    specialty: "Estate Homes · Angus Glen · Berczy Village",
+    bio: "Markham's go-to luxury agent for estate homes in Angus Glen and Berczy Village. Multilingual capabilities and deep understanding of York Region's diverse luxury market.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Markham's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Tony Tran",
+    brokerage: "Sutton Group - Heritage Realty",
+    specialty: "New Construction · Investment · Premium Condos",
+    bio: "Bringing sharp analytical expertise to Markham's luxury market with strong developer relationships and exclusive access to premium new construction.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Top Producer · Sutton Group",
+  }
 ];
 
 const MarkhamAgents = () => (
@@ -32,7 +32,7 @@ const MarkhamAgents = () => (
     city="Markham"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Markham offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Markham's luxury real estate market features grand estate homes in Cachet and Angus Glen, heritage properties in Unionville, and modern executive residences throughout York Region."
     whyContact="Whether you're buying or selling luxury property in Markham, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

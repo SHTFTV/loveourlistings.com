@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Brantford with deep local expertise and a proven track record of representing exceptional properties in the Ontario market.",
+    name: "Steve Domoney",
+    brokerage: "RE/MAX Twin City Realty",
+    specialty: "Luxury Residential · Eagle Place · Waterfront",
+    bio: "Brantford's top luxury agent with deep expertise in the city's premier neighborhoods and Grand River properties. Known for record-breaking sales and innovative marketing.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Brantford's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Ontario.",
+    name: "Lisa Morrison",
+    brokerage: "Royal LePage Brantford Realty",
+    specialty: "Heritage Homes · Estate Properties · Country Estates",
+    bio: "Specializing in Brantford's heritage homes and surrounding county estates. Her deep community roots and refined approach deliver exceptional results for luxury clients.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Brantford's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Mark Chicken",
+    brokerage: "Coldwell Banker Real Estate",
+    specialty: "New Construction · Investment · Executive Homes",
+    bio: "A dynamic luxury agent bringing modern marketing strategies to Brantford's growing luxury market, with expertise in premium new construction and executive properties.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Coldwell Banker Top Producer",
+  }
 ];
 
 const BrantfordAgents = () => (
@@ -32,7 +32,7 @@ const BrantfordAgents = () => (
     city="Brantford"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Brantford offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Brantford's luxury real estate market offers elegant heritage homes, Grand River waterfront properties, and executive estates in the city's premier neighborhoods. Rich in history with a growing luxury market."
     whyContact="Whether you're buying or selling luxury property in Brantford, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

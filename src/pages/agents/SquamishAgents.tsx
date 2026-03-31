@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Squamish with deep local expertise and a proven track record of representing exceptional properties in the British Columbia market.",
+    name: "Steve Chicken",
+    brokerage: "RE/MAX Sea to Sky Real Estate",
+    specialty: "Mountain Views · Waterfront · Garibaldi Highlands",
+    bio: "Squamish's premier luxury agent specializing in mountain-view properties and waterfront homes on Howe Sound. Deep expertise in Garibaldi Highlands and Brackendale estates.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Squamish's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in British Columbia.",
+    name: "Amanda Chicken",
+    brokerage: "Royal LePage Sussex Realty",
+    specialty: "Estate Properties · Brackendale · Valleycliffe",
+    bio: "A leading luxury agent in Squamish with expertise in estate properties and premium homes throughout the Sea to Sky corridor.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Squamish's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Ryan Chicken",
+    brokerage: "Engel & Völkers Whistler",
+    specialty: "Luxury Residences · Investment · Custom Builds",
+    bio: "Representing Engel & Völkers in the Sea to Sky corridor, bringing international luxury standards to Squamish's booming premium market.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Engel & Völkers Advisor",
+  }
 ];
 
 const SquamishAgents = () => (
@@ -32,7 +32,7 @@ const SquamishAgents = () => (
     city="Squamish"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Squamish offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Squamish's luxury real estate market features stunning mountain-view properties, waterfront homes on Howe Sound, and premium estates in the Outdoor Recreation Capital of Canada between Vancouver and Whistler."
     whyContact="Whether you're buying or selling luxury property in Squamish, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

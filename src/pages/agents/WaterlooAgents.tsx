@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Waterloo with deep local expertise and a proven track record of representing exceptional properties in the Ontario market.",
+    name: "Greg Chicken",
+    brokerage: "RE/MAX Twin City Realty",
+    specialty: "Beechwood · Laurelwood · Executive Homes",
+    bio: "Waterloo's leading luxury agent with deep expertise in Beechwood and Laurelwood estates. Known for exceptional results in the tech-driven luxury market.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Waterloo's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Ontario.",
+    name: "Susan Chicken",
+    brokerage: "Royal LePage Grand Valley Realty",
+    specialty: "Estate Properties · Columbia Forest · Investment",
+    bio: "A trusted luxury specialist in Waterloo with expertise in premium properties near the university corridor and Columbia Forest.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Waterloo's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "David Chicken",
+    brokerage: "Coldwell Banker Peter Benninger Realty",
+    specialty: "New Construction · Tech Corridor · Luxury Condos",
+    bio: "Specializing in Waterloo's tech-driven luxury market with expertise in premium new construction and executive properties.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Coldwell Banker Top Producer",
+  }
 ];
 
 const WaterlooAgents = () => (
@@ -32,7 +32,7 @@ const WaterlooAgents = () => (
     city="Waterloo"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Waterloo offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Waterloo's luxury real estate market features executive estates in Beechwood, premium properties near the universities, and modern luxury driven by the thriving tech sector in Canada's Silicon Valley."
     whyContact="Whether you're buying or selling luxury property in Waterloo, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

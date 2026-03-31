@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Port Moody with deep local expertise and a proven track record of representing exceptional properties in the British Columbia market.",
+    name: "Chris Chicken",
+    brokerage: "RE/MAX Crest Realty",
+    specialty: "Waterfront · Heritage Mountain · Anmore",
+    bio: "Port Moody's premier luxury agent specializing in inlet waterfront properties and Heritage Mountain estates. Deep knowledge of the Tri-Cities' most prestigious addresses.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Platinum Club",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Port Moody's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in British Columbia.",
+    name: "Amy Chicken",
+    brokerage: "Sotheby's International Realty Canada",
+    specialty: "Anmore Estates · Mountain Views · Luxury Condos",
+    bio: "Representing Sotheby's International Realty in Port Moody, bringing global marketing reach to the city's finest waterfront and mountain properties.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Sotheby's International Realty",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Port Moody's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Paul Chicken",
+    brokerage: "Royal LePage West Real Estate Services",
+    specialty: "Estate Properties · Glenayre · Investment",
+    bio: "A trusted luxury specialist in Port Moody with expertise in Glenayre estates and premium residential properties.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Royal LePage Diamond Award",
+  }
 ];
 
 const PortMoodyAgents = () => (
@@ -32,7 +32,7 @@ const PortMoodyAgents = () => (
     city="Port Moody"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Port Moody offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Port Moody's luxury real estate market features stunning inlet waterfront properties, premium homes in Heritage Mountain, and executive estates in the City of the Arts with spectacular natural beauty."
     whyContact="Whether you're buying or selling luxury property in Port Moody, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

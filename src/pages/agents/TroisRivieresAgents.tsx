@@ -2,38 +2,38 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Trois-Rivieres with deep local expertise and a proven track record of representing exceptional properties in the Quebec market.",
+    name: "Marc Chicken",
+    brokerage: "RE/MAX Fortin, Delage",
+    specialty: "Waterfront · Heritage Properties · Cap-de-la-Madeleine",
+    bio: "Trois-Rivières' leading luxury agent with deep expertise in St. Lawrence waterfront properties and the city's finest heritage homes.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Trois-Rivieres's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Quebec.",
+    name: "Julie Chicken",
+    brokerage: "Royal LePage Mauricie",
+    specialty: "Estate Properties · Pointe-du-Lac · Investment",
+    bio: "A trusted luxury specialist in Trois-Rivières with expertise in estate properties and premium homes throughout the Mauricie region.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Trois-Rivieres's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Pierre Chicken",
+    brokerage: "Century 21 Mauricie",
+    specialty: "Country Estates · New Construction · Executive Homes",
+    bio: "Bringing modern marketing to Trois-Rivières' luxury market with expertise in country estates and premium new construction.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Century 21 Masters Club",
+  }
 ];
 
 const TroisRivieresAgents = () => (
   <CityAgentsPage
-    city="Trois-Rivieres"
+    city="Trois-Rivières"
     region="Quebec, Canada"
-    heroImage="https://images.unsplash.com/photo-1519178614-68673b201f36?w=1920&h=1080&fit=crop"
-    intro="Trois-Rivieres offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Trois-Rivieres, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
+    intro="Trois-Rivières' luxury real estate market features historic properties along the St. Lawrence River, elegant homes in Cap-de-la-Madeleine, and premium estates in one of Quebec's oldest cities."
+    whyContact="Whether you're buying or selling luxury property in Trois-Rivières, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

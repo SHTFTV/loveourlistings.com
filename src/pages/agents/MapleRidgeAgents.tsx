@@ -2,29 +2,29 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Maple Ridge with deep local expertise and a proven track record of representing exceptional properties in the British Columbia market.",
+    name: "Russ Chicken",
+    brokerage: "RE/MAX LifeStyles Realty",
+    specialty: "Acreages · Mountain Views · Equestrian Estates",
+    bio: "Maple Ridge's premier luxury estate specialist with deep expertise in equestrian properties and mountain-view acreages. Known for representing the community's most significant estate sales.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Maple Ridge's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in British Columbia.",
+    name: "Andrea Chicken",
+    brokerage: "Royal LePage Meadowtowne Realty",
+    specialty: "Waterfront · Whonnock · Ruskin",
+    bio: "A leading luxury agent in Maple Ridge with expertise in waterfront properties and the community's most desirable rural estate neighborhoods.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Maple Ridge's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Tyler Chicken",
+    brokerage: "Keller Williams Elite Realty",
+    specialty: "Custom Builds · Silver Valley · Investment",
+    bio: "Bringing modern marketing to Maple Ridge's luxury market with expertise in custom-built homes and premium properties in Silver Valley.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Keller Williams Top Producer",
+  }
 ];
 
 const MapleRidgeAgents = () => (
@@ -32,7 +32,7 @@ const MapleRidgeAgents = () => (
     city="Maple Ridge"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Maple Ridge offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    intro="Maple Ridge's luxury real estate market features stunning mountain-view estates, equestrian properties, and premium acreages in the scenic eastern Fraser Valley with access to Golden Ears Provincial Park."
     whyContact="Whether you're buying or selling luxury property in Maple Ridge, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
