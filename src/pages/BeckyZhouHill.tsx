@@ -38,17 +38,18 @@ const BeckyZhouHill = () => (
     bio="With over 15 years of experience in the Surrey and White Rock luxury market, Becky Zhou Hill has earned her reputation as the region's premier luxury realtor. Specializing in oceanfront estates, custom-built homes, and high-value investment properties, Becky combines deep local knowledge with an international client network. Her boutique approach to marketing — including the iconic Heart-Shaped Sign — ensures every listing receives the attention it deserves. Fluent in Mandarin and English, Becky bridges cultures and connects discerning buyers with their dream properties along the stunning Semiahmoo Peninsula."
     portrait={portrait}
     heroImage={heroImage}
-    phone="(604) 555-0188"
-    address="15355 24 Ave #203, Surrey, BC V4A 2H9"
+    phone="(778) 227-9000"
+    email="beckyzhou.hill@gmail.com"
+    address="15414 – 24th Avenue, White Rock, BC V4A 2J3"
     website="https://whiterock.io"
-    googleReviews="5.0 · 47 Google reviews"
-    hours="Open · Closes 8 p.m."
+    googleReviews="Medallion Club Member"
+    hours="By appointment only"
     specialties={[
       "Luxury Waterfront",
       "White Rock Estates",
       "South Surrey",
-      "Pre-Construction",
-      "Investment Properties",
+      "Award Winning Realtor",
+      "Medallion Club Member",
       "Mandarin Speaking",
     ]}
     listings={listings}
