@@ -18,8 +18,11 @@ import VictoriaAgents from "./pages/agents/VictoriaAgents.tsx";
 import KelownaAgents from "./pages/agents/KelownaAgents.tsx";
 import WhistlerAgents from "./pages/agents/WhistlerAgents.tsx";
 import TorontoAgents from "./pages/agents/TorontoAgents.tsx";
+import AspenAgents from "./pages/agents/AspenAgents.tsx";
+import PalmBeachAgents from "./pages/agents/PalmBeachAgents.tsx";
+import HamptonsAgents from "./pages/agents/HamptonsAgents.tsx";
+import MalibuAgents from "./pages/agents/MalibuAgents.tsx";
 
-import VancouverWaAgents from "./pages/agents/VancouverWaAgents.tsx";
 import BurnabyAgents from "./pages/agents/BurnabyAgents.tsx";
 import SurreyAgents from "./pages/agents/SurreyAgents.tsx";
 import RichmondKyAgents from "./pages/agents/RichmondKyAgents.tsx";
