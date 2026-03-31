@@ -14,6 +14,8 @@ interface ListingDetailProps {
   description: string;
   features: string[];
   neighborhood: string;
+  agentWebsite?: string;
+  agentWebsiteLabel?: string;
 }
 
 const ListingDetailPage = ({
