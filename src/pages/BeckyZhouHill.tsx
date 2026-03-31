@@ -40,7 +40,7 @@ const BeckyZhouHill = () => (
     heroImage={heroImage}
     phone="(604) 555-0188"
     address="15355 24 Ave #203, Surrey, BC V4A 2H9"
-    website="https://beckyzhoupremier.com"
+    website="https://whiterock.io"
     googleReviews="5.0 · 47 Google reviews"
     hours="Open · Closes 8 p.m."
     specialties={[
