@@ -32,8 +32,8 @@ const MexicoCityAgents = () => (
     city="Mexico City"
     region="MX, INT"
     heroImage="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=1920&h=1080&fit=crop"
-    intro="Mexico City offers a distinguished luxury real estate market with exceptional properties ranging from colonial estates in Polanco to modern penthouses in Santa Fe. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Mexico City, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Mexico City's luxury market has undergone a renaissance — Polanco's Nuevo Polanco corridor now features $5M+ penthouses rivalling global capitals, while Lomas de Chapultepec and Bosques de las Lomas offer gated estate living minutes from the financial district. The city's 22-million-person metropolitan area generates immense domestic wealth, and the digital nomad influx has pushed Condesa and Roma Norte into premium territory. Mexican property law permits direct foreign ownership (no fideicomiso required outside coastal zones), making CDMX one of Latin America's most accessible luxury markets for international buyers."
+    whyContact="Mexico City's notarial closing system, ISR capital gains obligations, and the distinction between ejido and private land titles demand agents with deep transactional expertise. These specialists understand the premium dynamics between Polanco's Avenida Masaryk corridor and the established old-money enclaves of Pedregal and San Ángel. Their networks connect local industrialist families with international buyers. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

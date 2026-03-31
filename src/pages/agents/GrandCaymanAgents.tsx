@@ -32,8 +32,8 @@ const GrandCaymanAgents = () => (
     city="Grand Cayman"
     region="KY, INT"
     heroImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop"
-    intro="Grand Cayman offers one of the Caribbean's most exclusive luxury real estate markets, anchored by the world-famous Seven Mile Beach. These are the island's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in the Cayman Islands, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Grand Cayman stands as the Caribbean's premier tax-neutral luxury market — no income tax, no capital gains tax, and no property tax create an unmatched wealth-preservation proposition. Seven Mile Beach corridor estates command $10M–$45M+, while South Sound and Rum Point offer waterfront privacy at scale. The Cayman Islands' stable British Overseas Territory governance, world-class banking infrastructure, and 90-minute flight from Miami make it the destination of choice for UHNW families seeking Caribbean residency. These agents are the island's definitive luxury specialists."
+    whyContact="Grand Cayman's stamp duty structure, residency-by-investment pathways, and strata title regulations demand agents with deep institutional knowledge. These professionals navigate the nuances between freehold beachfront, canal-front estates in Crystal Harbour, and the emerging luxury inventory along Camana Bay. Their networks span hedge fund relocations, family office advisory, and cross-border structuring. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

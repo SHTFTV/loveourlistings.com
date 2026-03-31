@@ -32,8 +32,8 @@ const PortLouisAgents = () => (
     city="Port Louis"
     region="MU, INT"
     heroImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop"
-    intro="Port Louis and Mauritius offer a distinguished luxury real estate market with exceptional properties ranging from beachfront estates to Smart City developments. These are the island's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Mauritius, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Mauritius has positioned itself as the Indian Ocean's premier luxury real estate destination — the island's IRS (Integrated Resort Scheme) and PDS (Property Development Scheme) programmes allow foreign buyers to acquire freehold property and obtain permanent residency with investments starting at $375,000. From the Four Seasons and One&Only branded residences on the north coast to the emerging Smart City developments near Port Louis, Mauritius combines tropical lifestyle with sophisticated tax planning through its network of double-taxation agreements. These agents are the island's most trusted luxury specialists."
+    whyContact="Mauritius property transactions for international buyers require navigation of the EDB (Economic Development Board) approval process, PDS compliance requirements, and the island's unique tax residency advantages including a flat 15% income tax rate with no capital gains tax. These specialists understand the premium positioning between Grand Baie's established luxury corridor and the emerging southwestern coast. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

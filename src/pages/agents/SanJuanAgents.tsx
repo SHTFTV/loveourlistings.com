@@ -32,8 +32,8 @@ const SanJuanAgents = () => (
     city="San Juan"
     region="PR, INT"
     heroImage="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1920&h=1080&fit=crop"
-    intro="San Juan offers a distinguished luxury real estate market with exceptional properties ranging from historic colonial estates in Old San Juan to modern beachfront condos in Condado. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Puerto Rico, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="San Juan's luxury market sits at the intersection of Caribbean lifestyle and US tax strategy — Act 60 (formerly Acts 20/22) offers qualifying relocators 0% capital gains tax and 4% corporate tax, driving an unprecedented wave of UHNW migration from the mainland. Condado's beachfront towers, Dorado Beach's Ritz-Carlton Reserve estates ($5M–$30M+), and Old San Juan's restored colonial palacetes define the market's three pillars. As a US territory, Puerto Rico offers no passport requirements, US banking, and federal legal protections — an unmatched combination for American buyers seeking tax-advantaged luxury."
+    whyContact="Puerto Rico's unique tax incentive landscape, CRIM property tax assessments, and the distinction between Act 60 decree-holder benefits and standard ownership require agents with specialised knowledge. These professionals navigate Condado's HOA complexities, Dorado Beach's resort-community structures, and the heritage preservation requirements governing Old San Juan transactions. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

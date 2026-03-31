@@ -32,8 +32,8 @@ const SydneyAgents = () => (
     city="Sydney"
     region="AU, INT"
     heroImage="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1920&h=1080&fit=crop"
-    intro="Sydney offers Australia's premier luxury real estate market, with exceptional properties from Point Piper harbour mansions to Bondi beachfront estates. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Sydney, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Sydney is Australia's undisputed luxury capital — Point Piper and Vaucluse harbour-front estates regularly trade at A$30M–A$100M+, making the Eastern Suburbs one of the most expensive residential corridors in the Southern Hemisphere. From the sandstone heritage homes of Woollahra to Mosman's north-shore waterfront and the emerging Barangaroo precinct, Sydney's prestige market attracts both domestic mining and tech wealth and international capital from Greater China and Southeast Asia. FIRB restrictions and NSW stamp duty surcharges for foreign buyers add layers of complexity that only seasoned specialists can navigate."
+    whyContact="Sydney's luxury market demands agents who understand NSW's tiered stamp duty structure, FIRB approval timelines, and the heritage conservation orders that govern many of the Eastern Suburbs' most valuable properties. These specialists command the off-market networks that define Sydney's trophy-home transactions — where the majority of $20M+ sales never reach public listing portals. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

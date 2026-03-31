@@ -32,8 +32,8 @@ const AucklandAgents = () => (
     city="Auckland"
     region="NZ, INT"
     heroImage="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1920&h=1080&fit=crop"
-    intro="Auckland offers New Zealand's premier luxury real estate market, with exceptional properties ranging from waterfront estates on the Hauraki Gulf to heritage homes in Remuera and Herne Bay. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Auckland, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Auckland's luxury real estate market commands premium positioning across the City of Sails — from the $15M+ waterfront estates lining Herne Bay and Remuera's tree-lined boulevards to the harbourfront penthouses of the Viaduct Basin. As New Zealand's economic capital, Auckland draws international capital from Southeast Asia and the Middle East. The agents featured here are hand-selected specialists who navigate Auckland's Foreign Investment screening, Overseas Investment Office approvals, and the nuanced micro-markets that define Ōrākei, Parnell, and Mission Bay."
+    whyContact="Auckland's luxury segment demands agents who understand the interplay between heritage zoning overlays, coastal hazard designations, and the premium that Waitematā Harbour views command. These professionals bring proven track records in off-market transactions, cross-border structuring for non-resident buyers, and the marketing reach to position your property across Australasia's most discerning buyer networks. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

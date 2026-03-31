@@ -32,8 +32,8 @@ const PuntaCanaAgents = () => (
     city="Punta Cana"
     region="DO, INT"
     heroImage="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1920&h=1080&fit=crop"
-    intro="Punta Cana offers a distinguished luxury real estate market with exceptional beachfront villas, resort residences, and investment properties along the Dominican Republic's stunning Caribbean coastline. These are the region's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Punta Cana, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Punta Cana has evolved into the Dominican Republic's premier luxury corridor — Cap Cana's marina residences, Puntacana Resort & Club's Oscar de la Renta-designed estates, and the emerging Scape Park corridor offer Caribbean luxury from $1M to $15M+. The DR's CONFOTUR tax incentive programme grants foreign buyers exemption from property transfer taxes and capital gains for 15 years on qualifying developments. Combined with direct flights from 80+ international cities, Punta Cana attracts American, Canadian, and European buyers seeking resort-style living with genuine investment upside."
+    whyContact="Dominican Republic property transactions require navigation of the Título Definitivo title registration system, CONFOTUR eligibility verification, and the deslinde (land survey) process. These agents bring bilingual expertise, deep relationships with Punta Cana's master-planned community developers, and the transactional fluency to guide foreign buyers through the DR's notarial closing requirements. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

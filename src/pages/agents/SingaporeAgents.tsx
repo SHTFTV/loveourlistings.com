@@ -32,8 +32,8 @@ const SingaporeAgents = () => (
     city="Singapore"
     region="SG, INT"
     heroImage="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1920&h=1080&fit=crop"
-    intro="Singapore offers one of Asia's most exclusive luxury real estate markets, with exceptional properties from Good Class Bungalows to ultra-luxury penthouses along the Marina Bay skyline. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Singapore, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Singapore is Asia's most tightly regulated and coveted luxury market — Good Class Bungalows (GCBs) in Districts 10, 11, and 21 are restricted to Singapore citizens and command S$30M–S$200M+, representing the city-state's ultimate trophy asset class. The 60% Additional Buyer's Stamp Duty for foreign purchasers has reshaped transaction structures, while Sentosa Cove remains the only location where foreigners can own landed property. Marina Bay's super-penthouses, Orchard Road's premium condominiums, and the heritage shophouses of Tanjong Pagar offer distinct luxury segments. These agents are Singapore's most authoritative luxury specialists."
+    whyContact="Singapore's ABSD framework, Total Debt Servicing Ratio (TDSR) limits, and the Seller's Stamp Duty holding period rules demand agents with regulatory precision. These specialists navigate the URA Master Plan zoning implications, en-bloc sale dynamics, and the premium positioning between freehold and 99-year leasehold assets. Their networks span Singapore's family offices, regional UHNW communities, and the institutional developers shaping the city's luxury pipeline. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

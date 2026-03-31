@@ -32,8 +32,8 @@ const TortolaAgents = () => (
     city="Tortola"
     region="VG, INT"
     heroImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop"
-    intro="Tortola and the British Virgin Islands offer an exclusive luxury real estate market with stunning waterfront estates and private island properties. These are the territory's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Tortola, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Tortola and the British Virgin Islands offer one of the Caribbean's most private luxury markets — a British Overseas Territory with zero income tax, zero capital gains tax, and legendary discretion that has attracted global wealth for generations. From the hillside estates of Road Town and West End to the private island opportunities scattered across the 60+ islands, the BVI combines sailing-culture lifestyle with serious wealth structuring. Post-hurricane rebuilding has produced a new generation of hurricane-resilient luxury homes built to Miami-Dade code standards, blending Caribbean authenticity with modern engineering."
+    whyContact="BVI real estate transactions require Non-Belonger Land Holding Licences for foreign purchasers, navigation of the territory's Crown land and freehold systems, and understanding of the stamp duty framework. These agents bring decades of island-market expertise, maintain relationships with the legacy landowning families of Tortola and Virgin Gorda, and command the private island inventory that defines the BVI's most exclusive transactions. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

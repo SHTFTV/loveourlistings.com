@@ -32,8 +32,8 @@ const PerthAgents = () => (
     city="Perth"
     region="AU, INT"
     heroImage="https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?w=1920&h=1080&fit=crop"
-    intro="Perth offers Western Australia's premier luxury real estate market, with exceptional waterfront properties along the Swan River and prestigious suburbs like Dalkeith and Peppermint Grove. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Perth, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Perth's luxury market is experiencing a mining-wealth-driven resurgence — Dalkeith and Peppermint Grove riverfront estates now command $10M–$30M+ as Western Australia's resources boom fuels domestic ultra-high-net-worth growth. Cottesloe's oceanfront positions, Mosman Park's heritage properties, and the emerging Elizabeth Quay precinct offer distinct luxury propositions. Perth's relative affordability versus Sydney and Melbourne, combined with its proximity to Asian markets and world-class lifestyle, has attracted significant interstate and international capital. These agents are the definitive specialists in WA's prestige property landscape."
+    whyContact="Perth's luxury segment demands agents who understand FIRB (Foreign Investment Review Board) requirements, WA's unique settlement processes, and the premium dynamics between river-facing and ocean-facing positions across the western suburbs. These specialists leverage networks spanning mining executives, Asian investor groups, and the established families of Nedlands and Claremont. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
