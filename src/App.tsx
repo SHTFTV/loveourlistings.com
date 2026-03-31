@@ -841,6 +841,7 @@ const App = () => (
             {agentRoutes.map((route) => (
               <Route key={route.path} path={route.path} element={<route.component />} />
             ))}
+            <Route path="/pricing" element={<PricingPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
