@@ -27,7 +27,7 @@ const destinations = [
     name: "Island Retreats",
     badge: "ISLAND & TROPICAL",
     image: "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&q=80",
-    description: "Private island estates and tropical luxury in the Caribbean, Maldives & Hawaii.",
+    description: "Private island homes and tropical luxury estates in the Caribbean, Maldives, Hawaii, and Fiji.",
     path: "/destinations/island-retreats",
   },
 ];

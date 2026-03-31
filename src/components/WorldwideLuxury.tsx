@@ -77,12 +77,13 @@ const WorldwideLuxury = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground italic mb-4">
-            Worldwide Luxury
+            Luxury Real Estate Agents Worldwide
           </h2>
           <p className="font-body text-sm text-muted-foreground max-w-4xl mb-10 leading-relaxed">
-            As the premier luxury real estate portfolio, Luxury Heart Portfolio connects you to fine
-            international estates and exclusive property listings. Recognized worldwide by industry
-            leaders and media alike, our curated network continues to set the standard.
+            Love Our Listings connects buyers and sellers with verified luxury real estate agents
+            across 33 countries and 150+ elite markets. From Manhattan penthouses to Malibu oceanfront
+            estates, our curated directory features only top-producing professionals with proven track
+            records in ultra-luxury property transactions.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">

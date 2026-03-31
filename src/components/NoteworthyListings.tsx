@@ -78,7 +78,7 @@ const NoteworthyListings = () => {
       >
         <div className="flex items-center justify-between mb-8">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground italic">
-            Recent Noteworthy Listings
+            Ultra-Luxury Homes Recently Listed
           </h2>
           <a href="#" className="font-body text-xs text-primary hover:underline tracking-wider uppercase">
             View Recent Additions →
