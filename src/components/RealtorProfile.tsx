@@ -252,10 +252,10 @@ const RealtorProfile = ({
             Stand out in {region} with unforgettable boutique branding for your luxury listings.
           </p>
           <a
-            href="/shop/heart-sign"
+            href="/pricing"
             className="inline-block border-2 border-primary-foreground text-primary-foreground font-black text-xs tracking-[2px] uppercase py-5 px-10 hover:bg-primary-foreground hover:text-primary transition-all duration-300"
           >
-            Shop Signs
+            View Pricing
           </a>
         </div>
       </section>
