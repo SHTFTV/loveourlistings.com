@@ -45,9 +45,9 @@ const FeaturedDestinations = () => {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground italic">
             Luxury Homes by Destination
           </h2>
-          <a href="#" className="font-body text-xs text-primary hover:underline tracking-wider uppercase">
+          <Link to="/destinations/waterfront" className="font-body text-xs text-primary hover:underline tracking-wider uppercase">
             View All Destinations →
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
