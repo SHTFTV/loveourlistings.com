@@ -2,28 +2,31 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in New York with deep local expertise and a proven track record of representing exceptional properties in the New York market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in New York's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in New York.",
+    name: "Serena Boardman",
+    brokerage: "Sotheby's International Realty",
+    specialty: "Upper East Side · Townhouses · Historic Estates",
+    bio: "Consistently ranked as the top-producing individual broker at Sotheby's International Realty, Serena Boardman is a legend in New York City luxury real estate. Her expertise in Manhattan's most prestigious townhouses and co-ops on the Upper East Side has made her the trusted advisor for the city's most discerning buyers and sellers.",
+    website: "https://www.sothebysrealty.com",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "#1 Sotheby's Individual Broker",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating New York's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    name: "Caroline Bass",
+    brokerage: "Compass",
+    specialty: "Tribeca · West Village · Luxury Condos",
+    bio: "With over $350 million in career sales, Caroline Bass is one of Manhattan's most trusted luxury brokers. Known for her patience, strategic pricing, and client-first approach, she has earned a stellar reputation among both buyers and sellers in Tribeca, the West Village, and SoHo's most exclusive addresses.",
+    website: "https://caroline-bass.com",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=800&fit=crop&crop=top",
+    accolades: "$350M+ Career Sales",
+  },
+  {
+    name: "Ryan Serhant",
+    brokerage: "SERHANT.",
+    specialty: "New Development · Ultra-Luxury · Manhattan",
+    bio: "Founder of SERHANT. and one of the most recognized names in global real estate, Ryan Serhant has redefined luxury property marketing. His innovative approach to branding, media, and client service has made him the go-to agent for Manhattan's highest-profile new developments and ultra-luxury transactions.",
+    website: "https://www.serhant.com",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Founder of SERHANT.",
   },
 ];
 
@@ -32,8 +35,8 @@ const NewYorkAgents = () => (
     city="New York"
     region="New York, United States"
     heroImage="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1920&h=1080&fit=crop"
-    intro="New York offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in New York, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="New York City's luxury real estate market is the most prestigious in the world, from the iconic townhouses of the Upper East Side to the soaring penthouses of Billionaire's Row. These are the city's most trusted luxury listing agents — professionals who collectively represent billions in Manhattan's most significant properties."
+    whyContact="Whether you're acquiring a Park Avenue co-op or marketing a Tribeca penthouse, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
