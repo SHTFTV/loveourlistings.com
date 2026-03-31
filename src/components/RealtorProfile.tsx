@@ -39,6 +39,7 @@ const RealtorProfile = ({
   portrait,
   heroImage,
   phone,
+  email,
   address,
   website,
   googleReviews,
