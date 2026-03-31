@@ -32,8 +32,8 @@ const PittsburghAgents = () => (
     city="Pittsburgh"
     region="Pennsylvania, United States"
     heroImage="https://images.unsplash.com/photo-1569161031820-3e48e8d43637?w=1920&h=1080&fit=crop"
-    intro="Pittsburgh's luxury market features grand estates in Shadyside and Squirrel Hill, waterfront properties along the rivers, and premium homes in Fox Chapel and Sewickley."
-    whyContact="Whether you're buying or selling luxury property in Pittsburgh, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Fox Chapel's wooded estates on 2-to-10-acre lots trade between $1.5M and $6M, while Sewickley Heights' equestrian properties and Shadyside's Victorian mansions command $500+ per square foot. Pittsburgh's tech-sector resurgence — led by Carnegie Mellon's robotics and AI ecosystem, Google, and Uber's autonomous-vehicle division — has reinvigorated the $2M+ luxury segment, attracting a new generation of tech-wealth buyers alongside the city's legacy steel and banking fortunes."
+    whyContact="Pittsburgh's luxury market is hyper-local: Fox Chapel, Sewickley, and Shadyside each attract fundamentally different buyer profiles. The agents featured here hold Berkshire Hathaway, Howard Hanna, and Compass production records with deep networks spanning CMU faculty, UPMC executives, and the city's established philanthropic families."
     agents={agents}
   />
 );

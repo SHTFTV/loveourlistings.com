@@ -32,8 +32,8 @@ const IrvineAgents = () => (
     city="Irvine"
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1920&h=1080&fit=crop"
-    intro="Irvine's luxury market features premium master-planned community estates, modern luxury homes in Turtle Ridge and Shady Canyon, and executive properties in one of America's safest cities."
-    whyContact="Whether you're buying or selling luxury property in Irvine, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Shady Canyon's guard-gated custom estates trade between $5M and $20M on 1-to-3-acre view lots, while Turtle Ridge properties average $1,800+ per square foot with Pacific panoramas. Irvine — ranked America's safest large city for 19 consecutive years — attracts international buyers from China, South Korea, and the Middle East drawn by top-rated Irvine Unified schools and proximity to UCI's tech-innovation corridor."
+    whyContact="Irvine's $3M+ market is uniquely driven by international cash buyers and Irvine Company land releases that create predictable inventory cycles. The agents featured here hold Compass, Sotheby's, and Berkshire Hathaway production records with multilingual capabilities and deep networks spanning Orange County's Asian-American and international luxury buyer communities."
     agents={agents}
   />
 );

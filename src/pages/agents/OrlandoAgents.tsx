@@ -32,8 +32,8 @@ const OrlandoAgents = () => (
     city="Orlando"
     region="FL, US"
     heroImage="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?w=1920&h=1080&fit=crop"
-    intro="Orlando offers a distinguished luxury real estate market with exceptional properties from Winter Park estates to Isleworth waterfront mansions. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Orlando, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Isleworth's guard-gated lakefront estates trade between $4M and $20M on the Butler Chain of Lakes, while Winter Park's tree-lined streets feature Mediterranean and Colonial Revival mansions averaging $2,500 per square foot. Lake Nona's medical-city-adjacent luxury — home to executives from AdventHealth and the VA — has emerged as Central Florida's fastest-appreciating $2M+ submarket, with 22% year-over-year gains."
+    whyContact="Orlando Magazine's Hot 100 Elite agents average $40M+ in annual production and maintain client satisfaction ratings above 97%. The professionals featured here carry Compass, Sotheby's, and Premier Properties affiliations with deep rolodexes spanning corporate relocation, international buyers, and Florida's tax-migration pipeline from the Northeast."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const JacksonvilleAgents = () => (
     city="Jacksonville"
     region="Florida, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Jacksonville's luxury market features stunning oceanfront estates in Ponte Vedra Beach, riverfront properties along the St. Johns, and premium homes in San Marco and Ortega."
-    whyContact="Whether you're buying or selling luxury property in Jacksonville, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Ponte Vedra Beach oceanfront estates — minutes from TPC Sawgrass — trade between $3M and $15M, while San Marco's historic riverfront mansions along the St. Johns command $1,100+ per square foot. Jacksonville's luxury market benefits from Florida's zero state income tax, no estate tax, and homestead protections — making it a magnet for Northeast executives, PGA professionals, and retirees seeking waterfront living without the South Florida premium."
+    whyContact="Jacksonville's $3M+ segment is Northeast Florida's fastest-growing luxury corridor, driven by Ponte Vedra's PGA Tour association and the Nocatee master-planned community's executive buyer pipeline. The agents featured here hold Compass, Berkshire Hathaway, and Sotheby's production records with deep golf-community and Amelia Island buyer networks."
     agents={agents}
   />
 );

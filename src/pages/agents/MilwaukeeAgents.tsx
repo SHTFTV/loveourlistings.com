@@ -32,8 +32,8 @@ const MilwaukeeAgents = () => (
     city="Milwaukee"
     region="Wisconsin, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Milwaukee's luxury market features stunning Lake Michigan waterfront estates, historic mansions along Newbold Avenue, and premium homes in Whitefish Bay and River Hills."
-    whyContact="Whether you're buying or selling luxury property in Milwaukee, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="River Hills estates on 5-to-20-acre wooded lots trade between $2M and $8M behind Milwaukee's most exclusive gates, while Whitefish Bay's lakefront properties and the North Shore's bluff-top homes command $800+ per square foot with Lake Michigan panoramas. Milwaukee's luxury market offers exceptional value — comparable estate-quality living at 50% below Chicago North Shore pricing — attracting Northwestern Mutual, Kohl's, and Harley-Davidson executives."
+    whyContact="Milwaukee's $2M+ segment rewards agents with deep North Shore community knowledge and corporate-relocation expertise. The agents featured here hold Compass, Shorewest, and Keller Williams production records with established networks spanning the metro's manufacturing, finance, and healthcare executive buyer communities."
     agents={agents}
   />
 );

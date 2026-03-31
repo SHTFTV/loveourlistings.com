@@ -32,8 +32,8 @@ const NewportBeachAgents = () => (
     city="Newport Beach"
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1920&h=1080&fit=crop"
-    intro="Newport Beach is one of Southern California's most exclusive coastal communities, featuring stunning harbor-front estates, oceanfront properties on the Balboa Peninsula, and luxury homes in Crystal Cove and Pelican Hill."
-    whyContact="Whether you're buying or selling luxury property in Newport Beach, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Crystal Cove and Pelican Hill estates list between $5M and $35M with unobstructed Pacific views, while harbor-front properties on Linda Isle and Bay Island command $4,000+ per square foot — making Newport Beach Orange County's most expensive coastal market. Corona del Mar's village charm and Balboa Peninsula's oceanfront compounds anchor the $3M+ segment, attracting entertainment, tech, and private-equity wealth."
+    whyContact="Newport Beach's $5M+ segment saw just 52 days average on market in 2025, reflecting fierce demand from cash buyers relocating from Los Angeles. The agents featured here — including Coldwell Banker's #1 worldwide agent — bring verified billion-dollar career volumes and deep yacht-club and country-club networks essential for reaching Newport's ultra-high-net-worth buyer pool."
     agents={agents}
   />
 );

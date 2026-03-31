@@ -32,8 +32,8 @@ const PaloAltoAgents = () => (
     city="Palo Alto"
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&h=1080&fit=crop"
-    intro="Palo Alto's luxury market features prestigious estates in Old Palo Alto, premium properties near Stanford University, and cutting-edge modern homes in Silicon Valley's intellectual capital."
-    whyContact="Whether you're buying or selling luxury property in Palo Alto, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Old Palo Alto estates on quarter-acre-plus lots trade between $5M and $40M, with Crescent Park and Professorville properties averaging $3,500+ per square foot — the highest in Silicon Valley. Stanford faculty, venture capitalists, and tech founders compete for a severely limited inventory in the nation's most educated zip code, where median household income exceeds $200,000 and teardowns sell for $4M."
+    whyContact="Palo Alto's luxury inventory averages fewer than 45 active listings at any given time, making off-market access and pre-listing networks essential. The agents featured here — including DeLeon Realty's peninsula-leading team and Compass' #1 agent — bring verified $100M+ production records and deep Stanford/VC community connections."
     agents={agents}
   />
 );

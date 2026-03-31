@@ -32,8 +32,8 @@ const StamfordAgents = () => (
     city="Stamford"
     region="Connecticut, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="Stamford's luxury market features stunning Long Island Sound waterfront estates, premium properties in Shippan Point, and executive homes serving the city's thriving finance sector."
-    whyContact="Whether you're buying or selling luxury property in Stamford, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Shippan Point waterfront estates with Long Island Sound views trade between $3M and $15M, while Harbor Point's luxury condos attract hedge-fund and private-equity executives commuting to Manhattan's financial district in under 50 minutes. Stamford anchors Fairfield County's Gold Coast — Connecticut's wealthiest corridor — where the $2M+ segment benefits from corporate headquarters relocations and New York City tax refugees."
+    whyContact="Stamford's Gold Coast luxury market requires agents who understand both Manhattan buyer expectations and Connecticut's estate-property nuances. The professionals featured here hold Compass, Douglas Elliman, and Sotheby's production records with deep finance-sector networks spanning Greenwich, Darien, and New Canaan."
     agents={agents}
   />
 );

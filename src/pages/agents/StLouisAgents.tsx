@@ -32,8 +32,8 @@ const StLouisAgents = () => (
     city="St. Louis"
     region="Missouri, United States"
     heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
-    intro="St. Louis' luxury market features stunning Central West End mansions, grand estates in Ladue, and premium properties in Clayton and Frontenac in the Gateway City."
-    whyContact="Whether you're buying or selling luxury property in St. Louis, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Ladue estates on 1-to-5-acre lots trade between $2M and $8M along Warson Road and Spoede, while Central West End's historic mansions and Clayton's walkable luxury command $600+ per square foot. Frontenac, Huntleigh, and Town & Country anchor the $3M+ segment — attracting Anheuser-Busch, Emerson, and Centene executives seeking private, gated estate living within 20 minutes of downtown."
+    whyContact="St. Louis' luxury market rewards discretion and hyper-local expertise — Ladue alone has five distinct micro-markets with dramatically different buyer profiles. The agents featured here hold Laura McCarthy, Dielmann Sotheby's, and legacy-brokerage production records with deep networks spanning the Gateway City's corporate, medical, and old-money buyer communities."
     agents={agents}
   />
 );

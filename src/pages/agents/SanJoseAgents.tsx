@@ -32,8 +32,8 @@ const SanJoseAgents = () => (
     city="San Jose"
     region="California, United States"
     heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&h=1080&fit=crop"
-    intro="San Jose's luxury market features stunning Silicon Valley estates in Almaden Valley, premium properties in Willow Glen, and tech-driven luxury living in the heart of the world's innovation capital."
-    whyContact="Whether you're buying or selling luxury property in San Jose, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Almaden Valley estates on 1-to-5-acre lots trade between $3M and $12M, while Willow Glen's Craftsman and ranch-style luxury averages $2,200 per square foot — fueled by C-suite compensation packages from Apple, Google, and Adobe. San Jose's $3M+ segment is the Bay Area's best value play relative to Palo Alto and Los Altos, attracting tech executives seeking estate-scale properties within 15 minutes of downtown."
+    whyContact="Silicon Valley's IPO and RSU liquidity cycles create predictable demand surges in San Jose's luxury market. The agents featured here — including DeLeon Realty's record-setting team and top Compass producers — bring data-driven pricing, pre-market network access, and global syndication to ensure maximum exposure among qualified tech-wealth buyers."
     agents={agents}
   />
 );
