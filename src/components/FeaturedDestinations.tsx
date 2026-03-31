@@ -1,22 +1,29 @@
 import { motion } from "framer-motion";
-import vancouverImage from "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png";
 
 const destinations = [
   {
-    name: "White Rock, BC",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    name: "Waterfront Estates",
+    badge: "WATERFRONT",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+    description: "Oceanfront mansions & lakeside retreats across the world's most coveted coastlines.",
   },
   {
-    name: "Vancouver",
-    image: vancouverImage,
+    name: "Ski Villages",
+    badge: "SKI & ALPINE",
+    image: "https://images.unsplash.com/photo-1520984032042-162d526883e0?w=800&q=80",
+    description: "Luxury chalets in Whistler, Aspen, St. Moritz, and beyond.",
   },
   {
-    name: "Abbotsford, BC",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+    name: "Wine Country",
+    badge: "VINEYARD LIVING",
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80",
+    description: "Estate properties in Napa Valley, Okanagan, Tuscany, and Bordeaux.",
   },
   {
-    name: "Dubai, UAE",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    name: "Island Retreats",
+    badge: "ISLAND & TROPICAL",
+    image: "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&q=80",
+    description: "Private island estates and tropical luxury in the Caribbean, Maldives & Hawaii.",
   },
 ];
 
@@ -48,15 +55,21 @@ const FeaturedDestinations = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="overflow-hidden h-[200px] lg:h-[220px] bg-card">
+              <div className="relative overflow-hidden h-[200px] lg:h-[220px] bg-card">
                 <img
                   src={dest.image}
                   alt={dest.name}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
                   loading="lazy"
                 />
+                <span className="absolute bottom-2 left-2 right-2 bg-primary/90 text-primary-foreground font-body text-[10px] font-bold tracking-wider uppercase text-center py-1.5 px-2">
+                  {dest.badge}
+                </span>
               </div>
-              <p className="font-display text-sm font-bold text-foreground mt-3">{dest.name}</p>
+              <div className="pt-3 pb-2">
+                <p className="font-display text-sm font-bold text-foreground">{dest.name}</p>
+                <p className="font-body text-xs text-muted-foreground mt-0.5 line-clamp-2">{dest.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>
