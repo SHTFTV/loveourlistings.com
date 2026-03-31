@@ -6,6 +6,7 @@ import FeaturedDestinations from "@/components/FeaturedDestinations";
 import NoteworthyListings from "@/components/NoteworthyListings";
 import DiscoverCards from "@/components/DiscoverCards";
 import WorldwideLuxury from "@/components/WorldwideLuxury";
+import LuxuryLifestyle from "@/components/LuxuryLifestyle";
 import FooterFull from "@/components/FooterFull";
 
 const Index = () => {
