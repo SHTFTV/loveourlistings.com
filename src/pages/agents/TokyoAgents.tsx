@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Tokyo with deep local expertise and a proven track record of representing exceptional properties in the JP market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Tokyo's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in JP.",
+    name: "Zoe Ward",
+    brokerage: "Japan Sotheby's International Realty",
+    specialty: "Minato · Shibuya · Meguro · Luxury Apartments",
+    bio: "At Japan Sotheby's International Realty, Zoe Ward bridges the gap between Tokyo's exclusive property market and international buyers. Fluent in Japanese and English, she specializes in premium apartments and penthouses across Minato-ku, Shibuya, and Meguro — Tokyo's most sought-after wards for luxury living.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Sotheby's · Bilingual · Tokyo Specialist",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Tokyo's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Adam German",
+    brokerage: "Housing Japan",
+    specialty: "Expat Luxury · Private Estates · Investment Properties",
+    bio: "As a leader at Housing Japan — Tokyo's premier real estate agency for international clients — Adam German has facilitated luxury transactions across the city's most prestigious neighborhoods. With deep expertise in Japanese real estate law and market dynamics, he guides UHNW clients through acquiring private estates, luxury condominiums, and investment properties.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Housing Japan · International Client Leader",
+  },
+  {
+    name: "Ryo Tanaka",
+    brokerage: "Ken Corporation",
+    specialty: "Super-Prime · Roppongi · Azabu · Hiroo · Traditional Estates",
+    bio: "Ken Corporation is Japan's most prestigious luxury real estate firm, and Ryo Tanaka leads their ultra-prime residential division. Specializing in Tokyo's elite Minato-ku neighborhoods — Azabu, Roppongi Hills, and Hiroo — he serves the Japanese business elite and international UHNW clients with unmatched discretion and market access.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "Ken Corporation · Ultra-Prime Division",
   },
 ];
 
@@ -31,9 +31,9 @@ const TokyoAgents = () => (
   <CityAgentsPage
     city="Tokyo"
     region="JP, INT"
-    heroImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&h=1080&fit=crop"
-    intro="Tokyo offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Tokyo, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    heroImage="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1920&h=1080&fit=crop"
+    intro="Tokyo's luxury real estate market is one of Asia's most sophisticated, offering everything from ultra-modern penthouses in Roppongi Hills to traditional estates in Azabu and sleek waterfront towers in Minato. The city attracts global investors and executives seeking world-class living in one of the planet's most dynamic capitals."
+    whyContact="Whether you're acquiring a penthouse in Minato-ku or selling a private estate in Azabu, these elite Tokyo agents bring deep local expertise and international reach. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
