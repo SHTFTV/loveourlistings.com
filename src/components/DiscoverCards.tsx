@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import destinationsImage from "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png";
 import worldwideSearchImage from "@/assets/6ea6dd66-8c0d-4af2-a853-91f69f6e31e0.png";
 
@@ -7,16 +8,19 @@ const cards = [
     title: "Worldwide Search",
     description: "Homes for Sale and for rent.",
     image: worldwideSearchImage,
+    path: "/destinations/waterfront",
   },
   {
     title: "Destinations",
     description: "Noteworthy cities and regions.",
     image: destinationsImage,
+    path: "/destinations/island-retreats",
   },
   {
     title: "Heart Signs",
     description: "Unforgettable boutique branding.",
     image: "/5bc6627e-6f18-42aa-b9d4-5a22d1c20b63.png",
+    path: "/pricing",
   },
 ];
 
@@ -25,27 +29,28 @@ const DiscoverCards = () => {
     <section className="max-w-7xl mx-auto px-6 md:px-12 py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {cards.map((card, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group cursor-pointer border border-border overflow-hidden"
-          >
-            <div className="overflow-hidden h-[220px] bg-card">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
-                loading="lazy"
-              />
-            </div>
-            <div className="p-5">
-              <h3 className="font-display text-lg font-bold text-foreground">{card.title}</h3>
-              <p className="font-body text-xs text-muted-foreground mt-1">{card.description}</p>
-            </div>
-          </motion.div>
+          <Link key={i} to={card.path}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group cursor-pointer border border-border overflow-hidden"
+            >
+              <div className="overflow-hidden h-[220px] bg-card">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-lg font-bold text-foreground">{card.title}</h3>
+                <p className="font-body text-xs text-muted-foreground mt-1">{card.description}</p>
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </div>
     </section>
