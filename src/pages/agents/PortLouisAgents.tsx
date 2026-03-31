@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Port Louis with deep local expertise and a proven track record of representing exceptional properties in the MU market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Port Louis's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in MU.",
+    name: "Jasmine Longuève",
+    brokerage: "Leading Luxury Home",
+    specialty: "Luxury Estates · Investment · IRS Properties",
+    bio: "With over 20 years of experience in asset management and real estate investment, Jasmine has developed unique expertise in the Mauritian luxury market, identifying opportunities and guiding high-net-worth clients through the island's most prestigious transactions.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "CEO & Founder",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Port Louis's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Jennifer Hirst",
+    brokerage: "Mauritius Sotheby's International Realty",
+    specialty: "Waterfront · Coastal Estates · Relocation",
+    bio: "Born in Mauritius and raised in Johannesburg, Jennifer is an authentic 'hybrid' who returned to the island 25 years ago. Her deep local knowledge and international perspective make her one of Mauritius's most trusted luxury property advisors.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Sotheby's Top Agent",
+  },
+  {
+    name: "Ashik Doorgakant",
+    brokerage: "RE/MAX 24 Mauritius",
+    specialty: "Smart Cities · PDS · Luxury Developments",
+    bio: "Part of the award-winning RE/MAX 24 team — named Best Luxury Real Estate Brokerage in Mauritius 2024 by the Luxury Lifestyle Awards — Ashik specializes in the island's premier Smart City developments and PDS luxury schemes.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "Award-Winning Brokerage",
   },
 ];
 
@@ -32,8 +32,8 @@ const PortLouisAgents = () => (
     city="Port Louis"
     region="MU, INT"
     heroImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop"
-    intro="Port Louis offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Port Louis, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Port Louis and Mauritius offer a distinguished luxury real estate market with exceptional properties ranging from beachfront estates to Smart City developments. These are the island's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    whyContact="Whether you're buying or selling luxury property in Mauritius, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
