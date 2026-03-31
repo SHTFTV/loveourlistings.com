@@ -1,66 +1,67 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const regions: { title: string; countries: { flag: string; name: string }[] }[] = [
+const regions: { title: string; countries: { flag: string; name: string; slug: string }[] }[] = [
   {
     title: "North America",
     countries: [
-      { flag: "🇨🇦", name: "Canada" },
-      { flag: "🇲🇽", name: "Mexico" },
-      { flag: "🇺🇸", name: "United States" },
+      { flag: "🇨🇦", name: "Canada", slug: "canada" },
+      { flag: "🇲🇽", name: "Mexico", slug: "mexico" },
+      { flag: "🇺🇸", name: "United States", slug: "united-states" },
     ],
   },
   {
     title: "Caribbean",
     countries: [
-      { flag: "🇧🇸", name: "Bahamas" },
-      { flag: "🇰🇾", name: "Cayman Islands" },
-      { flag: "🇩🇴", name: "Dominican Republic" },
-      { flag: "🇵🇷", name: "Puerto Rico" },
-      { flag: "🇧🇱", name: "Saint Barthélemy" },
-      { flag: "🇹🇨", name: "Turks and Caicos" },
-      { flag: "🇻🇬", name: "Virgin Islands, British" },
+      { flag: "🇧🇸", name: "Bahamas", slug: "bahamas" },
+      { flag: "🇰🇾", name: "Cayman Islands", slug: "cayman-islands" },
+      { flag: "🇩🇴", name: "Dominican Republic", slug: "dominican-republic" },
+      { flag: "🇵🇷", name: "Puerto Rico", slug: "puerto-rico" },
+      { flag: "🇧🇱", name: "Saint Barthélemy", slug: "saint-barthelemy" },
+      { flag: "🇹🇨", name: "Turks and Caicos", slug: "turks-and-caicos" },
+      { flag: "🇻🇬", name: "Virgin Islands, British", slug: "british-virgin-islands" },
     ],
   },
   {
     title: "Europe",
     countries: [
-      { flag: "🇫🇷", name: "France" },
-      { flag: "🇩🇪", name: "Germany" },
-      { flag: "🇬🇷", name: "Greece" },
-      { flag: "🇮🇹", name: "Italy" },
-      { flag: "🇲🇨", name: "Monaco" },
-      { flag: "🇵🇹", name: "Portugal" },
-      { flag: "🇪🇸", name: "Spain" },
-      { flag: "🇨🇭", name: "Switzerland" },
-      { flag: "🇬🇧", name: "United Kingdom" },
+      { flag: "🇫🇷", name: "France", slug: "france" },
+      { flag: "🇩🇪", name: "Germany", slug: "germany" },
+      { flag: "🇬🇷", name: "Greece", slug: "greece" },
+      { flag: "🇮🇹", name: "Italy", slug: "italy" },
+      { flag: "🇲🇨", name: "Monaco", slug: "monaco-country" },
+      { flag: "🇵🇹", name: "Portugal", slug: "portugal" },
+      { flag: "🇪🇸", name: "Spain", slug: "spain" },
+      { flag: "🇨🇭", name: "Switzerland", slug: "switzerland" },
+      { flag: "🇬🇧", name: "United Kingdom", slug: "united-kingdom" },
     ],
   },
   {
     title: "Asia & Middle East",
     countries: [
-      { flag: "🇦🇪", name: "United Arab Emirates" },
-      { flag: "🇮🇱", name: "Israel" },
-      { flag: "🇶🇦", name: "Qatar" },
-      { flag: "🇮🇳", name: "India" },
-      { flag: "🇹🇭", name: "Thailand" },
-      { flag: "🇯🇵", name: "Japan" },
+      { flag: "🇦🇪", name: "United Arab Emirates", slug: "uae" },
+      { flag: "🇮🇱", name: "Israel", slug: "israel" },
+      { flag: "🇶🇦", name: "Qatar", slug: "qatar" },
+      { flag: "🇮🇳", name: "India", slug: "india" },
+      { flag: "🇹🇭", name: "Thailand", slug: "thailand" },
+      { flag: "🇯🇵", name: "Japan", slug: "japan" },
     ],
   },
   {
     title: "Australia & Pacific",
     countries: [
-      { flag: "🇦🇺", name: "Australia" },
-      { flag: "🇳🇿", name: "New Zealand" },
-      { flag: "🇫🇯", name: "Fiji" },
+      { flag: "🇦🇺", name: "Australia", slug: "australia" },
+      { flag: "🇳🇿", name: "New Zealand", slug: "new-zealand" },
+      { flag: "🇫🇯", name: "Fiji", slug: "fiji" },
     ],
   },
   {
     title: "Africa",
     countries: [
-      { flag: "🇰🇪", name: "Kenya" },
-      { flag: "🇲🇺", name: "Mauritius" },
-      { flag: "🇲🇦", name: "Morocco" },
-      { flag: "🇿🇦", name: "South Africa" },
+      { flag: "🇰🇪", name: "Kenya", slug: "kenya" },
+      { flag: "🇲🇺", name: "Mauritius", slug: "mauritius" },
+      { flag: "🇲🇦", name: "Morocco", slug: "morocco" },
+      { flag: "🇿🇦", name: "South Africa", slug: "south-africa" },
     ],
   },
 ];
@@ -93,13 +94,13 @@ const WorldwideLuxury = () => {
                 <ul className="space-y-1.5">
                   {region.countries.map((c) => (
                     <li key={c.name}>
-                      <a
-                        href="#"
+                      <Link
+                        to={`/country/${c.slug}`}
                         className="font-body text-xs text-primary hover:underline flex items-center gap-2"
                       >
                         <span>{c.flag}</span>
                         {c.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
