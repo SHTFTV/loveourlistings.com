@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Geneva with deep local expertise and a proven track record of representing exceptional properties in the CH market.",
+    name: "Brice Steiner",
+    brokerage: "Switzerland Sotheby's International Realty",
+    specialty: "Lakefront Estates · Penthouses · International Clients",
+    bio: "Based at Switzerland Sotheby's International Realty on Boulevard Georges-Favon in Geneva, Brice Steiner is dedicated to fully satisfying the expectations of his discerning clientele. He specializes in Geneva's most prestigious lakefront properties and penthouses, serving UHNW buyers from across the globe seeking Switzerland's finest addresses.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "Sotheby's · Geneva Lakefront Specialist",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Geneva's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in CH.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
-  },
-  {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Geneva's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Ian Simpson",
+    brokerage: "Ian Simpson Luxury Real Estate",
+    specialty: "UHNWI Advisory · Relocation · Investment · Chalets",
+    bio: "Ian Simpson is one of Switzerland's most recognized luxury real estate advisors, known for guiding ultra-high-net-worth individuals through the complexities of Swiss property acquisition. His boutique advisory practice in Geneva provides end-to-end service — from property search and due diligence to relocation and wealth structuring.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "UHNWI Advisor · Swiss Market Authority",
+  },
+  {
+    name: "Caroline Taylor",
+    brokerage: "John Taylor Geneva",
+    specialty: "Lake Geneva · Cologny · Vandoeuvres · Vésenaz",
+    bio: "Part of the prestigious John Taylor network — operating since 1864 — the Geneva team assists international clients in acquiring and selling exceptional properties along Lake Geneva's famed Gold Coast. With deep connections in Cologny, Vandoeuvres, and Geneva's most exclusive enclaves, they offer unmatched access to off-market opportunities.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
+    accolades: "John Taylor · Since 1864",
   },
 ];
 
@@ -32,8 +32,8 @@ const GenevaAgents = () => (
     city="Geneva"
     region="CH, INT"
     heroImage="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=1920&h=1080&fit=crop"
-    intro="Geneva offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Geneva, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Geneva is one of the world's most exclusive real estate markets, offering stunning lakefront estates, historic mansions in Cologny, and elegant city penthouses with Alpine views. The city attracts diplomats, financiers, and global ultra-high-net-worth individuals seeking privacy, prestige, and Switzerland's renowned quality of life."
+    whyContact="Whether you're acquiring a lakefront estate on Geneva's Gold Coast or selling a prestigious property in Cologny, these elite agents offer unparalleled Swiss market expertise. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
