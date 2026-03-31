@@ -10,24 +10,28 @@ const featuredListings = [
     price: "$2,795,000 CAD",
     agent: "Becky Zhou Hill",
     location: "White Rock, BC, Canada",
+    path: "/realtor/becky-zhou-hill",
   },
   {
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
     price: "$2,375,000 CAD",
     agent: "Raphaelle Beaudoin",
     location: "Abbotsford, BC, Canada",
+    path: "/realtor/raphaelle-beaudoin",
   },
   {
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
     price: "$4,175,000 CAD",
     agent: "Becky Zhou Hill",
     location: "Surrey, BC, Canada",
+    path: "/realtor/becky-zhou-hill",
   },
   {
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
     price: "$12,000,000 USD",
-    agent: "Sotheby's International",
+    agent: "Vancouver Luxury Listing",
     location: "Vancouver, BC, Canada",
+    path: "/agents/vancouver",
   },
 ];
 
