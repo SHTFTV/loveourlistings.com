@@ -19,7 +19,7 @@ interface ListingDetailProps {
 }
 
 const ListingDetailPage = ({
-  image, price, agent, location, badge, externalUrl, description, features, neighborhood,
+  image, price, agent, location, badge, externalUrl, description, features, neighborhood, agentWebsite, agentWebsiteLabel,
 }: ListingDetailProps) => {
   return (
     <div className="min-h-screen bg-background text-foreground">
