@@ -10,6 +10,8 @@ const BellevueWestVancouver = () => (
     description="This architectural masterpiece on Bellevue Avenue is one of West Vancouver's most iconic residences. Known for its striking contemporary design, the home integrates glass, steel, and natural stone in a composition that earned international design recognition. With nearly 12,000 sq ft of living space, the property offers unobstructed ocean views, a cantilevered infinity pool, and interiors that blur the line between art gallery and residence."
     features={["12,000 sq ft contemporary design", "Award-winning architecture", "Cantilevered infinity pool", "Unobstructed ocean views", "Floor-to-ceiling glass walls", "Custom Italian cabinetry", "Rooftop entertainment terrace", "Private elevator"]}
     neighborhood="Bellevue Avenue is West Vancouver's most coveted street, known for its architectural diversity and sweeping ocean panoramas. The area offers proximity to Dundarave Village for boutique shopping and dining, while Lighthouse Park and the Sea-to-Sky Highway provide instant access to nature. This is where Vancouver's creative and financial elite call home."
+    agentWebsite="https://whiterock.io"
+    agentWebsiteLabel="WhiteRock.io"
   />
 );
 

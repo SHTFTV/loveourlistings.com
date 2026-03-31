@@ -10,6 +10,8 @@ const BridlePathToronto2 = () => (
     description="Another extraordinary offering on The Bridle Path, this $29.8M estate combines classical European design with modern luxury amenities. The property sits on over two acres of professionally landscaped grounds with a gated entrance, circular drive, and views of the surrounding ravine. Inside, hand-carved stone fireplaces, imported marble floors, and coffered ceilings create an atmosphere of old-world grandeur. A full indoor pool and spa wing provides year-round resort living."
     features={["2+ acre gated estate", "Classical European architecture", "Indoor pool & spa wing", "Hand-carved stone fireplaces", "Imported marble throughout", "Ravine views & mature trees", "8 bedrooms, 12 bathrooms", "Staff quarters & service areas"]}
     neighborhood="The Bridle Path remains Canada's most exclusive residential address. Originally developed as an equestrian community, today it houses ambassadors, business magnates, and cultural icons. The neighborhood's proximity to the Don Valley ravine system provides a rare urban-wilderness setting, while Bayview Village and Yorkdale offer world-class shopping minutes away."
+    agentWebsite="https://abbotsford.io"
+    agentWebsiteLabel="Abbotsford.io"
   />
 );
 
