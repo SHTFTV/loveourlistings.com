@@ -32,8 +32,8 @@ const QuebecCityAgents = () => (
     city="Quebec City"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Quebec City's luxury real estate market features stunning heritage properties in Old Quebec, grand estates in Sillery, and elegant homes along the St. Lawrence River. A UNESCO World Heritage Site with truly unique luxury living."
-    whyContact="Whether you're buying or selling luxury property in Quebec City, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Quebec City's luxury market features heritage estates within the UNESCO-designated Old Quebec walls, premium waterfront properties along the St. Lawrence in Sillery and Sainte-Foy, and executive homes on Île d'Orléans. As Canada's most European city with median luxury prices above $1.5 million, Quebec City draws francophone professionals, diplomats, and international buyers captivated by 400 years of architectural heritage and world-class cultural institutions."
+    whyContact="Quebec City's UNESCO heritage-zone construction approvals, provincial land transfer tax calculations, and Île d'Orléans agricultural-zone restrictions demand agents fluent in Quebec's distinct legal framework and bilingual transaction processes. The specialists listed here close premium deals in Old Quebec, Sillery, and Sainte-Foy — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

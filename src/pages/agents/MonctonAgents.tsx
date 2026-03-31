@@ -32,8 +32,8 @@ const MonctonAgents = () => (
     city="Moncton"
     region="New Brunswick, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Moncton's luxury real estate market features elegant river-view properties, executive homes in the city's premier neighborhoods, and premium estates in the heart of Atlantic Canada's hub city."
-    whyContact="Whether you're buying or selling luxury property in Moncton, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Moncton's luxury market features executive estates in Mapleton Park, premium riverfront properties along the Petitcodiac, and modern builds in the Royal Oaks and Magnetic Hill corridors. As the economic hub of the Maritimes with median luxury prices offering exceptional value and a bilingual business environment, Moncton attracts professionals and retirees seeking Atlantic Canadian lifestyle at accessible price points."
+    whyContact="Moncton's bilingual transaction environment, New Brunswick land transfer tax structure, and Petitcodiac River tidal-bore setback requirements demand agents who understand the Maritimes' unique real estate dynamics. The specialists listed here close premium deals in Mapleton Park, Royal Oaks, and Riverview — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

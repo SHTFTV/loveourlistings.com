@@ -32,8 +32,8 @@ const WinnipegAgents = () => (
     city="Winnipeg"
     region="Manitoba, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Winnipeg's luxury real estate market features grand heritage estates along Wellington Crescent, executive homes in Tuxedo, and modern luxury in Bridgwater. Manitoba's capital offers distinguished living with a rich cultural scene."
-    whyContact="Whether you're buying or selling luxury property in Winnipeg, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Winnipeg's luxury market features river-lot estates in Tuxedo and Wellington Crescent — one of Canada's most historic luxury boulevards — executive homes in Bridgwater and South Pointe, and premium properties along the Assiniboine River. With a diversified economy anchored by Great-West Lifeco and Richardson International and median luxury prices offering remarkable value, Winnipeg draws professionals seeking generous estate lots, cultural richness, and prairie-city livability."
+    whyContact="Winnipeg's river-lot legal descriptions, Red River Floodway zone regulations, and heritage-district building restrictions demand agents who understand Manitoba's distinct luxury market framework. The specialists listed here close premium deals in Tuxedo, Wellington Crescent, and Bridgwater — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

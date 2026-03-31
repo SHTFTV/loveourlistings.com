@@ -32,8 +32,8 @@ const RedDeerAgents = () => (
     city="Red Deer"
     region="Alberta, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Red Deer's luxury real estate market features elegant riverfront properties, executive estates in the city's premier neighborhoods, and premium homes in central Alberta's hub city between Calgary and Edmonton."
-    whyContact="Whether you're buying or selling luxury property in Red Deer, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Red Deer's luxury market features riverfront estates along the Red Deer River, executive homes in Grandview and River Glen, and premium acreages in the surrounding Clearwater County. Positioned midway between Calgary and Edmonton with median luxury prices offering strong value, Red Deer attracts energy-sector professionals, agricultural entrepreneurs, and families seeking central Alberta's most balanced lifestyle with year-round recreation access."
+    whyContact="Red Deer's river-corridor development setbacks, Clearwater County subdivision regulations, and Alberta's unique property tax assessment system require agents who understand central Alberta's premium market dynamics. The specialists listed here close premium deals in Grandview, River Glen, and the Red Deer River corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

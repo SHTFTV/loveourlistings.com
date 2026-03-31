@@ -32,8 +32,8 @@ const NewBrunswickAgents = () => (
     city="New Brunswick"
     region="New Brunswick, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="New Brunswick's luxury real estate market features stunning Bay of Fundy waterfront estates, charming heritage properties in Fredericton, and premium coastal retreats throughout the Maritime province."
-    whyContact="Whether you're buying or selling luxury property in New Brunswick, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="New Brunswick's luxury market features Bay of Fundy waterfront estates, historic Saint John uptown properties, and premium riverfront homes along the Saint John and Miramichi rivers. With median luxury prices offering the best value in Eastern Canada and a growing remote-work migration from Ontario, New Brunswick attracts buyers seeking Atlantic Canadian heritage, dramatic tidal landscapes, and year-round outdoor lifestyle."
+    whyContact="New Brunswick's bilingual transaction requirements, tidal waterfront regulations, and provincial land transfer tax structure demand agents who understand the Maritimes' distinct legal and market environment. The specialists listed here close premium deals across Fredericton, Saint John, and the Fundy Coast — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

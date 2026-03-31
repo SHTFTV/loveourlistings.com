@@ -32,8 +32,8 @@ const BramptonAgents = () => (
     city="Brampton"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Brampton's luxury real estate market features impressive estate homes in Credit Valley, grand properties in Castlemore, and executive residences in Snelgrove. One of the GTA's fastest-growing cities with premium living options."
-    whyContact="Whether you're buying or selling luxury property in Brampton, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Brampton's luxury segment features executive estates in Credit Valley, premium homes in Castlemore, and gated communities along the Huttonville corridor. With a population approaching 700,000 and median luxury prices above $1.6 million, Brampton's premium market draws buyers from across the GTA seeking larger lots, modern builds, and proximity to Pearson International Airport and Highway 407."
+    whyContact="Brampton's rapid growth means navigating development levies, Peel Region zoning changes, and builder allocation processes requires seasoned local expertise. The agents listed here specialize in Credit Valley, Castlemore, and Vales of Castlemore — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

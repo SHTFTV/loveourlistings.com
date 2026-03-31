@@ -32,8 +32,8 @@ const SherbrookeAgents = () => (
     city="Sherbrooke"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Sherbrooke's luxury real estate market features elegant properties near Mont-Bellevue, waterfront estates along the Magog River, and premium homes in the cultural capital of Quebec's Eastern Townships."
-    whyContact="Whether you're buying or selling luxury property in Sherbrooke, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Sherbrooke's luxury market features heritage estates in Vieux-Nord, premium lakefront properties near Lac des Nations, and executive homes in the Rock Forest–Saint-Élie–Deauville borough. As the Eastern Townships' largest city with a university-driven economy and median luxury prices below $800,000, Sherbrooke offers francophone professionals and retirees exceptional value in one of Quebec's most culturally vibrant regions."
+    whyContact="Sherbrooke's heritage-district renovation approvals, Eastern Townships agricultural-zone regulations, and Quebec welcome tax calculations require agents who navigate the region's bilingual luxury market with expertise. The specialists listed here close premium deals in Vieux-Nord, Rock Forest, and the Lac des Nations corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

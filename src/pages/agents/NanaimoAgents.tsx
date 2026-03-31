@@ -32,8 +32,8 @@ const NanaimoAgents = () => (
     city="Nanaimo"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Nanaimo's luxury real estate market features stunning oceanfront estates, mountain-view properties, and island retreat homes on central Vancouver Island with mild climate and natural beauty."
-    whyContact="Whether you're buying or selling luxury property in Nanaimo, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Nanaimo's luxury market features oceanfront estates in Hammond Bay and Departure Bay, premium acreages in Lantzville, and island-view properties in Cedar and Extension. With mild Vancouver Island climate, median luxury prices above $1.5 million, and BC Ferries connectivity to Metro Vancouver, Nanaimo draws retirees, remote workers, and lifestyle buyers seeking Pacific Coast waterfront living without Greater Victoria pricing."
+    whyContact="Nanaimo's foreshore lease regulations, Regional District development permits, and Vancouver Island's unique septic and well-water requirements demand agents who understand island real estate. The specialists listed here close premium deals in Hammond Bay, Departure Bay, and Lantzville — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

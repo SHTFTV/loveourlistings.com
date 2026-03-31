@@ -32,8 +32,8 @@ const PortMoodyAgents = () => (
     city="Port Moody"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Port Moody's luxury real estate market features stunning inlet waterfront properties, premium homes in Heritage Mountain, and executive estates in the City of the Arts with spectacular natural beauty."
-    whyContact="Whether you're buying or selling luxury property in Port Moody, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Port Moody's luxury market centres on inlet-view estates in Heritage Mountain, waterfront properties in Rocky Point, and premium townhomes in Suter Brook Village. Known as the 'City of the Arts' with Burrard Inlet at its doorstep and median luxury prices above $2 million, Port Moody attracts buyers seeking an intimate, walkable waterfront community with direct Evergreen Extension SkyTrain service to downtown Vancouver."
+    whyContact="Port Moody's inlet-view lot premiums, Heritage Mountain building covenants, and Burrard Inlet environmental assessment requirements make every premium transaction uniquely positioned. The specialists listed here close premium deals in Heritage Mountain, Rocky Point, and Suter Brook — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

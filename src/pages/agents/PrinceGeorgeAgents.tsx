@@ -32,8 +32,8 @@ const PrinceGeorgeAgents = () => (
     city="Prince George"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Prince George's luxury real estate market features riverfront estates, premium homes in Cranbrook Hill, and executive properties in Northern BC's largest city with stunning natural surroundings."
-    whyContact="Whether you're buying or selling luxury property in Prince George, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Prince George's luxury market features riverfront estates at the confluence of the Fraser and Nechako rivers, executive homes in Cranbrook Hill with panoramic valley views, and premium properties in the University Heights corridor near UNBC. As Northern BC's largest city with median luxury prices offering exceptional value, Prince George attracts professionals, physicians, and forestry executives seeking four-season outdoor lifestyle and Northern BC's economic hub."
+    whyContact="Prince George's Northern BC wildfire interface regulations, river-corridor flood-zone requirements, and UNBC-adjacent development patterns demand agents who understand the region's unique luxury dynamics. The specialists listed here close premium deals in Cranbrook Hill, University Heights, and the Fraser River corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

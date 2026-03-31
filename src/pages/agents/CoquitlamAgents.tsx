@@ -32,8 +32,8 @@ const CoquitlamAgents = () => (
     city="Coquitlam"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Coquitlam's luxury real estate market features elegant homes in Westwood Plateau, executive estates in Burke Mountain, and premium properties with mountain and city views across the Tri-Cities."
-    whyContact="Whether you're buying or selling luxury property in Coquitlam, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Coquitlam's luxury segment is defined by Westwood Plateau's panoramic mountain-view estates, Burke Mountain's premium new construction, and heritage-adjacent properties near Mundy Park. With the Evergreen Extension connecting Coquitlam to downtown Vancouver and median luxury prices surpassing $2.2 million, the Tri-Cities' largest municipality continues to attract buyers seeking space, transit, and mountain lifestyle."
+    whyContact="Coquitlam's Burke Mountain development phasing, Westwood Plateau building covenants, and municipal amenity contribution requirements demand agents who know the Tri-Cities inside out. The specialists listed here close premium deals in Westwood Plateau, Burke Mountain, and Ranch Park — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

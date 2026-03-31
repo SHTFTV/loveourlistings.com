@@ -32,8 +32,8 @@ const OakvilleAgents = () => (
     city="Oakville"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Oakville's luxury real estate market is among Ontario's most prestigious, featuring stunning lakefront estates in Old Oakville, grand homes in Morrison, and executive properties in Glen Abbey."
-    whyContact="Whether you're buying or selling luxury property in Oakville, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Oakville's luxury market is one of Canada's most prestigious, featuring lakefront estates in Bronte and Morrison, heritage mansions in Old Oakville, and executive homes in Glen Abbey and River Oaks. With median luxury prices exceeding $3 million and proximity to Toronto's financial district via the QEW and GO Transit, Oakville draws C-suite executives, professional athletes, and international buyers seeking one of the GTA's most exclusive addresses."
+    whyContact="Oakville's heritage conservation district restrictions, Halton Region Greenbelt regulations, and lakefront lot assembly complexities require agents who operate at the highest level of the GTA's luxury market. The specialists listed here close premium deals in Old Oakville, Bronte, and Glen Abbey — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

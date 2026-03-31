@@ -32,8 +32,8 @@ const GatineauAgents = () => (
     city="Gatineau"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Gatineau's luxury real estate market features stunning waterfront estates along the Ottawa River, hillside retreats near Gatineau Park, and heritage properties in Old Aylmer. Quebec side of Canada's National Capital Region."
-    whyContact="Whether you're buying or selling luxury property in Gatineau, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Gatineau's luxury market features riverfront estates along the Ottawa River in Aylmer, executive homes in the Plateau sector, and heritage properties in Vieux-Hull with Parliament Hill views. With Quebec's lower property taxes compared to neighbouring Ottawa and median luxury prices above $1.2 million, Gatineau attracts bilingual executives, federal employees, and cross-border buyers seeking value in the National Capital Region."
+    whyContact="Gatineau's interprovincial transaction complexities, Quebec land transfer taxes, and Aylmer heritage-district building restrictions require agents fluent in both official languages and both provincial regulatory systems. The specialists listed here close premium deals in Aylmer, the Plateau, and Vieux-Hull — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

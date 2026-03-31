@@ -32,8 +32,8 @@ const LethbridgeAgents = () => (
     city="Lethbridge"
     region="Alberta, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Lethbridge's luxury real estate market features elegant homes in the West Side, river valley estates, and premium properties in southern Alberta's sunniest city with stunning prairie and mountain views."
-    whyContact="Whether you're buying or selling luxury property in Lethbridge, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Lethbridge's luxury market features coulee-view estates in West Lethbridge, executive homes in The Canyons, and premium properties overlooking the Oldman River valley. With median luxury prices offering exceptional value compared to Calgary and proximity to the Rocky Mountains, Lethbridge attracts buyers seeking southern Alberta's sunniest city with dramatic natural landscapes and a growing university-town economy."
+    whyContact="Lethbridge's coulee-edge building restrictions, southern Alberta irrigation district regulations, and wind-exposure engineering requirements demand agents who understand the region's unique building considerations. The specialists listed here close premium deals in West Lethbridge, The Canyons, and Indian Battle Park — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

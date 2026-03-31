@@ -32,8 +32,8 @@ const KamloopsAgents = () => (
     city="Kamloops"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Kamloops' luxury real estate market features stunning riverfront properties, hillside estates with panoramic views, and premium homes in the Tournament Capital of Canada."
-    whyContact="Whether you're buying or selling luxury property in Kamloops, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Kamloops' luxury market features riverfront estates along the South Thompson, panoramic-view properties in Juniper Ridge and Pineview Valley, and premium ranches in the surrounding ranchlands. With a semi-arid climate, median luxury prices above $1.1 million, and proximity to Sun Peaks Resort, Kamloops attracts lifestyle buyers seeking year-round outdoor recreation and BC Interior living."
+    whyContact="Kamloops' wildfire interface regulations, Thompson-Nicola Regional District zoning, and irrigation-dependent property valuations require agents who understand Interior BC's unique real estate dynamics. The specialists listed here close premium deals in Juniper Ridge, Pineview Valley, and the South Thompson corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

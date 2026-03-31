@@ -32,8 +32,8 @@ const PortCoquitlamAgents = () => (
     city="Port Coquitlam"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Port Coquitlam's luxury real estate market features premium homes along the Pitt River, executive properties in Citadel Heights, and estate homes with mountain views in the heart of the Tri-Cities."
-    whyContact="Whether you're buying or selling luxury property in Port Coquitlam, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Port Coquitlam's luxury market features riverfront properties along the Pitt and Coquitlam rivers, executive homes in the Citadel Heights area, and premium new builds in the Oxford Heights corridor. With the West Coast Express providing a direct line to downtown Vancouver and median luxury prices above $1.6 million, PoCo draws families and professionals seeking Tri-Cities quality of life at more accessible price points than Coquitlam."
+    whyContact="Port Coquitlam's riverfront setback requirements, Traboulay PoCo Trail adjacency considerations, and strata wind-up regulations demand agents who know PoCo's premium pockets inside out. The specialists listed here close premium deals in Citadel Heights, Oxford Heights, and the Pitt River waterfront — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

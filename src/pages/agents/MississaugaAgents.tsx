@@ -35,8 +35,8 @@ const MississaugaAgents = () => (
     city="Mississauga"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Mississauga's luxury real estate market features stunning lakefront estates in Lorne Park, executive homes in Mineola, and sophisticated condos along the waterfront. As the GTA's third-largest city, it attracts discerning buyers seeking premium living with proximity to Toronto."
-    whyContact="Whether you're buying or selling luxury property in Mississauga, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Mississauga's luxury market spans lakefront estates in Lorne Park and Mineola, penthouse living in the Square One skyline, and executive homes in Erin Mills and Lakeview. As Canada's sixth-largest city with median luxury prices above $2.3 million, Mississauga draws corporate executives, airline professionals near Pearson Airport, and waterfront buyers seeking Lake Ontario views minutes from downtown Toronto via the GO network."
+    whyContact="Mississauga's Lakeview Village master-plan implications, Port Credit heritage-district restrictions, and Peel Region development levies require agents who navigate one of the GTA's most diverse luxury landscapes. The specialists listed here close premium deals in Lorne Park, Mineola, and Port Credit — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

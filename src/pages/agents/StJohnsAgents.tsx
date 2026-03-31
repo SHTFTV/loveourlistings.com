@@ -32,8 +32,8 @@ const StJohnsAgents = () => (
     city="St. John's"
     region="Newfoundland, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="St. John's luxury real estate market features charming heritage properties in the downtown core, waterfront estates, and premium homes in North America's oldest city with stunning coastal beauty."
-    whyContact="Whether you're buying or selling luxury property in St. John's, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="St. John's luxury market features harbour-view estates in the Battery and Signal Hill corridor, heritage rowhouses in downtown's famous Jellybean Row, and executive homes in the Stavanger Drive and Clovelly corridors. As Newfoundland's capital with a booming offshore energy sector and median luxury prices offering remarkable value, St. John's draws energy executives, physicians, and heritage-property enthusiasts seeking North America's oldest and most colourful city."
+    whyContact="St. John's heritage conservation area restrictions, Municipal Plan development controls, and Newfoundland's unique property registration system demand agents who understand the province's distinct real estate framework. The specialists listed here close premium deals in the Battery, Signal Hill, and Clovelly — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const BurnabyAgents = () => (
     city="Burnaby"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Burnaby's luxury real estate market offers stunning estate homes near Deer Lake, executive properties on Burnaby Mountain, and premium high-rise living in Metrotown. Central location between Vancouver and the Fraser Valley."
-    whyContact="Whether you're buying or selling luxury property in Burnaby, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Burnaby's luxury market spans penthouse suites in the Metrotown skyline, heritage-adjacent estates in Deer Lake, and mountain-view properties in Capitol Hill and Burnaby Heights. With SkyTrain connectivity across three stations and median luxury prices exceeding $2.5 million, Burnaby is Metro Vancouver's most transit-accessible luxury market — attracting both local move-up buyers and international investors seeking proximity to downtown Vancouver."
+    whyContact="Burnaby's aggressive densification plans, TransLink-adjacent zoning bonuses, and heritage-tree protection bylaws make every premium transaction uniquely complex. The agents listed here specialize in Deer Lake, Capitol Hill, and Metrotown — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

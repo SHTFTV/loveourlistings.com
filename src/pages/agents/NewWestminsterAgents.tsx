@@ -32,8 +32,8 @@ const NewWestminsterAgents = () => (
     city="New Westminster"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="New Westminster's luxury real estate market features stunning Fraser River waterfront properties, charming heritage estates in Queens Park, and premium homes in BC's historic Royal City."
-    whyContact="Whether you're buying or selling luxury property in New Westminster, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="New Westminster's luxury market centres on heritage Queens Park mansions, modern waterfront condos along the Fraser River, and Sapperton's revitalized executive homes near Royal Columbian Hospital. As Metro Vancouver's oldest city with SkyTrain access and median luxury prices above $1.8 million, New Westminster offers heritage character, river views, and urban connectivity that few municipalities can match."
+    whyContact="New Westminster's heritage conservation area bylaws, Queens Park HCA building restrictions, and waterfront strata regulations require agents who navigate one of Metro Vancouver's most architecturally protected luxury markets. The specialists listed here close premium deals in Queens Park, Quay, and Sapperton — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

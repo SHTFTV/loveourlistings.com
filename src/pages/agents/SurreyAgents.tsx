@@ -32,8 +32,8 @@ const SurreyAgents = () => (
     city="Surrey"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Surrey's luxury real estate market features stunning estate homes in South Surrey, oceanfront properties near White Rock, and executive homes in Morgan Creek and Elgin Chantrell. BC's second-largest city."
-    whyContact="Whether you're buying or selling luxury property in Surrey, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Surrey's luxury market spans premium waterfront estates in South Surrey's Crescent Beach and Ocean Park, executive homes in Morgan Creek and Grandview Heights, and sprawling acreages in Cloverdale and Campbell Heights. As Metro Vancouver's largest municipality by area with median luxury prices above $2.5 million in South Surrey, the city attracts families, executives, and investors seeking gated communities, ocean views, and proximity to the U.S. border."
+    whyContact="Surrey's complex neighbourhood-specific zoning, ALR boundary considerations, and Campbell Heights industrial-residential interface regulations demand agents who understand the city's vastly different luxury sub-markets. The specialists listed here close premium deals in South Surrey, Morgan Creek, and Grandview Heights — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

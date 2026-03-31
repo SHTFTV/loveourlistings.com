@@ -32,8 +32,8 @@ const LongueuilAgents = () => (
     city="Longueuil"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Longueuil's luxury real estate market features elegant waterfront properties along the St. Lawrence River, executive homes in Saint-Hubert, and premium residences on Montreal's vibrant South Shore."
-    whyContact="Whether you're buying or selling luxury property in Longueuil, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Longueuil's luxury market spans waterfront estates along the St. Lawrence in Vieux-Longueuil, executive homes in Saint-Hubert, and modern condos near the REM and metro stations. As Montreal's South Shore anchor with direct metro access and median luxury prices above $1.2 million, Longueuil draws urban professionals seeking space and connectivity without crossing the bridge daily."
+    whyContact="Longueuil's REM-adjacent development zones, Quebec welcome tax structure, and agglomeration-level assessment rules require agents who understand the South Shore's multilayered municipal governance. The specialists listed here close premium deals in Vieux-Longueuil, Saint-Hubert, and Greenfield Park — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

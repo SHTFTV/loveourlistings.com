@@ -32,8 +32,8 @@ const OshawaAgents = () => (
     city="Oshawa"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Oshawa's luxury real estate market features lakefront properties on Lake Ontario, executive homes in Taunton, and premium estates in Durham Region's largest city."
-    whyContact="Whether you're buying or selling luxury property in Oshawa, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Oshawa's luxury market features Lake Ontario waterfront estates in the Lakeview corridor, executive homes in Taunton and Northwood, and premium new construction in Windfields and Samac. With GM's Canadian headquarters driving a professional workforce and median luxury prices well below neighbouring Whitby and Ajax, Oshawa offers Durham Region's strongest luxury value proposition for buyers seeking lakefront access and modern amenities."
+    whyContact="Oshawa's waterfront revitalization plans, Durham Region development charges, and lakeshore erosion setback requirements demand agents who understand the east-GTA's evolving luxury landscape. The specialists listed here close premium deals in Taunton, Northwood, and the Lakeview corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const WaterlooAgents = () => (
     city="Waterloo"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Waterloo's luxury real estate market features executive estates in Beechwood, premium properties near the universities, and modern luxury driven by the thriving tech sector in Canada's Silicon Valley."
-    whyContact="Whether you're buying or selling luxury property in Waterloo, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Waterloo's luxury market features executive estates in Beechwood, premium properties in the Westmount and Laurelwood corridors, and heritage homes near Waterloo Park. With the University of Waterloo and Wilfrid Laurier driving a world-class tech ecosystem — home to the birthplace of BlackBerry and a pipeline of AI startups — and median luxury prices above $1.4 million, Waterloo draws tech founders, professors, and professionals seeking a university-city lifestyle with ION LRT connectivity."
+    whyContact="Waterloo's ION LRT corridor intensification zones, Regional Municipality development charges, and university-district rental regulation impacts require agents who understand the Waterloo Region's tech-driven luxury dynamics. The specialists listed here close premium deals in Beechwood, Westmount, and Laurelwood — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

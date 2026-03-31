@@ -32,8 +32,8 @@ const BrantfordAgents = () => (
     city="Brantford"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Brantford's luxury real estate market offers elegant heritage homes, Grand River waterfront properties, and executive estates in the city's premier neighborhoods. Rich in history with a growing luxury market."
-    whyContact="Whether you're buying or selling luxury property in Brantford, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Brantford's luxury market features historic Grand River estates, executive homes in Eagle Place and Holmedale, and premium new construction along the Paris-to-Brantford corridor. With average luxury prices still well below neighbouring markets like Hamilton and Kitchener, Brantford offers exceptional value for buyers seeking heritage character, river frontage, and proximity to the 403 corridor."
+    whyContact="Brantford's heritage conservation districts, Grand River floodplain regulations, and Brant County severance rules demand an agent who understands both urban infill and rural estate transactions. The specialists listed here close premium deals across Eagle Place, Holmedale, and the Grand River corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

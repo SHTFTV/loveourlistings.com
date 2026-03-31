@@ -32,8 +32,8 @@ const LangleyAgents = () => (
     city="Langley"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Langley's luxury real estate market features stunning equestrian estates, premium homes in Willoughby and Brookswood, and sprawling acreage properties in the heart of the Fraser Valley."
-    whyContact="Whether you're buying or selling luxury property in Langley, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Langley's luxury market features premium equestrian estates in Campbell Valley, executive homes in Willoughby Heights, and sprawling acreages in rural Langley Township. With median luxury prices above $2 million and proximity to the Trans-Canada Highway, Langley offers the Fraser Valley's best combination of country estate living and urban accessibility for buyers seeking space, privacy, and room to build."
+    whyContact="Langley's Agricultural Land Reserve restrictions, Township versus City zoning differences, and equestrian property insurance requirements demand agents who know the difference between a hobby farm and a full agricultural operation. The specialists listed here close premium deals in Campbell Valley, Willoughby, and Brookswood — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

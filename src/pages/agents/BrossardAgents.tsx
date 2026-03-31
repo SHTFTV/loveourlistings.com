@@ -32,8 +32,8 @@ const BrossardAgents = () => (
     city="Brossard"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Brossard's luxury real estate market features modern executive homes, premium condos near the REM transit line, and elegant properties in established neighborhoods on Montreal's South Shore."
-    whyContact="Whether you're buying or selling luxury property in Brossard, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Brossard's luxury market is defined by premium condos in the Solar Uniquartier district near the new REM station, executive homes along the Boulevard Marie-Victorin waterfront, and estate properties in the prestigious Secteur A. With the Réseau express métropolitain connecting Brossard to downtown Montreal in minutes, luxury prices above $1.5 million are accelerating as buyers seek modern amenities on the South Shore."
+    whyContact="Brossard's bilingual transaction requirements, Quebec land transfer tax structure, and REM-driven development patterns require an agent fluent in both the market and the regulatory landscape. The specialists listed here close premium transactions in Solar Uniquartier, Secteur A, and the waterfront corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

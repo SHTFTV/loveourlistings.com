@@ -32,8 +32,8 @@ const ThunderBayAgents = () => (
     city="Thunder Bay"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Thunder Bay's luxury real estate market features stunning Lake Superior waterfront estates, executive homes overlooking the Sleeping Giant, and premium properties in Northwestern Ontario's largest city."
-    whyContact="Whether you're buying or selling luxury property in Thunder Bay, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Thunder Bay's luxury market features panoramic Lake Superior waterfront estates in the Bluff and Boulevard Lake corridors, executive homes in Westfort and Current River, and premium properties with views of the Sleeping Giant. As Northwestern Ontario's largest city with Lakehead University and a regional health-sciences centre driving professional demand, Thunder Bay offers exceptional waterfront value and dramatic Canadian Shield landscapes."
+    whyContact="Thunder Bay's Lake Superior shoreline protection regulations, Conservation Authority permit requirements, and Northern Ontario's unique property assessment challenges demand agents who understand the region's luxury market dynamics. The specialists listed here close premium deals in the Bluff, Current River, and Boulevard Lake — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

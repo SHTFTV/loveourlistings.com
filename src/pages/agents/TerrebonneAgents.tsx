@@ -32,8 +32,8 @@ const TerrebonneAgents = () => (
     city="Terrebonne"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Terrebonne's luxury real estate market features waterfront properties along the Mille-Îles River, premium homes in Lachenaie, and heritage estates in Old Terrebonne on Montreal's North Shore."
-    whyContact="Whether you're buying or selling luxury property in Terrebonne, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Terrebonne's luxury market features heritage estates in Vieux-Terrebonne along the Mille-Îles River, premium waterfront properties in Lachenaie, and executive homes in the La Plaine corridor. With lower property taxes than Montreal Island and median luxury prices above $1 million, Terrebonne draws francophone professionals seeking heritage charm, river views, and highway connectivity to downtown Montreal on the North Shore."
+    whyContact="Terrebonne's heritage-district building approvals, Mille-Îles River flood-zone regulations, and Quebec welcome tax structure require agents who navigate the North Shore luxury market with precision. The specialists listed here close premium deals in Vieux-Terrebonne, Lachenaie, and La Plaine — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
