@@ -12,6 +12,12 @@ import WineCountry from "./pages/WineCountry.tsx";
 import IslandRetreats from "./pages/IslandRetreats.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PromoBanner from "./components/PromoBanner.tsx";
+import VancouverAgents from "./pages/agents/VancouverAgents.tsx";
+import WestVancouverAgents from "./pages/agents/WestVancouverAgents.tsx";
+import VictoriaAgents from "./pages/agents/VictoriaAgents.tsx";
+import KelownaAgents from "./pages/agents/KelownaAgents.tsx";
+import WhistlerAgents from "./pages/agents/WhistlerAgents.tsx";
+import TorontoAgents from "./pages/agents/TorontoAgents.tsx";
 
 const queryClient = new QueryClient();
 
