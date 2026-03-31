@@ -52,30 +52,31 @@ const FeaturedDestinations = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {destinations.map((dest, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group cursor-pointer"
-            >
-              <div className="relative overflow-hidden h-[200px] lg:h-[220px] bg-card">
-                <img
-                  src={dest.image}
-                  alt={dest.name}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
-                  loading="lazy"
-                />
-                <span className="absolute bottom-2 left-2 right-2 bg-primary/90 text-primary-foreground font-body text-[10px] font-bold tracking-wider uppercase text-center py-1.5 px-2">
-                  {dest.badge}
-                </span>
-              </div>
-              <div className="pt-3 pb-2">
-                <p className="font-display text-sm font-bold text-foreground">{dest.name}</p>
-                <p className="font-body text-xs text-muted-foreground mt-0.5 line-clamp-2">{dest.description}</p>
-              </div>
-            </motion.div>
+            <Link key={i} to={dest.path}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden h-[200px] lg:h-[220px] bg-card">
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
+                    loading="lazy"
+                  />
+                  <span className="absolute bottom-2 left-2 right-2 bg-primary/90 text-primary-foreground font-body text-[10px] font-bold tracking-wider uppercase text-center py-1.5 px-2">
+                    {dest.badge}
+                  </span>
+                </div>
+                <div className="pt-3 pb-2">
+                  <p className="font-display text-sm font-bold text-foreground">{dest.name}</p>
+                  <p className="font-body text-xs text-muted-foreground mt-0.5 line-clamp-2">{dest.description}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </motion.div>
