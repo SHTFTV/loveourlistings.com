@@ -18,7 +18,8 @@ const PromoBanner = () => {
         className="fixed bottom-0 left-0 right-0 z-50 bg-primary text-primary-foreground"
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-6 flex-1">
+          <div className="flex items-center gap-4 flex-1">
+            <img src={siteLogo} alt="Love Our Listings" className="h-10 md:h-12 w-auto" />
             <span className="font-display text-lg md:text-xl font-bold italic hidden sm:inline">
               Love Our Listings
             </span>
