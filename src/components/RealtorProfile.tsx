@@ -25,6 +25,7 @@ interface RealtorProfileProps {
   email?: string;
   address: string;
   website?: string;
+  websiteLabel?: string;
   googleReviews?: string;
   hours?: string;
   specialties: string[];
@@ -43,6 +44,7 @@ const RealtorProfile = ({
   email,
   address,
   website,
+  websiteLabel,
   googleReviews,
   hours,
   specialties,
@@ -283,14 +285,16 @@ const RealtorProfile = ({
             If that's you, let's talk.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://whiterock.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-primary-foreground font-black text-xs tracking-[2px] uppercase py-4 px-10 hover:opacity-90 transition-opacity"
-            >
-              Visit WhiteRock.io
-            </a>
+            {website && (
+              <a
+                href={website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary text-primary-foreground font-black text-xs tracking-[2px] uppercase py-4 px-10 hover:opacity-90 transition-opacity"
+              >
+                Visit {websiteLabel || new URL(website).hostname}
+              </a>
+            )}
             <a
               href="mailto:colin@industryarmymarketing.com"
               className="inline-block border-2 border-primary text-primary font-black text-xs tracking-[2px] uppercase py-4 px-10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
