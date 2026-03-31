@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Dubai with deep local expertise and a proven track record of representing exceptional properties in the AE market.",
+    name: "Leigh Borg",
+    brokerage: "Dubai Sotheby's International Realty",
+    specialty: "Super-Prime · Palm Jumeirah · Emirates Hills · Downtown",
+    bio: "One of Dubai's most trusted luxury real estate experts, Leigh Borg is an Executive Director at Dubai Sotheby's International Realty. With 17+ years of experience and a chain of record-breaking transactions, he oversees the firm's overarching strategy while personally handling the city's most coveted super-prime properties.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "Executive Director · 17+ Years · Record-Breaker",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Dubai's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in AE.",
+    name: "Lorna Bruce",
+    brokerage: "Dubai Sotheby's International Realty",
+    specialty: "Branded Residences · Super-Prime Penthouses",
+    bio: "Lorna Bruce is a Director at Dubai Sotheby's International Realty, specializing in branded residences and super-prime penthouses. Her impressive track record has earned her a stellar reputation within the industry, with much of her business stemming from a personal referral pipeline built on trust, discretion, and exceptional service.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Director · Branded Residence Specialist",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Dubai's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    name: "Carmi Ortiz",
+    brokerage: "Dubai Sotheby's International Realty",
+    specialty: "Prime & Ultra-Prime · Dubai Hills · Jumeirah Bay",
+    bio: "Carmi Ortiz is a Director at Dubai Sotheby's International Realty with over a decade of expertise in Dubai's most coveted prime and ultra-prime markets. Specializing in exclusive enclaves, she brings deep market knowledge and a refined, client-first approach to every transaction.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=800&fit=crop&crop=top",
+    accolades: "Director · Ultra-Prime Markets",
   },
 ];
 
@@ -31,9 +31,9 @@ const DubaiAgents = () => (
   <CityAgentsPage
     city="Dubai"
     region="AE, INT"
-    heroImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&h=1080&fit=crop"
-    intro="Dubai offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Dubai, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    heroImage="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&h=1080&fit=crop"
+    intro="Dubai sets the global standard for ultra-luxury real estate, from the iconic Palm Jumeirah and Burj Khalifa residences to the exclusive villas of Emirates Hills. The city attracts international investors and UHNW buyers seeking world-class branded residences, waterfront mansions, and sky-high penthouses."
+    whyContact="Whether you're acquiring a branded penthouse on Palm Jumeirah or selling a villa in Emirates Hills, these elite Dubai agents offer unmatched market expertise and a global network. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
