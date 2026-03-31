@@ -23,7 +23,7 @@ const professionals = [
     name: "Coming Soon",
     company: "Vancouver Luxury Specialist",
     location: "Vancouver, BC, Canada",
-    portrait: "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png",
+    portrait: mascotImg,
     link: "#",
   },
   {
