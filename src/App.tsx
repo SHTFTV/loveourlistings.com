@@ -6,6 +6,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import BeckyZhouHill from "./pages/BeckyZhouHill.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
+import WaterfrontEstates from "./pages/WaterfrontEstates.tsx";
+import SkiVillages from "./pages/SkiVillages.tsx";
+import WineCountry from "./pages/WineCountry.tsx";
+import IslandRetreats from "./pages/IslandRetreats.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PromoBanner from "./components/PromoBanner.tsx";
 
@@ -22,6 +26,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/realtor/becky-zhou-hill" element={<BeckyZhouHill />} />
           <Route path="/realtor/raphaelle-beaudoin" element={<RaphaelleBeaudoin />} />
+          <Route path="/destinations/waterfront" element={<WaterfrontEstates />} />
+          <Route path="/destinations/ski-villages" element={<SkiVillages />} />
+          <Route path="/destinations/wine-country" element={<WineCountry />} />
+          <Route path="/destinations/island-retreats" element={<IslandRetreats />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
