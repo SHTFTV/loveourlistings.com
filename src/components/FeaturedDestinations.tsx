@@ -20,7 +20,7 @@ const destinations = [
     name: "Wine Country",
     badge: "VINEYARD LIVING",
     image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80",
-    description: "Estate properties in Napa Valley, Okanagan, Tuscany, and Bordeaux.",
+    description: "Vineyard estates and luxury country homes in Napa Valley, Okanagan, Tuscany, and Bordeaux.",
     path: "/destinations/wine-country",
   },
   {
