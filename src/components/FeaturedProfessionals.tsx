@@ -24,14 +24,14 @@ const professionals = [
     company: "Vancouver Luxury Specialist",
     location: "Vancouver, BC, Canada",
     portrait: mascotImg,
-    link: "/pricing",
+    link: "/agents/vancouver",
   },
   {
     name: "Coming Soon",
     company: "Victoria Estate Expert",
     location: "Victoria, BC, Canada",
     portrait: mascotImg,
-    link: "/pricing",
+    link: "/agents/victoria",
   },
 ];
 
