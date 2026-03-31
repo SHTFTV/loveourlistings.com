@@ -25,6 +25,7 @@ interface RealtorProfileProps {
   email?: string;
   address: string;
   website?: string;
+  websiteLabel?: string;
   googleReviews?: string;
   hours?: string;
   specialties: string[];
