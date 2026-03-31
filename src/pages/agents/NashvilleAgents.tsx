@@ -32,8 +32,8 @@ const NashvilleAgents = () => (
     city="Nashville"
     region="TN, US"
     heroImage="https://images.unsplash.com/photo-1545419913-775f1e5de399?w=1920&h=1080&fit=crop"
-    intro="Nashville offers a distinguished luxury real estate market with exceptional properties from Belle Meade mansions to modern Gulch penthouses. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Nashville, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Belle Meade estates along Tyne Boulevard trade between $3M and $18M, while 12 South's new-construction luxury homes command $900+ per square foot. Nashville's luxury inventory grew 51% year-over-year, making it one of the fastest-appreciating prestige markets in the Southeast — driven by music industry, healthcare, and private equity relocations from the coasts."
+    whyContact="Nashville's #1 Compass team closed $225 million in 2024 alone. The agents featured here hold Compass, Zeitlin Sotheby's, and Christie's affiliations with verified Tennessee production records — ensuring Belle Meade, Green Hills, and Brentwood listings reach qualified buyers through both Nashville's local entertainment networks and global luxury syndication."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const NewOrleansAgents = () => (
     city="New Orleans"
     region="Louisiana, United States"
     heroImage="https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=1920&h=1080&fit=crop"
-    intro="New Orleans' luxury market features grand Garden District mansions, historic French Quarter properties, and elegant Uptown estates along St. Charles Avenue in one of America's most culturally rich cities."
-    whyContact="Whether you're buying or selling luxury property in New Orleans, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Garden District mansions along St. Charles Avenue trade between $2M and $8M, while French Quarter Creole townhouses with original courtyards command $800+ per square foot. Audubon Place — one of only two private streets in New Orleans — remains the city's most exclusive address, where antebellum architecture meets modern restoration standards governed by the Historic District Landmarks Commission."
+    whyContact="New Orleans luxury transactions require agents who understand HDLC renovation restrictions, flood zone insurance (FEMA Zone AE designations), and the nuances of selling historic properties with preservation easements. The professionals featured here hold Sotheby's and Berkshire Hathaway affiliations with deep St. Charles corridor relationships."
     agents={agents}
   />
 );

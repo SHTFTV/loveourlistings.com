@@ -32,8 +32,8 @@ const WashingtonAgents = () => (
     city="Washington"
     region="DC, US"
     heroImage="https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=1920&h=1080&fit=crop"
-    intro="Washington DC offers a distinguished luxury real estate market with exceptional properties from Georgetown rowhouses to Kalorama mansions. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Washington DC, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Georgetown's Federal-era rowhouses trade between $3M and $15M, while Kalorama mansions — once home to presidents and ambassadors — command $2,500+ per square foot. The DC luxury corridor from Embassy Row through Spring Valley to McLean and Great Falls represents one of America's most diplomatically connected prestige markets."
+    whyContact="Washington DC's top agents hold a combined $1.79 billion in career sales and maintain relationships with embassy staff, lobbyists, and Fortune 500 executives. The professionals featured here — affiliated with TTR Sotheby's and Engel & Völkers — provide the discretion and global networks required for Georgetown, Kalorama, and Potomac transactions."
     agents={agents}
   />
 );

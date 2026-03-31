@@ -32,8 +32,8 @@ const PhoenixAgents = () => (
     city="Phoenix"
     region="AZ, US"
     heroImage="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&h=1080&fit=crop"
-    intro="Phoenix offers a distinguished luxury real estate market with exceptional properties from Paradise Valley estates to Biltmore mansions. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Phoenix, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Paradise Valley estates on Mummy Mountain trade between $5M and $30M, while Biltmore's guard-gated communities command $1,400+ per square foot for contemporary desert architecture. Arizona's #1 agent has closed $2.5 billion in career sales — a testament to the Valley's position as the Southwest's premier luxury destination for snowbird buyers and full-time relocations."
+    whyContact="Phoenix Magazine's Top 50 agents are selected annually based on closing performance, client satisfaction, and market share. The professionals featured here hold Russ Lyon Sotheby's affiliations and verified RealTrends production — ensuring Paradise Valley, Silverleaf, and DC Ranch listings reach qualified buyers through both Arizona's seasonal buyer networks and global luxury syndication."
     agents={agents}
   />
 );

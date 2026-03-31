@@ -32,8 +32,8 @@ const CharlestonAgents = () => (
     city="Charleston"
     region="South Carolina, United States"
     heroImage="https://images.unsplash.com/photo-1569407228235-9a744831a3f3?w=1920&h=1080&fit=crop"
-    intro="Charleston's luxury market features stunning antebellum estates South of Broad, waterfront properties on Sullivan's Island and Isle of Palms, and elegant homes in the historic French Quarter."
-    whyContact="Whether you're buying or selling luxury property in Charleston, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="South of Broad single houses with harbor views trade between $4M and $20M, while Sullivan's Island oceanfront lots — limited to roughly 1,400 buildable parcels — command $2,000+ per square foot. Charleston's Board of Architectural Review governs every exterior modification below Broad Street, making agent expertise in historic preservation regulations essential for luxury transactions."
+    whyContact="Charleston's luxury market requires agents who navigate BAR approval processes, seawall setback requirements, and the unique structural considerations of 18th-century masonry construction. The professionals featured here hold William Means and Sotheby's affiliations with deep relationships in South of Broad, Daniel Island, and Kiawah Island's private resort communities."
     agents={agents}
   />
 );

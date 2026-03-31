@@ -32,8 +32,8 @@ const PhiladelphiaAgents = () => (
     city="Philadelphia"
     region="PA, US"
     heroImage="https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?w=1920&h=1080&fit=crop"
-    intro="Philadelphia offers a distinguished luxury real estate market with exceptional properties from Rittenhouse Square penthouses to Main Line estates. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Philadelphia, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Main Line estates in Gladwyne and Bryn Mawr trade between $3M and $15M, while Rittenhouse Square penthouses command $1,200+ per square foot with skyline views. Philadelphia's luxury corridor — from Society Hill's colonial townhouses to Chestnut Hill's stone manor homes — represents the mid-Atlantic's most architecturally diverse prestige market."
+    whyContact="Philadelphia's $3M+ segment demands agents with America's Top 100 credentials, Five Star Award recognition, and established Main Line buyer networks. The professionals featured here hold Compass, Sotheby's, and Berkshire Hathaway affiliations — ensuring Gladwyne, Washington Square, and Art Museum District listings reach qualified buyers through both Philadelphia's old-money networks and global luxury syndication."
     agents={agents}
   />
 );

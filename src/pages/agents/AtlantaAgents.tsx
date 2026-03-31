@@ -32,8 +32,8 @@ const AtlantaAgents = () => (
     city="Atlanta"
     region="GA, US"
     heroImage="https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?w=1920&h=1080&fit=crop"
-    intro="Atlanta offers a distinguished luxury real estate market with exceptional properties from Buckhead mansions to Midtown penthouses. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Atlanta, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Buckhead's Tuxedo Park estates routinely trade above $5 million, while Midtown penthouses at The Residences command $2,000+ per square foot. Atlanta's luxury corridor — stretching from Chastain Park through Brookhaven to Druid Hills — represents the Southeast's most competitive prestige market, where top agents average 14 days on market for properly priced listings."
+    whyContact="Atlanta's luxury inventory moves fast: 68% of $3M+ listings close within 30 days when represented by a top-tier agent with established Buckhead buyer networks. The agents featured here hold verified production records, Christie's or Sotheby's global syndication, and the local relationships that unlock off-market opportunities in Tuxedo Park, Ansley Park, and beyond."
     agents={agents}
   />
 );

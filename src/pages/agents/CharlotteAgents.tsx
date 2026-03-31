@@ -32,8 +32,8 @@ const CharlotteAgents = () => (
     city="Charlotte"
     region="North Carolina, United States"
     heroImage="https://images.unsplash.com/photo-1560178280-f54ca45dc0a6?w=1920&h=1080&fit=crop"
-    intro="Charlotte's luxury market features stately estates in Myers Park, lakefront properties on Lake Norman, and premium homes in SouthPark and Eastover in the Queen City."
-    whyContact="Whether you're buying or selling luxury property in Charlotte, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Myers Park estates along Queens Road West trade between $2M and $8M, while Lake Norman waterfront properties with private docks command $1,000+ per square foot. Charlotte's banking-sector wealth — anchored by Bank of America and Truist headquarters — has driven Eastover and SouthPark into North Carolina's most competitive luxury corridors."
+    whyContact="Charlotte's $3M+ market moves through established banking and finance networks that generic marketing cannot penetrate. The agents featured here hold Sotheby's, Compass, and Showcase Realty affiliations with verified Queen City production records — ensuring Myers Park, Eastover, and Providence listings reach qualified buyers from Charlotte's corporate relocation pipeline."
     agents={agents}
   />
 );
