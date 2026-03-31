@@ -21,6 +21,7 @@ interface RealtorProfileProps {
   portrait: string;
   heroImage: string;
   phone: string;
+  email?: string;
   address: string;
   website?: string;
   googleReviews?: string;
@@ -38,6 +39,7 @@ const RealtorProfile = ({
   portrait,
   heroImage,
   phone,
+  email,
   address,
   website,
   googleReviews,
@@ -146,6 +148,15 @@ const RealtorProfile = ({
                 {phone}
               </a>
             </div>
+
+            {email && (
+              <div className="flex items-center gap-3">
+                <ExternalLink className="w-4 h-4 text-primary shrink-0" />
+                <a href={`mailto:${email}`} className="font-body text-sm text-foreground hover:text-primary transition-colors">
+                  {email}
+                </a>
+              </div>
+            )}
 
             {googleReviews && (
               <div className="flex items-center gap-3">
