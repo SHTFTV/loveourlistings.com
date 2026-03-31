@@ -13,7 +13,7 @@ const destinations = [
     name: "Ski Villages",
     badge: "SKI & ALPINE",
     image: "https://images.unsplash.com/photo-1520984032042-162d526883e0?w=800&q=80",
-    description: "Luxury chalets in Whistler, Aspen, St. Moritz, and beyond.",
+    description: "Ski-in/ski-out chalets and alpine luxury homes in Whistler, Aspen, St. Moritz, and beyond.",
     path: "/destinations/ski-villages",
   },
   {
