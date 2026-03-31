@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import siteLogo from "@/assets/logo.png";
 
 const PromoBanner = () => {
   const [dismissed, setDismissed] = useState(false);
