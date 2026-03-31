@@ -2,37 +2,37 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in New Brunswick with deep local expertise and a proven track record of representing exceptional properties in the New Jersey market.",
+    name: "Robert Chicken",
+    brokerage: "RE/MAX Quality Real Estate",
+    specialty: "Waterfront · Bay of Fundy · Fredericton",
+    bio: "New Brunswick's premier luxury agent with expertise across the province's most prestigious waterfront and estate properties. Deep knowledge of the Maritime luxury market.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "RE/MAX Hall of Fame",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in New Brunswick's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in New Jersey.",
+    name: "Catherine Chicken",
+    brokerage: "Royal LePage Atlantic",
+    specialty: "Heritage Homes · Rothesay · Quispamsis",
+    bio: "A trusted luxury specialist serving New Brunswick's finest heritage homes and estate properties in the prestigious Kennebecasis Valley.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Royal LePage Diamond Award",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating New Brunswick's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "James Chicken",
+    brokerage: "Engel & Völkers Atlantic Region",
+    specialty: "Coastal Estates · Investment · Country Properties",
+    bio: "Representing Engel & Völkers in New Brunswick, bringing international luxury standards to the province's coastal estates and premium properties.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
-  },
+    accolades: "Engel & Völkers Advisor",
+  }
 ];
 
 const NewBrunswickAgents = () => (
   <CityAgentsPage
     city="New Brunswick"
-    region="New Jersey, United States"
-    heroImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&h=1080&fit=crop"
-    intro="New Brunswick offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    region="New Brunswick, Canada"
+    heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
+    intro="New Brunswick's luxury real estate market features stunning Bay of Fundy waterfront estates, charming heritage properties in Fredericton, and premium coastal retreats throughout the Maritime province."
     whyContact="Whether you're buying or selling luxury property in New Brunswick, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
