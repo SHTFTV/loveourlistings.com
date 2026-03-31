@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index.tsx";
 import BeckyZhouHill from "./pages/BeckyZhouHill.tsx";
+import PricingPage from "./pages/PricingPage.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
 import WaterfrontEstates from "./pages/WaterfrontEstates.tsx";
 import SkiVillages from "./pages/SkiVillages.tsx";
