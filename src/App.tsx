@@ -12,6 +12,12 @@ import WineCountry from "./pages/WineCountry.tsx";
 import IslandRetreats from "./pages/IslandRetreats.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PromoBanner from "./components/PromoBanner.tsx";
+import VancouverAgents from "./pages/agents/VancouverAgents.tsx";
+import WestVancouverAgents from "./pages/agents/WestVancouverAgents.tsx";
+import VictoriaAgents from "./pages/agents/VictoriaAgents.tsx";
+import KelownaAgents from "./pages/agents/KelownaAgents.tsx";
+import WhistlerAgents from "./pages/agents/WhistlerAgents.tsx";
+import TorontoAgents from "./pages/agents/TorontoAgents.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +36,12 @@ const App = () => (
           <Route path="/destinations/ski-villages" element={<SkiVillages />} />
           <Route path="/destinations/wine-country" element={<WineCountry />} />
           <Route path="/destinations/island-retreats" element={<IslandRetreats />} />
+          <Route path="/agents/vancouver" element={<VancouverAgents />} />
+          <Route path="/agents/west-vancouver" element={<WestVancouverAgents />} />
+          <Route path="/agents/victoria" element={<VictoriaAgents />} />
+          <Route path="/agents/kelowna" element={<KelownaAgents />} />
+          <Route path="/agents/whistler" element={<WhistlerAgents />} />
+          <Route path="/agents/toronto" element={<TorontoAgents />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
