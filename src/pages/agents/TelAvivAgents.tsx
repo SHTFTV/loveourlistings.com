@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Tel Aviv with deep local expertise and a proven track record of representing exceptional properties in the IL market.",
+    name: "Lior Adar",
+    brokerage: "ADAR Luxury Realty",
+    specialty: "Luxury Residential · Neve Tzedek · Old North · Herzliya Pituach",
+    bio: "With over 28 years of professional experience in real estate, Lior Adar is the Managing Director and owner of ADAR Luxury Realty — Tel Aviv's premier boutique luxury agency. Born in Israel with deep roots in Europe and the United States, he brings a unique international perspective to Israel's most exclusive property market.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
+    accolades: "Managing Director · 28+ Years Experience",
   },
   {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Tel Aviv's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in IL.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
-  },
-  {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Tel Aviv's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Daniel Goldstein",
+    brokerage: "G.R.E Israel",
+    specialty: "High-End Residential · Development · Investment",
+    bio: "Daniel Goldstein leads G.R.E Israel, a high-end real estate agency with an international focus. A native English speaker with years of experience in the Israeli market, he leverages a powerful network of developers, solicitors, mortgage advisors, and architects to deliver perfect solutions for international buyers entering Tel Aviv's luxury market.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "G.R.E · International Focus · Developer Network",
+  },
+  {
+    name: "Eli Taieb",
+    brokerage: "Israel Sotheby's International Realty",
+    specialty: "Residential Estates · New Development · Rothschild Blvd",
+    bio: "Eli Taieb is a seasoned real estate professional at Israel Sotheby's International Realty with a long history of successful transactions since 2006. He specializes in residential estate properties and new developments across Tel Aviv's most prestigious addresses — from Rothschild Boulevard to the White City's Bauhaus gems.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=800&fit=crop&crop=top",
+    accolades: "Sotheby's · Since 2006 · Estate Specialist",
   },
 ];
 
@@ -32,8 +32,8 @@ const TelAvivAgents = () => (
     city="Tel Aviv"
     region="IL, INT"
     heroImage="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=1920&h=1080&fit=crop"
-    intro="Tel Aviv offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Tel Aviv, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Tel Aviv is the Mediterranean's most vibrant luxury real estate market, offering stunning sea-view penthouses, restored Bauhaus gems in the White City, and ultra-modern towers along the coastline. From Neve Tzedek's charming streets to Herzliya Pituach's exclusive marina residences, the city attracts global buyers seeking sun, culture, and innovation."
+    whyContact="Whether you're acquiring a Rothschild Boulevard penthouse or selling a beachfront property in Herzliya, these elite Tel Aviv agents bring deep local expertise and international connections. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
