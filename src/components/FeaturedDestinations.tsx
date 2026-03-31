@@ -6,7 +6,7 @@ const destinations = [
     name: "Waterfront Estates",
     badge: "WATERFRONT",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-    description: "Oceanfront mansions & lakeside retreats across the world's most coveted coastlines.",
+    description: "Oceanfront mansions, lakeside retreats, and beachfront estates along the world's most exclusive coastlines.",
     path: "/destinations/waterfront",
   },
   {
