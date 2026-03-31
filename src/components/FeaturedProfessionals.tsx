@@ -22,7 +22,7 @@ const professionals = [
     name: "Coming Soon",
     company: "Vancouver Luxury Specialist",
     location: "Vancouver, BC, Canada",
-    portrait: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+    portrait: "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png",
     link: "#",
   },
   {
