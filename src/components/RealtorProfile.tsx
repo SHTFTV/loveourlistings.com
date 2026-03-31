@@ -241,6 +241,49 @@ const RealtorProfile = ({
         </div>
       </section>
 
+      {/* Qualified Listings CTA */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="border border-primary/30 bg-primary/5 p-10 md:p-14 text-center"
+        >
+          <p className="font-body text-xs tracking-[5px] uppercase text-primary mb-4">
+            By Invitation Only
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl font-black text-foreground leading-tight mb-5">
+            Want Your Luxury Listing<br />Featured on This Platform?
+          </h2>
+          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
+            Do you have a luxury listing in White Rock, South Surrey, or another exclusive market that deserves 
+            the spotlight? This platform is reserved for qualified agents representing exceptional properties — 
+            the kind of homes that turn heads and command attention.
+          </p>
+          <p className="font-body text-sm text-muted-foreground max-w-xl mx-auto mb-8">
+            Only verified luxury professionals with qualifying properties are eligible to feature here. 
+            If that's you, let's talk.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://whiterock.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-primary-foreground font-black text-xs tracking-[2px] uppercase py-4 px-10 hover:opacity-90 transition-opacity"
+            >
+              Visit WhiteRock.io
+            </a>
+            <a
+              href="mailto:colin@industryarmymarketing.com"
+              className="inline-block border-2 border-primary text-primary font-black text-xs tracking-[2px] uppercase py-4 px-10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            >
+              Apply to Feature
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
       <Footer />
     </div>
   );
