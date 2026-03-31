@@ -15,6 +15,17 @@ import IslandRetreats from "./pages/IslandRetreats.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PromoBanner from "./components/PromoBanner.tsx";
 
+const listingRoutes = [
+  { path: "/listing/west-vancouver-waterfront", component: lazy(() => import("./pages/listings/WestVancouverWaterfront.tsx")) },
+  { path: "/listing/bridle-path-toronto", component: lazy(() => import("./pages/listings/BridlePathToronto.tsx")) },
+  { path: "/listing/bellevue-west-vancouver", component: lazy(() => import("./pages/listings/BellevueWestVancouver.tsx")) },
+  { path: "/listing/shaughnessy-vancouver", component: lazy(() => import("./pages/listings/ShaughnessyVancouver.tsx")) },
+  { path: "/listing/beverly-hills-estate", component: lazy(() => import("./pages/listings/BeverlyHillsEstate.tsx")) },
+  { path: "/listing/bel-air-estate", component: lazy(() => import("./pages/listings/BelAirEstate.tsx")) },
+  { path: "/listing/bellevue-washington", component: lazy(() => import("./pages/listings/BellevueWashington.tsx")) },
+  { path: "/listing/bridle-path-toronto-2", component: lazy(() => import("./pages/listings/BridlePathToronto2.tsx")) },
+];
+
 const agentRoutes = [
   { path: "/agents/vancouver", component: lazy(() => import("./pages/agents/VancouverAgents.tsx")) },
   { path: "/agents/west-vancouver", component: lazy(() => import("./pages/agents/WestVancouverAgents.tsx")) },
@@ -232,6 +243,9 @@ const App = () => (
               <Route key={route.path} path={route.path} element={<route.component />} />
             ))}
             {countryRoutes.map((route) => (
+              <Route key={route.path} path={route.path} element={<route.component />} />
+            ))}
+            {listingRoutes.map((route) => (
               <Route key={route.path} path={route.path} element={<route.component />} />
             ))}
             <Route path="/pricing" element={<PricingPage />} />
