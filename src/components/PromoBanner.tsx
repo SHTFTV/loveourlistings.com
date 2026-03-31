@@ -32,10 +32,10 @@ const PromoBanner = () => {
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="/shop/heart-sign"
+              href="/pricing"
               className="font-body text-[10px] md:text-xs font-bold tracking-[2px] uppercase border-2 border-primary-foreground px-4 md:px-6 py-2.5 hover:bg-primary-foreground hover:text-primary transition-all duration-300 whitespace-nowrap"
             >
-              Order Signs
+              View Pricing
             </a>
             <a
               href="#noteworthy"

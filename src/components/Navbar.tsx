@@ -25,7 +25,7 @@ const Navbar = () => {
           <img src={logo} alt="Love Our Listings" className="h-12 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-10">
-          {["Journal", "Celebrity Estates", "Shop Signs"].map((item) => (
+          {["Journal", "Celebrity Estates", "Pricing"].map((item) => (
             <a
               key={item}
               href={`/#${item.toLowerCase().replace(/\s/g, "-")}`}
