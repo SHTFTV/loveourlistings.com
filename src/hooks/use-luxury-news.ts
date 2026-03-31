@@ -15,20 +15,9 @@ export type LuxuryNewsItem = {
 export function useLuxuryNews(category?: string, limit = 10) {
   return useQuery({
     queryKey: ["luxury-news", category, limit],
-    queryFn: async () => {
-      let query = (supabase as any)
-        .from("luxury_news")
-        .select("*")
-        .order("published_at", { ascending: false })
-        .limit(limit);
-
-      if (category && category !== "all") {
-        query = query.eq("category", category);
-      }
-
-      const { data, error } = await query;
-      if (error) throw error;
-      return (data || []) as LuxuryNewsItem[];
+    queryFn: async (): Promise<LuxuryNewsItem[]> => {
+      // luxury_news table not yet created — return empty to use fallback data
+      return [];
     },
   });
 }
