@@ -34,8 +34,8 @@ const MontrealAgents = () => (
     city="Montreal"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1519178614-68673b201f36?w=1920&h=1080&fit=crop"
-    intro="Montreal's luxury real estate market blends old-world European charm with modern sophistication, from the stone mansions of Westmount to the waterfront penthouses of Old Montreal. These are the city's most trusted luxury listing agents — professionals with deep roots in Quebec's most prestigious addresses."
-    whyContact="Whether you're acquiring a Westmount estate or marketing a Golden Square Mile penthouse, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Montreal's luxury real estate market is a study in contrasts — old-world European elegance meets contemporary North American ambition. Westmount's stone mansions on Summit Circle command $10M+. The Golden Square Mile's heritage townhouses attract global collectors. Old Montreal's converted loft penthouses offer waterfront living with 18th-century character. Bilingual by nature and international by reputation, Montreal's luxury market draws sophisticated buyers from France, the Middle East, and across the Americas."
+    whyContact="Whether you're acquiring a Westmount estate or marketing a penthouse in the Plateau, these top-ranked Montreal agents deliver the bilingual expertise, European-connected buyer networks, and culturally nuanced marketing that Quebec's luxury market demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

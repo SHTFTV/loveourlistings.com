@@ -34,8 +34,8 @@ const HalifaxAgents = () => (
     city="Halifax"
     region="Nova Scotia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Halifax's luxury real estate market features stunning oceanfront estates, heritage South End homes, and waterfront properties along the Northwest Arm. As Atlantic Canada's largest city, Halifax attracts buyers seeking coastal elegance and maritime charm. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're acquiring an oceanfront estate or marketing a heritage property in the South End, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Halifax's luxury real estate market is Atlantic Canada's most prestigious, defined by oceanfront estates along the Northwest Arm, heritage Victorian mansions in the South End, and modern waterfront developments in the King's Wharf and Bishop's Landing districts. As the region's economic capital and a growing tech hub, Halifax attracts professionals, retirees, and East Coast lifestyle seekers — with luxury homes in the $1.5M–$5M range offering remarkable coastal value compared to Toronto or Vancouver."
+    whyContact="Whether you're acquiring a Northwest Arm oceanfront estate or marketing a heritage property in the South End, these top-ranked Halifax agents deliver the coastal market expertise, regional buyer networks, and refined marketing approach that Atlantic Canada's finest properties deserve. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

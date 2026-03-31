@@ -36,8 +36,8 @@ const VancouverAgents = () => (
     city="Vancouver"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Vancouver's luxury real estate market is among the most dynamic in the world, with waterfront estates, architectural masterpieces, and prestige addresses spanning from the Westside to Coal Harbour. These are the city's most trusted luxury listing agents — professionals who consistently deliver exceptional results for high-net-worth clients."
-    whyContact="Whether you're acquiring a Shaughnessy mansion or marketing a Point Grey estate, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Vancouver's luxury real estate market commands some of the highest prices in North America. First Shaughnessy mansions trade above $15 million. Point Grey waterfront estates overlooking English Bay routinely exceed $25 million. From the heritage architecture of Kerrisdale to the soaring glass towers of Coal Harbour, Vancouver attracts ultra-high-net-worth buyers from Hong Kong, mainland China, and across the Pacific Rim — making it one of the most internationally competitive luxury markets on earth."
+    whyContact="Whether you're acquiring a Shaughnessy heritage estate or marketing a West Side land assembly, these top-ranked Vancouver agents deliver the multilingual expertise, cross-border buyer networks, and strategic pricing intelligence that this market demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign — boutique branding that creates unforgettable curb appeal."
     agents={agents}
   />
 );

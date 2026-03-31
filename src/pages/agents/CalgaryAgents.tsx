@@ -35,8 +35,8 @@ const CalgaryAgents = () => (
     city="Calgary"
     region="Alberta, Canada"
     heroImage="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1920&h=1080&fit=crop"
-    intro="Calgary's luxury real estate market features stunning estate homes in communities like Mount Royal, Elbow Park, and Britannia, alongside modern architectural masterpieces with sweeping Rocky Mountain views. These are the city's most trusted luxury listing agents — professionals who consistently deliver exceptional results."
-    whyContact="Whether you're acquiring a Mount Royal estate or marketing a premium inner-city property, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Calgary's luxury real estate market is Alberta's crown jewel, defined by sprawling Mount Royal estates, Elbow Park riverfront properties, and modern Britannia homes with panoramic Rocky Mountain views. Energy executives, entrepreneurs, and international investors drive demand in a $2M+ segment where properties move fast and discretion matters. Top agents here average 15–20 years of market experience and maintain exclusive off-market inventory."
+    whyContact="Whether you're acquiring a Mount Royal estate or marketing a premium inner-city penthouse, these elite Calgary agents bring deep neighbourhood expertise, energy-sector buyer networks, and the bespoke marketing strategy that distinguishes luxury properties. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

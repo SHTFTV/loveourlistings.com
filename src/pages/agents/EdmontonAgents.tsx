@@ -35,8 +35,8 @@ const EdmontonAgents = () => (
     city="Edmonton"
     region="Alberta, Canada"
     heroImage="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1920&h=1080&fit=crop"
-    intro="Edmonton's luxury real estate market features prestigious estate homes in Glenora, Crestwood, and Windermere, alongside stunning riverfront properties with sweeping valley views. These are the city's most trusted luxury listing agents — professionals who consistently deliver exceptional results for high-net-worth clients."
-    whyContact="Whether you're acquiring a Glenora mansion or marketing a riverfront estate, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Edmonton's luxury real estate market centres on the tree-lined crescents of Glenora, the river valley estates of Crestwood, and the modern lakefront communities of Windermere and Magrath Heights. As Alberta's capital city and a hub for government, energy, and technology professionals, Edmonton offers exceptional value in the $1.5M–$5M range — with top-tier properties commanding sweeping North Saskatchewan River valley views that rival any Canadian city."
+    whyContact="Whether you're acquiring a Glenora heritage mansion or marketing a Windermere lakefront estate, these top-ranked Edmonton agents deliver the local market intelligence, buyer networks, and premium marketing that luxury properties demand. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
