@@ -20,6 +20,7 @@ const Index = () => {
       <NoteworthyListings />
       <DiscoverCards />
       <WorldwideLuxury />
+      <LuxuryLifestyle />
       <FooterFull />
     </div>
   );
