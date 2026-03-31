@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import BeckyZhouHill from "./pages/BeckyZhouHill.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import PromoBanner from "./components/PromoBanner.tsx";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <PromoBanner />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
