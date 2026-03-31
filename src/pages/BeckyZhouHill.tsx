@@ -42,6 +42,7 @@ const BeckyZhouHill = () => (
     email="beckyzhou.hill@gmail.com"
     address="15414 – 24th Avenue, White Rock, BC V4A 2J3"
     website="https://whiterock.io"
+    websiteLabel="WhiteRock.io"
     googleReviews="Medallion Club Member"
     hours="By appointment only"
     specialties={[
