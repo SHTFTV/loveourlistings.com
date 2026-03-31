@@ -2,37 +2,37 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Jacksonville with deep local expertise and a proven track record of representing exceptional properties in the Florida market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Jacksonville's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in Florida.",
+    name: "Toni Linn Rush",
+    brokerage: "Compass",
+    specialty: "Ponte Vedra Beach · Nocatee · Oceanfront",
+    bio: "Jacksonville's premier luxury agent with Compass, Toni Linn Rush dominates the Ponte Vedra Beach and Nocatee luxury markets.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Compass Top Producer",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Jacksonville's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    name: "Beau Bryant",
+    brokerage: "Berkshire Hathaway HomeServices",
+    specialty: "San Marco · Riverside · Avondale",
+    bio: "A top-producing Jacksonville luxury agent specializing in the city's most desirable historic riverfront neighborhoods.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Chairman's Circle",
   },
+  {
+    name: "Nancy McFaull",
+    brokerage: "Sotheby's International Realty",
+    specialty: "Amelia Island · Waterfront · Estate Properties",
+    bio: "Representing Sotheby's in Northeast Florida, Nancy brings global marketing to Amelia Island and Jacksonville's finest waterfront estates.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
+    accolades: "Sotheby's International Realty",
+  }
 ];
 
 const JacksonvilleAgents = () => (
   <CityAgentsPage
     city="Jacksonville"
     region="Florida, United States"
-    heroImage="https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=1920&h=1080&fit=crop"
-    intro="Jacksonville offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
+    heroImage="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop"
+    intro="Jacksonville's luxury market features stunning oceanfront estates in Ponte Vedra Beach, riverfront properties along the St. Johns, and premium homes in San Marco and Ortega."
     whyContact="Whether you're buying or selling luxury property in Jacksonville, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />

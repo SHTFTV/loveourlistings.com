@@ -16,6 +16,19 @@ const cities = [
     { name: "Halifax", slug: "halifax" },
     { name: "Winnipeg", slug: "winnipeg" },
     { name: "Mississauga", slug: "mississauga" },
+    { name: "Brampton", slug: "brampton" },
+    { name: "Quebec City", slug: "quebec-city" },
+    { name: "Markham", slug: "markham" },
+    { name: "Vaughan", slug: "vaughan" },
+    { name: "Oakville", slug: "oakville" },
+    { name: "Barrie", slug: "barrie" },
+    { name: "Kitchener", slug: "kitchener" },
+    { name: "Windsor", slug: "windsor" },
+    { name: "Saskatoon", slug: "saskatoon" },
+    { name: "Regina", slug: "regina" },
+    { name: "Laval", slug: "laval" },
+    { name: "Gatineau", slug: "gatineau" },
+    { name: "North Vancouver", slug: "north-vancouver" },
 ];
 
 const CanadaAgents = () => (
