@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Star, Clock, ExternalLink } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import siteLogo from "@/assets/logo.png";
 
 interface Listing {
   image: string;
