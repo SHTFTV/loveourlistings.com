@@ -847,6 +847,41 @@ const agentRoutes = [
   { path: "/agents/mykonos", component: lazy(() => import("./pages/agents/MykonosAgents.tsx")) },
 ];
 
+const countryRoutes = [
+  { path: "/country/canada", component: lazy(() => import("./pages/country/CanadaAgents.tsx")) },
+  { path: "/country/mexico", component: lazy(() => import("./pages/country/MexicoAgents.tsx")) },
+  { path: "/country/united-states", component: lazy(() => import("./pages/country/UnitedStatesAgents.tsx")) },
+  { path: "/country/bahamas", component: lazy(() => import("./pages/country/BahamasAgents.tsx")) },
+  { path: "/country/cayman-islands", component: lazy(() => import("./pages/country/CaymanIslandsAgents.tsx")) },
+  { path: "/country/dominican-republic", component: lazy(() => import("./pages/country/DominicanRepublicAgents.tsx")) },
+  { path: "/country/puerto-rico", component: lazy(() => import("./pages/country/PuertoRicoAgents.tsx")) },
+  { path: "/country/saint-barthelemy", component: lazy(() => import("./pages/country/SaintBarthelemyAgents.tsx")) },
+  { path: "/country/turks-and-caicos", component: lazy(() => import("./pages/country/TurksAndCaicosAgents.tsx")) },
+  { path: "/country/british-virgin-islands", component: lazy(() => import("./pages/country/BritishVirginIslandsAgents.tsx")) },
+  { path: "/country/france", component: lazy(() => import("./pages/country/FranceAgents.tsx")) },
+  { path: "/country/germany", component: lazy(() => import("./pages/country/GermanyAgents.tsx")) },
+  { path: "/country/greece", component: lazy(() => import("./pages/country/GreeceAgents.tsx")) },
+  { path: "/country/italy", component: lazy(() => import("./pages/country/ItalyAgents.tsx")) },
+  { path: "/country/monaco-country", component: lazy(() => import("./pages/country/MonacoCountryAgents.tsx")) },
+  { path: "/country/portugal", component: lazy(() => import("./pages/country/PortugalAgents.tsx")) },
+  { path: "/country/spain", component: lazy(() => import("./pages/country/SpainAgents.tsx")) },
+  { path: "/country/switzerland", component: lazy(() => import("./pages/country/SwitzerlandAgents.tsx")) },
+  { path: "/country/united-kingdom", component: lazy(() => import("./pages/country/UnitedKingdomAgents.tsx")) },
+  { path: "/country/uae", component: lazy(() => import("./pages/country/UaeAgents.tsx")) },
+  { path: "/country/israel", component: lazy(() => import("./pages/country/IsraelAgents.tsx")) },
+  { path: "/country/qatar", component: lazy(() => import("./pages/country/QatarAgents.tsx")) },
+  { path: "/country/india", component: lazy(() => import("./pages/country/IndiaAgents.tsx")) },
+  { path: "/country/thailand", component: lazy(() => import("./pages/country/ThailandAgents.tsx")) },
+  { path: "/country/japan", component: lazy(() => import("./pages/country/JapanAgents.tsx")) },
+  { path: "/country/australia", component: lazy(() => import("./pages/country/AustraliaAgents.tsx")) },
+  { path: "/country/new-zealand", component: lazy(() => import("./pages/country/NewZealandAgents.tsx")) },
+  { path: "/country/fiji", component: lazy(() => import("./pages/country/FijiAgents.tsx")) },
+  { path: "/country/kenya", component: lazy(() => import("./pages/country/KenyaAgents.tsx")) },
+  { path: "/country/mauritius", component: lazy(() => import("./pages/country/MauritiusAgents.tsx")) },
+  { path: "/country/morocco", component: lazy(() => import("./pages/country/MoroccoAgents.tsx")) },
+  { path: "/country/south-africa", component: lazy(() => import("./pages/country/SouthAfricaAgents.tsx")) },
+];
+
 const queryClient = new QueryClient();
 
 const App = () => (
