@@ -21,6 +21,7 @@ interface RealtorProfileProps {
   portrait: string;
   heroImage: string;
   phone: string;
+  email?: string;
   address: string;
   website?: string;
   googleReviews?: string;
