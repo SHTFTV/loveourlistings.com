@@ -30,10 +30,10 @@ const agents = [
 const ChicagoAgents = () => (
   <CityAgentsPage
     city="Chicago"
-    region="IL, US"
+    region="Illinois, United States"
     heroImage="https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=1920&h=1080&fit=crop"
-    intro="Chicago offers a distinguished luxury real estate market with exceptional properties ranging from Gold Coast mansions to modern high-rise penthouses along Lake Michigan. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Chicago, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Chicago's luxury real estate market ranks among America's most dynamic, spanning landmark Gold Coast mansions overlooking Lake Michigan, modernist Lakeview penthouses with sweeping skyline views, and tree-lined Lincoln Park brownstones that blend historic architecture with contemporary living. The city's top-producing agents collectively represent over $5 billion in luxury residential sales, commanding a market where median luxury home prices exceed $2.8 million."
+    whyContact="Whether you're acquiring a North Shore estate or marketing a Streeterville penthouse, these elite Chicago agents bring the pricing intelligence, buyer networks, and marketing infrastructure that luxury properties demand. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign — boutique branding that turns heads at the curb and dominates online."
     agents={agents}
   />
 );

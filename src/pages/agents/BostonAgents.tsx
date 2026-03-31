@@ -30,10 +30,10 @@ const agents = [
 const BostonAgents = () => (
   <CityAgentsPage
     city="Boston"
-    region="MA, US"
+    region="Massachusetts, United States"
     heroImage="https://images.unsplash.com/photo-1501979376754-1d39e8b98985?w=1920&h=1080&fit=crop"
-    intro="Boston offers a distinguished luxury real estate market with exceptional properties ranging from historic Beacon Hill brownstones to modern Back Bay penthouses. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Boston, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Boston's luxury real estate market is steeped in history and prestige, from the Federal-style brownstones of Beacon Hill to the full-floor Back Bay penthouses overlooking the Charles River. With median luxury prices exceeding $3.5 million and limited inventory in the city's most sought-after neighborhoods, Boston demands agents who combine deep local knowledge with sophisticated marketing strategies and access to qualified buyers."
+    whyContact="Whether you're acquiring a Beacon Hill townhouse or marketing a South End penthouse, these top-ranked Boston agents deliver the hyper-local expertise, prestigious brokerage networks, and discretion that luxury properties require. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
