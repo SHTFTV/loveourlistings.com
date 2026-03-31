@@ -39,7 +39,7 @@ const LuxuryLifestyle = () => {
           </h2>
         </div>
         <p className="text-muted-foreground mb-8 max-w-2xl">
-          The latest from the world of luxury real estate — powered live from Mansion Global.
+          Breaking luxury real estate news, market analysis, and lifestyle features — curated live from leading industry sources.
         </p>
 
         {isLoading ? (
