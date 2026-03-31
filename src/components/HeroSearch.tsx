@@ -21,17 +21,17 @@ const featuredListings = [
   },
   {
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
-    price: "$4,175,000 CAD",
-    agent: "Becky Zhou Hill",
-    location: "Surrey, BC, Canada",
-    path: "/realtor/becky-zhou-hill",
+    price: "$58,800,000 CAD",
+    agent: "Malcolm Hasman — Angell, Hasman & Associates",
+    location: "West Vancouver, BC, Canada",
+    path: "/listing/west-vancouver-waterfront",
   },
   {
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
-    price: "$12,000,000 USD",
-    agent: "Vancouver Luxury Listing",
-    location: "Vancouver, BC, Canada",
-    path: "/agents/vancouver",
+    price: "$135,000,000 USD",
+    agent: "Denise Moreno — Private Beverly Hills",
+    location: "Beverly Hills, CA, USA",
+    path: "/listing/beverly-hills-estate",
   },
 ];
 
