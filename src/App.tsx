@@ -818,6 +818,68 @@ const agentRoutes = [
   { path: "/agents/palm-beach", component: lazy(() => import("./pages/agents/PalmBeachAgents.tsx")) },
   { path: "/agents/hamptons", component: lazy(() => import("./pages/agents/HamptonsAgents.tsx")) },
   { path: "/agents/malibu", component: lazy(() => import("./pages/agents/MalibuAgents.tsx")) },
+  { path: "/agents/mexico-city", component: lazy(() => import("./pages/agents/MexicoCityAgents.tsx")) },
+  { path: "/agents/cancun", component: lazy(() => import("./pages/agents/CancunAgents.tsx")) },
+  { path: "/agents/nassau", component: lazy(() => import("./pages/agents/NassauAgents.tsx")) },
+  { path: "/agents/grand-cayman", component: lazy(() => import("./pages/agents/GrandCaymanAgents.tsx")) },
+  { path: "/agents/punta-cana", component: lazy(() => import("./pages/agents/PuntaCanaAgents.tsx")) },
+  { path: "/agents/san-juan", component: lazy(() => import("./pages/agents/SanJuanAgents.tsx")) },
+  { path: "/agents/gustavia", component: lazy(() => import("./pages/agents/GustaviaAgents.tsx")) },
+  { path: "/agents/providenciales", component: lazy(() => import("./pages/agents/ProvidencialesAgents.tsx")) },
+  { path: "/agents/tortola", component: lazy(() => import("./pages/agents/TortolaAgents.tsx")) },
+  { path: "/agents/paris", component: lazy(() => import("./pages/agents/ParisAgents.tsx")) },
+  { path: "/agents/munich", component: lazy(() => import("./pages/agents/MunichAgents.tsx")) },
+  { path: "/agents/milan", component: lazy(() => import("./pages/agents/MilanAgents.tsx")) },
+  { path: "/agents/rome", component: lazy(() => import("./pages/agents/RomeAgents.tsx")) },
+  { path: "/agents/monaco", component: lazy(() => import("./pages/agents/MonacoAgents.tsx")) },
+  { path: "/agents/lisbon", component: lazy(() => import("./pages/agents/LisbonAgents.tsx")) },
+  { path: "/agents/madrid", component: lazy(() => import("./pages/agents/MadridAgents.tsx")) },
+  { path: "/agents/geneva", component: lazy(() => import("./pages/agents/GenevaAgents.tsx")) },
+  { path: "/agents/tel-aviv", component: lazy(() => import("./pages/agents/TelAvivAgents.tsx")) },
+  { path: "/agents/doha", component: lazy(() => import("./pages/agents/DohaAgents.tsx")) },
+  { path: "/agents/mumbai", component: lazy(() => import("./pages/agents/MumbaiAgents.tsx")) },
+  { path: "/agents/bangkok", component: lazy(() => import("./pages/agents/BangkokAgents.tsx")) },
+  { path: "/agents/nadi", component: lazy(() => import("./pages/agents/NadiAgents.tsx")) },
+  { path: "/agents/nairobi", component: lazy(() => import("./pages/agents/NairobiAgents.tsx")) },
+  { path: "/agents/port-louis", component: lazy(() => import("./pages/agents/PortLouisAgents.tsx")) },
+  { path: "/agents/marrakech", component: lazy(() => import("./pages/agents/MarrakechAgents.tsx")) },
+  { path: "/agents/cape-town", component: lazy(() => import("./pages/agents/CapeTownAgents.tsx")) },
+  { path: "/agents/mykonos", component: lazy(() => import("./pages/agents/MykonosAgents.tsx")) },
+];
+
+const countryRoutes = [
+  { path: "/country/canada", component: lazy(() => import("./pages/country/CanadaAgents.tsx")) },
+  { path: "/country/mexico", component: lazy(() => import("./pages/country/MexicoAgents.tsx")) },
+  { path: "/country/united-states", component: lazy(() => import("./pages/country/UnitedStatesAgents.tsx")) },
+  { path: "/country/bahamas", component: lazy(() => import("./pages/country/BahamasAgents.tsx")) },
+  { path: "/country/cayman-islands", component: lazy(() => import("./pages/country/CaymanIslandsAgents.tsx")) },
+  { path: "/country/dominican-republic", component: lazy(() => import("./pages/country/DominicanRepublicAgents.tsx")) },
+  { path: "/country/puerto-rico", component: lazy(() => import("./pages/country/PuertoRicoAgents.tsx")) },
+  { path: "/country/saint-barthelemy", component: lazy(() => import("./pages/country/SaintBarthelemyAgents.tsx")) },
+  { path: "/country/turks-and-caicos", component: lazy(() => import("./pages/country/TurksAndCaicosAgents.tsx")) },
+  { path: "/country/british-virgin-islands", component: lazy(() => import("./pages/country/BritishVirginIslandsAgents.tsx")) },
+  { path: "/country/france", component: lazy(() => import("./pages/country/FranceAgents.tsx")) },
+  { path: "/country/germany", component: lazy(() => import("./pages/country/GermanyAgents.tsx")) },
+  { path: "/country/greece", component: lazy(() => import("./pages/country/GreeceAgents.tsx")) },
+  { path: "/country/italy", component: lazy(() => import("./pages/country/ItalyAgents.tsx")) },
+  { path: "/country/monaco-country", component: lazy(() => import("./pages/country/MonacoCountryAgents.tsx")) },
+  { path: "/country/portugal", component: lazy(() => import("./pages/country/PortugalAgents.tsx")) },
+  { path: "/country/spain", component: lazy(() => import("./pages/country/SpainAgents.tsx")) },
+  { path: "/country/switzerland", component: lazy(() => import("./pages/country/SwitzerlandAgents.tsx")) },
+  { path: "/country/united-kingdom", component: lazy(() => import("./pages/country/UnitedKingdomAgents.tsx")) },
+  { path: "/country/uae", component: lazy(() => import("./pages/country/UaeAgents.tsx")) },
+  { path: "/country/israel", component: lazy(() => import("./pages/country/IsraelAgents.tsx")) },
+  { path: "/country/qatar", component: lazy(() => import("./pages/country/QatarAgents.tsx")) },
+  { path: "/country/india", component: lazy(() => import("./pages/country/IndiaAgents.tsx")) },
+  { path: "/country/thailand", component: lazy(() => import("./pages/country/ThailandAgents.tsx")) },
+  { path: "/country/japan", component: lazy(() => import("./pages/country/JapanAgents.tsx")) },
+  { path: "/country/australia", component: lazy(() => import("./pages/country/AustraliaAgents.tsx")) },
+  { path: "/country/new-zealand", component: lazy(() => import("./pages/country/NewZealandAgents.tsx")) },
+  { path: "/country/fiji", component: lazy(() => import("./pages/country/FijiAgents.tsx")) },
+  { path: "/country/kenya", component: lazy(() => import("./pages/country/KenyaAgents.tsx")) },
+  { path: "/country/mauritius", component: lazy(() => import("./pages/country/MauritiusAgents.tsx")) },
+  { path: "/country/morocco", component: lazy(() => import("./pages/country/MoroccoAgents.tsx")) },
+  { path: "/country/south-africa", component: lazy(() => import("./pages/country/SouthAfricaAgents.tsx")) },
 ];
 
 const queryClient = new QueryClient();
@@ -839,6 +901,9 @@ const App = () => (
             <Route path="/destinations/wine-country" element={<WineCountry />} />
             <Route path="/destinations/island-retreats" element={<IslandRetreats />} />
             {agentRoutes.map((route) => (
+              <Route key={route.path} path={route.path} element={<route.component />} />
+            ))}
+            {countryRoutes.map((route) => (
               <Route key={route.path} path={route.path} element={<route.component />} />
             ))}
             <Route path="/pricing" element={<PricingPage />} />
