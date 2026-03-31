@@ -149,6 +149,15 @@ const RealtorProfile = ({
               </a>
             </div>
 
+            {email && (
+              <div className="flex items-center gap-3">
+                <ExternalLink className="w-4 h-4 text-primary shrink-0" />
+                <a href={`mailto:${email}`} className="font-body text-sm text-foreground hover:text-primary transition-colors">
+                  {email}
+                </a>
+              </div>
+            )}
+
             {googleReviews && (
               <div className="flex items-center gap-3">
                 <Star className="w-4 h-4 text-primary shrink-0" />
