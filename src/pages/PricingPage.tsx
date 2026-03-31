@@ -7,7 +7,7 @@ import siteLogo from "@/assets/logo.png";
 const tiers = [
   {
     name: "Starter",
-    price: "$149",
+    price: "$997",
     period: "per sign",
     description: "Perfect for testing the iconic Heart-Shaped Sign on your next luxury listing.",
     features: [
