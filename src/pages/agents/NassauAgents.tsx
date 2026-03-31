@@ -32,8 +32,8 @@ const NassauAgents = () => (
     city="Nassau"
     region="BS, INT"
     heroImage="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1920&h=1080&fit=crop"
-    intro="Nassau and The Bahamas offer one of the Caribbean's most prestigious luxury real estate markets, with exceptional properties ranging from beachfront estates on Paradise Island to private island retreats. These are the islands' most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in The Bahamas, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Nassau and New Providence anchor The Bahamas' luxury real estate market — a tax-free jurisdiction with no income, capital gains, or inheritance taxes that has attracted global wealth for decades. Old Fort Bay and Lyford Cay remain among the Caribbean's most exclusive gated communities, with oceanfront estates commanding $15M–$60M+. Paradise Island's Atlantis-adjacent developments and the emerging Albany community on southwestern New Providence have expanded the luxury footprint. The Bahamas' permanent residency-by-investment programme (starting at $750K) adds a powerful incentive for UHNW relocators."
+    whyContact="Bahamian real estate transactions involve Value Added Tax on property transfers, International Persons Landholding Act permits for foreign buyers, and the nuances of Crown land versus freehold title. These agents bring decades of experience navigating Nassau's most exclusive enclaves, maintain relationships with legacy families in Lyford Cay, and command the off-market inventory that never reaches public listings. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

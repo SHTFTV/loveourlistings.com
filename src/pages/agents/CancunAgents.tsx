@@ -32,8 +32,8 @@ const CancunAgents = () => (
     city="Cancún"
     region="MX, INT"
     heroImage="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=1920&h=1080&fit=crop"
-    intro="Cancún offers a distinguished luxury real estate market with exceptional properties ranging from ultra-luxury towers in Puerto Cancún to beachfront estates along the Caribbean coast. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Cancún, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Cancún's luxury real estate market has evolved far beyond its resort origins — Puerto Cancún's marina residences now rival Miami pricing, while the Riviera Maya corridor from Playa del Carmen to Tulum attracts global ultra-high-net-worth buyers seeking Caribbean lifestyle with Mexican residency advantages. The fideicomiso (bank trust) structure for foreign buyers in the restricted coastal zone requires specialised legal navigation. These agents bring deep expertise in Cancún's evolving master-planned communities, pre-construction opportunities, and the tax benefits driving American and Canadian relocation."
+    whyContact="Mexico's restricted zone regulations, notarial closing processes, and capital gains structures demand agents with cross-border transactional fluency. These Cancún specialists navigate fideicomiso renewals, PROFECO compliance for pre-sale contracts, and the nuanced pricing dynamics between Puerto Cancún's $3M+ marina estates and the Hotel Zone's premium beachfront towers. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

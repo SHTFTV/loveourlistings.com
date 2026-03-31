@@ -32,8 +32,8 @@ const BrisbaneAgents = () => (
     city="Brisbane"
     region="AU, INT"
     heroImage="https://images.unsplash.com/photo-1524293581917-878a6d017c71?w=1920&h=1080&fit=crop"
-    intro="Brisbane offers a dynamic luxury real estate market with exceptional riverfront estates and heritage homes. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Brisbane, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Brisbane's luxury market is surging — post-Olympics infrastructure investment and interstate migration from Sydney and Melbourne have driven prestige prices in New Farm, Teneriffe, and Hamilton to record levels. Riverfront estates along the Brisbane River now command $8M–$25M+, while the new Queens Wharf precinct redefines inner-city luxury. The agents featured here specialise in Brisbane's unique combination of subtropical lifestyle, capital growth trajectory, and relative value compared to Australia's southern capitals."
+    whyContact="Brisbane's prestige property landscape demands agents fluent in Queensland's foreign acquisition duties, Body Corporate legislation, and the heritage overlay requirements governing Queenslander-style estates. These specialists leverage deep networks across Asia-Pacific buyer pools, deliver strategic pre-market campaigns, and understand the micro-level pricing dynamics from Ascot to Bulimba. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

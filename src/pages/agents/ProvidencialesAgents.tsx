@@ -32,8 +32,8 @@ const ProvidencialesAgents = () => (
     city="Providenciales"
     region="TC, INT"
     heroImage="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1920&h=1080&fit=crop"
-    intro="Providenciales and the Turks & Caicos Islands offer one of the Caribbean's most exclusive luxury real estate markets, anchored by the world-renowned Grace Bay Beach. These are the islands' most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Turks & Caicos, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Providenciales anchors the Turks & Caicos luxury market — a British Overseas Territory with zero income tax, zero capital gains tax, and zero inheritance tax. Grace Bay Beach, consistently ranked the world's best, drives beachfront estate values from $5M to $35M+. The Leeward and Long Bay corridors have emerged as the island's premier development zones, while Ambergris Cay and Parrot Cay offer ultra-private island living. TCI's Permanent Residency Certificate programme and proximity to the US East Coast (2.5 hours from New York) make it a top-tier wealth-migration destination."
+    whyContact="TCI real estate transactions involve stamp duty considerations, Crown land lease structures on certain beachfront parcels, and the TCIG approval process for foreign buyers. These agents command the island's most exclusive inventory — from the gated communities of Grace Bay to off-market canal-front estates in Leeward — and maintain the relationships with developers and legacy landowners that define Provo's tightly held luxury market. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

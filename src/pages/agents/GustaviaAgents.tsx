@@ -32,8 +32,8 @@ const GustaviaAgents = () => (
     city="Gustavia"
     region="BL, INT"
     heroImage="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1920&h=1080&fit=crop"
-    intro="Gustavia and the island of St. Barthélemy offer one of the world's most exclusive luxury real estate markets, with stunning hillside villas and beachfront estates. These are the island's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in St. Barths, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="St. Barthélemy is the world's most exclusive island real estate market per square metre — a 25-square-kilometre French collectivity where only 1,000 properties exist and virtually none are available at any given time. Gustavia harbour villas start at €5M and hilltop estates in Lurin and Colombier regularly surpass €30M. Strict building codes limit construction to two storeys, preserving the island's intimate character. French property law, SCI ownership structures, and the island's unique tax-free status within the EU create a legal landscape that demands true specialist guidance."
+    whyContact="St. Barths transactions operate under French notarial law with unique Caribbean adaptations — from the droits d'enregistrement transfer tax to the complexities of SCI (Société Civile Immobilière) ownership for international buyers. These agents command the island's most coveted off-market inventory, maintain relationships with the legacy families who control Flamands and Gouverneur beachfront, and deliver discretion at the highest level. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const HongKongAgents = () => (
     city="Hong Kong"
     region="HK, INT"
     heroImage="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1920&h=1080&fit=crop"
-    intro="Hong Kong offers one of Asia's most exclusive and dynamic luxury real estate markets, with exceptional properties from Victoria Peak mansions to harbour-view penthouses. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Hong Kong, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Hong Kong remains Asia's definitive ultra-luxury market — Victoria Peak houses trade at HK$1B+ (US$128M+), making it one of the most expensive residential addresses on earth. The city's leasehold system, Buyer's Stamp Duty for non-permanent residents (15%), and the recent relaxation of cooling measures have reshaped transaction dynamics. From The Peak and Repulse Bay to Deep Water Bay and Shouson Hill, Hong Kong's prestige enclaves attract mainland Chinese capital, global family offices, and multinational executives. These agents represent the pinnacle of the city's luxury market expertise."
+    whyContact="Hong Kong's complex stamp duty tiers, government lease structures, and the interplay between developer first-sale regulations and secondary market dynamics demand agents with institutional-grade knowledge. These specialists navigate HKMA mortgage caps, the Additional Buyer's Stamp Duty framework, and the premium commanded by south-facing harbour views versus island-side positions. Their networks span Greater China's UHNW community. Each agent is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
