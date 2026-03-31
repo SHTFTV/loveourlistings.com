@@ -64,7 +64,7 @@ const RealtorProfile = ({
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
         {/* Logo watermark */}
-        <div className="absolute top-28 right-8 md:right-14 opacity-30">
+        <div className="absolute inset-0 flex items-center justify-center opacity-30">
           <img src={siteLogo} alt="Love Our Listings" className="h-48 md:h-72 w-auto" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 px-6 md:px-12 pb-16 max-w-7xl mx-auto">
