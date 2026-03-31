@@ -40,7 +40,7 @@ const RaphaelleBeaudoin = () => (
     heroImage={heroImage}
     phone="(604) 316-8938"
     address="43869 Progress Way #102, Chilliwack, BC V2R 0E6"
-    website="https://raphaellebeaudoin.com"
+    website="https://abbotsford.io"
     googleReviews="5.0 · 14 Google reviews"
     hours="Open · Closes 11 p.m."
     specialties={[
