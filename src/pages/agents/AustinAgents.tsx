@@ -32,8 +32,8 @@ const AustinAgents = () => (
     city="Austin"
     region="TX, US"
     heroImage="https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=1920&h=1080&fit=crop"
-    intro="Austin offers a distinguished luxury real estate market with exceptional properties ranging from Lake Austin waterfront estates to modern downtown penthouses. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Austin, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Lake Austin waterfront estates list between $4M and $25M, while Westlake Hills compounds with Hill Country views command $1,200+ per square foot. Austin's luxury market — fueled by tech-sector relocations from Silicon Valley — has redefined Texas prestige real estate, with Barton Creek, Rob Roy, and Tarrytown anchoring the $3M+ segment."
+    whyContact="Austin's $5M+ market saw 23% volume growth in 2024, driven by executives relocating from California and New York. The agents featured here hold Compass, Kuper Sotheby's, and Christie's affiliations with verified production records — ensuring your property reaches qualified buyers through both Austin's local tech networks and global luxury syndication channels."
     agents={agents}
   />
 );

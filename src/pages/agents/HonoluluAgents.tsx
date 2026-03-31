@@ -32,8 +32,8 @@ const HonoluluAgents = () => (
     city="Honolulu"
     region="HI, US"
     heroImage="https://images.unsplash.com/photo-1507876466758-bc54f384809c?w=1920&h=1080&fit=crop"
-    intro="Honolulu offers Hawaii's premier luxury real estate market, with exceptional properties from Diamond Head oceanfront estates to exclusive Kahala mansions. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Honolulu, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Kahala beachfront estates trade between $8M and $35M, while Diamond Head's limited oceanfront inventory commands $3,000+ per square foot — making it one of the most exclusive per-square-foot markets in the United States. Honolulu's median home price of $1.18M reflects an island economy where land scarcity, foreign investment, and lifestyle demand converge."
+    whyContact="Hawaii's luxury market requires agents who navigate leasehold-versus-fee-simple structures, Conservation District zoning, and the cultural nuances of island transactions. The professionals featured here hold Aloha Sotheby's and Hawaii Life affiliations with Hawaii Business Magazine recognition — ensuring Kahala, Black Point, and Lanikai listings reach qualified mainland and international buyers."
     agents={agents}
   />
 );

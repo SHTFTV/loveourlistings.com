@@ -32,8 +32,8 @@ const DenverAgents = () => (
     city="Denver"
     region="CO, US"
     heroImage="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?w=1920&h=1080&fit=crop"
-    intro="Denver offers a distinguished luxury real estate market with exceptional properties ranging from Cherry Creek estates to modern Highlands homes with mountain views. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Denver, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Cherry Creek North estates trade between $2.5M and $12M, while Hilltop's tree-lined streets command $1,100+ per square foot for mid-century modern renovations with Front Range views. Denver's luxury corridor — Washington Park, Country Club, Bonnie Brae, and the Highlands — attracts Colorado's most discerning buyers seeking walkability paired with mountain proximity."
+    whyContact="Denver's top 1% of agents average $25–60 million in annual volume and maintain 97% client satisfaction ratings. The professionals featured here hold LIV Sotheby's and Compass affiliations, proprietary Cherry Creek buyer networks, and the pricing expertise that keeps luxury listings under 20 days on market in Colorado's most competitive neighborhoods."
     agents={agents}
   />
 );

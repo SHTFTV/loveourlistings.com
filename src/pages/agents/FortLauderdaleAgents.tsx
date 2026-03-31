@@ -32,8 +32,8 @@ const FortLauderdaleAgents = () => (
     city="Fort Lauderdale"
     region="FL, US"
     heroImage="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=1920&h=1080&fit=crop"
-    intro="Fort Lauderdale offers a distinguished luxury real estate market with exceptional waterfront properties from Las Olas estates to Harbor Beach mansions. These are the city's most trusted luxury listing agents."
-    whyContact="Whether you're buying or selling luxury property in Fort Lauderdale, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Harbor Beach deepwater estates with 100+ feet of frontage trade between $8M and $40M, while Las Olas Isles properties command $1,800+ per square foot for new-construction waterfront. Fort Lauderdale's 165 miles of navigable waterways make it America's 'Venice' — and its top agent closed $133 million in annual volume, reflecting a market where yacht-accessible dockage drives pricing as much as square footage."
+    whyContact="Fort Lauderdale's luxury waterfront requires agents who understand seawall engineering, dock permits, and tidal impact on insurance — not just aesthetics. The professionals featured here hold America's Top 100 designations and South Florida Agent Magazine recognition, with established buyer networks across Broward County's most coveted intracoastal addresses."
     agents={agents}
   />
 );

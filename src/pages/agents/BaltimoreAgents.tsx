@@ -32,8 +32,8 @@ const BaltimoreAgents = () => (
     city="Baltimore"
     region="Maryland, United States"
     heroImage="https://images.unsplash.com/photo-1569161031820-3e48e8d43637?w=1920&h=1080&fit=crop"
-    intro="Baltimore's luxury market features stunning Inner Harbor waterfront properties, historic mansions in Roland Park and Guilford, and premium estates in the city's most distinguished neighborhoods."
-    whyContact="Whether you're buying or selling luxury property in Baltimore, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Roland Park estates designed by the Olmsted Brothers firm trade between $1.5M and $5M, while Guilford's Georgian Revival mansions command $600+ per square foot on tree-lined streets with deed-restricted architectural covenants. Baltimore's luxury corridor — from Homeland's stone manor homes to Harbor East's waterfront penthouses — offers Maryland's most diverse prestige inventory."
+    whyContact="Baltimore's luxury market requires agents who understand historic tax credit programs, Guilford Association covenants, and the nuances of selling in neighborhoods governed by architectural review committees. The professionals featured here hold Monument Sotheby's and Keller Williams top-team designations with deep relationships across Roland Park, Ruxton, and Towson's estate communities."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const SanDiegoAgents = () => (
     city="San Diego"
     region="CA, US"
     heroImage="https://images.unsplash.com/photo-1538964173425-93e81f7a03be?w=1920&h=1080&fit=crop"
-    intro="San Diego offers a distinguished luxury real estate market with exceptional properties from La Jolla oceanfront estates to Rancho Santa Fe compounds. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in San Diego, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="La Jolla oceanfront estates along Coast Walk trade between $8M and $35M, while Rancho Santa Fe's gated compounds on 2+ acre lots command $1,500+ per square foot. San Diego's #1 luxury team has closed 5 of the largest residential deals in La Jolla history — underscoring the market's position as Southern California's premier coastal luxury destination."
+    whyContact="San Diego's $5M+ segment requires agents with Sotheby's or Compass syndication, established La Jolla buyer networks, and the ability to navigate Coastal Commission regulations. The professionals featured here hold verified #1 rankings in San Diego County and bring the pricing precision that keeps oceanfront listings moving in a market where inventory is measured in weeks, not months."
     agents={agents}
   />
 );
