@@ -13,14 +13,16 @@ function useLiveFeed() {
   return useQuery({
     queryKey: ["luxury-lifestyle-feed"],
     queryFn: async () => {
-      const { data, error } = await supabase.functions.invoke("proxy-rss", {
-        body: null,
-        method: "GET",
-      });
-      if (error) throw error;
-      return (data?.items || []) as FeedItem[];
+      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+      const res = await fetch(
+        `https://${projectId}.supabase.co/functions/v1/proxy-rss?feed=${encodeURIComponent("https://www.mansionglobal.com/rss/luxury-real-estate-news")}&limit=3`,
+        { headers: { "Content-Type": "application/json" } }
+      );
+      if (!res.ok) throw new Error("Feed fetch failed");
+      const json = await res.json();
+      return (json?.items || []) as FeedItem[];
     },
-    staleTime: 1000 * 60 * 30, // 30 min cache
+    staleTime: 1000 * 60 * 30,
   });
 }
 
