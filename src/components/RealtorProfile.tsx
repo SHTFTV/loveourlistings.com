@@ -62,6 +62,11 @@ const RealtorProfile = ({
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+
+        {/* Logo watermark */}
+        <div className="absolute top-28 right-8 md:right-14 opacity-30">
+          <img src={siteLogo} alt="Love Our Listings" className="h-16 md:h-24 w-auto" />
+        </div>
         <div className="absolute bottom-0 left-0 right-0 px-6 md:px-12 pb-16 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
