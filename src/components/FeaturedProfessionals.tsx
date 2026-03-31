@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import beckyImg from "@/assets/becky-zhou-hill.jpg";
 import raphaelleImg from "@/assets/raphaelle-beaudoin.jpg";
+import mascotImg from "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png";
 
 const professionals = [
   {
@@ -22,14 +23,14 @@ const professionals = [
     name: "Coming Soon",
     company: "Vancouver Luxury Specialist",
     location: "Vancouver, BC, Canada",
-    portrait: "@/assets/9bbbf923-25e7-44ee-838e-a881a37445a7.png",
+    portrait: mascotImg,
     link: "#",
   },
   {
     name: "Coming Soon",
     company: "Victoria Estate Expert",
     location: "Victoria, BC, Canada",
-    portrait: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+    portrait: mascotImg,
     link: "#",
   },
 ];
