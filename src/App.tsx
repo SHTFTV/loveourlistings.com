@@ -1627,6 +1627,10 @@ const App = () => (
           <Route path="/agents/charleston" element={<CharlestonAgents />} />
           <Route path="/agents/huntington" element={<HuntingtonAgents />} />
           <Route path="/agents/morgantown" element={<MorgantownAgents />} />
+          <Route path="/agents/aspen" element={<AspenAgents />} />
+          <Route path="/agents/palm-beach" element={<PalmBeachAgents />} />
+          <Route path="/agents/hamptons" element={<HamptonsAgents />} />
+          <Route path="/agents/malibu" element={<MalibuAgents />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
