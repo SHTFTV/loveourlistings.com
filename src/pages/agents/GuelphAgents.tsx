@@ -32,8 +32,8 @@ const GuelphAgents = () => (
     city="Guelph"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Guelph's luxury real estate market features charming heritage homes, executive estates in the city's premier neighborhoods, and premium properties in one of Ontario's most livable cities."
-    whyContact="Whether you're buying or selling luxury property in Guelph, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Guelph's luxury market centres on heritage estates in the Ward, executive homes in Westminster Woods, and premium new construction in the south end near the Hanlon Expressway. With a university-driven economy, consistent population growth, and median luxury prices above $1.4 million, Guelph attracts professionals seeking a walkable, culturally rich community within easy reach of the 401 corridor."
+    whyContact="Guelph's heritage conservation district rules, University of Guelph expansion impacts, and strict urban boundary policies demand agents who navigate supply-constrained markets with precision. The specialists listed here close premium deals in the Ward, Westminster Woods, and Kortright Hills — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

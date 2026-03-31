@@ -34,8 +34,8 @@ const WindsorAgents = () => (
     city="Windsor"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Windsor's luxury real estate market features stunning waterfront estates along the Detroit River, heritage homes in Walkerville, and executive properties in South Windsor. As Ontario's southernmost city with a unique cross-border lifestyle, Windsor offers distinctive luxury living at exceptional value."
-    whyContact="Whether you're buying or selling luxury property in Windsor, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Windsor's luxury market features waterfront estates along the Detroit River with dramatic skyline views, executive homes in Riverside and South Walkerville, and premium properties in the Ambassador Bridge corridor. With the Gordie Howe International Bridge driving cross-border investment and median luxury prices offering exceptional value compared to the GTA, Windsor attracts automotive executives, cross-border professionals, and investors seeking Canada–U.S. border-city opportunity."
+    whyContact="Windsor's cross-border tax implications, Detroit River waterfront development regulations, and Essex County severance rules require agents who understand the unique dynamics of Canada's southernmost luxury market. The specialists listed here close premium deals in Riverside, South Walkerville, and the waterfront corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

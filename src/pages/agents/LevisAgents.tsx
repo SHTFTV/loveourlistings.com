@@ -32,8 +32,8 @@ const LevisAgents = () => (
     city="Levis"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Lévis' luxury real estate market features stunning St. Lawrence River waterfront properties, heritage homes with views of Old Quebec, and executive estates in one of Quebec's most desirable communities."
-    whyContact="Whether you're buying or selling luxury property in Levis, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Lévis' luxury market features heritage estates in Vieux-Lévis with commanding St. Lawrence River views, premium homes in the Desjardins sector, and waterfront properties along the south shore opposite Quebec City. With the Quebec–Lévis ferry providing iconic skyline views and median luxury prices below Quebec City's north shore, Lévis offers exceptional waterfront value in the National Capital Region."
+    whyContact="Lévis' heritage-district renovation approvals, Quebec land transfer tax calculations, and south-shore floodplain regulations require agents who navigate the Quebec City metropolitan market with precision. The specialists listed here close premium deals in Vieux-Lévis, Desjardins, and Charny — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

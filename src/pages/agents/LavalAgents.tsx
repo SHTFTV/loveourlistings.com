@@ -32,8 +32,8 @@ const LavalAgents = () => (
     city="Laval"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Laval's luxury real estate market features stunning waterfront estates on Laval-sur-le-Lac, executive homes in Sainte-Dorothée, and prestigious properties throughout Quebec's third-largest city."
-    whyContact="Whether you're buying or selling luxury property in Laval, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Laval's luxury market features premium waterfront estates along the Rivière des Prairies, executive homes in Sainte-Dorothée and Fabreville, and modern penthouse living in Centropolis. As Quebec's third-largest city with median luxury prices above $1.4 million, Laval attracts Montreal professionals seeking larger lots, waterfront living, and excellent highway connectivity to downtown."
+    whyContact="Laval's riverfront environmental regulations, Quebec welcome tax calculations, and bilingual transaction requirements demand agents fluent in both the local market and provincial regulatory framework. The specialists listed here close premium deals in Sainte-Dorothée, Fabreville, and Laval-sur-le-Lac — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const VaughanAgents = () => (
     city="Vaughan"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Vaughan's luxury real estate market features magnificent estate homes in Kleinburg, custom-built mansions in Woodbridge, and executive properties in Thornhill. One of York Region's most affluent communities."
-    whyContact="Whether you're buying or selling luxury property in Vaughan, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Vaughan's luxury market features prestigious estates in Kleinburg surrounded by Humber Valley conservation lands, executive homes in Thornhill's upscale Bathurst corridor, and modern builds in the Vaughan Metropolitan Centre near the subway extension. With median luxury prices exceeding $2.5 million and direct TTC subway access to downtown Toronto, Vaughan draws high-net-worth professionals, cultural entrepreneurs, and families seeking the GTA's most exclusive suburban addresses."
+    whyContact="Vaughan's Greenbelt Plan restrictions, Kleinburg-Nashville Heritage Conservation District bylaws, and York Region development charges demand agents who navigate one of the GTA's most supply-constrained luxury markets. The specialists listed here close premium deals in Kleinburg, Thornhill, and the VMC corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

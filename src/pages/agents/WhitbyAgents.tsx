@@ -32,8 +32,8 @@ const WhitbyAgents = () => (
     city="Whitby"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Whitby's luxury real estate market features beautiful Lake Ontario waterfront properties, executive estates in Brooklin, and premium homes in one of Durham Region's most desirable communities."
-    whyContact="Whether you're buying or selling luxury property in Whitby, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Whitby's luxury market features Lake Ontario waterfront estates in the Thickson Point corridor, executive homes in Brooklin Village, and premium new construction in the Pringle Creek and Taunton corridors. With GO Transit providing sub-60-minute service to downtown Toronto and median luxury prices above $1.5 million, Whitby attracts families and professionals seeking Durham Region's most balanced combination of lakefront living, heritage charm, and modern amenities."
+    whyContact="Whitby's lakefront erosion setback requirements, Durham Region development charges, and Brooklin heritage-village building restrictions demand agents who understand the east-GTA's premium corridors. The specialists listed here close premium deals in Thickson Point, Brooklin, and Pringle Creek — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

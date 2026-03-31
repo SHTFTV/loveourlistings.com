@@ -32,8 +32,8 @@ const DeltaAgents = () => (
     city="Delta"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Delta's luxury real estate market features stunning waterfront estates in Tsawwassen, executive homes in Ladner, and premium acreage properties in North Delta with mountain and ocean views."
-    whyContact="Whether you're buying or selling luxury property in Delta, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Delta's luxury market spans Tsawwassen's oceanfront estates with Gulf Island views, Beach Grove's exclusive enclave properties, and Ladner's heritage waterfront homes along the Fraser River. With median luxury prices above $2 million and ferry access to Vancouver Island, Delta offers a rare combination of oceanfront living, agricultural charm, and proximity to both Vancouver and the U.S. border."
+    whyContact="Delta's ALR boundaries, Tsawwassen First Nation treaty lands, and Burns Bog conservation regulations create a complex transaction environment. The agents listed here specialize in Beach Grove, Tsawwassen, and Ladner Village — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

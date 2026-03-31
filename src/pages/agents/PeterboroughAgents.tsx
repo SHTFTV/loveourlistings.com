@@ -32,8 +32,8 @@ const PeterboroughAgents = () => (
     city="Peterborough"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Peterborough's luxury real estate market features beautiful lakefront properties in the Kawarthas, heritage homes in the city's historic core, and executive estates surrounded by Ontario's cottage country."
-    whyContact="Whether you're buying or selling luxury property in Peterborough, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Peterborough's luxury market features waterfront estates on the Otonabee River and Little Lake, heritage homes in the East City and Ashburnham districts, and premium properties in the Kawartha Lakes corridor. With Trent University anchoring the local economy and median luxury prices offering exceptional value for buyers relocating from the GTA, Peterborough attracts professionals seeking small-city charm, waterfront living, and cottage-country accessibility."
+    whyContact="Peterborough's Otonabee River flood-zone regulations, Kawartha Conservation Authority permit requirements, and heritage-district building restrictions demand agents who navigate the intersection of urban luxury and cottage-country markets. The specialists listed here close premium deals in East City, Ashburnham, and the Kawartha corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

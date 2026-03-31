@@ -32,8 +32,8 @@ const PittMeadowsAgents = () => (
     city="Pitt Meadows"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Pitt Meadows' luxury real estate market features stunning mountain-view properties, premium waterfront homes, and sprawling acreages in the scenic heart of the Fraser Valley."
-    whyContact="Whether you're buying or selling luxury property in Pitt Meadows, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Pitt Meadows' luxury market features dyke-adjacent estates with panoramic Golden Ears views, premium acreages in the agricultural heartland, and executive homes near the West Coast Express station. With median luxury prices above $1.6 million and a small-town atmosphere surrounded by protected farmland and mountain vistas, Pitt Meadows is the Tri-Cities' most exclusive rural-luxury pocket."
+    whyContact="Pitt Meadows' Agricultural Land Reserve constraints, dike-maintenance levies, and Fraser River flood-construction requirements demand agents who understand the municipality's unique land-use framework. The specialists listed here close premium deals in the dyke corridor, airport-adjacent acreages, and central Pitt Meadows — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

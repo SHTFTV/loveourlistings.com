@@ -32,8 +32,8 @@ const SquamishAgents = () => (
     city="Squamish"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Squamish's luxury real estate market features stunning mountain-view properties, waterfront homes on Howe Sound, and premium estates in the Outdoor Recreation Capital of Canada between Vancouver and Whistler."
-    whyContact="Whether you're buying or selling luxury property in Squamish, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Squamish's luxury market features oceanfront properties on Howe Sound, mountain-view estates below the Stawamus Chief, and premium new builds in the University Heights and Garibaldi Highlands corridors. With the Sea-to-Sky Highway connecting to both Vancouver and Whistler and median luxury prices above $1.8 million, Squamish has emerged as one of BC's most sought-after outdoor lifestyle destinations for climbers, trail runners, and remote-working professionals."
+    whyContact="Squamish's Howe Sound foreshore regulations, District of Squamish steep-slope bylaws, and Cheakamus River flood-zone requirements demand agents who understand the Sea-to-Sky corridor's rapidly evolving luxury market. The specialists listed here close premium deals in Garibaldi Highlands, University Heights, and the Howe Sound waterfront — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

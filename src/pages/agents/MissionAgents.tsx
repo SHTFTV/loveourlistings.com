@@ -32,8 +32,8 @@ const MissionAgents = () => (
     city="Mission"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Mission's luxury real estate market features stunning river-view properties, sprawling acreages, and premium country estates in the picturesque eastern Fraser Valley."
-    whyContact="Whether you're buying or selling luxury property in Mission, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Mission's luxury market features riverfront estates along the Fraser River, premium acreages in Hatzic and Silverdale, and mountain-view custom builds in the hillside corridors. With median luxury prices above $1.4 million and a growing reputation as the Fraser Valley's hidden gem for country estate living, Mission attracts buyers seeking privacy, land, and West Coast natural beauty at a fraction of Abbotsford or Langley pricing."
+    whyContact="Mission's steep-slope building regulations, Fraser River floodplain development permits, and Agricultural Land Reserve boundaries require agents who understand the intersection of rural estate sales and municipal planning. The specialists listed here close premium deals in Hatzic, Silverdale, and Steelhead — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

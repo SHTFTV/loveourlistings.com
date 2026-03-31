@@ -32,8 +32,8 @@ const MiltonAgents = () => (
     city="Milton"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Milton's luxury real estate market features executive estates along the Niagara Escarpment, premium homes in Bronte Creek, and modern luxury in one of Canada's fastest-growing communities."
-    whyContact="Whether you're buying or selling luxury property in Milton, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Milton's luxury market features executive estates in the Escarpment-view neighbourhoods of Bronte Creek and Willmott, premium homes in Scott and Dorset Park, and heritage properties in the downtown core. With GO Transit service to Union Station and median luxury prices above $1.6 million, Milton attracts Toronto professionals seeking Niagara Escarpment views, Conservation Halton trails, and small-town character in one of Canada's fastest-growing communities."
+    whyContact="Milton's Greenbelt Plan restrictions, Niagara Escarpment Commission development permits, and Halton Region growth-management policies make luxury transactions uniquely complex. The specialists listed here close premium deals in Bronte Creek, Willmott, and Scott — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const SaintJohnAgents = () => (
     city="Saint John"
     region="New Brunswick, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Saint John's luxury real estate market features stunning Bay of Fundy waterfront estates, charming heritage homes in the Uptown core, and premium properties in Atlantic Canada's oldest incorporated city."
-    whyContact="Whether you're buying or selling luxury property in Saint John, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Saint John's luxury market features historic uptown brownstones, Bay of Fundy waterfront estates, and premium properties in the Rothesay-adjacent corridors. As New Brunswick's largest city with the world's highest tides at its doorstep and median luxury prices offering remarkable value, Saint John attracts heritage-property enthusiasts, maritime professionals, and remote workers seeking dramatic coastal living in Eastern Canada's oldest incorporated city."
+    whyContact="Saint John's heritage conservation area restrictions, Fundy tidal-zone building regulations, and New Brunswick land transfer tax structure demand agents who navigate the Maritimes' most historic luxury market. The specialists listed here close premium deals in Uptown, the Fundy waterfront, and Millidgeville — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

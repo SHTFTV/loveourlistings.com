@@ -32,8 +32,8 @@ const SaanichAgents = () => (
     city="Saanich"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Saanich's luxury real estate market features stunning ocean-view estates, properties near Butchart Gardens, and premium homes in Greater Victoria's largest municipality with natural beauty and West Coast lifestyle."
-    whyContact="Whether you're buying or selling luxury property in Saanich, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Saanich's luxury market features oceanfront estates in Cordova Bay, premium properties in the Broadmead and Royal Oak corridors, and heritage acreages in the rural Saanich Peninsula. As Greater Victoria's largest municipality with median luxury prices above $1.8 million, Saanich draws retirees, professionals, and lifestyle buyers seeking Pacific Northwest oceanfront living, mild climate, and proximity to downtown Victoria."
+    whyContact="Saanich's oceanfront DPA (Development Permit Area) regulations, CRD environmental protection zones, and Saanich Peninsula agricultural-zone restrictions demand agents who understand Vancouver Island's most complex luxury market. The specialists listed here close premium deals in Cordova Bay, Broadmead, and Royal Oak — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

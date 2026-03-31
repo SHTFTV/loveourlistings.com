@@ -32,8 +32,8 @@ const StCatharinesAgents = () => (
     city="St. Catharines"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="St. Catharines' luxury real estate market features beautiful wine country estates, heritage homes along the Welland Canal, and premium properties in the heart of Ontario's Niagara Region."
-    whyContact="Whether you're buying or selling luxury property in St. Catharines, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="St. Catharines' luxury market features waterfront estates on Lake Ontario, heritage mansions in the Yates Street corridor, and premium vineyard-adjacent properties in the Niagara wine region. With Brock University anchoring the economy and median luxury prices above $1.2 million, St. Catharines attracts GTA transplants seeking wine country lifestyle, QEW accessibility, and Niagara Escarpment views at a fraction of Oakville pricing."
+    whyContact="St. Catharines' Niagara Escarpment Commission development restrictions, Greenbelt Plan limitations, and Welland Canal-adjacent zoning requirements demand agents who navigate the Niagara region's unique luxury landscape. The specialists listed here close premium deals in the Yates Street corridor, Port Dalhousie, and the Vineyard District — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

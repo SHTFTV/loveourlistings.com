@@ -32,8 +32,8 @@ const SaguenayAgents = () => (
     city="Saguenay"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Saguenay's luxury real estate market features stunning fjord-view properties, riverfront estates, and premium homes surrounded by the dramatic natural beauty of the Saguenay-Lac-Saint-Jean region."
-    whyContact="Whether you're buying or selling luxury property in Saguenay, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Saguenay's luxury market features dramatic fjord-view estates in La Baie, premium waterfront properties along the Saguenay River, and heritage homes in Chicoutimi's historic centre. With median luxury prices offering exceptional value and access to some of Quebec's most breathtaking natural landscapes, Saguenay attracts buyers seeking world-class outdoor lifestyle, Fjord du Saguenay views, and francophone cultural richness."
+    whyContact="Saguenay's fjord-zone environmental regulations, Quebec welcome tax structure, and La Baie industrial-heritage conversion rules require agents who understand the region's unique luxury market dynamics. The specialists listed here close premium deals in La Baie, Chicoutimi, and the Saguenay River corridor — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const TroisRivieresAgents = () => (
     city="Trois-Rivières"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Trois-Rivières' luxury real estate market features historic properties along the St. Lawrence River, elegant homes in Cap-de-la-Madeleine, and premium estates in one of Quebec's oldest cities."
-    whyContact="Whether you're buying or selling luxury property in Trois-Rivières, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Trois-Rivières' luxury market features heritage estates along the St. Lawrence River, premium waterfront properties in Cap-de-la-Madeleine, and executive homes in the Pointe-du-Lac sector. As one of Quebec's oldest cities with a revitalized downtown cultural district and median luxury prices offering exceptional value, Trois-Rivières attracts heritage-property enthusiasts, university professionals, and buyers seeking St. Lawrence waterfront living between Montreal and Quebec City."
+    whyContact="Trois-Rivières' heritage conservation district approvals, St. Lawrence flood-zone regulations, and Quebec welcome tax calculations require agents who navigate the Mauricie region's unique luxury landscape. The specialists listed here close premium deals in Cap-de-la-Madeleine, Pointe-du-Lac, and the downtown heritage district — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -34,8 +34,8 @@ const AbbotsfordAgents = () => (
     city="Abbotsford"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Abbotsford's luxury real estate market features stunning mountain-view estates on Eagle Mountain, sprawling country properties on Sumas Mountain, and executive homes near Mill Lake. As the Fraser Valley's largest city, Abbotsford offers premium living surrounded by agricultural beauty and mountain vistas."
-    whyContact="Whether you're buying or selling luxury property in Abbotsford, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Abbotsford's luxury real estate market centres on premium estates in Eagle Mountain, ten-acre hobby farms along Sumas Prairie, and executive homes in Aberdeen where large lots back onto protected greenbelt. With median luxury prices climbing past $1.8 million in 2025 and proximity to the U.S. border drawing cross-border buyers, demand for turnkey acreage and custom-built homes continues to outpace inventory across the Fraser Valley's eastern corridor."
+    whyContact="Abbotsford's agricultural land reserve rules, lot-size bylaws, and cross-border tax implications require an agent who understands both municipal zoning and federal reporting. The specialists listed here close premium transactions in Eagle Mountain, Auguston, and rural Matsqui — and each is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const NorthVancouverAgents = () => (
     city="North Vancouver"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="North Vancouver's luxury real estate market features stunning mountain-view estates, waterfront properties in Deep Cove, and executive homes nestled among old-growth forests on the spectacular North Shore."
-    whyContact="Whether you're buying or selling luxury property in North Vancouver, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="North Vancouver's luxury market features mountain-view estates in British Properties, waterfront homes in Deep Cove, and premium builds in Edgemont Village and Upper Lonsdale. With Grouse Mountain, Lynn Valley, and Seymour Provincial Park at the doorstep and median luxury prices above $3 million, North Vancouver attracts outdoor enthusiasts and executives seeking proximity to downtown Vancouver via the SeaBus and Lions Gate Bridge."
+    whyContact="North Vancouver's steep-slope building restrictions, District versus City zoning differences, and creek-setback regulations demand agents who understand the North Shore's complex development landscape. The specialists listed here close premium deals in British Properties, Deep Cove, and Edgemont — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

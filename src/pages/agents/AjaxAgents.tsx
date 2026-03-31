@@ -34,8 +34,8 @@ const AjaxAgents = () => (
     city="Ajax"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Ajax's luxury real estate market features stunning Lake Ontario waterfront properties, executive homes in South Ajax, and premium new construction throughout this growing Durham Region community. Its proximity to Toronto and beautiful lakeshore make it increasingly attractive to luxury buyers."
-    whyContact="Whether you're buying or selling luxury property in Ajax, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Ajax's luxury market is anchored by waterfront estates along Lake Ontario's north shore, executive homes in the Pickering Village heritage district, and premium new builds in Salem and Audley. With GO Transit connectivity to downtown Toronto in under an hour and median luxury prices approaching $1.5 million, Ajax attracts move-up buyers seeking space, lake views, and strong community amenities without Toronto-level pricing."
+    whyContact="Navigating Ajax's waterfront setback regulations, Durham Region development charges, and heritage-district renovation rules demands local expertise. The agents listed here specialize in Salem, Pickering Village, and lakefront corridors — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

@@ -32,8 +32,8 @@ const GreaterSudburyAgents = () => (
     city="Greater Sudbury"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Greater Sudbury's luxury real estate market features beautiful lakefront properties on Lake Ramsey, executive homes in South End, and country estates throughout Northern Ontario's largest city."
-    whyContact="Whether you're buying or selling luxury property in Greater Sudbury, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Greater Sudbury's luxury market features lakefront estates on Ramsey Lake, premium properties on Lake Nepahwin, and executive homes in the South End's most prestigious pockets. With over 300 lakes within city limits and median luxury prices offering exceptional value compared to southern Ontario markets, Sudbury attracts buyers seeking world-class freshwater living and four-season outdoor lifestyle."
+    whyContact="Sudbury's lakefront development permits, Conservation Sudbury regulations, and mining-adjacent land assessments require agents who understand Northern Ontario's unique real estate landscape. The specialists listed here close premium deals on Ramsey Lake, Lake Nepahwin, and in the South End — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

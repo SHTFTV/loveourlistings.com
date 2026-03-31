@@ -32,8 +32,8 @@ const MapleRidgeAgents = () => (
     city="Maple Ridge"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="Maple Ridge's luxury real estate market features stunning mountain-view estates, equestrian properties, and premium acreages in the scenic eastern Fraser Valley with access to Golden Ears Provincial Park."
-    whyContact="Whether you're buying or selling luxury property in Maple Ridge, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Maple Ridge's luxury market features waterfront estates along the Fraser River, mountain-view acreages in Whonnock and Websters Corners, and premium homes in Silver Valley with Golden Ears Park at the doorstep. With median luxury prices above $1.8 million and the West Coast Express connecting to downtown Vancouver, Maple Ridge offers the Fraser Valley's most compelling combination of rural estate living and urban commutability."
+    whyContact="Maple Ridge's ALR exclusion applications, Fraser River floodplain construction requirements, and Kanaka Creek setback regulations demand agents who understand both rural and suburban premium markets. The specialists listed here close premium deals in Silver Valley, Whonnock, and the Albion waterfront — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

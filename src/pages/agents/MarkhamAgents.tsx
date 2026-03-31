@@ -32,8 +32,8 @@ const MarkhamAgents = () => (
     city="Markham"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Markham's luxury real estate market features grand estate homes in Cachet and Angus Glen, heritage properties in Unionville, and modern executive residences throughout York Region."
-    whyContact="Whether you're buying or selling luxury property in Markham, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Markham's luxury market is defined by estate homes in Angus Glen and Cachet, premium properties in Unionville's heritage village, and modern executive builds in Cornell and Berczy. With median luxury prices exceeding $2.2 million and a tech-sector economy anchored by IBM, AMD, and Huawei's Canadian headquarters, Markham attracts high-net-worth professionals seeking prestigious addresses within the GTA's northeastern corridor."
+    whyContact="Markham's heritage conservation district restrictions, York Region development charges, and Greenbelt-adjacent building limitations require agents who navigate one of the GTA's most supply-constrained luxury markets. The specialists listed here close premium deals in Angus Glen, Cachet, and Unionville — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

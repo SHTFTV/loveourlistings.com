@@ -32,8 +32,8 @@ const WhiteRockAgents = () => (
     city="White Rock"
     region="British Columbia, Canada"
     heroImage="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop"
-    intro="White Rock's luxury real estate market features stunning oceanfront estates along Semiahmoo Bay, hillside properties with panoramic ocean views, and premium homes in one of BC's most coveted seaside communities."
-    whyContact="Whether you're buying or selling luxury property in White Rock, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="White Rock's luxury market centres on oceanfront estates along the Semiahmoo Bay promenade, premium hillside properties with panoramic ocean views, and executive homes in the East Beach and West Beach corridors. With median luxury prices exceeding $2.5 million and one of Canada's mildest climates, White Rock draws retirees, cross-border executives, and lifestyle buyers seeking a walkable seaside village atmosphere in Metro Vancouver's southernmost community."
+    whyContact="White Rock's stringent hillside building bylaws, oceanfront setback regulations, and the city's unique 'village character' design guidelines demand agents who navigate one of Metro Vancouver's most architecturally regulated luxury markets. The specialists listed here close premium deals in East Beach, West Beach, and the hillside corridors — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

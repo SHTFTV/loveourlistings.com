@@ -32,8 +32,8 @@ const KitchenerAgents = () => (
     city="Kitchener"
     region="Ontario, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Kitchener's luxury real estate market features executive estates in Doon, premium properties in Westmount, and modern luxury driven by the region's thriving tech sector in Canada's Technology Triangle."
-    whyContact="Whether you're buying or selling luxury property in Kitchener, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Kitchener's luxury market spans heritage mansions in Victoria Park, executive homes in Doon South, and premium new construction in the Huron Park corridor. With the Region of Waterloo's ION LRT connecting Kitchener to Uptown Waterloo and median luxury prices above $1.3 million, the city's tech-driven economy and university talent pipeline fuel consistent demand for high-end residential properties."
+    whyContact="Kitchener's ION LRT corridor zoning changes, Regional Municipality development charges, and heritage-district renovation approvals require agents who understand the Waterloo Region's rapidly evolving luxury landscape. The specialists listed here close premium deals in Doon South, Victoria Park, and Huron Park — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

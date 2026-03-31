@@ -32,8 +32,8 @@ const RepentignyAgents = () => (
     city="Repentigny"
     region="Quebec, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Repentigny's luxury real estate market features waterfront properties along the St. Lawrence and L'Assomption rivers, executive homes, and premium residences in one of Lanaudière's most desirable communities."
-    whyContact="Whether you're buying or selling luxury property in Repentigny, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Repentigny's luxury market features waterfront estates along the St. Lawrence and L'Assomption rivers, executive homes in the Le Gardeur sector, and premium new builds in developing north-end corridors. With lower property taxes than Montreal Island and median luxury prices above $900,000, Repentigny attracts francophone professionals seeking riverfront living and highway connectivity to downtown Montreal."
+    whyContact="Repentigny's riverfront flood-zone regulations, Quebec welcome tax calculations, and L'Assomption River setback requirements demand agents who navigate the north-shore luxury market with precision. The specialists listed here close premium deals in Le Gardeur, the waterfront corridor, and central Repentigny — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );

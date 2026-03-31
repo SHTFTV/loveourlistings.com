@@ -32,8 +32,8 @@ const ReginaAgents = () => (
     city="Regina"
     region="Saskatchewan, Canada"
     heroImage="https://images.unsplash.com/photo-1517090504513-4820bfd4b1e6?w=1920&h=1080&fit=crop"
-    intro="Regina's luxury real estate market offers beautiful estate homes in The Creeks, executive properties in Wascana View, and charming heritage residences in Cathedral. Saskatchewan's capital combines prairie elegance with modern luxury."
-    whyContact="Whether you're buying or selling luxury property in Regina, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Regina's luxury market features executive estates in the Cathedral neighbourhood, premium lakefront properties on Wascana Lake, and modern builds in Harbour Landing and The Creeks. As Saskatchewan's capital with a stable government-employment base and median luxury prices offering exceptional value compared to western Canadian counterparts, Regina draws professionals seeking generous lot sizes, low property taxes, and four-season prairie living."
+    whyContact="Regina's Wascana Centre Authority development restrictions, City of Regina infill housing guidelines, and Saskatchewan land titles system require agents who navigate the province's distinct property registration and tax framework. The specialists listed here close premium deals in Cathedral, Wascana View, and Harbour Landing — each eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
