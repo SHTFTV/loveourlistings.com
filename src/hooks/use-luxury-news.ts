@@ -16,7 +16,7 @@ export function useLuxuryNews(category?: string, limit = 10) {
   return useQuery({
     queryKey: ["luxury-news", category, limit],
     queryFn: async () => {
-      let query = supabase
+      let query = (supabase as any)
         .from("luxury_news")
         .select("*")
         .order("published_at", { ascending: false })
@@ -28,7 +28,7 @@ export function useLuxuryNews(category?: string, limit = 10) {
 
       const { data, error } = await query;
       if (error) throw error;
-      return data as LuxuryNewsItem[];
+      return (data || []) as LuxuryNewsItem[];
     },
   });
 }
