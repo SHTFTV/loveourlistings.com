@@ -2,28 +2,28 @@ import CityAgentsPage from "@/components/CityAgentsPage";
 
 const agents = [
   {
-    name: "Featured Agent 1",
-    brokerage: "Premium Brokerage",
-    specialty: "Luxury Residential · Estate Properties",
-    bio: "A top-producing luxury agent in Monaco with deep local expertise and a proven track record of representing exceptional properties in the MC market.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
-    accolades: "Top Producer",
-  },
-  {
-    name: "Featured Agent 2",
-    brokerage: "Elite Realty Group",
-    specialty: "Waterfront · New Construction · Estates",
-    bio: "Specializing in Monaco's most prestigious addresses, this agent brings unparalleled market knowledge and a refined approach to luxury real estate in MC.",
+    name: "Ilona Blanchi",
+    brokerage: "Christie's International Real Estate Monaco",
+    specialty: "Ultra-Luxury · Penthouses · Waterfront · Carré d'Or",
+    bio: "Ilona Blanchi is a leading broker with Christie's International Real Estate in Monte-Carlo. She specializes in Monaco's most exceptional properties — from Carré d'Or penthouses to Port Hercules waterfront residences — serving an elite international clientele with the utmost discretion and market intelligence.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=top",
-    accolades: "Luxury Specialist",
+    accolades: "Christie's Broker · Carré d'Or Specialist",
   },
   {
-    name: "Featured Agent 3",
-    brokerage: "Prestige Properties",
-    specialty: "Investment · Relocation · Fine Homes",
-    bio: "With years of experience navigating Monaco's luxury market, this agent is known for integrity, discretion, and delivering outstanding results for high-net-worth clients.",
+    name: "Fredrik Lilloe",
+    brokerage: "Sotheby's International Realty Monaco",
+    specialty: "Super-Prime · Monte-Carlo · La Condamine",
+    bio: "A senior figure at Sotheby's International Realty France–Monaco, Fredrik Lilloe has built an exceptional reputation in the Principality's ultra-competitive luxury market. He represents sovereign wealth funds, royal families, and international billionaires seeking Monaco's most prestigious addresses.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=top",
+    accolades: "Senior Advisor · UHNW Clientele",
+  },
+  {
+    name: "Sylvain Balkin",
+    brokerage: "Balkin Real Estate Monaco",
+    specialty: "Penthouses · Investment · Off-Market · Confidential Sales",
+    bio: "With over 25 years of experience in Monaco real estate, Sylvain Balkin founded one of the Principality's most respected boutique agencies. Known for highly personalized, confidential service and a strong international network, he specializes in off-market transactions for Monaco's most exclusive penthouses and residences.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=top",
-    accolades: "Award-Winning Agent",
+    accolades: "Founder · 25+ Years · Off-Market Expert",
   },
 ];
 
@@ -32,8 +32,8 @@ const MonacoAgents = () => (
     city="Monaco"
     region="MC, INT"
     heroImage="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=1920&h=1080&fit=crop"
-    intro="Monaco offers a distinguished luxury real estate market with exceptional properties ranging from waterfront estates to architectural masterpieces. These are the city's most trusted luxury listing agents — professionals who consistently deliver results for discerning buyers and sellers."
-    whyContact="Whether you're buying or selling luxury property in Monaco, connecting with one of these elite agents ensures your property receives the exposure, pricing strategy, and white-glove service it demands. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
+    intro="Monaco is the world's most exclusive real estate market per square meter, where ultra-luxury penthouses, Port Hercules-view residences, and Carré d'Or apartments command record-breaking prices. The Principality attracts the global elite seeking privacy, prestige, and a tax-advantaged lifestyle on the French Riviera."
+    whyContact="Whether you're acquiring a trophy penthouse or selling an iconic Monaco residence, these elite agents bring unparalleled access, discretion, and negotiation skill. Each agent listed here is eligible for exclusive partnership with Love Our Listings and our iconic Heart-Shaped Sign."
     agents={agents}
   />
 );
