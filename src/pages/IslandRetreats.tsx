@@ -2,7 +2,7 @@ import DestinationPage from "@/components/DestinationPage";
 
 const listings = [
   {
-    image: "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80",
     price: "$55,000,000 USD",
     agent: "Christie's International Real Estate",
     location: "Turks & Caicos",
@@ -10,14 +10,14 @@ const listings = [
     url: "https://www.christiesrealestate.com/turks-and-caicos",
   },
   {
-    image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&q=80",
     price: "$38,000,000 USD",
     agent: "Sotheby's International Realty",
     location: "St. Barts, Caribbean",
     url: "https://www.sothebysrealty.com/eng/sales/st-barthelemy",
   },
   {
-    image: "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
     price: "$29,000,000 USD",
     agent: "Compass",
     location: "Maui, Hawaii",
@@ -25,35 +25,35 @@ const listings = [
     url: "https://www.compass.com/homes-for-sale/maui-hi/",
   },
   {
-    image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
     price: "$42,000,000 USD",
     agent: "Knight Frank",
     location: "Maldives",
     url: "https://www.knightfrank.com/properties/residential/for-sale/maldives",
   },
   {
-    image: "https://images.unsplash.com/photo-1500375592497-5f8e56632bac?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
     price: "$18,500,000 CAD",
     agent: "Engel & Völkers — Vancouver Island",
     location: "Gulf Islands, BC",
     url: "https://www.engelvoelkers.com/en-ca/vancouver-island/",
   },
   {
-    image: "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
     price: "$25,000,000 USD",
     agent: "Douglas Elliman",
     location: "Key Biscayne, FL",
     url: "https://www.elliman.com/key-biscayne",
   },
   {
-    image: "https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
     price: "€15,000,000 EUR",
     agent: "Savills",
     location: "Ibiza, Spain",
     url: "https://www.savills.com/property/ibiza",
   },
   {
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
     price: "A$22,000,000",
     agent: "Sotheby's International Realty — Australia",
     location: "Hamilton Island, Queensland",
