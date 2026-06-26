@@ -14,6 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
+      agent_subscription_payments: {
+        Row: {
+          amount_usd: number | null
+          created_at: string
+          id: string
+          paypal_sale_id: string | null
+          paypal_subscription_id: string | null
+          raw_event: Json | null
+        }
+        Insert: {
+          amount_usd?: number | null
+          created_at?: string
+          id?: string
+          paypal_sale_id?: string | null
+          paypal_subscription_id?: string | null
+          raw_event?: Json | null
+        }
+        Update: {
+          amount_usd?: number | null
+          created_at?: string
+          id?: string
+          paypal_sale_id?: string | null
+          paypal_subscription_id?: string | null
+          raw_event?: Json | null
+        }
+        Relationships: []
+      }
+      agent_subscriptions: {
+        Row: {
+          agent_email: string | null
+          agent_name: string | null
+          cancelled_at: string | null
+          country: string
+          created_at: string
+          id: string
+          paypal_plan_id: string
+          paypal_subscription_id: string | null
+          slot_number: number
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          agent_email?: string | null
+          agent_name?: string | null
+          cancelled_at?: string | null
+          country: string
+          created_at?: string
+          id?: string
+          paypal_plan_id: string
+          paypal_subscription_id?: string | null
+          slot_number: number
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          agent_email?: string | null
+          agent_name?: string | null
+          cancelled_at?: string | null
+          country?: string
+          created_at?: string
+          id?: string
+          paypal_plan_id?: string
+          paypal_subscription_id?: string | null
+          slot_number?: number
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       image_alert_config: {
         Row: {
           alert_email: string | null
