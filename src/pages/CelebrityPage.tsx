@@ -3,6 +3,9 @@ import { Instagram, Youtube, ArrowRight, Play } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLuxuryRss } from "@/hooks/useLuxuryRss";
+import SmartImage from "@/components/SmartImage";
+import ImageDebugOverlay from "@/components/ImageDebugOverlay";
+import { proxiedImage } from "@/lib/imageProxy";
 
 const GOLD = "#b38f4a";
 const GOLD_SOFT = "rgba(179,143,74,0.25)";
@@ -154,8 +157,6 @@ const Monogram = ({ name }: { name: string }) => (
 );
 
 const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string; videoUrl: string }) => {
-  const [src, setSrc] = useState(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
-  const [failed, setFailed] = useState(false);
   return (
     <a
       href={videoUrl}
@@ -165,25 +166,16 @@ const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string
       className="group block mb-5 -mx-6 -mt-6 relative overflow-hidden"
       style={{ backgroundColor: "#000", aspectRatio: "16 / 9" }}
     >
-      {failed ? (
-        <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: BG_DARK }}>
-          <span style={{ color: GOLD, fontFamily: "Georgia, serif" }} className="text-3xl font-bold">
-            {initialsOf(name)}
-          </span>
-        </div>
-      ) : (
-        <img
-          src={src}
+      <div className="absolute inset-0">
+        <SmartImage
+          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt={`${name} video thumbnail`}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          onError={() => {
-            if (src.includes("hqdefault")) setSrc(`https://img.youtube.com/vi/${videoId}/0.jpg`);
-            else setFailed(true);
-          }}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          fallbackInitials={initialsOf(name)}
+          context={`video:${name}`}
+          imgClassName="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full"
         />
-      )}
+      </div>
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
@@ -420,31 +412,14 @@ const CelebrityPage = () => {
                   onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
                 >
                   <div className="aspect-[16/10] overflow-hidden" style={{ backgroundColor: BG_PANEL }}>
-                    {post.image_url ? (
-                      <img
-                        src={post.image_url}
-                        alt={post.title}
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                        onError={(e) => {
-                          const t = e.currentTarget;
-                          t.style.display = "none";
-                          const parent = t.parentElement;
-                          if (parent && !parent.querySelector(".lol-fallback")) {
-                            const div = document.createElement("div");
-                            div.className = "lol-fallback w-full h-full flex items-center justify-center";
-                            div.style.fontFamily = "Georgia, serif";
-                            div.style.color = GOLD;
-                            div.style.letterSpacing = "4px";
-                            div.textContent = "LOL";
-                            parent.appendChild(div);
-                          }
-                        }}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center" style={{ color: GOLD, fontFamily: "Georgia, serif", letterSpacing: "4px" }}>LOL</div>
-                    )}
+                    <SmartImage
+                      src={proxiedImage(post.image_url)}
+                      alt={post.title}
+                      fallbackInitials="LOL"
+                      context={`rss:${post.source}`}
+                      imgClassName="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full"
+                    />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center justify-between text-[10px] tracking-[2px] uppercase mb-3">
@@ -473,6 +448,7 @@ const CelebrityPage = () => {
       </a>
 
       <Footer />
+      <ImageDebugOverlay />
     </div>
   );
 };
