@@ -4,25 +4,55 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const PROXY_HOSTS = [
   'sothebysrealty.com',
   'sothebys-com.brightspotcdn.com',
+  'static.sothebysrealty.com',
+  'content.sothebysrealty.com',
   'robbreport.com',
   'pmcrobbreport.files.wordpress.com',
+  'files.wordpress.com',
+  'wordpress.com',
   'mansionglobal.com',
   'images.mansionglobal.com',
+  'static.mansionglobal.com',
+  'images.wsj.net',
   'architecturaldigest.com',
   'media.architecturaldigest.com',
   'assets.architecturaldigest.com',
+  'media.vogue.com',
 ];
+
+function upgradeWordPressThumbnail(rawUrl: string): string {
+  try {
+    const u = new URL(rawUrl);
+    // RSS feeds often expose tiny WordPress thumbnails like -150x150.jpg.
+    // Use the full-size asset so bottom-row cards do not look broken/blank.
+    u.pathname = u.pathname.replace(/-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)/i, '');
+    return u.toString();
+  } catch {
+    return rawUrl;
+  }
+}
 
 export function proxiedImage(rawUrl: string | null | undefined): string {
   if (!rawUrl) return '';
-  if (!SUPABASE_URL) return rawUrl;
+  const upgradedUrl = upgradeWordPressThumbnail(rawUrl);
+  if (!SUPABASE_URL) return upgradedUrl;
   try {
-    const u = new URL(rawUrl);
+    const u = new URL(upgradedUrl);
     const needsProxy = PROXY_HOSTS.some((h) => u.hostname === h || u.hostname.endsWith(`.${h}`));
-    if (!needsProxy) return rawUrl;
-    return `${SUPABASE_URL}/functions/v1/image-proxy?url=${encodeURIComponent(rawUrl)}`;
+    if (!needsProxy) return upgradedUrl;
+    return `${SUPABASE_URL}/functions/v1/image-proxy?url=${encodeURIComponent(upgradedUrl)}`;
   } catch {
-    return rawUrl;
+    return upgradedUrl;
+  }
+}
+
+export function originalImageFromProxy(url: string): string {
+  try {
+    const u = new URL(url);
+    const original = u.searchParams.get('url');
+    return original ? decodeURIComponent(original) : url;
+  } catch {
+    return url;
   }
 }
 
@@ -57,7 +87,7 @@ export function classifyFailure(url: string): ImageFailureReason {
   // Browsers strip details from <img> error events for security.
   // We probe with fetch (no-cors) so we at least surface network-class failures.
   try {
-    const u = new URL(url);
+    const u = new URL(originalImageFromProxy(url));
     if (u.hostname.includes('youtube') || u.hostname.includes('ytimg')) return '404';
     if (PROXY_HOSTS.some((h) => u.hostname.endsWith(h))) return 'hotlink';
   } catch {/* ignore */}

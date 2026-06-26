@@ -7,16 +7,33 @@ const ALLOWED_HOSTS = [
   'sothebys-com.brightspotcdn.com',
   'www.sothebysrealty.com',
   'sothebysrealty.com',
+  'static.sothebysrealty.com',
+  'content.sothebysrealty.com',
   'robbreport.com',
   'pmcrobbreport.files.wordpress.com',
   'robbreport.com.cdn.cloudflare.net',
+  'files.wordpress.com',
+  'wordpress.com',
   'mansionglobal.com',
   'images.mansionglobal.com',
+  'static.mansionglobal.com',
+  'images.wsj.net',
   'architecturaldigest.com',
   'media.architecturaldigest.com',
   'assets.architecturaldigest.com',
+  'media.vogue.com',
   'images.unsplash.com',
 ];
+
+function upgradeWordPressThumbnail(rawUrl: string): string {
+  try {
+    const u = new URL(rawUrl);
+    u.pathname = u.pathname.replace(/-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)/i, '');
+    return u.toString();
+  } catch {
+    return rawUrl;
+  }
+}
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders });
@@ -31,8 +48,9 @@ Deno.serve(async (req) => {
       });
     }
 
+    const upgradedTarget = upgradeWordPressThumbnail(target);
     let parsed: URL;
-    try { parsed = new URL(target); } catch {
+    try { parsed = new URL(upgradedTarget); } catch {
       return new Response(JSON.stringify({ error: 'invalid url' }), {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },

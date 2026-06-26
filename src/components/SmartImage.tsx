@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { classifyFailure, reportImageFailure } from "@/lib/imageProxy";
+import { classifyFailure, originalImageFromProxy, reportImageFailure } from "@/lib/imageProxy";
 
 type Props = {
   src: string;
@@ -48,7 +48,7 @@ const SmartImage = ({
       return;
     }
     reportImageFailure({
-      url: src,
+      url: originalImageFromProxy(src),
       reason: classifyFailure(src),
       attempts: attempt + 1,
       timestamp: Date.now(),
