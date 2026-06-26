@@ -14,6 +14,7 @@ import EyeSpyrPage from "./pages/EyeSpyrPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import CelebrityEstatesPage from "./pages/CelebrityEstatesPage.tsx";
+import CelebrityPage from "./pages/CelebrityPage.tsx";
 import RealtorsIndexPage from "./pages/RealtorsIndexPage.tsx";
 import DashboardPage from "./pages/DashboardPage.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
@@ -266,6 +267,7 @@ const App = () => (
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/celebrity-estates" element={<CelebrityEstatesPage />} />
+            <Route path="/celebrity" element={<CelebrityPage />} />
             <Route path="/realtors" element={<RealtorsIndexPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
