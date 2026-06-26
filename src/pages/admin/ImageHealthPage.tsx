@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { fetchProxyStats, hitRate, type ProxyStats } from "@/lib/imageProxyStats";
 import { subscribeImageFailures, type ImageFailure } from "@/lib/imageProxy";
-import { IMAGE_RETRY_EVENT } from "@/components/SmartImage";
+import { IMAGE_RETRY_EVENT, retryImage } from "@/components/SmartImage";
 import { supabase } from "@/integrations/supabase/client";
 
 const GOLD = "#b38f4a";
@@ -39,6 +39,18 @@ const ImageHealthPage = () => {
   const [cfgMsg, setCfgMsg] = useState<string | null>(null);
   const [testingAlerts, setTestingAlerts] = useState(false);
   const [retestMsg, setRetestMsg] = useState<string | null>(null);
+  const [retryingUrls, setRetryingUrls] = useState<Record<string, boolean>>({});
+
+  const retryOne = (url: string) => {
+    setRetryingUrls((m) => ({ ...m, [url]: true }));
+    retryImage(url);
+    // Optimistically clear from local failures so the row updates immediately;
+    // if it fails again, SmartImage will re-report and it will reappear.
+    setLocalFailures((prev) => prev.filter((f) => f.url !== url));
+    window.setTimeout(() => {
+      setRetryingUrls((m) => { const n = { ...m }; delete n[url]; return n; });
+    }, 2500);
+  };
 
   useEffect(() => {
     let alive = true;
@@ -350,6 +362,21 @@ const ImageHealthPage = () => {
                     <td className="p-3">{f.attempts}</td>
                     <td className="p-3 text-xs">{f.context ?? "-"}</td>
                     <td className="p-3 text-xs" style={{ wordBreak: "break-all" }}>{f.url}</td>
+                  <td className="p-3 text-right">
+                    <button
+                      onClick={() => retryOne(f.url)}
+                      disabled={!!retryingUrls[f.url]}
+                      className="px-3 py-1 text-[10px] uppercase tracking-widest font-bold"
+                      style={{ border: `1px solid ${GOLD}`, color: GOLD, background: "transparent", opacity: retryingUrls[f.url] ? 0.6 : 1, whiteSpace: "nowrap" }}
+                    >
+                      {retryingUrls[f.url] ? (
+                        <>
+                          <span style={{ display: "inline-block", width: 10, height: 10, border: `2px solid ${GOLD}`, borderTopColor: "transparent", borderRadius: "50%", animation: "lol-spin 0.7s linear infinite", marginRight: 6, verticalAlign: "-1px" }} />
+                          Retrying
+                        </>
+                      ) : "↻ Retry"}
+                    </button>
+                  </td>
                   </tr>
                 ))}
               </tbody>
