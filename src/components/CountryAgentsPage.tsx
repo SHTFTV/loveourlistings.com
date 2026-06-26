@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import LuxuryNewsFeed from "./LuxuryNewsFeed";
 import siteLogo from "@/assets/logo.png";
+import { COUNTRY_SEO } from "@/data/countrySeo";
 
 interface CityLink {
   name: string;
@@ -17,6 +20,7 @@ interface CountryAgentsPageProps {
   heroImage: string;
   description: string;
   cities: CityLink[];
+  slug?: string;
 }
 
 const CountryAgentsPage = ({
@@ -26,7 +30,19 @@ const CountryAgentsPage = ({
   heroImage,
   description,
   cities,
+  slug,
 }: CountryAgentsPageProps) => {
+  const seo = slug ? COUNTRY_SEO[slug] : undefined;
+
+  useEffect(() => {
+    document.title = `Luxury Real Estate in ${country} — Love Our Listings`;
+    if (seo) {
+      let m = document.querySelector('meta[name="description"]');
+      if (!m) { m = document.createElement("meta"); m.setAttribute("name","description"); document.head.appendChild(m); }
+      m.setAttribute("content", seo.meta);
+    }
+  }, [country, seo]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -75,6 +91,34 @@ const CountryAgentsPage = ({
         </motion.div>
       </section>
 
+      {/* Unique SEO sections */}
+      {seo && (
+        <section className="max-w-7xl mx-auto px-6 md:px-12 pb-4 grid md:grid-cols-2 gap-10">
+          {[
+            { h: `Inside the ${country} Luxury Market`, body: seo.market },
+            { h: `Lifestyle & Why Buyers Choose ${country}`, body: seo.lifestyle },
+            { h: `Investment Lens — ${country}`, body: seo.investment },
+            { h: `Why a Love Our Listings Feature Works in ${country}`, body: seo.whyHeart },
+          ].map((s) => (
+            <div key={s.h} className="border border-border p-6 md:p-8">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3">{s.h}</h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {seo && (
+        <section className="max-w-7xl mx-auto px-6 md:px-12 py-10">
+          <h3 className="font-display text-lg font-bold italic text-foreground mb-4">{country} Highlights</h3>
+          <ul className="grid md:grid-cols-2 gap-3">
+            {seo.highlights.map((h) => (
+              <li key={h} className="font-body text-sm text-muted-foreground border-l-2 border-primary/60 pl-3">{h}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* City Links */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
         <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground italic mb-8">
@@ -105,6 +149,32 @@ const CountryAgentsPage = ({
           ))}
         </div>
       </section>
+
+      {/* Internal directory back-links */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-16">
+        <h3 className="font-display text-lg font-bold italic text-foreground mb-4">Continue Browsing the Network</h3>
+        <div className="flex flex-wrap gap-3">
+          {[
+            { to: "/realtors", label: "← Global Realtor Directory" },
+            { to: "/celebrity-estates", label: "Celebrity Estates" },
+            { to: "/destinations/waterfront", label: "Waterfront Estates" },
+            { to: "/destinations/ski-villages", label: "Ski Villages" },
+            { to: "/destinations/wine-country", label: "Wine Country" },
+            { to: "/destinations/island-retreats", label: "Island Retreats" },
+            { to: "/pricing", label: "Featured Listing Pricing" },
+            { to: "/guest-post", label: "Submit a Guest Post" },
+            { to: "/seo-realtor", label: "SEO Realtor Profile" },
+            { to: "/dashboard", label: "Dashboard Upsells" },
+          ].map((l) => (
+            <Link key={l.to} to={l.to} className="font-body text-xs tracking-[2px] uppercase border border-border px-4 py-2 hover:border-primary hover:text-primary transition-colors">
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Live luxury press feed */}
+      <LuxuryNewsFeed title={`Luxury Press — Relevant to ${country}`} limit={6} />
 
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
