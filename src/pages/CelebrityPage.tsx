@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLuxuryRss } from "@/hooks/useLuxuryRss";
 import SmartImage from "@/components/SmartImage";
+import { IMAGE_RETRY_EVENT } from "@/components/SmartImage";
 import ImageDebugOverlay from "@/components/ImageDebugOverlay";
 import { proxiedImage } from "@/lib/imageProxy";
 import feedOne from "@/assets/feed-1.jpg";
@@ -299,6 +300,11 @@ const InfluencerCard = ({ p }: { p: Influencer }) => (
 const CelebrityPage = () => {
   const [tab, setTab] = useState<Tab>("All");
   const { posts } = useLuxuryRss(24);
+  const [retestCount, setRetestCount] = useState(0);
+  const handleRetest = () => {
+    window.dispatchEvent(new CustomEvent(IMAGE_RETRY_EVENT));
+    setRetestCount((n) => n + 1);
+  };
 
   useEffect(() => {
     document.title = "Luxury Real Estate Influencers & Industry Leaders | Love Our Listings";
@@ -376,6 +382,19 @@ const CelebrityPage = () => {
       {/* INFLUENCER GRID */}
       <section className="px-6 md:px-12 py-20" style={{ backgroundColor: BG_PANEL }}>
         <div className="max-w-7xl mx-auto">
+          <div className="flex justify-end mb-4">
+            <button
+              type="button"
+              onClick={handleRetest}
+              className="px-4 py-2 text-[11px] tracking-[2px] uppercase font-bold transition-colors"
+              style={{ border: `1px solid ${GOLD}`, color: GOLD, background: "transparent" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = GOLD; e.currentTarget.style.color = BG_DARK; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = GOLD; }}
+              title="Retry any images that previously failed"
+            >
+              ↻ Re-test images{retestCount ? ` (${retestCount})` : ""}
+            </button>
+          </div>
           <div data-testid="influencer-grid" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {INFLUENCERS.map((p) => <InfluencerCard key={p.name} p={p} />)}
           </div>
