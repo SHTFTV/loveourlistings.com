@@ -16,7 +16,8 @@ type Influencer = {
   followers: string;
   bio: string;
   quote?: string;
-  embedUrl?: string;
+  videoId?: string;
+  videoUrl?: string;
   instagram?: string;
   youtube?: string;
   tiktok?: string;
@@ -33,7 +34,8 @@ const INFLUENCERS: Influencer[] = [
     followers: "1.2M",
     bio: "Transformed luxury real estate into a global media brand. SERHANT. closed $6B in 2026. Author, TV host, and the blueprint every modern luxury agent studies.",
     quote: "The market rewards who gets seen first.",
-    embedUrl: "https://www.youtube.com/embed/RC2BUPnfJsw",
+    videoId: "RC2BUPnfJsw",
+    videoUrl: "https://www.youtube.com/watch?v=RC2BUPnfJsw",
     instagram: "@ryanserhant",
     instagramUrl: "https://instagram.com/ryanserhant",
     youtube: "Ryan Serhant",
@@ -46,7 +48,8 @@ const INFLUENCERS: Influencer[] = [
     followers: "800K",
     bio: "Million Dollar Listing NY star. Closed $3B+ in luxury in 2026 including record waterfront penthouses. Known for his signature high kick and even higher closing rate.",
     quote: "Luxury buyers find you because you built something worth finding.",
-    embedUrl: "https://www.youtube.com/embed/e5cCCOLWrvU",
+    videoId: "e5cCCOLWrvU",
+    videoUrl: "https://www.youtube.com/watch?v=e5cCCOLWrvU",
     instagram: "@fredrikeklund",
     instagramUrl: "https://instagram.com/fredrikeklund",
     youtube: "Fredrik Eklund",
@@ -59,7 +62,8 @@ const INFLUENCERS: Influencer[] = [
     followers: "750K",
     bio: "The face of Selling Sunset. Manages LA's most elite brokerage while expanding into European luxury markets. Equal parts attorney and closer.",
     quote: "Own your market online, own it in reality.",
-    embedUrl: "https://www.youtube.com/embed/L6KlAaVmaAE",
+    videoId: "L6KlAaVmaAE",
+    videoUrl: "https://www.youtube.com/watch?v=L6KlAaVmaAE",
     instagram: "@jasonoppenheim",
     instagramUrl: "https://instagram.com/jasonoppenheim",
   },
@@ -70,7 +74,8 @@ const INFLUENCERS: Influencer[] = [
     followers: "145K · 300M views",
     bio: "The definitive luxury home tour channel. 300 million views walking through mansions, penthouses and celebrity estates. Pure aspirational content that drives serious buyer intent.",
     quote: "300M views. The audience that watches these homes is the audience that buys them.",
-    embedUrl: "https://www.youtube.com/embed/PzGhN75RFxA",
+    videoId: "PzGhN75RFxA",
+    videoUrl: "https://www.youtube.com/watch?v=PzGhN75RFxA",
     youtube: "Darren Kriz",
     youtubeUrl: "https://youtube.com/@DarrenKriz",
     instagram: "@darrenkriz",
