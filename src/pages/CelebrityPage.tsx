@@ -154,7 +154,8 @@ const Monogram = ({ name }: { name: string }) => (
 );
 
 const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string; videoUrl: string }) => {
-  const [src, setSrc] = useState(`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`);
+  const [src, setSrc] = useState(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
+  const [failed, setFailed] = useState(false);
   return (
     <a
       href={videoUrl}
@@ -164,13 +165,25 @@ const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string
       className="group block mb-5 -mx-6 -mt-6 relative overflow-hidden"
       style={{ backgroundColor: "#000", aspectRatio: "16 / 9" }}
     >
-      <img
-        src={src}
-        alt={`${name} video thumbnail`}
-        loading="lazy"
-        onError={() => setSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`)}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-      />
+      {failed ? (
+        <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: BG_DARK }}>
+          <span style={{ color: GOLD, fontFamily: "Georgia, serif" }} className="text-3xl font-bold">
+            {initialsOf(name)}
+          </span>
+        </div>
+      ) : (
+        <img
+          src={src}
+          alt={`${name} video thumbnail`}
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          onError={() => {
+            if (src.includes("hqdefault")) setSrc(`https://img.youtube.com/vi/${videoId}/0.jpg`);
+            else setFailed(true);
+          }}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      )}
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
@@ -408,9 +421,29 @@ const CelebrityPage = () => {
                 >
                   <div className="aspect-[16/10] overflow-hidden" style={{ backgroundColor: BG_PANEL }}>
                     {post.image_url ? (
-                      <img src={post.image_url} alt={post.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                      <img
+                        src={post.image_url}
+                        alt={post.title}
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          const t = e.currentTarget;
+                          t.style.display = "none";
+                          const parent = t.parentElement;
+                          if (parent && !parent.querySelector(".lol-fallback")) {
+                            const div = document.createElement("div");
+                            div.className = "lol-fallback w-full h-full flex items-center justify-center";
+                            div.style.fontFamily = "Georgia, serif";
+                            div.style.color = GOLD;
+                            div.style.letterSpacing = "4px";
+                            div.textContent = "LOL";
+                            parent.appendChild(div);
+                          }
+                        }}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center" style={{ color: GOLD_SOFT, fontFamily: "Georgia, serif" }}>LOL</div>
+                      <div className="w-full h-full flex items-center justify-center" style={{ color: GOLD, fontFamily: "Georgia, serif", letterSpacing: "4px" }}>LOL</div>
                     )}
                   </div>
                   <div className="p-5">
