@@ -6,6 +6,10 @@ import { useLuxuryRss } from "@/hooks/useLuxuryRss";
 import SmartImage from "@/components/SmartImage";
 import ImageDebugOverlay from "@/components/ImageDebugOverlay";
 import { proxiedImage } from "@/lib/imageProxy";
+import feedOne from "@/assets/feed-1.jpg";
+import feedTwo from "@/assets/feed-2.jpg";
+import feedThree from "@/assets/feed-3.jpg";
+import feedFour from "@/assets/feed-4.jpg";
 
 const GOLD = "#b38f4a";
 const GOLD_SOFT = "rgba(179,143,74,0.25)";
@@ -27,6 +31,8 @@ type Influencer = {
   instagramUrl?: string;
   youtubeUrl?: string;
   tiktokUrl?: string;
+  imageUrl?: string;
+  imageAlt?: string;
 };
 
 const INFLUENCERS: Influencer[] = [
@@ -92,6 +98,8 @@ const INFLUENCERS: Influencer[] = [
     bio: "One of the few agents operating credibly across three continents. His international luxury content bridges Gulf, European and American buyer audiences — exactly the crossover Love Our Listings was built for.",
     instagram: "@brendanfitzpatrick",
     instagramUrl: "https://instagram.com/brendanfitzpatrick",
+    imageUrl: feedOne,
+    imageAlt: "Luxury penthouse interior representing Brendan Fitzpatrick's global real estate media profile",
   },
   {
     name: "Heather Rae El Moussa",
@@ -101,6 +109,8 @@ const INFLUENCERS: Influencer[] = [
     bio: "Selling Sunset star turned luxury lifestyle authority. Her audience of aspirational HNW buyers is one of the most engaged in real estate media. Co-developing luxury properties with Tarek El Moussa.",
     instagram: "@heatherraeelmoussa",
     instagramUrl: "https://instagram.com/heatherraeelmoussa",
+    imageUrl: feedTwo,
+    imageAlt: "Luxury resort-style villa representing Heather Rae El Moussa's real estate audience",
   },
   {
     name: "Tatiana Londono",
@@ -110,6 +120,8 @@ const INFLUENCERS: Influencer[] = [
     bio: "Founder of Londono Realty Group and host of The Property Shop. Combines high-end property marketing with agent mentorship — a direct pipeline to the ambitious luxury agents Love Our Listings wants to attract.",
     instagram: "@tatianalondono",
     instagramUrl: "https://instagram.com/tatianalondono",
+    imageUrl: feedFour,
+    imageAlt: "Gated luxury estate representing Tatiana Londono's luxury property media profile",
   },
   {
     name: "Grant Cardone",
@@ -121,6 +133,8 @@ const INFLUENCERS: Influencer[] = [
     instagramUrl: "https://instagram.com/grantcardone",
     youtube: "Grant Cardone",
     youtubeUrl: "https://youtube.com/@GrantCardone",
+    imageUrl: feedThree,
+    imageAlt: "Modern luxury mansion representing Grant Cardone's real estate investment audience",
   },
 ];
 
@@ -187,6 +201,23 @@ const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string
   );
 };
 
+const StaticThumb = ({ name, src, alt }: { name: string; src: string; alt: string }) => (
+  <div
+    className="group block mb-5 -mx-6 -mt-6 relative overflow-hidden"
+    style={{ backgroundColor: "#000", aspectRatio: "16 / 9" }}
+  >
+    <SmartImage
+      src={src}
+      alt={alt}
+      fallbackInitials={initialsOf(name)}
+      context={`influencer:${name}`}
+      imgClassName="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      className="w-full h-full"
+    />
+    <div className="absolute inset-0 bg-black/15" />
+  </div>
+);
+
 const InfluencerCard = ({ p }: { p: Influencer }) => (
   <article
     className="relative p-6 transition-all duration-300"
@@ -203,6 +234,8 @@ const InfluencerCard = ({ p }: { p: Influencer }) => (
 
     {p.videoId && p.videoUrl ? (
       <VideoThumb name={p.name} videoId={p.videoId} videoUrl={p.videoUrl} />
+    ) : p.imageUrl ? (
+      <StaticThumb name={p.name} src={p.imageUrl} alt={p.imageAlt || `${p.name} luxury real estate image`} />
     ) : (
       <Monogram name={p.name} />
     )}
