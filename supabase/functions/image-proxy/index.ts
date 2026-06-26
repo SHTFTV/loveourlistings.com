@@ -25,6 +25,44 @@ const ALLOWED_HOSTS = [
   'images.unsplash.com',
 ];
 
+// ---- In-memory cache + stats (per warm instance) ----
+type CacheEntry = { body: Uint8Array; contentType: string; ts: number };
+const CACHE = new Map<string, CacheEntry>();
+const CACHE_MAX = 200;
+const CACHE_TTL_MS = 1000 * 60 * 60 * 6; // 6h
+
+const STATS = {
+  hits: 0,
+  misses: 0,
+  errors: 0,
+  hostHits: {} as Record<string, number>,
+  hostMisses: {} as Record<string, number>,
+  recentFailures: [] as Array<{ url: string; host: string; status: number; ts: number; reason: string }>,
+  startedAt: Date.now(),
+};
+
+function recordFailure(url: string, host: string, status: number, reason: string) {
+  STATS.errors++;
+  STATS.recentFailures.unshift({ url, host, status, ts: Date.now(), reason });
+  if (STATS.recentFailures.length > 50) STATS.recentFailures.length = 50;
+}
+
+function cacheGet(key: string): CacheEntry | null {
+  const e = CACHE.get(key);
+  if (!e) return null;
+  if (Date.now() - e.ts > CACHE_TTL_MS) { CACHE.delete(key); return null; }
+  // LRU bump
+  CACHE.delete(key); CACHE.set(key, e);
+  return e;
+}
+function cacheSet(key: string, entry: CacheEntry) {
+  if (CACHE.size >= CACHE_MAX) {
+    const first = CACHE.keys().next().value;
+    if (first) CACHE.delete(first);
+  }
+  CACHE.set(key, entry);
+}
+
 function upgradeWordPressThumbnail(rawUrl: string): string {
   try {
     const u = new URL(rawUrl);
@@ -40,6 +78,18 @@ Deno.serve(async (req) => {
 
   try {
     const url = new URL(req.url);
+
+    // --- Stats endpoint: GET ?stats=1 ---
+    if (url.searchParams.get('stats') === '1') {
+      return new Response(JSON.stringify({
+        ...STATS,
+        cacheSize: CACHE.size,
+        cacheMax: CACHE_MAX,
+        allowList: ALLOWED_HOSTS,
+        uptimeMs: Date.now() - STATS.startedAt,
+      }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+    }
+
     const target = url.searchParams.get('url');
     if (!target) {
       return new Response(JSON.stringify({ error: 'missing url' }), {
@@ -63,8 +113,26 @@ Deno.serve(async (req) => {
     }
     const hostOk = ALLOWED_HOSTS.some((h) => parsed.hostname === h || parsed.hostname.endsWith(`.${h}`));
     if (!hostOk) {
+      recordFailure(upgradedTarget, parsed.hostname, 403, 'host-not-allowed');
       return new Response(JSON.stringify({ error: 'host not allowed', host: parsed.hostname }), {
         status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    const cacheKey = parsed.toString();
+    const cached = cacheGet(cacheKey);
+    if (cached) {
+      STATS.hits++;
+      STATS.hostHits[parsed.hostname] = (STATS.hostHits[parsed.hostname] ?? 0) + 1;
+      console.log(`[image-proxy] CACHE HIT ${parsed.hostname} ${parsed.pathname}`);
+      return new Response(cached.body, {
+        status: 200,
+        headers: {
+          ...corsHeaders,
+          'Content-Type': cached.contentType,
+          'Cache-Control': 'public, max-age=86400, s-maxage=604800, immutable',
+          'X-Proxy-Cache': 'HIT',
+        },
       });
     }
 
@@ -87,6 +155,7 @@ Deno.serve(async (req) => {
     }
 
     if (!upstream || !upstream.ok) {
+      recordFailure(upgradedTarget, parsed.hostname, upstream?.status ?? 0, 'upstream-failed');
       return new Response(JSON.stringify({
         error: 'upstream fetch failed',
         status: upstream?.status ?? 0,
@@ -96,17 +165,25 @@ Deno.serve(async (req) => {
 
     const contentType = upstream.headers.get('content-type') ?? 'image/jpeg';
     if (!contentType.startsWith('image/')) {
+      recordFailure(upgradedTarget, parsed.hostname, 415, 'not-an-image');
       return new Response(JSON.stringify({ error: 'not an image', contentType }), {
         status: 415, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
-    return new Response(upstream.body, {
+    const buf = new Uint8Array(await upstream.arrayBuffer());
+    cacheSet(cacheKey, { body: buf, contentType, ts: Date.now() });
+    STATS.misses++;
+    STATS.hostMisses[parsed.hostname] = (STATS.hostMisses[parsed.hostname] ?? 0) + 1;
+    console.log(`[image-proxy] CACHE MISS ${parsed.hostname} ${parsed.pathname} (${buf.byteLength}b)`);
+
+    return new Response(buf, {
       status: 200,
       headers: {
         ...corsHeaders,
         'Content-Type': contentType,
         'Cache-Control': 'public, max-age=86400, s-maxage=604800, immutable',
+        'X-Proxy-Cache': 'MISS',
       },
     });
   } catch (e) {
