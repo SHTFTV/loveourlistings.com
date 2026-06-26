@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
-import { Check, Heart, Star, ArrowRight } from "lucide-react";
+import { Check, Heart, Star, ArrowRight, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import siteLogo from "@/assets/logo.png";
+import {
+  POPULATION_TIERS,
+  PUBLISHING_ADDONS,
+  DASHBOARD_UPSELLS,
+} from "@/data/pricingMatrix";
 
 const tiers = [
   {
@@ -148,6 +153,110 @@ const PricingPage = () => {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      {/* Territory Slot Matrix — Hardcoded */}
+      <section id="slot-matrix" className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="font-body text-xs tracking-[5px] uppercase text-primary font-bold mb-3">
+            Territory Slot Matrix
+          </p>
+          <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
+            Flat-Rate Territory Pricing
+          </h2>
+          <p className="font-body text-base text-muted-foreground max-w-3xl leading-relaxed mb-10">
+            Each city has a fixed number of feature slots based on population. Pricing is flat —
+            no auctions, no surge pricing, no per-click games. Claim your territory and own it.
+          </p>
+
+          <div className="border border-border overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-primary/5 border-b border-border">
+                <tr>
+                  <th className="text-left font-body text-[11px] tracking-[3px] uppercase text-foreground/70 font-bold py-4 px-6">Population Base</th>
+                  <th className="text-left font-body text-[11px] tracking-[3px] uppercase text-foreground/70 font-bold py-4 px-6">Available Slots</th>
+                  <th className="text-left font-body text-[11px] tracking-[3px] uppercase text-foreground/70 font-bold py-4 px-6">Per Slot / Month</th>
+                </tr>
+              </thead>
+              <tbody>
+                {POPULATION_TIERS.map((row, idx) => (
+                  <tr key={row.population} className={idx % 2 === 0 ? "bg-background" : "bg-primary/[0.02]"}>
+                    <td className="py-3.5 px-6 font-body text-sm text-foreground">{row.label}</td>
+                    <td className="py-3.5 px-6 font-body text-sm text-foreground/80">{row.slots} slots</td>
+                    <td className="py-3.5 px-6 font-display text-base font-black text-primary">${row.pricePerMonth.toFixed(2)}/mo</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Publishing Add-Ons */}
+      <section id="add-ons" className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="font-body text-xs tracking-[5px] uppercase text-primary font-bold mb-3">
+            Publishing Add-On Layer
+          </p>
+          <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-10">
+            Extend Your Reach
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {PUBLISHING_ADDONS.map((a) => (
+              <div key={a.name} className="border border-border p-7 hover:border-primary transition-colors">
+                <h3 className="font-display text-xl font-black text-foreground mb-2">{a.name}</h3>
+                <div className="flex items-baseline gap-2 mb-3">
+                  <span className="font-display text-2xl font-black text-primary">{a.price}</span>
+                  <span className="font-body text-xs text-muted-foreground">{a.cadence}</span>
+                </div>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">{a.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Dashboard Upsells */}
+      <section id="dashboard" className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="border border-primary/40 bg-primary/5 p-10 md:p-14"
+        >
+          <div className="flex items-center gap-3 mb-3">
+            <Zap className="w-5 h-5 text-primary" />
+            <p className="font-body text-xs tracking-[5px] uppercase text-primary font-bold">
+              Dashboard Upsells
+            </p>
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl font-black text-foreground leading-tight mb-10">
+            On-Demand Power Tools
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {DASHBOARD_UPSELLS.map((u) => (
+              <div key={u.name} className="bg-background border border-border p-6">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h3 className="font-display text-lg font-black text-foreground">{u.name}</h3>
+                  <span className="font-display text-base font-black text-primary whitespace-nowrap">{u.price}</span>
+                </div>
+                <p className="font-body text-[11px] tracking-[2px] uppercase text-muted-foreground mb-3">{u.cadence}</p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">{u.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* Heart-Shaped Sign Add-On */}
