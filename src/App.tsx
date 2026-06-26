@@ -18,6 +18,8 @@ import CelebrityPage from "./pages/CelebrityPage.tsx";
 import RealtorsIndexPage from "./pages/RealtorsIndexPage.tsx";
 import DashboardPage from "./pages/DashboardPage.tsx";
 import ImageHealthPage from "./pages/admin/ImageHealthPage.tsx";
+import AuthPage from "./pages/AuthPage.tsx";
+import AdminGuard from "./components/AdminGuard.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
 import WaterfrontEstates from "./pages/WaterfrontEstates.tsx";
 import SkiVillages from "./pages/SkiVillages.tsx";
@@ -270,7 +272,8 @@ const App = () => (
             <Route path="/celebrity" element={<CelebrityPage />} />
             <Route path="/realtors" element={<RealtorsIndexPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
-            <Route path="/admin/image-health" element={<ImageHealthPage />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/admin/image-health" element={<AdminGuard><ImageHealthPage /></AdminGuard>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { classifyFailure, originalImageFromProxy, reportImageFailure } from "@/lib/imageProxy";
 
+export const IMAGE_RETRY_EVENT = "lol:image-retry-all";
+
 type Props = {
   src: string;
   alt: string;
@@ -39,6 +41,20 @@ const SmartImage = ({
     setFailed(false);
     return () => { if (timerRef.current) window.clearTimeout(timerRef.current); };
   }, [src]);
+
+  // Listen for a global "re-test" request: only restart if we'd previously failed.
+  useEffect(() => {
+    const handler = () => {
+      if (failed) {
+        setFailed(false);
+        setAttempt(0);
+      }
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener(IMAGE_RETRY_EVENT, handler);
+      return () => window.removeEventListener(IMAGE_RETRY_EVENT, handler);
+    }
+  }, [failed]);
 
   const handleError = () => {
     if (attempt < maxRetries) {
