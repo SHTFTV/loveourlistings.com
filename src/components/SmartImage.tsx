@@ -60,6 +60,7 @@ const SmartImage = ({
   if (!src || failed) {
     return (
       <div
+        data-image-state="fallback"
         className={`flex items-center justify-center w-full h-full ${className ?? ""}`}
         style={{ backgroundColor: bgColor }}
         aria-label={alt}
@@ -80,6 +81,7 @@ const SmartImage = ({
   return (
     <img
       key={attempt}
+      data-image-state="loaded"
       src={finalSrc}
       alt={alt}
       loading="lazy"
