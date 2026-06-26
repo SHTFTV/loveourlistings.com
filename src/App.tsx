@@ -17,6 +17,7 @@ import CelebrityEstatesPage from "./pages/CelebrityEstatesPage.tsx";
 import CelebrityPage from "./pages/CelebrityPage.tsx";
 import RealtorsIndexPage from "./pages/RealtorsIndexPage.tsx";
 import DashboardPage from "./pages/DashboardPage.tsx";
+import ImageHealthPage from "./pages/admin/ImageHealthPage.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
 import WaterfrontEstates from "./pages/WaterfrontEstates.tsx";
 import SkiVillages from "./pages/SkiVillages.tsx";
@@ -269,6 +270,7 @@ const App = () => (
             <Route path="/celebrity" element={<CelebrityPage />} />
             <Route path="/realtors" element={<RealtorsIndexPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/admin/image-health" element={<ImageHealthPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
