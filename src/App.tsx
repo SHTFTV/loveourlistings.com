@@ -15,6 +15,7 @@ import AboutPage from "./pages/AboutPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import CelebrityEstatesPage from "./pages/CelebrityEstatesPage.tsx";
 import RealtorsIndexPage from "./pages/RealtorsIndexPage.tsx";
+import DashboardPage from "./pages/DashboardPage.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
 import WaterfrontEstates from "./pages/WaterfrontEstates.tsx";
 import SkiVillages from "./pages/SkiVillages.tsx";
@@ -227,6 +228,7 @@ const countryRoutes = [
   { path: "/country/mauritius", component: lazy(() => import("./pages/country/MauritiusAgents.tsx")) },
   { path: "/country/morocco", component: lazy(() => import("./pages/country/MoroccoAgents.tsx")) },
   { path: "/country/south-africa", component: lazy(() => import("./pages/country/SouthAfricaAgents.tsx")) },
+  { path: "/country/singapore", component: lazy(() => import("./pages/country/SingaporeAgents.tsx")) },
 ];
 
 const queryClient = new QueryClient();
@@ -265,6 +267,7 @@ const App = () => (
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/celebrity-estates" element={<CelebrityEstatesPage />} />
             <Route path="/realtors" element={<RealtorsIndexPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
