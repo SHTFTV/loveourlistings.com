@@ -23,7 +23,6 @@ import SkiVillages from "./pages/SkiVillages.tsx";
 import WineCountry from "./pages/WineCountry.tsx";
 import IslandRetreats from "./pages/IslandRetreats.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import PromoBanner from "./components/PromoBanner.tsx";
 
 const listingRoutes = [
   { path: "/listing/west-vancouver-waterfront", component: lazy(() => import("./pages/listings/WestVancouverWaterfront.tsx")) },
@@ -239,7 +238,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <PromoBanner />
+      
       <BrowserRouter>
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
