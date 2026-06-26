@@ -349,11 +349,12 @@ const ImageHealthPage = () => {
                   <th className="text-left p-3">Attempts</th>
                   <th className="text-left p-3">Context</th>
                   <th className="text-left p-3">URL</th>
+                  <th className="text-right p-3">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {localFailures.length === 0 && (
-                  <tr><td className="p-3" colSpan={5} style={{ opacity: 0.6 }}>None this session. Visit /celebrity to populate.</td></tr>
+                  <tr><td className="p-3" colSpan={6} style={{ opacity: 0.6 }}>None this session. Visit /celebrity to populate.</td></tr>
                 )}
                 {localFailures.map((f, i) => (
                   <tr key={i} style={{ borderTop: `1px solid ${BORDER}` }}>
