@@ -203,6 +203,7 @@ const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string
 
 const StaticThumb = ({ name, src, alt }: { name: string; src: string; alt: string }) => (
   <div
+    data-testid="static-thumb"
     className="group block mb-5 -mx-6 -mt-6 relative overflow-hidden"
     style={{ backgroundColor: "#000", aspectRatio: "16 / 9" }}
   >
@@ -375,7 +376,7 @@ const CelebrityPage = () => {
       {/* INFLUENCER GRID */}
       <section className="px-6 md:px-12 py-20" style={{ backgroundColor: BG_PANEL }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          <div data-testid="influencer-grid" className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {INFLUENCERS.map((p) => <InfluencerCard key={p.name} p={p} />)}
           </div>
         </div>
