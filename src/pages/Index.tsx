@@ -21,18 +21,21 @@ const INFLUENCERS = [
     handle: "@ryanserhant",
     markets: "New York · LA · Miami",
     quote: "The market rewards who gets seen first.",
+    youtubeId: "4kXLc9v8vBM",
   },
   {
     name: "Fredrik Eklund",
     handle: "@fredrikeklund",
     markets: "NYC · Miami · LA",
     quote: "Luxury buyers find you because you built something worth finding.",
+    youtubeId: "oE2YmUzcVbA",
   },
   {
     name: "Jason Oppenheim",
     handle: "@jasonoppenheim",
     markets: "LA · London",
     quote: "Own your market online, own it in reality.",
+    youtubeId: "R0KeV6OYJME",
   },
   {
     name: "Darren Kriz",
@@ -40,6 +43,7 @@ const INFLUENCERS = [
     markets: "Beverly Hills · Malibu",
     quote:
       "300M views. The audience that watches these homes is the audience that buys them.",
+    youtubeId: "1HLS4BMscjQ",
   },
 ];
 
@@ -146,20 +150,25 @@ const Index = () => {
             {INFLUENCERS.map((p) => (
               <article
                 key={p.name}
-                className="p-6 flex flex-col"
-                style={{ backgroundColor: "#111", border: `1px solid rgba(179,143,74,0.25)` }}
+                className="flex flex-col group transition-colors"
+                style={{ backgroundColor: "#141414", border: `1px solid rgba(179,143,74,0.25)` }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = GOLD)}
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.borderColor = "rgba(179,143,74,0.25)")
+                }
               >
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
-                  style={{ backgroundColor: BG, border: `1px solid ${GOLD}` }}
-                >
-                  <span
-                    style={{ color: GOLD, fontFamily: "Georgia, serif" }}
-                    className="text-xl font-bold"
-                  >
-                    {initials(p.name)}
-                  </span>
+                <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${p.youtubeId}?rel=0&modestbranding=1`}
+                    title={`${p.name} — featured video`}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                    style={{ border: 0 }}
+                  />
                 </div>
+                <div className="p-6 flex flex-col flex-1">
                 <h3
                   style={{ fontFamily: "Georgia, serif" }}
                   className="text-xl font-bold leading-tight mb-1"
@@ -184,6 +193,7 @@ const Index = () => {
                 >
                   "{p.quote}"
                 </p>
+                </div>
               </article>
             ))}
           </div>
