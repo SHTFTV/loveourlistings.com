@@ -6,6 +6,7 @@ const cities = [
 
 const IndiaAgents = () => (
   <CountryAgentsPage
+    slug="india"
     country="India"
     flag="🇮🇳"
     region="Asia & Middle East"

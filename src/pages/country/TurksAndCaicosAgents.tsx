@@ -6,6 +6,7 @@ const cities = [
 
 const TurksAndCaicosAgents = () => (
   <CountryAgentsPage
+    slug="turks-and-caicos"
     country="Turks and Caicos"
     flag="🇹🇨"
     region="Caribbean"

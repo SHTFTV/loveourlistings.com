@@ -9,6 +9,7 @@ const PRIMARY_LINKS = [
   { label: "Realtors", href: "/realtors" },
   { label: "Guest Post", href: "/guest-post" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Dashboard", href: "/dashboard" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

@@ -6,6 +6,7 @@ const cities = [
 
 const PuertoRicoAgents = () => (
   <CountryAgentsPage
+    slug="puerto-rico"
     country="Puerto Rico"
     flag="🇵🇷"
     region="Caribbean"
