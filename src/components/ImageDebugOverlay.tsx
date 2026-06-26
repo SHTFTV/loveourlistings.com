@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { subscribeImageFailures, type ImageFailure } from "@/lib/imageProxy";
+import { fetchProxyStats, hitRate, type ProxyStats } from "@/lib/imageProxyStats";
 
 const GOLD = "#b38f4a";
 
@@ -11,6 +12,7 @@ const ImageDebugOverlay = () => {
   const [enabled, setEnabled] = useState(false);
   const [failures, setFailures] = useState<ImageFailure[]>([]);
   const [open, setOpen] = useState(true);
+  const [stats, setStats] = useState<ProxyStats | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -18,7 +20,15 @@ const ImageDebugOverlay = () => {
     const flag = params.get("debug") === "images" || localStorage.getItem("LOL_IMG_DEBUG") === "1";
     setEnabled(flag);
     if (!flag) return;
-    return subscribeImageFailures((f) => setFailures((prev) => [f, ...prev].slice(0, 50)));
+    const unsub = subscribeImageFailures((f) => setFailures((prev) => [f, ...prev].slice(0, 50)));
+    let alive = true;
+    const poll = async () => {
+      const s = await fetchProxyStats();
+      if (alive && s) setStats(s);
+    };
+    poll();
+    const iv = window.setInterval(poll, 5000);
+    return () => { alive = false; window.clearInterval(iv); unsub(); };
   }, []);
 
   if (!enabled) return null;
@@ -59,6 +69,15 @@ const ImageDebugOverlay = () => {
       </button>
       {open && (
         <div style={{ overflowY: "auto", padding: 8, gap: 6, display: "flex", flexDirection: "column" }}>
+          {stats && (
+            <div style={{ borderBottom: `1px solid ${GOLD}`, paddingBottom: 6, marginBottom: 4 }}>
+              <div style={{ color: GOLD, textTransform: "uppercase", letterSpacing: 1 }}>
+                Proxy Cache · {(hitRate(stats) * 100).toFixed(0)}% hit rate
+              </div>
+              <div>Hits {stats.hits} · Misses {stats.misses} · Errors {stats.errors}</div>
+              <div style={{ opacity: 0.7 }}>Cache {stats.cacheSize}/{stats.cacheMax}</div>
+            </div>
+          )}
           {failures.length === 0 && <div style={{ opacity: 0.6 }}>No failures yet.</div>}
           {failures.map((f, i) => (
             <div key={i} style={{ borderBottom: "1px solid rgba(179,143,74,0.25)", paddingBottom: 6 }}>
