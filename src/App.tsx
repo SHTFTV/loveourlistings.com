@@ -7,6 +7,14 @@ import { lazy, Suspense } from "react";
 import Index from "./pages/Index.tsx";
 import BeckyZhouHill from "./pages/BeckyZhouHill.tsx";
 import PricingPage from "./pages/PricingPage.tsx";
+import GuestPostPage from "./pages/GuestPostPage.tsx";
+import SeoRealtorPage from "./pages/SeoRealtorPage.tsx";
+import TalcTvPage from "./pages/TalcTvPage.tsx";
+import EyeSpyrPage from "./pages/EyeSpyrPage.tsx";
+import AboutPage from "./pages/AboutPage.tsx";
+import ContactPage from "./pages/ContactPage.tsx";
+import CelebrityEstatesPage from "./pages/CelebrityEstatesPage.tsx";
+import RealtorsIndexPage from "./pages/RealtorsIndexPage.tsx";
 import RaphaelleBeaudoin from "./pages/RaphaelleBeaudoin.tsx";
 import WaterfrontEstates from "./pages/WaterfrontEstates.tsx";
 import SkiVillages from "./pages/SkiVillages.tsx";
@@ -249,6 +257,14 @@ const App = () => (
               <Route key={route.path} path={route.path} element={<route.component />} />
             ))}
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/guest-post" element={<GuestPostPage />} />
+            <Route path="/seo-realtor" element={<SeoRealtorPage />} />
+            <Route path="/talc-tv" element={<TalcTvPage />} />
+            <Route path="/eyespyr" element={<EyeSpyrPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/celebrity-estates" element={<CelebrityEstatesPage />} />
+            <Route path="/realtors" element={<RealtorsIndexPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
