@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Instagram, Youtube, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -33,7 +33,6 @@ const INFLUENCERS: Influencer[] = [
     followers: "1.2M",
     bio: "Transformed luxury real estate into a global media brand. SERHANT. closed $6B in 2026. Author, TV host, and the blueprint every modern luxury agent studies.",
     quote: "The market rewards who gets seen first.",
-    embedUrl: "https://www.youtube.com/embed?listType=user_uploads&list=RyanSerhant&index=1",
     instagram: "@ryanserhant",
     instagramUrl: "https://instagram.com/ryanserhant",
     youtube: "Ryan Serhant",
@@ -46,7 +45,6 @@ const INFLUENCERS: Influencer[] = [
     followers: "800K",
     bio: "Million Dollar Listing NY star. Closed $3B+ in luxury in 2026 including record waterfront penthouses. Known for his signature high kick and even higher closing rate.",
     quote: "Luxury buyers find you because you built something worth finding.",
-    embedUrl: "https://www.youtube.com/embed?listType=user_uploads&list=fredrikeklund",
     instagram: "@fredrikeklund",
     instagramUrl: "https://instagram.com/fredrikeklund",
     youtube: "Fredrik Eklund",
@@ -59,7 +57,6 @@ const INFLUENCERS: Influencer[] = [
     followers: "750K",
     bio: "The face of Selling Sunset. Manages LA's most elite brokerage while expanding into European luxury markets. Equal parts attorney and closer.",
     quote: "Own your market online, own it in reality.",
-    embedUrl: "https://www.youtube.com/embed/videoseries?list=UUoppenheimgroup",
     instagram: "@jasonoppenheim",
     instagramUrl: "https://instagram.com/jasonoppenheim",
   },
@@ -137,6 +134,53 @@ const formatDate = (iso: string | null) => {
   try { return new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch { return ""; }
 };
 
+const Monogram = ({ name }: { name: string }) => (
+  <div
+    className="w-20 h-20 rounded-full flex items-center justify-center mb-5"
+    style={{ backgroundColor: BG_DARK, border: `1px solid ${GOLD}` }}
+  >
+    <span style={{ color: GOLD, fontFamily: "Georgia, serif" }} className="text-2xl font-bold tracking-wide">
+      {initialsOf(name)}
+    </span>
+  </div>
+);
+
+const InfluencerVideo = ({ name, src }: { name: string; src: string }) => {
+  const [failed, setFailed] = useState(false);
+  const loadedRef = useRef(false);
+  useEffect(() => {
+    const t = setTimeout(() => { if (!loadedRef.current) setFailed(true); }, 5000);
+    return () => clearTimeout(t);
+  }, []);
+  if (failed) {
+    return (
+      <div
+        className="mb-5 -mx-6 -mt-6 flex items-center justify-center"
+        style={{ backgroundColor: "#141414", aspectRatio: "16 / 9" }}
+      >
+        <span style={{ color: GOLD, fontFamily: "Georgia, serif" }} className="text-4xl font-bold tracking-wide">
+          {initialsOf(name)}
+        </span>
+      </div>
+    );
+  }
+  return (
+    <div className="mb-5 -mx-6 -mt-6 overflow-hidden" style={{ backgroundColor: "#000" }}>
+      <iframe
+        src={src}
+        title={`${name} video`}
+        loading="lazy"
+        onLoad={() => { loadedRef.current = true; }}
+        onError={() => setFailed(true)}
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        frameBorder={0}
+        style={{ width: "100%", aspectRatio: "16 / 9", display: "block", border: 0 }}
+      />
+    </div>
+  );
+};
+
 const InfluencerCard = ({ p }: { p: Influencer }) => (
   <article
     className="relative p-6 transition-all duration-300"
@@ -151,28 +195,7 @@ const InfluencerCard = ({ p }: { p: Influencer }) => (
       {p.followers}
     </span>
 
-    {p.embedUrl ? (
-      <div className="mb-5 -mx-6 -mt-6 overflow-hidden" style={{ backgroundColor: "#000" }}>
-        <iframe
-          src={p.embedUrl}
-          title={`${p.name} video`}
-          loading="lazy"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          frameBorder={0}
-          style={{ width: "100%", aspectRatio: "16 / 9", display: "block", border: 0 }}
-        />
-      </div>
-    ) : (
-      <div
-        className="w-20 h-20 rounded-full flex items-center justify-center mb-5"
-        style={{ backgroundColor: BG_DARK, border: `1px solid ${GOLD}` }}
-      >
-        <span style={{ color: GOLD, fontFamily: "Georgia, serif" }} className="text-2xl font-bold tracking-wide">
-          {initialsOf(p.name)}
-        </span>
-      </div>
-    )}
+    {p.embedUrl ? <InfluencerVideo name={p.name} src={p.embedUrl} /> : <Monogram name={p.name} />}
 
     <h3 style={{ fontFamily: "Georgia, serif", color: "#fff" }} className="text-xl font-bold mb-1 leading-tight">{p.name}</h3>
     <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.65)" }}>{p.title}</p>
