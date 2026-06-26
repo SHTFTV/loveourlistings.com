@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { Instagram, Youtube, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Instagram, Youtube, ArrowRight, Play } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLuxuryRss } from "@/hooks/useLuxuryRss";
@@ -153,46 +153,39 @@ const Monogram = ({ name }: { name: string }) => (
   </div>
 );
 
-const InfluencerVideo = ({ name, src }: { name: string; src: string }) => {
-  const [failed, setFailed] = useState(false);
-  const loadedRef = useRef(false);
-  useEffect(() => {
-    const t = setTimeout(() => { if (!loadedRef.current) setFailed(true); }, 5000);
-    return () => clearTimeout(t);
-  }, []);
-  if (failed) {
-    return (
-      <div
-        className="mb-5 -mx-6 -mt-6 flex items-center justify-center"
-        style={{ backgroundColor: "#141414", aspectRatio: "16 / 9" }}
-      >
-        <span style={{ color: GOLD, fontFamily: "Georgia, serif" }} className="text-4xl font-bold tracking-wide">
-          {initialsOf(name)}
-        </span>
-      </div>
-    );
-  }
+const VideoThumb = ({ name, videoId, videoUrl }: { name: string; videoId: string; videoUrl: string }) => {
+  const [src, setSrc] = useState(`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`);
   return (
-    <div className="mb-5 -mx-6 -mt-6 overflow-hidden" style={{ backgroundColor: "#000" }}>
-      <iframe
+    <a
+      href={videoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Watch ${name} on YouTube`}
+      className="group block mb-5 -mx-6 -mt-6 relative overflow-hidden"
+      style={{ backgroundColor: "#000", aspectRatio: "16 / 9" }}
+    >
+      <img
         src={src}
-        title={`${name} video`}
+        alt={`${name} video thumbnail`}
         loading="lazy"
-        onLoad={() => { loadedRef.current = true; }}
-        onError={() => setFailed(true)}
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        frameBorder={0}
-        style={{ width: "100%", aspectRatio: "16 / 9", display: "block", border: 0 }}
+        onError={() => setSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`)}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
-    </div>
+      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+      <div
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+        style={{ backgroundColor: GOLD }}
+      >
+        <Play className="w-6 h-6 fill-current" style={{ color: BG_DARK }} />
+      </div>
+    </a>
   );
 };
 
 const InfluencerCard = ({ p }: { p: Influencer }) => (
   <article
     className="relative p-6 transition-all duration-300"
-    style={{ backgroundColor: p.embedUrl ? "#141414" : BG_PANEL, border: `1px solid ${GOLD_SOFT}` }}
+    style={{ backgroundColor: p.videoId ? "#141414" : BG_PANEL, border: `1px solid ${GOLD_SOFT}` }}
     onMouseEnter={(e) => (e.currentTarget.style.boxShadow = `0 0 24px ${GOLD_SOFT}`)}
     onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
   >
@@ -203,7 +196,11 @@ const InfluencerCard = ({ p }: { p: Influencer }) => (
       {p.followers}
     </span>
 
-    {p.embedUrl ? <InfluencerVideo name={p.name} src={p.embedUrl} /> : <Monogram name={p.name} />}
+    {p.videoId && p.videoUrl ? (
+      <VideoThumb name={p.name} videoId={p.videoId} videoUrl={p.videoUrl} />
+    ) : (
+      <Monogram name={p.name} />
+    )}
 
     <h3 style={{ fontFamily: "Georgia, serif", color: "#fff" }} className="text-xl font-bold mb-1 leading-tight">{p.name}</h3>
     <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.65)" }}>{p.title}</p>
