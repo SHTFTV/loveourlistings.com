@@ -2,39 +2,32 @@ import { Instagram } from "lucide-react";
 import WorldwideLuxury from "@/components/WorldwideLuxury";
 import LuxuryNewsFeed from "@/components/LuxuryNewsFeed";
 import FooterFull from "@/components/FooterFull";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
-import siteLogo from "@/assets/logo.png";
+import ListingHero from "@/components/ListingHero";
+import ListingPathCards from "@/components/ListingPathCards";
 
 const GOLD = "#b38f4a";
 const BG = "#0a0a0a";
-
-const NAV = [
-  { label: "Markets", href: "/realtors" },
-  { label: "Celebrity", href: "/celebrity" },
-  { label: "Journal", href: "/#journal" },
-  { label: "Apply", href: "/pricing" },
-];
 
 const INFLUENCERS = [
   {
     name: "Ryan Serhant",
     handle: "@ryanserhant",
     markets: "New York · LA · Miami",
-    quote: "The market rewards who gets seen first.",
+    quote: "A property tour from SERHANT.’s public video channel.",
     youtubeId: "4kXLc9v8vBM",
   },
   {
     name: "Fredrik Eklund",
     handle: "@fredrikeklund",
     markets: "NYC · Miami · LA",
-    quote: "Luxury buyers find you because you built something worth finding.",
+    quote: "A public conversation about real estate and personal presentation.",
     youtubeId: "oE2YmUzcVbA",
   },
   {
     name: "Jason Oppenheim",
     handle: "@jasonoppenheim",
     markets: "LA · London",
-    quote: "Own your market online, own it in reality.",
+    quote: "A property tour published by The Oppenheim Group.",
     youtubeId: "R0KeV6OYJME",
   },
   {
@@ -42,7 +35,7 @@ const INFLUENCERS = [
     handle: "@darrenkriz",
     markets: "Beverly Hills · Malibu",
     quote:
-      "300M views. The audience that watches these homes is the audience that buys them.",
+      "A public home tour exploring architecture and presentation.",
     youtubeId: "1HLS4BMscjQ",
   },
 ];
@@ -68,81 +61,24 @@ const STEPS = [
   },
 ];
 
-const initials = (n: string) =>
-  n.split(/\s+/).map((p) => p[0]).slice(0, 2).join("").toUpperCase();
-
 const Index = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: BG, color: "#fff" }}>
-      {/* HERO */}
-      <section className="relative h-screen min-h-[640px] overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          src={heroVideo.url}
-        />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.4)" }} />
-
-        {/* Top nav over hero */}
-        <header className="absolute top-0 left-0 right-0 z-20 px-6 md:px-12 py-6 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3">
-            <img src={siteLogo} alt="Love Our Listings" className="h-10 md:h-12 w-auto" />
-          </a>
-          <nav className="hidden md:flex items-center gap-8">
-            {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-[11px] tracking-[3px] uppercase font-semibold transition-colors"
-                style={{ color: "rgba(255,255,255,0.8)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = GOLD)}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-        </header>
-
-        {/* Centered hero content */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6">
-          <h1
-            style={{ fontFamily: "Georgia, serif" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] max-w-5xl"
-          >
-            Where the world's finest properties<br className="hidden md:block" /> find their perfect advocate
-          </h1>
-          <p
-            className="mt-6 text-sm md:text-base tracking-[3px] uppercase"
-            style={{ color: "rgba(255,255,255,0.75)" }}
-          >
-            33 countries · 151 elite markets · Verified agents only
-          </p>
-          <a
-            href="/pricing"
-            className="mt-10 inline-block px-10 py-4 text-xs tracking-[4px] uppercase font-bold transition-transform hover:scale-[1.03]"
-            style={{ backgroundColor: GOLD, color: BG }}
-          >
-            Claim Your Territory
-          </a>
-        </div>
-      </section>
+      <ListingHero />
+      <ListingPathCards />
 
       {/* WHO'S WATCHING */}
       <section className="px-6 md:px-12 py-24" style={{ backgroundColor: BG }}>
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <p className="text-[11px] tracking-[5px] uppercase mb-4" style={{ color: GOLD }}>
-              The Audience
+              THE PUBLIC SPOTLIGHT
             </p>
             <h2
               style={{ fontFamily: "Georgia, serif" }}
               className="text-4xl md:text-5xl font-bold leading-tight"
             >
-              Who's Watching
+              Stories from the luxury circuit
             </h2>
           </div>
 
@@ -191,7 +127,7 @@ const Index = () => {
                   className="text-sm leading-relaxed italic mt-auto pt-5 border-t"
                   style={{ color: "rgba(255,255,255,0.8)", borderColor: "rgba(179,143,74,0.2)", fontFamily: "Georgia, serif" }}
                 >
-                  "{p.quote}"
+                  {p.quote}
                 </p>
                 </div>
               </article>
@@ -199,6 +135,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <p className="px-6 md:px-12 text-xs text-white/60 pb-8">Independent public videos shown for editorial context. Featured personalities are not represented as partners or endorsers of Love Our Listings.</p>
 
       {/* STATEMENT */}
       <section className="px-6 md:px-12 py-32" style={{ backgroundColor: "#070707" }}>
