@@ -27,6 +27,7 @@ import SkiVillages from "./pages/SkiVillages.tsx";
 import WineCountry from "./pages/WineCountry.tsx";
 import IslandRetreats from "./pages/IslandRetreats.tsx";
 import { PropertyCollection } from "./components/PropertyBands";
+import { JournalPage } from "./components/Magazine";
 import NotFound from "./pages/NotFound.tsx";
 
 const listingRoutes = [
@@ -248,6 +249,7 @@ const App = () => (
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/journal/:slug" element={<JournalPage />} />
             <Route path="/collections/:slug" element={<PropertyCollection />} />
             <Route path="/realtor/becky-zhou-hill" element={<BeckyZhouHill />} />
             <Route path="/realtor/raphaelle-beaudoin" element={<RaphaelleBeaudoin />} />
