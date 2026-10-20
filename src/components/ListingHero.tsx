@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Pause, Play } from 'lucide-react';
-const siteLogo = '/images/love-logo-v3.webp';
+const siteLogo = '/images/love-logo-v4.webp';
 import heroVideo from '@/assets/hero-video.mp4.asset.json';
 import './listing-home.css';
 
