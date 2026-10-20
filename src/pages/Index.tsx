@@ -2,6 +2,7 @@ import { Instagram } from "lucide-react";
 import WorldwideLuxury from "@/components/WorldwideLuxury";
 import LuxuryNewsFeed from "@/components/LuxuryNewsFeed";
 import FooterFull from "@/components/FooterFull";
+import { PropertyBands } from "@/components/PropertyBands";
 import ListingHero from "@/components/ListingHero";
 import ListingPathCards from "@/components/ListingPathCards";
 
@@ -65,6 +66,7 @@ const Index = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: BG, color: "#fff" }}>
       <ListingHero />
+      <PropertyBands />
       <ListingPathCards />
 
       {/* WHO'S WATCHING */}
