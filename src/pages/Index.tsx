@@ -1,9 +1,11 @@
+import { LatestPublished } from '@/components/LatestPublished';
 import ListingHero from "@/components/ListingHero";
 import { PropertyBands } from "@/components/PropertyBands";
 import { StoryCard, MagazineNav, MagazineFooter } from "@/components/Magazine";
 import "@/components/magazine.css";
 export default function Index(){return <div className="lol-magazine"><ListingHero/><MagazineNav/>
  <main>
+<LatestPublished/>
  <section id="journal" className="lol-mag-section lol-opening"><div className="lol-mag-issue"><span>THE LOVE OUR LISTINGS EDIT</span><span>VOLUME 01 / OCTOBER 2026</span><span>HOMES · PEOPLE · PLACES</span></div><div className="lol-mag-section-heading"><h2>A good home.<br/><em>A better story.</em></h2><p>For the places that stop you scrolling—and the stories that make you stay.</p></div><div className="lol-mag-cover"><StoryCard slug="the-quiet-part-of-luxury" large/><div className="lol-cover-sidebar"><p className="lol-mag-kicker">IN THIS EDIT</p><a href="/journal/waterfront-is-a-way-of-life"><span>01 / AT THE WATER</span><h3>After the sunset photograph.</h3><p>The everyday appeal of living at the water’s edge.</p></a><a href="/journal/pillsbury-estate-personality-over-polish"><span>02 / PEOPLE & PROPERTY</span><h3>Personality over polish.</h3><p>A sourced note on the Pillsbury Estate and the people shaping its next chapter.</p></a><a href="/journal/country-house-with-a-working-life"><span>03 / LAND & LEGACY</span><h3>Room for a different life.</h3><p>Country-house dreams, with a little practical perspective.</p></a></div></div><p className="lol-mag-image-note">Editorial inspiration and illustrative imagery. Property availability is confirmed with the listing professional; concept artwork does not depict an active listing.</p></section>
  <div id="collections"><PropertyBands only={['waterfront']}/></div>
  <section className="lol-mag-section"><div className="lol-mag-section-heading"><div><p className="lol-mag-kicker">THE EDITOR’S SELECTION</p><h2>Worth a closer look.</h2></div><p>Our point of view on the spaces—and decisions—that make a home.</p></div><div className="lol-mag-three"><StoryCard slug="waterfront-is-a-way-of-life"/><StoryCard slug="country-house-with-a-working-life"/><StoryCard slug="penthouse-beyond-the-view"/></div></section>
