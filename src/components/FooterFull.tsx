@@ -20,11 +20,9 @@ const FooterFull = () => {
           <div>
             <h4 className="font-display text-sm font-bold text-foreground mb-4">Properties</h4>
             <ul className="space-y-2">
-              {["Homes For Sale", "Luxury Estates", "Waterfront", "Acreage", "New Construction"].map((s) => (
-                <li key={s}>
-                  <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">
-                    {s}
-                  </a>
+              {[["Mansions","mansions"],["Waterfront","waterfront"],["Penthouses","penthouses"],["Ranches","ranches"],["Acreage","acreage"],["Beach properties","beach-properties"]].map(([label,slug]) => (
+                <li key={slug}>
+                  <a href={"/collections/"+slug} className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">{label}</a>
                 </li>
               ))}
             </ul>
@@ -76,3 +74,4 @@ const FooterFull = () => {
 };
 
 export default FooterFull;
+

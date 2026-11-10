@@ -1,8 +1,928 @@
 {
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "loveourlistings.com"
+        }
+      ],
+      "destination": "https://www.loveourlistings.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/about",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/admin/image-health",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/abbotsford",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/ajax",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/aspen",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/atlanta",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/auckland",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/austin",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/baltimore",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/bangkok",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/barrie",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/boca-raton",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/boston",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/brampton",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/brantford",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/brisbane",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/brossard",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/burnaby",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/calgary",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/cancun",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/cape-town",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/charleston",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/charlotte",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/chicago",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/chilliwack",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/coquitlam",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/dallas",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/delta",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/denver",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/doha",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/dubai",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/edmonton",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/fort-lauderdale",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/gatineau",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/geneva",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/grand-cayman",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/greater-sudbury",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/guelph",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/gustavia",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/halifax",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/hamptons",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/hong-kong",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/honolulu",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/houston",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/indianapolis",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/irvine",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/jacksonville",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/kamloops",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/kansas-city",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/kelowna",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/kitchener",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/langley",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/las-vegas",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/laval",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/lethbridge",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/levis",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/lisbon",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/london",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/longueuil",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/los-angeles",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/madrid",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/malibu",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/maple-ridge",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/markham",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/marrakech",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/mexico-city",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/miami",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/milan",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/milton",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/milwaukee",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/minneapolis",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/mission",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/mississauga",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/monaco",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/moncton",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/montreal",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/mumbai",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/munich",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/mykonos",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/nadi",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/nairobi",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/nanaimo",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/naperville",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/nashville",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/nassau",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/new-brunswick",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/new-orleans",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/new-westminster",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/new-york",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/newport-beach",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/north-vancouver",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/oakville",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/ontario",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/orlando",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/oshawa",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/ottawa",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/palm-beach",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/palo-alto",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/paris",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/perth",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/peterborough",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/philadelphia",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/phoenix",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/pitt-meadows",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/pittsburgh",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/port-coquitlam",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/port-louis",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/port-moody",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/prince-george",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/providenciales",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/punta-cana",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/quebec-city",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/raleigh",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/red-deer",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/regina",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/repentigny",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/rome",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/saanich",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/sacramento",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/saguenay",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/saint-john",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/salt-lake-city",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/san-diego",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/san-francisco",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/san-jose",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/san-juan",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/santa-barbara",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/saskatoon",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/savannah",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/scottsdale",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/seattle",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/sherbrooke",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/singapore",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/squamish",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/st-catharines",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/st-johns",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/st-louis",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/stamford",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/surrey",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/sydney",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/tampa",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/tel-aviv",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/terrebonne",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/thunder-bay",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/tokyo",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/toronto",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/tortola",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/trois-rivieres",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/vancouver",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/vaughan",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/victoria",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/washington",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/waterloo",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/west-vancouver",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/whistler",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/whitby",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/white-rock",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/windsor",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/agents/winnipeg",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/auth",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/celebrity",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/celebrity-estates",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/checkout",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/australia",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/bahamas",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/british-virgin-islands",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/canada",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/cayman-islands",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/dominican-republic",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/fiji",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/france",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/germany",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/greece",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/india",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/israel",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/italy",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/japan",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/kenya",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/mauritius",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/mexico",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/monaco-country",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/morocco",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/new-zealand",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/portugal",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/puerto-rico",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/qatar",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/saint-barthelemy",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/singapore",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/south-africa",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/spain",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/switzerland",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/thailand",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/turks-and-caicos",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/uae",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/united-kingdom",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/country/united-states",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/destinations/island-retreats",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/destinations/ski-villages",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/destinations/waterfront",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/destinations/wine-country",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/eyespyr",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/guest-post",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/bel-air-estate",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/bellevue-washington",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/bellevue-west-vancouver",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/beverly-hills-estate",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/bridle-path-toronto",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/bridle-path-toronto-2",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/shaughnessy-vancouver",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/listing/west-vancouver-waterfront",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/realtor/becky-zhou-hill",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/realtor/raphaelle-beaudoin",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/realtors",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/seo-realtor",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/talc-tv",
+      "destination": "/spa.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/auth",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/dashboard",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/checkout",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/admin/image-health",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }

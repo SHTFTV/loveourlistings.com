@@ -1,0 +1,9 @@
+# Reader popularity: bounded measurement gap and design
+
+No “most popular” ranking is added by this repair. The inspected current package.json, index.html, src/main.tsx and App.tsx contain no GA4/gtag or Vercel Analytics SDK reference. Repository search returned no matching instrumentation excerpt. This does not establish that there are no visitors or no analytics account. Existing GSC Wizard GA/property access is subscription/payment blocked in the coordinator's actual checks; no inventory was recreated and no property removed. Available Vercel connector tools expose no Web Analytics query endpoint in this session. No service, subscription or tracking SDK has been activated.
+
+Before a popularity feature, establish one actual first-party dataset and the relevant property. Article identity must be its stable slug and canonical URL. Record received pageviews separately from engaged reads; an engaged read needs a stated definition, such as visible article time plus meaningful reading progress, validated against the actual instrumentation. Do not substitute GSC impressions, crawler requests or a verifier visit for a human reader.
+
+Any weekly ranking should declare its exact seven-day window and timezone (America/Vancouver), eligible article set, minimum sample and measurement caveats. Exclude tagged QA/test visits from ranking; use the provider's supported bot filtering and documented staff/internal filters. Do not claim those filters work before validating the real implementation. Avoid collecting identifying information merely to build a ranking.
+
+Until a real, sufficiently sampled and filtered dataset is available, retain honest “editor's selection” and genuine dated features. Low samples or inaccessible data must not produce a fabricated “most popular” panel, invented readership count or artificial six-category daily publishing claim. This measurement design adds no paid resource and does not alter the existing109-site GSC/Bing work.
