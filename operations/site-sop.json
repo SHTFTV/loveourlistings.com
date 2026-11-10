@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "origin": "https://www.loveourlistings.com",
+  "timezone": "America/Vancouver",
+  "brand": "Love Our Listings",
+  "featureBrand": "We Love This Listing",
+  "featureCTA": "Want to see your property here?",
+  "publicationMode": "automatic-validation-and-quarantine",
+  "scheduleUTC": "43 */6 * * *",
+  "lookbackDays": 14,
+  "maxArticlesPerRun": 2,
+  "collections": [
+    "waterfront",
+    "mansions",
+    "penthouses",
+    "ranches",
+    "acreage",
+    "beach-properties"
+  ],
+  "collectionPriority": [
+    "waterfront",
+    "mansions"
+  ],
+  "sources": [
+    {
+      "id": "sothebys-property",
+      "name": "Sotheby’s International Realty",
+      "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
+      "articleHosts": [
+        "www.sothebysrealty.com"
+      ],
+      "priority": 1,
+      "provenance": "Canonical existing ingest-luxury-rss function and prior magazine sources; actual endpoint/items verified November9"
+    },
+    {
+      "id": "robb-property",
+      "name": "Robb Report",
+      "url": "https://robbreport.com/shelter/feed/",
+      "articleHosts": [
+        "robbreport.com"
+      ],
+      "priority": 2,
+      "provenance": "Canonical existing ingest-luxury-rss function; actual endpoint/items verified November9"
+    },
+    {
+      "id": "mansion-global",
+      "name": "Mansion Global",
+      "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
+      "articleHosts": [
+        "www.mansionglobal.com"
+      ],
+      "priority": 3,
+      "provenance": "Existing fetch-luxury-feeds function; current endpoint may fail and must be reported honestly"
+    },
+    {
+      "id": "christies-property",
+      "name": "Christie’s International Real Estate",
+      "url": "https://www.christiesrealestate.com/blog/feed/",
+      "articleHosts": [
+        "www.christiesrealestate.com"
+      ],
+      "priority": 3,
+      "provenance": "Existing fetch-luxury-feeds function; current endpoint may fail and must be reported honestly"
+    },
+    {
+      "id": "google-luxury",
+      "name": "Google News RSS · luxury property discovery",
+      "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
+      "articleHosts": [
+        "news.google.com"
+      ],
+      "priority": 10,
+      "discoveryOnly": true,
+      "provenance": "Explicit user Google RSS request;46 actual dated items fetched. This is public News RSS, not a private Google Alerts feed."
+    },
+    {
+      "id": "google-waterfront",
+      "name": "Google News RSS · waterfront property discovery",
+      "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
+      "articleHosts": [
+        "news.google.com"
+      ],
+      "priority": 10,
+      "discoveryOnly": true,
+      "provenance": "Explicit user Google RSS request;21 actual dated items fetched. Original publisher URL must be established before publication."
+    }
+  ],
+  "sourceReconciliation": [
+    {
+      "implementation": "engine/ Node RSS + Claude enrichment",
+      "status": "retained-not-activated",
+      "reason": "Outputs engine/dist, not the current public/journal magazine. Queue published.json test-abc123 is a fixture, not verified publication."
+    },
+    {
+      "implementation": "Supabase luxury_news/rss_posts functions",
+      "status": "retained-existing-widget-path",
+      "reason": "Feeds raw news widgets; does not generate current static journal features. No DB writes or new schedule activated by this repair."
+    },
+    {
+      "implementation": "Current magazine public/journal + src/data/latestPublished.ts",
+      "status": "authoritative-publication-path",
+      "reason": "Actual existing Vite homepage and21 dated static journal articles; preserve existing URLs, timestamps and source links."
+    },
+    {
+      "source": "BuyWaterfrontCanada",
+      "status": "existing-listing-source-recovered-no-rss-connected",
+      "reason": "Existing Waterfront page links its real-estate-news article. /feed/ returned404; do not invent an endpoint or call it an active RSS feed."
+    }
+  ],
+  "rules": [
+    "Latest SOP and prior-post record loaded every run",
+    "New original property commentary with original source attribution; no full source article copying",
+    "Use exact feature brand and property-feature CTA",
+    "Source publication date and new journal publication timestamp remain separate",
+    "No fabricated asking prices, room counts, sale results, frontages, current availability, endorsements or interviews",
+    "Original brand illustration and existing LOL logo only; no listing photo reuse without established rights",
+    "Official video embeds/permission-based branded videos are optional, not a blocker for articles",
+    "Quarantine unresolved Google redirects, malformed/future/mismatched/duplicate items; no per-post manual gate",
+    "Preserve all21 canonical prior article IDs/dates; do not import test-abc123 as a genuine post"
+  ],
+  "decisions": [
+    {
+      "date": "2026-11-09",
+      "source": "Explicit user instruction relayed by coordinator",
+      "decision": "Set-and-forget cloud collection, original attributed property features and actual automatic publication; no routine user operation or per-post approval."
+    },
+    {
+      "date": "2026-11-09",
+      "source": "User Gemini intent recovered at user request",
+      "decision": "Features branded We Love This Listing; Want to see your property here? CTA. Optional branded listing-photo videos require actual facts, existing logo and photo permission."
+    }
+  ]
+}

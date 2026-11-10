@@ -1,0 +1,85 @@
+name: Love Our Listings RSS to verified publication
+on:
+  schedule:
+    - cron: '43 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/property-publisher.yml'
+      - 'scripts/publish_properties.py'
+      - 'scripts/rss_runtime.py'
+      - 'scripts/verify_property_publication.py'
+      - 'operations/site-sop.json'
+permissions:
+  contents: write
+concurrency:
+  group: love-our-listings-property-publisher
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Verify source/date/deduplication/feature rules
+        run: python3 scripts/test_property_publisher.py
+      - name: Load current SOP, collect property and Google RSS, write original features
+        id: collect
+        run: python3 scripts/publish_properties.py
+      - name: Validate new static articles and preserved history
+        run: python3 scripts/verify_property_publication.py
+      - name: Build the existing magazine
+        if: steps.collect.outputs.has_articles == 'true'
+        run: |
+          npm ci
+          npm run build
+      - name: Commit durable source-led features and operational outcome
+        run: |
+          git config user.name SHTFTV
+          git config user.email 264305872+SHTFTV@users.noreply.github.com
+          git add public/journal public/images/journal public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts operations/publisher-state.json operations/latest-run.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish original We Love This Listing features and source evidence'
+            git push origin HEAD:main
+          fi
+      - name: Verify actual new public journal pages and discovery outputs
+        if: steps.collect.outputs.has_articles == 'true'
+        run: python3 scripts/verify_property_publication.py --live
+      - name: Persist verified public publication evidence
+        if: steps.collect.outputs.has_articles == 'true'
+        run: |
+          git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record verified Love Our Listings cloud publications'
+            git push origin HEAD:main
+          fi
+      - name: Verify public command-center publication results log
+        if: steps.collect.outputs.has_articles == 'true'
+        run: python3 scripts/verify_property_publication.py --log
+      - name: Persist failure visibility without pretending publication succeeded
+        if: failure()
+        run: |
+          if [ -f operations/latest-run.json ]; then
+            git config user.name SHTFTV
+            git config user.email 264305872+SHTFTV@users.noreply.github.com
+            git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'Record failed Love Our Listings publication check'
+              git push origin HEAD:main
+            fi
+          fi
+      - name: Publish run summary
+        if: always()
+        run: |
+          if [ -f operations/latest-run.json ]; then
+            printf '## Love Our Listings source and publication evidence\n\n```json\n' >> "$GITHUB_STEP_SUMMARY"
+            cat operations/latest-run.json >> "$GITHUB_STEP_SUMMARY"
+            printf '\n```\n' >> "$GITHUB_STEP_SUMMARY"
+          fi
