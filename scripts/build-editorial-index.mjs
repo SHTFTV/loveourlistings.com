@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {approvedSourcePhoto} from './source-photo.mjs';
 const root=process.cwd();
 const readJSON=(p,d={})=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):d;
 const decode=s=>(s||'').replace(/\\u([0-9a-f]{4})/gi,(m,h)=>{const n=parseInt(h,16);return n>=0x80?String.fromCharCode(n):m}).replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>');
@@ -7,6 +8,7 @@ const meta=(html,key)=>decode(html.match(new RegExp('<meta[^>]+(?:name|property)
 const prior=readJSON(path.join(root,'operations/prior-posts.json'),[]);
 const manifest=readJSON(path.join(root,'public/journal/published.json'),[]);
 const media=new Map(manifest.map(x=>[x.slug,x]));
+const pipeline=new Map(readJSON(path.join(root,'operations/publisher-state.json'),{articles:[]}).articles.map(x=>[x.slug,x]));
 const oldSources=new Map(prior.map(x=>[x.slug,x.sourceUrls]));
 // Explicit editorial taxonomy, grounded in the existing property features.
 const extra={
@@ -28,10 +30,10 @@ for(const dir of fs.readdirSync(path.join(root,'public/journal'),{withFileTypes:
  const publishedAt=html.match(/"datePublished"\s*:\s*"([^"]+)"/)?.[1]||prior.find(x=>x.slug===slug)?.datePublished;
  if(!publishedAt)throw new Error('Missing original publication date for '+slug);
  const title=decode(article.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1].replace(/<[^>]+>/g,''));
- const sourceUrls=oldSources.get(slug)||[];
- const sourceImage=record?.sourceImage;
+ const sourceUrls=oldSources.get(slug)||(pipeline.get(slug)?.source?.url?[pipeline.get(slug).source.url]:[]);
+ const sourceImage=record?.sourceImage||pipeline.get(slug)?.sourceImage;
  const sourceDerived=sourceUrls.length>0||slug.startsWith('we-love-');
- const approved=sourceImage?.status==='approved'&&Boolean(sourceImage.imageUrl)&&Boolean(sourceImage.rightsEvidence);
+ const approved=Boolean(approvedSourcePhoto(sourceImage,sourceUrls));
  const figure=article.match(/<figure\b[^>]*>([\s\S]*?)<\/figure>/i)?.[1]||'';
  const originalImage=figure.match(/<img[^>]+src="([^"]+)"/)?.[1];
  const image=approved?sourceImage.imageUrl:!sourceDerived?originalImage||null:null;

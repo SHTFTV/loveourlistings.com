@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {approvedSourcePhoto} from './source-photo.mjs';
+const source='https://publisher.example/property/one';
+const permitted={status:'approved',sourceUrl:source,imageUrl:'https://publisher.example/photos/home.jpg',credit:'Actual photographer / publisher',rightsEvidence:'https://publisher.example/editorial-permission',imageSha256:'a'.repeat(64)};
+assert.equal(approvedSourcePhoto(permitted,[source]),permitted);
+assert.equal(approvedSourcePhoto({...permitted,status:'gap'},[source]),null);
+assert.equal(approvedSourcePhoto({...permitted,rightsEvidence:null},[source]),null);
+assert.equal(approvedSourcePhoto(permitted,['https://publisher.example/property/two']),null);
+assert.equal(approvedSourcePhoto({...permitted,imageSha256:null},[source]),null);
+assert.equal(approvedSourcePhoto({...permitted,imageUrl:'https://publisher.example/logo.png'},[source]),null);
+console.log('Source-photo card guards passed: exact provenance, permission evidence, checked bytes and no generic logo fallback.');
