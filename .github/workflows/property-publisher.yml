@@ -28,8 +28,10 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
+      - name: Install exact source image validator
+        run: python3 -m pip install --disable-pip-version-check Pillow==12.0.0
       - name: Verify source/date/deduplication/feature rules
-        run: python3 scripts/test_property_publisher.py
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Load current SOP, collect property and Google RSS, write original features
         id: collect
         run: python3 scripts/publish_properties.py
@@ -45,7 +47,7 @@ jobs:
         run: |
           git config user.name SHTFTV
           git config user.email 264305872+SHTFTV@users.noreply.github.com
-          git add package-lock.json public/journal public/images/journal public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts operations/publisher-state.json operations/latest-run.json
+          git add package-lock.json public/journal public/images/journal public/images/source-properties public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts src/data/articleIndex.json operations/property-media.json operations/seo-category-coverage.json operations/publisher-state.json operations/latest-run.json
           if ! git diff --cached --quiet; then
             git commit -m 'Publish original We Love This Listing features and source evidence'
             git push origin HEAD:main

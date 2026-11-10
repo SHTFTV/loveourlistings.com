@@ -13,10 +13,12 @@ def built(root=ROOT):
   a=next(a for a in state['articles'] if a['slug']==item['slug']);h=(root/'public/journal'/a['slug']/'index.html').read_text()
   assert item['publishedAt'] in h and item['sourceUrl'] in h,'New time/source missing from initial HTML'
   assert 'We Love This Listing' in h and 'Want to see your property here?' in h,'Required brand/CTA missing'
-  assert 'love-logo-clean-v6.webp' in h and a['image'] in h,'Existing logo and original illustration missing'
-  assert (root/'public'/a['image'].lstrip('/')).is_file(),'Original illustration absent'
+  assert 'love-logo-clean-v6.webp' in h and a['image'] in h,'Existing logo and exact source property image missing'
+  assert (root/'public'/a['image'].lstrip('/')).is_file(),'Exact source photo asset absent'
+  assert a.get('sourceImage',{}).get('status')=='verified-public-source' and a['sourceImage']['sourceUrl']==a['source']['url'],'Exact source/image pairing lost'
+  assert not a['image'].endswith('.svg'),'Generated SVG fallback is forbidden'
   assert item['slug'] in index and item['url'] in sitemap and any(x['slug']==item['slug'] for x in manifest),'New article undiscoverable'
- print('Built article/date/source/brand/CTA/illustration/manifest/sitemap checks passed:',len(r['articles']))
+ print('Built article/date/source/brand/CTA/exact-source-photo/manifest/sitemap checks passed:',len(r['articles']))
  return r
 
 def record_results(root,report,status):
