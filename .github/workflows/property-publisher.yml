@@ -38,13 +38,14 @@ jobs:
       - name: Build the existing magazine
         if: steps.collect.outputs.has_articles == 'true'
         run: |
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
           npm ci
           npm run build
       - name: Commit durable source-led features and operational outcome
         run: |
           git config user.name SHTFTV
           git config user.email 264305872+SHTFTV@users.noreply.github.com
-          git add public/journal public/images/journal public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts operations/publisher-state.json operations/latest-run.json
+          git add package-lock.json public/journal public/images/journal public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts operations/publisher-state.json operations/latest-run.json
           if ! git diff --cached --quiet; then
             git commit -m 'Publish original We Love This Listing features and source evidence'
             git push origin HEAD:main
@@ -67,6 +68,7 @@ jobs:
         if: failure()
         run: |
           if [ -f operations/latest-run.json ]; then
+            python3 scripts/verify_property_publication.py --failure
             git config user.name SHTFTV
             git config user.email 264305872+SHTFTV@users.noreply.github.com
             git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json

@@ -51,8 +51,13 @@ def live(root=ROOT,timeout=600):
    r.update(status='published-and-verified',productionVerified=True,verifiedAt=datetime.now(timezone.utc).isoformat());state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');(root/'operations/latest-run.json').write_text(json.dumps(r,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'done');print('VERIFIED NEW PUBLIC FEATURES',json.dumps(r['articles']));return
   except Exception as e:last=str(e);time.sleep(15)
  raise RuntimeError('Content commit exists but public publication did not verify: '+last)
+def failed(root=ROOT):
+  path=root/'operations/latest-run.json'
+  if not path.exists():return
+  r=json.loads(path.read_text());r.update(status='publication-failed',productionVerified=False,error='Cloud build/publication check failed; see linked workflow run');state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);path.write_text(json.dumps(r,indent=2)+'\n');(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'failed')
+
 if __name__=='__main__':
- try:verify_log() if '--log' in sys.argv else live() if '--live' in sys.argv else built()
+ try:failed() if '--failure' in sys.argv else verify_log() if '--log' in sys.argv else live() if '--live' in sys.argv else built()
  except Exception as e:
   path=ROOT/'operations/latest-run.json'
   if path.exists():
