@@ -1,11 +1,3 @@
-import assert from 'node:assert/strict';
-import {approvedSourcePhoto} from './source-photo.mjs';
-const source='https://publisher.example/property/one';
-const permitted={status:'approved',sourceUrl:source,imageUrl:'https://publisher.example/photos/home.jpg',credit:'Actual photographer / publisher',rightsEvidence:'https://publisher.example/editorial-permission',imageSha256:'a'.repeat(64)};
-assert.equal(approvedSourcePhoto(permitted,[source]),permitted);
-assert.equal(approvedSourcePhoto({...permitted,status:'gap'},[source]),null);
-assert.equal(approvedSourcePhoto({...permitted,rightsEvidence:null},[source]),null);
-assert.equal(approvedSourcePhoto(permitted,['https://publisher.example/property/two']),null);
-assert.equal(approvedSourcePhoto({...permitted,imageSha256:null},[source]),null);
-assert.equal(approvedSourcePhoto({...permitted,imageUrl:'https://publisher.example/logo.png'},[source]),null);
-console.log('Source-photo card guards passed: exact provenance, permission evidence, checked bytes and no generic logo fallback.');
+import assert from 'node:assert/strict';import {approvedSourcePhoto} from './source-photo.mjs';
+const source='https://publisher.example/property/one';const m={status:'verified-public-source',sourceUrl:source,originalImageUrl:'https://publisher.example/property/photo.jpg',imageUrl:'/images/source-properties/photo.jpg',credit:'Original publisher',imageSha256:'a'.repeat(64),width:1600,height:1000};
+assert.equal(approvedSourcePhoto(m,[source]),m);assert.equal(approvedSourcePhoto(m,['https://publisher.example/property/two']),null);assert.equal(approvedSourcePhoto({...m,originalImageUrl:'https://publisher.example/logo.jpg'},[source]),null);assert.equal(approvedSourcePhoto({...m,status:'gap'},[source]),null);assert.equal(approvedSourcePhoto({...m,imageSha256:null},[source]),null);assert.equal(approvedSourcePhoto({...m,width:1},[source]),null);console.log('Exact-property source/photo pair, checked bytes, native dimensions and no generic fallback guards passed.');
