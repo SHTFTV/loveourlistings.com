@@ -3,13 +3,23 @@ import hashlib,html,json,re
 from datetime import datetime,timedelta
 from urllib.parse import urlsplit
 from property_media import resolve,get,MediaUnavailable
+from rss_runtime import canonical
 
 def load(root):
  p=root/'operations/reviewed-properties.json'
  return json.loads(p.read_text()).get('items',{}) if p.exists() else {}
 
+def source_key(item):
+ key=canonical(item['url']);property_id=item.get('propertyId')
+ if property_id:
+  if not re.fullmatch(r'[a-z0-9-]{1,100}',property_id):raise ValueError('Canonical property ID invalid')
+  key+='|property:'+property_id
+ return key
+
 def record_for(item,records):
- r=records.get(item['url'])
+ if item.get('propertyId'):
+  r=next((r for r in records.values() if r.get('propertyId')==item['propertyId'] and r.get('item',{}).get('url')==item['url']),None)
+ else:r=records.get(item['url'])
  if r and r['summaryHash']!=item['summaryHash']:raise ValueError('Reviewed property source changed; fresh factual review required')
  return r
 
@@ -32,17 +42,18 @@ def manual_candidates(root,sop,now,fetch=get):
   if 'item' not in r:continue
   try:
    item=dict(r['item'])
-   if item['url']!=url or r['collection'] not in sop['collections']:raise ValueError('Reviewed property identity/category mismatch')
-   if urlsplit(url).scheme!='https':raise ValueError('Original public HTTPS source required')
-   record_for(item,{url:r})
+   if (not r.get('propertyId') and item['url']!=url) or item.get('propertyId')!=r.get('propertyId') or r['collection'] not in sop['collections']:raise ValueError('Reviewed property identity/category mismatch')
+   source_url=item['url']
+   if urlsplit(source_url).scheme!='https':raise ValueError('Original public HTTPS source required')
+   record_for(item,{url:r});source_key(item)
    if hashlib.sha256(item['summary'].encode()).hexdigest()!=item['summaryHash']:raise ValueError('Reviewed factual source fingerprint mismatch')
    date=datetime.fromisoformat(item['feedPublishedAt'])
    if date.tzinfo is None or date>now+timedelta(minutes=5):raise ValueError('Reviewed source date invalid or future')
    if now.date()-date.date()>timedelta(days=sop['lookbackDays']):raise ValueError('Reviewed property source outside current lookback')
-   page=fetch(url).decode('utf8','replace');text=html.unescape(re.sub('<[^>]+>',' ',page));text=' '.join(text.split())
+   page=fetch(source_url).decode('utf8','replace');text=html.unescape(re.sub('<[^>]+>',' ',page));text=' '.join(text.split())
    for excerpt in r['requiredSourceEvidence']:
     if excerpt not in page and excerpt not in text:raise ValueError('Reviewed original property facts changed; fresh review required')
    item.update(collection=r['collection'],priority=0,sourcePageSha256=hashlib.sha256(page.encode()).hexdigest(),intake='reviewed-original-property-source')
    candidates.append(item)
-  except Exception as e:blocks.append({'sourceUrl':url,'title':r.get('title',url),'reason':str(e)})
+  except Exception as e:blocks.append({'sourceUrl':r.get('item',{}).get('url',url),'propertyId':r.get('propertyId'),'collection':r.get('collection'),'title':r.get('title',url),'reason':str(e)})
  return candidates,blocks

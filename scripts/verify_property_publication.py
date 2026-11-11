@@ -18,7 +18,7 @@ def built(root=ROOT):
   assert (root/'public'/a['image'].lstrip('/')).is_file(),'Exact source photo asset absent'
   media=a.get('sourceImage',{});paired=media.get('sourceUrl')==a['source']['url']
   if not paired:
-   reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash']},load_reviewed(root))
+   reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash'],'propertyId':a['source'].get('propertyId')},load_reviewed(root))
    paired=bool(reviewed and media.get('pairedNewsSource')==a['source']['url'] and media.get('sourceUrl')==reviewed['media']['sourceUrl'] and media.get('originalImageUrl')==reviewed['media']['originalImageUrl'] and media.get('originalWidth')==reviewed['media']['nativeWidth'] and media.get('originalHeight')==reviewed['media']['nativeHeight'] and media.get('cropBox')==reviewed['media'].get('cropBox'))
   assert media.get('status')=='verified-public-source' and paired,'Exact source/image pairing lost'
   assert not a['image'].endswith('.svg'),'Generated SVG fallback is forbidden'
@@ -32,19 +32,19 @@ def record_results(root,report,status):
   id='loveourlistings.com:'+a['slug'] if status=='done' else 'failed:'+str(report['runUrl'].rsplit('/',1)[-1])+':'+a['slug']
   if any(e['id']==id for e in data['events']):continue
   at=datetime.now(timezone.utc).isoformat();data['events'].append({'id':id,'site':'loveourlistings.com','title':a['title'],'publishedAt':a['publishedAt'] if status=='done' else None,'verifiedAt':report.get('verifiedAt') if status=='done' else None,'url':a['url'] if status=='done' else None,'status':status,'checkedAt':at})
- if status=='failed' and not report['articles']:
+ if report.get('publicationBlocks') or (status=='failed' and not report['articles']):
   blocks=report.get('publicationBlocks',[]) or [{'sourceUrl':None,'title':'Collection or build failed before any article was produced','reason':report.get('error','Inspect the linked run')}]
   for block in blocks:
-   identity=block.get('sourceUrl') or report.get('runUrl','unknown-run');event_id='loveourlistings.com:hold:'+hashlib.sha256(identity.encode()).hexdigest()[:20]
+   identity=(block.get('sourceUrl') or report.get('runUrl','unknown-run'))+('|property:'+block['propertyId'] if block.get('propertyId') else '');event_id='loveourlistings.com:hold:'+hashlib.sha256(identity.encode()).hexdigest()[:20]
    reason='Native exact-property photo cannot support1600x900 without upscaling' if '1600x900' in block.get('reason','') else 'Source or publication validation failed; inspect the existing run'
-   event={'id':event_id,'site':'loveourlistings.com','title':(block.get('title') or identity)+' — '+reason,'sourceUrl':block.get('sourceUrl'),'publishedAt':None,'verifiedAt':None,'url':None,'status':'failed','checkedAt':datetime.now(timezone.utc).isoformat(),'runUrl':report.get('runUrl'),'nextAction':'Recover a sufficient native original for the same property, or an explicitly labelled original illustration; verify image/crop QA before release.'}
+   event={'id':event_id,'site':'loveourlistings.com','title':(block.get('title') or identity)+' — '+reason,'sourceUrl':block.get('sourceUrl'),'publishedAt':None,'verifiedAt':None,'url':None,'status':'failed','checkedAt':datetime.now(timezone.utc).isoformat(),'runUrl':report.get('runUrl'),'nextAction':'Recover a sufficient native original for the same property and source-specific reviewed copy; verify image/crop QA before release.'}
    old=next((e for e in data['events'] if e['id']==event_id),None)
    if old:old.update(event)
    else:data['events'].append(event)
  if status=='done':
-  completed={a.get('sourceUrl') for a in report['articles']}
+  completed={'loveourlistings.com:hold:'+hashlib.sha256((a['sourceUrl']+('|property:'+a['propertyId'] if a.get('propertyId') else '')).encode()).hexdigest()[:20] for a in report['articles'] if a.get('sourceUrl')}
   for event in data['events']:
-   if event.get('status')=='failed' and event.get('sourceUrl') in completed and event.get('sourceUrl'):event['resolvedAt']=datetime.now(timezone.utc).isoformat()
+   if event.get('status')=='failed' and event.get('id') in completed:event['resolvedAt']=datetime.now(timezone.utc).isoformat()
  data['updatedAt']=datetime.now(timezone.utc).isoformat();path.write_text(json.dumps(data,indent=2)+'\n')
 
 def get(url):
