@@ -32,7 +32,7 @@ def reviewed_media(item,root,record,fetch=get):
  metadata='<meta property="og:image" content="'+html.escape(m['originalImageUrl'],quote=True)+'"><meta property="og:image:alt" content="'+html.escape(m['alt'],quote=True)+'">'
  result=resolve(m['sourceUrl'],root,fetch=fetch,raw=metadata,publisher=m['credit'],crop_box=m.get('cropBox'))
  if result['originalWidth']!=m['nativeWidth'] or result['originalHeight']!=m['nativeHeight']:raise MediaUnavailable('Reviewed native source dimensions changed')
- result.update(sourcePageSha256=hashlib.sha256(raw).hexdigest(),selection='reviewed-same-property-original-declared-dimensions-no-enlargement',pairedNewsSource=item['url'],reviewedAt=record['reviewedAt'])
+ result.update(sourceImageAlt=m['alt'],sourcePageSha256=hashlib.sha256(raw).hexdigest(),selection='reviewed-same-property-original-declared-dimensions-no-enlargement',pairedNewsSource=item['url'],reviewedAt=record['reviewedAt'])
  return result
 
 def manual_candidates(root,sop,now,fetch=get):

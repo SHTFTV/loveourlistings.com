@@ -38,6 +38,9 @@ jobs:
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Load current SOP, collect property and Google RSS, write original features
         id: collect
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: python3 scripts/publish_properties.py
       - name: Validate new static articles and preserved history
         run: python3 scripts/verify_property_publication.py

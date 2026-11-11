@@ -52,3 +52,12 @@ class RoundupIdentity(unittest.TestCase):
    report={'articles':[],'publicationBlocks':blocks,'runUrl':'https://github.com/test/repo/actions/runs/1'};record_results(root,report,'failed')
    report.update(articles=[{'slug':'first','propertyId':'first-property','sourceUrl':url,'title':'First','publishedAt':'2026-11-09','url':'https://site.example/first'}],publicationBlocks=[blocks[1]],verifiedAt='2026-11-09');record_results(root,report,'done')
    data=json.loads((root/'public/publication-results.json').read_text());holds=[x for x in data['events']if ':hold:'in x['id']];self.assertEqual(len(holds),2);self.assertEqual(sum('resolvedAt'in x for x in holds),1)
+
+class ReviewedPhotoDescriptions(unittest.TestCase):
+ def test_reviewed_property_alt_survives_media_resolution(self):
+  import io
+  from PIL import Image
+  b=io.BytesIO();Image.new('RGB',(1600,900),(20,50,70)).save(b,format='JPEG');photo=b.getvalue()
+  r={'reviewedAt':'2026-11-11','media':{'sourceUrl':'https://broker.example/property','originalImageUrl':'https://broker.example/photo.jpg','requiredPageEvidence':['Actual property'],'nativeWidth':1600,'nativeHeight':900,'alt':'Actual property with its original waterfront view','credit':'Original listing broker'}}
+  result=reviewed_media({'url':'https://publisher.example/story'},None,r,fetch=lambda u:b'Actual property' if u.endswith('/property') else photo)
+  self.assertEqual(result['sourceImageAlt'],r['media']['alt'])

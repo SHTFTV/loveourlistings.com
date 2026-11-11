@@ -11,6 +11,8 @@ const media=new Map(manifest.map(x=>[x.slug,x]));
 const pipeline=new Map(readJSON(path.join(root,'operations/publisher-state.json'),{articles:[]}).articles.map(x=>[x.slug,x]));
 const propertyMedia=readJSON(path.join(root,'operations/property-media.json'),{articles:{}}).articles;
 const oldSources=new Map(prior.map(x=>[x.slug,x.sourceUrls]));
+const reviewedProperties=readJSON(path.join(root,'operations/reviewed-properties.json'),{items:{}}).items;
+const sourceKey=u=>u?.replace(/\/$/,'');
 // Explicit editorial taxonomy, grounded in the existing property features.
 const extra={
  'grant-ranch-oklahoma-working-land':['acreage'],
@@ -34,7 +36,9 @@ for(const dir of fs.readdirSync(path.join(root,'public/journal'),{withFileTypes:
  const sourceUrls=oldSources.get(slug)||(pipeline.get(slug)?.source?.url?[pipeline.get(slug).source.url]:[]);
  const sourceImage=propertyMedia[slug]||record?.sourceImage||pipeline.get(slug)?.sourceImage;
  const sourceDerived=sourceUrls.length>0||slug.startsWith('we-love-');
- const approved=Boolean(approvedSourcePhoto(sourceImage,sourceUrls));
+ const source=pipeline.get(slug)?.source;
+ const reviewedRecord=Object.entries(reviewedProperties).find(([key,r])=>source&&sourceKey(r.item?.url||key)===sourceKey(source.url)&&(r.propertyId??null)===(source.propertyId??null)&&r.summaryHash===source.summaryHash)?.[1];
+ const approved=Boolean(approvedSourcePhoto(sourceImage,sourceUrls,{record:reviewedRecord,source}));
  const figure=article.match(/<figure\b[^>]*>([\s\S]*?)<\/figure>/i)?.[1]||'';
  const originalImage=figure.match(/<img[^>]+src="([^"]+)"/)?.[1];
  const image=approved?sourceImage.imageUrl:!sourceDerived?originalImage||null:null;
@@ -51,3 +55,4 @@ const preferred={acreage:'grant-ranch-oklahoma-working-land','beach-properties':
 const coverage=slugs.map(collection=>{const suitable=articles.filter(a=>a.collections.includes(collection));if(!suitable.length)throw new Error('No genuine existing feature for '+collection);const a=suitable.find(x=>x.slug===preferred[collection])||suitable[0];return {collection,articleSlug:a.slug,title:a.title,publishedAt:a.publishedAt,verifiedPropertyMedia:a.sourceImageStatus==='verified-public-source',sourceImageStatus:a.sourceImageStatus,articleCount:suitable.length,selection:'Existing genuine suitable feature; retain original publication date, never claim it is newly published today'};});
 fs.mkdirSync(path.join(root,'operations'),{recursive:true});fs.writeFileSync(path.join(root,'operations/seo-category-coverage.json'),JSON.stringify({generatedAt:new Date().toISOString(),articleCount:articles.length,collections:coverage},null,2)+'\n');
 console.log('Built editorial index:',articles.length,'existing articles and6genuine category features; verified property media:',coverage.filter(x=>x.verifiedPropertyMedia).length);
+

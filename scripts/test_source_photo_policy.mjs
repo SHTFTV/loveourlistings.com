@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {approvedSourcePhoto} from './source-photo.mjs';
+const news='https://publisher.example/actual-story';
+const photo='https://broker.example/exact-property';
+const source={url:news,summaryHash:'a'.repeat(64),propertyId:'actual-property'};
+const media={status:'verified-public-source',imageUrl:'/images/source-properties/photo.jpg',credit:'Actual broker source',originalImageUrl:'https://broker.example/original-photo.jpg',imageSha256:'b'.repeat(64),originalImageSha256:'c'.repeat(64),sourcePageSha256:'d'.repeat(64),sourceUrl:photo,pairedNewsSource:news,width:1600,height:900,originalWidth:2400,originalHeight:1600,cropBox:null};
+const record={item:{url:news},propertyId:'actual-property',summaryHash:source.summaryHash,reviewedAt:'2026-11-11',reviewBasis:'Reviewed same property',media:{sourceUrl:photo,originalImageUrl:media.originalImageUrl,nativeWidth:2400,nativeHeight:1600}};
+assert.equal(approvedSourcePhoto(media,[news]),null,'unreviewed other-page photo must stay blocked');
+assert.equal(approvedSourcePhoto(media,[news],{record,source}),media,'verified same-property pair should reach collection cards');
+const direct={...media,sourceUrl:news};assert.equal(approvedSourcePhoto(direct,[news]),direct,'existing direct source remains supported');
+for(const changed of [{...source,summaryHash:'e'.repeat(64)},{...source,propertyId:'different-property'},{...source,url:'https://publisher.example/unrelated'}])assert.equal(approvedSourcePhoto(media,[news],{record,source:changed}),null);
+for(const changed of [{...media,originalImageUrl:'https://broker.example/unrelated-photo.jpg'},{...media,originalWidth:1200},{...media,width:1599},{...media,cropBox:[0,0,2400,1600]}])assert.equal(approvedSourcePhoto(changed,[news],{record,source}),null);
+const crop=[150,0,1770,1080],cropped={...media,originalWidth:1920,originalHeight:1080,cropBox:crop},cropRecord={...record,media:{...record.media,nativeWidth:1920,nativeHeight:1080,cropBox:crop}};
+assert.equal(approvedSourcePhoto(cropped,[news],{record:cropRecord,source}),cropped);
+const small=[200,0,1720,1080];assert.equal(approvedSourcePhoto({...cropped,cropBox:small},[news],{record:{...cropRecord,media:{...cropRecord.media,cropBox:small}},source}),null,'letterbox crop cannot upscale');
+console.log('Source-photo projection policy checks passed');
