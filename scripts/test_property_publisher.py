@@ -13,7 +13,7 @@ def rss(title,url,summary,date='Mon, 09 Nov 2026 16:00:00 +0000'):
  return ('<rss><channel><item><title>'+title+'</title><link>'+url+'</link><pubDate>'+date+'</pubDate><description><![CDATA['+summary+']]></description></item></channel></rss>').encode()
 class TestPublisher(unittest.TestCase):
  def setUp(self):
-  self.media=patch('publish_properties.resolve_media',return_value=MEDIA);self.media.start();self.addCleanup(self.media.stop)
+  self.media=patch('publish_properties.resolve_media',return_value=MEDIA);self.media.start();self.addCleanup(self.media.stop);self.evidence=patch('publish_properties.recover_evidence',side_effect=ValueError('Insufficient fixture source facts'));self.evidence.start();self.addCleanup(self.evidence.stop)
  def fixture(self,r,sources):
   (r/'operations').mkdir();(r/'public/journal').mkdir(parents=True);(r/'src/data').mkdir(parents=True);(r/'operations/prior-posts.json').write_text('[]');(r/'public/journal/index.html').write_text('<html><h1>The journal.</h1><p>Latest article: <time datetime="2026-01-01">January 1</time></p></html>');(r/'public/sitemap.xml').write_text('<urlset></urlset>');(r/'src/data/latestPublished.ts').write_text('export const latestPublished = [];');cfg={'version':7,'origin':'https://www.loveourlistings.com','timezone':'America/Vancouver','sources':sources,'lookbackDays':14,'maxArticlesPerRun':2,'collectionPriority':['waterfront','mansions'],'collections':['waterfront','mansions']};(r/'operations/site-sop.json').write_text(json.dumps(cfg))
  def test_real_feature_has_source_brand_cta_original_time_and_no_frontage_invention(self):

@@ -8,7 +8,7 @@ from property_writer import write_feature
 SOURCE = 'The home has a courtyard garden. The living room opens onto a covered terrace. The original staircase was retained in the renovation. ' + 'Additional source context explains the relationship between the documented rooms and the property history without offering current availability or a sale guarantee. '*3
 
 def article():
-    sections = [{'heading': 'Editorial reading '+str(i), 'paragraph': ('Clearly identified editorial observation about planning and daily use '+str(i)+' ')*11} for i in range(3)]
+    sections = [{'heading': 'Editorial reading '+str(i), 'paragraph': ('Clearly identified editorial observation about planning and daily use '+str(i)+' ')*6} for i in range(3)]
     return {'title': 'We Love This Listing: a documented courtyard home', 'deck': 'An independent source-led reading.', 'sections': sections,
             'claims': [{'claim': c, 'exactSupportingExcerpt': c} for c in ['The home has a courtyard garden.', 'The living room opens onto a covered terrace.', 'The original staircase was retained in the renovation.']]}
 
