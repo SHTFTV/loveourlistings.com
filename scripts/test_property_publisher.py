@@ -22,6 +22,15 @@ class TestPublisher(unittest.TestCase):
   with tempfile.TemporaryDirectory() as tmp:
    r=Path(tmp);self.fixture(r,[DIRECT,GOOGLE]);direct=rss('This $14.5 Million Malibu Home Has a Private Observatory','https://robbreport.com/home','An ocean-view residence pairs organic modernism with sweeping coastal views.');google=rss('A waterfront mansion property story - Publisher','https://news.google.com/rss/articles/opaque','A real source headline and publisher from the public Google News RSS feed.')
    first=main(r,lambda u:google if 'google' in u else direct,NOW);self.assertEqual(len(first['articles']),1);self.assertEqual(first['discovered'],1);state=json.loads((r/'operations/publisher-state.json').read_text());self.assertEqual(state['articles'][0]['source']['url'],'https://robbreport.com/home');self.assertEqual(state['discovery'][0]['status'],'original-publisher-link-required; not auto-published from Google redirect');state['runs'][0]['productionVerified']=True;(r/'operations/publisher-state.json').write_text(json.dumps(state));repeat=main(r,lambda u:google if 'google' in u else direct,NOW);self.assertEqual(repeat['articles'],[]);self.assertEqual(repeat['duplicates'],2);self.assertEqual((r/'public/journal/index.html').read_text().count('<!-- RSS_FEATURES_START -->'),1)
+ def test_eligible_property_with_image_never_gets_generic_repeated_copy(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   r=Path(tmp);self.fixture(r,[DIRECT])
+   with self.assertRaisesRegex(RuntimeError,'Eligible property publication blocked'):
+    main(r,lambda _:rss('This London Water Tower Is a Contemporary Residence','https://robbreport.com/water-tower','A dated source describes an individual converted water tower residence with a specific history.'),NOW)
+   result=json.loads((r/'operations/latest-run.json').read_text())
+   self.assertEqual(result['articles'],[])
+   self.assertIn('Source-specific original writer required',str(result['publicationBlocks']))
+   self.assertFalse(list((r/'public/journal').glob('*/index.html')))
  def test_generic_design_story_is_not_mislabelled_as_a_property_listing(self):
   self.assertIsNone(category({'title':'Color Chart: The Joys of Browns in the Home','summary':'A home design feature','publisher':'Sotheby’s International Realty'}))
   self.assertEqual(category({'title':'Inside Montecito’s La Paloma','summary':'A restored estate designed by a named architect','publisher':'Sotheby’s International Realty'}),'mansions')
