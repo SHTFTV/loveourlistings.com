@@ -58,6 +58,12 @@ def main(root=ROOT,fetch=get,now=None):
  urls={canonical(u) for p in prior for u in p['sourceUrls'] if u.startswith('https://')};urls.update(a['source']['url'] for a in state['articles']);hashes={a['source']['summaryHash'] for a in state['articles']};report={'startedAt':now.isoformat(),'sopVersion':cfg['version'],'runUrl':os.environ.get('GITHUB_SERVER_URL','https://github.com')+'/'+os.environ.get('GITHUB_REPOSITORY','SHTFTV/loveourlistings.com')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local-test'),'sources':[],'articles':[],'duplicates':0,'quarantined':0,'discovered':0,'productionVerified':False};candidates=[]
  completed={a['slug'] for run in state['runs'] if run.get('productionVerified') for a in run.get('articles',[])}
  for a in state['articles']:
+  if a['slug'] not in completed and not (root/'public'/a['image'].lstrip('/')).exists():
+   original={'url':a['source']['url'],'summaryHash':a['source']['summaryHash']}
+   reviewed=record_for(original,load_reviewed(root))
+   if not reviewed:raise MediaUnavailable('Pending publication photo missing; restore exact source asset')
+   media=reviewed_media(original,root,reviewed)
+   if media['imageSha256']!=a['sourceImage']['imageSha256']:raise MediaUnavailable('Pending reviewed photo changed')
   if a['slug'] not in completed:report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':a['collection'],'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'retryOfPendingPublication':True})
  for source in cfg['sources']:
   try:

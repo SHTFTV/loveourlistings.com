@@ -77,7 +77,7 @@ jobs:
             python3 scripts/verify_property_publication.py --failure
             git config user.name SHTFTV
             git config user.email 264305872+SHTFTV@users.noreply.github.com
-            git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json
+            git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json public/images/source-properties
             if ! git diff --cached --quiet; then
               git commit -m 'Record failed Love Our Listings publication check'
               git push origin HEAD:main

@@ -2,6 +2,7 @@ import json,time,sys,hashlib,urllib.request,xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime,timezone
 from publish_properties import write_status
+from reviewed_properties import load as load_reviewed,record_for
 ROOT=Path(__file__).resolve().parents[1]
 def built(root=ROOT):
  r=json.loads((root/'operations/latest-run.json').read_text());state=json.loads((root/'operations/publisher-state.json').read_text());prior=json.loads((root/'operations/prior-posts.json').read_text());manifest=json.loads((root/'public/journal/published.json').read_text());index=(root/'public/journal/index.html').read_text();sitemap=(root/'public/sitemap.xml').read_text();ET.fromstring(sitemap);ET.parse(root/'public/journal/feed.xml')
@@ -15,7 +16,11 @@ def built(root=ROOT):
   assert 'We Love This Listing' in h and 'Want to see your property here?' in h,'Required brand/CTA missing'
   assert 'love-logo-clean-v6.webp' in h and a['image'] in h,'Existing logo and exact source property image missing'
   assert (root/'public'/a['image'].lstrip('/')).is_file(),'Exact source photo asset absent'
-  assert a.get('sourceImage',{}).get('status')=='verified-public-source' and a['sourceImage']['sourceUrl']==a['source']['url'],'Exact source/image pairing lost'
+  media=a.get('sourceImage',{});paired=media.get('sourceUrl')==a['source']['url']
+  if not paired:
+   reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash']},load_reviewed(root))
+   paired=bool(reviewed and media.get('pairedNewsSource')==a['source']['url'] and media.get('sourceUrl')==reviewed['media']['sourceUrl'] and media.get('originalImageUrl')==reviewed['media']['originalImageUrl'] and media.get('originalWidth')==reviewed['media']['nativeWidth'] and media.get('originalHeight')==reviewed['media']['nativeHeight'])
+  assert media.get('status')=='verified-public-source' and paired,'Exact source/image pairing lost'
   assert not a['image'].endswith('.svg'),'Generated SVG fallback is forbidden'
   assert item['slug'] in index and item['url'] in sitemap and any(x['slug']==item['slug'] for x in manifest),'New article undiscoverable'
  print('Built article/date/source/brand/CTA/exact-source-photo/manifest/sitemap checks passed:',len(r['articles']))
@@ -78,3 +83,4 @@ if __name__=='__main__':
   if path.exists():
    r=json.loads(path.read_text());r['failedStageStatus']=r.get('status');r.update(status='publication-failed',productionVerified=False,error=str(e));path.write_text(json.dumps(r,indent=2)+'\n');state=json.loads((ROOT/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(ROOT/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(ROOT,state,r);record_results(ROOT,r,'failed')
   raise
+
