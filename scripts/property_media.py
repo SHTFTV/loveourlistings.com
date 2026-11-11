@@ -42,6 +42,10 @@ def resolve(source_url,root,fetch=get,raw=None,publisher=None,allow_youtube=Fals
   text=b.decode('utf8','replace');p=Page();p.feed(text);candidates=sorted(p.candidates,key=lambda x:x[0]);publisher=publisher or urlsplit(source_url).hostname
   # Explicit in-page copy restrictions are a review exception, not a fabricated permission grant.
   if re.search(r'no (?:part|portion) .{0,100}(?:reproduc|republish)|reproduction (?:is )?(?:strictly )?prohibited',re.sub('<[^>]+>',' ',text),re.I):raise MediaUnavailable('Source expressly restricts reproduction; original embed/source link requires review')
+ # A WordPress featured class can belong to a related article. Never fall back
+ # to its different property when the actual article metadata photo is too small.
+ meta_assets={urlsplit(html.unescape(u)).path for _,u,kind,_ in candidates if kind=='source-featured-meta'}
+ if meta_assets:candidates=[c for c in candidates if c[2]!='source-featured-image' or urlsplit(html.unescape(c[1])).path in meta_assets]
  # Recover original bytes only from the same observed derivative URL; never invent another property.
  expanded=[]
  for rank,url,selection,alt in candidates:

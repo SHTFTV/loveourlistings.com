@@ -26,4 +26,9 @@ class MediaTests(unittest.TestCase):
  def test_observed_derivative_recovers_same_native_asset(self):
   url='https://cdn.example/width=960/https://source.example/media/exact-house';seen=[]
   m=resolve('https://source.example/exact',None,lambda u:(seen.append(u) or self.image(2400,1600)),raw='<meta property="og:image" content="'+url+'">');self.assertEqual(seen[0],'https://source.example/media/exact-house');self.assertEqual(m['displayWidth'],1600);self.assertEqual((m['width'],m['height']),(1600,900))
+ def test_small_actual_photo_never_falls_back_to_large_unrelated_property(self):
+  page='<meta property="og:image" content="https://source.example/actual.jpg"><img class="wp-post-image" src="https://source.example/related.jpg">';seen=[]
+  def fetch(u):seen.append(u);return self.image(1200,675) if 'actual' in u else self.image(2400,1600)
+  with self.assertRaises(MediaUnavailable):resolve('https://source.example/exact',None,fetch,raw=page)
+  self.assertNotIn('https://source.example/related.jpg',seen)
 if __name__=='__main__':unittest.main()

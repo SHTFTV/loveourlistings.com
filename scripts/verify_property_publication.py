@@ -1,4 +1,4 @@
-import json,time,sys,urllib.request,xml.etree.ElementTree as ET
+import json,time,sys,hashlib,urllib.request,xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime,timezone
 from publish_properties import write_status
@@ -27,6 +27,19 @@ def record_results(root,report,status):
   id='loveourlistings.com:'+a['slug'] if status=='done' else 'failed:'+str(report['runUrl'].rsplit('/',1)[-1])+':'+a['slug']
   if any(e['id']==id for e in data['events']):continue
   at=datetime.now(timezone.utc).isoformat();data['events'].append({'id':id,'site':'loveourlistings.com','title':a['title'],'publishedAt':a['publishedAt'] if status=='done' else None,'verifiedAt':report.get('verifiedAt') if status=='done' else None,'url':a['url'] if status=='done' else None,'status':status,'checkedAt':at})
+ if status=='failed' and not report['articles']:
+  blocks=report.get('publicationBlocks',[]) or [{'sourceUrl':None,'title':'Collection or build failed before any article was produced','reason':report.get('error','Inspect the linked run')}]
+  for block in blocks:
+   identity=block.get('sourceUrl') or report.get('runUrl','unknown-run');event_id='loveourlistings.com:hold:'+hashlib.sha256(identity.encode()).hexdigest()[:20]
+   reason='Native exact-property photo cannot support1600x900 without upscaling' if '1600x900' in block.get('reason','') else 'Source or publication validation failed; inspect the existing run'
+   event={'id':event_id,'site':'loveourlistings.com','title':(block.get('title') or identity)+' — '+reason,'sourceUrl':block.get('sourceUrl'),'publishedAt':None,'verifiedAt':None,'url':None,'status':'failed','checkedAt':datetime.now(timezone.utc).isoformat(),'runUrl':report.get('runUrl'),'nextAction':'Recover a sufficient native original for the same property, or an explicitly labelled original illustration; verify image/crop QA before release.'}
+   old=next((e for e in data['events'] if e['id']==event_id),None)
+   if old:old.update(event)
+   else:data['events'].append(event)
+ if status=='done':
+  completed={a.get('sourceUrl') for a in report['articles']}
+  for event in data['events']:
+   if event.get('status')=='failed' and event.get('sourceUrl') in completed and event.get('sourceUrl'):event['resolvedAt']=datetime.now(timezone.utc).isoformat()
  data['updatedAt']=datetime.now(timezone.utc).isoformat();path.write_text(json.dumps(data,indent=2)+'\n')
 
 def get(url):
@@ -56,12 +69,12 @@ def live(root=ROOT,timeout=600):
 def failed(root=ROOT):
   path=root/'operations/latest-run.json'
   if not path.exists():return
-  r=json.loads(path.read_text());r.update(status='publication-failed',productionVerified=False,error='Cloud build/publication check failed; see linked workflow run');state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);path.write_text(json.dumps(r,indent=2)+'\n');(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'failed')
+  r=json.loads(path.read_text());r['failedStageStatus']=r.get('status');r.update(status='publication-failed',productionVerified=False,error='Cloud build/publication check failed; see linked workflow run');state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);path.write_text(json.dumps(r,indent=2)+'\n');(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'failed')
 
 if __name__=='__main__':
  try:failed() if '--failure' in sys.argv else verify_log() if '--log' in sys.argv else live() if '--live' in sys.argv else built()
  except Exception as e:
   path=ROOT/'operations/latest-run.json'
   if path.exists():
-   r=json.loads(path.read_text());r.update(status='publication-failed',productionVerified=False,error=str(e));path.write_text(json.dumps(r,indent=2)+'\n');state=json.loads((ROOT/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(ROOT/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(ROOT,state,r);record_results(ROOT,r,'failed')
+   r=json.loads(path.read_text());r['failedStageStatus']=r.get('status');r.update(status='publication-failed',productionVerified=False,error=str(e));path.write_text(json.dumps(r,indent=2)+'\n');state=json.loads((ROOT/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(ROOT/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(ROOT,state,r);record_results(ROOT,r,'failed')
   raise
