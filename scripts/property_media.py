@@ -76,13 +76,14 @@ def resolve(source_url,root,fetch=get,raw=None,publisher=None,allow_youtube=Fals
   if GENERIC.search(url+' '+alt) or not url.startswith('https://'):continue
   try:
    img=fetch(url);im=Image.open(io.BytesIO(img));im.verify();im=Image.open(io.BytesIO(img));w,h=im.size
-   if w<480 or h<250:raise ValueError('Source image too small for an article/card')
+   im=ImageOps.exif_transpose(im);w,h=im.size
+   if w<1600 or h<900:raise ValueError('Native source image must support1600x900 without upscaling')
    original_digest=hashlib.sha256(img).hexdigest();original_bytes=len(img);original_w,original_h=w,h
-   im=ImageOps.exif_transpose(im).convert('RGB');im.thumbnail((1600,1600),Image.Resampling.LANCZOS)
+   im=ImageOps.fit(im.convert('RGB'),(1600,900),Image.Resampling.LANCZOS)
    output=io.BytesIO();im.save(output,format='JPEG',quality=90,optimize=True,progressive=True);img=output.getvalue();w,h=im.size
    digest=hashlib.sha256(img).hexdigest();local='/images/source-properties/'+digest[:20]+'.jpg'
    if root is not None:
     dest=root/'public'/local.lstrip('/');dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(img)
-   return {'status':'verified-public-source','sourceUrl':source_url,'originalImageUrl':url,'imageUrl':local,'credit':publisher,'sourceImageAlt':alt,'selection':selection,'imageSha256':digest,'imageBytes':len(img),'originalImageSha256':original_digest,'originalImageBytes':original_bytes,'originalWidth':original_w,'originalHeight':original_h,'optimization':'EXIF orientation, downscale only to maximum1600px, JPEG90 progressive; no property edits, no upscaling','width':w,'height':h,'displayWidth':min(1600,w),'checkedAt':checked,'sourcePageSha256':hashlib.sha256(b).hexdigest(),'usageBasis':'Public exact-property source image displayed with source attribution and link at user request; no licence, ownership or photographer permission is claimed.','isTourPreview':allow_youtube}
+   return {'status':'verified-public-source','sourceUrl':source_url,'originalImageUrl':url,'imageUrl':local,'credit':publisher,'sourceImageAlt':alt,'selection':selection,'imageSha256':digest,'imageBytes':len(img),'originalImageSha256':original_digest,'originalImageBytes':original_bytes,'originalWidth':original_w,'originalHeight':original_h,'optimization':'EXIF orientation, center16:9crop and downsample to1600x900, JPEG90 progressive; no upscaling','width':w,'height':h,'displayWidth':min(1600,w),'checkedAt':checked,'sourcePageSha256':hashlib.sha256(b).hexdigest(),'usageBasis':'Public exact-property source image displayed with source attribution and link at user request; no licence, ownership or photographer permission is claimed.','isTourPreview':allow_youtube}
   except Exception as ex:errors.append(str(ex))
  raise MediaUnavailable('No usable exact-source featured photo: '+'; '.join(errors[:3]))

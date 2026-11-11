@@ -36,7 +36,9 @@ class TestPublisher(unittest.TestCase):
   with tempfile.TemporaryDirectory() as tmp:
    r=Path(tmp);self.fixture(r,[DIRECT])
    with patch('publish_properties.resolve_media',side_effect=MediaUnavailable('Exact photo unavailable')):
-    result=main(r,lambda _:rss('A Malibu Home','https://robbreport.com/home','A dated ocean-view source home with a genuinely long factual summary.'),NOW)
+    with self.assertRaisesRegex(RuntimeError,'Eligible property publication blocked'):
+     main(r,lambda _:rss('A Malibu Home','https://robbreport.com/home','A dated ocean-view source home with a genuinely long factual summary.'),NOW)
+   result=json.loads((r/'operations/latest-run.json').read_text());self.assertEqual(result['status'],'blocked-property-publication');self.assertEqual(result['collections'][0]['status'],'blocked-eligible-property')
    self.assertEqual(result['articles'],[]);self.assertEqual(result['quarantined'],1)
    self.assertFalse(list((r/'public/journal').glob('*/index.html')))
    self.assertEqual(json.loads((r/'operations/publisher-state.json').read_text())['articles'],[])

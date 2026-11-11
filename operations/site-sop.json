@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 2,
+  "version": 3,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -25,7 +25,7 @@
   "sources": [
     {
       "id": "sothebys-property",
-      "name": "Sotheby’s International Realty",
+      "name": "Sotheby\u2019s International Realty",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "articleHosts": [
         "www.sothebysrealty.com"
@@ -55,7 +55,7 @@
     },
     {
       "id": "christies-property",
-      "name": "Christie’s International Real Estate",
+      "name": "Christie\u2019s International Real Estate",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "articleHosts": [
         "www.christiesrealestate.com"
@@ -65,7 +65,7 @@
     },
     {
       "id": "google-luxury",
-      "name": "Google News RSS · luxury property discovery",
+      "name": "Google News RSS \u00b7 luxury property discovery",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "articleHosts": [
         "news.google.com"
@@ -76,7 +76,7 @@
     },
     {
       "id": "google-waterfront",
-      "name": "Google News RSS · waterfront property discovery",
+      "name": "Google News RSS \u00b7 waterfront property discovery",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "articleHosts": [
         "news.google.com"
@@ -114,10 +114,12 @@
     "Use exact feature brand and property-feature CTA",
     "Source publication date and new journal publication timestamp remain separate",
     "No fabricated asking prices, room counts, sale results, frontages, current availability, endorsements or interviews",
-    "Original brand illustration and existing LOL logo only; no listing photo reuse without established rights",
     "Official video embeds/permission-based branded videos are optional, not a blocker for articles",
     "Quarantine unresolved Google redirects, malformed/future/mismatched/duplicate items; no per-post manual gate",
-    "Preserve all21 canonical prior article IDs/dates; do not import test-abc123 as a genuine post"
+    "Preserve all21 canonical prior article IDs/dates; do not import test-abc123 as a genuine post",
+    "Company/property source featured image first with honest source credit; no Shutterstock or unrelated placeholders. Original generated fallback, if implemented, must be clearly labelled and must never depict a claimed actual property.",
+    "Native source must support1600x900 without upscaling; exact1600x900 featured derivative; actual image, desktop, phone and branding QA required.",
+    "A source, writing or image fault blocking eligible content is a failed publication outcome, not healthy nothing-new. Keep durable reasons and continue independent candidates."
   ],
   "decisions": [
     {
@@ -129,6 +131,11 @@
       "date": "2026-11-09",
       "source": "User Gemini intent recovered at user request",
       "decision": "Features branded We Love This Listing; Want to see your property here? CTA. Optional branded listing-photo videos require actual facts, existing logo and photo permission."
+    },
+    {
+      "date": "2026-11-10",
+      "source": "Explicit owner seven-site tip-to-tail repair and global image standard",
+      "decision": "Enforce native1600x900 quality and make blocked eligible publication visibly fail; preserve history and existing sole publisher."
     }
   ],
   "sourceFeaturedMedia": {
@@ -136,9 +143,9 @@
     "resolver": "scripts/property_media.py",
     "projection": "operations/property-media.json; scripts/apply-property-media.mjs; scripts/build-editorial-index.mjs",
     "sourceOrder": "Exact source featured metadata or exact listing hero; original-property tour-host preview only when actual listing photo unavailable",
-    "quality": "Prefer1600px original, recover only observed same-asset variants; optimize down to1600px JPEG90; never upscale. Preserve original and output dimensions/bytes/SHA256. Native lower-resolution exceptions recorded.",
+    "quality": "Native image at least1600x900 after EXIF orientation;16:9 crop/downsample to exact1600x900 JPEG90; never upscale. Preserve original/output hashes and dimensions.",
     "credit": "Source/author credit and original source link; no licence badge or claim. Respect explicit source reuse prohibition; unsupported media quarantined before article append.",
-    "futureGate": "Source photo must decode, match exact source provenance and minimum480x250 before article write; generated SVG producer removed",
+    "futureGate": "Source photo must decode, retain exact source pairing and support1600x900 without upscaling before article append. Actual visual/crop QA remains a separate required integration.",
     "readerTreatment": "Real image on card and article header, modest LOLlabel outsidephoto; no review notices or defaultplayoverlay",
     "preservation": "24articles original routes,publication/source dates,existingSEO/SSR/canonicals/categorysections preserved"
   }
