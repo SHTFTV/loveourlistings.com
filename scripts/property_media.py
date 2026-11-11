@@ -34,7 +34,7 @@ class Page(HTMLParser):
     if not any(x[2]=='source-featured-image' for x in self.candidates):
      self.candidates.insert(0,(1,d.get('data-orig-file') or src,'source-featured-image',alt))
    elif ('property picture 1 of' in alt.lower() or 'picture island location' in alt.lower()):self.candidates.insert(0,(0,src,'exact-listing-first-property-photo',alt))
-def resolve(source_url,root,fetch=get,raw=None,publisher=None,allow_youtube=False):
+def resolve(source_url,root,fetch=get,raw=None,publisher=None,allow_youtube=False,crop_box=None):
  checked=datetime.now(timezone.utc).isoformat();b=raw if raw is not None else fetch(source_url);b=b.encode() if isinstance(b,str) else b
  if allow_youtube:
   data=json.loads(b);thumb=data['thumbnail_url'];maximum=re.sub(r'/[^/]+\.jpg$', '/maxresdefault.jpg',thumb);candidates=[(0,maximum,'original-tour-host-preview',data.get('title','')),(1,thumb,'original-tour-host-preview',data.get('title',''))];publisher=data.get('author_name','Original tour publisher')+' / YouTube'
@@ -80,14 +80,20 @@ def resolve(source_url,root,fetch=get,raw=None,publisher=None,allow_youtube=Fals
   if GENERIC.search(url+' '+alt) or not url.startswith('https://'):continue
   try:
    img=fetch(url);im=Image.open(io.BytesIO(img));im.verify();im=Image.open(io.BytesIO(img));w,h=im.size
-   im=ImageOps.exif_transpose(im);w,h=im.size
+   im=ImageOps.exif_transpose(im);original_w,original_h=im.size
+   if crop_box is not None:
+    if len(crop_box)!=4 or any(type(x) is not int for x in crop_box):raise ValueError('Reviewed crop bounds invalid')
+    left,top,right,bottom=crop_box
+    if not (0<=left<right<=original_w and 0<=top<bottom<=original_h):raise ValueError('Reviewed crop outside native source')
+    im=im.crop(tuple(crop_box))
+   w,h=im.size
    if w<1600 or h<900:raise ValueError('Native source image must support1600x900 without upscaling')
-   original_digest=hashlib.sha256(img).hexdigest();original_bytes=len(img);original_w,original_h=w,h
+   original_digest=hashlib.sha256(img).hexdigest();original_bytes=len(img)
    im=ImageOps.fit(im.convert('RGB'),(1600,900),Image.Resampling.LANCZOS)
    output=io.BytesIO();im.save(output,format='JPEG',quality=90,optimize=True,progressive=True);img=output.getvalue();w,h=im.size
    digest=hashlib.sha256(img).hexdigest();local='/images/source-properties/'+digest[:20]+'.jpg'
    if root is not None:
     dest=root/'public'/local.lstrip('/');dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(img)
-   return {'status':'verified-public-source','sourceUrl':source_url,'originalImageUrl':url,'imageUrl':local,'credit':publisher,'sourceImageAlt':alt,'selection':selection,'imageSha256':digest,'imageBytes':len(img),'originalImageSha256':original_digest,'originalImageBytes':original_bytes,'originalWidth':original_w,'originalHeight':original_h,'optimization':'EXIF orientation, center16:9crop and downsample to1600x900, JPEG90 progressive; no upscaling','width':w,'height':h,'displayWidth':min(1600,w),'checkedAt':checked,'sourcePageSha256':hashlib.sha256(b).hexdigest(),'usageBasis':'Public exact-property source image displayed with source attribution and link at user request; no licence, ownership or photographer permission is claimed.','isTourPreview':allow_youtube}
+   return {'status':'verified-public-source','sourceUrl':source_url,'originalImageUrl':url,'imageUrl':local,'credit':publisher,'sourceImageAlt':alt,'selection':selection,'imageSha256':digest,'imageBytes':len(img),'originalImageSha256':original_digest,'originalImageBytes':original_bytes,'originalWidth':original_w,'originalHeight':original_h,'cropBox':crop_box,'optimization':'EXIF orientation, center16:9crop and downsample to1600x900, JPEG90 progressive; no upscaling','width':w,'height':h,'displayWidth':min(1600,w),'checkedAt':checked,'sourcePageSha256':hashlib.sha256(b).hexdigest(),'usageBasis':'Public exact-property source image displayed with source attribution and link at user request; no licence, ownership or photographer permission is claimed.','isTourPreview':allow_youtube}
   except Exception as ex:errors.append(str(ex))
  raise MediaUnavailable('No usable exact-source featured photo: '+'; '.join(errors[:3]))

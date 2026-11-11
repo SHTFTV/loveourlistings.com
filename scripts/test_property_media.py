@@ -31,4 +31,13 @@ class MediaTests(unittest.TestCase):
   def fetch(u):seen.append(u);return self.image(1200,675) if 'actual' in u else self.image(2400,1600)
   with self.assertRaises(MediaUnavailable):resolve('https://source.example/exact',None,fetch,raw=page)
   self.assertNotIn('https://source.example/related.jpg',seen)
+ def test_reviewed_letterbox_crop_preserves_native_resolution(self):
+  page='<meta property="og:image" content="https://source.example/photo.jpg">'
+  with tempfile.TemporaryDirectory() as tmp:
+   m=resolve('https://source.example/exact',Path(tmp),lambda _:self.image(1920,1080),raw=page,crop_box=[150,0,1770,1080])
+   self.assertEqual((m['originalWidth'],m['originalHeight']),(1920,1080));self.assertEqual(m['cropBox'],[150,0,1770,1080]);self.assertEqual((m['width'],m['height']),(1600,900))
+ def test_reviewed_crop_cannot_upscale_or_leave_original_bounds(self):
+  page='<meta property="og:image" content="https://source.example/photo.jpg">'
+  for bounds in [[200,0,1720,1080],[-1,0,1800,1080],[0,0,1921,1080]]:
+   with self.assertRaises(MediaUnavailable):resolve('https://source.example/exact',None,lambda _:self.image(1920,1080),raw=page,crop_box=bounds)
 if __name__=='__main__':unittest.main()
