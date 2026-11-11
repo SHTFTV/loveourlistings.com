@@ -1,5 +1,7 @@
 """Reviewed, fingerprint-bound property copy and exact-property media exceptions."""
 import hashlib,html,json,re
+from datetime import datetime,timedelta
+from urllib.parse import urlsplit
 from property_media import resolve,get,MediaUnavailable
 
 def load(root):
@@ -22,3 +24,25 @@ def reviewed_media(item,root,record,fetch=get):
  if result['originalWidth']!=m['nativeWidth'] or result['originalHeight']!=m['nativeHeight']:raise MediaUnavailable('Reviewed native source dimensions changed')
  result.update(sourcePageSha256=hashlib.sha256(raw).hexdigest(),selection='reviewed-same-property-original-declared-dimensions-no-enlargement',pairedNewsSource=item['url'],reviewedAt=record['reviewedAt'])
  return result
+
+def manual_candidates(root,sop,now,fetch=get):
+ """Only reviewed manifest records with current original-page evidence enter intake."""
+ candidates=[];blocks=[]
+ for url,r in load(root).items():
+  if 'item' not in r:continue
+  try:
+   item=dict(r['item'])
+   if item['url']!=url or r['collection'] not in sop['collections']:raise ValueError('Reviewed property identity/category mismatch')
+   if urlsplit(url).scheme!='https':raise ValueError('Original public HTTPS source required')
+   record_for(item,{url:r})
+   if hashlib.sha256(item['summary'].encode()).hexdigest()!=item['summaryHash']:raise ValueError('Reviewed factual source fingerprint mismatch')
+   date=datetime.fromisoformat(item['feedPublishedAt'])
+   if date.tzinfo is None or date>now+timedelta(minutes=5):raise ValueError('Reviewed source date invalid or future')
+   if now.date()-date.date()>timedelta(days=sop['lookbackDays']):raise ValueError('Reviewed property source outside current lookback')
+   page=fetch(url).decode('utf8','replace');text=html.unescape(re.sub('<[^>]+>',' ',page));text=' '.join(text.split())
+   for excerpt in r['requiredSourceEvidence']:
+    if excerpt not in page and excerpt not in text:raise ValueError('Reviewed original property facts changed; fresh review required')
+   item.update(collection=r['collection'],priority=0,sourcePageSha256=hashlib.sha256(page.encode()).hexdigest(),intake='reviewed-original-property-source')
+   candidates.append(item)
+  except Exception as e:blocks.append({'sourceUrl':url,'title':r.get('title',url),'reason':str(e)})
+ return candidates,blocks

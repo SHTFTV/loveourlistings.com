@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 from urllib.parse import urlsplit
 from rss_runtime import get,parse_feed,canonical,FETCHED_URLS
 from property_media import resolve as resolve_media,MediaUnavailable
-from reviewed_properties import load as load_reviewed,record_for,reviewed_media
+from reviewed_properties import load as load_reviewed,record_for,reviewed_media,manual_candidates
 ROOT=Path(__file__).resolve().parents[1];UTC=timezone.utc
 E=lambda x:html.escape(str(x),quote=True)
 def category(item):
@@ -84,7 +84,13 @@ def main(root=ROOT,fetch=get,now=None):
  for discovery in state['discovery']:
   match=next((c for c in candidates if normalized(c['title'])==normalized(discovery['title'])),None)
   if match:discovery.update(status='matched-validated-original-publisher-feed',originalUrl=match['url'])
- records=load_reviewed(root);queue=state.setdefault('candidateQueue',{})
+ records=load_reviewed(root);manual,manual_blocks=manual_candidates(root,cfg,now)
+ report['reviewedCandidateIntake']=len(manual)
+ for block in manual_blocks:report.setdefault('publicationBlocks',[]).append(block)
+ for item in manual:
+  if item['url'] in urls or item['summaryHash'] in hashes:report['duplicates']+=1;continue
+  candidates=[x for x in candidates if x['url']!=item['url']];candidates.append(item)
+ queue=state.setdefault('candidateQueue',{})
  for item in candidates:
   old=queue.get(item['url'],{});queue[item['url']]={**old,'item':item,'discoveredAt':old.get('discoveredAt',now.isoformat()),'status':'pending'}
  for url,row in queue.items():
