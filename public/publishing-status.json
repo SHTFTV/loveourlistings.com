@@ -1,14 +1,18 @@
 {
-  "updatedAt": "2026-11-12T01:49:20.984715+00:00",
+  "updatedAt": "2026-11-12T01:56:15.623390+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
-  "sopVersion": 7,
+  "sopVersion": 8,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-    "version": 7,
-    "sha256": "8a3f3ee2a418fded3f5f6e6b875f2356b5c94fe6ad24e8f69644b353a7493581",
-    "sourceCommit": "ffd3cd4afa09e5e55a3a63e590cc62612dd2f72c",
+    "version": 8,
+    "sha256": "46e0e7a07427205c88db17ad23a6d7b004b99f3c543656a19371ed65dab5e0e9",
+    "sourceCommit": "96b84126f9ba0abaa93408b77de4bbaae7b0c0d6",
     "trigger": "push"
+  },
+  "automaticTriggerProof": {
+    "verified": false,
+    "reason": "Not an automatic recovery request"
   },
   "publicationBlocks": [
     {
@@ -53,10 +57,11 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
-      "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
+      "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
+      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+      "retryStatus": "quarantined-retry-exhausted"
     }
   ],
   "health": "degraded",
@@ -65,43 +70,43 @@
     "owner": "site operations owner",
     "nextAction": "Bind existing owner notification transport and verify actual delivery; public JSON is not notification proof"
   },
-  "lastRunAt": "2026-11-12T01:48:55.929675+00:00",
+  "lastRunAt": "2026-11-12T01:56:09.441762+00:00",
   "status": "publication-failed",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:48:55.929675+00:00",
+      "fetchedAt": "2026-11-12T01:56:09.441762+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:48:55.929675+00:00",
+      "fetchedAt": "2026-11-12T01:56:09.441762+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-12T01:48:55.929675+00:00",
+      "fetchedAt": "2026-11-12T01:56:09.441762+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-12T01:48:55.929675+00:00",
+      "fetchedAt": "2026-11-12T01:56:09.441762+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:48:55.929675+00:00",
+      "fetchedAt": "2026-11-12T01:56:09.441762+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:48:55.929675+00:00",
+      "fetchedAt": "2026-11-12T01:56:09.441762+00:00",
       "items": 16
     }
   ],
@@ -145,7 +150,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 56,
-  "quarantinedItems": 1,
+  "quarantinedItems": 0,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-a52f8783fb",
