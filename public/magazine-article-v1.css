@@ -5,3 +5,5 @@
 @media(prefers-reduced-motion:reduce){.lol-story-image img{transition:none}.lol-story-card:hover img{transform:none}}
 
 *{box-sizing:border-box}body{margin:0}a{color:inherit}img{max-width:100%}
+/* Keep native property proportions when HTML width/height attributes meet a narrower journal card. */
+.lol-journal-article>article>a>img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}

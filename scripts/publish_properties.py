@@ -181,7 +181,7 @@ def main(root=ROOT,fetch=get,now=None):
  index.write_text(body)
  feed_items=[];manifest=[]
  for a in reversed(state['articles']):
-  url=cfg['origin']+'/journal/'+a['slug']+'/';feed_items.append('<item><title>'+E(a['title'])+'</title><link>'+url+'</link><guid>'+url+'</guid><pubDate>'+a['publishedAt']+'</pubDate><description>'+E(a['deck'])+'</description></item>');manifest.append({k:a[k] for k in ['slug','collection','title','deck','publishedAt','image','imageAlt','imageCredit']})
+  url=cfg['origin']+'/journal/'+a['slug']+'/';feed_items.append('<item><title>'+E(a['title'])+'</title><link>'+url+'</link><guid>'+url+'</guid><pubDate>'+format_datetime(datetime.fromisoformat(a['publishedAt']))+'</pubDate><description>'+E(a['deck'])+'</description></item>');manifest.append({k:a[k] for k in ['slug','collection','title','deck','publishedAt','image','imageAlt','imageCredit']})
  (public/'journal/feed.xml').write_text('<?xml version="1.0"?><rss version="2.0"><channel><title>Love Our Listings · We Love This Listing</title><link>'+cfg['origin']+'/journal/</link><description>Independent attributed property features</description>'+''.join(feed_items)+'</channel></rss>');(public/'journal/published.json').write_text(json.dumps(manifest,indent=2)+'\n')
  sm=public/'sitemap.xml'
  if sm.exists():
