@@ -23,5 +23,15 @@ def main():
   else:packet.update(checkedSupervisorRunRef=d.get('checkedSupervisorRunRef'),failureInjectionRef=d.get('failureInjectionRef'),ownerDeliveryRef=d.get('ownerAlertDelivery',{}).get('receiptUrl') if d.get('ownerAlertDelivery',{}).get('verified') else None,recoveryRef=d.get('recoveryRef'),workerAndSupervisorSilentDetection=d.get('workerAndSupervisorSilentDetection',False))
   receipts.append(packet)
  result['receipts']=receipts;result['repository']=REPO;result['contractNote']='Each sourceCommit is the actual role-loaded checkout. Do not relabel mismatched commits to force contract green. Independent external watchdog receipt is collected separately from Vercel Cron; missing cache is unknown.'
+ # Feed actual role incidents into the already connected public Command Center reader.
+ logPath=ROOT/'public/publication-results.json';log=json.loads(logPath.read_text());events=[e for e in log.get('events',[]) if not str(e.get('id','')).startswith(('role-alert:','role-canary:'))]
+ for name,d in roles.items():
+  if d.get('status')!='passed' and d.get('checkedAt') and d.get('runUrl'):
+   incidentId=(d.get('alerts') or [{}])[0].get('id') if name=='watchdog' else None
+   events.append({'id':'role-alert:'+name+(':'+incidentId if incidentId else ''),'site':SITE,'status':'failed','checkedAt':d['checkedAt'],'title':(name.title()+': '+'; '.join(d.get('findings',[]) or ['Role evidence unresolved']))[:180],'runUrl':d['runUrl'],'cause':'; '.join(d.get('findings',[]))[:400],'owner':'Love Our Listings existing worker owner','nextAction':'Resolve actual role findings; retain editorial approval holds','incidentId':incidentId})
+ watchdog=roles.get('watchdog',{})
+ if watchdog.get('workerAndSupervisorSilentDetection') and watchdog.get('recoveryRef') and watchdog.get('probeRunId'):
+  events.append({'id':'role-canary:'+watchdog['probeRunId'],'site':SITE,'status':'failed','checkedAt':watchdog['checkedAt'],'title':'Monitoring canary: controlled heartbeat silence detected and restored; test only, publisher continues','runUrl':watchdog['runUrl'],'cause':'Private labeled controlled timestamp probe; no actual production outage or publication recovery asserted','probeRunId':watchdog['probeRunId']})
+ log['events']=events;log['roleEventsCheckedAt']=now().isoformat();logPath.write_text(json.dumps(log,indent=2)+'\n')
  (ROOT/'public/four-roles.json').write_text(json.dumps(result,indent=2)+'\n');(ROOT/'operations/four-roles.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:result[k] for k in ['site','checkedAt','status','allFourFreshVerified']}))
 if __name__=='__main__':main()
