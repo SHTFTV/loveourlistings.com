@@ -3,6 +3,7 @@ from common import *
 from datetime import timedelta
 def main():
  report=json.loads((ROOT/'operations/latest-run.json').read_text());p=receipt('publisher');p['runUrl']=report.get('runUrl');p['checkedAt']=report.get('finishedAt',report.get('startedAt'));p['sotLoad']=report.get('sotLoad');p['runtimeVerified']=report.get('runUrl')=='https://github.com/'+REPO+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','') and bool(report.get('sources'));p['unattendedExecution']=p['runtimeVerified'] and bool(report.get('automaticTriggerProof',{}).get('verified') or report.get('sotLoad',{}).get('trigger')=='schedule');p['outcome']=report.get('status');p['verified']=p['runtimeVerified'] and p['unattendedExecution'] and report.get('status') in ['nothing-new','published-and-verified'] and not report.get('publicationBlocks');p['status']='passed' if p['verified'] else 'failed';p['findings']=[b['reason'] for b in report.get('publicationBlocks',[])][:8]
+ p['runtimeHealth']=('fault' if report.get('status') in ['publication-failed','all-property-sources-failed'] else 'running') if p['runtimeVerified'] else 'unknown';p['queueProgress']=report.get('queueProgress');p['operationalStatus']=report.get('status')
  roles={'publisher':p,**{r:latest(r) for r in ['visual','supervisor']}}
  try:
   import urllib.request
@@ -28,7 +29,7 @@ def main():
  for name,d in roles.items():
   if d.get('status')!='passed' and d.get('checkedAt') and d.get('runUrl'):
    incidentId=(d.get('alerts') or [{}])[0].get('id') if name=='watchdog' else None
-   events.append({'id':'role-alert:'+name+(':'+incidentId if incidentId else ''),'site':SITE,'status':'failed','checkedAt':d['checkedAt'],'title':(name.title()+': '+'; '.join(d.get('findings',[]) or ['Role evidence unresolved']))[:180],'runUrl':d['runUrl'],'cause':'; '.join(d.get('findings',[]))[:400],'owner':'Love Our Listings existing worker owner','nextAction':'Resolve actual role findings; retain editorial approval holds','incidentId':incidentId})
+   events.append({'id':'role-alert:'+name+(':'+incidentId if incidentId else ''),'site':SITE,'status':'failed','checkedAt':d['checkedAt'],'title':(('Publisher running — no eligible content; '+str((d.get('queueProgress') or {}).get('attemptedThisRun',0))+' attempted, '+str((d.get('queueProgress') or {}).get('skippedThisRun',0))+' skipped') if name=='publisher' and d.get('operationalStatus')=='no-eligible-content' else (name.title()+': '+'; '.join(d.get('findings',[]) or ['Role evidence unresolved'])))[:180],'runUrl':d['runUrl'],'cause':'; '.join(d.get('findings',[]))[:400],'owner':'Love Our Listings existing worker owner','nextAction':'Resolve actual role findings; retain editorial approval holds','incidentId':incidentId})
  watchdog=roles.get('watchdog',{})
  if watchdog.get('workerAndSupervisorSilentDetection') and watchdog.get('recoveryRef') and watchdog.get('probeRunId'):
   events.append({'id':'role-canary:'+watchdog['probeRunId'],'site':SITE,'status':'failed','checkedAt':watchdog['checkedAt'],'title':'Monitoring canary: controlled heartbeat silence detected and restored; test only, publisher continues','runUrl':watchdog['runUrl'],'cause':'Private labeled controlled timestamp probe; no actual production outage or publication recovery asserted','probeRunId':watchdog['probeRunId']})

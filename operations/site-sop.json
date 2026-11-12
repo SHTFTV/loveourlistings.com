@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 12,
+  "version": 13,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -88,6 +88,16 @@
       "priority": 10,
       "discoveryOnly": true,
       "provenance": "Explicit user Google RSS request;21 actual dated items fetched. Original publisher URL must be established before publication."
+    },
+    {
+      "id": "countrylife-property",
+      "name": "Country Life",
+      "url": "https://www.countrylife.co.uk/feeds/tag/property",
+      "articleHosts": [
+        "www.countrylife.co.uk"
+      ],
+      "priority": 3,
+      "provenance": "Official property-tag feed declared by Country Life property page;29 parsed dated items and exact article-body/title/canonical/date plus native2400x1600 first-property photograph independently verified November12. Individual property features only; no roundups or market advice."
     }
   ],
   "sourceReconciliation": [
@@ -182,7 +192,8 @@
     "maxAttempts": 5,
     "cooldownHours": 6,
     "maxCandidatesPerRun": 4,
-    "ordering": "least recently attempted first within collections; least recently published collection first"
+    "ordering": "least recently attempted first within collections; least recently published collection first",
+    "fairness": "Durable collectionLastAttemptAt with per-round interleaving; a collection of failing items cannot monopolize subsequent cycle budgets"
   },
   "preBuildGate": {
     "order": [
@@ -258,5 +269,10 @@
     ],
     "pageQualityVersion": 1,
     "checkerRecovery": "Existing sole publisher dispatches only stale inactive visual/supervisor workflows with actual originating publisher run verified against GitHub API. No content writer is added. Native cron remains backup; accepted dispatch is not execution."
+  },
+  "failureSemantics": {
+    "noEligibleContent": "Successful intake, every held/deferred item retained with reason and earliest nextAttemptAt; not a global publisher failure",
+    "realFault": "Missing required API access, all direct sources unavailable, build failure or live verification failure remains a fault",
+    "audit": "queueProgress counts actual scanned, attempted, skipped, stored and independently verified publications"
   }
 }

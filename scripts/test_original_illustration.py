@@ -25,7 +25,7 @@ class PreviewIsolation(unittest.TestCase):
    media={'status':'verified-original-illustration','sourceUrl':'https://robbreport.com/home','imageUrl':'/images/editorial-illustrations/art.jpg','imageSha256':'a'*64,'width':1600,'height':900,'sourceImageAlt':'Concept only','credit':LABEL,'label':LABEL,'isIllustration':True,'releaseReady':False,'visualQa':{'image':True,'desktop':False,'phone':False}}
    source=rss('Malibu Home With a Private Observatory','https://robbreport.com/home','An ocean-view residence with a private observatory and a substantial source description.')
    with patch('publish_properties.resolve_media',side_effect=ValueError('native image too small')),patch('publish_properties.illustration_record',return_value={'revision':1}),patch('publish_properties.resolve_illustration',return_value=media):
-    with self.assertRaisesRegex(RuntimeError,'Eligible property publication blocked'):main(root,lambda _:source,NOW)
+    result=main(root,lambda _:source,NOW);self.assertEqual(result['status'],'no-eligible-content')
    state=json.loads((root/'operations/publisher-state.json').read_text());self.assertEqual(state['articles'],[])
    report=json.loads((root/'operations/latest-run.json').read_text());self.assertEqual(report['articles'],[]);self.assertFalse(report['productionVerified']);self.assertIsNone(report['previews'][0]['url']);self.assertIn('contentSha256',report['previews'][0])
    draft=state['candidateQueue']['https://robbreport.com/home']['illustrationDraft'];self.assertTrue(draft['preview']);self.assertTrue(list((root/'work/editorial-previews').glob('*/receipt.json')))

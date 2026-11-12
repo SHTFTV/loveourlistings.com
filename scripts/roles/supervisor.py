@@ -9,7 +9,9 @@ def main():
   if d['publisherReceiptAgeSeconds']>900:findings.append('publisher-heartbeat-stale-or-missing')
   if report.get('sotLoad',{}).get('sha256')!=d['sotLoad']['sha256']:findings.append('publisher-loaded-SOT-mismatch')
   if not report.get('automaticTriggerProof',{}).get('verified') and report.get('sotLoad',{}).get('trigger')!='schedule':findings.append('publisher-unattended-proof-missing')
-  if report.get('publicationBlocks') or report.get('status') in ['publication-failed','blocked-property-publication','all-property-sources-failed']:findings.append('publisher-publication-failed')
+  d['publisherOperationalStatus']=report.get('status');d['queueProgress']=report.get('queueProgress')
+  if report.get('status') in ['publication-failed','all-property-sources-failed']:findings.append('publisher-runtime-or-publication-fault')
+  elif report.get('publicationBlocks'):findings.append('publisher-item-check-valves-held; intake-continues')
   access=json.loads((ROOT/'operations/runtime-access.json').read_text());d['apiAccessReceipt']={'runId':access.get('runId'),'status':access.get('status'),'checkedAt':access.get('checkedAt')}
   if access.get('status')!='passed' or str(access.get('runId'))!=report.get('runUrl','').rsplit('/',1)[-1]:findings.append('required-API-access-failed-or-unmatched')
   def public(path):

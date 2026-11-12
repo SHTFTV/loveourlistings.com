@@ -11,7 +11,7 @@ class Recovery(unittest.TestCase):
    root=Path(t);TestPublisher().fixture(root,[DIRECT])
    source=rss('Malibu Home With a Private Observatory','https://robbreport.com/home','An ocean-view residence with a private observatory and a substantial source description.')
    with patch('publish_properties.resolve_media',side_effect=ValueError('temporary source failure')):
-    with self.assertRaises(RuntimeError):main(root,lambda _:source,NOW)
+    result=main(root,lambda _:source,NOW);self.assertEqual(result['status'],'no-eligible-content')
    state=json.loads((root/'operations/publisher-state.json').read_text());self.assertEqual(state['candidateQueue']['https://robbreport.com/home']['status'],'retry')
    rotated=rss('The Home Design Market','https://robbreport.com/design','A design market report with enough text to be a valid source summary.')
    with patch('publish_properties.resolve_media',return_value=MEDIA):result=main(root,lambda _:rotated,NOW+__import__('datetime').timedelta(hours=7))
@@ -68,7 +68,7 @@ class ChangedReviewedMediaRecovery(unittest.TestCase):
   with tempfile.TemporaryDirectory() as t:
    root=Path(t);TestPublisher().fixture(root,[DIRECT]);source=rss('Malibu Home With a Private Observatory','https://robbreport.com/home','An ocean-view residence with a private observatory and a substantial source description.')
    with patch('publish_properties.resolve_media',side_effect=ValueError('native photo unavailable')):
-    with self.assertRaises(RuntimeError):main(root,lambda _:source,NOW)
+    result=main(root,lambda _:source,NOW);self.assertEqual(result['status'],'no-eligible-content')
    state=json.loads((root/'operations/publisher-state.json').read_text());row=state['candidateQueue']['https://robbreport.com/home'];summary_hash=row['item']['summaryHash'];(root/'operations/reviewed-properties.json').write_text(json.dumps({'items':{'https://robbreport.com/home':{'mediaOnly':True,'summaryHash':summary_hash,'media':{'sourceUrl':'https://broker.example/same-property'}}}}))
    with patch('publish_properties.reviewed_media',return_value=MEDIA):result=main(root,lambda _:source,NOW+timedelta(minutes=5))
    self.assertEqual(len(result['articles']),1);state=json.loads((root/'operations/publisher-state.json').read_text());self.assertEqual(state['candidateQueue']['https://robbreport.com/home']['attempts'],1);self.assertIn('reviewedMediaRevision',state['candidateQueue']['https://robbreport.com/home']);self.assertTrue(state['quarantine'])

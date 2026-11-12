@@ -48,6 +48,19 @@ def record_results(root,report,status):
    if event.get('status')=='failed' and event.get('id') in completed:event['resolvedAt']=datetime.now(timezone.utc).isoformat()
  data['updatedAt']=datetime.now(timezone.utc).isoformat();path.write_text(json.dumps(data,indent=2)+'\n')
 
+def hold_results(root=ROOT):
+ report=json.loads((root/'operations/latest-run.json').read_text())
+ if report.get('publicationBlocks'):record_results(root,{**report,'articles':[]},'failed')
+ path=root/'public/publication-results.json'
+ if path.exists():
+  data=json.loads(path.read_text())
+  for check in report.get('candidateChecks',[]):
+   if check['outcome']!='duplicate-property':continue
+   event_id='loveourlistings.com:hold:'+hashlib.sha256(check['sourceUrl'].encode()).hexdigest()[:20]
+   for event in data.get('events',[]):
+    if event.get('id')==event_id:event.update(correction=True,withdrawn=True,correctionReason=check['reason'],existingArticleUrl='https://www.loveourlistings.com/journal/'+check['duplicateOfArticleSlug']+'/')
+  path.write_text(json.dumps(data,indent=2)+'\n')
+
 def get(url):
  req=urllib.request.Request(url,headers={'User-Agent':'LoveOurListings-PublicationVerifier/1.0','Cache-Control':'no-cache'})
  with urllib.request.urlopen(req,timeout=20) as r:
@@ -69,6 +82,7 @@ def live(root=ROOT,timeout=600):
    manifest=get('https://www.loveourlistings.com/journal/published.json');index=get('https://www.loveourlistings.com/journal/');sitemap=get('https://www.loveourlistings.com/sitemap.xml');feed=get('https://www.loveourlistings.com/journal/feed.xml')
    for a in r['articles']:
     h=get(a['url']);assert a['publishedAt'] in h and a['sourceUrl'] in h,'Live article does not match new source/time';assert 'We Love This Listing' in h and 'Want to see your property here?' in h,'Live feature brand/CTA missing';assert a['slug'] in manifest and a['slug'] in index and a['url'] in sitemap and a['slug'] in feed,'Live discovery outputs stale'
+   if r.get('queueProgress'):r['queueProgress'].update(publicationOutcome='published-and-verified',verifiedPublicationsThisRun=len(r['articles']))
    r.update(status='published-and-verified-with-blockers' if r.get('publicationBlocks') or any(s['status']=='error' for s in r['sources']) else 'published-and-verified',productionVerified=True,verifiedAt=datetime.now(timezone.utc).isoformat());state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');(root/'operations/latest-run.json').write_text(json.dumps(r,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'done');print('VERIFIED NEW PUBLIC FEATURES',json.dumps(r['articles']));return
   except Exception as e:last=str(e);time.sleep(15)
  raise RuntimeError('Content commit exists but public publication did not verify: '+last)
@@ -78,7 +92,7 @@ def failed(root=ROOT):
   r=json.loads(path.read_text());r['failedStageStatus']=r.get('status');r.update(status='publication-failed',productionVerified=False,error='Cloud build/publication check failed; see linked workflow run');state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);path.write_text(json.dumps(r,indent=2)+'\n');(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'failed')
 
 if __name__=='__main__':
- try:failed() if '--failure' in sys.argv else verify_log() if '--log' in sys.argv else live() if '--live' in sys.argv else built()
+ try:hold_results() if '--holds' in sys.argv else failed() if '--failure' in sys.argv else verify_log() if '--log' in sys.argv else live() if '--live' in sys.argv else built()
  except Exception as e:
   path=ROOT/'operations/latest-run.json'
   if path.exists():

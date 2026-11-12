@@ -40,6 +40,11 @@ def resolve(source_url,root,fetch=get,raw=None,publisher=None,allow_youtube=Fals
   data=json.loads(b);thumb=data['thumbnail_url'];maximum=re.sub(r'/[^/]+\.jpg$', '/maxresdefault.jpg',thumb);candidates=[(0,maximum,'original-tour-host-preview',data.get('title','')),(1,thumb,'original-tour-host-preview',data.get('title',''))];publisher=data.get('author_name','Original tour publisher')+' / YouTube'
  else:
   text=b.decode('utf8','replace');p=Page();p.feed(text);candidates=sorted(p.candidates,key=lambda x:x[0]);publisher=publisher or urlsplit(source_url).hostname
+  if urlsplit(source_url).hostname=='www.countrylife.co.uk':
+   hero=re.search(r'<figure[^>]*>[\s\S]*?image--hero__caption[\s\S]*?</figure>',text)
+   if hero:
+    caption=re.search(r'\(Image credit:\s*([^<]+?)\)',html.unescape(re.sub('<[^>]+>',' ',hero[0])))
+    if caption:publisher=publisher+' · '+caption[1].strip()
   # Explicit in-page copy restrictions are a review exception, not a fabricated permission grant.
   if re.search(r'no (?:part|portion) .{0,100}(?:reproduc|republish)|reproduction (?:is )?(?:strictly )?prohibited',re.sub('<[^>]+>',' ',text),re.I):raise MediaUnavailable('Source expressly restricts reproduction; original embed/source link requires review')
  # A WordPress featured class can belong to a related article. Never fall back

@@ -24,6 +24,7 @@ def record_for(item,records):
  return r
 
 def reviewed_media(item,root,record,fetch=get):
+ if record.get('reviewRequired'):raise MediaUnavailable(record.get('holdReason','Explicit source permission review required'))
  m=record['media'];raw=fetch(m['sourceUrl']);text=raw.decode('utf8','replace')
  if re.search(r'no (?:part|portion) .{0,100}(?:reproduc|republish)|reproduction (?:is )?(?:strictly )?prohibited',re.sub('<[^>]+>',' ',text),re.I):raise MediaUnavailable('Source expressly restricts reproduction; review required')
  for evidence in m['requiredPageEvidence']:

@@ -11,7 +11,7 @@ class WorkerContract(unittest.TestCase):
    broken=rss('Malibu Home With a Private Observatory','https://robbreport.com/broken','An ocean-view residence with a private observatory and a substantial source description.')
    with patch('publish_properties.resolve_media',side_effect=ValueError('native image unavailable')):
     for i in range(5):
-     with self.assertRaises(RuntimeError):main(root,lambda _:broken,NOW+timedelta(hours=7*i))
+     result=main(root,lambda _:broken,NOW+timedelta(hours=7*i));self.assertEqual(result['status'],'no-eligible-content')
    healthy=rss('Malibu Home With a Private Observatory','https://robbreport.com/healthy','A different ocean-view residence with a private observatory and its own detailed description.')
    with patch('publish_properties.resolve_media',return_value=MEDIA) as media:
     result=main(root,lambda _:healthy,NOW+timedelta(hours=40))

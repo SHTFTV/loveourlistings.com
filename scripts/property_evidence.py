@@ -14,7 +14,7 @@ class Article(HTMLParser):
   d=dict(attrs)
   if tag=='meta':self.meta[(d.get('property')or d.get('name')or'').lower()]=d.get('content','')
   if tag in VOID:return
-  target=tag=='article'and d.get('id')=='post-'+self.post_id
+  target=(tag=='article'and d.get('id')=='post-'+self.post_id) if self.post_id else (tag=='div'and d.get('id')=='article-body')
   if target:self.found=True
   excluded=tag in {'script','style','svg','noscript','form','button','nav','aside','figure','figcaption'}or bool(EXCLUDED.search(d.get('class','')+' '+d.get('id','')))
   self.stack.append((tag,target,excluded))
@@ -34,12 +34,12 @@ def recover(item,sop,fetch=get):
  host=urlsplit(item['url']).hostname
  allowed={h for s in sop['sources']if not s.get('discoveryOnly')for h in s['articleHosts']}
  if host not in allowed:raise ValueError('LOL_SOURCE_BODY_HOST_NOT_APPROVED')
- if host!='robbreport.com':raise ValueError('LOL_SOURCE_BODY_SELECTOR_NOT_ESTABLISHED: retain source until its exact article body is verified')
- post_id=re.search(r'(\d{7,})/?$',urlsplit(item['url']).path)
- if not post_id:raise ValueError('LOL_SOURCE_PROPERTY_ID_MISSING')
+ if host not in ['robbreport.com','www.countrylife.co.uk']:raise ValueError('LOL_SOURCE_BODY_SELECTOR_NOT_ESTABLISHED: retain source until its exact article body is verified')
+ post_id=re.search(r'(\d{7,})/?$',urlsplit(item['url']).path) if host=='robbreport.com' else None
+ if host=='robbreport.com' and not post_id:raise ValueError('LOL_SOURCE_PROPERTY_ID_MISSING')
  raw=fetch(item['url'])
  if len(raw)>4*1024*1024:raise ValueError('LOL_SOURCE_BODY_TOO_LARGE')
- parser=Article(post_id[1]);parser.feed(raw.decode('utf8','replace'))
+ parser=Article(post_id[1] if post_id else None);parser.feed(raw.decode('utf8','replace'))
  if not parser.found:raise ValueError('LOL_SOURCE_BODY_NOT_FOUND')
  key=lambda t:re.sub(r'\W+','',html.unescape(t)).casefold()
  if key(parser.meta.get('og:title',''))!=key(item['title']):raise ValueError('LOL_SOURCE_BODY_TITLE_MISMATCH')
