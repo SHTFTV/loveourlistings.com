@@ -72,3 +72,18 @@ class ChangedReviewedMediaRecovery(unittest.TestCase):
    state=json.loads((root/'operations/publisher-state.json').read_text());row=state['candidateQueue']['https://robbreport.com/home'];summary_hash=row['item']['summaryHash'];(root/'operations/reviewed-properties.json').write_text(json.dumps({'items':{'https://robbreport.com/home':{'mediaOnly':True,'summaryHash':summary_hash,'media':{'sourceUrl':'https://broker.example/same-property'}}}}))
    with patch('publish_properties.reviewed_media',return_value=MEDIA):result=main(root,lambda _:source,NOW+timedelta(minutes=5))
    self.assertEqual(len(result['articles']),1);state=json.loads((root/'operations/publisher-state.json').read_text());self.assertEqual(state['candidateQueue']['https://robbreport.com/home']['attempts'],1);self.assertIn('reviewedMediaRevision',state['candidateQueue']['https://robbreport.com/home']);self.assertTrue(state['quarantine'])
+
+class ArchiveMediaRepair(unittest.TestCase):
+ def test_media_repair_preserves_date_and_does_not_create_new_publication(self):
+  from publish_properties import feature
+  from rss_runtime import parse_feed
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);TestPublisher().fixture(root,[])
+   raw=rss('Malibu Home With a Private Observatory','https://robbreport.com/home','An ocean-view residence pairs organic modernism with sweeping coastal views.')
+   item=parse_feed(raw,DIRECT,NOW)[0][0];a=feature(item,'waterfront',NOW,{'timezone':'America/Vancouver','version':7},MEDIA);a['sourceImage']={**MEDIA,'width':1200,'height':675}
+   original_date=a['publishedAt'];state={'articles':[a],'runs':[{'productionVerified':True,'articles':[{'slug':a['slug']}]}],'quarantine':[],'discovery':[]}
+   (root/'operations/publisher-state.json').write_text(json.dumps(state));(root/'operations/reviewed-properties.json').write_text(json.dumps({'items':{item['url']:{'archiveMediaRepair':True,'summaryHash':item['summaryHash'],'mediaOnly':True}}}))
+   repaired={**MEDIA,'width':1600,'height':900,'originalWidth':2151,'originalHeight':1200,'originalImageUrl':'https://source.example/original.jpg','sourceImageAlt':'Same property','imageUrl':'/images/source-properties/repaired.jpg'}
+   with patch('publish_properties.reviewed_media',return_value=repaired):report=main(root,lambda _:b'',NOW)
+   self.assertEqual(report['articles'],[]);self.assertEqual(report['status'],'built-for-media-repair');self.assertEqual(len(report['mediaRepairs']),1)
+   after=json.loads((root/'operations/publisher-state.json').read_text())['articles'];self.assertEqual(len(after),1);self.assertEqual(after[0]['publishedAt'],original_date);self.assertEqual(after[0]['image'],repaired['imageUrl'])

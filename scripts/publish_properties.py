@@ -68,6 +68,17 @@ def main(root=ROOT,fetch=get,now=None):
  now=now or datetime.now(UTC);cfg=json.loads((root/'operations/site-sop.json').read_text());prior=json.loads((root/'operations/prior-posts.json').read_text());sp=root/'operations/publisher-state.json';state=json.loads(sp.read_text()) if sp.exists() else {'schemaVersion':1,'runs':[],'articles':[],'quarantine':[],'discovery':[]}
  urls={canonical(u) for p in prior for u in p['sourceUrls'] if u.startswith('https://')};urls.update(source_key(a['source']) for a in state['articles']);hashes={a['source']['summaryHash'] for a in state['articles']};report={'startedAt':now.isoformat(),'sopVersion':cfg['version'],'sotLoad':{'canonicalSource':'https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json','version':cfg['version'],'sha256':hashlib.sha256((root/'operations/site-sop.json').read_bytes()).hexdigest(),'sourceCommit':os.environ.get('LOADED_SOURCE_COMMIT'),'trigger':os.environ.get('GITHUB_EVENT_NAME','local-test')},'runUrl':os.environ.get('GITHUB_SERVER_URL','https://github.com')+'/'+os.environ.get('GITHUB_REPOSITORY','SHTFTV/loveourlistings.com')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local-test'),'sources':[],'articles':[],'duplicates':0,'quarantined':0,'discovered':0,'productionVerified':False};candidates=[]
  report['automaticTriggerProof']=verify_automatic_trigger(now=now)
+ # Repair reviewed archive imagery inside the existing sole writer, independently of new-story eligibility.
+ archive_records=load_reviewed(root)
+ for a in state['articles']:
+  record=archive_records.get(a['source']['url'])
+  if not record or not record.get('archiveMediaRepair') or (a.get('sourceImage',{}).get('width')==1600 and a.get('sourceImage',{}).get('height')==900):continue
+  try:
+   reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash']},archive_records);media=reviewed_media(a['source'],root,reviewed)
+   a.update(image=media['imageUrl'],imageAlt=media['sourceImageAlt'],imageCredit=media['credit'],sourceImage=media)
+   report.setdefault('mediaRepairs',[]).append({'slug':a['slug'],'image':a['image'],'publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'originalImageUrl':media['originalImageUrl'],'nativeWidth':media['originalWidth'],'nativeHeight':media['originalHeight']})
+  except Exception as e:report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'title':a['title'],'reason':'Archive media repair: '+str(e)})
+
  completed={a['slug'] for run in state['runs'] if run.get('productionVerified') for a in run.get('articles',[])}
  for a in state['articles']:
   if a['slug'] in completed:continue
@@ -170,7 +181,7 @@ def main(root=ROOT,fetch=get,now=None):
    except Exception as e:
     queue[source_key(item)].update(status='retry',lastAttemptAt=now.isoformat(),attempts=queue[source_key(item)].get('attempts',0)+1,lastError=str(e));sp.write_text(json.dumps(state,indent=2)+'\n')
     state['quarantine'].append({'at':now.isoformat(),'url':item['url'],'reason':str(e)});report['quarantined']+=1;report.setdefault('publicationBlocks',[]).append({'sourceUrl':item['url'],'title':item['title'],'propertyId':item.get('propertyId'),'collection':item.get('collection'),'reason':str(e)})
- report['collections']=[{'name':c,'eligible':len([x for x in candidates if x['collection']==c]),'newFeatures':len([x for x in report['articles'] if x['collection']==c]),'status':'built-for-publication' if any(x['collection']==c for x in report['articles']) else 'blocked-eligible-property' if any(x.get('collection')==c or (x.get('sourceUrl'),x.get('propertyId')) in [(i['url'],i.get('propertyId')) for i in candidates if i['collection']==c] for x in report.get('publicationBlocks',[])) else 'queued-next-cycle' if any(i['collection']==c for i in candidates) else 'no-fresh-eligible-items'} for c in cfg['collections']];report['status']='built-for-publication' if report['articles'] else 'blocked-property-publication' if report.get('publicationBlocks') else 'nothing-new' if any(s['status']=='ok' and not next(x for x in cfg['sources'] if x['id']==s['id']).get('discoveryOnly') for s in report['sources']) else 'all-property-sources-failed';report['finishedAt']=datetime.now(UTC).isoformat();state['runs'].append(report)
+ report['collections']=[{'name':c,'eligible':len([x for x in candidates if x['collection']==c]),'newFeatures':len([x for x in report['articles'] if x['collection']==c]),'status':'built-for-publication' if any(x['collection']==c for x in report['articles']) else 'blocked-eligible-property' if any(x.get('collection')==c or (x.get('sourceUrl'),x.get('propertyId')) in [(i['url'],i.get('propertyId')) for i in candidates if i['collection']==c] for x in report.get('publicationBlocks',[])) else 'queued-next-cycle' if any(i['collection']==c for i in candidates) else 'no-fresh-eligible-items'} for c in cfg['collections']];report['status']='built-for-publication' if report['articles'] else 'built-for-media-repair' if report.get('mediaRepairs') else 'blocked-property-publication' if report.get('publicationBlocks') else 'nothing-new' if any(s['status']=='ok' and not next(x for x in cfg['sources'] if x['id']==s['id']).get('discoveryOnly') for s in report['sources']) else 'all-property-sources-failed';report['finishedAt']=datetime.now(UTC).isoformat();state['runs'].append(report)
  public=root/'public';(public/'images/journal').mkdir(parents=True,exist_ok=True)
  for a in state['articles']:
   path=public/'journal'/a['slug'];path.mkdir(parents=True,exist_ok=True);(path/'index.html').write_text(render(a,cfg['origin']))
@@ -195,7 +206,7 @@ def main(root=ROOT,fetch=get,now=None):
  known={x['slug'] for x in new};new.extend(x for x in old if x['slug'] not in known);latest_path.write_text('export const latestPublished = '+json.dumps(new[:8],ensure_ascii=False)+';\n')
  registry_path=root/'operations/property-media.json';registry=json.loads(registry_path.read_text()) if registry_path.exists() else {'version':1,'articles':{}};registry['articles'].update({a['slug']:a['sourceImage'] for a in state['articles'] if a.get('sourceImage')});registry_path.write_text(json.dumps(registry,indent=2)+'\n');sp.write_text(json.dumps(state,indent=2)+'\n');(root/'operations/latest-run.json').write_text(json.dumps(report,indent=2)+'\n');write_status(root,state,report)
  if os.environ.get('GITHUB_OUTPUT'):
-  with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('has_articles='+str(bool(report['articles'])).lower()+'\n')
+  with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('has_articles='+str(bool(report['articles'])).lower()+'\n'+'has_media_repairs='+str(bool(report.get('mediaRepairs'))).lower()+'\n')
  print(json.dumps(report,indent=2))
  if report['status']=='blocked-property-publication':raise RuntimeError('Eligible property publication blocked; durable reasons retained; no successful publication claimed')
  if report['status']=='all-property-sources-failed':raise RuntimeError('All direct property sources failed; Google discovery alone is not a publication')

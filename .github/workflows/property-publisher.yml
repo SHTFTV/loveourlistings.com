@@ -56,7 +56,7 @@ jobs:
       - name: Validate new static articles and preserved history
         run: python3 scripts/verify_property_publication.py
       - name: Build the existing magazine
-        if: steps.collect.outputs.has_articles == 'true'
+        if: steps.collect.outputs.has_articles == 'true' || steps.collect.outputs.has_media_repairs == 'true'
         run: |
           npm install --package-lock-only --ignore-scripts --no-audit --no-fund
           npm ci
@@ -75,6 +75,10 @@ jobs:
       - name: Verify actual new public journal pages and discovery outputs
         if: steps.collect.outputs.has_articles == 'true'
         run: python3 scripts/verify_property_publication.py --live
+      - name: Verify reviewed archive media repairs on actual production pages
+        if: steps.collect.outputs.has_media_repairs == 'true'
+        run: python3 scripts/verify_archive_media.py
+
       - name: Persist verified public publication evidence
         if: steps.collect.outputs.has_articles == 'true'
         run: |
