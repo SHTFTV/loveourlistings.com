@@ -28,6 +28,13 @@ try{
      const body=await page.locator('body').innerText();if(!body.includes('Want to see your property here?'))check.findings.push('feature-CTA-missing');
     }
     const file=`${viewport.name}-${name}.jpg`;await page.screenshot({path:out+'/'+file,type:'jpeg',quality:70,animations:'disabled'});check.screenshot=file;check.screenshotSha256=crypto.createHash('sha256').update(fs.readFileSync(out+'/'+file)).digest('hex');
+    if(name==='article'){
+     const body=page.locator('.lol-journal-body section p').first();await body.scrollIntoViewIfNeeded();
+     const fonts=await page.locator('.lol-journal-body section p').evaluateAll(ps=>ps.filter(p=>{const r=p.getBoundingClientRect();return r.height>0&&r.top<innerHeight&&r.bottom>0;}).map(p=>({fontSize:parseFloat(getComputedStyle(p).fontSize),lineHeight:getComputedStyle(p).lineHeight,textLength:p.innerText.length})));
+     check.bodyTextMetrics=fonts;if(!fonts.length||fonts.some(p=>p.fontSize<14))check.findings.push('article-body-readability-missing-or-below14px');
+     check.bodyScreenshot=viewport.name+'-article-body.jpg';await page.screenshot({path:out+'/'+check.bodyScreenshot,type:'jpeg',quality:70,animations:'disabled'});
+    }
+
    }catch(e){check.findings.push('render-check-error:'+e.message.slice(0,180));}
    report.checks.push(check);for(const issue of check.findings)report.findings.push(`${viewport.name}/${name}: ${issue}`);await page.close();
   }await context.close();

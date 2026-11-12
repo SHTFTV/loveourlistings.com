@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 10,
+  "version": 11,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -223,7 +223,8 @@
         "workflow": ".github/workflows/role-visual.yml",
         "scope": "Actual public homepage, journal and latest verified published article, desktop1440x1000 and phone390x844 Chromium screenshots, images/cards, readability and overflow",
         "minimumSpacingMinutes": 15,
-        "protectedIllustrationApproval": "Separate exact frozen-preview review remains required; this checker does not set those approval flags"
+        "protectedIllustrationApproval": "Separate exact frozen-preview review remains required; this checker does not set those approval flags",
+        "readabilityMetrics": "Measured article body in viewport plus screenshot, body minimum14px, credits minimum12px; exact current public page/article images, overflow and per-page metadata checks. Protected preview approval remains separate."
       },
       "supervisor": {
         "workflow": ".github/workflows/role-supervisor.yml",
@@ -246,7 +247,7 @@
       "publisher": 900,
       "visual": 1800,
       "supervisor": 900,
-      "watchdog": 900
+      "watchdog": 1800
     },
     "greenRule": "All4actual site-specific unattended runtime receipts fresh, loaded approvedSOT matched, passed, and actual required owner-alert delivery verified. Missing/stale/unknown/failure remains red.",
     "pageStandards": [
