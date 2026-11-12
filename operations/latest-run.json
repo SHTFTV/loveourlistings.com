@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-12T05:14:29.960379+00:00",
+  "startedAt": "2026-11-12T05:20:03.251277+00:00",
   "sopVersion": 8,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 8,
     "sha256": "46e0e7a07427205c88db17ad23a6d7b004b99f3c543656a19371ed65dab5e0e9",
-    "sourceCommit": "61eb0d73218cfaa55c46ee66798dbe3e6b95fda3",
+    "sourceCommit": "3769ef81f044869ec293f8337c6b94f64a82d943",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43160020378",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43160652643",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-12T05:14:29.960379+00:00",
+      "fetchedAt": "2026-11-12T05:20:03.251277+00:00",
       "items": 10,
       "errors": [],
       "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
@@ -23,7 +23,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-12T05:14:29.960379+00:00",
+      "fetchedAt": "2026-11-12T05:20:03.251277+00:00",
       "items": 10,
       "errors": [],
       "finalUrl": "https://robbreport.com/shelter/feed/"
@@ -32,21 +32,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-12T05:14:29.960379+00:00",
+      "fetchedAt": "2026-11-12T05:20:03.251277+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-12T05:14:29.960379+00:00",
+      "fetchedAt": "2026-11-12T05:20:03.251277+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-12T05:14:29.960379+00:00",
+      "fetchedAt": "2026-11-12T05:20:03.251277+00:00",
       "items": 30,
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -55,21 +55,21 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-12T05:14:29.960379+00:00",
-      "items": 17,
+      "fetchedAt": "2026-11-12T05:20:03.251277+00:00",
+      "items": 18,
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     }
   ],
   "articles": [],
   "duplicates": 57,
-  "quarantined": 2,
-  "discovered": 0,
+  "quarantined": 0,
+  "discovered": 1,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43159429079",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43160065985",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -77,10 +77,11 @@
   "publicationBlocks": [
     {
       "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
-      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
@@ -89,13 +90,6 @@
       "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
-      "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
@@ -119,6 +113,14 @@
       "collection": "mansions",
       "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
       "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+      "retryStatus": "quarantined-retry-exhausted"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted"
     }
   ],
@@ -161,7 +163,7 @@
     }
   ],
   "status": "publication-failed",
-  "finishedAt": "2026-11-12T05:14:37.206095+00:00",
+  "finishedAt": "2026-11-12T05:20:06.644801+00:00",
   "failedStageStatus": "blocked-property-publication",
   "error": "Cloud build/publication check failed; see linked workflow run"
 }
