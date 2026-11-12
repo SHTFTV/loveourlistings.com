@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 5,
+  "version": 6,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -123,7 +123,9 @@
     "Preserve all21 canonical prior article IDs/dates; do not import test-abc123 as a genuine post",
     "Company/property source featured image first with honest source credit; no Shutterstock or unrelated placeholders. Original generated fallback, if implemented, must be clearly labelled and must never depict a claimed actual property.",
     "Native source must support1600x900 without upscaling; exact1600x900 featured derivative; actual image, desktop, phone and branding QA required.",
-    "A source, writing or image fault blocking eligible content is a failed publication outcome, not healthy nothing-new. Keep durable reasons and continue independent candidates."
+    "A source, writing or image fault blocking eligible content is a failed publication outcome, not healthy nothing-new. Keep durable reasons and continue independent candidates.",
+    "Every job records exact loaded canonical SOP SHA256 and source commit; commit rejects changed approved canonical SOP.",
+    "Bound retries and candidate work; failures remain visible while independent candidates continue. Never label partial failure fully healthy."
   ],
   "decisions": [
     {
@@ -163,5 +165,28 @@
     "readerTreatment": "Real image on card and article header, modest LOLlabel outsidephoto; no review notices or defaultplayoverlay",
     "preservation": "24articles original routes,publication/source dates,existingSEO/SSR/canonicals/categorysections preserved"
   },
-  "maxReviewedArticlesPerRun": 6
+  "maxReviewedArticlesPerRun": 6,
+  "retryPolicy": {
+    "maxAttempts": 5,
+    "cooldownHours": 6,
+    "maxCandidatesPerRun": 12,
+    "ordering": "least recently attempted first within collections; least recently published collection first"
+  },
+  "preBuildGate": {
+    "order": [
+      "canonical GitHub and verified source-to-production",
+      "required scoped runtime/service access tested in actual cloud job",
+      "minimal real production workflow proven",
+      "dependent content/UI extension and full operational verification"
+    ],
+    "preserveExistingWorkingContent": true,
+    "proofRequired": [
+      "exact source commit and production deployment",
+      "current job API receipt",
+      "approved SOT revision and SHA256 loaded and fenced at commit",
+      "live publication and recovery receipts",
+      "delivered owner notification"
+    ],
+    "unknownOrStaleIsPass": false
+  }
 }

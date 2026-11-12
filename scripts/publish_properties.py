@@ -1,4 +1,4 @@
-"""Source-led Love Our Listings journal publisher; no model key or source-body reuse."""
+"""Existing source-led journal publisher with durable isolated outcomes."""
 import json,re,hashlib,os,html
 from email.utils import format_datetime
 from pathlib import Path
@@ -58,16 +58,20 @@ def validate(a):
 
 def main(root=ROOT,fetch=get,now=None):
  now=now or datetime.now(UTC);cfg=json.loads((root/'operations/site-sop.json').read_text());prior=json.loads((root/'operations/prior-posts.json').read_text());sp=root/'operations/publisher-state.json';state=json.loads(sp.read_text()) if sp.exists() else {'schemaVersion':1,'runs':[],'articles':[],'quarantine':[],'discovery':[]}
- urls={canonical(u) for p in prior for u in p['sourceUrls'] if u.startswith('https://')};urls.update(source_key(a['source']) for a in state['articles']);hashes={a['source']['summaryHash'] for a in state['articles']};report={'startedAt':now.isoformat(),'sopVersion':cfg['version'],'runUrl':os.environ.get('GITHUB_SERVER_URL','https://github.com')+'/'+os.environ.get('GITHUB_REPOSITORY','SHTFTV/loveourlistings.com')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local-test'),'sources':[],'articles':[],'duplicates':0,'quarantined':0,'discovered':0,'productionVerified':False};candidates=[]
+ urls={canonical(u) for p in prior for u in p['sourceUrls'] if u.startswith('https://')};urls.update(source_key(a['source']) for a in state['articles']);hashes={a['source']['summaryHash'] for a in state['articles']};report={'startedAt':now.isoformat(),'sopVersion':cfg['version'],'sotLoad':{'canonicalSource':'https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json','version':cfg['version'],'sha256':hashlib.sha256((root/'operations/site-sop.json').read_bytes()).hexdigest(),'sourceCommit':os.environ.get('LOADED_SOURCE_COMMIT'),'trigger':os.environ.get('GITHUB_EVENT_NAME','local-test')},'runUrl':os.environ.get('GITHUB_SERVER_URL','https://github.com')+'/'+os.environ.get('GITHUB_REPOSITORY','SHTFTV/loveourlistings.com')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local-test'),'sources':[],'articles':[],'duplicates':0,'quarantined':0,'discovered':0,'productionVerified':False};candidates=[]
  completed={a['slug'] for run in state['runs'] if run.get('productionVerified') for a in run.get('articles',[])}
  for a in state['articles']:
-  if a['slug'] not in completed and not (root/'public'/a['image'].lstrip('/')).exists():
-   original={'url':a['source']['url'],'summaryHash':a['source']['summaryHash'],'propertyId':a['source'].get('propertyId')}
-   reviewed=record_for(original,load_reviewed(root))
-   if not reviewed:raise MediaUnavailable('Pending publication photo missing; restore exact source asset')
-   media=reviewed_media(original,root,reviewed)
-   if media['imageSha256']!=a['sourceImage']['imageSha256']:raise MediaUnavailable('Pending reviewed photo changed')
-  if a['slug'] not in completed:report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':a['collection'],'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'propertyId':a['source'].get('propertyId'),'retryOfPendingPublication':True})
+  if a['slug'] in completed:continue
+  try:
+   if not (root/'public'/a['image'].lstrip('/')).exists():
+    original={'url':a['source']['url'],'summaryHash':a['source']['summaryHash'],'propertyId':a['source'].get('propertyId')}
+    reviewed=record_for(original,load_reviewed(root))
+    if not reviewed:raise MediaUnavailable('Pending publication photo missing; restore exact source asset')
+    media=reviewed_media(original,root,reviewed)
+    if media['imageSha256']!=a['sourceImage']['imageSha256']:raise MediaUnavailable('Pending reviewed photo changed')
+   report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':a['collection'],'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'propertyId':a['source'].get('propertyId'),'retryOfPendingPublication':True})
+  except Exception as e:
+   report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'propertyId':a['source'].get('propertyId'),'collection':a['collection'],'title':a['title'],'reason':str(e)})
  for source in cfg['sources']:
   try:
    data=fetch(source['url']);items,errors=parse_feed(data,source,now);report['sources'].append({'id':source['id'],'url':source['url'],'status':'ok','fetchedAt':now.isoformat(),'items':len(items),'errors':errors,'finalUrl':FETCHED_URLS.get(source['url'],source['url'])})
@@ -95,7 +99,7 @@ def main(root=ROOT,fetch=get,now=None):
   candidates=[x for x in candidates if source_key(x)!=source_key(item)];candidates.append(item)
  queue=state.setdefault('candidateQueue',{})
  for item in candidates:
-  old=queue.get(source_key(item),{});queue[source_key(item)]={**old,'item':item,'discoveredAt':old.get('discoveredAt',now.isoformat()),'status':'pending'}
+  old=queue.get(source_key(item),{});old=old if old.get('item',{}).get('summaryHash')==item['summaryHash'] else {};queue[source_key(item)]={**old,'item':item,'discoveredAt':old.get('discoveredAt',now.isoformat()),'status':'pending'}
  manual_valid_ids={source_key(x) for x in manual}
  for url,row in queue.items():
   i=row['item']
@@ -104,11 +108,22 @@ def main(root=ROOT,fetch=get,now=None):
   if now.date()-datetime.fromisoformat(i['sourceDate']).date()>timedelta(days=cfg['lookbackDays']):row['status']='expired';continue
   if not any(source_key(x)==source_key(i) for x in candidates):candidates.append(i)
  sp.write_text(json.dumps(state,indent=2)+'\n')
- for collection in cfg['collectionPriority']:
-  selected=sorted([x for x in candidates if x['collection']==collection],key=lambda x:(x['priority'],-datetime.fromisoformat(x['feedPublishedAt']).timestamp()))
+ retry=cfg.get('retryPolicy',{});attempted=0
+ last_collection={a['collection']:a['publishedAt'] for a in sorted(state['articles'],key=lambda a:a['publishedAt'])}
+ for collection in sorted(cfg['collectionPriority'],key=lambda c:last_collection.get(c,'')):
+  selected=sorted([x for x in candidates if x['collection']==collection],key=lambda x:(queue[source_key(x)].get('lastAttemptAt',''),x['priority'],-datetime.fromisoformat(x['feedPublishedAt']).timestamp()))
   for item in selected:
    if len(report['articles'])>=cfg.get('maxReviewedArticlesPerRun',cfg['maxArticlesPerRun']):break
    if source_key(item) not in manual_valid_ids and len(report['articles'])>=cfg['maxArticlesPerRun']:continue
+   row=queue[source_key(item)]
+   exhausted=row.get('attempts',0)>=retry.get('maxAttempts',5)
+   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
+   if exhausted or cooling:
+    row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
+    report.setdefault('publicationBlocks',[]).append({'sourceUrl':item['url'],'propertyId':item.get('propertyId'),'collection':collection,'title':item['title'],'reason':row.get('lastError','Retry held'),'retryStatus':row['status']})
+    continue
+   if attempted>=retry.get('maxCandidatesPerRun',12):continue
+   attempted+=1
    try:
     reviewed=record_for(item,records);sourceImage=reviewed_media(item,root,reviewed) if reviewed else resolve_media(item['url'],root,publisher=item['publisher']);a=feature(item,collection,now,cfg,sourceImage,reviewed);validate(a);state['articles'].append(a);urls.add(source_key(item));hashes.add(item['summaryHash']);report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':collection,'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':item['url'],'propertyId':item.get('propertyId')});queue[source_key(item)].update(status='stored-awaiting-verification',lastAttemptAt=now.isoformat());sp.write_text(json.dumps(state,indent=2)+'\n')
    except Exception as e:
@@ -146,5 +161,5 @@ def main(root=ROOT,fetch=get,now=None):
  return report
 
 def write_status(root,state,report):
- verified=next((r for r in reversed(state['runs']) if r.get('productionVerified')),None);status={'updatedAt':datetime.now(UTC).isoformat(),'runtime':'GitHub Actions cloud workflow','scheduleUTC':'43 */6 * * *','sopVersion':report['sopVersion'],'lastRunAt':report['startedAt'],'status':report['status'],'sources':[{'id':s['id'],'status':s['status'],'fetchedAt':s['fetchedAt'],'items':s.get('items',0)} for s in report['sources']],'collections':report.get('collections',[]),'googleDiscoveryItems':report['discovered'],'duplicatesFiltered':report['duplicates'],'quarantinedItems':report['quarantined'],'lastVerifiedFeatures':verified['articles'] if verified else [],'verifiedAt':verified.get('verifiedAt') if verified else None};(root/'public/publishing-status.json').write_text(json.dumps(status,indent=2)+'\n')
+ verified=next((r for r in reversed(state['runs']) if r.get('productionVerified')),None);status={'updatedAt':datetime.now(UTC).isoformat(),'runtime':'GitHub Actions cloud workflow','scheduleUTC':'43 */6 * * *','sopVersion':report['sopVersion'],'sotLoad':report.get('sotLoad'),'publicationBlocks':report.get('publicationBlocks',[]),'health':'degraded' if report.get('publicationBlocks') or any(s['status']=='error' for s in report['sources']) else 'healthy','ownerNotification':{'status':'unverified','owner':'site operations owner','nextAction':'Bind existing owner notification transport and verify actual delivery; public JSON is not notification proof'},'lastRunAt':report['startedAt'],'status':report['status'],'sources':[{'id':s['id'],'status':s['status'],'fetchedAt':s['fetchedAt'],'items':s.get('items',0)} for s in report['sources']],'collections':report.get('collections',[]),'googleDiscoveryItems':report['discovered'],'duplicatesFiltered':report['duplicates'],'quarantinedItems':report['quarantined'],'lastVerifiedFeatures':verified['articles'] if verified else [],'verifiedAt':verified.get('verifiedAt') if verified else None};(root/'public/publishing-status.json').write_text(json.dumps(status,indent=2)+'\n')
 if __name__=='__main__':main()

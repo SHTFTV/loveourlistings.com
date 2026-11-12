@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "canonicalSot": "operations/site-sop.json",
+  "sotVersion": 6,
+  "gateOrder": [
+    "canonicalSourceProduction",
+    "secureRuntimeAccess",
+    "minimalProductionWorkflow",
+    "dependentExtension",
+    "fullOperationalVerification"
+  ],
+  "preserveExistingWorkingContent": true,
+  "extensionCheck": "python3 scripts/worker_preflight.py --extension",
+  "gates": {
+    "canonicalSourceProduction": {
+      "verified": true,
+      "sourceCommit": "cb29ad8f3d5c330c82edd595cd14da408f229c14",
+      "deployment": "dpl_22GUPYGuvZgJzAQYtDXFskqvgaGw",
+      "repository": "SHTFTV/loveourlistings.com",
+      "origin": "https://www.loveourlistings.com",
+      "scope": "Verified existing baseline; changed revision requires fresh deployment evidence"
+    },
+    "secureRuntimeAccess": {
+      "verified": false,
+      "status": "pending-current-job-actual-API-test",
+      "receipt": "operations/runtime-access.json"
+    },
+    "minimalProductionWorkflow": {
+      "verified": true,
+      "run": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43118032165",
+      "trigger": "push",
+      "receipt": "operations/latest-run.json",
+      "scope": "Existing source-grounded writer, publish and live checks; updated worker still requires fresh cloud proof"
+    },
+    "dependentExtension": {
+      "verified": false,
+      "status": "held-until-current-access-proof"
+    },
+    "fullOperationalVerification": {
+      "verified": false,
+      "missing": [
+        "Current revised worker cloud run",
+        "Current native-scheduled execution",
+        "Desktop and phone visual QA",
+        "Delivered owner notification",
+        "Google Alerts inbox ingestion reconciliation"
+      ]
+    }
+  }
+}

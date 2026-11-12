@@ -15,6 +15,8 @@ on:
       - 'scripts/rss_runtime.py'
       - 'scripts/verify_property_publication.py'
       - 'operations/site-sop.json'
+      - 'scripts/worker_preflight.py'
+      - 'operations/build-contract.json'
 permissions:
   contents: write
 concurrency:
@@ -36,12 +38,19 @@ jobs:
         run: python3 -m pip install --disable-pip-version-check Pillow==12.0.0
       - name: Verify source/date/deduplication/feature rules
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Validate required scoped writer access in the actual cloud runtime
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python3 scripts/worker_preflight.py
       - name: Load current SOP, collect property and Google RSS, write original features
         id: collect
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-        run: python3 scripts/publish_properties.py
+        run: |
+          export LOADED_SOURCE_COMMIT="$(git rev-parse HEAD)"
+          python3 scripts/publish_properties.py
       - name: Validate new static articles and preserved history
         run: python3 scripts/verify_property_publication.py
       - name: Build the existing magazine
@@ -52,9 +61,11 @@ jobs:
           npm run build
       - name: Commit durable source-led features and operational outcome
         run: |
+          git fetch origin main
+          python3 scripts/worker_preflight.py --fence
           git config user.name SHTFTV
           git config user.email 264305872+SHTFTV@users.noreply.github.com
-          git add package-lock.json public/journal public/images/journal public/images/source-properties public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts src/data/articleIndex.json operations/property-media.json operations/seo-category-coverage.json operations/publisher-state.json operations/latest-run.json
+          git add operations/runtime-access.json package-lock.json public/journal public/images/journal public/images/source-properties public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts src/data/articleIndex.json operations/property-media.json operations/seo-category-coverage.json operations/publisher-state.json operations/latest-run.json
           if ! git diff --cached --quiet; then
             git commit -m 'Publish original We Love This Listing features and source evidence'
             git push origin HEAD:main
@@ -80,7 +91,7 @@ jobs:
             python3 scripts/verify_property_publication.py --failure
             git config user.name SHTFTV
             git config user.email 264305872+SHTFTV@users.noreply.github.com
-            git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json public/images/source-properties
+            git add operations/runtime-access.json operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json public/images/source-properties
             if ! git diff --cached --quiet; then
               git commit -m 'Record failed Love Our Listings publication check'
               git push origin HEAD:main

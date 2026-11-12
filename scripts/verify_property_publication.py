@@ -37,9 +37,10 @@ def record_results(root,report,status):
   for block in blocks:
    identity=(block.get('sourceUrl') or report.get('runUrl','unknown-run'))+('|property:'+block['propertyId'] if block.get('propertyId') else '');event_id='loveourlistings.com:hold:'+hashlib.sha256(identity.encode()).hexdigest()[:20]
    reason='Native exact-property photo cannot support1600x900 without upscaling' if '1600x900' in block.get('reason','') else 'Source or publication validation failed; inspect the existing run'
-   event={'id':event_id,'site':'loveourlistings.com','title':(block.get('title') or identity)+' — '+reason,'sourceUrl':block.get('sourceUrl'),'publishedAt':None,'verifiedAt':None,'url':None,'status':'failed','checkedAt':datetime.now(timezone.utc).isoformat(),'runUrl':report.get('runUrl'),'nextAction':'Recover a sufficient native original for the same property and source-specific reviewed copy; verify image/crop QA before release.'}
+   event={'id':event_id,'site':'loveourlistings.com','title':(block.get('title') or identity)+' — '+reason,'sourceUrl':block.get('sourceUrl'),'publishedAt':None,'verifiedAt':None,'url':None,'status':'failed','checkedAt':datetime.now(timezone.utc).isoformat(),'runUrl':report.get('runUrl'),'cause':block.get('reason'),'impact':'This property remains unpublished; independent candidates continue','blockedSince':report.get('startedAt'),'freshness':'current-run','owner':'LoveOurListings site worker owner','nextAction':'Recover a sufficient native original for the same property and source-specific reviewed copy; verify image/crop QA before release.'}
    old=next((e for e in data['events'] if e['id']==event_id),None)
-   if old:old.update(event)
+   if old:
+    event['blockedSince']=old.get('blockedSince',old.get('checkedAt',event['blockedSince']));old.update(event)
    else:data['events'].append(event)
  if status=='done':
   completed={'loveourlistings.com:hold:'+hashlib.sha256((a['sourceUrl']+('|property:'+a['propertyId'] if a.get('propertyId') else '')).encode()).hexdigest()[:20] for a in report['articles'] if a.get('sourceUrl')}
@@ -68,7 +69,7 @@ def live(root=ROOT,timeout=600):
    manifest=get('https://www.loveourlistings.com/journal/published.json');index=get('https://www.loveourlistings.com/journal/');sitemap=get('https://www.loveourlistings.com/sitemap.xml');feed=get('https://www.loveourlistings.com/journal/feed.xml')
    for a in r['articles']:
     h=get(a['url']);assert a['publishedAt'] in h and a['sourceUrl'] in h,'Live article does not match new source/time';assert 'We Love This Listing' in h and 'Want to see your property here?' in h,'Live feature brand/CTA missing';assert a['slug'] in manifest and a['slug'] in index and a['url'] in sitemap and a['slug'] in feed,'Live discovery outputs stale'
-   r.update(status='published-and-verified',productionVerified=True,verifiedAt=datetime.now(timezone.utc).isoformat());state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');(root/'operations/latest-run.json').write_text(json.dumps(r,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'done');print('VERIFIED NEW PUBLIC FEATURES',json.dumps(r['articles']));return
+   r.update(status='published-and-verified-with-blockers' if r.get('publicationBlocks') or any(s['status']=='error' for s in r['sources']) else 'published-and-verified',productionVerified=True,verifiedAt=datetime.now(timezone.utc).isoformat());state=json.loads((root/'operations/publisher-state.json').read_text());state['runs'][-1].update(r);(root/'operations/publisher-state.json').write_text(json.dumps(state,indent=2)+'\n');(root/'operations/latest-run.json').write_text(json.dumps(r,indent=2)+'\n');write_status(root,state,r);record_results(root,r,'done');print('VERIFIED NEW PUBLIC FEATURES',json.dumps(r['articles']));return
   except Exception as e:last=str(e);time.sleep(15)
  raise RuntimeError('Content commit exists but public publication did not verify: '+last)
 def failed(root=ROOT):
