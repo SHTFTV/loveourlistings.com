@@ -10,7 +10,7 @@ try{
  const archive=await browser.newPage();await archive.goto('https://www.loveourlistings.com/journal/',{waitUntil:'domcontentloaded',timeout:45000});
  report.archiveImageChecks=await archive.evaluate(async rows=>Promise.all(rows.map(async a=>{
   if(!a.image?.startsWith('/images/'))return {slug:a.slug,status:'invalid-local-image-reference'};
-  const im=new Image();im.src=a.image;try{await Promise.race([im.decode(),new Promise((_,reject)=>setTimeout(()=>reject(Error('image-timeout')),12000))]);return {slug:a.slug,image:a.image,width:im.naturalWidth,height:im.naturalHeight,status:im.naturalWidth>=1600&&im.naturalHeight>=900?'passed':'native-below1600x900'};}catch{return {slug:a.slug,image:a.image,status:'image-load-failed'};}
+  const im=new Image();im.src=a.image;try{await Promise.race([im.decode(),new Promise((_,reject)=>setTimeout(()=>reject(Error('image-timeout')),12000))]);return {slug:a.slug,image:a.image,width:im.naturalWidth,height:im.naturalHeight,status:im.naturalWidth===1600&&im.naturalHeight===900?'passed':im.naturalWidth<1600||im.naturalHeight<900?'native-below1600x900':'nonstandard1600x900-output'};}catch{return {slug:a.slug,image:a.image,status:'image-load-failed'};}
  })),manifest.slice(0,200));await archive.close();for(const image of report.archiveImageChecks)if(image.status!=='passed')report.findings.push('published-archive/'+image.slug+': '+image.status);
 
  for(const viewport of [{name:'desktop',width:1440,height:1000},{name:'phone',width:390,height:844}]){
