@@ -56,3 +56,13 @@ class EstablishedFutureBody(unittest.TestCase):
   raw=('<meta property="og:title" content="Exact Georgian Home"><meta property="og:url" content="'+url+'"><meta property="article:published_time" content="2026-11-12T16:00:00Z"><article><p>Unrelated outside paragraph should not enter evidence.</p><div id="article-body"><p>'+words*3+'</p><aside><p>Excluded unrelated widget</p></aside></div></article>').encode();result=recover(item,sop,fetch=lambda _:raw);self.assertNotIn('Unrelated outside',result['sourceEvidence']['text']);self.assertNotIn('widget',result['sourceEvidence']['text'])
   for altered in [raw.replace(b'id="article-body"',b'id="other"'),raw.replace(b'Exact Georgian Home',b'Other Georgian Home'),raw.replace(b'2026-11-12T',b'2026-11-11T')]:
    with self.assertRaises(ValueError):recover(item,sop,fetch=lambda _:altered)
+
+class SharedPropertyTypeGate(unittest.TestCase):
+ def test_castle_and_tower_reach_same_audited_writer_as_other_individual_properties(self):
+  base={'sourceId':'countrylife-property','publisher':'Country Life','url':'https://www.countrylife.co.uk/property/actual-castle','sourceDate':'2026-11-12','feedPublishedAt':'2026-11-12T12:00:00+00:00','summary':'Dated source facts about this individual property.','summaryHash':'hash'}
+  draft={'title':'We Love This Listing: Actual Property','deck':'Actual source grounded property.','paragraphs':[['Source','Specific facts.']],'writer':{'provider':'fixture'}}
+  for title in ['A commutable castle in 12 acres','A converted water tower is on the market']:
+   item={**base,'title':title}
+   with patch('publish_properties.recover_evidence',return_value={**item,'sourceEvidence':{'text':'Verified source facts'}}),patch('property_writer.write_feature',return_value=draft) as writer:
+    result=feature(item,category(item),fixtures.NOW,{'timezone':'America/Vancouver','version':13},fixtures.MEDIA)
+   writer.assert_called_once();self.assertEqual(result['title'],draft['title'])

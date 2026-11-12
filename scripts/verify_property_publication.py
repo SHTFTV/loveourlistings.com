@@ -55,10 +55,12 @@ def hold_results(root=ROOT):
  if path.exists():
   data=json.loads(path.read_text())
   for check in report.get('candidateChecks',[]):
-   if check['outcome']!='duplicate-property':continue
+   if check['outcome'] not in ['duplicate-property','not-individual-property']:continue
    event_id='loveourlistings.com:hold:'+hashlib.sha256(check['sourceUrl'].encode()).hexdigest()[:20]
    for event in data.get('events',[]):
-    if event.get('id')==event_id:event.update(correction=True,withdrawn=True,correctionReason=check['reason'],existingArticleUrl='https://www.loveourlistings.com/journal/'+check['duplicateOfArticleSlug']+'/')
+    if event.get('id')==event_id:
+     event.update(correction=True,withdrawn=True,correctionReason=check['reason'])
+     if check.get('duplicateOfArticleSlug'):event['existingArticleUrl']='https://www.loveourlistings.com/journal/'+check['duplicateOfArticleSlug']+'/'
   path.write_text(json.dumps(data,indent=2)+'\n')
 
 def get(url):

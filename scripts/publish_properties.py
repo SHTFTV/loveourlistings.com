@@ -14,14 +14,16 @@ from automatic_trigger import verify as verify_automatic_trigger
 from reviewed_properties import load as load_reviewed,record_for,reviewed_media,manual_candidates,source_key
 ROOT=Path(__file__).resolve().parents[1];UTC=timezone.utc
 E=lambda x:html.escape(str(x),quote=True)
+PROPERTY_TYPES=r'\b(?:inside|home|house|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat|castle|manor|tower|conversion)\b'
 ILLUSTRATION_DISCLOSURE_HTML='<p class="lol-note">Original illustration — not the property</p>'
 def category(item):
  t=(item['title']+' '+item['summary'][:750]).lower()
+ if '/art-collectibles/' in item.get('url',''):return None
  if 'sotheby' in item['publisher'].lower() and not item['title'].lower().startswith('inside '):return None
  classification_title=re.sub(r'\b(?:on|hits|hit) the market\b','',item['title'],flags=re.I)
  if re.search(r'\b(?:market|sales|prices|painting|museum|competition|design trends|lighting|color chart|art of display)\b',classification_title,re.I):return None
  if item.get('sourceId')=='countrylife-property' and re.search(r'\b(?:homes|houses|properties|discount|opportunists|mortgage|buyers|tax|budget|guide)\b',item['title'],re.I):return None
- if not re.search(r'\b(?:inside|home|house|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat|castle|manor|tower|conversion)\b',item['title'],re.I):return None
+ if not re.search(PROPERTY_TYPES,item['title'],re.I):return None
  if re.search(r'\bpenthouse\b',t):return 'penthouses'
  if re.search(r'\b(?:ranch|equestrian)\b',t):return 'ranches'
  if any(float(m.replace(',',''))>=10 for m in re.findall(r'\b(\d[\d,]*(?:\.\d+)?)\s*[- ]\s*acres?\b',t)):return 'acreage'
@@ -44,7 +46,7 @@ def feature(item,collection,now,sop,sourceImage=None,reviewed=None):
   deck='An ocean outlook and a private observatory put two very different kinds of sky in the same property story.'
   paragraphs=[('Two ways to enjoy the setting',f"In its {sourceDate} report, {publisher} describes a Malibu residence with an ocean outlook and a private observatory. That pairing is the reason for this coastal selection. The source calls it ocean-view; we are not turning that into a claim of direct frontage, beach ownership or shore access."),('Why we love this listing','The unusual room is a useful starting point, but the real appeal is the routine it suggests: time outside, a changing horizon and somewhere to look beyond the familiar view. A distinctive feature earns its place when it changes how a home might be enjoyed, rather than merely extending an inventory.'),('The practical reading','We would ask how the observatory and outdoor areas relate to the spaces used every day. Equipment, access, condition and local constraints belong in a specific property review. Follow the original publication for the reported design details, asking terms and photography; confirm present availability with the listing professional.')]
  else:
-  if not re.search(r'\b(?:inside|home|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat)\b',title,re.I):raise ValueError('Not a supported individual property story')
+  if not re.search(PROPERTY_TYPES,title,re.I):raise ValueError('Not a supported individual property story')
   from property_writer import write_feature
   try:
    if len(item['summary'].split())<55 and not item.get('sourceEvidence'):item=recover_evidence(item,sop)
@@ -142,6 +144,8 @@ def main(root=ROOT,fetch=get,now=None):
  for url,row in queue.items():
   i=row['item']
   if source_key(i) in urls:row['status']='stored-awaiting-verification';continue
+  if i.get('intake')!='reviewed-original-property-source' and category(i) is None:
+   row['status']='not-individual-property';decision(report,i,row,'not-individual-property','Cached art/news item is outside the individual-property feature scope');continue
   if i.get('intake')=='reviewed-original-property-source' and source_key(i) not in manual_valid_ids:row.update(status='retry',lastError='Reviewed source no longer eligible; source validation failed or record removed');continue
   if now.date()-datetime.fromisoformat(i['sourceDate']).date()>timedelta(days=cfg['lookbackDays']):row['status']='expired';continue
   if not any(source_key(x)==source_key(i) for x in candidates):candidates.append(i)
@@ -160,9 +164,10 @@ def main(root=ROOT,fetch=get,now=None):
   art_changed=bool(art and row.get('illustrationRevision')!=art_revision)
   media_record=records.get(item['url']);media_revision=hashlib.sha256(json.dumps(media_record,sort_keys=True).encode()).hexdigest() if media_record and media_record.get('media') and media_record.get('summaryHash')==item['summaryHash'] else None
   media_changed=bool(media_revision and row.get('reviewedMediaRevision')!=media_revision)
+  type_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Not a supported individual property story' and category(item) is not None and not row.get('typeGateCorrectionApplied')
   exhausted=row.get('attempts',0)>=retry.get('maxAttempts',5)
   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
-  if (exhausted or cooling) and not art_changed and not media_changed:
+  if (exhausted or cooling) and not art_changed and not media_changed and not type_gate_correction:
    row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
    next_at=(datetime.fromisoformat(row['lastAttemptAt'])+timedelta(hours=retry.get('cooldownHours',6))).isoformat() if not exhausted and row.get('lastAttemptAt') else None
    decision(report,item,row,row['status'],row.get('lastError','Retry held'),next_at)
@@ -172,6 +177,7 @@ def main(root=ROOT,fetch=get,now=None):
    row['status']='queued-next-cycle';decision(report,item,row,'deferred-article-limit','Per-run article limit; independent queued item remains eligible',now.isoformat());continue
   if attempted>=retry.get('maxCandidatesPerRun',12):
    row['status']='queued-next-cycle';decision(report,item,row,'deferred-attempt-budget','Bounded run budget; durable rotation resumes another item next cycle',now.isoformat());continue
+  if type_gate_correction:row['typeGateCorrectionApplied']=True
   attempted+=1;row['checks']=row.get('checks',0)+1;state.setdefault('collectionLastAttemptAt',{})[collection]=now.isoformat()
   if media_revision:row['reviewedMediaRevision']=media_revision
   try:
@@ -202,7 +208,7 @@ def main(root=ROOT,fetch=get,now=None):
     row.update(illustrationRevision=art_revision,illustrationDraft=a,previewContentSha256=content_hash,previewPath='/editorial-preview/'+a['slug']+'/',previewBranch='editorial-preview-'+os.environ.get('GITHUB_RUN_ID','local-test')+'-'+os.environ.get('GITHUB_RUN_ATTEMPT','1'),lastAttemptAt=now.isoformat())
     report.setdefault('previews',[]).append({'sourceUrl':item['url'],'url':None,'path':row['previewPath'],'deploymentBranch':row['previewBranch'],'contentSha256':content_hash,'image':sourceImage['imageUrl'],'label':sourceImage['label'],'status':'unpublished-awaiting-desktop-phone-QA'})
     raise MediaUnavailable('Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication')
-   state['articles'].append(a);urls.add(source_key(item));hashes.add(item['summaryHash']);report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':collection,'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':item['url'],'propertyId':item.get('propertyId')});queue[source_key(item)].update(status='stored-awaiting-verification',lastAttemptAt=now.isoformat());decision(report,item,row,'stored-awaiting-verification','New feature awaits actual deployment and live verification');sp.write_text(json.dumps(state,indent=2)+'\n')
+   state['articles'].append(a);urls.add(source_key(item));hashes.add(item['summaryHash']);report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':collection,'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':item['url'],'propertyId':item.get('propertyId')});queue[source_key(item)].update(status='stored-awaiting-verification',lastAttemptAt=now.isoformat(),lastError=None);decision(report,item,row,'stored-awaiting-verification','New feature awaits actual deployment and live verification');sp.write_text(json.dumps(state,indent=2)+'\n')
   except Exception as e:
    queue[source_key(item)].update(status='retry',lastAttemptAt=now.isoformat(),attempts=queue[source_key(item)].get('attempts',0)+1,lastError=str(e));sp.write_text(json.dumps(state,indent=2)+'\n')
    next_at=(now+timedelta(hours=retry.get('cooldownHours',6))).isoformat() if row.get('attempts',0)<retry.get('maxAttempts',5) else None
