@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';
+const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+const decode=s=>s.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
+const value=(h,key,attr='name')=>decode(h.match(new RegExp(`<meta[^>]*${attr}="${key}"[^>]*content="([^"]*)"`,'i'))?.[1]||'');
+function meta(h,key,v,attr='name'){if(!v)return h;const tag=`<meta ${attr}="${key}" content="${escape(v)}">`,re=new RegExp(`<meta[^>]*${attr}="${key}"[^>]*>`,'i');return re.test(h)?h.replace(re,tag):h.replace('</head>',tag+'</head>');}
+function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,entry.name);if(entry.isDirectory()){walk(file);continue;}if(!file.endsWith('.html'))continue;let h=fs.readFileSync(file,'utf8');const title=decode(h.match(/<title>([\s\S]*?)<\/title>/i)?.[1]||''),description=value(h,'description'),canonical=h.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/i)?.[1];let image=value(h,'og:image','property');if(!image){const candidate=[...h.matchAll(/<img[^>]+src="([^"]+)"/g)].map(x=>x[1]).find(x=>!/(?:logo|favicon|placeholder)/i.test(x));if(candidate)image=new URL(candidate,'https://www.loveourlistings.com').href;}
+ for(const [key,v,attr] of [['og:title',title,'property'],['og:description',description,'property'],['og:url',canonical,'property'],['og:image',image,'property'],['twitter:card','summary_large_image','name'],['twitter:title',title,'name'],['twitter:description',description,'name'],['twitter:image',image,'name']])h=meta(h,key,v,attr);
+ if(!/<link[^>]+rel="icon"/i.test(h))h=h.replace('</head>','<link rel="icon" href="/favicon.png" type="image/png"></head>');if(!/<link[^>]+rel="apple-touch-icon"/i.test(h))h=h.replace('</head>','<link rel="apple-touch-icon" href="/favicon.png"></head>');fs.writeFileSync(file,h);}}
+walk('dist');

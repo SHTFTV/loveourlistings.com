@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 8,
+  "version": 9,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -210,5 +210,44 @@
     "credential": "GitHub-managed ephemeral same-repository GITHUB_TOKEN; Actions write only as needed; no personal token",
     "evidence": "Report workflow_dispatch plus independently verified health origin; never label recovery as native schedule",
     "safeguards": "Existing sole-writer concurrency; max2 ordinary articles; max4 candidate attempts;6h failed-item cooldown;5 attempts; preserve history/deduplication; per-item source/media failures remain visible and cannot stop recovery handoff"
+  },
+  "fourRoles": {
+    "priority": 2,
+    "publicReceiptUrl": "https://www.loveourlistings.com/four-roles.json",
+    "roles": {
+      "publisher": {
+        "workflow": ".github/workflows/property-publisher.yml",
+        "policy": "Existing sole writer; original site-specific property features130-320words including CTA; not a forced2000word template"
+      },
+      "visual": {
+        "workflow": ".github/workflows/role-visual.yml",
+        "scope": "Actual public homepage, journal and latest verified published article, desktop1440x1000 and phone390x844 Chromium screenshots, images/cards, readability and overflow",
+        "minimumSpacingMinutes": 15,
+        "protectedIllustrationApproval": "Separate exact frozen-preview review remains required; this checker does not set those approval flags"
+      },
+      "supervisor": {
+        "workflow": ".github/workflows/role-supervisor.yml",
+        "scope": "Independent check of actual publisher workflow run and source/result/heartbeat/SOT receipt plus actual visual checker artifact"
+      },
+      "watchdog": {
+        "workflow": ".github/workflows/role-watchdog.yml",
+        "scope": "Independent supervisor freshness and unresolved findings; require actual authorized owner-alert delivery receipt"
+      }
+    },
+    "ownerDeliveryReceiptUrl": null,
+    "ownerAlertRoute": "Existing authorized Command Center / owner chat; shared alert integration owner retains transport control; no new channel or credentials created",
+    "freshnessSeconds": {
+      "publisher": 900,
+      "visual": 1800,
+      "supervisor": 900,
+      "watchdog": 900
+    },
+    "greenRule": "All4actual site-specific unattended runtime receipts fresh, loaded approvedSOT matched, passed, and actual required owner-alert delivery verified. Missing/stale/unknown/failure remains red.",
+    "pageStandards": [
+      "Own relevant page title/description/canonical/OG and Twitter image/title/description",
+      "Proper existing favicon and icons",
+      "Source-grounded editorial and appropriate schema for SEO/AEO/GEO/LLM readability; no invented geographic or property facts",
+      "Preserve exact media/illustration disclosures and all approval gates"
+    ]
   }
 }

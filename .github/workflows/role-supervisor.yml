@@ -1,0 +1,40 @@
+name: Love Our Listings role supervisor
+on:
+  workflow_run:
+    workflows: ["Love Our Listings same-publisher recovery"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '19 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/role-supervisor.yml'
+      - 'scripts/roles/**'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: love-our-listings-role-supervisor
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Execute independent supervisor against actual runtime receipts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/roles/supervisor.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: role-supervisor-receipt
+          path: work/roles/supervisor/receipt.json
+          if-no-files-found: error
+          retention-days: 3

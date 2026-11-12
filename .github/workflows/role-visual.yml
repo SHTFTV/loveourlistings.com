@@ -1,0 +1,55 @@
+name: Love Our Listings role visual
+on:
+  workflow_run:
+    workflows: ["Love Our Listings RSS to verified publication"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/role-visual.yml'
+      - 'scripts/roles/**'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: love-our-listings-role-visual
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Bound actual browser checks to fifteen-minute spacing
+        id: due
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/roles/should_visual.py
+      - name: Install pinned browser checker from official package
+        if: steps.due.outputs.run == 'true'
+        run: |
+          npm install --prefix /tmp/lol-visual --ignore-scripts --no-audit --no-fund playwright@1.65.0
+          /tmp/lol-visual/node_modules/.bin/playwright install --with-deps chromium
+      - name: Render actual public site at desktop and phone sizes
+        if: steps.due.outputs.run == 'true'
+        run: node scripts/roles/visual.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && steps.due.outputs.run == 'true'
+        with:
+          name: role-visual-receipt
+          path: work/roles/visual/receipt.json
+          if-no-files-found: error
+          retention-days: 3
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && steps.due.outputs.run == 'true'
+        with:
+          name: role-visual-screenshots-${{ github.run_id }}
+          path: work/roles/visual/*.jpg
+          retention-days: 1
