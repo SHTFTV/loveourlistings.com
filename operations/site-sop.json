@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "version": 6,
+  "version": 7,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
   "featureBrand": "We Love This Listing",
   "featureCTA": "Want to see your property here?",
   "publicationMode": "automatic-validation-and-quarantine",
-  "scheduleUTC": "43 */6 * * *",
+  "scheduleUTC": "43 * * * *",
   "lookbackDays": 14,
   "maxArticlesPerRun": 2,
   "collections": [
@@ -152,6 +152,11 @@
       "date": "2026-11-11",
       "source": "Explicit owner six-collection manual recovery order",
       "decision": "Up to six explicitly reviewed, source-validated property features may proceed in one recovery run; this is a processing bound, not a publication quota. Ordinary automatic writer limit remains unchanged. Distinct real properties inside one genuine source roundup retain canonical property IDs and the original source URL/date."
+    },
+    {
+      "date": "2026-11-11",
+      "source": "Explicit continuation instruction to repair timely polling in existing sole worker",
+      "decision": "Hourly native polling at minute43; preserve two-article ordinary processing bound, six-hour failed-item cooldown, five-attempt retry bound, history and deduplication. Polling is not a posting quota."
     }
   ],
   "sourceFeaturedMedia": {
@@ -163,13 +168,20 @@
     "credit": "Source/author credit and original source link; no licence badge or claim. Respect explicit source reuse prohibition; unsupported media quarantined before article append.",
     "futureGate": "Source photo must decode, retain exact source pairing and support1600x900 without upscaling before article append. Actual visual/crop QA remains a separate required integration.",
     "readerTreatment": "Real image on card and article header, modest LOLlabel outsidephoto; no review notices or defaultplayoverlay",
-    "preservation": "24articles original routes,publication/source dates,existingSEO/SSR/canonicals/categorysections preserved"
+    "preservation": "24articles original routes,publication/source dates,existingSEO/SSR/canonicals/categorysections preserved",
+    "illustrationFallback": {
+      "manifest": "operations/original-illustrations.json",
+      "priority": "Only after exact source photograph fails; original media always first",
+      "description": "Original source-topic editorial art, never represented as the actual property; visible label on card/header and explicit credit/alt",
+      "requirements": "Source summary and image SHA256 bound; native1600x900; image, desktop and phone QA true before article append",
+      "preview": "Existing publisher may write a noindex editorial preview before layout QA; no publication receipt or hold recovery until verified release"
+    }
   },
   "maxReviewedArticlesPerRun": 6,
   "retryPolicy": {
     "maxAttempts": 5,
     "cooldownHours": 6,
-    "maxCandidatesPerRun": 12,
+    "maxCandidatesPerRun": 4,
     "ordering": "least recently attempted first within collections; least recently published collection first"
   },
   "preBuildGate": {

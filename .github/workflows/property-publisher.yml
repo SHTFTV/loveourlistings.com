@@ -1,7 +1,7 @@
 name: Love Our Listings RSS to verified publication
 on:
   schedule:
-    - cron: '43 */6 * * *'
+    - cron: '43 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -9,6 +9,8 @@ on:
       - '.github/workflows/property-publisher.yml'
       - 'scripts/publish_properties.py'
       - 'scripts/property_media.py'
+      - 'scripts/original_illustration.py'
+      - 'operations/original-illustrations.json'
       - 'scripts/reviewed_properties.py'
       - 'scripts/property_writer.py'
       - 'operations/reviewed-properties.json'
@@ -84,6 +86,20 @@ jobs:
       - name: Verify public command-center publication results log
         if: steps.collect.outputs.has_articles == 'true'
         run: python3 scripts/verify_property_publication.py --log
+      - name: Save protected Vercel editorial preview without publishing a journal article
+        if: always()
+        run: |
+          if [ -d work/editorial-previews ]; then
+            mkdir -p public/editorial-preview
+            cp -R work/editorial-previews/. public/editorial-preview/
+            git config user.name SHTFTV
+            git config user.email 264305872+SHTFTV@users.noreply.github.com
+            git add public/editorial-preview
+            git commit -m 'Preview unpublished labeled illustration for visual QA'
+            git push origin HEAD:refs/heads/editorial-preview-${GITHUB_RUN_ID}
+            git reset --mixed HEAD^
+            python3 -c "import shutil; shutil.rmtree('public/editorial-preview')"
+          fi
       - name: Persist failure visibility without pretending publication succeeded
         if: failure()
         run: |

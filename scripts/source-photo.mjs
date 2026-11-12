@@ -1,3 +1,7 @@
+export function approvedOriginalIllustration(media,sourceUrls){
+ if(media?.status!=='verified-original-illustration'||media.isIllustration!==true||media.releaseReady!==true||!['image','desktop','phone'].every(k=>media.visualQa?.[k]===true)||!media.imageUrl?.startsWith('/images/editorial-illustrations/')||media.width!==1600||media.height!==900||!/^[a-f0-9]{64}$/i.test(media.imageSha256||'')||media.label!=='Original illustration — not the property'||!media.credit?.toLowerCase().includes('not the property')||!sourceUrls.some(u=>u.replace(/\/$/,'')===media.sourceUrl?.replace(/\/$/,'')))return null;
+ return media;
+}
 export function approvedSourcePhoto(media,sourceUrls,reviewed){
  if(media?.status!=='verified-public-source'||!media.imageUrl?.startsWith('/images/source-properties/')||!media.credit||!/^https:\/\//.test(media.originalImageUrl||'')||!/^[a-f0-9]{64}$/i.test(media.imageSha256||'')||media.width<480||media.height<250)return null;
  const key=u=>u?.replace(/\/$/,'');

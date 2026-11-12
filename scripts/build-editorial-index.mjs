@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {approvedSourcePhoto} from './source-photo.mjs';
+import {approvedSourcePhoto,approvedOriginalIllustration} from './source-photo.mjs';
 const root=process.cwd();
 const readJSON=(p,d={})=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):d;
 const decode=s=>(s||'').replace(/\\u([0-9a-f]{4})/gi,(m,h)=>{const n=parseInt(h,16);return n>=0x80?String.fromCharCode(n):m}).replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>');
@@ -38,14 +38,14 @@ for(const dir of fs.readdirSync(path.join(root,'public/journal'),{withFileTypes:
  const sourceDerived=sourceUrls.length>0||slug.startsWith('we-love-');
  const source=pipeline.get(slug)?.source;
  const reviewedRecord=Object.entries(reviewedProperties).find(([key,r])=>source&&sourceKey(r.item?.url||key)===sourceKey(source.url)&&(r.propertyId??null)===(source.propertyId??null)&&r.summaryHash===source.summaryHash)?.[1];
- const approved=Boolean(approvedSourcePhoto(sourceImage,sourceUrls,{record:reviewedRecord,source}));
+ const approved=Boolean((approvedSourcePhoto(sourceImage,sourceUrls,{record:reviewedRecord,source})||approvedOriginalIllustration(sourceImage,sourceUrls)));
  const figure=article.match(/<figure\b[^>]*>([\s\S]*?)<\/figure>/i)?.[1]||'';
  const originalImage=figure.match(/<img[^>]+src="([^"]+)"/)?.[1];
  const image=approved?sourceImage.imageUrl:!sourceDerived?originalImage||null:null;
  const watch=article.match(/https:\/\/(?:www\.)?youtube\.com\/watch\?v=[\w-]+/)?.[0]||((article.match(/youtube\.com\/embed\/([\w-]+)/)?.[1])? 'https://www.youtube.com/watch?v='+article.match(/youtube\.com\/embed\/([\w-]+)/)[1]:null);
  const caption=decode(figure.match(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/i)?.[1].replace(/<[^>]+>/g,'')||'');
  const canonical=html.match(/rel="canonical"[^>]+href="https:\/\/(?:www\.)?loveourlistings\.com([^"#]+)"/)?.[1]||'/journal/'+slug+'/';
- articles.push({slug,title,deck:meta(html,'description'),publishedAt,dateLabel:new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:publishedAt.length===10?'UTC':'America/Vancouver'}).format(new Date(publishedAt)),collection,collections:[...new Set([collection,...(extra[slug]||[])])],canonicalPath:canonical,image,imageAlt:approved?(sourceImage.sourceImageAlt||title):caption,imageCredit:approved?sourceImage.credit:caption,imageSourceUrl:approved?sourceImage.sourceUrl:null,imageWidth:approved?sourceImage.width:1200,imageHeight:approved?sourceImage.height:700,sourceMediaKind:approved?sourceImage.selection:null,watchUrl:watch,sourceDerived,sourceImageStatus:approved?'verified-public-source':sourceDerived?'not-verified':'original-editorial',tourCredit:watch?(caption.match(/Original film: ([^.]+)\./)?.[1]||caption.match(/Original listing tour from ([^,]+),/)?.[1]||'Original publisher tour'):null,sourceImageEvidence:approved?sourceImage.originalImageUrl:null});
+ articles.push({slug,title,deck:meta(html,'description'),publishedAt,dateLabel:new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:publishedAt.length===10?'UTC':'America/Vancouver'}).format(new Date(publishedAt)),collection,collections:[...new Set([collection,...(extra[slug]||[])])],canonicalPath:canonical,image,imageAlt:approved?(sourceImage.sourceImageAlt||title):caption,imageCredit:approved?sourceImage.credit:caption,imageSourceUrl:approved?sourceImage.sourceUrl:null,imageWidth:approved?sourceImage.width:1200,imageHeight:approved?sourceImage.height:700,sourceMediaKind:approved?sourceImage.selection:null,watchUrl:watch,sourceDerived,sourceImageStatus:approved?sourceImage.status:sourceDerived?'not-verified':'original-editorial',tourCredit:watch?(caption.match(/Original film: ([^.]+)\./)?.[1]||caption.match(/Original listing tour from ([^,]+),/)?.[1]||'Original publisher tour'):null,sourceImageEvidence:approved?sourceImage.originalImageUrl:null});
 }
 articles.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
 fs.mkdirSync(path.join(root,'src/data'),{recursive:true});

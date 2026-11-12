@@ -20,7 +20,7 @@ def built(root=ROOT):
   if not paired:
    reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash'],'propertyId':a['source'].get('propertyId')},load_reviewed(root))
    paired=bool(reviewed and media.get('pairedNewsSource')==a['source']['url'] and media.get('sourceUrl')==reviewed['media']['sourceUrl'] and media.get('originalImageUrl')==reviewed['media']['originalImageUrl'] and media.get('originalWidth')==reviewed['media']['nativeWidth'] and media.get('originalHeight')==reviewed['media']['nativeHeight'] and media.get('cropBox')==reviewed['media'].get('cropBox'))
-  assert media.get('status')=='verified-public-source' and paired,'Exact source/image pairing lost'
+  assert (media.get('status')=='verified-public-source' or (media.get('status')=='verified-original-illustration' and media.get('releaseReady') is True and all(media.get('visualQa',{}).get(k) is True for k in ['image','desktop','phone']))) and paired,'Exact source/image pairing lost'
   assert not a['image'].endswith('.svg'),'Generated SVG fallback is forbidden'
   assert item['slug'] in index and item['url'] in sitemap and any(x['slug']==item['slug'] for x in manifest),'New article undiscoverable'
  print('Built article/date/source/brand/CTA/exact-source-photo/manifest/sitemap checks passed:',len(r['articles']))
