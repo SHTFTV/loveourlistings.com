@@ -6,6 +6,13 @@ let browser;
 try{
  const manifest=await(await fetch('https://www.loveourlistings.com/journal/published.json')).json();const article=manifest[0];if(!article)throw Error('No actual published article manifest');report.article={slug:article.slug,publishedAt:article.publishedAt,image:article.image};
  browser=await chromium.launch();
+ // A new feature must not make a known undersized archive image disappear from evidence.
+ const archive=await browser.newPage();await archive.goto('https://www.loveourlistings.com/journal/',{waitUntil:'domcontentloaded',timeout:45000});
+ report.archiveImageChecks=await archive.evaluate(async rows=>Promise.all(rows.map(async a=>{
+  if(!a.image?.startsWith('/images/'))return {slug:a.slug,status:'invalid-local-image-reference'};
+  const im=new Image();im.src=a.image;try{await Promise.race([im.decode(),new Promise((_,reject)=>setTimeout(()=>reject(Error('image-timeout')),12000))]);return {slug:a.slug,image:a.image,width:im.naturalWidth,height:im.naturalHeight,status:im.naturalWidth>=1600&&im.naturalHeight>=900?'passed':'native-below1600x900'};}catch{return {slug:a.slug,image:a.image,status:'image-load-failed'};}
+ })),manifest.slice(0,200));await archive.close();for(const image of report.archiveImageChecks)if(image.status!=='passed')report.findings.push('published-archive/'+image.slug+': '+image.status);
+
  for(const viewport of [{name:'desktop',width:1440,height:1000},{name:'phone',width:390,height:844}]){
   const context=await browser.newContext({viewport:{width:viewport.width,height:viewport.height},deviceScaleFactor:1,isMobile:viewport.name==='phone',hasTouch:viewport.name==='phone'});
   for(const [name,path] of [['home','/'],['journal','/journal/'],['article','/journal/'+article.slug+'/']]){
