@@ -5,6 +5,11 @@ on:
     types: [completed]
     branches: [main]
   workflow_dispatch:
+    inputs:
+      publisher_origin_run:
+        description: Actual same-repository publisher run; independently verified
+        type: string
+        default: ''
   schedule:
     - cron: '19 * * * *'
   push:

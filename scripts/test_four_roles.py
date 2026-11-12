@@ -22,3 +22,15 @@ class FourRoles(unittest.TestCase):
  def test_only_current_same_site_workflow_artifact_is_trusted(self):
   with patch.object(common,'api',side_effect=[{'artifacts':[{'id':1,'expired':False,'workflow_run':{'id':2}}]},{'path':'.github/workflows/property-publisher.yml','head_branch':'main','repository':{'full_name':common.REPO}}]):
    result=common.latest('supervisor');self.assertFalse(result['verified']);self.assertEqual(result['status'],'missing')
+
+class RoleDispatchOrigin(unittest.TestCase):
+ def test_manual_actor_cannot_be_relabelled_as_unattended(self):
+  with patch.dict(common.os.environ,{'GITHUB_EVENT_NAME':'workflow_dispatch','GITHUB_ACTOR':'SHTFTV'}):self.assertFalse(common.automatic_origin()['verified'])
+ def test_bot_dispatch_requires_actual_same_repository_publisher_run(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   p=Path(tmp)/'event.json';p.write_text(json.dumps({'inputs':{'publisher_origin_run':'https://github.com/SHTFTV/loveourlistings.com/actions/runs/123'}}))
+   env={'GITHUB_EVENT_NAME':'workflow_dispatch','GITHUB_ACTOR':'github-actions[bot]','GITHUB_EVENT_PATH':str(p)}
+   run={'path':'.github/workflows/property-publisher.yml','head_branch':'main','repository':{'full_name':common.REPO},'run_started_at':common.now().isoformat()}
+   with patch.dict(common.os.environ,env),patch.object(common,'api',return_value=run):self.assertTrue(common.automatic_origin()['verified'])
+   for wrong in [{'path':'.github/workflows/other.yml'},{'head_branch':'other'},{'repository':{'full_name':'other/repo'}},{'run_started_at':(common.now()-timedelta(hours=1)).isoformat()}]:
+    with patch.dict(common.os.environ,env),patch.object(common,'api',return_value={**run,**wrong}):self.assertFalse(common.automatic_origin()['verified'])

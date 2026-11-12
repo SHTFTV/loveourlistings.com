@@ -42,8 +42,19 @@ def latest(role):
     return d
  except Exception as e:return {'role':role,'status':'unknown','verified':False,'cause':'Actual role artifact unavailable: '+type(e).__name__}
  return {'role':role,'status':'missing','verified':False,'cause':'No actual role receipt'}
+def automatic_origin():
+ if os.environ.get('GITHUB_EVENT_NAME') in ['workflow_run','schedule']:return {'verified':True,'kind':os.environ['GITHUB_EVENT_NAME']}
+ if os.environ.get('GITHUB_EVENT_NAME')!='workflow_dispatch' or os.environ.get('GITHUB_ACTOR')!='github-actions[bot]':return {'verified':False}
+ try:
+  import re
+  event=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text());origin=event.get('inputs',{}).get('publisher_origin_run','');m=re.fullmatch(r'https://github\.com/SHTFTV/loveourlistings\.com/actions/runs/(\d+)',origin)
+  if not m:return {'verified':False}
+  run=api('/actions/runs/'+m[1]);valid=run.get('path')=='.github/workflows/property-publisher.yml' and run.get('head_branch')=='main' and run.get('repository',{}).get('full_name')==REPO and 0<=age(run.get('run_started_at',''))<=1800
+  return {'verified':valid,'kind':'verified-same-publisher-dispatch','originRun':origin}
+ except Exception:return {'verified':False}
 def receipt(role):
- return {'schemaVersion':1,'site':SITE,'role':role,'checkedAt':now().isoformat(),'runUrl':'https://github.com/'+REPO+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local'),'trigger':os.environ.get('GITHUB_EVENT_NAME'),'sotLoad':sot(),'runtimeVerified':os.environ.get('GITHUB_ACTIONS')=='true','unattendedExecution':os.environ.get('GITHUB_EVENT_NAME') in ['workflow_run','schedule'],'verified':False,'status':'unknown','findings':[]}
+ proof=automatic_origin()
+ return {'schemaVersion':1,'site':SITE,'role':role,'checkedAt':now().isoformat(),'runUrl':'https://github.com/'+REPO+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local'),'trigger':os.environ.get('GITHUB_EVENT_NAME'),'sotLoad':sot(),'runtimeVerified':os.environ.get('GITHUB_ACTIONS')=='true','unattendedExecution':proof['verified'],'automaticOriginProof':proof,'verified':False,'status':'unknown','findings':[]}
 def save(d):
  p=ROOT/'work/roles'/d['role'];p.mkdir(parents=True,exist_ok=True);(p/'receipt.json').write_text(json.dumps(d,indent=2)+'\n')
  print(json.dumps(d,indent=2));return d

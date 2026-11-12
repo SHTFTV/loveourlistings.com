@@ -20,6 +20,8 @@ def category(item):
  if re.search(r'\b(?:market|sales|prices|painting|museum|competition|design trends|lighting|color chart|art of display)\b',item['title'],re.I):return None
  if not re.search(r'\b(?:inside|home|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat)\b',item['title'],re.I):return None
  if re.search(r'\bpenthouse\b',t):return 'penthouses'
+ if re.search(r'\b(?:ranch|equestrian)\b',t):return 'ranches'
+ if re.search(r'\b[1-9]\d[ -]acre\b',t):return 'acreage'
  if re.search(r'waterfront|oceanfront|beachfront|lakefront|lakeside|ocean.view|coast|malibu',t):return 'waterfront'
  return 'mansions'
 def feature(item,collection,now,sop,sourceImage=None,reviewed=None):

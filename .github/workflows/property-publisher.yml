@@ -12,24 +12,6 @@ on:
         description: Exact originating health workflow run URL
         type: string
         default: ''
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/property-publisher.yml'
-      - 'scripts/publish_properties.py'
-      - 'scripts/property_media.py'
-      - 'scripts/original_illustration.py'
-      - 'operations/original-illustrations.json'
-      - 'scripts/reviewed_properties.py'
-      - 'scripts/property_writer.py'
-      - 'operations/reviewed-properties.json'
-      - 'scripts/rss_runtime.py'
-      - 'scripts/verify_property_publication.py'
-      - 'operations/site-sop.json'
-      - 'scripts/worker_preflight.py'
-      - 'scripts/automatic_trigger.py'
-      - 'scripts/continue-recovery.py'
-      - 'operations/build-contract.json'
 permissions:
   contents: write
   actions: write
@@ -154,6 +136,12 @@ jobs:
             git push origin HEAD:main
           fi
 
+      - name: Recover stale visual checker and supervisor without duplicating publishers
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/roles/refresh-roles.py
+
       - name: Export actual site-specific Four Roles evidence for existing Command Center
         if: always()
         env:
@@ -162,7 +150,7 @@ jobs:
           python3 scripts/roles/export.py
           git config user.name SHTFTV
           git config user.email 264305872+SHTFTV@users.noreply.github.com
-          git add operations/four-roles.json public/four-roles.json public/publication-results.json
+          git add operations/four-roles.json public/four-roles.json public/publication-results.json operations/role-refresh.json
           if ! git diff --cached --quiet; then
             git commit -m 'Expose actual Four Roles runtime evidence without claiming completion'
             git push origin HEAD:main
