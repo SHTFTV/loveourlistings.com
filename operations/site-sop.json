@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 9,
+  "version": 10,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -230,8 +230,14 @@
         "scope": "Independent check of actual publisher workflow run and source/result/heartbeat/SOT receipt plus actual visual checker artifact"
       },
       "watchdog": {
-        "workflow": ".github/workflows/role-watchdog.yml",
-        "scope": "Independent supervisor freshness and unresolved findings; require actual authorized owner-alert delivery receipt"
+        "scope": "Independent supervisor freshness and unresolved findings; require actual authorized owner-alert delivery receipt",
+        "externalRuntime": "Vercel Functions / Cron, existing same-site project, distinct from GitHub Actions worker/supervisor",
+        "endpoint": "https://www.loveourlistings.com/api/role-watchdog?observe=1",
+        "scheduleUTC": "*/15 * * * *",
+        "evidence": "Authenticated Cron writes short-lived regional cache; provider logs and existing publisher archive actual receipts. Missing/evicted/old/wrong-SOT cache is unknown/red. Public diagnostic GET never fabricates scheduled execution.",
+        "historicalObserverWorkflow": ".github/workflows/role-watchdog.yml",
+        "historicalObserverScope": "Manual GitHub diagnostic observer only; cannot satisfy independent external watchdog evidence",
+        "implementation": "api/role-watchdog.js"
       }
     },
     "ownerDeliveryReceiptUrl": null,
@@ -248,6 +254,7 @@
       "Proper existing favicon and icons",
       "Source-grounded editorial and appropriate schema for SEO/AEO/GEO/LLM readability; no invented geographic or property facts",
       "Preserve exact media/illustration disclosures and all approval gates"
-    ]
+    ],
+    "pageQualityVersion": 1
   }
 }

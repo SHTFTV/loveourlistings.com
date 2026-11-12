@@ -1,4 +1,4 @@
-import json,sys
+import json,sys,urllib.request
 from common import *
 def main():
  d=receipt('supervisor');findings=d['findings']
@@ -10,6 +10,19 @@ def main():
   if report.get('sotLoad',{}).get('sha256')!=d['sotLoad']['sha256']:findings.append('publisher-loaded-SOT-mismatch')
   if not report.get('automaticTriggerProof',{}).get('verified') and report.get('sotLoad',{}).get('trigger')!='schedule':findings.append('publisher-unattended-proof-missing')
   if report.get('publicationBlocks') or report.get('status') in ['publication-failed','blocked-property-publication','all-property-sources-failed']:findings.append('publisher-publication-failed')
+  access=json.loads((ROOT/'operations/runtime-access.json').read_text());d['apiAccessReceipt']={'runId':access.get('runId'),'status':access.get('status'),'checkedAt':access.get('checkedAt')}
+  if access.get('status')!='passed' or str(access.get('runId'))!=report.get('runUrl','').rsplit('/',1)[-1]:findings.append('required-API-access-failed-or-unmatched')
+  def public(path):
+   with urllib.request.urlopen('https://www.loveourlistings.com'+path,timeout=20) as response:return response.read().decode()
+  deployed=json.loads(public('/publishing-status.json'));d['deployedSotLoad']=deployed.get('sotLoad')
+  if deployed.get('sotLoad',{}).get('sha256')!=d['sotLoad']['sha256']:findings.append('production-deployment-SOT-mismatch')
+  manifest=json.loads(public('/journal/published.json'));article=manifest[0];slug=article['slug']
+  import re
+  if not re.fullmatch(r'[a-z0-9-]+',slug):raise ValueError('Invalid published slug')
+  page=public('/journal/'+slug+'/');d['checkedPublishedPage']='https://www.loveourlistings.com/journal/'+slug+'/';d['matchedPublishedPage']=article['publishedAt'] in page and article['image'] in page
+  if not d['matchedPublishedPage']:findings.append('actual-published-page-mismatch')
+  jobs=api('/actions/runs/'+str(run['id'])+'/jobs');executed=any(s.get('name','').startswith('Load current SOP, collect property') and s.get('conclusion') in ['success','failure'] for j in jobs.get('jobs',[]) for s in j.get('steps',[]));d['actualSourceApiDeploymentPublicationChecks']=executed
+  if not executed:findings.append('publisher-source-collection-never-executed')
   d['sourceCount']=len(report.get('sources',[]));d['sourceFailures']=[s['id'] for s in report.get('sources',[]) if s['status']=='error']
   if d['sourceFailures']:findings.append('some-source-feeds-failed')
   visual=latest('visual');d['visualReceipt']={k:visual.get(k) for k in ['runUrl','checkedAt','status','artifactId']}

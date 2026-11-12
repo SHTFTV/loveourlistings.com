@@ -924,5 +924,20 @@
         }
       ]
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/role-watchdog",
+      "schedule": "*/15 * * * *"
+    }
+  ],
+  "functions": {
+    "api/role-watchdog.js": {
+      "includeFiles": "operations/site-sop.json",
+      "maxDuration": 60
+    }
+  },
+  "regions": [
+    "iad1"
   ]
 }

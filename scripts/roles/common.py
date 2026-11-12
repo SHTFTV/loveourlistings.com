@@ -35,7 +35,11 @@ def latest(role):
     if z.getinfo('receipt.json').file_size>200000:continue
     d=json.loads(z.read('receipt.json'))
    if d.get('role')==role and d.get('site')==SITE and d.get('runtimeVerified') is True:
-    d['artifactId']=a['id'];return d
+    d['artifactId']=a['id']
+    if role=='visual':
+     render=next((x for x in api('/actions/runs/'+str(run['id'])+'/artifacts').get('artifacts',[]) if x['name']=='role-visual-screenshots-'+str(run['id']) and not x['expired']),None)
+     d['renderArtifactRef']='https://github.com/'+REPO+'/actions/runs/'+str(run['id'])+'/artifacts/'+str(render['id']) if render else None
+    return d
  except Exception as e:return {'role':role,'status':'unknown','verified':False,'cause':'Actual role artifact unavailable: '+type(e).__name__}
  return {'role':role,'status':'missing','verified':False,'cause':'No actual role receipt'}
 def receipt(role):
