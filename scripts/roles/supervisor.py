@@ -1,5 +1,12 @@
 import json,sys,urllib.request
 from common import *
+def publication_health(events):
+ # Only independently verified publication results count; holds and discovery do not.
+ verified=[e for e in events if e.get('status')=='done' and e.get('url') and e.get('verifiedAt') and e.get('publishedAt')]
+ latest=max(verified,key=lambda e:datetime.fromisoformat(e['publishedAt'].replace('Z','+00:00')),default=None)
+ seconds=age(latest['publishedAt']) if latest else None
+ return {'inspectionThresholdSeconds':7200,'lastVerifiedPublication':latest,'ageSeconds':seconds,'inspectionRequired':seconds is None or seconds<0 or seconds>7200,'scope':'Two-hour inspection trigger; never bypass individual editorial or media holds'}
+
 def main():
  d=receipt('supervisor');findings=d['findings']
  try:
@@ -16,6 +23,8 @@ def main():
   if access.get('status')!='passed' or str(access.get('runId'))!=report.get('runUrl','').rsplit('/',1)[-1]:findings.append('required-API-access-failed-or-unmatched')
   def public(path):
    with urllib.request.urlopen('https://www.loveourlistings.com'+path,timeout=20) as response:return response.read().decode()
+  publication=publication_health(json.loads(public('/publication-results.json')).get('events',[]));d['publicationFreshness']=publication
+  if publication['inspectionRequired']:findings.append('verified-publication-older-than-two-hours-inspect-intake-and-queue')
   deployed=json.loads(public('/publishing-status.json'));d['deployedSotLoad']=deployed.get('sotLoad')
   if deployed.get('sotLoad',{}).get('sha256')!=d['sotLoad']['sha256']:findings.append('production-deployment-SOT-mismatch')
   manifest=json.loads(public('/journal/published.json'));article=manifest[0];slug=article['slug']
