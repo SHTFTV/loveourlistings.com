@@ -87,3 +87,20 @@ class ArchiveMediaRepair(unittest.TestCase):
    with patch('publish_properties.reviewed_media',return_value=repaired):report=main(root,lambda _:b'',NOW)
    self.assertEqual(report['articles'],[]);self.assertEqual(report['status'],'built-for-media-repair');self.assertEqual(len(report['mediaRepairs']),1)
    after=json.loads((root/'operations/publisher-state.json').read_text())['articles'];self.assertEqual(len(after),1);self.assertEqual(after[0]['publishedAt'],original_date);self.assertEqual(after[0]['image'],repaired['imageUrl'])
+
+class ArchiveRepairRetryBound(unittest.TestCase):
+ def test_failed_archive_media_is_cooled_and_exhausted_without_repeated_fetch(self):
+  from publish_properties import feature
+  from rss_runtime import parse_feed
+  from datetime import timedelta
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);TestPublisher().fixture(root,[]);item=parse_feed(rss('Malibu Home With a Private Observatory','https://robbreport.com/home','An ocean-view residence pairs organic modernism with sweeping coastal views.'),DIRECT,NOW)[0][0]
+   a=feature(item,'waterfront',NOW,{'timezone':'America/Vancouver','version':7},MEDIA);a['sourceImage']={**MEDIA,'width':1200,'height':675};sp=root/'operations/publisher-state.json';sp.write_text(json.dumps({'articles':[a],'runs':[{'productionVerified':True,'articles':[{'slug':a['slug']}]}],'quarantine':[],'discovery':[]}));(root/'operations/reviewed-properties.json').write_text(json.dumps({'items':{item['url']:{'archiveMediaRepair':True,'summaryHash':item['summaryHash'],'mediaOnly':True}}}))
+   with patch('publish_properties.reviewed_media',side_effect=ValueError('source photo unavailable')) as fetch:
+    with self.assertRaises(RuntimeError):main(root,lambda _:b'',NOW)
+    self.assertEqual(fetch.call_count,1)
+    with self.assertRaises(RuntimeError):main(root,lambda _:b'',NOW+timedelta(hours=1))
+    self.assertEqual(fetch.call_count,1)
+    state=json.loads(sp.read_text());row=state['archiveMediaRepairQueue'][a['slug']];self.assertEqual(row['lastError'],'source photo unavailable');row['attempts']=5;sp.write_text(json.dumps(state))
+    with self.assertRaises(RuntimeError):main(root,lambda _:b'',NOW+timedelta(days=1))
+    self.assertEqual(fetch.call_count,1);self.assertEqual(json.loads(sp.read_text())['archiveMediaRepairQueue'][a['slug']]['attempts'],5)

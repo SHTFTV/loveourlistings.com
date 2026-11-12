@@ -69,15 +69,23 @@ def main(root=ROOT,fetch=get,now=None):
  urls={canonical(u) for p in prior for u in p['sourceUrls'] if u.startswith('https://')};urls.update(source_key(a['source']) for a in state['articles']);hashes={a['source']['summaryHash'] for a in state['articles']};report={'startedAt':now.isoformat(),'sopVersion':cfg['version'],'sotLoad':{'canonicalSource':'https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json','version':cfg['version'],'sha256':hashlib.sha256((root/'operations/site-sop.json').read_bytes()).hexdigest(),'sourceCommit':os.environ.get('LOADED_SOURCE_COMMIT'),'trigger':os.environ.get('GITHUB_EVENT_NAME','local-test')},'runUrl':os.environ.get('GITHUB_SERVER_URL','https://github.com')+'/'+os.environ.get('GITHUB_REPOSITORY','SHTFTV/loveourlistings.com')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local-test'),'sources':[],'articles':[],'duplicates':0,'quarantined':0,'discovered':0,'productionVerified':False};candidates=[]
  report['automaticTriggerProof']=verify_automatic_trigger(now=now)
  # Repair reviewed archive imagery inside the existing sole writer, independently of new-story eligibility.
- archive_records=load_reviewed(root)
+ archive_records=load_reviewed(root);archive_queue=state.setdefault('archiveMediaRepairQueue',{});archive_policy=cfg.get('retryPolicy',{});archive_attempted=0
  for a in state['articles']:
   record=archive_records.get(a['source']['url'])
   if not record or not record.get('archiveMediaRepair') or (a.get('sourceImage',{}).get('width')==1600 and a.get('sourceImage',{}).get('height')==900):continue
+  tracker=archive_queue.setdefault(a['slug'],{});revision=hashlib.sha256(json.dumps(record,sort_keys=True).encode()).hexdigest();changed=tracker.get('revision')!=revision
+  cooling=bool(tracker.get('lastAttemptAt') and now-datetime.fromisoformat(tracker['lastAttemptAt'])<timedelta(hours=archive_policy.get('cooldownHours',6)))
+  if not changed and (tracker.get('attempts',0)>=archive_policy.get('maxAttempts',5) or cooling):
+   report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'title':a['title'],'reason':'Archive media repair held: '+tracker.get('lastError','bounded retry'),'retryStatus':'archive-retry-held'});continue
+  if archive_attempted>=archive_policy.get('maxCandidatesPerRun',4):continue
+  archive_attempted+=1;tracker.update(revision=revision,attempts=tracker.get('attempts',0)+1,lastAttemptAt=now.isoformat())
   try:
    reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash']},archive_records);media=reviewed_media(a['source'],root,reviewed)
+   tracker.update(status='verified',lastError=None)
    a.update(image=media['imageUrl'],imageAlt=media['sourceImageAlt'],imageCredit=media['credit'],sourceImage=media)
    report.setdefault('mediaRepairs',[]).append({'slug':a['slug'],'image':a['image'],'publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'originalImageUrl':media['originalImageUrl'],'nativeWidth':media['originalWidth'],'nativeHeight':media['originalHeight']})
-  except Exception as e:report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'title':a['title'],'reason':'Archive media repair: '+str(e)})
+  except Exception as e:
+   tracker.update(status='retry',lastError=str(e));report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'title':a['title'],'reason':'Archive media repair: '+str(e)})
 
  completed={a['slug'] for run in state['runs'] if run.get('productionVerified') for a in run.get('articles',[])}
  for a in state['articles']:
