@@ -34,3 +34,17 @@ class RoleDispatchOrigin(unittest.TestCase):
    with patch.dict(common.os.environ,env),patch.object(common,'api',return_value=run):self.assertTrue(common.automatic_origin()['verified'])
    for wrong in [{'path':'.github/workflows/other.yml'},{'head_branch':'other'},{'repository':{'full_name':'other/repo'}},{'run_started_at':(common.now()-timedelta(hours=1)).isoformat()}]:
     with patch.dict(common.os.environ,env),patch.object(common,'api',return_value={**run,**wrong}):self.assertFalse(common.automatic_origin()['verified'])
+
+class ReceiptOrdering(unittest.TestCase):
+ def test_receipt_creation_time_wins_over_nonmonotonic_artifact_id(self):
+  import io,zipfile
+  rows=[{'id':999,'created_at':'2026-11-12T15:00:00Z','expired':False,'workflow_run':{'id':10}},{'id':1,'created_at':'2026-11-12T17:00:00Z','expired':False,'workflow_run':{'id':20}}]
+  def call(path,binary=False):
+   if path.startswith('/actions/artifacts?'):return {'artifacts':rows}
+   if path.startswith('/actions/runs/'):return {'path':common.PATHS['supervisor'],'head_branch':'main','repository':{'full_name':common.REPO}}
+   if path.endswith('/zip'):
+    b=io.BytesIO()
+    with zipfile.ZipFile(b,'w') as z:z.writestr('receipt.json',json.dumps({'role':'supervisor','site':common.SITE,'runtimeVerified':True,'runUrl':'new' if '/1/' in path else 'old'}))
+    return b.getvalue()
+   raise AssertionError(path)
+  with patch.object(common,'api',side_effect=call):self.assertEqual(common.latest('supervisor')['runUrl'],'new')

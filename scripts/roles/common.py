@@ -26,8 +26,8 @@ def api(path,binary=False):
  return b if binary else json.loads(b)
 def latest(role):
  try:
-  data=api('/actions/artifacts?name=role-'+role+'-receipt&per_page=8')
-  for a in data.get('artifacts',[]):
+  data=api('/actions/artifacts?name=role-'+role+'-receipt&per_page=30')
+  for a in sorted(data.get('artifacts',[]),key=lambda row:row.get('created_at',''),reverse=True):
    if a['expired']:continue
    run=api('/actions/runs/'+str(a['workflow_run']['id']))
    if run.get('path')!=PATHS[role] or run.get('head_branch')!='main' or run.get('repository',{}).get('full_name')!=REPO:continue
