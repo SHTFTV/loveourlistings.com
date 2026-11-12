@@ -96,7 +96,7 @@ jobs:
             git config user.email 264305872+SHTFTV@users.noreply.github.com
             git add public/editorial-preview
             git commit -m 'Preview unpublished labeled illustration for visual QA'
-            git push origin HEAD:refs/heads/editorial-preview-${GITHUB_RUN_ID}
+            git push origin HEAD:refs/heads/editorial-preview-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}
             git reset --mixed HEAD^
             python3 -c "import shutil; shutil.rmtree('public/editorial-preview')"
           fi
