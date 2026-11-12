@@ -136,11 +136,21 @@ def main(root=ROOT,fetch=get,now=None):
     except Exception:
      if not art:raise
      sourceImage=resolve_illustration(item,root)
-    a=feature(item,collection,now,cfg,sourceImage,reviewed);validate(a)
+    cached=row.get('illustrationDraft')
+    if sourceImage.get('isIllustration') and cached:
+     if cached['source']['summaryHash']!=item['summaryHash'] or cached['image']!=sourceImage['imageUrl']:raise MediaUnavailable('Illustration draft pairing changed; fresh preview review required')
+     evidence=recover_evidence(item,cfg)
+     if hashlib.sha256(evidence['sourceEvidence']['text'].encode()).hexdigest()!=cached['writer'].get('sourceTextSha256'):raise MediaUnavailable('Original source evidence changed after preview; fresh factual and visual review required')
+     a=json.loads(json.dumps(cached));a.pop('preview',None);a['sourceImage']=sourceImage;a['publishedAt']=now.astimezone(ZoneInfo(cfg['timezone'])).isoformat(timespec='seconds')
+    else:a=feature(item,collection,now,cfg,sourceImage,reviewed)
+    validate(a)
+    content_hash=hashlib.sha256(json.dumps({k:a[k] for k in ['title','deck','paragraphs','image','source']},sort_keys=True).encode()).hexdigest()
+    if sourceImage.get('isIllustration') and sourceImage['releaseReady'] and art.get('qaContentHash')!=content_hash:raise MediaUnavailable('Layout QA must bind exact preview content hash before publication')
     if sourceImage.get('isIllustration') and not sourceImage['releaseReady']:
      a['preview']=True;dest=root/'work/editorial-previews'/a['slug'];dest.mkdir(parents=True,exist_ok=True);(dest/'index.html').write_text(render(a,cfg['origin']))
-     row.update(illustrationRevision=art_revision,previewUrl=cfg['origin']+'/editorial-preview/'+a['slug']+'/',lastAttemptAt=now.isoformat())
-     report.setdefault('previews',[]).append({'sourceUrl':item['url'],'url':row['previewUrl'],'image':sourceImage['imageUrl'],'label':sourceImage['label'],'status':'unpublished-awaiting-desktop-phone-QA'})
+     (dest/'receipt.json').write_text(json.dumps({'contentSha256':content_hash,'sourceSummaryHash':item['summaryHash'],'writer':a['writer'],'sotLoad':report['sotLoad'],'imageSha256':sourceImage['imageSha256'],'status':'unpublished-awaiting-visual-QA'},indent=2)+'\n')
+     row.update(illustrationRevision=art_revision,illustrationDraft=a,previewContentSha256=content_hash,previewPath='/editorial-preview/'+a['slug']+'/',previewBranch='editorial-preview-'+os.environ.get('GITHUB_RUN_ID','local-test'),lastAttemptAt=now.isoformat())
+     report.setdefault('previews',[]).append({'sourceUrl':item['url'],'url':None,'path':row['previewPath'],'deploymentBranch':row['previewBranch'],'contentSha256':content_hash,'image':sourceImage['imageUrl'],'label':sourceImage['label'],'status':'unpublished-awaiting-desktop-phone-QA'})
      raise MediaUnavailable('Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication')
     state['articles'].append(a);urls.add(source_key(item));hashes.add(item['summaryHash']);report['articles'].append({'slug':a['slug'],'title':a['title'],'collection':collection,'url':cfg['origin']+'/journal/'+a['slug']+'/','publishedAt':a['publishedAt'],'sourceUrl':item['url'],'propertyId':item.get('propertyId')});queue[source_key(item)].update(status='stored-awaiting-verification',lastAttemptAt=now.isoformat());sp.write_text(json.dumps(state,indent=2)+'\n')
    except Exception as e:
