@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T22:30:08.317614+00:00",
+  "updatedAt": "2026-11-12T22:37:19.087100+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "2f12a236e8417289e62eb0081940672dca683f28",
+    "sourceCommit": "fd73cd04c0fa1be259794d26be62c75671ffbef2",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43319361967",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320562478",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -44,6 +44,13 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+      "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
+      "propertyId": null,
+      "collection": "mansions",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
@@ -83,18 +90,22 @@
   ],
   "health": "degraded",
   "ownerNotification": {
-    "status": "pending-current-role-alert-proof",
+    "status": "role-alert-delivery-last-verified",
     "route": "existing-authorized-command-center-pull-reader",
     "ownerReadVerified": false,
-    "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
+    "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required",
+    "receiptUrl": "https://markett-ca.vercel.app/api/publication-activity",
+    "eventId": "loveourlistings.com:four-roles:edf4afc1b334b08f05a74e7d",
+    "verifiedAt": "2026-11-12T22:30:37.831Z",
+    "scope": "Last independently verified role incident/canary delivery to intended reader; not owner read or every article notification"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-12T22:29:13.976796+00:00",
+    "checkedAt": "2026-11-12T22:37:19.057183+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 100,
+    "feedItemsParsed": 98,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -148,10 +159,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 21,
+        "itemsParsed": 19,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 21
+          "discovery-original-link-required": 19
         }
       },
       {
@@ -159,29 +170,30 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "already-published": 1,
-          "candidate-admitted": 8,
+          "already-published": 3,
+          "candidate-admitted": 6,
           "not-individual-property": 4,
           "outside-lookback": 16
         }
       }
     ],
     "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 17,
-    "inScopeQueueCandidates": 16,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 15,
+    "candidatesConsidered": 15,
+    "inScopeQueueCandidates": 14,
+    "attemptedThisRun": 3,
+    "skippedThisRun": 12,
     "outcomes": {
       "not-individual-property": 1,
       "retry-cooldown": 3,
       "quarantined-retry-exhausted": 3,
+      "attempt-failed": 1,
       "duplicate-property": 1,
       "stored-awaiting-verification": 2,
-      "deferred-article-limit": 6,
+      "deferred-article-limit": 3,
       "review-required": 1
     },
     "newFeaturesStored": 2,
-    "verifiedPublicationsThisRun": 2,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -233,6 +245,18 @@
         "duplicateOfArticleSlug": null
       },
       {
+        "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+        "sourceId": "countrylife-property",
+        "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
+        "collection": "mansions",
+        "outcome": "attempt-failed",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-13T04:36:23.496793+00:00",
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH",
+        "duplicateOfArticleSlug": null
+      },
+      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
         "sourceId": "robb-property",
         "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -245,9 +269,9 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/one-of-the-most-breathtaking-staircases-in-britain-for-sale-in-a-palatial-baroque-home-thats-on-sale-for-gbp3-25-million-home",
+        "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/two-of-the-finest-architects-of-the-1930s-created-this-house-in-a-secluded-leafy-spot-in-buckinghamshire-and-now-its-on-the-market",
         "sourceId": "countrylife-property",
-        "title": "One of the most magnificent staircases in Britain, in a palatial Baroque home up for sale at \u00a33.25 million",
+        "title": "Two of the finest architects of the 1930s created this house in a secluded, leafy spot in Buckinghamshire \u2014and now it's on the market",
         "collection": "mansions",
         "outcome": "stored-awaiting-verification",
         "failedAttempts": 0,
@@ -257,51 +281,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/scotland/a-commutable-castle-set-in-12-beautiful-acres-with-cinema-room-hot-tub-and-boutique-hotel-vibes",
-        "sourceId": "countrylife-property",
-        "title": "A commutable castle in 12 acres, with turrets, cinema room and hot tub",
-        "collection": "acreage",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 1,
-        "checks": 2,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
-        "sourceId": "countrylife-property",
-        "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
-        "collection": "mansions",
-        "outcome": "deferred-article-limit",
-        "failedAttempts": 0,
-        "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
-        "reason": "Per-run article limit; independent queued item remains eligible",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/two-of-the-finest-architects-of-the-1930s-created-this-house-in-a-secluded-leafy-spot-in-buckinghamshire-and-now-its-on-the-market",
-        "sourceId": "countrylife-property",
-        "title": "Two of the finest architects of the 1930s created this house in a secluded, leafy spot in Buckinghamshire \u2014and now it's on the market",
-        "collection": "mansions",
-        "outcome": "deferred-article-limit",
-        "failedAttempts": 0,
-        "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
-        "reason": "Per-run article limit; independent queued item remains eligible",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://www.countrylife.co.uk/property/an-impressive-english-country-house-for-sale-with-a-millennium-tower-that-combines-all-the-very-best-of-old-and-new",
         "sourceId": "countrylife-property",
         "title": "This picture-perfect 'silvery stone' house with royal connections is a restoration marvel",
         "collection": "mansions",
-        "outcome": "deferred-article-limit",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 0,
-        "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
-        "reason": "Per-run article limit; independent queued item remains eligible",
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -312,7 +300,7 @@
         "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "nextAttemptAt": "2026-11-12T22:36:23.496793+00:00",
         "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
@@ -324,7 +312,7 @@
         "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "nextAttemptAt": "2026-11-12T22:36:23.496793+00:00",
         "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
@@ -384,55 +372,55 @@
         "outcome": "deferred-article-limit",
         "failedAttempts": 1,
         "checks": 1,
-        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "nextAttemptAt": "2026-11-12T22:36:23.496793+00:00",
         "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-12T22:28:27.112559+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-12T22:36:23.496793+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
-      "items": 21
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
+      "items": 19
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "fetchedAt": "2026-11-12T22:36:23.496793+00:00",
       "items": 29
     }
   ],
@@ -445,8 +433,8 @@
     },
     {
       "name": "mansions",
-      "eligible": 11,
-      "newFeatures": 1,
+      "eligible": 10,
+      "newFeatures": 2,
       "status": "built-for-publication"
     },
     {
@@ -463,9 +451,9 @@
     },
     {
       "name": "acreage",
-      "eligible": 2,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 1,
+      "newFeatures": 0,
+      "status": "queued-next-cycle"
     },
     {
       "name": "beach-properties",
@@ -474,9 +462,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 1,
-  "duplicatesFiltered": 61,
-  "quarantinedItems": 1,
+  "googleDiscoveryItems": 0,
+  "duplicatesFiltered": 62,
+  "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-11-4c1835d3d3",
