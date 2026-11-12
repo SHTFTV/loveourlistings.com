@@ -6,7 +6,7 @@ export function ArticleFeatureCard({article:a,large=false}:{article:FeatureArtic
   {a.image&&<div className="lol-source-media-brand"><img src="/images/love-logo-clean-v6.webp" alt="" width="20" height="26"/><span>WE LOVE THIS LISTING</span></div>}
   {a.image&&<a className="lol-story-image" href={a.canonicalPath}><img src={a.image} alt={a.imageAlt||a.title} width={a.imageWidth||1200} height={a.imageHeight||700} loading="lazy"/></a>}
   <div className="lol-story-card-copy"><p className="lol-mag-kicker">{a.collection.replaceAll('-',' ')} / THE EDIT</p><h3><a href={a.canonicalPath}>{a.title}</a></h3><p>{a.deck}</p><time dateTime={a.publishedAt}>{a.dateLabel}</time>
-   {a.image&&a.imageCredit&&<p className="lol-listing-photo-credit"><a href={a.imageSourceUrl||a.canonicalPath} target="_blank" rel="noopener noreferrer">{a.imageCredit}{a.sourceMediaKind?.includes("tour-host")?" · Original tour preview":" · Property image source"} ↗</a></p>}
+   {a.image&&a.imageCredit&&<p className="lol-listing-photo-credit"><a href={a.imageSourceUrl||a.canonicalPath} target="_blank" rel="noopener noreferrer">{a.imageCredit}{a.sourceMediaKind==="original-editorial-illustration"?" · Story source":a.sourceMediaKind?.includes("tour-host")?" · Original tour preview":" · Property image source"} ↗</a></p>}
    {a.watchUrl&&a.tourCredit&&<p className="lol-listing-photo-credit">Original tour: {a.tourCredit}</p>}
    <div className="lol-article-actions"><a href={a.canonicalPath}>Read the story ↗</a>{a.watchUrl&&<a href={a.watchUrl} target="_blank" rel="noopener noreferrer">Watch the original tour ↗</a>}</div>
   </div>
