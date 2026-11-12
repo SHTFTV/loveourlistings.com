@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-12T01:34:26.032611+00:00",
+  "updatedAt": "2026-11-12T01:42:32.654520+00:00",
   "runtime": "GitHub Actions cloud workflow",
-  "scheduleUTC": "43 */6 * * *",
-  "sopVersion": 6,
+  "scheduleUTC": "43 * * * *",
+  "sopVersion": 7,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-    "version": 6,
-    "sha256": "34908bd4de553983704771cb2a755ba47cab1cec2c91151d5f427b3d4358c133",
-    "sourceCommit": "729c9805240ba7a51f274d7d0e9ba50ebca8e8fd",
+    "version": 7,
+    "sha256": "8a3f3ee2a418fded3f5f6e6b875f2356b5c94fe6ad24e8f69644b353a7493581",
+    "sourceCommit": "4cad77129ec2240bbe2b063f5b2b32ac6ade0807",
     "trigger": "push"
   },
   "publicationBlocks": [
@@ -21,17 +21,11 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
-      "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
       "propertyId": null,
       "collection": "penthouses",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
-      "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
@@ -43,11 +37,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
+      "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
       "propertyId": null,
       "collection": "mansions",
-      "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted"
+      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
@@ -56,6 +49,14 @@
       "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown"
     }
   ],
   "health": "degraded",
@@ -64,43 +65,43 @@
     "owner": "site operations owner",
     "nextAction": "Bind existing owner notification transport and verify actual delivery; public JSON is not notification proof"
   },
-  "lastRunAt": "2026-11-12T01:34:17.385748+00:00",
+  "lastRunAt": "2026-11-12T01:42:07.343462+00:00",
   "status": "publication-failed",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:34:17.385748+00:00",
+      "fetchedAt": "2026-11-12T01:42:07.343462+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:34:17.385748+00:00",
+      "fetchedAt": "2026-11-12T01:42:07.343462+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-12T01:34:17.385748+00:00",
+      "fetchedAt": "2026-11-12T01:42:07.343462+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-12T01:34:17.385748+00:00",
+      "fetchedAt": "2026-11-12T01:42:07.343462+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:34:17.385748+00:00",
+      "fetchedAt": "2026-11-12T01:42:07.343462+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-12T01:34:17.385748+00:00",
+      "fetchedAt": "2026-11-12T01:42:07.343462+00:00",
       "items": 17
     }
   ],
@@ -144,7 +145,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 57,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-a52f8783fb",
