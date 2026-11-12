@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-12T17:35:01.641795+00:00",
+  "checkedAt": "2026-11-12T17:40:36.991420+00:00",
   "sotLoad": {
     "version": 12,
     "sha256": "2a4344de2c62001afc3cf4114de75fa16cb6793a81b77f3d34576bb4b24780a6",
-    "sourceCommit": "83c3d78eb8aee0c9a4baf5a5e61d32b35d9000c0",
+    "sourceCommit": "1e24013c662f2289be1e198319a742e829e1755b",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-12T17:33:33.310673+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270556108",
+      "checkedAt": "2026-11-12T17:40:23.678523+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43271832281",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 12,
         "sha256": "2a4344de2c62001afc3cf4114de75fa16cb6793a81b77f3d34576bb4b24780a6",
-        "sourceCommit": "3e4e9d43dd60c311bd69f029288d9c012f17ce1d",
+        "sourceCommit": "2c1a7f06a6df57265647af9ded652b321ccd9a84",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -38,28 +38,30 @@
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "Source expressly restricts reproduction; review required"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "publication-failed",
       "fresh": true,
-      "expiresAt": "2026-11-12T18:03:33.310673+00:00",
+      "expiresAt": "2026-11-12T18:10:23.678523+00:00",
       "green": false
     },
     "visual": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "visual",
-      "checkerSha256": "073f921054ce09f11095dc343f05b47ead74c00220ae5a3031a9cac39e01959c",
-      "checkedAt": "2026-11-12T17:29:15.896Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43269826780",
-      "trigger": "push",
+      "checkerSha256": "4f1c303492166dec5a93dbef7c48d3972ad3ddc7a255fda7d83d4a6db46d9df8",
+      "checkedAt": "2026-11-12T17:35:54.166Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270956467",
+      "trigger": "workflow_dispatch",
       "runtimeVerified": true,
-      "unattendedExecution": false,
+      "unattendedExecution": true,
       "automaticOriginProof": {
-        "verified": false
+        "verified": true,
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270556108"
       },
       "sotLoad": {
         "version": 12,
         "sha256": "2a4344de2c62001afc3cf4114de75fa16cb6793a81b77f3d34576bb4b24780a6",
-        "sourceCommit": "2d50b056a7ca574cfba2aefa2a844e5b7e5b3a5d",
+        "sourceCommit": "93e9d768c35d077fcaad554e0fd13122785e981f",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -69,9 +71,7 @@
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
-          "findings": [
-            "visible-property-photo-native-below1600x900"
-          ],
+          "findings": [],
           "http": 200,
           "topScreenshot": "desktop-home-top.jpg",
           "metrics": {
@@ -88,6 +88,34 @@
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+                "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
               {
                 "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
                 "alt": "",
@@ -283,34 +311,6 @@
                   169
                 ],
                 "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/5c7582022df8f8acf8a9.jpg",
-                "alt": "We Love This Listing: The N.Y.C. Townhouse That Served As Meg Ryan\u2019s Home in \u2018You\u2019ve Got Mail\u2019 Lists for $4 Million",
-                "native": [
-                  1200,
-                  675
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
               }
             ],
             "captionFontSizes": [
@@ -327,7 +327,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "7e49f756b2ec0594852e5bede69dfd781608890c96c3074ae80361595c5504e7"
+          "screenshotSha256": "71bc106969ba007a6a3e882c7e7de5631eb91951d99c23b442e56f061f974ddf"
         },
         {
           "page": "journal",
@@ -352,8 +352,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
-                "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock",
+                "src": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+                "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake",
                 "native": [
                   1600,
                   900
@@ -361,36 +361,36 @@
                 "loaded": true,
                 "rendered": [
                   1090,
-                  900
+                  613
                 ],
-                "fit": "fill"
+                "fit": "cover"
               }
             ],
             "captionFontSizes": [],
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "fb96e9979d11211f60ccf2c1cfbafd9134da043b069eb1e39bb0ccff7410366c"
+          "screenshotSha256": "773b45948b6bc8c62d056a8a4c484e8f02ed217d3a4856b3b01e6be8898d9fc5"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-12-4e9235646a/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
-            "h1": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
-            "description": "A Mediterranean-style estate pairs theatrical interiors with a private dock\u2014a combination more compelling than its celebrity provenance alone.",
-            "ogTitle": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
-            "ogDescription": "A Mediterranean-style estate pairs theatrical interiors with a private dock\u2014a combination more compelling than its celebrity provenance alone.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
-            "twitterTitle": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
-            "twitterDescription": "A Mediterranean-style estate pairs theatrical interiors with a private dock\u2014a combination more compelling than its celebrity provenance alone.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
+            "title": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta | Love Our Listings",
+            "h1": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-12-4e9235646a/",
+            "description": "A Moroccan-style main house, guest pods and substantial equestrian grounds give this former celebrity estate a story beyond its famous owner.",
+            "ogTitle": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta | Love Our Listings",
+            "ogDescription": "A Moroccan-style main house, guest pods and substantial equestrian grounds give this former celebrity estate a story beyond its famous owner.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+            "twitterTitle": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta | Love Our Listings",
+            "twitterDescription": "A Moroccan-style main house, guest pods and substantial equestrian grounds give this former celebrity estate a story beyond its famous owner.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -423,8 +423,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
-                "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock",
+                "src": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+                "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake",
                 "native": [
                   1600,
                   900
@@ -441,13 +441,13 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/49507de755c3131e1abd.jpg",
+            "src": "/images/source-properties/b5b2978c2469c496262f.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock"
+            "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "60d050817d30019da795704fe1abf6895bf8563e855dfb7052525124a5cce66c",
+          "screenshotSha256": "ce5b25b1f3c017a56d0241076f513184157944725a7841e00319f7ce1e052d07",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
@@ -457,17 +457,17 @@
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 287
+              "textLength": 336
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 327
+              "textLength": 264
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 285
+              "textLength": 324
             },
             {
               "fontSize": 16,
@@ -515,8 +515,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
-                "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock",
+                "src": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+                "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake",
                 "native": [
                   1600,
                   900
@@ -543,8 +543,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/5250f230eaf19b16c954.jpg",
-                "alt": "Aepo Nei 18 in Kukui\u2018ula: connected pavilions and pool",
+                "src": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
+                "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock",
                 "native": [
                   1600,
                   900
@@ -565,7 +565,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "90d278b54659781599d58265234eb3008cfed2c2128d90702589dd9431682c0e"
+          "screenshotSha256": "a792e31b333526aa18ad870b08bfa3aadd092e8eca337215b1fd5ef970e0a700"
         },
         {
           "page": "journal",
@@ -590,6 +590,34 @@
             "overflow": false,
             "visibleImages": [
               {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  42,
+                  54
+                ],
+                "fit": "fill"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+                "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  342,
+                  192
+                ],
+                "fit": "cover"
+              },
+              {
                 "src": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
                 "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock",
                 "native": [
@@ -599,36 +627,36 @@
                 "loaded": true,
                 "rendered": [
                   342,
-                  900
+                  192
                 ],
-                "fit": "fill"
+                "fit": "cover"
               }
             ],
             "captionFontSizes": [],
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "a604bb99741eee98f0d4d1fa3c1a0f13429de3a1c25f8e4cb0b7c492a6c1deca"
+          "screenshotSha256": "a13440f383a043710544361b29bb1dcb59a9224ff38f7616cce793e967840bb4"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-12-4e9235646a/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
-            "h1": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
-            "description": "A Mediterranean-style estate pairs theatrical interiors with a private dock\u2014a combination more compelling than its celebrity provenance alone.",
-            "ogTitle": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
-            "ogDescription": "A Mediterranean-style estate pairs theatrical interiors with a private dock\u2014a combination more compelling than its celebrity provenance alone.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
-            "twitterTitle": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
-            "twitterDescription": "A Mediterranean-style estate pairs theatrical interiors with a private dock\u2014a combination more compelling than its celebrity provenance alone.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
+            "title": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta | Love Our Listings",
+            "h1": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-12-4e9235646a/",
+            "description": "A Moroccan-style main house, guest pods and substantial equestrian grounds give this former celebrity estate a story beyond its famous owner.",
+            "ogTitle": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta | Love Our Listings",
+            "ogDescription": "A Moroccan-style main house, guest pods and substantial equestrian grounds give this former celebrity estate a story beyond its famous owner.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+            "twitterTitle": "We Love This Listing: Merv Griffin\u2019s 40-Acre Desert Retreat in La Quinta | Love Our Listings",
+            "twitterDescription": "A Moroccan-style main house, guest pods and substantial equestrian grounds give this former celebrity estate a story beyond its famous owner.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -661,8 +689,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/49507de755c3131e1abd.jpg",
-                "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock",
+                "src": "https://www.loveourlistings.com/images/source-properties/b5b2978c2469c496262f.jpg",
+                "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake",
                 "native": [
                   1600,
                   900
@@ -679,13 +707,13 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/49507de755c3131e1abd.jpg",
+            "src": "/images/source-properties/b5b2978c2469c496262f.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock"
+            "alt": "Merv Griffin\u2019s former La Quinta estate: palm-lined main house reflected in its manmade lake"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "da4d8acd540fea7d32ce7805af5ff08eca7141704f6267f7b1783142ac66bd81",
+          "screenshotSha256": "34078197b1681b647596f03340d889b6b698da3f85e3929f844bb87930817e92",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
@@ -695,33 +723,31 @@
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 287
+              "textLength": 336
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 327
+              "textLength": 264
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
         }
       ],
-      "findings": [
-        "desktop/home: visible-property-photo-native-below1600x900"
-      ],
-      "verified": false,
-      "status": "failed",
+      "findings": [],
+      "verified": true,
+      "status": "passed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-10-a52f8783fb",
-        "publishedAt": "2026-11-11T16:12:47-07:00",
-        "image": "/images/source-properties/49507de755c3131e1abd.jpg"
+        "slug": "we-love-acreage-2026-11-12-4e9235646a",
+        "publishedAt": "2026-11-12T10:33:07-07:00",
+        "image": "/images/source-properties/b5b2978c2469c496262f.jpg"
       },
-      "artifactId": 13967617136,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43269826780/artifacts/13968925457",
+      "artifactId": 13968631720,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270956467/artifacts/13967568117",
       "fresh": true,
-      "expiresAt": "2026-11-12T17:59:15.896000+00:00",
-      "green": false
+      "expiresAt": "2026-11-12T18:05:54.166000+00:00",
+      "green": true
     },
     "supervisor": {
       "schemaVersion": 1,
@@ -918,17 +944,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "3e4e9d43dd60c311bd69f029288d9c012f17ce1d",
+      "sourceCommit": "2c1a7f06a6df57265647af9ded652b321ccd9a84",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T17:33:33.310673+00:00",
+      "observedAt": "2026-11-12T17:40:23.678523+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270556108",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270556108",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43271832281",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43271832281",
       "loadedRevision": 12,
       "loadedHash": "2a4344de2c62001afc3cf4114de75fa16cb6793a81b77f3d34576bb4b24780a6",
       "rawTrigger": "workflow_dispatch",
@@ -948,35 +974,33 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270556108"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43271832281"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "2d50b056a7ca574cfba2aefa2a844e5b7e5b3a5d",
+      "sourceCommit": "93e9d768c35d077fcaad554e0fd13122785e981f",
       "check": "role:visual-checker",
-      "status": "failed",
+      "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T17:29:15.896Z",
+      "observedAt": "2026-11-12T17:35:54.166Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43269826780",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43269826780/artifacts/13967617136",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270956467",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270956467/artifacts/13968631720",
       "loadedRevision": 12,
       "loadedHash": "2a4344de2c62001afc3cf4114de75fa16cb6793a81b77f3d34576bb4b24780a6",
-      "rawTrigger": "push",
-      "trigger": "push",
+      "rawTrigger": "workflow_dispatch",
+      "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
-      "findings": [
-        "desktop/home: visible-property-photo-native-below1600x900"
-      ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43269826780/artifacts/13968925457",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43269826780/artifacts/13968925457",
+      "findings": [],
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270956467/artifacts/13967568117",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43270956467/artifacts/13967568117",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
+        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-12-4e9235646a/",
         "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/"
       ]
