@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 7,
+  "version": 8,
   "origin": "https://www.loveourlistings.com",
   "timezone": "America/Vancouver",
   "brand": "Love Our Listings",
@@ -200,5 +200,15 @@
       "delivered owner notification"
     ],
     "unknownOrStaleIsPass": false
+  },
+  "automaticRecovery": {
+    "publisher": ".github/workflows/property-publisher.yml",
+    "health": ".github/workflows/property-health.yml",
+    "pollMinutes": 5,
+    "minimumBetweenPublisherStartsSeconds": 300,
+    "method": "Publisher always hands off to same-repository health workflow; health waits five minutes and dispatches only existing inactive publisher. Native hourly cron remains independent backup.",
+    "credential": "GitHub-managed ephemeral same-repository GITHUB_TOKEN; Actions write only as needed; no personal token",
+    "evidence": "Report workflow_dispatch plus independently verified health origin; never label recovery as native schedule",
+    "safeguards": "Existing sole-writer concurrency; max2 ordinary articles; max4 candidate attempts;6h failed-item cooldown;5 attempts; preserve history/deduplication; per-item source/media failures remain visible and cannot stop recovery handoff"
   }
 }

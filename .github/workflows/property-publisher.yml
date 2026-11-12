@@ -3,6 +3,15 @@ on:
   schedule:
     - cron: '43 * * * *'
   workflow_dispatch:
+    inputs:
+      automatic_recovery:
+        description: Existing repository health workflow recovery; verified independently
+        type: boolean
+        default: false
+      recovery_origin_run:
+        description: Exact originating health workflow run URL
+        type: string
+        default: ''
   push:
     branches: [main]
     paths:
@@ -18,9 +27,12 @@ on:
       - 'scripts/verify_property_publication.py'
       - 'operations/site-sop.json'
       - 'scripts/worker_preflight.py'
+      - 'scripts/automatic_trigger.py'
+      - 'scripts/continue-recovery.py'
       - 'operations/build-contract.json'
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: love-our-listings-property-publisher
   cancel-in-progress: false
@@ -42,12 +54,18 @@ jobs:
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Validate required scoped writer access in the actual cloud runtime
         env:
+          GITHUB_TOKEN: ${{ github.token }}
+          LOL_AUTOMATIC_RECOVERY: ${{ github.event.inputs.automatic_recovery || 'false' }}
+          LOL_RECOVERY_ORIGIN_RUN: ${{ github.event.inputs.recovery_origin_run || '' }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: python3 scripts/worker_preflight.py
       - name: Load current SOP, collect property and Google RSS, write original features
         id: collect
         env:
+          GITHUB_TOKEN: ${{ github.token }}
+          LOL_AUTOMATIC_RECOVERY: ${{ github.event.inputs.automatic_recovery || 'false' }}
+          LOL_RECOVERY_ORIGIN_RUN: ${{ github.event.inputs.recovery_origin_run || '' }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: |
@@ -120,4 +138,18 @@ jobs:
             printf '## Love Our Listings source and publication evidence\n\n```json\n' >> "$GITHUB_STEP_SUMMARY"
             cat operations/latest-run.json >> "$GITHUB_STEP_SUMMARY"
             printf '\n```\n' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Continue existing bounded automatic recovery even when a property is held
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/continue-recovery.py
+          git config user.name SHTFTV
+          git config user.email 264305872+SHTFTV@users.noreply.github.com
+          git add operations/recovery-handoff.json public/automatic-recovery.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record same-publisher automatic recovery handoff'
+            git push origin HEAD:main
           fi

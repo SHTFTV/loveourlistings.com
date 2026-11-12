@@ -1,0 +1,31 @@
+name: Love Our Listings same-publisher recovery
+on:
+  schedule:
+    - cron: '47 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/property-health.yml'
+      - 'scripts/recover-publisher.py'
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: love-our-listings-property-recovery
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+      - name: Bound recovery cycles without relying on cron delivery
+        if: github.event_name == 'workflow_dispatch'
+        run: sleep 300
+      - name: Resume only the existing inactive publisher with repository-scoped access
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/recover-publisher.py
