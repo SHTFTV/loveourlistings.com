@@ -125,14 +125,17 @@ def main(root=ROOT,fetch=get,now=None):
    row=queue[source_key(item)]
    art=illustration_record(item,root);art_revision=hashlib.sha256(json.dumps(art,sort_keys=True).encode()).hexdigest() if art else None
    art_changed=bool(art and row.get('illustrationRevision')!=art_revision)
+   media_record=records.get(item['url']);media_revision=hashlib.sha256(json.dumps(media_record,sort_keys=True).encode()).hexdigest() if media_record and media_record.get('media') and media_record.get('summaryHash')==item['summaryHash'] else None
+   media_changed=bool(media_revision and row.get('reviewedMediaRevision')!=media_revision)
    exhausted=row.get('attempts',0)>=retry.get('maxAttempts',5)
    cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
-   if (exhausted or cooling) and not art_changed:
+   if (exhausted or cooling) and not art_changed and not media_changed:
     row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
     report.setdefault('publicationBlocks',[]).append({'sourceUrl':item['url'],'propertyId':item.get('propertyId'),'collection':collection,'title':item['title'],'reason':row.get('lastError','Retry held'),'retryStatus':row['status']})
     continue
    if attempted>=retry.get('maxCandidatesPerRun',12):continue
    attempted+=1
+   if media_revision:row['reviewedMediaRevision']=media_revision
    try:
     reviewed=record_for(item,records)
     try:sourceImage=reviewed_media(item,root,reviewed) if reviewed else resolve_media(item['url'],root,publisher=item['publisher'])
