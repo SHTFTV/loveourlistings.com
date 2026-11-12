@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T23:27:29.767958+00:00",
+  "updatedAt": "2026-11-12T23:33:01.794599+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "375618ac387dff72d889dabcc59d3ee6aea603b6",
+    "sourceCommit": "b46ca81ffabe64667367397408fbd186634fc426",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43328223557",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43329023458",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -46,11 +46,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
-      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-13T05:05:06.994601+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
@@ -62,13 +64,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
+      "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
+      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-13T05:05:06.994601+00:00"
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
@@ -109,12 +111,12 @@
     "scope": "Last independently verified role incident/canary delivery to intended reader; not owner read or every article notification"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-12T23:27:29.716403+00:00",
+    "checkedAt": "2026-11-12T23:33:01.756181+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 97,
+    "feedItemsParsed": 98,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -168,10 +170,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 18,
+        "itemsParsed": 19,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 18
+          "discovery-original-link-required": 19
         }
       },
       {
@@ -189,14 +191,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 11,
     "inScopeQueueCandidates": 10,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 10,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 11,
     "outcomes": {
       "not-individual-property": 1,
       "retry-cooldown": 4,
-      "quarantined-retry-exhausted": 3,
+      "quarantined-retry-exhausted": 4,
       "duplicate-property": 1,
-      "attempt-failed": 1,
       "review-required": 1
     },
     "newFeaturesStored": 0,
@@ -264,14 +265,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
         "sourceId": "robb-property",
-        "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+        "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
         "collection": "waterfront",
-        "outcome": "attempt-failed",
-        "failedAttempts": 5,
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
         "checks": 1,
-        "nextAttemptAt": null,
+        "nextAttemptAt": "2026-11-13T05:05:06.994601+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -288,14 +289,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
+        "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
         "sourceId": "robb-property",
-        "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
+        "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
         "collection": "waterfront",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
         "checks": 1,
-        "nextAttemptAt": "2026-11-13T05:05:06.994601+00:00",
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -337,49 +338,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-12T23:27:24.769894+00:00",
+  "lastRunAt": "2026-11-12T23:32:56.236718+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
-      "items": 18
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
+      "items": 19
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T23:27:24.769894+00:00",
+      "fetchedAt": "2026-11-12T23:32:56.236718+00:00",
       "items": 29
     }
   ],
@@ -422,8 +423,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 66,
-  "quarantinedItems": 2,
+  "duplicatesFiltered": 67,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-12-16be7cdfc9",
