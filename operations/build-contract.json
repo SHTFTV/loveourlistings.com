@@ -14,16 +14,20 @@
   "gates": {
     "canonicalSourceProduction": {
       "verified": true,
-      "sourceCommit": "cb29ad8f3d5c330c82edd595cd14da408f229c14",
-      "deployment": "dpl_22GUPYGuvZgJzAQYtDXFskqvgaGw",
+      "sourceCommit": "7d0ed3e4bfb851e0122c5959e019530608ba49e1",
+      "deployment": "dpl_Bd98UN4JPnB2sqyfGJJX9odFcGYZ",
       "repository": "SHTFTV/loveourlistings.com",
       "origin": "https://www.loveourlistings.com",
-      "scope": "Verified existing baseline; changed revision requires fresh deployment evidence"
+      "scope": "SOP v6 worker and failure receipts deployed; live status and preserved article HTTP200 independently checked"
     },
     "secureRuntimeAccess": {
-      "verified": false,
-      "status": "pending-current-job-actual-API-test",
-      "receipt": "operations/runtime-access.json"
+      "verified": true,
+      "status": "actual-cloud-API-request-passed",
+      "receipt": "operations/runtime-access.json",
+      "runId": "43134465168",
+      "sourceCommit": "8a93865348edce6c811f40bf92373fc15b03eb83",
+      "sotSha256": "34908bd4de553983704771cb2a755ba47cab1cec2c91151d5f427b3d4358c133",
+      "checkedAt": "2026-11-12T01:26:06.259882+00:00"
     },
     "minimalProductionWorkflow": {
       "verified": true,
@@ -34,16 +38,50 @@
     },
     "dependentExtension": {
       "verified": false,
-      "status": "held-until-current-access-proof"
+      "status": "held-full-current-production-and-recovery-proof-incomplete"
     },
     "fullOperationalVerification": {
       "verified": false,
       "missing": [
-        "Current revised worker cloud run",
-        "Current native-scheduled execution",
-        "Desktop and phone visual QA",
-        "Delivered owner notification",
-        "Google Alerts inbox ingestion reconciliation"
+        "Revised worker successful new live publication and actual failed+healthy cloud item recovery",
+        "Current native scheduled run after repair",
+        "Desktop and phone visual QA: no browser surface available",
+        "Delivered owner notification: no transport delivery proof",
+        "Authorized colin@industryarmymarketing.com Google Alerts inbox access: connected Gmail identity differs"
+      ],
+      "currentBlockers": [
+        {
+          "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+          "propertyId": null,
+          "collection": "waterfront",
+          "title": "This Olson Kundig-Designed Home Frames Hawaii’s Rugged Landscape",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "retry-cooldown"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "retry-cooldown"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "quarantined-retry-exhausted"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "quarantined-retry-exhausted"
+        }
       ]
     }
   }
