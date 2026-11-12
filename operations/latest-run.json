@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-12T11:18:27.459238+00:00",
+  "startedAt": "2026-11-12T11:24:00.033793+00:00",
   "sopVersion": 11,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 11,
     "sha256": "7a37ef15eeb362dfdbecc84204788a6f800b68ec9ff9c3930d88a5d91d452bb3",
-    "sourceCommit": "ebb6d31b490db63e003b6ab4130ddce0899246df",
+    "sourceCommit": "b415c141790eb894ab521d26e4521b71c7230ac6",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43207976409",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43208784449",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-12T11:18:27.459238+00:00",
+      "fetchedAt": "2026-11-12T11:24:00.033793+00:00",
       "items": 10,
       "errors": [],
       "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
@@ -23,7 +23,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-12T11:18:27.459238+00:00",
+      "fetchedAt": "2026-11-12T11:24:00.033793+00:00",
       "items": 10,
       "errors": [],
       "finalUrl": "https://robbreport.com/shelter/feed/"
@@ -32,21 +32,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-12T11:18:27.459238+00:00",
+      "fetchedAt": "2026-11-12T11:24:00.033793+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-12T11:18:27.459238+00:00",
+      "fetchedAt": "2026-11-12T11:24:00.033793+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-12T11:18:27.459238+00:00",
+      "fetchedAt": "2026-11-12T11:24:00.033793+00:00",
       "items": 30,
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -55,7 +55,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-12T11:18:27.459238+00:00",
+      "fetchedAt": "2026-11-12T11:24:00.033793+00:00",
       "items": 15,
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -63,13 +63,13 @@
   ],
   "articles": [],
   "duplicates": 55,
-  "quarantined": 1,
+  "quarantined": 0,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43207217846",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43208031950",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -77,10 +77,11 @@
   "publicationBlocks": [
     {
       "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
-      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
@@ -162,7 +163,7 @@
     }
   ],
   "status": "publication-failed",
-  "finishedAt": "2026-11-12T11:18:35.050061+00:00",
+  "finishedAt": "2026-11-12T11:24:04.438369+00:00",
   "failedStageStatus": "blocked-property-publication",
   "error": "Cloud build/publication check failed; see linked workflow run"
 }
