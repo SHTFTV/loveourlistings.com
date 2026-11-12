@@ -15,7 +15,8 @@ def category(item):
  t=(item['title']+' '+item['summary'][:750]).lower()
  if 'sotheby' in item['publisher'].lower() and not item['title'].lower().startswith('inside '):return None
  if re.search(r'\b(?:market|sales|prices|painting|museum|competition|design trends|lighting|color chart|art of display)\b',item['title'],re.I):return None
- if not re.search(r'\b(?:inside|home|mansion|estate|compound|townhouse|cottage|residence|retreat)\b',item['title'],re.I):return None
+ if not re.search(r'\b(?:inside|home|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat)\b',item['title'],re.I):return None
+ if re.search(r'\bpenthouse\b',t):return 'penthouses'
  if re.search(r'waterfront|oceanfront|beachfront|lakefront|lakeside|ocean.view|coast|malibu',t):return 'waterfront'
  return 'mansions'
 def feature(item,collection,now,sop,sourceImage=None,reviewed=None):
@@ -35,7 +36,7 @@ def feature(item,collection,now,sop,sourceImage=None,reviewed=None):
   deck='An ocean outlook and a private observatory put two very different kinds of sky in the same property story.'
   paragraphs=[('Two ways to enjoy the setting',f"In its {sourceDate} report, {publisher} describes a Malibu residence with an ocean outlook and a private observatory. That pairing is the reason for this coastal selection. The source calls it ocean-view; we are not turning that into a claim of direct frontage, beach ownership or shore access."),('Why we love this listing','The unusual room is a useful starting point, but the real appeal is the routine it suggests: time outside, a changing horizon and somewhere to look beyond the familiar view. A distinctive feature earns its place when it changes how a home might be enjoyed, rather than merely extending an inventory.'),('The practical reading','We would ask how the observatory and outdoor areas relate to the spaces used every day. Equipment, access, condition and local constraints belong in a specific property review. Follow the original publication for the reported design details, asking terms and photography; confirm present availability with the listing professional.')]
  else:
-  if not re.search(r'\b(?:inside|home|mansion|estate|compound|townhouse|cottage|residence|retreat)\b',title,re.I):raise ValueError('Not a supported individual property story')
+  if not re.search(r'\b(?:inside|home|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat)\b',title,re.I):raise ValueError('Not a supported individual property story')
   from property_writer import write_feature
   try:
    if len(item['summary'].split())<55 and not item.get('sourceEvidence'):item=recover_evidence(item,sop)

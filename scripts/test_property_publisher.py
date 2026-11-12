@@ -34,6 +34,9 @@ class TestPublisher(unittest.TestCase):
  def test_generic_design_story_is_not_mislabelled_as_a_property_listing(self):
   self.assertIsNone(category({'title':'Color Chart: The Joys of Browns in the Home','summary':'A home design feature','publisher':'Sotheby’s International Realty'}))
   self.assertEqual(category({'title':'Inside Montecito’s La Paloma','summary':'A restored estate designed by a named architect','publisher':'Sotheby’s International Realty'}),'mansions')
+ def test_individual_penthouse_and_tudor_are_eligible_without_generic_design(self):
+  self.assertEqual(category({'title':'Clive Davis’s Park Avenue Penthouse Lists for $11 Million','summary':'An individual dated property source','publisher':'Robb Report'}),'penthouses')
+  self.assertEqual(category({'title':'A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million','summary':'An individual dated property source','publisher':'Robb Report'}),'mansions')
  def test_missing_date_future_or_external_host_rejected(self):
   good=rss('A Home','https://bad.example/property','A genuine-looking property summary with more than thirty-five characters.');items,errors=parse_feed(good,DIRECT,NOW);self.assertEqual(len(items),0);self.assertEqual(len(errors),1)
   future=rss('A Home','https://robbreport.com/property','A genuine-looking property summary with more than thirty-five characters.','Mon, 09 Nov 2036 16:00:00 +0000');self.assertEqual(len(parse_feed(future,DIRECT,NOW)[0]),0)
