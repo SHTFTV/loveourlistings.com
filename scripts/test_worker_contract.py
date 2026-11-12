@@ -18,7 +18,7 @@ class WorkerContract(unittest.TestCase):
    self.assertEqual(len(result['articles']),1);self.assertEqual(media.call_count,1)
    self.assertEqual(result['publicationBlocks'][0]['retryStatus'],'quarantined-retry-exhausted')
    self.assertEqual(result['sotLoad']['sha256'],hashlib.sha256((root/'operations/site-sop.json').read_bytes()).hexdigest())
-   status=json.loads((root/'public/publishing-status.json').read_text());self.assertEqual(status['health'],'degraded');self.assertEqual(status['ownerNotification']['status'],'unverified')
+   status=json.loads((root/'public/publishing-status.json').read_text());self.assertEqual(status['health'],'degraded');self.assertEqual(status['ownerNotification']['status'],'pending-current-role-alert-proof')
  def test_commit_fence_rejects_changed_sot(self):
   from worker_preflight import fence
   with tempfile.TemporaryDirectory() as t:

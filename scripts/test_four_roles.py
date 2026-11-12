@@ -48,3 +48,11 @@ class ReceiptOrdering(unittest.TestCase):
     return b.getvalue()
    raise AssertionError(path)
   with patch.object(common,'api',side_effect=call):self.assertEqual(common.latest('supervisor')['runUrl'],'new')
+
+class OwnerDeliveryProjection(unittest.TestCase):
+ def test_status_preserves_actual_delivery_scope_and_rejects_wrong_sot(self):
+  from publish_properties import owner_notice
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);(root/'operations').mkdir();role={'checkedAt':common.now().isoformat(),'sotLoad':{'sha256':'current'},'ownerAlertDelivery':{'verified':True,'receiptUrl':'https://markett-ca.vercel.app/api/publication-activity','expectedEventId':'same-incident','deliveredAt':common.now().isoformat()}}
+   (root/'operations/four-roles.json').write_text(json.dumps({'roles':{'watchdog':role}}));d=owner_notice(root,{'sotLoad':{'sha256':'current'}});self.assertEqual(d['status'],'role-alert-delivery-last-verified');self.assertFalse(d['ownerReadVerified'])
+   self.assertEqual(owner_notice(root,{'sotLoad':{'sha256':'different'}})['status'],'pending-current-role-alert-proof')
