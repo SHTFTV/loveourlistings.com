@@ -1,46 +1,93 @@
 {
-  "updatedAt": "2026-11-11T23:14:03.281515+00:00",
+  "updatedAt": "2026-11-12T01:26:14.632598+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 */6 * * *",
-  "sopVersion": 5,
-  "lastRunAt": "2026-11-11T23:12:47.653230+00:00",
-  "status": "published-and-verified",
+  "sopVersion": 6,
+  "sotLoad": {
+    "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
+    "version": 6,
+    "sha256": "34908bd4de553983704771cb2a755ba47cab1cec2c91151d5f427b3d4358c133",
+    "sourceCommit": "8a93865348edce6c811f40bf92373fc15b03eb83",
+    "trigger": "push"
+  },
+  "publicationBlocks": [
+    {
+      "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted"
+    }
+  ],
+  "health": "degraded",
+  "ownerNotification": {
+    "status": "unverified",
+    "owner": "site operations owner",
+    "nextAction": "Bind existing owner notification transport and verify actual delivery; public JSON is not notification proof"
+  },
+  "lastRunAt": "2026-11-12T01:26:09.191940+00:00",
+  "status": "publication-failed",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-11T23:12:47.653230+00:00",
+      "fetchedAt": "2026-11-12T01:26:09.191940+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-11T23:12:47.653230+00:00",
+      "fetchedAt": "2026-11-12T01:26:09.191940+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-11T23:12:47.653230+00:00",
+      "fetchedAt": "2026-11-12T01:26:09.191940+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-11T23:12:47.653230+00:00",
+      "fetchedAt": "2026-11-12T01:26:09.191940+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-11T23:12:47.653230+00:00",
+      "fetchedAt": "2026-11-12T01:26:09.191940+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-11T23:12:47.653230+00:00",
-      "items": 15
+      "fetchedAt": "2026-11-12T01:26:09.191940+00:00",
+      "items": 18
     }
   ],
   "collections": [
@@ -52,9 +99,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 4,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 3,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "penthouses",
@@ -81,9 +128,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 1,
-  "duplicatesFiltered": 53,
-  "quarantinedItems": 4,
+  "googleDiscoveryItems": 6,
+  "duplicatesFiltered": 52,
+  "quarantinedItems": 0,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-a52f8783fb",
