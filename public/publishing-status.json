@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T22:22:42.514283+00:00",
+  "updatedAt": "2026-11-12T22:29:14.018136+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "50022e6c5d45b5e643e693cc5a99fae2beb6f9bf",
+    "sourceCommit": "2f12a236e8417289e62eb0081940672dca683f28",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318113272",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43319361967",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -44,27 +44,6 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
-      "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
-      "sourceUrl": "https://www.countrylife.co.uk/property/scotland/a-commutable-castle-set-in-12-beautiful-acres-with-cinema-room-hot-tub-and-boutique-hotel-vibes",
-      "title": "A commutable castle in 12 acres, with turrets, cinema room and hot tub",
-      "propertyId": null,
-      "collection": "acreage",
-      "reason": "Not a supported individual property story"
-    },
-    {
-      "sourceUrl": "https://www.countrylife.co.uk/property/a-converted-water-tower-dubbed-a-jaw-dropping-showstopper-by-kevin-mccloud-is-on-the-market",
-      "title": "A converted water tower dubbed 'a jaw-dropping showstopper' by Kevin McCloud is on the market",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "Not a supported individual property story"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
@@ -110,12 +89,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-12T22:21:47.773771+00:00",
+    "checkedAt": "2026-11-12T22:29:13.976796+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 98,
+    "feedItemsParsed": 100,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -142,8 +121,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "candidate-admitted": 7,
-          "not-individual-property": 1,
+          "candidate-admitted": 6,
+          "not-individual-property": 2,
           "already-published": 2
         }
       },
@@ -169,10 +148,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 19,
+        "itemsParsed": 21,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 19
+          "discovery-original-link-required": 21
         }
       },
       {
@@ -180,29 +159,43 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "candidate-admitted": 9,
+          "already-published": 1,
+          "candidate-admitted": 8,
           "not-individual-property": 4,
           "outside-lookback": 16
         }
       }
     ],
-    "newCandidatesDiscovered": 10,
-    "candidatesConsidered": 18,
-    "attemptedThisRun": 4,
-    "skippedThisRun": 14,
+    "newCandidatesDiscovered": 0,
+    "candidatesConsidered": 17,
+    "inScopeQueueCandidates": 16,
+    "attemptedThisRun": 2,
+    "skippedThisRun": 15,
     "outcomes": {
+      "not-individual-property": 1,
       "retry-cooldown": 3,
       "quarantined-retry-exhausted": 3,
-      "attempt-failed": 3,
-      "stored-awaiting-verification": 1,
       "duplicate-property": 1,
-      "deferred-attempt-budget": 6,
+      "stored-awaiting-verification": 2,
+      "deferred-article-limit": 6,
       "review-required": 1
     },
-    "newFeaturesStored": 1,
-    "verifiedPublicationsThisRun": 1,
+    "newFeaturesStored": 2,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
+      {
+        "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
+        "sourceId": "robb-property",
+        "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
+        "collection": "mansions",
+        "outcome": "not-individual-property",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "Cached art/news item is outside the individual-property feature scope",
+        "duplicateOfArticleSlug": null
+      },
       {
         "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
         "sourceId": "robb-property",
@@ -240,42 +233,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
-        "sourceId": "robb-property",
-        "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T04:20:13.004977+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/scotland/a-commutable-castle-set-in-12-beautiful-acres-with-cinema-room-hot-tub-and-boutique-hotel-vibes",
-        "sourceId": "countrylife-property",
-        "title": "A commutable castle in 12 acres, with turrets, cinema room and hot tub",
-        "collection": "acreage",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T04:20:13.004977+00:00",
-        "reason": "Not a supported individual property story",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/a-timeless-georgian-home-for-sale-in-the-south-downs-graced-by-the-spirit-of-ecstasy",
-        "sourceId": "countrylife-property",
-        "title": "A timeless Georgian home for sale in the South Downs graced by the Spirit of Ecstasy",
-        "collection": "mansions",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
         "sourceId": "robb-property",
         "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -288,27 +245,27 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/a-converted-water-tower-dubbed-a-jaw-dropping-showstopper-by-kevin-mccloud-is-on-the-market",
-        "sourceId": "countrylife-property",
-        "title": "A converted water tower dubbed 'a jaw-dropping showstopper' by Kevin McCloud is on the market",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T04:20:13.004977+00:00",
-        "reason": "Not a supported individual property story",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://www.countrylife.co.uk/property/one-of-the-most-breathtaking-staircases-in-britain-for-sale-in-a-palatial-baroque-home-thats-on-sale-for-gbp3-25-million-home",
         "sourceId": "countrylife-property",
         "title": "One of the most magnificent staircases in Britain, in a palatial Baroque home up for sale at \u00a33.25 million",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 0,
-        "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:20:13.004977+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.countrylife.co.uk/property/scotland/a-commutable-castle-set-in-12-beautiful-acres-with-cinema-room-hot-tub-and-boutique-hotel-vibes",
+        "sourceId": "countrylife-property",
+        "title": "A commutable castle in 12 acres, with turrets, cinema room and hot tub",
+        "collection": "acreage",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 1,
+        "checks": 2,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -316,11 +273,11 @@
         "sourceId": "countrylife-property",
         "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:20:13.004977+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -328,11 +285,11 @@
         "sourceId": "countrylife-property",
         "title": "Two of the finest architects of the 1930s created this house in a secluded, leafy spot in Buckinghamshire \u2014and now it's on the market",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:20:13.004977+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -340,11 +297,11 @@
         "sourceId": "countrylife-property",
         "title": "This picture-perfect 'silvery stone' house with royal connections is a restoration marvel",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:20:13.004977+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -352,11 +309,11 @@
         "sourceId": "countrylife-property",
         "title": "This Scottish castle with links to Robert Burns and Robert the Bruce is a steal \u2014 just don't expect it to come with a roof",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:20:13.004977+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -364,11 +321,11 @@
         "sourceId": "countrylife-property",
         "title": "'We managed to finish the house, including removing the ducklings that had settled in': James Alexander-Sinclair on his first house in the country",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": "2026-11-12T22:20:13.004977+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -418,52 +375,64 @@
         "nextAttemptAt": null,
         "reason": "Qualifying native2500x1667 listing photograph is explicitly limited by its IDX source to personal, non-commercial use; commercial/editorial reuse permission or an unrestricted exact-property original is required.",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.countrylife.co.uk/property/a-converted-water-tower-dubbed-a-jaw-dropping-showstopper-by-kevin-mccloud-is-on-the-market",
+        "sourceId": "countrylife-property",
+        "title": "A converted water tower dubbed 'a jaw-dropping showstopper' by Kevin McCloud is on the market",
+        "collection": "mansions",
+        "outcome": "deferred-article-limit",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-12T22:20:13.004977+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-12T22:28:27.112559+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
-      "items": 19
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
+      "items": 21
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-12T22:20:13.004977+00:00",
+      "fetchedAt": "2026-11-12T22:28:27.112559+00:00",
       "items": 29
     }
   ],
@@ -476,7 +445,7 @@
     },
     {
       "name": "mansions",
-      "eligible": 13,
+      "eligible": 11,
       "newFeatures": 1,
       "status": "built-for-publication"
     },
@@ -495,8 +464,8 @@
     {
       "name": "acreage",
       "eligible": 2,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "beach-properties",
@@ -505,9 +474,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 59,
-  "quarantinedItems": 4,
+  "googleDiscoveryItems": 1,
+  "duplicatesFiltered": 61,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-12-edf8c71cee",
