@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-12T06:16:23.442649+00:00",
+  "checkedAt": "2026-11-12T06:24:32.308986+00:00",
   "sotLoad": {
-    "version": 10,
-    "sha256": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
-    "sourceCommit": "f375ca3261b5fe051ceb5e2a7c7c7c73545d6197",
+    "version": 11,
+    "sha256": "7a37ef15eeb362dfdbecc84204788a6f800b68ec9ff9c3930d88a5d91d452bb3",
+    "sourceCommit": "bc28bac0b8c8194a7ea205a6b3185f0676d80898",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,17 +13,17 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-12T06:16:17.318427+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168",
+      "checkedAt": "2026-11-12T06:24:24.317724+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879387",
       "trigger": "push",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-        "version": 10,
-        "sha256": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
-        "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
+        "version": 11,
+        "sha256": "7a37ef15eeb362dfdbecc84204788a6f800b68ec9ff9c3930d88a5d91d452bb3",
+        "sourceCommit": "8554c2efc0c7d4120a74c98eb91b189074f7b7cd",
         "trigger": "push"
       },
-      "runtimeVerified": false,
+      "runtimeVerified": true,
       "unattendedExecution": false,
       "verified": false,
       "status": "failed",
@@ -36,23 +36,24 @@
         "Source expressly restricts reproduction; review required"
       ],
       "outcome": "publication-failed",
-      "fresh": false,
-      "expiresAt": "2026-11-12T06:46:17.318427+00:00",
+      "fresh": true,
+      "expiresAt": "2026-11-12T06:54:24.317724+00:00",
       "green": false
     },
     "visual": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "visual",
-      "checkedAt": "2026-11-12T05:52:27.990Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272",
-      "trigger": "workflow_run",
+      "checkerSha256": "ed2d21a799a7e1a0173587ed448f08bfb70068dfa56d721021f0514a40eba44d",
+      "checkedAt": "2026-11-12T06:16:24.558Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008",
+      "trigger": "push",
       "runtimeVerified": true,
-      "unattendedExecution": true,
+      "unattendedExecution": false,
       "sotLoad": {
-        "version": 9,
-        "sha256": "2c62946ef2ce296273e6c1f8ff44c81a3eedf08ba6db308d0522c6669dd967cb",
-        "sourceCommit": "9882701f2b611903843adaee9738d1f84e052318",
+        "version": 10,
+        "sha256": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
+        "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -63,9 +64,10 @@
           "width": 1440,
           "height": 1000,
           "findings": [
-            "body-text-below14px"
+            "visible-property-photo-native-below1600x900"
           ],
           "http": 200,
+          "topScreenshot": "desktop-home-top.jpg",
           "metrics": {
             "title": "Love Our Listings | Luxury Homes, People & Places",
             "h1": "Extraordinary homes.\nA world to love.",
@@ -305,19 +307,21 @@
                 "fit": "cover"
               }
             ],
+            "captionFontSizes": [
+              12,
+              12,
+              12,
+              12
+            ],
             "bodyFontSizes": [
               14,
-              10,
               14,
-              10,
               14,
-              10,
-              14,
-              10
+              14
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "f6d81b47ac0f74f0245f260d0a335abd3ee596a4bcbe4c1e9d56a112396a79d5"
+          "screenshotSha256": "7e49f756b2ec0594852e5bede69dfd781608890c96c3074ae80361595c5504e7"
         },
         {
           "page": "journal",
@@ -356,6 +360,7 @@
                 "fit": "fill"
               }
             ],
+            "captionFontSizes": [],
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
@@ -367,9 +372,7 @@
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
-          "findings": [
-            "published-article-image-mismatch-or-quality"
-          ],
+          "findings": [],
           "http": 200,
           "metrics": {
             "title": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
@@ -428,16 +431,17 @@
                 "fit": "contain"
               }
             ],
+            "captionFontSizes": [],
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/love-logo-clean-v6.webp",
-            "width": 430,
-            "height": 550,
-            "alt": ""
+            "src": "/images/source-properties/49507de755c3131e1abd.jpg",
+            "width": 1600,
+            "height": 900,
+            "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "7425035e9f65e2af1a7be72f7a78c0b035008219d7dc2347dc4929ed743f0e23"
+          "screenshotSha256": "60d050817d30019da795704fe1abf6895bf8563e855dfb7052525124a5cce66c"
         },
         {
           "page": "home",
@@ -445,10 +449,9 @@
           "viewport": "phone",
           "width": 390,
           "height": 844,
-          "findings": [
-            "body-text-below14px"
-          ],
+          "findings": [],
           "http": 200,
+          "topScreenshot": "phone-home-top.jpg",
           "metrics": {
             "title": "Love Our Listings | Luxury Homes, People & Places",
             "h1": "Extraordinary homes.\nA world to love.",
@@ -520,13 +523,15 @@
                 "fit": "cover"
               }
             ],
+            "captionFontSizes": [
+              12
+            ],
             "bodyFontSizes": [
-              14,
-              10
+              14
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "d4a4c9e466462ce9e86dd1c095042b68425dcbf611919ce12d5fb315484ed053"
+          "screenshotSha256": "90d278b54659781599d58265234eb3008cfed2c2128d90702589dd9431682c0e"
         },
         {
           "page": "journal",
@@ -565,6 +570,7 @@
                 "fit": "fill"
               }
             ],
+            "captionFontSizes": [],
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
@@ -576,9 +582,7 @@
           "viewport": "phone",
           "width": 390,
           "height": 844,
-          "findings": [
-            "published-article-image-mismatch-or-quality"
-          ],
+          "findings": [],
           "http": 200,
           "metrics": {
             "title": "We Love This Listing: Celine Dion\u2019s Former Jupiter Mansion | Love Our Listings",
@@ -637,23 +641,21 @@
                 "fit": "contain"
               }
             ],
+            "captionFontSizes": [],
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/love-logo-clean-v6.webp",
-            "width": 430,
-            "height": 550,
-            "alt": ""
+            "src": "/images/source-properties/49507de755c3131e1abd.jpg",
+            "width": 1600,
+            "height": 900,
+            "alt": "Earlier listing photograph of Celine Dion\u2019s former370 Eagle Drive waterfront estate, pool and private dock"
           },
           "screenshot": "phone-article.jpg",
           "screenshotSha256": "da4d8acd540fea7d32ce7805af5ff08eca7141704f6267f7b1783142ac66bd81"
         }
       ],
       "findings": [
-        "desktop/home: body-text-below14px",
-        "desktop/article: published-article-image-mismatch-or-quality",
-        "phone/home: body-text-below14px",
-        "phone/article: published-article-image-mismatch-or-quality"
+        "desktop/home: visible-property-photo-native-below1600x900"
       ],
       "verified": false,
       "status": "failed",
@@ -663,23 +665,23 @@
         "publishedAt": "2026-11-11T16:12:47-07:00",
         "image": "/images/source-properties/49507de755c3131e1abd.jpg"
       },
-      "artifactId": 13919685355,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272/artifacts/13919381687",
+      "artifactId": 13920531585,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008/artifacts/13920396894",
       "fresh": false,
-      "expiresAt": "2026-11-12T06:22:27.990000+00:00",
+      "expiresAt": "2026-11-12T06:46:24.558000+00:00",
       "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-12T06:16:06.123441+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919375",
+      "checkedAt": "2026-11-12T06:24:15.355757+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879433",
       "trigger": "push",
       "sotLoad": {
-        "version": 10,
-        "sha256": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
-        "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
+        "version": 11,
+        "sha256": "7a37ef15eeb362dfdbecc84204788a6f800b68ec9ff9c3930d88a5d91d452bb3",
+        "sourceCommit": "8554c2efc0c7d4120a74c98eb91b189074f7b7cd",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -688,26 +690,27 @@
       "status": "failed",
       "findings": [
         "publisher-loaded-SOT-mismatch",
+        "publisher-unattended-proof-missing",
         "publisher-publication-failed",
         "production-deployment-SOT-mismatch",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166707873",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166707873",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168",
       "publisherOutcome": "publication-failed",
-      "publisherReceiptAgeSeconds": 88.481266,
+      "publisherReceiptAgeSeconds": 478.929332,
       "apiAccessReceipt": {
-        "runId": "43166707873",
+        "runId": "43166919168",
         "status": "passed",
-        "checkedAt": "2026-11-12T06:14:29.019605+00:00"
+        "checkedAt": "2026-11-12T06:16:11.595941+00:00"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-        "version": 9,
-        "sha256": "2c62946ef2ce296273e6c1f8ff44c81a3eedf08ba6db308d0522c6669dd967cb",
-        "sourceCommit": "5a3f1c91555e03a558b3cc0da88280fe8cb310fc",
-        "trigger": "workflow_dispatch"
+        "version": 10,
+        "sha256": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
+        "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
+        "trigger": "push"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
       "matchedPublishedPage": true,
@@ -718,10 +721,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272",
-        "checkedAt": "2026-11-12T05:52:27.990Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008",
+        "checkedAt": "2026-11-12T06:16:24.558Z",
         "status": "failed",
-        "artifactId": 13919685355
+        "artifactId": 13920531585
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -731,9 +734,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 13920082764,
+      "artifactId": 13920418608,
       "fresh": true,
-      "expiresAt": "2026-11-12T06:46:06.123441+00:00",
+      "expiresAt": "2026-11-12T06:54:15.355757+00:00",
       "green": false
     },
     "watchdog": {
@@ -754,23 +757,23 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
+      "sourceCommit": "8554c2efc0c7d4120a74c98eb91b189074f7b7cd",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T06:16:17.318427+00:00",
+      "observedAt": "2026-11-12T06:24:24.317724+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168",
-      "loadedRevision": 10,
-      "loadedHash": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879387",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879387",
+      "loadedRevision": 11,
+      "loadedHash": "7a37ef15eeb362dfdbecc84204788a6f800b68ec9ff9c3930d88a5d91d452bb3",
       "rawTrigger": "push",
       "trigger": "push",
-      "runtimeVerified": false,
-      "fresh": false,
+      "runtimeVerified": true,
+      "fresh": true,
       "findings": [
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
@@ -784,70 +787,68 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879387"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "9882701f2b611903843adaee9738d1f84e052318",
+      "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T05:52:27.990Z",
+      "observedAt": "2026-11-12T06:16:24.558Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272/artifacts/13919685355",
-      "loadedRevision": 9,
-      "loadedHash": "2c62946ef2ce296273e6c1f8ff44c81a3eedf08ba6db308d0522c6669dd967cb",
-      "rawTrigger": "workflow_run",
-      "trigger": "managed-scheduler",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008/artifacts/13920531585",
+      "loadedRevision": 10,
+      "loadedHash": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
+      "rawTrigger": "push",
+      "trigger": "push",
       "runtimeVerified": true,
       "fresh": false,
       "findings": [
-        "desktop/home: body-text-below14px",
-        "desktop/article: published-article-image-mismatch-or-quality",
-        "phone/home: body-text-below14px",
-        "phone/article: published-article-image-mismatch-or-quality"
+        "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272/artifacts/13919381687",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43164092272/artifacts/13919381687",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008/artifacts/13920396894",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919008/artifacts/13920396894",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-a52f8783fb/",
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "0333709e9a335b9db25c7ccbdc559e0244b7f7ad",
+      "sourceCommit": "8554c2efc0c7d4120a74c98eb91b189074f7b7cd",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T06:16:06.123441+00:00",
+      "observedAt": "2026-11-12T06:24:15.355757+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919375",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919375/artifacts/13920082764",
-      "loadedRevision": 10,
-      "loadedHash": "f8e8a04b5ed1b11ef54570925fca399c16d4e1c3254776b0c45bd324684e4bf8",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879433",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43167879433/artifacts/13920418608",
+      "loadedRevision": 11,
+      "loadedHash": "7a37ef15eeb362dfdbecc84204788a6f800b68ec9ff9c3930d88a5d91d452bb3",
       "rawTrigger": "push",
       "trigger": "push",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
         "publisher-loaded-SOT-mismatch",
+        "publisher-unattended-proof-missing",
         "publisher-publication-failed",
         "production-deployment-SOT-mismatch",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166707873",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43166919168",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
