@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-12T22:30:49.050667+00:00",
+  "checkedAt": "2026-11-12T22:38:51.295950+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "097aa1aeff0e67e1d02490924cd46207db2d509f",
+    "sourceCommit": "ea1669e9f1e22806cdec9bb2760606bc2ec8cdb6",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-12T22:29:13.976796+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978",
+      "checkedAt": "2026-11-12T22:37:19.057183+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43321372909",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "2f12a236e8417289e62eb0081940672dca683f28",
+        "sourceCommit": "fd73cd04c0fa1be259794d26be62c75671ffbef2",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -34,6 +34,7 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "Source expressly restricts reproduction; review required",
@@ -42,12 +43,12 @@
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-12T22:29:13.976796+00:00",
+        "checkedAt": "2026-11-12T22:37:19.057183+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 100,
+        "feedItemsParsed": 98,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -101,10 +102,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 21,
+            "itemsParsed": 19,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 21
+              "discovery-original-link-required": 19
             }
           },
           {
@@ -112,25 +113,26 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
-              "already-published": 1,
-              "candidate-admitted": 8,
+              "already-published": 3,
+              "candidate-admitted": 6,
               "not-individual-property": 4,
               "outside-lookback": 16
             }
           }
         ],
         "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 17,
-        "inScopeQueueCandidates": 16,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 15,
+        "candidatesConsidered": 15,
+        "inScopeQueueCandidates": 14,
+        "attemptedThisRun": 3,
+        "skippedThisRun": 12,
         "outcomes": {
           "not-individual-property": 1,
           "retry-cooldown": 3,
           "quarantined-retry-exhausted": 3,
+          "attempt-failed": 1,
           "duplicate-property": 1,
           "stored-awaiting-verification": 2,
-          "deferred-article-limit": 6,
+          "deferred-article-limit": 3,
           "review-required": 1
         },
         "newFeaturesStored": 2,
@@ -186,6 +188,18 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+            "sourceId": "countrylife-property",
+            "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
+            "collection": "mansions",
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T04:36:23.496793+00:00",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
             "sourceId": "robb-property",
             "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -198,9 +212,9 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/one-of-the-most-breathtaking-staircases-in-britain-for-sale-in-a-palatial-baroque-home-thats-on-sale-for-gbp3-25-million-home",
+            "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/two-of-the-finest-architects-of-the-1930s-created-this-house-in-a-secluded-leafy-spot-in-buckinghamshire-and-now-its-on-the-market",
             "sourceId": "countrylife-property",
-            "title": "One of the most magnificent staircases in Britain, in a palatial Baroque home up for sale at \u00a33.25 million",
+            "title": "Two of the finest architects of the 1930s created this house in a secluded, leafy spot in Buckinghamshire \u2014and now it's on the market",
             "collection": "mansions",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
@@ -210,51 +224,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/scotland/a-commutable-castle-set-in-12-beautiful-acres-with-cinema-room-hot-tub-and-boutique-hotel-vibes",
-            "sourceId": "countrylife-property",
-            "title": "A commutable castle in 12 acres, with turrets, cinema room and hot tub",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 1,
-            "checks": 2,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
-            "sourceId": "countrylife-property",
-            "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
-            "collection": "mansions",
-            "outcome": "deferred-article-limit",
-            "failedAttempts": 0,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/two-of-the-finest-architects-of-the-1930s-created-this-house-in-a-secluded-leafy-spot-in-buckinghamshire-and-now-its-on-the-market",
-            "sourceId": "countrylife-property",
-            "title": "Two of the finest architects of the 1930s created this house in a secluded, leafy spot in Buckinghamshire \u2014and now it's on the market",
-            "collection": "mansions",
-            "outcome": "deferred-article-limit",
-            "failedAttempts": 0,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://www.countrylife.co.uk/property/an-impressive-english-country-house-for-sale-with-a-millennium-tower-that-combines-all-the-very-best-of-old-and-new",
             "sourceId": "countrylife-property",
             "title": "This picture-perfect 'silvery stone' house with royal connections is a restoration marvel",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -265,7 +243,7 @@
             "outcome": "deferred-article-limit",
             "failedAttempts": 0,
             "checks": 0,
-            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "nextAttemptAt": "2026-11-12T22:36:23.496793+00:00",
             "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
@@ -277,7 +255,7 @@
             "outcome": "deferred-article-limit",
             "failedAttempts": 0,
             "checks": 0,
-            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "nextAttemptAt": "2026-11-12T22:36:23.496793+00:00",
             "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
@@ -337,7 +315,7 @@
             "outcome": "deferred-article-limit",
             "failedAttempts": 1,
             "checks": 1,
-            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "nextAttemptAt": "2026-11-12T22:36:23.496793+00:00",
             "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           }
@@ -345,7 +323,7 @@
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-12T22:59:13.976796+00:00",
+      "expiresAt": "2026-11-12T23:07:19.057183+00:00",
       "green": false
     },
     "visual": {
@@ -1160,61 +1138,375 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-12T22:16:59.597670+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318446055",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-12T22:32:24.178981+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320806282",
+      "trigger": "push",
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "50022e6c5d45b5e643e693cc5a99fae2beb6f9bf",
+        "sourceCommit": "fd73cd04c0fa1be259794d26be62c75671ffbef2",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
-      "unattendedExecution": true,
+      "unattendedExecution": false,
       "automaticOriginProof": {
-        "verified": true,
-        "kind": "schedule"
+        "verified": false
       },
       "verified": false,
       "status": "failed",
       "findings": [
-        "publisher-loaded-SOT-mismatch",
-        "publisher-runtime-or-publication-fault",
-        "production-deployment-SOT-mismatch",
+        "publisher-item-check-valves-held; intake-continues",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318063430",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318063430",
-      "publisherOutcome": "publication-failed",
-      "publisherReceiptAgeSeconds": 133.760514,
-      "publisherOperationalStatus": "publication-failed",
-      "queueProgress": null,
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 190.752114,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
+      "queueProgress": {
+        "checkedAt": "2026-11-12T22:29:13.976796+00:00",
+        "runtimeState": "running",
+        "publicationOutcome": "published-and-verified",
+        "feedsChecked": 7,
+        "feedsHealthy": 5,
+        "feedItemsParsed": 100,
+        "feedErrors": [
+          {
+            "sourceId": "mansion-global",
+            "reason": "HTTP 404"
+          },
+          {
+            "sourceId": "christies-property",
+            "reason": "DTD/entity declarations rejected"
+          }
+        ],
+        "sourceDispositions": [
+          {
+            "sourceId": "sothebys-property",
+            "itemsParsed": 10,
+            "parseRejected": 0,
+            "dispositions": {
+              "not-individual-property": 5,
+              "already-published": 2,
+              "outside-lookback": 3
+            }
+          },
+          {
+            "sourceId": "robb-property",
+            "itemsParsed": 10,
+            "parseRejected": 0,
+            "dispositions": {
+              "candidate-admitted": 6,
+              "not-individual-property": 2,
+              "already-published": 2
+            }
+          },
+          {
+            "sourceId": "mansion-global",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "christies-property",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "google-luxury",
+            "itemsParsed": 30,
+            "parseRejected": 0,
+            "dispositions": {
+              "discovery-original-link-required": 30
+            }
+          },
+          {
+            "sourceId": "google-waterfront",
+            "itemsParsed": 21,
+            "parseRejected": 0,
+            "dispositions": {
+              "discovery-original-link-required": 21
+            }
+          },
+          {
+            "sourceId": "countrylife-property",
+            "itemsParsed": 29,
+            "parseRejected": 1,
+            "dispositions": {
+              "already-published": 1,
+              "candidate-admitted": 8,
+              "not-individual-property": 4,
+              "outside-lookback": 16
+            }
+          }
+        ],
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 17,
+        "inScopeQueueCandidates": 16,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 15,
+        "outcomes": {
+          "not-individual-property": 1,
+          "retry-cooldown": 3,
+          "quarantined-retry-exhausted": 3,
+          "duplicate-property": 1,
+          "stored-awaiting-verification": 2,
+          "deferred-article-limit": 6,
+          "review-required": 1
+        },
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
+        "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
+        "candidateChecks": [
+          {
+            "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
+            "sourceId": "robb-property",
+            "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
+            "collection": "mansions",
+            "outcome": "not-individual-property",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Cached art/news item is outside the individual-property feature scope",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+            "sourceId": "robb-property",
+            "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+            "collection": "waterfront",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-12T23:21:56.206402+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
+            "sourceId": "robb-property",
+            "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
+            "collection": "penthouses",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-13T01:39:01.705704+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
+            "sourceId": "robb-property",
+            "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
+            "collection": "ranches",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceId": "robb-property",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+            "collection": "acreage",
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/one-of-the-most-breathtaking-staircases-in-britain-for-sale-in-a-palatial-baroque-home-thats-on-sale-for-gbp3-25-million-home",
+            "sourceId": "countrylife-property",
+            "title": "One of the most magnificent staircases in Britain, in a palatial Baroque home up for sale at \u00a33.25 million",
+            "collection": "mansions",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/scotland/a-commutable-castle-set-in-12-beautiful-acres-with-cinema-room-hot-tub-and-boutique-hotel-vibes",
+            "sourceId": "countrylife-property",
+            "title": "A commutable castle in 12 acres, with turrets, cinema room and hot tub",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 1,
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+            "sourceId": "countrylife-property",
+            "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 0,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/two-of-the-finest-architects-of-the-1930s-created-this-house-in-a-secluded-leafy-spot-in-buckinghamshire-and-now-its-on-the-market",
+            "sourceId": "countrylife-property",
+            "title": "Two of the finest architects of the 1930s created this house in a secluded, leafy spot in Buckinghamshire \u2014and now it's on the market",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 0,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/an-impressive-english-country-house-for-sale-with-a-millennium-tower-that-combines-all-the-very-best-of-old-and-new",
+            "sourceId": "countrylife-property",
+            "title": "This picture-perfect 'silvery stone' house with royal connections is a restoration marvel",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 0,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/scottish-castles/a-scottish-castle-for-sale-at-gbp120-000-with-links-to-robert-burns-robert-the-bruce-and-charles-rennie-mackintosh-but-the-purchase-price-is-just-the-start",
+            "sourceId": "countrylife-property",
+            "title": "This Scottish castle with links to Robert Burns and Robert the Bruce is a steal \u2014 just don't expect it to come with a roof",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 0,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/we-managed-to-finish-the-house-including-removing-the-ducklings-that-had-settled-in-the-unoccupied-end-just-before-the-birth-of-our-youngest-child-james-alexander-sinclair-on-his-first-house-in-the-country",
+            "sourceId": "countrylife-property",
+            "title": "'We managed to finish the house, including removing the ducklings that had settled in': James Alexander-Sinclair on his first house in the country",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 0,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
+            "sourceId": "robb-property",
+            "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 7,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
+            "sourceId": "robb-property",
+            "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 9,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+            "sourceId": "robb-property",
+            "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 0,
+            "nextAttemptAt": "2026-11-13T00:03:00.761068+00:00",
+            "reason": "Source expressly restricts reproduction; review required",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+            "sourceId": "robb-property",
+            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+            "collection": "mansions",
+            "outcome": "review-required",
+            "failedAttempts": 1,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Qualifying native2500x1667 listing photograph is explicitly limited by its IDX source to personal, non-commercial use; commercial/editorial reuse permission or an unrestricted exact-property original is required.",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/a-converted-water-tower-dubbed-a-jaw-dropping-showstopper-by-kevin-mccloud-is-on-the-market",
+            "sourceId": "countrylife-property",
+            "title": "A converted water tower dubbed 'a jaw-dropping showstopper' by Kevin McCloud is on the market",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-12T22:28:27.112559+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          }
+        ]
+      },
       "apiAccessReceipt": {
-        "runId": "43318063430",
+        "runId": "43320176978",
         "status": "passed",
-        "checkedAt": "2026-11-12T22:14:39.233652+00:00"
+        "checkedAt": "2026-11-12T22:28:24.998239+00:00"
+      },
+      "publicationFreshness": {
+        "inspectionThresholdSeconds": 7200,
+        "lastVerifiedPublication": {
+          "id": "loveourlistings.com:we-love-mansions-2026-11-11-4c1835d3d3",
+          "site": "loveourlistings.com",
+          "title": "We Love This Listing: The Great Stair & Library at Burley on the Hill",
+          "publishedAt": "2026-11-12T15:28:27-07:00",
+          "verifiedAt": "2026-11-12T22:30:08.270347+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-11-4c1835d3d3/",
+          "status": "done",
+          "checkedAt": "2026-11-12T22:30:08.318859+00:00"
+        },
+        "ageSeconds": 238.110397,
+        "inspectionRequired": false,
+        "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-        "version": 12,
-        "sha256": "2a4344de2c62001afc3cf4114de75fa16cb6793a81b77f3d34576bb4b24780a6",
-        "sourceCommit": "9277a880800f49b3e95c08ef75a33ee70a8774e0",
+        "version": 13,
+        "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
+        "sourceCommit": "2f12a236e8417289e62eb0081940672dca683f28",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-12-4e9235646a/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-07-43a9021b95/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sourceFailures": [
         "mansion-global",
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43316342889",
-        "checkedAt": "2026-11-12T22:04:27.977Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43319374598",
+        "checkedAt": "2026-11-12T22:23:59.200Z",
         "status": "failed",
-        "artifactId": 13989475021
+        "artifactId": 13989832132
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -1224,9 +1516,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 13990010761,
+      "artifactId": 13990711375,
       "fresh": true,
-      "expiresAt": "2026-11-12T22:46:59.597670+00:00",
+      "expiresAt": "2026-11-12T23:02:24.178981+00:00",
       "green": false
     },
     "watchdog": {
@@ -1339,17 +1631,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "2f12a236e8417289e62eb0081940672dca683f28",
+      "sourceCommit": "fd73cd04c0fa1be259794d26be62c75671ffbef2",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T22:29:13.976796+00:00",
+      "observedAt": "2026-11-12T22:37:19.057183+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43321372909",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43321372909",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1360,6 +1652,7 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "Source expressly restricts reproduction; review required",
@@ -1370,7 +1663,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43321372909"
     },
     {
       "site": "loveourlistings.com",
@@ -1399,38 +1692,36 @@
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43319374598/artifacts/13989498400",
       "pageUrls": [
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-edf8c71cee/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-edf8c71cee/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "50022e6c5d45b5e643e693cc5a99fae2beb6f9bf",
+      "sourceCommit": "fd73cd04c0fa1be259794d26be62c75671ffbef2",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-12T22:16:59.597670+00:00",
+      "observedAt": "2026-11-12T22:32:24.178981+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318446055",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318446055/artifacts/13990010761",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320806282",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320806282/artifacts/13990711375",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-      "rawTrigger": "schedule",
-      "trigger": "managed-scheduler",
+      "rawTrigger": "push",
+      "trigger": "push",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
-        "publisher-loaded-SOT-mismatch",
-        "publisher-runtime-or-publication-fault",
-        "production-deployment-SOT-mismatch",
+        "publisher-item-check-valves-held; intake-continues",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43318063430",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43320176978",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
