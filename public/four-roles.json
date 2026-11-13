@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-13T23:01:52.838021+00:00",
+  "checkedAt": "2026-11-13T23:07:26.331267+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "8e7d209bce8d7a7e07ccc030ae5c38d5e9b00f5c",
+    "sourceCommit": "b7df3604a66854a3c6015dd7faf265e16eeff272",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-13T23:01:36.939094+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084",
+      "checkedAt": "2026-11-13T23:07:15.185662+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43524626277",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "db01142c539841c6093e7ca6d0585875c9067ea3",
+        "sourceCommit": "921a36287d9dfb46466947b11c71616997d010f0",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -33,15 +33,15 @@
       "findings": [
         "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
+        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-13T23:01:36.939094+00:00",
+        "checkedAt": "2026-11-13T23:07:15.185662+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -117,16 +117,15 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 7,
         "inScopeQueueCandidates": 6,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 6,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 7,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "retry-cooldown": 3,
-          "attempt-failed": 1,
+          "retry-cooldown": 4,
           "quarantined-retry-exhausted": 1
         },
         "newFeaturesStored": 0,
@@ -170,18 +169,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
-            "sourceId": "robb-property",
-            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-14T05:01:31.030576+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
             "sourceId": "robb-property",
             "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -216,12 +203,24 @@
             "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00",
             "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+            "sourceId": "robb-property",
+            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-14T05:01:31.030576+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-13T23:31:36.939094+00:00",
+      "expiresAt": "2026-11-13T23:37:15.185662+00:00",
       "green": false
     },
     "visual": {
@@ -229,20 +228,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-13T22:45:23.379Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521738488",
+      "checkedAt": "2026-11-13T23:02:16.930Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523959169",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521667718"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "52c8e9713b39e5dd098a882b6461d4951e1cff3c",
+        "sourceCommit": "8e7d209bce8d7a7e07ccc030ae5c38d5e9b00f5c",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -1122,23 +1121,23 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14084085339,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521738488/artifacts/14083186346",
+      "artifactId": 14084651482,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523959169/artifacts/14084457179",
       "fresh": true,
-      "expiresAt": "2026-11-13T23:15:23.379000+00:00",
+      "expiresAt": "2026-11-13T23:32:16.930000+00:00",
       "green": true
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-13T22:50:22.169197+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522492274",
+      "checkedAt": "2026-11-13T23:01:57.144136+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523966259",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "e6adc1aaaa3402af1316039b80216797404a95b4",
+        "sourceCommit": "921a36287d9dfb46466947b11c71616997d010f0",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1146,22 +1145,23 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522415934"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084"
       },
       "verified": false,
       "status": "failed",
       "findings": [
+        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522415934",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522415934",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523153595",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 16.013962,
+      "publisherReceiptAgeSeconds": 20.658523,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-13T22:50:06.538444+00:00",
+        "checkedAt": "2026-11-13T23:01:36.939094+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -1193,9 +1193,9 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "candidate-admitted": 4,
+              "candidate-admitted": 5,
               "not-individual-property": 2,
-              "already-published": 4
+              "already-published": 3
             }
           },
           {
@@ -1237,15 +1237,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 6,
-        "inScopeQueueCandidates": 5,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 7,
+        "inScopeQueueCandidates": 6,
+        "attemptedThisRun": 1,
         "skippedThisRun": 6,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "retry-cooldown": 3,
+          "attempt-failed": 1,
           "quarantined-retry-exhausted": 1
         },
         "newFeaturesStored": 0,
@@ -1289,6 +1290,18 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+            "sourceId": "robb-property",
+            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+            "collection": "mansions",
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-14T05:01:31.030576+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
             "sourceId": "robb-property",
             "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -1327,9 +1340,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "43522415934",
+        "runId": "43523862084",
         "status": "passed",
-        "checkedAt": "2026-11-13T22:49:59.827241+00:00"
+        "checkedAt": "2026-11-13T23:01:28.916676+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -1343,7 +1356,7 @@
           "status": "done",
           "checkedAt": "2026-11-13T04:02:26.138540+00:00"
         },
-        "ageSeconds": 67789.709088,
+        "ageSeconds": 68485.301443,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -1351,7 +1364,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "f531ffab3977308da162abbfdcb4e6f35d5e8edb",
+        "sourceCommit": "db01142c539841c6093e7ca6d0585875c9067ea3",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-fd1a1ec29d/",
@@ -1376,9 +1389,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14084050886,
+      "artifactId": 14084935562,
       "fresh": true,
-      "expiresAt": "2026-11-13T23:20:22.169197+00:00",
+      "expiresAt": "2026-11-13T23:31:57.144136+00:00",
       "green": false
     },
     "watchdog": {
@@ -1476,17 +1489,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "db01142c539841c6093e7ca6d0585875c9067ea3",
+      "sourceCommit": "921a36287d9dfb46466947b11c71616997d010f0",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T23:01:36.939094+00:00",
+      "observedAt": "2026-11-13T23:07:15.185662+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43524626277",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43524626277",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1496,32 +1509,32 @@
       "findings": [
         "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
+        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
       "pageQualityVersion": 1,
       "durableQueueRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/publisher-state.json",
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523862084"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43524626277"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "52c8e9713b39e5dd098a882b6461d4951e1cff3c",
+      "sourceCommit": "8e7d209bce8d7a7e07ccc030ae5c38d5e9b00f5c",
       "check": "role:visual-checker",
       "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T22:45:23.379Z",
+      "observedAt": "2026-11-13T23:02:16.930Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521738488",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521738488/artifacts/14084085339",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523959169",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523959169/artifacts/14084651482",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1529,28 +1542,28 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521738488/artifacts/14083186346",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43521738488/artifacts/14083186346",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523959169/artifacts/14084457179",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523959169/artifacts/14084457179",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-fd1a1ec29d/"
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-fd1a1ec29d/",
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "e6adc1aaaa3402af1316039b80216797404a95b4",
+      "sourceCommit": "921a36287d9dfb46466947b11c71616997d010f0",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T22:50:22.169197+00:00",
+      "observedAt": "2026-11-13T23:01:57.144136+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522492274",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522492274/artifacts/14084050886",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523966259",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523966259/artifacts/14084935562",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1558,11 +1571,12 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
+        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43522415934",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523153595",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
