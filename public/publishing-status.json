@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T03:52:08.982507+00:00",
+  "updatedAt": "2026-11-13T03:55:59.620339+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,37 +7,41 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "45e6a205044fa126c08b8c55642176de4246e1b6",
+    "sourceCommit": "c348429feb363ab3656b38b4f8da245e99788ec4",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360716136",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361173823",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
   "publicationBlocks": [
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
-      "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+      "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+      "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
-      "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
-      "propertyId": null,
-      "collection": "waterfront",
-      "reason": "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]"
+      "reason": "Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
-      "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
+      "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "health": "degraded",
@@ -48,9 +52,9 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-13T03:51:15.491104+00:00",
+    "checkedAt": "2026-11-13T03:55:59.567973+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
     "feedItemsParsed": 99,
@@ -80,8 +84,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "already-published": 4,
-          "candidate-admitted": 4,
+          "already-published": 5,
+          "candidate-admitted": 3,
           "not-individual-property": 2
         }
       },
@@ -126,19 +130,21 @@
       }
     ],
     "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 9,
-    "inScopeQueueCandidates": 8,
-    "attemptedThisRun": 4,
+    "candidatesConsidered": 8,
+    "inScopeQueueCandidates": 7,
+    "attemptedThisRun": 3,
     "skippedThisRun": 5,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "stored-awaiting-verification": 1,
-      "attempt-failed": 3,
-      "deferred-attempt-budget": 3
+      "attempt-failed": 1,
+      "stored-awaiting-verification": 2,
+      "deferred-article-limit": 1,
+      "retry-cooldown": 1,
+      "quarantined-retry-exhausted": 1
     },
-    "newFeaturesStored": 1,
-    "verifiedPublicationsThisRun": 1,
+    "newFeaturesStored": 2,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -166,27 +172,15 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
-        "sourceId": "robb-property",
-        "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
-        "collection": "ranches",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 7,
-        "checks": 3,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
-        "sourceId": "robb-property",
-        "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+        "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+        "sourceId": "countrylife-property",
+        "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
         "collection": "mansions",
         "outcome": "attempt-failed",
-        "failedAttempts": 5,
-        "checks": 1,
-        "nextAttemptAt": null,
-        "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-13T09:55:19.660298+00:00",
+        "reason": "Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM",
         "duplicateOfArticleSlug": null
       },
       {
@@ -194,35 +188,11 @@
         "sourceId": "robb-property",
         "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
         "collection": "waterfront",
-        "outcome": "attempt-failed",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 7,
-        "checks": 3,
+        "checks": 4,
         "nextAttemptAt": null,
-        "reason": "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
-        "sourceId": "robb-property",
-        "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 2,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
-        "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
-        "sourceId": "countrylife-property",
-        "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
-        "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -230,11 +200,11 @@
         "sourceId": "robb-property",
         "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 8,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "checks": 2,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -242,58 +212,82 @@
         "sourceId": "robb-property",
         "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 10,
         "checks": 1,
-        "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "nextAttemptAt": "2026-11-13T03:55:19.660298+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+        "sourceId": "robb-property",
+        "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 2,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
+        "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+        "sourceId": "robb-property",
+        "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-13T03:50:06.209625+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-13T03:55:19.660298+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 20
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T03:50:06.209625+00:00",
+      "fetchedAt": "2026-11-13T03:55:19.660298+00:00",
       "items": 29
     }
   ],
@@ -301,14 +295,14 @@
     {
       "name": "waterfront",
       "eligible": 1,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "mansions",
       "eligible": 5,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "penthouses",
@@ -318,9 +312,9 @@
     },
     {
       "name": "ranches",
-      "eligible": 1,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 0,
+      "newFeatures": 0,
+      "status": "no-fresh-eligible-items"
     },
     {
       "name": "acreage",
@@ -336,8 +330,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 69,
-  "quarantinedItems": 4,
+  "duplicatesFiltered": 70,
+  "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-ranches-2026-11-11-795aed2bbe",
