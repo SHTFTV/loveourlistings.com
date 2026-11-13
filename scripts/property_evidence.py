@@ -9,9 +9,10 @@ VOID={'area','base','br','col','embed','hr','img','input','link','meta','param',
 EXCLUDED=re.compile(r'c-author|post-meta|article-author|related|advert|newsletter|social|share-|admz|adw-',re.I)
 class Article(HTMLParser):
  def __init__(self,post_id):
-  super().__init__();self.post_id=post_id;self.stack=[];self.meta={};self.paragraphs=[];self.buffer=None;self.found=False
+  super().__init__();self.post_id=post_id;self.stack=[];self.meta={};self.paragraphs=[];self.buffer=None;self.found=False;self.h1=[];self.in_h1=False
  def handle_starttag(self,tag,attrs):
   d=dict(attrs)
+  if tag=='h1':self.in_h1=True
   if tag=='meta':self.meta[(d.get('property')or d.get('name')or'').lower()]=d.get('content','')
   if tag in VOID:return
   target=(tag=='article'and d.get('id')=='post-'+self.post_id) if self.post_id else (tag=='div'and d.get('id')=='article-body')
@@ -22,8 +23,10 @@ class Article(HTMLParser):
  def active(self):return any(x[1]for x in self.stack)
  def skipped(self):return any(x[2]for x in self.stack)
  def handle_data(self,data):
+  if self.in_h1:self.h1.append(data)
   if self.buffer is not None and self.active()and not self.skipped():self.buffer.append(data)
  def handle_endtag(self,tag):
+  if tag=='h1':self.in_h1=False
   if tag=='p'and self.buffer is not None:
    text=' '.join(' '.join(self.buffer).split());self.buffer=None
    if len(text.split())>=8 and not re.match(r'^(?:more:|read more|subscribe|related\s*:|related stories|click here to see)',text,re.I):self.paragraphs.append(text)
@@ -42,7 +45,7 @@ def recover(item,sop,fetch=get):
  parser=Article(post_id[1] if post_id else None);parser.feed(raw.decode('utf8','replace'))
  if not parser.found:raise ValueError('LOL_SOURCE_BODY_NOT_FOUND')
  key=lambda t:re.sub(r'\W+','',html.unescape(t)).casefold()
- if key(parser.meta.get('og:title',''))!=key(item['title']):raise ValueError('LOL_SOURCE_BODY_TITLE_MISMATCH')
+ if key(parser.meta.get('og:title',''))!=key(item['title']) and not (host=='www.countrylife.co.uk' and key(' '.join(parser.h1))==key(item['title'])):raise ValueError('LOL_SOURCE_BODY_TITLE_MISMATCH')
  if canonical(parser.meta.get('og:url',''))!=canonical(item['url']):raise ValueError('LOL_SOURCE_BODY_CANONICAL_MISMATCH')
  published=datetime.fromisoformat(parser.meta.get('article:published_time','').replace('Z','+00:00'))
  if published.tzinfo is None or published.astimezone(timezone.utc).date().isoformat()!=item['sourceDate']:raise ValueError('LOL_SOURCE_BODY_DATE_MISMATCH')

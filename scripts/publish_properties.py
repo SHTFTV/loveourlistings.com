@@ -167,7 +167,8 @@ def main(root=ROOT,fetch=get,now=None):
   type_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Not a supported individual property story' and category(item) is not None and not row.get('typeGateCorrectionApplied')
   exhausted=row.get('attempts',0)>=retry.get('maxAttempts',5)
   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
-  if (exhausted or cooling) and not art_changed and not media_changed and not type_gate_correction:
+  evidence_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH' and not row.get('evidenceGateCorrectionApplied')
+  if (exhausted or cooling) and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
    row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
    next_at=(datetime.fromisoformat(row['lastAttemptAt'])+timedelta(hours=retry.get('cooldownHours',6))).isoformat() if not exhausted and row.get('lastAttemptAt') else None
    decision(report,item,row,row['status'],row.get('lastError','Retry held'),next_at)
@@ -178,6 +179,7 @@ def main(root=ROOT,fetch=get,now=None):
   if attempted>=retry.get('maxCandidatesPerRun',12):
    row['status']='queued-next-cycle';decision(report,item,row,'deferred-attempt-budget','Bounded run budget; durable rotation resumes another item next cycle',now.isoformat());continue
   if type_gate_correction:row['typeGateCorrectionApplied']=True
+  if evidence_gate_correction:row['evidenceGateCorrectionApplied']=True
   attempted+=1;row['checks']=row.get('checks',0)+1;state.setdefault('collectionLastAttemptAt',{})[collection]=now.isoformat()
   if media_revision:row['reviewedMediaRevision']=media_revision
   try:
