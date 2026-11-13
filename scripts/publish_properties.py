@@ -154,7 +154,7 @@ def main(root=ROOT,fetch=get,now=None):
  for collection,item in fair_candidates(candidates,queue,state,cfg['collectionPriority'],source_key):
   row=queue[source_key(item)]
   record=records.get(item['url'],{})
-  if record.get('summaryHash')==item['summaryHash'] and record.get('reviewRequired'):
+  if record.get('summaryHash')==item['summaryHash'] and record.get('reviewRequired') and not ((illustration_record(item,root) or {}).get('permissionMode')=='independent-concept' and (illustration_record(item,root) or {}).get('sourceSummaryHash')==item['summaryHash']):
    reason=record['holdReason'];row.update(status='review-required',lastError=reason);decision(report,item,row,'review-required',reason)
    report.setdefault('publicationBlocks',[]).append({'sourceUrl':item['url'],'title':item['title'],'collection':collection,'reason':reason,'retryStatus':'review-required','nextAttemptAt':None});continue
   identity_record=records.get(item['url'],{})
@@ -184,6 +184,7 @@ def main(root=ROOT,fetch=get,now=None):
   if media_revision:row['reviewedMediaRevision']=media_revision
   try:
    reviewed=record_for(item,records)
+   if reviewed and reviewed.get('reviewRequired') and art and art.get('permissionMode')=='independent-concept':reviewed=None # Restricted photographs stay unused; independently generated conceptual art only.
    try:sourceImage=reviewed_media(item,root,reviewed) if reviewed else resolve_media(item['url'],root,publisher=item['publisher'])
    except Exception:
     if not art:raise

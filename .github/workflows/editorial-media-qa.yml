@@ -1,0 +1,38 @@
+name: Love Our Listings prepared media QA
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Love Our Listings RSS to verified publication"]
+    types: [completed]
+    branches: [main]
+  push:
+    branches: [main]
+    paths: ['scripts/roles/prepared-media.*', '.github/workflows/editorial-media-qa.yml']
+permissions:
+  contents: read
+concurrency:
+  group: loveourlistings-prepared-media-qa
+  cancel-in-progress: false
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          persist-credentials: false
+      - run: pip install Pillow
+      - run: python3 scripts/roles/prepared-media.py
+      - run: |
+          npm install --prefix /tmp/lol-visual --ignore-scripts --no-audit --no-fund playwright@1.65.0
+          /tmp/lol-visual/node_modules/.bin/playwright install --with-deps chromium
+      - run: node scripts/roles/prepared-media.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: prepared-media-qa-${{ github.run_id }}
+          path: |
+            work/prepared-media/*.json
+            work/prepared-media/*.jpg
+          retention-days: 3
