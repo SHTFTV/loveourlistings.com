@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T09:52:49.208304+00:00",
+  "updatedAt": "2026-11-13T09:58:21.449617+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "3fc3ed735b68d8ed911b09211d88efc352abf42b",
+    "sourceCommit": "ff70f02c5ea4415d7a06e088a175c6436b90256a",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404222017",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404837221",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -24,13 +24,6 @@
       "reason": "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
-      "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
       "propertyId": null,
       "collection": "mansions",
@@ -38,6 +31,15 @@
       "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00"
     }
   ],
   "health": "degraded",
@@ -48,7 +50,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-13T09:52:49.142193+00:00",
+    "checkedAt": "2026-11-13T09:58:21.393118+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -127,13 +129,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 4,
     "inScopeQueueCandidates": 3,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 3,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 4,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "attempt-failed": 1,
-      "quarantined-retry-exhausted": 1
+      "quarantined-retry-exhausted": 1,
+      "retry-cooldown": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -164,18 +166,6 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
-        "sourceId": "robb-property",
-        "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 3,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00",
-        "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
         "sourceId": "robb-property",
         "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -186,52 +176,64 @@
         "nextAttemptAt": null,
         "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+        "sourceId": "robb-property",
+        "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 3,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00",
+        "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-13T09:52:43.753197+00:00",
+  "lastRunAt": "2026-11-13T09:58:13.877285+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 19
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T09:52:43.753197+00:00",
+      "fetchedAt": "2026-11-13T09:58:13.877285+00:00",
       "items": 29
     }
   ],
@@ -273,9 +275,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 1,
-  "duplicatesFiltered": 70,
-  "quarantinedItems": 2,
+  "googleDiscoveryItems": 0,
+  "duplicatesFiltered": 71,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-950145808c",
