@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T23:01:37.015370+00:00",
+  "updatedAt": "2026-11-13T23:07:15.290096+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "db01142c539841c6093e7ca6d0585875c9067ea3",
+    "sourceCommit": "921a36287d9dfb46466947b11c71616997d010f0",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523211361",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43523946894",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -31,13 +31,6 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
-      "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
@@ -65,6 +58,15 @@
       "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-14T05:01:31.030576+00:00"
     }
   ],
   "health": "degraded",
@@ -75,7 +77,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-13T23:01:36.939094+00:00",
+    "checkedAt": "2026-11-13T23:07:15.185662+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -151,16 +153,15 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
+    "newCandidatesDiscovered": 0,
     "candidatesConsidered": 7,
     "inScopeQueueCandidates": 6,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 6,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 7,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "retry-cooldown": 3,
-      "attempt-failed": 1,
+      "retry-cooldown": 4,
       "quarantined-retry-exhausted": 1
     },
     "newFeaturesStored": 0,
@@ -204,18 +205,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
-        "sourceId": "robb-property",
-        "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-14T05:01:31.030576+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
         "sourceId": "robb-property",
         "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -250,52 +239,64 @@
         "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00",
         "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+        "sourceId": "robb-property",
+        "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-14T05:01:31.030576+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-13T23:01:31.030576+00:00",
+  "lastRunAt": "2026-11-13T23:07:10.671173+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 21
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T23:01:31.030576+00:00",
+      "fetchedAt": "2026-11-13T23:07:10.671173+00:00",
       "items": 29
     }
   ],
@@ -339,7 +340,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 70,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-950145808c",
