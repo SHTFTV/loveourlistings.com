@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T15:40:28.829587+00:00",
+  "updatedAt": "2026-11-13T21:37:03.756085+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,7 +7,7 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "f498690e375dbc610e1403310c45e275882372fe",
+    "sourceCommit": "67c4b810c9bcc5abeaa79418b32500b3608cf869",
     "trigger": "schedule"
   },
   "automaticTriggerProof": {
@@ -21,6 +21,20 @@
       "reason": "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA"
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "propertyId": null,
+      "collection": "mansions",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "propertyId": null,
+      "collection": "waterfront",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
       "propertyId": null,
       "collection": "mansions",
@@ -30,22 +44,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-      "propertyId": null,
-      "collection": "waterfront",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-13T20:04:23.891142+00:00"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+      "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
       "propertyId": null,
       "collection": "mansions",
-      "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
-      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00"
+      "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
     }
   ],
   "health": "degraded",
@@ -56,12 +59,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-13T15:40:28.750217+00:00",
+    "checkedAt": "2026-11-13T21:37:03.693766+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 98,
+    "feedItemsParsed": 100,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -88,9 +91,9 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "candidate-admitted": 3,
-          "already-published": 5,
-          "not-individual-property": 2
+          "candidate-admitted": 4,
+          "not-individual-property": 2,
+          "already-published": 4
         }
       },
       {
@@ -115,10 +118,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 19,
+        "itemsParsed": 21,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 19
+          "discovery-original-link-required": 21
         }
       },
       {
@@ -132,16 +135,16 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 5,
-    "inScopeQueueCandidates": 4,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 5,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 6,
+    "inScopeQueueCandidates": 5,
+    "attemptedThisRun": 3,
+    "skippedThisRun": 3,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "quarantined-retry-exhausted": 1,
-      "retry-cooldown": 2
+      "attempt-failed": 3,
+      "quarantined-retry-exhausted": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -172,6 +175,30 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceId": "robb-property",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "collection": "mansions",
+        "outcome": "attempt-failed",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+        "sourceId": "robb-property",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "collection": "waterfront",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
         "sourceId": "robb-property",
         "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -184,74 +211,62 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-        "sourceId": "robb-property",
-        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-        "collection": "waterfront",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-13T20:04:23.891142+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
         "sourceId": "robb-property",
         "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 3,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 4,
+        "checks": 3,
+        "nextAttemptAt": "2026-11-14T03:36:58.555696+00:00",
         "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-13T15:40:23.354637+00:00",
+  "lastRunAt": "2026-11-13T21:36:58.555696+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
-      "items": 19
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
+      "items": 21
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T15:40:23.354637+00:00",
+      "fetchedAt": "2026-11-13T21:36:58.555696+00:00",
       "items": 29
     }
   ],
@@ -264,7 +279,7 @@
     },
     {
       "name": "mansions",
-      "eligible": 2,
+      "eligible": 3,
       "newFeatures": 0,
       "status": "blocked-eligible-property"
     },
@@ -293,9 +308,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 70,
-  "quarantinedItems": 1,
+  "googleDiscoveryItems": 2,
+  "duplicatesFiltered": 69,
+  "quarantinedItems": 4,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-950145808c",
