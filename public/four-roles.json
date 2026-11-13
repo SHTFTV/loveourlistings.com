@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-13T03:42:25.211498+00:00",
+  "checkedAt": "2026-11-13T03:46:38.609898+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "a931c8975ecea41fbb955d150c5222d9ba60838e",
+    "sourceCommit": "bca79c9cf659c40acd945a44959387bfca0f503e",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-13T03:42:13.290765+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675",
+      "checkedAt": "2026-11-13T03:45:08.146853+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "5f7acf63bc0c4ffe2bb0213d5c6540adbe2fa33a",
+        "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -31,21 +31,17 @@
       "verified": false,
       "status": "failed",
       "findings": [
-        "Archive media repair: Explicit illustration disclosure required",
-        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "Unchanged preview failed current-rule factual re-audit: [\"The deck and body attribute reporting to Robb Report, but the supplied source evidence contains no publisher identification or source URL verifying that attribution. Confirm the original publication before crediting it.\"]",
-        "Unchanged preview failed current-rule factual re-audit: [\"The deck and body attribute reporting to Robb Report, but the supplied source evidence does not identify its publisher. Verify that attribution against an identifiable original source before using it.\"]",
-        "Unchanged preview failed current-rule factual re-audit: [\"The body repeatedly attributes the source to Robb Report, but the supplied source evidence does not identify its publisher. Verify that attribution against source metadata or replace it with an attribution supported by the evidence.\"]"
+        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
       ],
-      "outcome": "no-eligible-content",
+      "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-13T03:42:13.290765+00:00",
+        "checkedAt": "2026-11-13T03:45:08.146853+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 98,
+        "feedItemsParsed": 99,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -99,10 +95,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 19,
+            "itemsParsed": 20,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 19
+              "discovery-original-link-required": 20
             }
           },
           {
@@ -120,16 +116,17 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 11,
         "inScopeQueueCandidates": 10,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 7,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 9,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "attempt-failed": 4,
-          "deferred-attempt-budget": 5
+          "stored-awaiting-verification": 2,
+          "deferred-article-limit": 6,
+          "quarantined-retry-exhausted": 1
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -157,15 +154,15 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
             "sourceId": "robb-property",
-            "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+            "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
             "collection": "waterfront",
-            "outcome": "attempt-failed",
-            "failedAttempts": 6,
-            "checks": 2,
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 2,
+            "checks": 3,
             "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -173,11 +170,11 @@
             "sourceId": "robb-property",
             "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 6,
-            "checks": 2,
+            "checks": 3,
             "nextAttemptAt": null,
-            "reason": "Unchanged preview failed current-rule factual re-audit: [\"The deck and body attribute reporting to Robb Report, but the supplied source evidence contains no publisher identification or source URL verifying that attribution. Confirm the original publication before crediting it.\"]",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -185,35 +182,11 @@
             "sourceId": "robb-property",
             "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
             "collection": "ranches",
-            "outcome": "attempt-failed",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 7,
             "checks": 2,
-            "nextAttemptAt": null,
-            "reason": "Unchanged preview failed current-rule factual re-audit: [\"The deck and body attribute reporting to Robb Report, but the supplied source evidence does not identify its publisher. Verify that attribution against an identifiable original source before using it.\"]",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
-            "sourceId": "robb-property",
-            "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 10,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "Unchanged preview failed current-rule factual re-audit: [\"The body repeatedly attributes the source to Robb Report, but the supplied source evidence does not identify its publisher. Verify that attribution against source metadata or replace it with an attribution supported by the evidence.\"]",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
-            "sourceId": "robb-property",
-            "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
-            "collection": "waterfront",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-13T03:41:25.162290+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -221,11 +194,23 @@
             "sourceId": "robb-property",
             "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 4,
             "checks": 0,
-            "nextAttemptAt": "2026-11-13T03:41:25.162290+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+            "sourceId": "robb-property",
+            "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 6,
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
           },
           {
@@ -233,11 +218,11 @@
             "sourceId": "robb-property",
             "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 1,
             "checks": 0,
-            "nextAttemptAt": "2026-11-13T03:41:25.162290+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -245,11 +230,11 @@
             "sourceId": "countrylife-property",
             "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 1,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:41:25.162290+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -257,18 +242,30 @@
             "sourceId": "robb-property",
             "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 8,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:41:25.162290+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
+            "sourceId": "robb-property",
+            "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 10,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           }
         ]
       },
-      "operationalStatus": "no-eligible-content",
+      "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-13T04:12:13.290765+00:00",
+      "expiresAt": "2026-11-13T04:15:08.146853+00:00",
       "green": false
     },
     "visual": {
@@ -1444,10 +1441,10 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-13T03:30:37.380Z",
-      "runId": "a008c633-1615-413a-9026-7c3f35185487",
+      "checkedAt": "2026-11-13T03:45:37.367Z",
+      "runId": "6eaecdad-ef98-44c1-9332-8a451fb01618",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_6ot9gE7U5Txak6XT2UQeSNVhagem:a008c633-1615-413a-9026-7c3f35185487",
+      "runRef": "vercel:dpl_4RsPJ8ojnyNrKnjHRA7MjctBajCt:6eaecdad-ef98-44c1-9332-8a451fb01618",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -1459,65 +1456,58 @@
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "8b880eac01306c6a327328048c6292ebbfeda752",
+        "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
       "verified": false,
       "findings": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
       "issues": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43332265984",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43332105381",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360419240",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
-        "expectedEventId": "loveourlistings.com:four-roles:c3fb937e9c1215e51f3ee3ba",
+        "expectedEventId": "loveourlistings.com:four-roles:0cebc3ba1b756c00e03a5dbe",
         "deliveredAt": null,
         "pullDelivery": {
           "verified": false,
           "route": "authorized-command-center-pull-reader",
           "receiptUrl": "https://markett-ca.vercel.app/api/publication-activity",
-          "observedAt": "2026-11-13T03:30:37.719Z",
+          "observedAt": "2026-11-13T03:45:38.057Z",
           "deliveredAt": null,
-          "eventId": "loveourlistings.com:four-roles:c3fb937e9c1215e51f3ee3ba",
+          "eventId": "loveourlistings.com:four-roles:0cebc3ba1b756c00e03a5dbe",
           "matchedIds": [
             "loveourlistings.com:role-alert:publisher",
             "loveourlistings.com:role-alert:visual",
             "loveourlistings.com:role-alert:supervisor",
-            "loveourlistings.com:role-alert:watchdog:loveourlistings.com:four-roles:edf4afc1b334b08f05a74e7d",
-            "loveourlistings.com:role-canary:88425902-11eb-4dd1-b820-fe74c08b76f4"
+            "loveourlistings.com:role-alert:watchdog:loveourlistings.com:four-roles:c3fb937e9c1215e51f3ee3ba"
           ],
-          "canaryEventId": "role-canary:88425902-11eb-4dd1-b820-fe74c08b76f4",
-          "canaryRunId": "88425902-11eb-4dd1-b820-fe74c08b76f4",
+          "canaryEventId": null,
+          "canaryRunId": null,
           "ownerReadVerified": false,
           "scope": "Exact normalized incident and labeled canary matched in live intended reader; no owner-read assertion"
         },
         "ownerReadVerified": false
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "recoveryRef": null,
-      "probeRunId": "a008c633-1615-413a-9026-7c3f35185487",
+      "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
+      "probeRunId": "6eaecdad-ef98-44c1-9332-8a451fb01618",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
-          "id": "loveourlistings.com:four-roles:c3fb937e9c1215e51f3ee3ba",
-          "fingerprint": "9fd7095d8979c148376f42f6",
-          "blockedSince": "2026-11-13T00:15:37.405Z",
+          "id": "loveourlistings.com:four-roles:0cebc3ba1b756c00e03a5dbe",
+          "fingerprint": "d0b96bd499e7200c81a3de59",
+          "blockedSince": "2026-11-13T03:45:37.367Z",
           "site": "loveourlistings.com",
           "type": "task_blocked",
           "cause": [
-            "publisher-silent-stale-or-missing",
-            "supervisor-silent-stale-or-missing",
             "supervisor-reports-unresolved-failures",
             "actual-owner-alert-delivery-unverified"
           ],
@@ -1525,12 +1515,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-13T03:30:37.380Z"
+          "checkedAt": "2026-11-13T03:45:37.367Z"
         }
       ],
-      "actualSilenceObserved": true,
+      "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-13T04:00:37.380000+00:00",
+      "expiresAt": "2026-11-13T04:15:37.367000+00:00",
       "green": false
     }
   },
@@ -1539,14 +1529,12 @@
   "scope": "Actual site-specific runtime/artifact receipts; no config-only or manual-publication green",
   "ownerAlerts": [
     {
-      "id": "loveourlistings.com:four-roles:c3fb937e9c1215e51f3ee3ba",
-      "fingerprint": "9fd7095d8979c148376f42f6",
-      "blockedSince": "2026-11-13T00:15:37.405Z",
+      "id": "loveourlistings.com:four-roles:0cebc3ba1b756c00e03a5dbe",
+      "fingerprint": "d0b96bd499e7200c81a3de59",
+      "blockedSince": "2026-11-13T03:45:37.367Z",
       "site": "loveourlistings.com",
       "type": "task_blocked",
       "cause": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
@@ -1554,24 +1542,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-13T03:30:37.380Z"
+      "checkedAt": "2026-11-13T03:45:37.367Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "5f7acf63bc0c4ffe2bb0213d5c6540adbe2fa33a",
+      "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T03:42:13.290765+00:00",
+      "observedAt": "2026-11-13T03:45:08.146853+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1579,18 +1567,14 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
-        "Archive media repair: Explicit illustration disclosure required",
-        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "Unchanged preview failed current-rule factual re-audit: [\"The deck and body attribute reporting to Robb Report, but the supplied source evidence contains no publisher identification or source URL verifying that attribution. Confirm the original publication before crediting it.\"]",
-        "Unchanged preview failed current-rule factual re-audit: [\"The deck and body attribute reporting to Robb Report, but the supplied source evidence does not identify its publisher. Verify that attribution against an identifiable original source before using it.\"]",
-        "Unchanged preview failed current-rule factual re-audit: [\"The body repeatedly attributes the source to Robb Report, but the supplied source evidence does not identify its publisher. Verify that attribution against source metadata or replace it with an attribution supported by the evidence.\"]"
+        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
       ],
       "pageQualityVersion": 1,
       "durableQueueRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/publisher-state.json",
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142"
     },
     {
       "site": "loveourlistings.com",
@@ -1656,16 +1640,16 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "8b880eac01306c6a327328048c6292ebbfeda752",
+      "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T03:30:37.380Z",
+      "observedAt": "2026-11-13T03:45:37.367Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_6ot9gE7U5Txak6XT2UQeSNVhagem:a008c633-1615-413a-9026-7c3f35185487",
+      "runRef": "vercel:dpl_4RsPJ8ojnyNrKnjHRA7MjctBajCt:6eaecdad-ef98-44c1-9332-8a451fb01618",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
@@ -1674,15 +1658,13 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43332105381",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360419240",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
-      "recoveryRef": null,
+      "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "workerAndSupervisorSilentDetection": true
     }
   ],
