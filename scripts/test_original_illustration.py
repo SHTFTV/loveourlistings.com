@@ -29,3 +29,16 @@ class PreviewIsolation(unittest.TestCase):
    state=json.loads((root/'operations/publisher-state.json').read_text());self.assertEqual(state['articles'],[])
    report=json.loads((root/'operations/latest-run.json').read_text());self.assertEqual(report['articles'],[]);self.assertFalse(report['productionVerified']);self.assertIsNone(report['previews'][0]['url']);self.assertIn('contentSha256',report['previews'][0])
    draft=state['candidateQueue']['https://robbreport.com/home']['illustrationDraft'];self.assertTrue(draft['preview']);self.assertTrue(list((root/'work/editorial-previews').glob('*/receipt.json')))
+
+class ArchiveIllustrationGate(unittest.TestCase):
+ def test_archive_recreation_requires_real_layout_approval_and_never_fetches_restricted_photo(self):
+  from reviewed_properties import reviewed_media
+  from property_media import MediaUnavailable
+  from unittest.mock import patch,Mock
+  item={'url':'https://example.com/story','summaryHash':'facts'};fetch=Mock(side_effect=AssertionError('Restricted source photo must remain unused'))
+  for ready in [False,True]:
+   with patch('original_illustration.resolve',return_value={'releaseReady':ready,'imageUrl':'/images/editorial-illustrations/a.jpg','width':1600,'height':900}):
+    if ready:self.assertEqual(reviewed_media(item,Path('.'),{'originalIllustration':True},fetch)['originalWidth'],1600)
+    else:
+     with self.assertRaises(MediaUnavailable):reviewed_media(item,Path('.'),{'originalIllustration':True},fetch)
+  fetch.assert_not_called()

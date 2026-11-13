@@ -24,6 +24,11 @@ def record_for(item,records):
  return r
 
 def reviewed_media(item,root,record,fetch=get):
+ if record.get('originalIllustration'):
+  from original_illustration import resolve as resolve_illustration
+  result=resolve_illustration(item,root)
+  if not result['releaseReady']:raise MediaUnavailable('Archive illustration requires completed desktop and phone QA')
+  return {**result,'originalImageUrl':result['imageUrl'],'originalWidth':1600,'originalHeight':900}
  if record.get('reviewRequired'):raise MediaUnavailable(record.get('holdReason','Explicit source permission review required'))
  m=record['media'];raw=fetch(m['sourceUrl']);text=raw.decode('utf8','replace')
  if re.search(r'no (?:part|portion) .{0,100}(?:reproduc|republish)|reproduction (?:is )?(?:strictly )?prohibited',re.sub('<[^>]+>',' ',text),re.I):raise MediaUnavailable('Source expressly restricts reproduction; review required')

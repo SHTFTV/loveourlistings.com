@@ -86,6 +86,10 @@ def main(root=ROOT,fetch=get,now=None):
   archive_attempted+=1;tracker.update(revision=revision,attempts=tracker.get('attempts',0)+1,lastAttemptAt=now.isoformat())
   try:
    reviewed=record_for({'url':a['source']['url'],'summaryHash':a['source']['summaryHash']},archive_records);media=reviewed_media(a['source'],root,reviewed)
+   if reviewed.get('originalIllustration'):
+    proposed={**a,'image':media['imageUrl']}
+    actual=hashlib.sha256(json.dumps({k:proposed[k] for k in ['title','deck','paragraphs','image','source']},sort_keys=True).encode()).hexdigest()
+    if actual!=reviewed.get('qaContentHash'):raise MediaUnavailable('Archive media QA must bind exact unchanged editorial content')
    tracker.update(status='verified',lastError=None)
    a.update(image=media['imageUrl'],imageAlt=media['sourceImageAlt'],imageCredit=media['credit'],sourceImage=media)
    report.setdefault('mediaRepairs',[]).append({'slug':a['slug'],'image':a['image'],'publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'originalImageUrl':media['originalImageUrl'],'nativeWidth':media['originalWidth'],'nativeHeight':media['originalHeight']})
