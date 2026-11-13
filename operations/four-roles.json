@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-13T03:46:38.609898+00:00",
+  "checkedAt": "2026-11-13T03:52:52.347961+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "bca79c9cf659c40acd945a44959387bfca0f503e",
+    "sourceCommit": "e7253a2b947159d934979551aae3ecdae009ed24",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-13T03:45:08.146853+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
+      "checkedAt": "2026-11-13T03:51:15.491104+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
+        "sourceCommit": "45e6a205044fa126c08b8c55642176de4246e1b6",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -31,12 +31,14 @@
       "verified": false,
       "status": "failed",
       "findings": [
+        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
       ],
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-13T03:45:08.146853+00:00",
+        "checkedAt": "2026-11-13T03:51:15.491104+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
@@ -68,9 +70,9 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "candidate-admitted": 6,
-              "not-individual-property": 2,
-              "already-published": 2
+              "already-published": 4,
+              "candidate-admitted": 4,
+              "not-individual-property": 2
             }
           },
           {
@@ -114,19 +116,19 @@
           }
         ],
         "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 11,
-        "inScopeQueueCandidates": 10,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 9,
+        "candidatesConsidered": 9,
+        "inScopeQueueCandidates": 8,
+        "attemptedThisRun": 4,
+        "skippedThisRun": 5,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "stored-awaiting-verification": 2,
-          "deferred-article-limit": 6,
-          "quarantined-retry-exhausted": 1
+          "stored-awaiting-verification": 1,
+          "attempt-failed": 3,
+          "deferred-attempt-budget": 3
         },
-        "newFeaturesStored": 2,
-        "verifiedPublicationsThisRun": 2,
+        "newFeaturesStored": 1,
+        "verifiedPublicationsThisRun": 1,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -154,39 +156,15 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
-            "sourceId": "robb-property",
-            "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
-            "collection": "waterfront",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 2,
-            "checks": 3,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
-            "sourceId": "robb-property",
-            "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
-            "collection": "penthouses",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 6,
-            "checks": 3,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
             "sourceId": "robb-property",
             "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
             "collection": "ranches",
-            "outcome": "deferred-article-limit",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 7,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "checks": 3,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -194,11 +172,11 @@
             "sourceId": "robb-property",
             "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
-            "failedAttempts": 4,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
           },
           {
@@ -206,11 +184,11 @@
             "sourceId": "robb-property",
             "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
             "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 6,
-            "checks": 2,
+            "outcome": "attempt-failed",
+            "failedAttempts": 7,
+            "checks": 3,
             "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "reason": "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
             "duplicateOfArticleSlug": null
           },
           {
@@ -218,11 +196,11 @@
             "sourceId": "robb-property",
             "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
-            "failedAttempts": 1,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
           },
           {
@@ -230,11 +208,11 @@
             "sourceId": "countrylife-property",
             "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
+            "outcome": "deferred-attempt-budget",
             "failedAttempts": 1,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
             "duplicateOfArticleSlug": null
           },
           {
@@ -242,11 +220,11 @@
             "sourceId": "robb-property",
             "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
+            "outcome": "deferred-attempt-budget",
             "failedAttempts": 8,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
             "duplicateOfArticleSlug": null
           },
           {
@@ -254,18 +232,18 @@
             "sourceId": "robb-property",
             "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
+            "outcome": "deferred-attempt-budget",
             "failedAttempts": 10,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
             "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-13T04:15:08.146853+00:00",
+      "expiresAt": "2026-11-13T04:21:15.491104+00:00",
       "green": false
     },
     "visual": {
@@ -1124,40 +1102,37 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-13T03:39:38.182783+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360419240",
-      "trigger": "workflow_dispatch",
+      "checkedAt": "2026-11-13T03:46:43.365680+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361181856",
+      "trigger": "workflow_run",
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "5de2a667014a2a28eb2cc91f0eefce9f13f04d2c",
+        "sourceCommit": "58ddb71085fcf4f09af4d1597e2a2204f0d8417d",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675"
+        "kind": "workflow_run"
       },
       "verified": false,
       "status": "failed",
       "findings": [
-        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359422680",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 420.019011,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 95.849843,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-13T03:32:38.718891+00:00",
+        "checkedAt": "2026-11-13T03:45:08.146853+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 99,
@@ -1235,17 +1210,17 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 11,
         "inScopeQueueCandidates": 10,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 7,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 9,
         "outcomes": {
           "not-individual-property": 1,
-          "attempt-failed": 4,
           "duplicate-property": 1,
-          "quarantined-retry-exhausted": 1,
-          "deferred-attempt-budget": 4
+          "stored-awaiting-verification": 2,
+          "deferred-article-limit": 6,
+          "quarantined-retry-exhausted": 1
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -1261,30 +1236,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
-            "sourceId": "robb-property",
-            "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
-            "collection": "penthouses",
-            "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
-            "sourceId": "robb-property",
-            "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
-            "collection": "ranches",
-            "outcome": "attempt-failed",
-            "failedAttempts": 6,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
             "sourceId": "robb-property",
             "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -1297,51 +1248,39 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
-            "sourceId": "robb-property",
-            "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 8,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/biotech-founder-stu-peltz-selling-64-million-florida-estate-1238836153",
             "sourceId": "robb-property",
             "title": "A Biotech Founder Is Asking $64 Million for His Brand-New Home on Florida\u2019s Gulf Coast",
             "collection": "waterfront",
-            "outcome": "attempt-failed",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-13T09:30:58.467404+00:00",
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
-            "sourceId": "robb-property",
-            "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 9,
-            "checks": 0,
+            "checks": 3,
             "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/clive-davis-penthouse-new-york-manhattan-1238830942",
             "sourceId": "robb-property",
-            "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
-            "collection": "waterfront",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 5,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:30:58.467404+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "title": "Clive Davis\u2019s Park Avenue Penthouse Lists for $11 Million",
+            "collection": "penthouses",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 6,
+            "checks": 3,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
+            "sourceId": "robb-property",
+            "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
+            "collection": "ranches",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 7,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1349,11 +1288,23 @@
             "sourceId": "robb-property",
             "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 4,
             "checks": 0,
-            "nextAttemptAt": "2026-11-13T03:30:58.467404+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+            "sourceId": "robb-property",
+            "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 6,
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1361,11 +1312,11 @@
             "sourceId": "robb-property",
             "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 1,
             "checks": 0,
-            "nextAttemptAt": "2026-11-13T03:30:58.467404+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1373,44 +1324,68 @@
             "sourceId": "countrylife-property",
             "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 1,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:30:58.467404+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/venice-beach-house-historic-1238817610",
+            "sourceId": "robb-property",
+            "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 8,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/london-water-tower-residence-1238820854",
+            "sourceId": "robb-property",
+            "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
+            "collection": "mansions",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 10,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T03:44:49.363853+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           }
         ]
       },
       "apiAccessReceipt": {
-        "runId": "43359422680",
+        "runId": "43360956142",
         "status": "passed",
-        "checkedAt": "2026-11-13T03:30:55.632239+00:00"
+        "checkedAt": "2026-11-13T03:44:46.719596+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-mansions-2026-11-12-16be7cdfc9",
+          "id": "loveourlistings.com:we-love-waterfront-2026-11-12-4f213f27e1",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: A Victorian Water Tower with a New London Perspective",
-          "publishedAt": "2026-11-12T15:52:15-07:00",
-          "verifiedAt": "2026-11-12T22:53:34.928500+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
+          "title": "We Love This Listing: Art and Water at Barefoot Beach",
+          "publishedAt": "2026-11-12T20:44:49-07:00",
+          "verifiedAt": "2026-11-13T03:45:59.386581+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-12-4f213f27e1/",
           "status": "done",
-          "checkedAt": "2026-11-12T22:53:34.979192+00:00"
+          "checkedAt": "2026-11-13T03:45:59.435724+00:00"
         },
-        "ageSeconds": 17244.12446,
-        "inspectionRequired": true,
+        "ageSeconds": 115.322379,
+        "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "5309b70b033df74a1c502e24bcc9af919d1e3025",
+        "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-11-8682ca6636/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -1432,9 +1407,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14007767756,
+      "artifactId": 14008651329,
       "fresh": true,
-      "expiresAt": "2026-11-13T04:09:38.182783+00:00",
+      "expiresAt": "2026-11-13T04:16:43.365680+00:00",
       "green": false
     },
     "watchdog": {
@@ -1549,17 +1524,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "98cb6809ed1a3484bd05618cb62d116d7962bfb0",
+      "sourceCommit": "45e6a205044fa126c08b8c55642176de4246e1b6",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T03:45:08.146853+00:00",
+      "observedAt": "2026-11-13T03:51:15.491104+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1567,6 +1542,8 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
+        "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+        "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
       ],
       "pageQualityVersion": 1,
@@ -1574,7 +1551,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254"
     },
     {
       "site": "loveourlistings.com",
@@ -1602,39 +1579,37 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805/artifacts/14007069702",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805/artifacts/14007069702",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "5de2a667014a2a28eb2cc91f0eefce9f13f04d2c",
+      "sourceCommit": "58ddb71085fcf4f09af4d1597e2a2204f0d8417d",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T03:39:38.182783+00:00",
+      "observedAt": "2026-11-13T03:46:43.365680+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360419240",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360419240/artifacts/14007767756",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361181856",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361181856/artifacts/14008651329",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-      "rawTrigger": "workflow_dispatch",
+      "rawTrigger": "workflow_run",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
-        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360248675",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43360956142",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
