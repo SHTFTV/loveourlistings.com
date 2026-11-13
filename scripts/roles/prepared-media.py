@@ -9,7 +9,12 @@ for row in state.get('candidateQueue',{}).values():
  a=row.get('illustrationDraft');m=manifest['items'].get(row.get('item',{}).get('url'))
  if not a or not m:continue
  actual=hashlib.sha256(json.dumps({k:a[k] for k in ['title','deck','paragraphs','image','source']},sort_keys=True).encode()).hexdigest()
- if actual!=row.get('previewContentSha256'):raise ValueError('Frozen content mismatch')
+ if actual!=row.get('previewContentSha256') and actual!=m.get('qaContentHash'):raise ValueError('Frozen content mismatch')
+ revision_path=root/'operations/illustration-editorial-revisions.json'
+ revision=json.loads(revision_path.read_text()).get('items',{}).get(a['source']['url']) if revision_path.exists() else None
+ if revision:
+  from editorial_revision import apply as apply_editorial_revision,content_hash
+  a,_=apply_editorial_revision(a,row['item'],revision);actual=content_hash(a)
  name=a['slug'];(site/(name+'.html')).write_text(render(a,'https://www.loveourlistings.com'));rows.append({'slug':name,'contentSha256':actual,'image':a['image'],'imageSha256':m['imageSha256'],'sourceUrl':a['source']['url']})
 # Isolated archive replacement preview; original dates/source/editorial copy retained.
 for old in state['articles']:

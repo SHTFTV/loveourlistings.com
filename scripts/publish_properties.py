@@ -96,6 +96,28 @@ def main(root=ROOT,fetch=get,now=None):
   except Exception as e:
    tracker.update(status='retry',lastError=str(e));report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'title':a['title'],'reason':'Archive media repair: '+str(e)})
 
+ # Source-bound original-copy corrections use the same sole writer and keep publication dates.
+ revisions_path=root/'operations/illustration-editorial-revisions.json'
+ editorial_revisions=json.loads(revisions_path.read_text()).get('items',{}) if revisions_path.exists() else {}
+ for a in state['articles']:
+  revision=editorial_revisions.get(a['source']['url'])
+  if not revision:continue
+  revision_hash=hashlib.sha256(json.dumps(revision,sort_keys=True).encode()).hexdigest()
+  if a.get('writer',{}).get('editorialRevision')==revision_hash:continue
+  try:
+   from editorial_revision import apply as apply_editorial_revision,content_hash
+   item=next(row['item'] for row in state.get('candidateQueue',{}).values() if row['item']['url']==a['source']['url'])
+   revised,_=apply_editorial_revision(a,item,revision);art=illustration_record(item,root);media=resolve_illustration(item,root)
+   if not media['releaseReady'] or content_hash(revised)!=art.get('qaContentHash'):raise MediaUnavailable('Revised editorial copy awaits exact desktop and phone layout QA')
+   evidence=recover_evidence(item,cfg)
+   if evidence['sourceEvidence']['sourceTextSha256']!=revision['sourceTextSha256']:raise MediaUnavailable('Editorial correction original evidence changed')
+   from property_writer import response,AUDIT
+   audit=response('Independently audit this original editorial correction against the verified original source and current rules. Reject unsupported facts and near-verbatim source copying. Image, layout, timestamps and source attribution identity are separately verified. Pass only with no issues.',{'currentRules':cfg['rules'],'sourceEvidence':{'publisher':item['publisher'],'sourceUrl':item['url'],'sourceTitle':item['title'],'sourcePublishedAt':item['feedPublishedAt'],'verifiedBody':evidence['sourceEvidence']},'proposedDraft':{k:revised[k] for k in ['title','deck','paragraphs']}},AUDIT)
+   if audit.get('pass') is not True or audit.get('issues')!=[]:raise MediaUnavailable('Editorial correction failed independent audit: '+json.dumps(audit.get('issues',[])))
+   validate(revised);state.setdefault('editorialRevisionHistory',[]).append({'article':json.loads(json.dumps(a)),'at':now.isoformat(),'reason':revision['reason']})
+   revised['writer']['editorialCorrectionAuditPassed']=True;a.clear();a.update(revised)
+   report.setdefault('mediaRepairs',[]).append({'kind':'editorial-copy-correction','slug':a['slug'],'image':a['image'],'publishedAt':a['publishedAt'],'sourceUrl':a['source']['url'],'originalImageUrl':a['image'],'nativeWidth':1600,'nativeHeight':900,'contentSha256':content_hash(a)})
+  except Exception as e:report.setdefault('publicationBlocks',[]).append({'sourceUrl':a['source']['url'],'title':a['title'],'reason':'Editorial correction: '+str(e)})
  completed={a['slug'] for run in state['runs'] if run.get('productionVerified') for a in run.get('articles',[])}
  for a in state['articles']:
   if a['slug'] in completed:continue
@@ -172,7 +194,8 @@ def main(root=ROOT,fetch=get,now=None):
   exhausted=row.get('attempts',0)>=retry.get('maxAttempts',5)
   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
   evidence_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH' and not row.get('evidenceGateCorrectionApplied')
-  if (exhausted or cooling) and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
+  claim_gate_correction=item['url']=='https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years' and row.get('lastError')=='Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM' and not row.get('claimSupportCorrectionApplied')
+  if (exhausted or cooling) and not claim_gate_correction and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
    row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
    next_at=(datetime.fromisoformat(row['lastAttemptAt'])+timedelta(hours=retry.get('cooldownHours',6))).isoformat() if not exhausted and row.get('lastAttemptAt') else None
    decision(report,item,row,row['status'],row.get('lastError','Retry held'),next_at)
@@ -184,6 +207,7 @@ def main(root=ROOT,fetch=get,now=None):
    row['status']='queued-next-cycle';decision(report,item,row,'deferred-attempt-budget','Bounded run budget; durable rotation resumes another item next cycle',now.isoformat());continue
   if type_gate_correction:row['typeGateCorrectionApplied']=True
   if evidence_gate_correction:row['evidenceGateCorrectionApplied']=True
+  if claim_gate_correction:row['claimSupportCorrectionApplied']=True
   attempted+=1;row['checks']=row.get('checks',0)+1;state.setdefault('collectionLastAttemptAt',{})[collection]=now.isoformat()
   if media_revision:row['reviewedMediaRevision']=media_revision
   try:
@@ -194,6 +218,15 @@ def main(root=ROOT,fetch=get,now=None):
     if not art:raise
     sourceImage=resolve_illustration(item,root)
    cached=row.get('illustrationDraft')
+   revisions_path=root/'operations/illustration-editorial-revisions.json'
+   revision=(json.loads(revisions_path.read_text()).get('items',{}).get(item['url']) if revisions_path.exists() else None)
+   revision_hash=hashlib.sha256(json.dumps(revision,sort_keys=True).encode()).hexdigest() if revision else None
+   if cached and revision and row.get('editorialRevisionApplied')!=revision_hash:
+    from editorial_revision import apply as apply_editorial_revision
+    revised,revision_hash=apply_editorial_revision(cached,item,revision)
+    row.setdefault('illustrationDraftRevisions',[]).append({'draft':cached,'revisionReason':revision['reason'],'at':now.isoformat()})
+    cached=revised
+    row['illustrationDraft']=cached;row['editorialRevisionApplied']=revision_hash
    if sourceImage.get('isIllustration') and cached:
     if cached['source']['summaryHash']!=item['summaryHash'] or cached['image']!=sourceImage['imageUrl']:raise MediaUnavailable('Illustration draft pairing changed; fresh preview review required')
     evidence=recover_evidence(item,cfg)

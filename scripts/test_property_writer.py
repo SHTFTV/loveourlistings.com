@@ -36,8 +36,12 @@ class WriterGuards(unittest.TestCase):
     def test_invented_support_rejected_before_audit(self):
         a = article();a['claims'][0]['exactSupportingExcerpt'] = 'The home has a private marina.'
         with self.assertRaisesRegex(ValueError, 'LOL_UNSUPPORTED_PROPERTY_CLAIM'):
-            self.run_writer([a])
-        self.assertEqual(len(self.calls), 1)
+            self.run_writer([a,a])
+        self.assertEqual(len(self.calls), 2)
+    def test_corrected_exact_support_still_requires_fresh_independent_audit(self):
+        a=article();a['claims'][0]['exactSupportingExcerpt']='An invalid paraphrase of the source.'
+        result=self.run_writer([a,article(),{'pass':True,'issues':[]}])
+        self.assertEqual(result['writer']['revisionCount'],1);self.assertEqual(len(self.calls),3)
     def test_independent_audit_can_veto_plausible_copy(self):
         with self.assertRaisesRegex(ValueError, 'LOL_INDEPENDENT_FACTUAL_AUDIT_FAILED'):
             self.run_writer([article(), {'pass': False, 'issues': ['Deck implies an unsupported fact']}, article(), {'pass': False, 'issues': ['Deck still implies an unsupported fact']}])
