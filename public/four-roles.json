@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-13T03:52:52.347961+00:00",
+  "checkedAt": "2026-11-13T03:57:32.482641+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "e7253a2b947159d934979551aae3ecdae009ed24",
+    "sourceCommit": "b806182f50ea73dbb7ff3569439f2d8f149a280a",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-13T03:51:15.491104+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254",
+      "checkedAt": "2026-11-13T03:55:59.567973+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43362088719",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "45e6a205044fa126c08b8c55642176de4246e1b6",
+        "sourceCommit": "c348429feb363ab3656b38b4f8da245e99788ec4",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -31,14 +31,14 @@
       "verified": false,
       "status": "failed",
       "findings": [
+        "Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
       ],
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-13T03:51:15.491104+00:00",
+        "checkedAt": "2026-11-13T03:55:59.567973+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
@@ -70,8 +70,8 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "already-published": 4,
-              "candidate-admitted": 4,
+              "already-published": 5,
+              "candidate-admitted": 3,
               "not-individual-property": 2
             }
           },
@@ -116,19 +116,21 @@
           }
         ],
         "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 9,
-        "inScopeQueueCandidates": 8,
-        "attemptedThisRun": 4,
+        "candidatesConsidered": 8,
+        "inScopeQueueCandidates": 7,
+        "attemptedThisRun": 3,
         "skippedThisRun": 5,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "stored-awaiting-verification": 1,
-          "attempt-failed": 3,
-          "deferred-attempt-budget": 3
+          "attempt-failed": 1,
+          "stored-awaiting-verification": 2,
+          "deferred-article-limit": 1,
+          "retry-cooldown": 1,
+          "quarantined-retry-exhausted": 1
         },
-        "newFeaturesStored": 1,
-        "verifiedPublicationsThisRun": 1,
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -156,27 +158,15 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/31742-contijo-way-coto-de-caza-ca-lists-1238829795",
-            "sourceId": "robb-property",
-            "title": "This $14 Million Equestrian Estate Sits Within a Double-Gated Orange County Community",
-            "collection": "ranches",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 7,
-            "checks": 3,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
-            "sourceId": "robb-property",
-            "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+            "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
+            "sourceId": "countrylife-property",
+            "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
             "collection": "mansions",
             "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-13T09:55:19.660298+00:00",
+            "reason": "Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM",
             "duplicateOfArticleSlug": null
           },
           {
@@ -184,35 +174,11 @@
             "sourceId": "robb-property",
             "title": "This Olson Kundig-Designed Home Frames Hawaii\u2019s Rugged Landscape",
             "collection": "waterfront",
-            "outcome": "attempt-failed",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 7,
-            "checks": 3,
+            "checks": 4,
             "nextAttemptAt": null,
-            "reason": "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
-            "sourceId": "robb-property",
-            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 2,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years",
-            "sourceId": "countrylife-property",
-            "title": "A wonderfully romantic home, born from a mill that's stood in place for 1,000 years",
-            "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -220,11 +186,11 @@
             "sourceId": "robb-property",
             "title": "This $13.9 Million Venice Beach Compound Has Ties to Charlie Chaplin",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 8,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -232,18 +198,42 @@
             "sourceId": "robb-property",
             "title": "This London Water Tower Has Been Turned Into a Contemporary $3.7 Million Residence",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 10,
             "checks": 1,
-            "nextAttemptAt": "2026-11-13T03:50:06.209625+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-13T03:55:19.660298+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+            "sourceId": "robb-property",
+            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 2,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+            "sourceId": "robb-property",
+            "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-13T04:21:15.491104+00:00",
+      "expiresAt": "2026-11-13T04:25:59.567973+00:00",
       "green": false
     },
     "visual": {
@@ -251,20 +241,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-13T03:33:19.411Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805",
+      "checkedAt": "2026-11-13T03:53:21.310Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361843445",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359422680"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "aff11e54cd25e957bc2cca9e9f45a34cd2e56e81",
+        "sourceCommit": "c348429feb363ab3656b38b4f8da245e99788ec4",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -291,6 +281,90 @@
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-8682ca6636-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-4f213f27e1-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
               {
                 "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
                 "alt": "",
@@ -430,90 +504,6 @@
                   169
                 ],
                 "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/f673934557a76e126a8d.jpg",
-                "alt": "We Love This Listing: Borthwick Hall\u2019s Baronial Scale and Nearly 12 Acres",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/d2d24b815d350fd29a70.jpg",
-                "alt": "We Love This Listing: The Great Stair & Library at Burley on the Hill",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/8b85219f2d02c2e11903.jpg",
-                "alt": "We Love This Listing: West Stoke House, Where Georgian History Meets Motoring Design",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
               }
             ],
             "captionFontSizes": [
@@ -530,7 +520,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "9649028cf9c09d387ce75b1c37f9253ead6f26ea89ec5363151b8ad0da999dba"
+          "screenshotSha256": "f9620299e28d8b1fa034c03fe3c0f6b81446d54b9bc1e584e5335d7120acb9cd"
         },
         {
           "page": "journal",
@@ -555,8 +545,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-                "alt": "A converted water tower dubbed 'a jaw-dropping showstopper' by Kevin McCloud is on the market",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -573,27 +563,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "be4bfe58b89cf12f4b8d2615dfea0b5ffbe47280447c9d79ad629da4cbd878cc"
+          "screenshotSha256": "0a73397647fa9a08509c38a21a0eade14bc43a5cd6a6ea333d4abdfa3805824f"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
+          "url": "https://www.loveourlistings.com/journal/we-love-ranches-2026-11-11-795aed2bbe/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A Victorian Water Tower with a New London Perspective | Love Our Listings",
-            "h1": "We Love This Listing: A Victorian Water Tower with a New London Perspective",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
-            "description": "Country Life\u2019s account of this Kennington conversion reveals a home organised around Victorian engineering, contemporary additions and a ninth-floor Prospect Room.",
-            "ogTitle": "We Love This Listing: A Victorian Water Tower with a New London Perspective | Love Our Listings",
-            "ogDescription": "Country Life\u2019s account of this Kennington conversion reveals a home organised around Victorian engineering, contemporary additions and a ninth-floor Prospect Room.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-            "twitterTitle": "We Love This Listing: A Victorian Water Tower with a New London Perspective | Love Our Listings",
-            "twitterDescription": "Country Life\u2019s account of this Kennington conversion reveals a home organised around Victorian engineering, contemporary additions and a ninth-floor Prospect Room.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
+            "title": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza | Love Our Listings",
+            "h1": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-ranches-2026-11-11-795aed2bbe/",
+            "description": "Horse facilities anchor this Orange County estate, where Robb Report describes a renovated main residence, separate guest house and generous spaces for gathering.",
+            "ogTitle": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza | Love Our Listings",
+            "ogDescription": "Horse facilities anchor this Orange County estate, where Robb Report describes a renovated main residence, separate guest house and generous spaces for gathering.",
+            "ogImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+            "twitterTitle": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza | Love Our Listings",
+            "twitterDescription": "Horse facilities anchor this Orange County estate, where Robb Report describes a renovated main residence, separate guest house and generous spaces for gathering.",
+            "twitterImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -612,22 +602,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-                "alt": "we love mansions 2026 11 12 16be7cdfc9",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -635,7 +611,7 @@
                 "loaded": true,
                 "rendered": [
                   1090,
-                  540
+                  613
                 ],
                 "fit": "contain"
               }
@@ -644,33 +620,38 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/6c6d0575b99e594cd73c.jpg",
+            "src": "/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love mansions 2026 11 12 16be7cdfc9"
+            "alt": "AI watercolor recreation from the property reference; not listing photography"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "783a007ca07e64f878000a51752bdd5e94cdd8924b2b5a5d79cfb656b256b5ad",
+          "screenshotSha256": "49ab20d43e7e4bb779f5c4f2589985326788cd8e3ccc5bf0de40fcd6f0e7ebc3",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 339
+              "textLength": 272
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 316
+              "textLength": 323
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 355
+              "textLength": 329
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 321
+              "textLength": 306
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "desktop-article-body.jpg"
@@ -713,8 +694,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-                "alt": "We Love This Listing: A Victorian Water Tower with a New London Perspective",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -741,8 +722,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/d766b813b82a8f44e7b2.jpg",
-                "alt": "We Love This Listing: A Farmyard Reimagined as a Family Home",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-8682ca6636-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -763,7 +744,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "fc5fd494779c54bdd2d89b741dd7c6863bc29b0f28ba0adfb53f5c9a42086603"
+          "screenshotSha256": "74268432590b78f70e5e2285c443b4c2c3ffd202c8e42ab836f7131a8b3e2dcd"
         },
         {
           "page": "journal",
@@ -802,8 +783,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-                "alt": "A converted water tower dubbed 'a jaw-dropping showstopper' by Kevin McCloud is on the market",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -816,8 +797,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/d766b813b82a8f44e7b2.jpg",
-                "alt": "'We managed to finish the house, including removing the ducklings that had settled in': James Alexander-Sinclair on his first house in the country",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-8682ca6636-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -834,27 +815,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "5cd0ff56d5456691c519e01357d9963b41b563dc0ae38bb7a9735821a5a65fe9"
+          "screenshotSha256": "9867e998d29665be577dc5e745b39f89452e7f8a72db46a8dc5c7daf4321206b"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
+          "url": "https://www.loveourlistings.com/journal/we-love-ranches-2026-11-11-795aed2bbe/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A Victorian Water Tower with a New London Perspective | Love Our Listings",
-            "h1": "We Love This Listing: A Victorian Water Tower with a New London Perspective",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
-            "description": "Country Life\u2019s account of this Kennington conversion reveals a home organised around Victorian engineering, contemporary additions and a ninth-floor Prospect Room.",
-            "ogTitle": "We Love This Listing: A Victorian Water Tower with a New London Perspective | Love Our Listings",
-            "ogDescription": "Country Life\u2019s account of this Kennington conversion reveals a home organised around Victorian engineering, contemporary additions and a ninth-floor Prospect Room.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-            "twitterTitle": "We Love This Listing: A Victorian Water Tower with a New London Perspective | Love Our Listings",
-            "twitterDescription": "Country Life\u2019s account of this Kennington conversion reveals a home organised around Victorian engineering, contemporary additions and a ninth-floor Prospect Room.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
+            "title": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza | Love Our Listings",
+            "h1": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-ranches-2026-11-11-795aed2bbe/",
+            "description": "Horse facilities anchor this Orange County estate, where Robb Report describes a renovated main residence, separate guest house and generous spaces for gathering.",
+            "ogTitle": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza | Love Our Listings",
+            "ogDescription": "Horse facilities anchor this Orange County estate, where Robb Report describes a renovated main residence, separate guest house and generous spaces for gathering.",
+            "ogImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+            "twitterTitle": "We Love This Listing: A Three-Acre Equestrian Estate in Coto de Caza | Love Our Listings",
+            "twitterDescription": "Horse facilities anchor this Orange County estate, where Robb Report describes a renovated main residence, separate guest house and generous spaces for gathering.",
+            "twitterImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -873,22 +854,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c6d0575b99e594cd73c.jpg",
-                "alt": "we love mansions 2026 11 12 16be7cdfc9",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+                "alt": "AI watercolor recreation from the property reference; not listing photography",
                 "native": [
                   1600,
                   900
@@ -905,45 +872,64 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/6c6d0575b99e594cd73c.jpg",
+            "src": "/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love mansions 2026 11 12 16be7cdfc9"
+            "alt": "AI watercolor recreation from the property reference; not listing photography"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "b8c2bd95ab097a65e6b657887307dd5a629e125739aaa674a08c060233fd671e",
+          "screenshotSha256": "4ba492bbf621e3cc23255fdb4a431c83419fae932aa39a34c33b25ceb51fc650",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 339
+              "textLength": 272
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 316
+              "textLength": 323
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 355
+              "textLength": 329
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
         }
       ],
-      "findings": [
-        "published-archive/we-love-mansions-2026-11-10-c92607805f: native-below1600x900"
-      ],
-      "verified": false,
-      "status": "failed",
+      "findings": [],
+      "verified": true,
+      "status": "passed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-12-16be7cdfc9",
-        "publishedAt": "2026-11-12T15:52:15-07:00",
-        "image": "/images/source-properties/6c6d0575b99e594cd73c.jpg"
+        "slug": "we-love-ranches-2026-11-11-795aed2bbe",
+        "publishedAt": "2026-11-12T20:50:06-07:00",
+        "image": "/images/editorial-illustrations/repair-795aed2bbe-v1.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-ranches-2026-11-11-795aed2bbe",
+          "image": "/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-penthouses-2026-11-11-8682ca6636",
+          "image": "/images/editorial-illustrations/repair-8682ca6636-v1.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-waterfront-2026-11-12-4f213f27e1",
+          "image": "/images/editorial-illustrations/repair-4f213f27e1-v1.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-mansions-2026-11-12-16be7cdfc9",
           "image": "/images/source-properties/6c6d0575b99e594cd73c.jpg",
@@ -1058,10 +1044,10 @@
         },
         {
           "slug": "we-love-mansions-2026-11-10-c92607805f",
-          "image": "/images/source-properties/5c7582022df8f8acf8a9.jpg",
-          "width": 1200,
-          "height": 675,
-          "status": "native-below1600x900"
+          "image": "/images/editorial-illustrations/townhouse-recreation-v1.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
         },
         {
           "slug": "we-love-mansions-2026-11-10-b353124cc5",
@@ -1092,11 +1078,11 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14007189375,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805/artifacts/14007069702",
+      "artifactId": 14007809902,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361843445/artifacts/14009110071",
       "fresh": true,
-      "expiresAt": "2026-11-13T04:03:19.411000+00:00",
-      "green": false
+      "expiresAt": "2026-11-13T04:23:21.310000+00:00",
+      "green": true
     },
     "supervisor": {
       "schemaVersion": 1,
@@ -1524,17 +1510,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "45e6a205044fa126c08b8c55642176de4246e1b6",
+      "sourceCommit": "c348429feb363ab3656b38b4f8da245e99788ec4",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T03:51:15.491104+00:00",
+      "observedAt": "2026-11-13T03:55:59.567973+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43362088719",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43362088719",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1542,8 +1528,8 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
+        "Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "Unchanged preview failed current-rule factual re-audit: [\"The body contains near-verbatim source wording despite added commentary and attribution. In particular, the primary-suite and bedroom-courtyard sentences closely reproduce two consecutive source sentences with only minor substitutions. Rewrite those descriptions in original language rather than lightly editing the source.\"]",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication"
       ],
       "pageQualityVersion": 1,
@@ -1551,37 +1537,35 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361529254"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43362088719"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "aff11e54cd25e957bc2cca9e9f45a34cd2e56e81",
+      "sourceCommit": "c348429feb363ab3656b38b4f8da245e99788ec4",
       "check": "role:visual-checker",
-      "status": "failed",
+      "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T03:33:19.411Z",
+      "observedAt": "2026-11-13T03:53:21.310Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805/artifacts/14007189375",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361843445",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361843445/artifacts/14007809902",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
-      "findings": [
-        "published-archive/we-love-mansions-2026-11-10-c92607805f: native-below1600x900"
-      ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805/artifacts/14007069702",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43359675805/artifacts/14007069702",
+      "findings": [],
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361843445/artifacts/14009110071",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43361843445/artifacts/14009110071",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-16be7cdfc9/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/we-love-ranches-2026-11-11-795aed2bbe/",
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
