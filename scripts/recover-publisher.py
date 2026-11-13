@@ -1,4 +1,4 @@
-"""Existing repository health workflow restarts only its existing publisher; prepared media remains subject to its factual and layout gates."""
+"""Existing repository health workflow restarts only its existing publisher; prepared media remains subject to its factual and layout gates, including verified source identity."""
 import json,os,urllib.request
 from github_dispatch import receipt
 from datetime import datetime,timezone
