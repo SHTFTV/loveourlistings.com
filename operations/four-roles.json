@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-13T09:53:01.376028+00:00",
+  "checkedAt": "2026-11-13T09:58:33.546679+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "a4df4f550c9bb7d6e12ce10fe85098a34977a052",
+    "sourceCommit": "675f67fe571154ed4fa9fa77df5e0a64d1093b4c",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-13T09:52:49.142193+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404792556",
+      "checkedAt": "2026-11-13T09:58:21.393118+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43405455233",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "3fc3ed735b68d8ed911b09211d88efc352abf42b",
+        "sourceCommit": "ff70f02c5ea4415d7a06e088a175c6436b90256a",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -38,7 +38,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-13T09:52:49.142193+00:00",
+        "checkedAt": "2026-11-13T09:58:21.393118+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -117,13 +117,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 4,
         "inScopeQueueCandidates": 3,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 3,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 4,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "attempt-failed": 1,
-          "quarantined-retry-exhausted": 1
+          "quarantined-retry-exhausted": 1,
+          "retry-cooldown": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -154,18 +154,6 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
-            "sourceId": "robb-property",
-            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 3,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00",
-            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
             "sourceId": "robb-property",
             "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -176,12 +164,24 @@
             "nextAttemptAt": null,
             "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+            "sourceId": "robb-property",
+            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 3,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-13T15:52:43.753197+00:00",
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-13T10:22:49.142193+00:00",
+      "expiresAt": "2026-11-13T10:28:21.393118+00:00",
       "green": false
     },
     "visual": {
@@ -189,20 +189,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-13T09:36:51.629Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402710988",
+      "checkedAt": "2026-11-13T09:53:28.005Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404844888",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402652401"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404792556"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "b6bd4e9965d1be30a4cba11e831614ae9392c7d6",
+        "sourceCommit": "ff70f02c5ea4415d7a06e088a175c6436b90256a",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -1082,10 +1082,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14024779978,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402710988/artifacts/14025113461",
+      "artifactId": 14026856549,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404844888/artifacts/14026387966",
       "fresh": true,
-      "expiresAt": "2026-11-13T10:06:51.629000+00:00",
+      "expiresAt": "2026-11-13T10:23:28.005000+00:00",
       "green": true
     },
     "supervisor": {
@@ -1416,17 +1416,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "3fc3ed735b68d8ed911b09211d88efc352abf42b",
+      "sourceCommit": "ff70f02c5ea4415d7a06e088a175c6436b90256a",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T09:52:49.142193+00:00",
+      "observedAt": "2026-11-13T09:58:21.393118+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404792556",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404792556",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43405455233",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43405455233",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1443,22 +1443,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404792556"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43405455233"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "b6bd4e9965d1be30a4cba11e831614ae9392c7d6",
+      "sourceCommit": "ff70f02c5ea4415d7a06e088a175c6436b90256a",
       "check": "role:visual-checker",
       "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-13T09:36:51.629Z",
+      "observedAt": "2026-11-13T09:53:28.005Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402710988",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402710988/artifacts/14024779978",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404844888",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404844888/artifacts/14026856549",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1466,12 +1466,12 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402710988/artifacts/14025113461",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43402710988/artifacts/14025113461",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404844888/artifacts/14026387966",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43404844888/artifacts/14026387966",
       "pageUrls": [
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-fd1a1ec29d/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
