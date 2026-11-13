@@ -63837,6 +63837,386 @@
           }
         ]
       }
+    },
+    {
+      "startedAt": "2026-11-13T06:15:21.713218+00:00",
+      "sopVersion": 13,
+      "sotLoad": {
+        "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
+        "version": 13,
+        "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
+        "sourceCommit": "7e80c9864df2083e231fdc4dc06494dc820fef3f",
+        "trigger": "workflow_dispatch"
+      },
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43377390191",
+      "sources": [
+        {
+          "id": "sothebys-property",
+          "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
+          "status": "ok",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "items": 10,
+          "parseRejected": 0,
+          "discoveryOnly": false,
+          "dispositions": {
+            "not-individual-property": 4,
+            "already-published": 2,
+            "outside-lookback": 4
+          },
+          "errors": [],
+          "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
+        },
+        {
+          "id": "robb-property",
+          "url": "https://robbreport.com/shelter/feed/",
+          "status": "ok",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "items": 10,
+          "parseRejected": 0,
+          "discoveryOnly": false,
+          "dispositions": {
+            "already-published": 6,
+            "candidate-admitted": 2,
+            "not-individual-property": 2
+          },
+          "errors": [],
+          "finalUrl": "https://robbreport.com/shelter/feed/"
+        },
+        {
+          "id": "mansion-global",
+          "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
+          "status": "error",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "error": "HTTP 404"
+        },
+        {
+          "id": "christies-property",
+          "url": "https://www.christiesrealestate.com/blog/feed/",
+          "status": "error",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "error": "DTD/entity declarations rejected"
+        },
+        {
+          "id": "google-luxury",
+          "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
+          "status": "ok",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "items": 30,
+          "parseRejected": 0,
+          "discoveryOnly": true,
+          "dispositions": {
+            "discovery-original-link-required": 30
+          },
+          "errors": [],
+          "finalUrl": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+        },
+        {
+          "id": "google-waterfront",
+          "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
+          "status": "ok",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "items": 19,
+          "parseRejected": 0,
+          "discoveryOnly": true,
+          "dispositions": {
+            "discovery-original-link-required": 19
+          },
+          "errors": [],
+          "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+        },
+        {
+          "id": "countrylife-property",
+          "url": "https://www.countrylife.co.uk/feeds/tag/property",
+          "status": "ok",
+          "fetchedAt": "2026-11-13T06:15:21.713218+00:00",
+          "items": 29,
+          "parseRejected": 1,
+          "discoveryOnly": false,
+          "dispositions": {
+            "already-published": 8,
+            "not-individual-property": 4,
+            "outside-lookback": 17
+          },
+          "errors": [
+            {
+              "title": " From a Lake District hotel to one of the finest houses in Oxfordshire, here are the best properties for sale in Country Life this week ",
+              "reason": "Missing substantive source summary"
+            }
+          ],
+          "finalUrl": "https://www.countrylife.co.uk/feeds/tag/property"
+        }
+      ],
+      "articles": [],
+      "duplicates": 70,
+      "quarantined": 1,
+      "discovered": 1,
+      "productionVerified": false,
+      "automaticTriggerProof": {
+        "verified": true,
+        "kind": "automatic-recovery",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43376235515",
+        "originEvent": "workflow_dispatch",
+        "reason": "Verified repository health workflow and GitHub Actions bot"
+      },
+      "publicationBlocks": [
+        {
+          "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+          "title": "We Love This Listing: A Kona Coast Home Composed Around Lava and Courtyards",
+          "reason": "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "retryStatus": "retry-cooldown",
+          "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "retryStatus": "quarantined-retry-exhausted",
+          "nextAttemptAt": null
+        }
+      ],
+      "reviewedCandidateIntake": 5,
+      "newCandidatesDiscovered": 0,
+      "candidateChecks": [
+        {
+          "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
+          "sourceId": "robb-property",
+          "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
+          "collection": "mansions",
+          "outcome": "not-individual-property",
+          "failedAttempts": 1,
+          "checks": 1,
+          "nextAttemptAt": null,
+          "reason": "Cached art/news item is outside the individual-property feature scope",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+          "sourceId": "robb-property",
+          "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+          "collection": "acreage",
+          "outcome": "duplicate-property",
+          "failedAttempts": 1,
+          "checks": 0,
+          "nextAttemptAt": null,
+          "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+          "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+          "sourceId": "robb-property",
+          "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+          "collection": "mansions",
+          "outcome": "retry-cooldown",
+          "failedAttempts": 2,
+          "checks": 1,
+          "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+          "sourceId": "robb-property",
+          "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+          "collection": "mansions",
+          "outcome": "quarantined-retry-exhausted",
+          "failedAttempts": 5,
+          "checks": 1,
+          "nextAttemptAt": null,
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "duplicateOfArticleSlug": null
+        }
+      ],
+      "collections": [
+        {
+          "name": "waterfront",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        },
+        {
+          "name": "mansions",
+          "eligible": 2,
+          "newFeatures": 0,
+          "status": "blocked-eligible-property"
+        },
+        {
+          "name": "penthouses",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        },
+        {
+          "name": "ranches",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        },
+        {
+          "name": "acreage",
+          "eligible": 1,
+          "newFeatures": 0,
+          "status": "queued-next-cycle"
+        },
+        {
+          "name": "beach-properties",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        }
+      ],
+      "status": "no-eligible-content",
+      "finishedAt": "2026-11-13T06:15:27.450746+00:00",
+      "queueProgress": {
+        "checkedAt": "2026-11-13T06:15:27.450746+00:00",
+        "runtimeState": "running",
+        "publicationOutcome": "no-eligible-content",
+        "feedsChecked": 7,
+        "feedsHealthy": 5,
+        "feedItemsParsed": 98,
+        "feedErrors": [
+          {
+            "sourceId": "mansion-global",
+            "reason": "HTTP 404"
+          },
+          {
+            "sourceId": "christies-property",
+            "reason": "DTD/entity declarations rejected"
+          }
+        ],
+        "sourceDispositions": [
+          {
+            "sourceId": "sothebys-property",
+            "itemsParsed": 10,
+            "parseRejected": 0,
+            "dispositions": {
+              "not-individual-property": 4,
+              "already-published": 2,
+              "outside-lookback": 4
+            }
+          },
+          {
+            "sourceId": "robb-property",
+            "itemsParsed": 10,
+            "parseRejected": 0,
+            "dispositions": {
+              "already-published": 6,
+              "candidate-admitted": 2,
+              "not-individual-property": 2
+            }
+          },
+          {
+            "sourceId": "mansion-global",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "christies-property",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "google-luxury",
+            "itemsParsed": 30,
+            "parseRejected": 0,
+            "dispositions": {
+              "discovery-original-link-required": 30
+            }
+          },
+          {
+            "sourceId": "google-waterfront",
+            "itemsParsed": 19,
+            "parseRejected": 0,
+            "dispositions": {
+              "discovery-original-link-required": 19
+            }
+          },
+          {
+            "sourceId": "countrylife-property",
+            "itemsParsed": 29,
+            "parseRejected": 1,
+            "dispositions": {
+              "already-published": 8,
+              "not-individual-property": 4,
+              "outside-lookback": 17
+            }
+          }
+        ],
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 4,
+        "inScopeQueueCandidates": 3,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 4,
+        "outcomes": {
+          "not-individual-property": 1,
+          "duplicate-property": 1,
+          "retry-cooldown": 1,
+          "quarantined-retry-exhausted": 1
+        },
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
+        "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
+        "candidateChecks": [
+          {
+            "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
+            "sourceId": "robb-property",
+            "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
+            "collection": "mansions",
+            "outcome": "not-individual-property",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Cached art/news item is outside the individual-property feature scope",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceId": "robb-property",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+            "collection": "acreage",
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+            "sourceId": "robb-property",
+            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 2,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+            "sourceId": "robb-property",
+            "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
+          }
+        ]
+      }
     }
   ],
   "articles": [
@@ -66633,12 +67013,18 @@
       "sourceId": "countrylife-property",
       "title": " From a Lake District hotel to one of the finest houses in Oxfordshire, here are the best properties for sale in Country Life this week ",
       "reason": "Missing substantive source summary"
+    },
+    {
+      "at": "2026-11-13T06:15:21.713218+00:00",
+      "sourceId": "countrylife-property",
+      "title": " From a Lake District hotel to one of the finest houses in Oxfordshire, here are the best properties for sale in Country Life this week ",
+      "reason": "Missing substantive source summary"
     }
   ],
   "discovery": [
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "What luxury home sales tell us about Canada\u2019s K-shaped real estate economy - Global News",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBIWUtkdnBwbFRBVHJpLTRLQUh2WmxOMzQ3Ti12dk9vQXp3eWdIY1piWXM5T0JYaUtQS2dOc21MamxJcXV0WjJlLWRQV2N1NE10WnNNWTZIRmo3ZnNmbUpfUmc1WE5SOGNEYnJ1RVl3?oc=5",
@@ -66656,7 +67042,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Luxury home sales shift to smaller Canadian markets, RE/MAX finds - Wealth Professional",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQV2lqR2VzTVVxbGozeEVLVmJocUdEYkM2MFYyM2NoUmt1b2FfOEx0dnUzbnpxUVU5SWJib1ZVNFhjV0tiN1lGV2V1MnZTRmNRbFpBN1BjSXA3dkc3TEJlWW9IYjN0ZjhUejBuY1RYWEJOeHE0TDVTeVRRVm1GbFJGT2NjYkFnTDhNTXVwSlZneF9PVlQ0cF93WWVDdXNIa242czRPbElJV1ZrSVNRU2FmWEhDcWp0SUVVMlRSekdad2s0Wl9mTjZCc2lUUHdMNjlJaGF1RXhfNA?oc=5",
@@ -66674,7 +67060,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Luxury Home Prices Are Falling, but These Pockets of Growth Are Defying the Slump - Realtor.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZEdSWFpDYjROcjZtbF9FX193djJfSTlwQWktY2p5ZmVHWmdXOElBSFV4ZHRVVVU2RU5KUlM1MWVHcGR3eUtBTExxd3gxM1ZtTVVCTEUxeHdNeWlwWS1aUEk5NS1za25RUURrYWdNYnpCeTR3X1BmUWhFZnY3dkpTQU5OTlhOSmxmLXhKc0tKcXc0NlNhLWRnY3Y4aDJjbjd3Ym1VWjk3S0RfV3B2bjJzaFVod1F6U2Ut?oc=5",
@@ -66683,7 +67069,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Where Luxury Property Is Gaining Momentum Around the World - LUXUO",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSU5kSFhOVklaS2hnVTg2ODJHdXVKZTFwLW5QTzE5WDJ0MVU0bnphWWlRQWhJWXN5MEU0MjlBbEQ5WGt4RFlORDVrZERRaXhBM0FiaEFNeDRiOGw5d0RNTzd6eTZHdzdFbm90OXhzUmNtc3J1dm5kYWdndUFoRkY3V1BjeVY4Z3IwS3lMQ0RoSnhUMVN6NXRTMm5Wc2w?oc=5",
@@ -66692,7 +67078,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "$42.5 million Nantucket home sale breaks island record - Boston.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNENxYVpfME5ENlUxWHM2VlhOS1BoUG1rVlp6ZThfYnkxUWFnZTg5bWhtdWIxczlXalMxSXlsQnNGZEFJa2dvWDlsQm8wa3VBaWF2TVFFUm5WOGREa0syeTZNYUhVYjBlV19xd19leDlhYmZndTU4MlpTNEd0NVFDUk9DRjJCQlVkS2QzeFZEaVdnRjhpUjdVUVRDdVBzaTlFVXdJeVF5MENBejVHWWx3WXhLNA?oc=5",
@@ -66701,7 +67087,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "What makes The Rock\u2019s property portfolio stand out in 2026? Inside Dwayne Johnson\u2019s luxury homes, private - The Times of India",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxNcjd4dXhXaU01ZEtOcmJLbUxwM0tianJzRlBwTHZGcGxiQUE0cFJaNzMzVENMWVdCM0ZzWFhEaXhwZ0dPRXRmZTZCUE5aSTR6aG9Ecy1IR0ctcFM3YzJuQjR4STk4MU9BNkluSDFjVUdCcjYwOVNNeXFfMGRhWnFoaWtMSTBaRjN2MkRVcXBESjYtaXEyUG1rN002NHl3ZVREQzVpanB2ZXlDTkpIUHpzbEJOdEpjaHI0Y0ZNcC1uWVZSQjNsd0pXYmRndi1UZ3M2VTFhN05DQ3dGazNBTmJleGU5eXlSUkpFQjdSMEc3T1RhUXcyOU9VVkNfQnV5MmprZ0NnTmx3S2RkYWRUdXJhN3JoVW0wSVFiNDF1aVdWckN4MlBOVzNJZGotLVo0Yl9qbHNseTQxQjI4QjdOaWY5OVowNjlHRk9ZdmhweEpHck9LMlNmdVJBc2UyczJ0T2ktVmxpQy1QN2IxR256MnlZeGdORXTSAfoCQVVfeXFMT0VZN205bGk4SWJPTmZUQjNkYmx6R19na24wUXJZOGJQM1U1XzFNMnZnRGNKQlpsRGZNUWtRdWQzb2Q5TFFSYnNpUS1HLUgxQnR0cWl6ZXVqUFVybG4ybGU5eHNaZVktem1rVDB3OEx0YW1ncU9aSFhVb2YtSU1tOWUtZVZsV21kSHRfSlpOaExBMUk4dHotSU5jQ0dSemdBblNJSm5fcWJPdTJpU0dxR01TMFBNN1R6WGVpa09WblRtUS1ETFVfU0FEbzVDcF9QRFJyU2JTQ2NIT0ZnaVFwYmtIQncyWndBQUttWG1QekxxOTdJdG5Md243aFROb09Dc0kwQnV5TkZsT1dmdGR6bDJJaVVVUnF0VHA2S2NsWnM2SjE0U1d6d0tKQXcxWWwzaV8xRFBEaUdtaGJQa1NBZEF2Ulp0NjFWZHo4UkJoNFJjSF92dVRUYlg4YUtxX05QMWJsVm9ZTVY4RTRvcmVrOEdmc3dGWExhTTdR?oc=5",
@@ -66737,7 +67123,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "San Diego\u2019s luxury real estate market was on fire this summer. Not anymore - San Diego Union-Tribune",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOVRXSjR4dkdFRWtsbzNNcmx3bmZEMGZCM1ZDbmdaX2xUdUZHN3VwYi1hVVpBWFJ2b2VtVm1RSEpHZ3lUMlNLb21ZRDBmZkQxS1NtbjNJWWZwa3piQXE3TnZBUWFCdEdQYWhad21tRmp6RHZoamo5WERUUGVLeVUtb1lINm9TRVRvN2IzX2tFdkNQU1RvVGViQ2VnY1FrOXdBLW1fZkJ3YVFQZHU3ZDRkVEgwMjd0bzZPak9iSGZB?oc=5",
@@ -66746,7 +67132,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Millionaire magnet Cape Town faces short supply of luxury homes - The Business Times",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTEVuUGRKZVNldnNrLVNWTGhzbjNpMXVHcHFRY2otYWQzRjRhcC1HbmhjOHVoNERSVGdBaTlISktrTnJ1YWRtOEhYOW9MLUltMFV4SGt4MWN5Z2VDTW5TUG4wOXZKdGRCVFNrN3NSRGx5d3R1TzR0MEx3dDJUV3BmeUR3bnphcXZNTnIzUTNtZTY2Q2RMVDNFR2ZhMEEwc0lOWmk3Wg?oc=5",
@@ -66764,7 +67150,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Auction sales of luxury homes seized in $3b laundering case falter amid mismatched expectations - Yahoo News Singapore",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1QbUVzeWlwYzJBc0NBQS1DbEkxd3lJRXZJZFotUG1jM1E0Vlc5ZXd6MG94TTRkMjJqNkNObl9KbzRLWC1IOTdsVkotWVpLYzktc3RKaklmWHk4QlRMX2pGRTgtVUJsMlg5djFZMXcwRVlPcTF3VzFRVU5WcjFZT0U?oc=5",
@@ -66791,7 +67177,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Celine Dion sold her Florida mansion for $9 million in 2002, four years after it was built for her; the w - The Times of India",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxNQnVtdFpJQ1VIdWRsRDVCMkpLQUxiTVFOaUJIWDFKempLMTFmaURUQ1UzaHR3STBzWEs0OUpOdWxLMXY1Q1p0Rmx4dGQtQzFpZkFTbC1ldFhpMEU2bVZPM1h3c2hNTWJUbkhLMWNDel8yM1VYZVRTeXV5TF8zaExidU9TRlFZOS1qaXRDYkJ1aDhfWndFa3FvTk1tOHBYN01zUTNrWW9jMlJjQ3NJaHNiOWpKcG9XNGlabmlqdmcxakZMajU2SzRQMjE0TXlydHBKb0tVVXF2M2IwOTQwWnJrcUtDSmNoZFRoUlZxd3l6a0F5RXFZTHNoeEN0Sy1fRk5jenNsXzc4VTVPUFVINUpDdXMyX21NazY2VThtSWwtb05tajh5Q2Mza0t1MkdOTUE1ZTJYNW45TkxUMkZmQW1oRUppb1hQVXp1NDREMVVpeC0wQ3p4VlpyOWY5azhpM3hEbnRGSnRQaUF5cGNBbEw1VdIB9gJBVV95cUxPTWlwdGJZUG5HNGFqc2RSREo4azRaTXdac0U1MHNoelEtdEJvbkVvSTAteGRMal9NZElNcEd3WEhGaVFMS2EtRXFzNU10UGk1dmkzSzJGeFc2TmJka2VaMkZlQUU4b1JjWVhhZV8tcl8zckVVMFhXckZvTFdlM0NBcVZWOTcwdldGYmhvc1BGQ0NoWkJJbXZzMXJtZHZ3UEs5SGZGZ1BWRG82THNBUllFdVpKLW53RU1WNUlXbnR1SnU0U0pzd0g4TjlabVdjX2pfU3BaaXR3SzdJTENoNEdka21NUVRsQ3JfSENiSG5kdHJpYVc3aURvMHVCLXlaX3IwM2xFOVd4LXlSRDJUVGp6ZW1tUmJkeDJpNk5vSjdBQWhwSXFic01wNlMyWDZWMzJKQ05uR0JIQTI4blI0ZU55bmd4NzAwWEpXV3VBV1ZvdmFIbzl0dHQzQW44V3Y5LXFQd2N4a2JJaVZsQ2M4Mk9EUDRBbTlDQQ?oc=5",
@@ -66809,7 +67195,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "In 2023, England captain Harry Kane shocked property experts by buying a \u00a36.5m Surrey estate only to comp - The Times of India",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMihANBVV95cUxNR2RFT1hwaW1uSURvZDcyX1p1VjM0MElNNi15U3VvV19BelNoQ25vTFRNdE00cjdXQVU3bFpxZmttY3dMUk9uMU1DeC1ObkpTNHg3Qzd0SlZKZldPajBhYWFHd0xPNXpFTmhsWjlFSFlCajV0clNmeWpUUTAwcnppVVVoanFVWkQ0SlFUZVI3NVlZOXlNajVxLW80LUZOMEhESmY5QWhxOHZCM0x1SkQzMml0WTljbE1lMUd0Y1lBdExoWVhadWtJcU9DUVc2T0pRbTB4a0ZQU0dMbU9QTEsxd2R3Mml0UnI0TlNLeE9hNEpWRWFUcGQyenRHdFdIaEdHMDUyazlxSlFNODFXYWJiU0FuRTRoaDczWkNJSXQ1NzZPRDA1WW9GcloxYzRMX3BhUFlfUVFQVVZBOEFlVTdBZERsbWljeUZKRU16ckwyOHcwTFJob2Y1NU4xd01yTWxFMTVqWVhBejQ1YXczbUtkT3FxcXctUWU1M0ZCNHo1SHczcXBj0gGKA0FVX3lxTE0ySHJjcjdkN0l6MXVfZEJTOHhVcFBNNGJnZVZWQlNkQW91V2JzV2xsQmZESl94TVI5TWNyYVN6M3U4cGVXMHF3a2VfeEFxVVNEVkduTEhKQ1ZET2luUkJtOXZoV2VDUlhBVm1zYzFzcFJ6aVNRdzVaWTFkV212Q0JyWWRodW00OFpFcEVLWFlyX0tlZS1tZjVGM1l4ZjhMZEItMFFhQUtRbjRnYWNMZVp1Wnl1N1RXUjVUUDgtdGI2OHlyUnQ5WDFZQmhBcmtQLXhtWUQzVXNyalc3N3Nrd2NjcWhLcmloOTNSTnFvT3Q3bUlUNmw2ZmhiTXVVNmtkcmdEaHJTRG1QTnVKMEtFX213TGE0bTNkSWFkS0pQcW5vX0JyVTdqUDBuRldXOUZkRlNjdFEwVk04dTZ6TzlNSEF4M0RVN1BhVXhRT2x2bndwVTZONFZDUDRiWWNDVVpjQWppY1JIcW5mdUIxQTVRNlhJY1FreF9NNW8wYkRJb3pBMmxHbUIwYnJZcFE?oc=5",
@@ -66818,7 +67204,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Our five favourite luxury homes for sale with a rooftop terrace - SMH.com.au",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdV9pREhvSWJEbWhNbUQ0YXJ0QlpHT0dnTVVYV211aU00R2w5SUpMTDJlUldsT3JtOWNMTnk3c1hncUdZT3Z4YmU0bE9mcUExYlF5TW1MZXBHalBULWxMbEFhbDVvYzFIYkpBcU9IdUFfc3FuLWlJMndRb0JrYkRyVFRhXzJxVXczZTd5ZFJ2QmptNEZ3bkppWE1VRXRUYndWRTEyczU2MnJwTXM1TzFMb29sNDFqSklRb0pvWmd3?oc=5",
@@ -66827,7 +67213,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "London Luxury Homes: 80% of Properties Listed Below Asking Price - logos-pres.md",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVmhDbzhLOXh6bGJteGE2WWZEMlBQMXppUmx3VWFKREZjTWI2R0xyRE8wNG51aFhfa3hXMUhvQlpzNUx0bXRVS0FGaEs2cmFFN3JSQml0bjhQeUllY2Iwalh6bjlaSm1TeThDeEVIbjduUG9Bb3NveWxXenl3Z0JLTkw1ZDJZTHZkYU0xRy16Mmx2d3RmX0dQR3hRNzZIN3p1WDRwUkZIQV9IakwyZ1BOMnNWNTlvak9RaVlDUQ?oc=5",
@@ -66881,7 +67267,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Our five favourite luxury homes for sale with a rooftop terrace - The Age",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOV1VhM0Q2NmRVOTBQN0ZFelg4UlZYenRydkdxbmJxUmZ3anRNNjRHc04yMGZkWEt4UDVwRUpKUV9lVVpwcXpYdEQwX3JHWFlEM01JY0pvekJGbVg0Z2k2bWZBMHozbUU1VWh1QTdXcHVLWXdURzVBVmJ4ODRQV2NJOHIzdm9LVEgtdjNWTkJCeXJORmRzLURGWWVLQTFTR3JYdEIxY1g0LVJRWmd2WnZFS2tFOG5IU3V6VG04WU9WZG1hdw?oc=5",
@@ -66908,7 +67294,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Fairvern waterfront property in downtown Huntsville listed for nearly $6 million - Huntsville Doppler",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMnVEX3Z4c3MwaUh3Vy1HZkRERG8wZE04MjhGc29mbVpFVWotLWdBWnFMMXNqQkhyOXNZSmZqT09DcHIxdTFRSXFKLVl6MDd3NWkzdExrTi1WWHNaczBRYVJHTS1mNHhabUVtMW81WThDdElkdEV1MThfWldmMEZGbUJCRlBlX3ZVUzFtdEFQazcxanZuOGlCcDQ3V0JWYXA5ellCN3JSYXBtNGIxbWwxQVpSMVlSWWc?oc=5",
@@ -66917,7 +67303,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Listing of the Week: $549,000 for an ultra-private cottage with two bunkies on Little Hawk Lake - Cottage Life",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNGFLVGNZNTFDSWNidmdUVm9lN1ozQ2dTVXVxWDhnY1Z0c29lQUZ6d0p3a2luSU56cHBBSnhFTHBiVUw3RUItQnZ2Y01qTGd1NmVMSV9oSVIzMTliaTJ6cDFLeUZfWHlpVmpQY2pTZS1yckxzR0pfRHdJOXRycXVDT0Q5UU51b2Y0ZXFtVEdTWjR3NjRlNmlBMkdvSUFFSzRWVHVrblBCS2RYTHlWYm9SYXZMVFVGV2V3YUcwREt0ZTlqQ0xGVWxz?oc=5",
@@ -66962,7 +67348,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Dover waterfront home sells for $4.1M, tops Strafford County sales - Foster's Daily Democrat",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWmtMQUdGQmM2TldQZFpGVGU2VGFhNzY2UjRyeFdzU2ZqMWJxSVdDLUpKV1FkYXlTOWNDSEtYc2xUZVlnQVV0V3JpQXV4dzk4TUx5YUd6R1h6UW41STAwdmIwVnJ4YVdYRnFjYnh6UzVxeUdmVFI0ODNMckNQcWg0bS1FcGpvZU1ZeFdoRWplb1FiX0pocm1nUktER2ZoLXNOVXlYTE05NXJqQTZQdm43OEZOWVhEaF8wc2dYYmpNX0N5d1o2Y21hY1ByaFo?oc=5",
@@ -67007,7 +67393,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "5 Beachfront Homes for Sale Under $300,000 - TAPinto",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTExEd3pUNDNHaEVlQ0ZnSFRHMUJReTE2VTZoUjdtREVDb0QtUV9WQi15Y1NfRTJwTER1aUdVUG9nSFVMenJocWpnUzBoLURvTmpUb2JId0ZqMEkweEM3Q2V5M0FuWmNXMlUta01YOUtsWFNZcUlXQjZ6VFVXQXhWMVAxVW9mQlRWbXN2WTNYN0xpTjAyQlVXN19RMjluRXBjSEU5WWpPUzMzVnROMVlLQw?oc=5",
@@ -67061,7 +67447,7 @@
     },
     {
       "at": "2026-11-10T01:38:28.356302+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Gold Coast mansion listed for $47.5m in bid to smash Queensland house record - Real Estate",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdUl6WDExeFh2NkRzSGYzd0NlaFZLal9lSjJuTnBQY19RVlNUbDFZX2xNTHljUFY4N2tpQ2lLSmdaV3p1Z3dmRkxwYUJDSGhqZmhITVdHejV6Y0Y3MlRjSkJIRjJmQklGa1V2UXRjLW8zTnIwRmhpTFVZeVBndnZ4UlVndUpHUFVEbTFPcFo0X2liWVNWdk10ODZZb2tyTTc1dDFXd0RWVWZWQmtUWTd5TV9VVQ?oc=5",
@@ -67097,7 +67483,7 @@
     },
     {
       "at": "2026-11-10T15:14:36.273887+00:00",
-      "lastSeenAt": "2026-11-12T11:57:09.788024+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "How Wellness in the Home Is Making Over Luxury Real Estate - WWD",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcWY3dlRBWmNsUkoxaEJXU2RMSmNET3VvR3lDZjVrdm52cjIwSkpFWThMZW56MEZVSldzM2NhRTZadUgwcmhxdWVHQnluMXJhRFNKaURGUkNHcV8zaThCcWFVUHFkNFBWRDJKTXd5ZVFxWm95aEpNLWktek1MX0NNQnNZY3JMNGtuVFFjNWtpSHpJekpEb191cWVTX3ROQ3EzbkJmVGNn?oc=5",
@@ -67133,7 +67519,7 @@
     },
     {
       "at": "2026-11-10T19:42:21.741849+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "A New Peak for Ski Fashion\u2014These Luxury Houses Have Reimagined Slope Style - nuvomagazine.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBQZkQtakYxR3o0UWJfQklnQW1WS0dxOHpNZVBzcno0Zm9mUjByNEo4X3U1TllJRWJWYkw5NW1TLVFHWnY1VFAxM1hkeXFhbW5SeFgtNS1zcGJudF95T0gtazdsRlYyd0hUem9NZ3lvdjZiSXlHNTduNg?oc=5",
@@ -67142,7 +67528,7 @@
     },
     {
       "at": "2026-11-10T19:42:21.741849+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "This $4.45M Portland estate sold at auction for half price \u2014 and the owner has zero regrets - OregonLive.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcjJsSFA0RkhqY1h2cE9FNHc4SUdzU0F6dTQyQVVFMzRQN1pWZFVfT3hTQVpyZ2Q2U1VLSlZsaGFaNm10UDMwd2RaRmZWTURiS1hCTkU4SUpGOWp3UWRtbllMRkgxZkt6NDctOVdIQmFtRTVuNlZnMkxPTlRmLUJ2dWlEYWJLX3lXZEhIWF9CSXAyazU4LVdiOUc3MEVuVXNEWWE0bkVZZnZZZnZvZDdRZmFrVVZNUm0yZjk2RzRVRzFodFhuMXBlVE1paV9qWEtRX1dZ?oc=5",
@@ -67151,7 +67537,7 @@
     },
     {
       "at": "2026-11-10T19:42:21.741849+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "In 2016 Cal Ripken Jr.'s Luxury Home Sold for $9 Million Less Than Its Original Asking Price - Yahoo Sports",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5BbTFodVZkLWhsdWZyMnhKT3FkQVRJMDlGT09tUXZtdzk0NFJWRHV2RnRqMkxnTWNSNDhhXzZ4a1luWURXbHh5N29qcDFSQ2xIUEZHQnhnWDlIOGpSWk5EUGMzR0Q5VGc1V3JRMzdVY19IVHhtN2M1TmQ5bUM5Y1k?oc=5",
@@ -67196,7 +67582,7 @@
     },
     {
       "at": "2026-11-10T19:42:21.741849+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Portsmouth waterfront home sells for $5.1M. Seacoast median price dips. - Seacoastonline.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSFRUUi02TTZhRXVWU2lfSlA4WlJsTmxQeW5TUnFwRTh0U0tPY3FEUkQxX0I0MDNZNVM0dWIweTdzUmdhdnAxS2NVR3p1WlNXNkFIa2pCZHRYVUdsSTlvdjFfVnlvSmg4Ul9RU2NlU3RHdGFMcGxsbVYyZkR6cGNWSUY1N1Fzbm9UczhBWFhVT2ZOYlZqQ01PWUQyMnByX1NUc0JxMkNLcGVDV2oxRFo5cnNFZ0dxd3hGSUtOZW1vOVF0UUpxaGwwNE91ZW9JUHM?oc=5",
@@ -67223,7 +67609,7 @@
     },
     {
       "at": "2026-11-10T23:43:20.003140+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Charlestown waterfront property sells for $6.35 million - Providence Business News",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBJeUktcWRrbmoyYmxHNy1oNTByQ3Vacld3T2NBS2JsWXNVWWJGYmdXbXJHS3VUeVhXSm1nWjdNbjgxamRaUTc2djZmQU1fQjJnLXRwaHJESWs5QVlib3g0a3RGemY0NWV1dm1HNlVhY3pEQzFvTHF4dEFR0gGCAUFVX3lxTE5oZmQ0WWpiZnRPU09IdjRvQ2E3by1kYXJqODdVMGM3c05NdFQzdkxidkkweGNVNXFLMlBDWkJfcHZqQTVfVF9jQUxwUG1QcWMzdXg5bldXT0h6OHNsZURYUF9HeHE4eEJtc19ERGNWQnJtTUpieV9fLVZqSExkb1FEbFE?oc=5",
@@ -67259,7 +67645,7 @@
     },
     {
       "at": "2026-11-11T06:28:58.115461+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Coffs Harbour\u2019s 40-Year Waterfront Stalemate Heads to Market - The Urban Developer",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeE55QWJGb0VVN2plY3V6a2ZUaVZ6REJiY2NOTXNGaEtiUmt4V2MtcDRqY21xRTdMVlZiaDJtQmFPSzBCNzlfZUZwQ0VjaUxYemkzQzA0WWlNMjJQSlB3UF9paHBkZG5HdE56ZUpjXzJ6MjlhVm83cl9ib3oyRWl1d0N3MUw4c09xeGcxMkJxSHBXeFptdVN3bEJGRkJvcVlXbzJaZ2JB?oc=5",
@@ -67286,7 +67672,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Arini Hedge Fund Founder in Talks to Buy \u00a340 Million London Home - Bloomberg.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUG9GQ1lDQmVlYnE3SGJDZW5EYWI2b0E5UDQyREpFUHhGSk5XQ0VSTXBxZzdpV0JlRFo3a3JPd3RlOTJQVVdmZEpJSTRfdTBRUmY5UzhJbFg5bUNzTmRaWDFzV3B0Vk4wQkNySkR3bkVWMVJIbHkxbjU4T09aNS14WDRoWm55dktJckdYcmZCZUcyMjlVNjk0bFhZdFV2c3M5dGpTQUtGc0U2YThFMHhsNkVVdDY?oc=5",
@@ -67304,7 +67690,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "After losing $30 million mansion in corruption case, oil-rich African nation's vice-president sees property sold for $93.5 million to American billionaire family - Business Insider Africa",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQczRNcGwwMXVIWnJJTHpfNzN1bVZMSjlRTlhjd1BDclJWZG9CaVhMWXJsbW42TlJkUzgxNUZyNHFqMGVlTkdNR0Y1SENzRnFKUmdzWXhEME1waTVYY1FYQ0NjblIxMEZkaFBNSjgzZWhrY25UM0NBREo2VDJIbF8xQThyNFpreWZSQlg0N1hjRVVRVjFyME9EbzA1U2VmZnRXRGZ5VFBlT2hDMFlPbUtxbURVdmEybFFLQlM2ZVRWcm10bk1LNGR2RVpHVkFVUmFRVUpNa2hPMA?oc=5",
@@ -67313,7 +67699,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Two Neighboring $9.9 Million Oceanfront Homes Just Listed in Kauai's South Shore\u2014And They Can Form an Ultra-Luxe Compound - Realtor.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRDBaR1RjLWxzLXlqSEQ0eG1ZdFJlTGY5X3JLcU1VUW1lbVRqV3RUNWk3ZHMxOUtpX1JnUWFINHNpNlZXWWxicXZmMTY3TEVFWWV5RE1oeDJNemlKQzB6bVY5NElsVFhNaE9hWmo3aV9UV3MzZWdvV25GWEpfRUhwQVViQ2w2UURJZmtZQw?oc=5",
@@ -67322,7 +67708,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Swire Properties and Thai partner bank on Upper House brand in Bangkok - South China Morning Post",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQUktRT2dJdmNVUG5GekxYRmFLVUpfSGFRRjRaRzVDNTVtclRsY2dGQzdDRXRQNTJyZGcwdC1VU19VbkJMcUNnRElXdG0zWXk5NFJEZkhYWGIxTHJYUnZNb2lIbFdzMjVHdUo2bEluQ0ZhOXhLSndSak9uTUFSMXJTMXYxT3JfVG5lRHRXWXA1eENKb2FnNERnUzJObzVycDIzN2tBMzRhR2RrMURralRZ?oc=5",
@@ -67331,7 +67717,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Looking for lakefront luxury in the Poconos? See what's for sale - Pocono Record",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVGV4UkxZYTAydmd2UzJoSFZxU1pUOGIwVnBmdmxKNmVmbVRQQ1pOOF8weDVuSjBmdmNFSUhOZnBlS1BwaG5QS0gwak0tc0NCYUJHMjItTlNLMVFCNlVVUWFqTnFvSkFLYTZ4UWk2QURXNjZsVkd3T2s3T1YzOHRlekJpd2lhNHYxOU5lU2toRDFJdEtUX1c2cG5aZnhVWjhsTXpuYy05YWt0QUh0cjFSRWoyV25acnJqcXc?oc=5",
@@ -67340,7 +67726,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Waterfront Compound Listed for $185.5 Million Could Become Miami Beach\u2019s Most Expensive Sale Ever - Yahoo",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxONGdqczVwMzJLTmIxMExQT0pQMEZFOU85RE41cVpkOXo5eWUySVFfUmFRLTEyR1hTVjFPdEtuMzZBbGFRTUJUUmtYRkZSa1UwVFlMSVI2ZFY2a1hFWTFidXBzU0k1WU5fSGtDdGNhUG1ITDB5V2pPM3NIU0pPZVlnNjJxN1JPMEZCRVQweFFONmdoUQ?oc=5",
@@ -67358,7 +67744,7 @@
     },
     {
       "at": "2026-11-11T19:52:12.287201+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Our five favourite luxury tree-change homes for sale now - Brisbane Times",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZndCMGtobXZkanFoNmZ5RktEdmxFemptck1oaklva24xSm9PdEtQSGhxb2kwOVUyRDZaM19rcExPV3RCNTNibnZFNkFpS21tcFp0dmoxNHJDMFlYTm82Zlc3QS1qLV9rdFRlekh5WkF0cG1HY29OYW51b2l0dFd6SVdLY1ROT0lVT2Z5Z1hFME1uNmc4M3NnM1U4bGpJYzZEUURpdFlGSVBXc2tNaTNpazVWODJDblpOUFpnaDVEZ0Zkdw?oc=5",
@@ -67385,7 +67771,7 @@
     },
     {
       "at": "2026-11-11T23:12:47.653230+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Inside The DMV's Most Stunning Luxury Homes On The Market - Modern Luxury",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQam44MWo5QlJTNTlkNFlmZW00YzVyVW5nU0VwOWR2eW1OR0NyaXJaVEtabmNqNHQzcG9fOTNWNjQzQlRFM3BFaVU2WXUtX1JZMXg1RWJoNGNDNG1mR0s0dnRieXhqUXNYNDlRNk00SXpoelkxZDl3WVR4cTlzc0tNeWR6VzBETEFGYjBtR05fYw?oc=5",
@@ -67394,7 +67780,7 @@
     },
     {
       "at": "2026-11-12T01:26:09.191940+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "London luxury home sales tumble amid rising taxes and costs - The Times",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOOTRRVUFJNlFuekNpVjg1dkFocXJTZXBhYml1cjgzUTZoREFscFl0SlRrMndQUmFpWTVGRWtLSDEtYjFLSHFkb2xyT3BlUUlvUVZwdU9tOE9uMmR5UEo4eDdBZjVvQ0dpTF91QXZEYnBkUlhsems5c2I5ck1leGg3cXBnQlUwdEt5Q2N3WnJQVG1rUVh2LU1ydUJsMVVkYVVueWxTQVZBQnNsSnZ0bE1rQnZn?oc=5",
@@ -67448,7 +67834,7 @@
     },
     {
       "at": "2026-11-12T02:17:48.137471+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Cristiano Ronaldo\u2019s Home: Inside CR7\u2019s Luxury Residences Around The World - Outlook Luxe",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPa3RFWkdfdFE4NEpQT0hpTlMtYXRhY0d0ZTFreGlXSldXbkxQcDJMeWtrZ3lLNmJ6bFMxMU9qdGFGRno4Y20yQ3hIM3JvWGFhSUxkZkxpNEhhR2hEekZuUVdpclQzaFZYTjhzSDBIU2tqN1M4MjI1SkRqV0N0QzVGeHExTUR1Z2I5aHVGclVaX18tNG5VSHZqbEdRcDFsNERMNmVfMTRtbFAzUzTSAbgBQVVfeXFMUEdhNDlPSmZSdVFIbTNxYXUwSEx1RDB0UWdWRURSWDMzcUZTT0JVSFpaVEhJUXI2RVJKMXE3dUZzQnVJYXQ3UUlHLUFGaXJXbmNsMl9Ja3IzZlAzRVBZamlaenViQU1la0xRay1YQ0VYY19yMVQ4ZWRabk9hX1lTMVhDaV95NE9wdEFNS2xSZG1MRHFtMjcwQ0dxUXN2M3JkRHFuSjNFdmV2d29rNHFsLXdvNldLUm5pNw?oc=5",
@@ -67457,7 +67843,7 @@
     },
     {
       "at": "2026-11-12T02:34:16.878391+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "\u2018Crackerjack\u2019 home of Australia\u2019s oldest Olympian listed - Real Estate",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQRFJ5Q0JjbVY2RExBQXlpR0pvRFQ5QnYxd0dZU09NcTBTandUUXJyQzV0WkNMQWk5cXlNTkRaX3RMeUs2bkx2TDdQTkVJaEJGWDJNaGEyOHIwS2llODkxa1dzSXd5Z08tNzFQSVZhcmJYcmNQVDRQdFdTOHpON0p3V29Ba3BXaTF2d1lReGtyVFc0Rzg?oc=5",
@@ -67592,7 +67978,7 @@
     },
     {
       "at": "2026-11-12T03:46:08.589004+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Exclusive | Bella Hadid Buys Historic Colorado Mountain Home for $5.5 Million - WSJ",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPXy1kc2dHU0k4dk9iV0lJWHpQMGFrbndQc2d1Si05cnBNdk5YMV8wYzd5SnJxOHdScVQ2OElwUDJfaGlMTGtLMEtmdjVuMWRxLUZITVdDc1dwSlAxRG1sR3g1bEdhTUNxaTdtOEMzS0ZLVEtIQVBFaGdyU2d5MlJwLVpXWXlmWTlEZnVyUQ?oc=5",
@@ -67637,7 +68023,7 @@
     },
     {
       "at": "2026-11-12T06:08:59.125606+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Best Realtor in Naples, FL: Susan Heller of eXp Realty Surpasses $500M in Career Sales and 3,500 Homes Sold Across Southwest Florida - StreetInsider",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNZjZ4N2ljQjRLbnplenlHSE9vYUE4SzA3M0tqeGZoRHUwdjhxRVVqbDV1bVQ4eEpuRU16OWVYT1VTd2lvVDQ1eEMyb01ibzVyXzIySnRuZzJCdS1JX1FiMU1aXy0zTlFkcVRWV2RfMTVzRnFXb0VwZVJMLWVUZXhjUGladHFXb1l1b1IwalpIVjIwbVhnMDhqQlNzMWdObUpKVjIwUDJSOWZ2ejZJQkdidFl2MHBTQmRjYWY5cnIyd1BhU05uMnhSS1NZRTAzbWszWmEtSXRWSW5QR25uVThyNE9Wa1c2a2lmS1RmVHV4YVRPTGcyZEZlWkpBcm93LW1UM3R2T2x1YWxHb2RMZEVYbjVKVUJXaWVFajRzc3BJeHBZVXpCN1E?oc=5",
@@ -67727,7 +68113,7 @@
     },
     {
       "at": "2026-11-12T14:17:40.748443+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Luxury London Home Prices Dropped 6.6% in October - Bloomberg.com",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWlRtYU45cUVWR3BDcTRMd3BRc0N5N2FXc2RBLUtyQnpSUmZzU0NPRDJLWjAyRGVXV0Y4b2tnTkZtZXNZMk9Md2h5TVFMR3JrczBleWtWdG5mNm1tc081eHJNSDRfb0hyNEJMZFNvY3l4MlN3YjBEOU53LVF5NFozdDRQMUwxZm95cFlFaHJwM01WNEs1VUc4MHU2aG91bGZRbW0tQ1I1MzRoS1VVOHk3cC1B?oc=5",
@@ -67745,7 +68131,7 @@
     },
     {
       "at": "2026-11-12T15:19:04.553609+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "In 2012, Martin St. Louis paid $6.2 million for a Greenwich, Connecticut property; the custom home built there in 2015 was listed in 2020 for $15.999 million and later sold - Athlon Sports",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVEo5MVEwcmZsSVlFcXMtbF83NUEweXZhLTlTRmYtajBHUVdqZVpWb18wams1TnpyOVNuek1JX3k3YXF5ZDZnNWhKNmRlY3pZSlRVMG5sNGFBYTBkTHAtZlEwRDczcXNkOHZ6XzM1bmRFZDBfX1BudjVPNzN3UkRuRzB6N0F3UFc1MXlybHlObzg0czR6MEJz?oc=5",
@@ -67754,7 +68140,7 @@
     },
     {
       "at": "2026-11-12T16:15:02.872545+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Exclusive | Palm Beach\u2019s $100 Million Listings Club Adds Another Waterfront Property - WSJ",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTDNUUTR6QUUtWmcwNzYyZHZBWnM0RjU1Zm5DUEZPcWszRlZyV2lhbkNYUkdIeks5N25tM1BNQjZHbkk5M2ZVQ2UwSldxVEZSeVhQczBVT25RRG13N0s5UnVJMmxkcUQzcUx1MmktcVdLZXBycGFzZnJVblZ6MkxvaU1MMktUWm0zZEptdVhvazFCRE5Xc2ZrUXFWdW41bVU?oc=5",
@@ -67763,7 +68149,7 @@
     },
     {
       "at": "2026-11-12T18:54:36.005167+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Smaller Canadian cities lead luxury housing growth in first nine months: REMAX Canada - The Standard (HK)",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQb0syNXZMa3VIbUJkVlBPY0VQS1NoUzJodTFuZDZKaERJTFQyRWFzSkJMSlA2aV9DakhOM2xEakRLaC1pTDJheU1vbnBiLTJGMUI3ZzIwR3hFcHJXSnVseEJXV0dBUmhablJYdnpXYlZ5ZUQ1bzlVdGw2X2NaMkZraUQzLUhiRndQWURWX09UT0p2ajdtOFBpQXhpdVhCSUgwaDlyckN4c2RwOHhRMS1ac2xjR3pEdHJ1NGFTVEpJdHlqSFBCSDdTZXM3c29pak1yM2NQTl9R?oc=5",
@@ -67772,7 +68158,7 @@
     },
     {
       "at": "2026-11-12T19:16:49.563127+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "South Florida\u2019s latest trophy listings exceed $500M - The Real Deal",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdWdRQWU1cUdzakxVeFQ0UDVoNmtWQ05zTm9KbWY0d0JqUFVFRDFWR1hVb2NaUjAzVlJCQW54NnVlNDBzREYtRVBDLXlWMzE4RXFKRGxzazE4ZW80OFJmN1IzX3F1aTZLbEN4T3p5S0FoWGFZUEo2SF9YVWlzQUR1azY0LXlIZnE4OFJhaVRicGJEcXAwX0VEYUR3?oc=5",
@@ -67799,7 +68185,7 @@
     },
     {
       "at": "2026-11-12T22:03:42.298103+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "News | Doyles Watsons Bay for sale with $70 million price expectations - CoStar",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUmZZZmhQOG5MaWFSSkw3ejB3cS1rdjRtNnF4TmRxdVpTSjk1U0QwYzlTZUs4VzZGUXJuYllzS0tZOUMzWTNNX1UtNFNUaDMwWnlQeU53WWJzVWhQMXZXSHBCZ2FHdzMyc08zdl9IWTdqZ1JVSmJNdTFqS3FHSkNpS2JhRGhQSGRKaEdYcGItLWp5eGE4SmduSUZNVnNUNlVjX1JnRTdR?oc=5",
@@ -67817,7 +68203,7 @@
     },
     {
       "at": "2026-11-12T23:10:43.326169+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-luxury",
       "title": "Canada luxury home sales fall in 6 markets - Money.ca",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSlF2NDZIQ1ZDQS0yeGl3cXlPa0F4d2xJNFNtSEhLWlVQUXN3cVJqbk9uaFNaYjZrQjh6dmgyc2ZIeW56MEYxdm5FNkJzdzNadlJ1UFdoZVA0WE9QQnRtbWZuT09kdTJsOG1OVWkzVnVyMThyd1dRa2szUzQ0OU1HZms1MDhqemRCWVpYN3dyNXdXc2F5TFh5UA?oc=5",
@@ -67826,7 +68212,7 @@
     },
     {
       "at": "2026-11-13T03:44:49.363853+00:00",
-      "lastSeenAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
       "sourceId": "google-waterfront",
       "title": "Four Swettenham Pier warehouses to be redeveloped into waterfront leisure hub by 2030 - Penang Property Talk",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQ2s2SlFRV3hoZHFOcmtuempnNWtWM1cwRWdMb3pZdjJJUnF6ZG1UV3pNeHdkWmRmVmsxZ1g3d0xrVHJsbUlIOVBLMV9NclhfR0xmNENfa3J5QjAyZWZZR3I3R245ZUNybEpzekdOaVNpQnNfUEpPWlo1NEtackk3LUFTdXI5YkFtQ2NmMVZUOW94WnJNRHRFYjZlOHZLWEZjTkFCVDVTVGg3eV90ZXFUaWdhZDBoNTRoNktrZ0NlcXJaN2R4eEhtQQ?oc=5",
@@ -67876,6 +68262,15 @@
       "title": "Sarasota, FL Vacation Rentals By Owner: Beachfront Property Listings Updated - FinancialContent",
       "discoveryUrl": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOUExkY2xDdS1aQklxZ0ctSnZxUnZLcG9DamtRVF9tTU51cXZGQUhHY3dsMGJ1NUNBbjZRbjR2UmdlSTBQSGNSS1lUQk5pRklEU1pnNTg3bHFpcF81Rk5mZXRNcXkzT3lpMV9HanN3b2dMV0Q3LWN2Y3V0b0pLdVNrR1VrWkVhdG5LREhteXJwZjdMdVNSbkpOamViMFBzMm1XLTNRQjBYNFNQa3hYQmdXUVE4c3hqdjBucGFzQmNLSzFpLU9KNnNjeVJtUGthZnRXNXhRaHM2dUE?oc=5",
       "sourceDate": "2026-11-12",
+      "status": "original-publisher-link-required; not auto-published from Google redirect"
+    },
+    {
+      "at": "2026-11-13T06:15:21.713218+00:00",
+      "lastSeenAt": "2026-11-13T06:15:21.713218+00:00",
+      "sourceId": "google-luxury",
+      "title": "\u2018It\u2019s Like Facebook Again\u2019: How AI IPOs Could Further Upend the Real Estate Market - RISMedia",
+      "discoveryUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONWZtaTBjaDZDbWFmZFB2T0FySjdXTUpXaWJubFJISnF1dURhb1VuOWFsaW93NlhuZnk2ZFdsekRVME5LRjlWLUZocWxUQ002UzJhSHViUnM2cV82eGNfNmY1bm5hdlZ4dGppRXIxbG82TWdzeVp1ZndSaWdSSVFsT0NBWjZVOFpJcVBlNjBnb1Y2Wk1CbmF2MGVWY21DRDFFdHZxMVYyOTEyZGZFRDJJamozV0kxZw?oc=5",
+      "sourceDate": "2026-11-10",
       "status": "original-publisher-link-required; not auto-published from Google redirect"
     }
   ],
@@ -68557,7 +68952,7 @@
       "lastError": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
       "reviewedMediaRevision": "b55365875e4a6290b3463c4a8ef43ba1e3d0aceccdddfed2ba1f4a3dbc59f9c1",
       "lastDisposition": "quarantined-retry-exhausted",
-      "lastCheckedAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastCheckedAt": "2026-11-13T06:15:21.713218+00:00",
       "nextAttemptAt": null,
       "checks": 1,
       "illustrationRevision": "2118bcedab4a5c2c76875ad9a0c4122dff05190c6d361a687d9c8616c1a58c66",
@@ -68682,7 +69077,7 @@
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc",
       "lastDisposition": "duplicate-property",
-      "lastCheckedAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastCheckedAt": "2026-11-13T06:15:21.713218+00:00",
       "nextAttemptAt": null
     },
     "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096": {
@@ -68705,7 +69100,7 @@
       "attempts": 2,
       "lastError": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
       "lastDisposition": "retry-cooldown",
-      "lastCheckedAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastCheckedAt": "2026-11-13T06:15:21.713218+00:00",
       "nextAttemptAt": "2026-11-13T09:50:06.209625+00:00",
       "checks": 1,
       "reviewedMediaRevision": "038bdd08e45b39fbc1f78c784ddbf35a1ef5054b0c9b13e73be39a81cceb57eb",
@@ -68810,7 +69205,7 @@
       "attempts": 1,
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "lastDisposition": "not-individual-property",
-      "lastCheckedAt": "2026-11-13T06:10:09.468611+00:00",
+      "lastCheckedAt": "2026-11-13T06:15:21.713218+00:00",
       "nextAttemptAt": null
     },
     "https://www.countrylife.co.uk/property/home-counties/a-timeless-georgian-home-for-sale-in-the-south-downs-graced-by-the-spirit-of-ecstasy": {
