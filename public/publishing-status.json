@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T13:58:59.051642+00:00",
+  "updatedAt": "2026-11-13T14:04:29.317029+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "accd2a7d5059378eb932c5a12ecfe315121f9b87",
+    "sourceCommit": "5e18e1bf3cdd18074225a93ca384ea8c59d55574",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43437635778",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43438444304",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -22,6 +22,13 @@
       "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
       "title": "We Love This Listing: A Kona Coast Home Composed Around Lava and Courtyards",
       "reason": "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "propertyId": null,
+      "collection": "waterfront",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
@@ -50,7 +57,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-13T13:58:58.963012+00:00",
+    "checkedAt": "2026-11-13T14:04:29.221129+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -82,8 +89,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "already-published": 6,
-          "candidate-admitted": 2,
+          "candidate-admitted": 3,
+          "already-published": 5,
           "not-individual-property": 2
         }
       },
@@ -126,14 +133,15 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 4,
-    "inScopeQueueCandidates": 3,
-    "attemptedThisRun": 0,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 5,
+    "inScopeQueueCandidates": 4,
+    "attemptedThisRun": 1,
     "skippedThisRun": 4,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
+      "attempt-failed": 1,
       "quarantined-retry-exhausted": 1,
       "retry-cooldown": 1
     },
@@ -166,6 +174,18 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+        "sourceId": "robb-property",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "collection": "waterfront",
+        "outcome": "attempt-failed",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-13T20:04:23.891142+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
         "sourceId": "robb-property",
         "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
@@ -191,58 +211,58 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-13T13:58:54.526233+00:00",
+  "lastRunAt": "2026-11-13T14:04:23.891142+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 20
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-13T13:58:54.526233+00:00",
+      "fetchedAt": "2026-11-13T14:04:23.891142+00:00",
       "items": 29
     }
   ],
   "collections": [
     {
       "name": "waterfront",
-      "eligible": 0,
+      "eligible": 1,
       "newFeatures": 0,
-      "status": "no-fresh-eligible-items"
+      "status": "blocked-eligible-property"
     },
     {
       "name": "mansions",
@@ -276,8 +296,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 72,
-  "quarantinedItems": 1,
+  "duplicatesFiltered": 71,
+  "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-10-950145808c",
