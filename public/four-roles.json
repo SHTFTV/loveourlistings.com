@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-14T09:02:45.387167+00:00",
+  "checkedAt": "2026-11-14T09:09:34.829270+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "fcfe9b2f556d9d9379ac1a146d3bdf73498b28b1",
+    "sourceCommit": "229271150eba3b1ed1bb6e165663e79b9c9c83b9",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-14T09:02:34.565554+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43578602846",
+      "checkedAt": "2026-11-14T09:08:34.783457+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43579064111",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "c9f4a312141348993241ea8f5ca2c3b68d9a220c",
+        "sourceCommit": "79496a3c5f977511e48b11dba06a9113872f24cd",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -38,12 +38,12 @@
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
-      "outcome": "no-eligible-content",
+      "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-14T09:02:34.565554+00:00",
+        "checkedAt": "2026-11-14T09:08:34.783457+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 102,
@@ -111,25 +111,27 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
+              "candidate-admitted": 1,
               "not-individual-property": 5,
               "already-published": 7,
-              "outside-lookback": 17
+              "outside-lookback": 16
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 7,
-        "inScopeQueueCandidates": 6,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 8,
+        "inScopeQueueCandidates": 7,
+        "attemptedThisRun": 1,
         "skippedThisRun": 7,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "retry-cooldown": 3,
+          "stored-awaiting-verification": 1,
           "quarantined-retry-exhausted": 2
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 1,
+        "verifiedPublicationsThisRun": 1,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -166,6 +168,18 @@
             "checks": 3,
             "nextAttemptAt": "2026-11-14T09:42:00.700124+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/scotland/the-place-always-looked-good-now-it-looks-astonishing-one-of-the-finest-castle-estates-in-scotland-is-on-the-market-after-a-maximalist-glow-up",
+            "sourceId": "countrylife-property",
+            "title": "'The place always looked good. Now it looks astonishing': One of the finest castle estates in Scotland is on the market after a maximalist glow-up",
+            "collection": "mansions",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -218,9 +232,9 @@
           }
         ]
       },
-      "operationalStatus": "no-eligible-content",
+      "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-14T09:32:34.565554+00:00",
+      "expiresAt": "2026-11-14T09:38:34.783457+00:00",
       "green": false
     },
     "visual": {
@@ -1487,17 +1501,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "c9f4a312141348993241ea8f5ca2c3b68d9a220c",
+      "sourceCommit": "79496a3c5f977511e48b11dba06a9113872f24cd",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-14T09:02:34.565554+00:00",
+      "observedAt": "2026-11-14T09:08:34.783457+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43578602846",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43578602846",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43579064111",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43579064111",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1517,7 +1531,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43578602846"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43579064111"
     },
     {
       "site": "loveourlistings.com",
@@ -1543,9 +1557,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43577789368/artifacts/14106612330",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43577789368/artifacts/14106612330",
       "pageUrls": [
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-10-fd1a1ec29d/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
