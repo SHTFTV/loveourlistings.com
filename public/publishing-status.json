@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T09:02:34.692445+00:00",
+  "updatedAt": "2026-11-14T09:08:34.887429+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "c9f4a312141348993241ea8f5ca2c3b68d9a220c",
+    "sourceCommit": "79496a3c5f977511e48b11dba06a9113872f24cd",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43578200384",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43578636454",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -77,9 +77,9 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-14T09:02:34.565554+00:00",
+    "checkedAt": "2026-11-14T09:08:34.783457+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "no-eligible-content",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
     "feedItemsParsed": 102,
@@ -147,24 +147,26 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
+          "candidate-admitted": 1,
           "not-individual-property": 5,
           "already-published": 7,
-          "outside-lookback": 17
+          "outside-lookback": 16
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 7,
-    "inScopeQueueCandidates": 6,
-    "attemptedThisRun": 0,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 8,
+    "inScopeQueueCandidates": 7,
+    "attemptedThisRun": 1,
     "skippedThisRun": 7,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
       "retry-cooldown": 3,
+      "stored-awaiting-verification": 1,
       "quarantined-retry-exhausted": 2
     },
-    "newFeaturesStored": 0,
+    "newFeaturesStored": 1,
     "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
@@ -202,6 +204,18 @@
         "checks": 3,
         "nextAttemptAt": "2026-11-14T09:42:00.700124+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.countrylife.co.uk/property/scotland/the-place-always-looked-good-now-it-looks-astonishing-one-of-the-finest-castle-estates-in-scotland-is-on-the-market-after-a-maximalist-glow-up",
+        "sourceId": "countrylife-property",
+        "title": "'The place always looked good. Now it looks astonishing': One of the finest castle estates in Scotland is on the market after a maximalist glow-up",
+        "collection": "mansions",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -254,49 +268,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-14T09:02:27.966371+00:00",
-  "status": "no-eligible-content",
+  "lastRunAt": "2026-11-14T09:08:10.727106+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 23
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-14T09:02:27.966371+00:00",
+      "fetchedAt": "2026-11-14T09:08:10.727106+00:00",
       "items": 29
     }
   ],
@@ -309,9 +323,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 4,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 5,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "penthouses",
@@ -338,8 +352,8 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 1,
-  "duplicatesFiltered": 69,
+  "googleDiscoveryItems": 0,
+  "duplicatesFiltered": 70,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
