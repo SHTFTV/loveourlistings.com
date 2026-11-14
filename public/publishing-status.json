@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T16:04:42.590617+00:00",
+  "updatedAt": "2026-11-14T20:54:55.925575+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,7 +7,7 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "84f7d71a977d3d08d27a62af9f9722220ea51c55",
+    "sourceCommit": "c7949067fd6c8bfac06bee4fec161c5badaa08c5",
     "trigger": "schedule"
   },
   "automaticTriggerProof": {
@@ -49,21 +49,17 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+      "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-14T17:06:34.937514+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-14T20:00:24.922880+00:00"
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
@@ -83,7 +79,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-14T16:04:42.468803+00:00",
+    "checkedAt": "2026-11-14T20:54:55.780572+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -162,13 +158,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 8,
     "inScopeQueueCandidates": 7,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 8,
+    "attemptedThisRun": 2,
+    "skippedThisRun": 6,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
       "quarantined-retry-exhausted": 3,
-      "retry-cooldown": 3
+      "attempt-failed": 2,
+      "retry-cooldown": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -239,10 +236,10 @@
         "sourceId": "robb-property",
         "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-14T17:06:34.937514+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-15T02:54:45.123270+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -251,10 +248,10 @@
         "sourceId": "robb-property",
         "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-14T20:00:24.922880+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-15T02:54:45.123270+00:00",
         "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
@@ -272,49 +269,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-14T16:04:39.184783+00:00",
+  "lastRunAt": "2026-11-14T20:54:45.123270+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 23
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-14T16:04:39.184783+00:00",
+      "fetchedAt": "2026-11-14T20:54:45.123270+00:00",
       "items": 29
     }
   ],
@@ -356,9 +353,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 70,
-  "quarantinedItems": 1,
+  "googleDiscoveryItems": 5,
+  "duplicatesFiltered": 65,
+  "quarantinedItems": 3,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-14-8e57afe587",
