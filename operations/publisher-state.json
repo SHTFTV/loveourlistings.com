@@ -178671,6 +178671,475 @@
           }
         ]
       }
+    },
+    {
+      "startedAt": "2026-11-14T12:19:17.322100+00:00",
+      "sopVersion": 13,
+      "sotLoad": {
+        "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
+        "version": 13,
+        "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
+        "sourceCommit": "2378067eb4759959c2009b0e9df3c0c302b70275",
+        "trigger": "workflow_dispatch"
+      },
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43594192511",
+      "sources": [
+        {
+          "id": "sothebys-property",
+          "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
+          "status": "ok",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "items": 10,
+          "parseRejected": 0,
+          "discoveryOnly": false,
+          "dispositions": {
+            "not-individual-property": 4,
+            "already-published": 2,
+            "outside-lookback": 4
+          },
+          "errors": [],
+          "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
+        },
+        {
+          "id": "robb-property",
+          "url": "https://robbreport.com/shelter/feed/",
+          "status": "ok",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "items": 10,
+          "parseRejected": 0,
+          "discoveryOnly": false,
+          "dispositions": {
+            "not-individual-property": 3,
+            "candidate-admitted": 5,
+            "already-published": 2
+          },
+          "errors": [],
+          "finalUrl": "https://robbreport.com/shelter/feed/"
+        },
+        {
+          "id": "mansion-global",
+          "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
+          "status": "error",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "error": "HTTP 404"
+        },
+        {
+          "id": "christies-property",
+          "url": "https://www.christiesrealestate.com/blog/feed/",
+          "status": "error",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "error": "DTD/entity declarations rejected"
+        },
+        {
+          "id": "google-luxury",
+          "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
+          "status": "error",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "error": "HTTP 503"
+        },
+        {
+          "id": "google-waterfront",
+          "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
+          "status": "error",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "error": "HTTP 503"
+        },
+        {
+          "id": "countrylife-property",
+          "url": "https://www.countrylife.co.uk/feeds/tag/property",
+          "status": "ok",
+          "fetchedAt": "2026-11-14T12:19:17.322100+00:00",
+          "items": 29,
+          "parseRejected": 1,
+          "discoveryOnly": false,
+          "dispositions": {
+            "already-published": 8,
+            "not-individual-property": 5,
+            "outside-lookback": 16
+          },
+          "errors": [
+            {
+              "title": " From a Lake District hotel to one of the finest houses in Oxfordshire, here are the best properties for sale in Country Life this week ",
+              "reason": "Missing substantive source summary"
+            }
+          ],
+          "finalUrl": "https://www.countrylife.co.uk/feeds/tag/property"
+        }
+      ],
+      "articles": [],
+      "duplicates": 18,
+      "quarantined": 1,
+      "discovered": 0,
+      "productionVerified": false,
+      "automaticTriggerProof": {
+        "verified": true,
+        "kind": "automatic-recovery",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43593762837",
+        "originEvent": "workflow_dispatch",
+        "reason": "Verified repository health workflow and GitHub Actions bot"
+      },
+      "publicationBlocks": [
+        {
+          "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
+          "title": "We Love This Listing: A Kona Coast Home Composed Around Lava and Courtyards",
+          "reason": "Editorial correction: Revised editorial copy awaits exact desktop and phone layout QA"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+          "propertyId": null,
+          "collection": "waterfront",
+          "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "retry-cooldown",
+          "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "retryStatus": "quarantined-retry-exhausted",
+          "nextAttemptAt": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "retryStatus": "quarantined-retry-exhausted",
+          "nextAttemptAt": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "retry-cooldown",
+          "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+          "propertyId": null,
+          "collection": "mansions",
+          "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "retryStatus": "retry-cooldown",
+          "nextAttemptAt": "2026-11-14T17:06:34.937514+00:00"
+        }
+      ],
+      "reviewedCandidateIntake": 5,
+      "newCandidatesDiscovered": 0,
+      "candidateChecks": [
+        {
+          "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
+          "sourceId": "robb-property",
+          "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
+          "collection": "mansions",
+          "outcome": "not-individual-property",
+          "failedAttempts": 1,
+          "checks": 1,
+          "nextAttemptAt": null,
+          "reason": "Cached art/news item is outside the individual-property feature scope",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+          "sourceId": "robb-property",
+          "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+          "collection": "acreage",
+          "outcome": "duplicate-property",
+          "failedAttempts": 1,
+          "checks": 0,
+          "nextAttemptAt": null,
+          "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+          "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+          "sourceId": "robb-property",
+          "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+          "collection": "waterfront",
+          "outcome": "retry-cooldown",
+          "failedAttempts": 4,
+          "checks": 4,
+          "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+          "sourceId": "robb-property",
+          "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+          "collection": "mansions",
+          "outcome": "quarantined-retry-exhausted",
+          "failedAttempts": 5,
+          "checks": 1,
+          "nextAttemptAt": null,
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+          "sourceId": "robb-property",
+          "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+          "collection": "mansions",
+          "outcome": "quarantined-retry-exhausted",
+          "failedAttempts": 5,
+          "checks": 4,
+          "nextAttemptAt": null,
+          "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+          "sourceId": "robb-property",
+          "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+          "collection": "mansions",
+          "outcome": "retry-cooldown",
+          "failedAttempts": 3,
+          "checks": 3,
+          "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "duplicateOfArticleSlug": null
+        },
+        {
+          "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+          "sourceId": "robb-property",
+          "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+          "collection": "mansions",
+          "outcome": "retry-cooldown",
+          "failedAttempts": 3,
+          "checks": 3,
+          "nextAttemptAt": "2026-11-14T17:06:34.937514+00:00",
+          "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+          "duplicateOfArticleSlug": null
+        }
+      ],
+      "collections": [
+        {
+          "name": "waterfront",
+          "eligible": 1,
+          "newFeatures": 0,
+          "status": "blocked-eligible-property"
+        },
+        {
+          "name": "mansions",
+          "eligible": 4,
+          "newFeatures": 0,
+          "status": "blocked-eligible-property"
+        },
+        {
+          "name": "penthouses",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        },
+        {
+          "name": "ranches",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        },
+        {
+          "name": "acreage",
+          "eligible": 1,
+          "newFeatures": 0,
+          "status": "queued-next-cycle"
+        },
+        {
+          "name": "beach-properties",
+          "eligible": 0,
+          "newFeatures": 0,
+          "status": "no-fresh-eligible-items"
+        }
+      ],
+      "status": "no-eligible-content",
+      "finishedAt": "2026-11-14T12:19:30.658305+00:00",
+      "queueProgress": {
+        "checkedAt": "2026-11-14T12:19:30.658305+00:00",
+        "runtimeState": "running",
+        "publicationOutcome": "no-eligible-content",
+        "feedsChecked": 7,
+        "feedsHealthy": 3,
+        "feedItemsParsed": 49,
+        "feedErrors": [
+          {
+            "sourceId": "mansion-global",
+            "reason": "HTTP 404"
+          },
+          {
+            "sourceId": "christies-property",
+            "reason": "DTD/entity declarations rejected"
+          },
+          {
+            "sourceId": "google-luxury",
+            "reason": "HTTP 503"
+          },
+          {
+            "sourceId": "google-waterfront",
+            "reason": "HTTP 503"
+          }
+        ],
+        "sourceDispositions": [
+          {
+            "sourceId": "sothebys-property",
+            "itemsParsed": 10,
+            "parseRejected": 0,
+            "dispositions": {
+              "not-individual-property": 4,
+              "already-published": 2,
+              "outside-lookback": 4
+            }
+          },
+          {
+            "sourceId": "robb-property",
+            "itemsParsed": 10,
+            "parseRejected": 0,
+            "dispositions": {
+              "not-individual-property": 3,
+              "candidate-admitted": 5,
+              "already-published": 2
+            }
+          },
+          {
+            "sourceId": "mansion-global",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "christies-property",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "google-luxury",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "google-waterfront",
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
+          },
+          {
+            "sourceId": "countrylife-property",
+            "itemsParsed": 29,
+            "parseRejected": 1,
+            "dispositions": {
+              "already-published": 8,
+              "not-individual-property": 5,
+              "outside-lookback": 16
+            }
+          }
+        ],
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 7,
+        "inScopeQueueCandidates": 6,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 7,
+        "outcomes": {
+          "not-individual-property": 1,
+          "duplicate-property": 1,
+          "retry-cooldown": 3,
+          "quarantined-retry-exhausted": 2
+        },
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
+        "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
+        "candidateChecks": [
+          {
+            "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
+            "sourceId": "robb-property",
+            "title": "A Man Who Discovered a Renaissance Church Facade in His House Will Get Over $1 Million",
+            "collection": "mansions",
+            "outcome": "not-individual-property",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Cached art/news item is outside the individual-property feature scope",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceId": "robb-property",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+            "collection": "acreage",
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceId": "robb-property",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "collection": "waterfront",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/former-microsoft-executive-seattle-home-lists-1238820856",
+            "sourceId": "robb-property",
+            "title": "A 1920s Seattle Tudor Blends Old-World Details With Modern Flourishes for $9.7 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096",
+            "sourceId": "robb-property",
+            "title": "NFL Great Fran Tarkenton Just Scored a $52 Million Palm Beach Mansion",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 4,
+            "nextAttemptAt": null,
+            "reason": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+            "sourceId": "robb-property",
+            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-14T17:06:34.937514+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          }
+        ]
+      }
     }
   ],
   "articles": [
@@ -183176,6 +183645,12 @@
       "sourceId": "countrylife-property",
       "title": " From a Lake District hotel to one of the finest houses in Oxfordshire, here are the best properties for sale in Country Life this week ",
       "reason": "Missing substantive source summary"
+    },
+    {
+      "at": "2026-11-14T12:19:17.322100+00:00",
+      "sourceId": "countrylife-property",
+      "title": " From a Lake District hotel to one of the finest houses in Oxfordshire, here are the best properties for sale in Country Life this week ",
+      "reason": "Missing substantive source summary"
     }
   ],
   "discovery": [
@@ -185343,7 +185818,7 @@
       "lastError": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
       "reviewedMediaRevision": "b55365875e4a6290b3463c4a8ef43ba1e3d0aceccdddfed2ba1f4a3dbc59f9c1",
       "lastDisposition": "quarantined-retry-exhausted",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": null,
       "checks": 1,
       "illustrationRevision": "2118bcedab4a5c2c76875ad9a0c4122dff05190c6d361a687d9c8616c1a58c66",
@@ -185468,7 +185943,7 @@
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc",
       "lastDisposition": "duplicate-property",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": null
     },
     "https://robbreport.com/shelter/celebrity-homes/fran-tarkenton-house-palm-beach-1238836096": {
@@ -185491,7 +185966,7 @@
       "attempts": 5,
       "lastError": "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
       "lastDisposition": "quarantined-retry-exhausted",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": null,
       "checks": 4,
       "reviewedMediaRevision": "038bdd08e45b39fbc1f78c784ddbf35a1ef5054b0c9b13e73be39a81cceb57eb",
@@ -185596,7 +186071,7 @@
       "attempts": 1,
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "lastDisposition": "not-individual-property",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": null
     },
     "https://www.countrylife.co.uk/property/home-counties/a-timeless-georgian-home-for-sale-in-the-south-downs-graced-by-the-spirit-of-ecstasy": {
@@ -185936,7 +186411,7 @@
       "attempts": 4,
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "lastDisposition": "retry-cooldown",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00"
     },
     "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641": {
@@ -185960,7 +186435,7 @@
       "attempts": 3,
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "lastDisposition": "retry-cooldown",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": "2026-11-14T15:42:19.505801+00:00"
     },
     "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775": {
@@ -185984,7 +186459,7 @@
       "attempts": 3,
       "lastError": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "lastDisposition": "retry-cooldown",
-      "lastCheckedAt": "2026-11-14T12:13:37.029337+00:00",
+      "lastCheckedAt": "2026-11-14T12:19:17.322100+00:00",
       "nextAttemptAt": "2026-11-14T17:06:34.937514+00:00"
     },
     "https://www.countrylife.co.uk/property/scotland/the-place-always-looked-good-now-it-looks-astonishing-one-of-the-finest-castle-estates-in-scotland-is-on-the-market-after-a-maximalist-glow-up": {
