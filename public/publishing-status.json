@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T21:53:08.562011+00:00",
+  "updatedAt": "2026-11-15T21:58:35.993260+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "b4cf9938c810717eb3a9d7e398e8635b6d91a982",
+    "sourceCommit": "4113cdd57388f36d087cc1084448693ad4f1c873",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43765634099",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43766150505",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -70,10 +70,12 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "health": "degraded",
@@ -84,7 +86,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-15T21:53:08.498389+00:00",
+    "checkedAt": "2026-11-15T21:58:35.913589+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -163,13 +165,12 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 8,
     "inScopeQueueCandidates": 7,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 7,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 8,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "quarantined-retry-exhausted": 5,
-      "attempt-failed": 1
+      "quarantined-retry-exhausted": 6
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -264,7 +265,7 @@
         "sourceId": "robb-property",
         "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
@@ -273,49 +274,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-15T21:53:02.263473+00:00",
+  "lastRunAt": "2026-11-15T21:58:31.139570+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 28
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 29
     }
   ],
@@ -359,7 +360,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 75,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-14-8e57afe587",

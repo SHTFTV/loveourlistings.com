@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-15T21:53:02.263473+00:00",
+  "startedAt": "2026-11-15T21:58:31.139570+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "b4cf9938c810717eb3a9d7e398e8635b6d91a982",
+    "sourceCommit": "4113cdd57388f36d087cc1084448693ad4f1c873",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43766108951",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43766606915",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,7 +74,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 28,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -88,7 +88,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:02.263473+00:00",
+      "fetchedAt": "2026-11-15T21:58:31.139570+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -108,13 +108,13 @@
   ],
   "articles": [],
   "duplicates": 75,
-  "quarantined": 2,
+  "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43765634099",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43766150505",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -171,10 +171,12 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "reviewedCandidateIntake": 5,
@@ -269,7 +271,7 @@
       "sourceId": "robb-property",
       "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
       "collection": "mansions",
-      "outcome": "attempt-failed",
+      "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
       "checks": 5,
       "nextAttemptAt": null,
@@ -316,9 +318,9 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-15T21:53:08.498389+00:00",
+  "finishedAt": "2026-11-15T21:58:35.913589+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-15T21:53:08.498389+00:00",
+    "checkedAt": "2026-11-15T21:58:35.913589+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -397,13 +399,12 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 8,
     "inScopeQueueCandidates": 7,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 7,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 8,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "quarantined-retry-exhausted": 5,
-      "attempt-failed": 1
+      "quarantined-retry-exhausted": 6
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -498,7 +499,7 @@
         "sourceId": "robb-property",
         "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
