@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-15T02:58:03.509543+00:00",
+  "checkedAt": "2026-11-15T03:03:31.659115+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "1f0c7bf6ec498f8d620d4f241470ef9bc5f1b54f",
+    "sourceCommit": "34570500233df6561584227ef14f601981adc00a",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-15T02:57:50.835851+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670141695",
+      "checkedAt": "2026-11-15T03:03:21.760647+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670555641",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "0469ad3300b8eb9d6d8e67238e908bf377484a66",
+        "sourceCommit": "4d37befe2def75a428c095092a1e9a3ff5809387",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -35,14 +35,14 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-15T02:57:50.835851+00:00",
+        "checkedAt": "2026-11-15T03:03:21.760647+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -121,13 +121,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 8,
         "inScopeQueueCandidates": 7,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 6,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 8,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "quarantined-retry-exhausted": 4,
-          "attempt-failed": 2
+          "quarantined-retry-exhausted": 5,
+          "retry-cooldown": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -194,11 +194,23 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
             "sourceId": "robb-property",
             "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
-            "outcome": "attempt-failed",
+            "outcome": "retry-cooldown",
             "failedAttempts": 3,
             "checks": 3,
             "nextAttemptAt": "2026-11-15T08:57:42.309197+00:00",
@@ -209,18 +221,6 @@
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
             "sourceId": "robb-property",
             "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -233,7 +233,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-15T03:27:50.835851+00:00",
+      "expiresAt": "2026-11-15T03:33:21.760647+00:00",
       "green": false
     },
     "visual": {
@@ -241,20 +241,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-15T02:42:01.979Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668940630",
+      "checkedAt": "2026-11-15T02:58:34.726Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670171410",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668908186"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670141695"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "f513aa78915f6b0372a1f4332a079a2e8100561f",
+        "sourceCommit": "4d37befe2def75a428c095092a1e9a3ff5809387",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -906,7 +906,7 @@
             "alt": "we love mansions 2026 11 14 8e57afe587"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "b3a4cb1ad39568db5d02ae53adea159237b2a4b4d8805d2269fdd93b28d73fab",
+          "screenshotSha256": "ce929232b38c57ca8bea7055e17c7421986f3d91a3f88b32e9c8c0b77d396630",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
@@ -1141,10 +1141,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14142884680,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668940630/artifacts/14143218931",
+      "artifactId": 14143682850,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670171410/artifacts/14143603782",
       "fresh": true,
-      "expiresAt": "2026-11-15T03:12:01.979000+00:00",
+      "expiresAt": "2026-11-15T03:28:34.726000+00:00",
       "green": true
     },
     "supervisor": {
@@ -1428,10 +1428,10 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-15T02:45:37.391Z",
-      "runId": "964d2293-18e1-454c-b4b3-de2d8f464128",
+      "checkedAt": "2026-11-15T03:00:37.508Z",
+      "runId": "3031e527-3aae-45f9-b2b8-31ed380a0ee4",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_67cpn1w7nuqNTWYy66oGMboNxJU5:964d2293-18e1-454c-b4b3-de2d8f464128",
+      "runRef": "vercel:dpl_45EBeeT9nojt147Sqs2qsZ8MfYWf:3031e527-3aae-45f9-b2b8-31ed380a0ee4",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -1443,44 +1443,41 @@
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "f513aa78915f6b0372a1f4332a079a2e8100561f",
+        "sourceCommit": "4d37befe2def75a428c095092a1e9a3ff5809387",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
       "verified": false,
       "findings": [
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
       "issues": [
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668908186",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668088964",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670141695",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43669773917",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
-        "expectedEventId": "loveourlistings.com:four-roles:ce91d46935717fe6dbe83f07",
+        "expectedEventId": "loveourlistings.com:four-roles:d5f4245b04ed119ae9b6c1e1",
         "deliveredAt": null,
         "pullDelivery": null,
         "ownerReadVerified": false
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "964d2293-18e1-454c-b4b3-de2d8f464128",
+      "probeRunId": "3031e527-3aae-45f9-b2b8-31ed380a0ee4",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
-          "id": "loveourlistings.com:four-roles:ce91d46935717fe6dbe83f07",
-          "fingerprint": "7f778c97b8a176f2abb91472",
-          "blockedSince": "2026-11-15T02:45:37.391Z",
+          "id": "loveourlistings.com:four-roles:d5f4245b04ed119ae9b6c1e1",
+          "fingerprint": "d0b96bd499e7200c81a3de59",
+          "blockedSince": "2026-11-15T03:00:37.508Z",
           "site": "loveourlistings.com",
           "type": "task_blocked",
           "cause": [
-            "supervisor-silent-stale-or-missing",
             "supervisor-reports-unresolved-failures",
             "actual-owner-alert-delivery-unverified"
           ],
@@ -1488,12 +1485,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-15T02:45:37.391Z"
+          "checkedAt": "2026-11-15T03:00:37.508Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-15T03:15:37.391000+00:00",
+      "expiresAt": "2026-11-15T03:30:37.508000+00:00",
       "green": false
     }
   },
@@ -1502,13 +1499,12 @@
   "scope": "Actual site-specific runtime/artifact receipts; no config-only or manual-publication green",
   "ownerAlerts": [
     {
-      "id": "loveourlistings.com:four-roles:ce91d46935717fe6dbe83f07",
-      "fingerprint": "7f778c97b8a176f2abb91472",
-      "blockedSince": "2026-11-15T02:45:37.391Z",
+      "id": "loveourlistings.com:four-roles:d5f4245b04ed119ae9b6c1e1",
+      "fingerprint": "d0b96bd499e7200c81a3de59",
+      "blockedSince": "2026-11-15T03:00:37.508Z",
       "site": "loveourlistings.com",
       "type": "task_blocked",
       "cause": [
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
@@ -1516,24 +1512,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-15T02:45:37.391Z"
+      "checkedAt": "2026-11-15T03:00:37.508Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "0469ad3300b8eb9d6d8e67238e908bf377484a66",
+      "sourceCommit": "4d37befe2def75a428c095092a1e9a3ff5809387",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-15T02:57:50.835851+00:00",
+      "observedAt": "2026-11-15T03:03:21.760647+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670141695",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670141695",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670555641",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670555641",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1545,8 +1541,8 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
         "Original labeled illustration preview prepared; actual desktop and phone visual QA required before publication",
-        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
       "pageQualityVersion": 1,
@@ -1554,22 +1550,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670141695"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670555641"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "f513aa78915f6b0372a1f4332a079a2e8100561f",
+      "sourceCommit": "4d37befe2def75a428c095092a1e9a3ff5809387",
       "check": "role:visual-checker",
       "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-15T02:42:01.979Z",
+      "observedAt": "2026-11-15T02:58:34.726Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668940630",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668940630/artifacts/14142884680",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670171410",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670171410/artifacts/14143682850",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1577,11 +1573,11 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668940630/artifacts/14143218931",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668940630/artifacts/14143218931",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670171410/artifacts/14143603782",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43670171410/artifacts/14143603782",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-14-8e57afe587/",
+        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/"
       ]
     },
@@ -1616,16 +1612,16 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "f513aa78915f6b0372a1f4332a079a2e8100561f",
+      "sourceCommit": "4d37befe2def75a428c095092a1e9a3ff5809387",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-15T02:45:37.391Z",
+      "observedAt": "2026-11-15T03:00:37.508Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_67cpn1w7nuqNTWYy66oGMboNxJU5:964d2293-18e1-454c-b4b3-de2d8f464128",
+      "runRef": "vercel:dpl_45EBeeT9nojt147Sqs2qsZ8MfYWf:3031e527-3aae-45f9-b2b8-31ed380a0ee4",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
@@ -1634,11 +1630,10 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43668088964",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43669773917",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
