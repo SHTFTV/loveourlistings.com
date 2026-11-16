@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-16T09:08:31.533788+00:00",
+  "checkedAt": "2026-11-16T09:14:08.683320+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "80b4dd4ca3fef5c6dc11dedff4df3d9275e264ad",
+    "sourceCommit": "e15973e35cfbc78a9e9c776e5b3f8cf0701687d6",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-16T09:06:59.007785+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875",
+      "checkedAt": "2026-11-16T09:13:54.823075+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837815022",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "cc3d9de4c696b134f4fa00febbd734e54e42fe06",
+        "sourceCommit": "8c9da6861fbbb0a66f6eb6388d5719f3991cfcc6",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -37,15 +37,15 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-16T09:06:59.007785+00:00",
+        "checkedAt": "2026-11-16T09:13:54.823075+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 100,
+        "feedItemsParsed": 99,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -99,10 +99,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 21,
+            "itemsParsed": 20,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 21
+              "discovery-original-link-required": 20
             }
           },
           {
@@ -110,26 +110,24 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
-              "candidate-admitted": 1,
+              "already-published": 9,
               "not-individual-property": 5,
-              "already-published": 8,
               "outside-lookback": 15
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
-        "candidatesConsidered": 7,
-        "inScopeQueueCandidates": 6,
-        "attemptedThisRun": 1,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 6,
+        "inScopeQueueCandidates": 5,
+        "attemptedThisRun": 0,
         "skippedThisRun": 6,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "quarantined-retry-exhausted": 4,
-          "stored-awaiting-verification": 1
+          "quarantined-retry-exhausted": 4
         },
-        "newFeaturesStored": 1,
-        "verifiedPublicationsThisRun": 1,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -166,18 +164,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/the-grandest-home-in-the-channel-islands-for-sale-at-gbp65-million-and-its-a-dead-ringer-for-the-white-house",
-            "sourceId": "countrylife-property",
-            "title": "The grandest home in the Channel Islands is a \u00a365 million carbon copy of The White House",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -218,9 +204,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-16T09:36:59.007785+00:00",
+      "expiresAt": "2026-11-16T09:43:54.823075+00:00",
       "green": false
     },
     "visual": {
@@ -228,20 +214,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-16T08:50:32.930Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651",
+      "checkedAt": "2026-11-16T09:08:50.813Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837067172",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834355006"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "126499310b33b574e2131b11c9461e9f6eed33b7",
+        "sourceCommit": "8c9da6861fbbb0a66f6eb6388d5719f3991cfcc6",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -268,6 +254,34 @@
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+                "alt": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
               {
                 "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
                 "alt": "",
@@ -463,34 +477,6 @@
                   169
                 ],
                 "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-795aed2bbe-v1.jpg",
-                "alt": "AI watercolor recreation from the property reference; not listing photography",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
               }
             ],
             "captionFontSizes": [
@@ -507,7 +493,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "10aba3cfebb226278c8b7f376a48a2df736fb95c6e3fea3cab44d301f0e039bc"
+          "screenshotSha256": "e387e0d9f97d91813a76c916eef032014ac014bc03f107c9dfae516b5f9b50fc"
         },
         {
           "page": "journal",
@@ -532,8 +518,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-                "alt": "Independent conceptual illustration; not the actual property",
+                "src": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+                "alt": "The grandest home in the Channel Islands is a \u00a365 million carbon copy of The White House",
                 "native": [
                   1600,
                   900
@@ -550,27 +536,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "f442d88373ea3fbaac5ebde98f5b0f96f73790309006a33ca00dce87289307a0"
+          "screenshotSha256": "7d26ac9e3c7b018be57f897d549023f294a4289400cff565ff78dcf4501b5c7c"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-7a94903e2a/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart | Love Our Listings",
-            "h1": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-7a94903e2a/",
-            "description": "Robb Report\u2019s account of Fran Tarkenton\u2019s Palm Beach purchase reveals a Mediterranean-style home balancing ornate interiors with courtyard living.",
-            "ogTitle": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart | Love Our Listings",
-            "ogDescription": "Robb Report\u2019s account of Fran Tarkenton\u2019s Palm Beach purchase reveals a Mediterranean-style home balancing ornate interiors with courtyard living.",
-            "ogImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-            "twitterTitle": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart | Love Our Listings",
-            "twitterDescription": "Robb Report\u2019s account of Fran Tarkenton\u2019s Palm Beach purchase reveals a Mediterranean-style home balancing ornate interiors with courtyard living.",
-            "twitterImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
+            "title": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey | Love Our Listings",
+            "h1": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
+            "description": "An 1830 country house near St Peter Port pairs a columned fa\u00e7ade with an expansive orangery and an estate \u2018village\u2019.",
+            "ogTitle": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey | Love Our Listings",
+            "ogDescription": "An 1830 country house near St Peter Port pairs a columned fa\u00e7ade with an expansive orangery and an estate \u2018village\u2019.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+            "twitterTitle": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey | Love Our Listings",
+            "twitterDescription": "An 1830 country house near St Peter Port pairs a columned fa\u00e7ade with an expansive orangery and an estate \u2018village\u2019.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -589,8 +575,22 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-                "alt": "Independent conceptual illustration; not the actual property",
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+                "alt": "we love mansions 2026 11 16 0cdc22e539",
                 "native": [
                   1600,
                   900
@@ -598,7 +598,7 @@
                 "loaded": true,
                 "rendered": [
                   1090,
-                  613
+                  540
                 ],
                 "fit": "contain"
               }
@@ -607,38 +607,33 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/editorial-illustrations/repair-tarkenton-v1.jpg",
+            "src": "/images/source-properties/468298618fa9e7751ca9.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Independent conceptual illustration; not the actual property"
+            "alt": "we love mansions 2026 11 16 0cdc22e539"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "4a7297e9f5878da3f023cffa223b239b44c4ac31a7d8642e9dabb547ef4cca5b",
+          "screenshotSha256": "76d9dcb6eddad0df5e488488ebb9c78af52f41515bd0f66b22cd45402882be6f",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 325
+              "textLength": 371
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 335
+              "textLength": 317
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 278
+              "textLength": 334
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 288
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 258
+              "textLength": 363
             }
           ],
           "bodyScreenshot": "desktop-article-body.jpg"
@@ -681,8 +676,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-                "alt": "Independent conceptual illustration; not the actual property",
+                "src": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+                "alt": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey",
                 "native": [
                   1600,
                   900
@@ -709,7 +704,7 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-seattle-v1.jpg",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
                 "alt": "Independent conceptual illustration; not the actual property",
                 "native": [
                   1600,
@@ -731,7 +726,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "8d2e77a7d60a17c0efd7b9330c48b4eb329cdb91ac417f77a0ffb52bd3cc3b29"
+          "screenshotSha256": "597bec43d4399a7ee0049b0a8b93d12c7b2e0068cd6519d867fe3d7e57dc1c33"
         },
         {
           "page": "journal",
@@ -770,8 +765,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-                "alt": "Independent conceptual illustration; not the actual property",
+                "src": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+                "alt": "The grandest home in the Channel Islands is a \u00a365 million carbon copy of The White House",
                 "native": [
                   1600,
                   900
@@ -784,7 +779,7 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-seattle-v1.jpg",
+                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
                 "alt": "Independent conceptual illustration; not the actual property",
                 "native": [
                   1600,
@@ -802,27 +797,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "007add10d0ac539b156fbc00a51f1d6ed6e0d6019526df91e15d2d819f64bc79"
+          "screenshotSha256": "d8f81d06e300ef542fa846eb86f77932b7c9c53ada7c4e7b258ac1c4bac651d8"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-7a94903e2a/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart | Love Our Listings",
-            "h1": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-7a94903e2a/",
-            "description": "Robb Report\u2019s account of Fran Tarkenton\u2019s Palm Beach purchase reveals a Mediterranean-style home balancing ornate interiors with courtyard living.",
-            "ogTitle": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart | Love Our Listings",
-            "ogDescription": "Robb Report\u2019s account of Fran Tarkenton\u2019s Palm Beach purchase reveals a Mediterranean-style home balancing ornate interiors with courtyard living.",
-            "ogImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-            "twitterTitle": "We Love This Listing: A Palm Beach Mansion With a Courtyard at Its Heart | Love Our Listings",
-            "twitterDescription": "Robb Report\u2019s account of Fran Tarkenton\u2019s Palm Beach purchase reveals a Mediterranean-style home balancing ornate interiors with courtyard living.",
-            "twitterImage": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
+            "title": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey | Love Our Listings",
+            "h1": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
+            "description": "An 1830 country house near St Peter Port pairs a columned fa\u00e7ade with an expansive orangery and an estate \u2018village\u2019.",
+            "ogTitle": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey | Love Our Listings",
+            "ogDescription": "An 1830 country house near St Peter Port pairs a columned fa\u00e7ade with an expansive orangery and an estate \u2018village\u2019.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+            "twitterTitle": "We Love This Listing: Havilland Hall\u2019s Classical Grandeur in Guernsey | Love Our Listings",
+            "twitterDescription": "An 1830 country house near St Peter Port pairs a columned fa\u00e7ade with an expansive orangery and an estate \u2018village\u2019.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -841,8 +836,22 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/editorial-illustrations/repair-tarkenton-v1.jpg",
-                "alt": "Independent conceptual illustration; not the actual property",
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/468298618fa9e7751ca9.jpg",
+                "alt": "we love mansions 2026 11 16 0cdc22e539",
                 "native": [
                   1600,
                   900
@@ -859,28 +868,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/editorial-illustrations/repair-tarkenton-v1.jpg",
+            "src": "/images/source-properties/468298618fa9e7751ca9.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Independent conceptual illustration; not the actual property"
+            "alt": "we love mansions 2026 11 16 0cdc22e539"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "7e7d678f478d1e9a0eedd2e3381915db920cfc85734767db932900cd3e187a61",
+          "screenshotSha256": "94e3bd6ec86427c3711b0f964dea03a4e69c0e23a9eb94e329f9c38e047d025e",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 325
+              "textLength": 371
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 335
+              "textLength": 317
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 278
+              "textLength": 334
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -891,11 +900,18 @@
       "status": "passed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-12-7a94903e2a",
-        "publishedAt": "2026-11-15T15:04:01-07:00",
-        "image": "/images/editorial-illustrations/repair-tarkenton-v1.jpg"
+        "slug": "we-love-mansions-2026-11-16-0cdc22e539",
+        "publishedAt": "2026-11-16T02:06:33-07:00",
+        "image": "/images/source-properties/468298618fa9e7751ca9.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-16-0cdc22e539",
+          "image": "/images/source-properties/468298618fa9e7751ca9.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-mansions-2026-11-12-7a94903e2a",
           "image": "/images/editorial-illustrations/repair-tarkenton-v1.jpg",
@@ -1114,10 +1130,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14209604681,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651/artifacts/14210745524",
+      "artifactId": 14210988193,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837067172/artifacts/14211770774",
       "fresh": true,
-      "expiresAt": "2026-11-16T09:20:32.930000+00:00",
+      "expiresAt": "2026-11-16T09:38:50.813000+00:00",
       "green": true
     },
     "supervisor": {
@@ -1368,7 +1384,7 @@
         "independent visual role artifact"
       ],
       "artifactId": 14211125362,
-      "fresh": true,
+      "fresh": false,
       "expiresAt": "2026-11-16T09:29:01.365070+00:00",
       "green": false
     },
@@ -1471,17 +1487,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "cc3d9de4c696b134f4fa00febbd734e54e42fe06",
+      "sourceCommit": "8c9da6861fbbb0a66f6eb6388d5719f3991cfcc6",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-16T09:06:59.007785+00:00",
+      "observedAt": "2026-11-16T09:13:54.823075+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837815022",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837815022",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1500,22 +1516,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837815022"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "126499310b33b574e2131b11c9461e9f6eed33b7",
+      "sourceCommit": "8c9da6861fbbb0a66f6eb6388d5719f3991cfcc6",
       "check": "role:visual-checker",
       "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-16T08:50:32.930Z",
+      "observedAt": "2026-11-16T09:08:50.813Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651/artifacts/14209604681",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837067172",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837067172/artifacts/14210988193",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1523,11 +1539,11 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651/artifacts/14210745524",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651/artifacts/14210745524",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837067172/artifacts/14211770774",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43837067172/artifacts/14211770774",
       "pageUrls": [
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-7a94903e2a/",
         "https://www.loveourlistings.com/"
       ]
     },
@@ -1550,7 +1566,7 @@
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": true,
+      "fresh": false,
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
