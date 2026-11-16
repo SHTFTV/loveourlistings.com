@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T06:12:40.805349+00:00",
+  "updatedAt": "2026-11-16T06:18:20.555105+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "40fa987329f744b12500871e428297a7ef71582a",
+    "sourceCommit": "56645da54db0af4e39a668f38170eed0e0beeff3",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43814504216",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43815211690",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -68,12 +68,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-16T06:12:40.750476+00:00",
+    "checkedAt": "2026-11-16T06:18:20.500818+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 3,
-    "feedItemsParsed": 49,
+    "feedsHealthy": 5,
+    "feedItemsParsed": 101,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -82,14 +82,6 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
-      },
-      {
-        "sourceId": "google-luxury",
-        "reason": "HTTP 503"
-      },
-      {
-        "sourceId": "google-waterfront",
-        "reason": "HTTP 503"
       }
     ],
     "sourceDispositions": [
@@ -127,15 +119,19 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 0,
+        "itemsParsed": 30,
         "parseRejected": 0,
-        "dispositions": {}
+        "dispositions": {
+          "discovery-original-link-required": 30
+        }
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 0,
+        "itemsParsed": 22,
         "parseRejected": 0,
-        "dispositions": {}
+        "dispositions": {
+          "discovery-original-link-required": 22
+        }
       },
       {
         "sourceId": "countrylife-property",
@@ -236,49 +232,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-16T06:12:25.898161+00:00",
+  "lastRunAt": "2026-11-16T06:18:16.463680+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
-      "status": "error",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
-      "items": 0
+      "status": "ok",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
+      "items": 30
     },
     {
       "id": "google-waterfront",
-      "status": "error",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
-      "items": 0
+      "status": "ok",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
+      "items": 22
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-16T06:12:25.898161+00:00",
+      "fetchedAt": "2026-11-16T06:18:16.463680+00:00",
       "items": 29
     }
   ],
@@ -321,7 +317,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 18,
+  "duplicatesFiltered": 70,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
