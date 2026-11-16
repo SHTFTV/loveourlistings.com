@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T21:31:34.445057+00:00",
+  "updatedAt": "2026-11-16T21:37:13.455942+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "c0e733d076a155cc3c56b67d16ad15611fa0c1d0",
+    "sourceCommit": "602242f28b952338a7f4195bf83c5760d1c74ce4",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43960028317",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43960971825",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -86,12 +86,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-16T21:31:34.365342+00:00",
+    "checkedAt": "2026-11-16T21:37:13.356811+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 4,
-    "feedItemsParsed": 72,
+    "feedItemsParsed": 79,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -102,7 +102,7 @@
         "reason": "DTD/entity declarations rejected"
       },
       {
-        "sourceId": "google-luxury",
+        "sourceId": "google-waterfront",
         "reason": "HTTP 429"
       }
     ],
@@ -140,17 +140,17 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 0,
+        "itemsParsed": 30,
         "parseRejected": 0,
-        "dispositions": {}
+        "dispositions": {
+          "discovery-original-link-required": 30
+        }
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 23,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 23
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "countrylife-property",
@@ -276,49 +276,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-16T21:31:27.088467+00:00",
+  "lastRunAt": "2026-11-16T21:37:07.359758+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
-      "status": "error",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
-      "items": 0
+      "status": "ok",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
+      "items": 30
     },
     {
       "id": "google-waterfront",
-      "status": "ok",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
-      "items": 23
+      "status": "error",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
+      "items": 0
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-16T21:31:27.088467+00:00",
+      "fetchedAt": "2026-11-16T21:37:07.359758+00:00",
       "items": 29
     }
   ],
@@ -361,7 +361,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 40,
+  "duplicatesFiltered": 47,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
