@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-16T09:01:18.998367+00:00",
+  "checkedAt": "2026-11-16T09:08:31.533788+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "8f3105230291b8549b54e2f038bc063ee023c23e",
+    "sourceCommit": "80b4dd4ca3fef5c6dc11dedff4df3d9275e264ad",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-16T09:01:05.967939+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43835947376",
+      "checkedAt": "2026-11-16T09:06:59.007785+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "877a94b816dbc57fd312eadbc7d08a348439aeb9",
+        "sourceCommit": "cc3d9de4c696b134f4fa00febbd734e54e42fe06",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -37,12 +37,12 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
       ],
-      "outcome": "no-eligible-content",
+      "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-16T09:01:05.967939+00:00",
+        "checkedAt": "2026-11-16T09:06:59.007785+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 100,
@@ -110,24 +110,26 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
+              "candidate-admitted": 1,
               "not-individual-property": 5,
               "already-published": 8,
-              "outside-lookback": 16
+              "outside-lookback": 15
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 6,
-        "inScopeQueueCandidates": 5,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 7,
+        "inScopeQueueCandidates": 6,
+        "attemptedThisRun": 1,
         "skippedThisRun": 6,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "quarantined-retry-exhausted": 4
+          "quarantined-retry-exhausted": 4,
+          "stored-awaiting-verification": 1
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 1,
+        "verifiedPublicationsThisRun": 1,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -164,6 +166,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/the-grandest-home-in-the-channel-islands-for-sale-at-gbp65-million-and-its-a-dead-ringer-for-the-white-house",
+            "sourceId": "countrylife-property",
+            "title": "The grandest home in the Channel Islands is a \u00a365 million carbon copy of The White House",
+            "collection": "mansions",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -204,9 +218,9 @@
           }
         ]
       },
-      "operationalStatus": "no-eligible-content",
+      "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-16T09:31:05.967939+00:00",
+      "expiresAt": "2026-11-16T09:36:59.007785+00:00",
       "green": false
     },
     "visual": {
@@ -1457,17 +1471,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "877a94b816dbc57fd312eadbc7d08a348439aeb9",
+      "sourceCommit": "cc3d9de4c696b134f4fa00febbd734e54e42fe06",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-16T09:01:05.967939+00:00",
+      "observedAt": "2026-11-16T09:06:59.007785+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43835947376",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43835947376",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1486,7 +1500,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43835947376"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43836764875"
     },
     {
       "site": "loveourlistings.com",
@@ -1512,9 +1526,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651/artifacts/14210745524",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43834447651/artifacts/14210745524",
       "pageUrls": [
+        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-7a94903e2a/",
-        "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/"
       ]
     },
     {
