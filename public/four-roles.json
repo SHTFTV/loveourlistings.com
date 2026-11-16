@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-16T19:19:22.207556+00:00",
+  "checkedAt": "2026-11-16T19:25:00.881905+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "785e72bff3063421ff17fc55d89a5a2d435fb308",
+    "sourceCommit": "928f4c550730b642ba5d3599a919149dae56b44a",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,18 +13,18 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-16T19:19:08.072760+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599",
+      "checkedAt": "2026-11-16T19:24:41.517852+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938987915",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+        "sourceCommit": "008fb4f44f9e45aedb6b51132dbb3cc93a231f44",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
-      "unattendedExecution": false,
+      "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": false
       },
@@ -35,13 +35,13 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
+        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-16T19:19:08.072760+00:00",
+        "checkedAt": "2026-11-16T19:24:41.517852+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -117,16 +117,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 7,
         "inScopeQueueCandidates": 6,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 6,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 7,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "quarantined-retry-exhausted": 4,
-          "attempt-failed": 1
+          "retry-cooldown": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -169,18 +169,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-            "sourceId": "robb-property",
-            "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-17T01:19:00.569886+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
             "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
@@ -215,12 +203,24 @@
             "nextAttemptAt": null,
             "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+            "sourceId": "robb-property",
+            "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-17T01:19:00.569886+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-16T19:49:08.072760+00:00",
+      "expiresAt": "2026-11-16T19:54:41.517852+00:00",
       "green": false
     },
     "visual": {
@@ -228,19 +228,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-16T18:53:24.493Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933469245",
-      "trigger": "workflow_run",
+      "checkedAt": "2026-11-16T19:20:25.061Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938100122",
+      "trigger": "workflow_dispatch",
       "runtimeVerified": true,
-      "unattendedExecution": true,
+      "unattendedExecution": false,
       "automaticOriginProof": {
-        "verified": true,
-        "kind": "workflow_run"
+        "verified": false,
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+        "sourceCommit": "008fb4f44f9e45aedb6b51132dbb3cc93a231f44",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -1143,23 +1144,23 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14259327571,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933469245/artifacts/14259307548",
+      "artifactId": 14260384772,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938100122/artifacts/14261336813",
       "fresh": true,
-      "expiresAt": "2026-11-16T19:23:24.493000+00:00",
-      "green": true
+      "expiresAt": "2026-11-16T19:50:25.061000+00:00",
+      "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-16T19:05:14.294745+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43923556626",
+      "checkedAt": "2026-11-16T19:19:36.747513+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938106598",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+        "sourceCommit": "008fb4f44f9e45aedb6b51132dbb3cc93a231f44",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1167,27 +1168,29 @@
       "automaticOriginProof": {
         "verified": false,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43923461361"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599"
       },
       "verified": false,
       "status": "failed",
       "findings": [
+        "publisher-run-receipt-mismatch",
+        "publisher-unattended-proof-missing",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
       "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933335161",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933335161",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 755.659738,
+      "publisherReceiptAgeSeconds": 29.156673,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-16T18:52:39.175012+00:00",
+        "checkedAt": "2026-11-16T19:19:08.072760+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 101,
+        "feedItemsParsed": 100,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -1214,9 +1217,9 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
+              "candidate-admitted": 5,
               "not-individual-property": 4,
-              "candidate-admitted": 4,
-              "already-published": 2
+              "already-published": 1
             }
           },
           {
@@ -1241,10 +1244,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 22,
+            "itemsParsed": 21,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 22
+              "discovery-original-link-required": 21
             }
           },
           {
@@ -1258,15 +1261,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 6,
-        "inScopeQueueCandidates": 5,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 7,
+        "inScopeQueueCandidates": 6,
+        "attemptedThisRun": 1,
         "skippedThisRun": 6,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
-          "quarantined-retry-exhausted": 4
+          "quarantined-retry-exhausted": 4,
+          "attempt-failed": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -1309,6 +1313,18 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+            "sourceId": "robb-property",
+            "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+            "collection": "mansions",
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-17T01:19:00.569886+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
             "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
@@ -1347,9 +1363,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "43933335161",
+        "runId": "43926372599",
         "status": "passed",
-        "checkedAt": "2026-11-16T18:52:30.529004+00:00"
+        "checkedAt": "2026-11-16T19:18:58.354321+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -1363,7 +1379,7 @@
           "status": "done",
           "checkedAt": "2026-11-16T09:07:49.612833+00:00"
         },
-        "ageSeconds": 35922.007843,
+        "ageSeconds": 36784.577138,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -1371,8 +1387,8 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "d1a62e0721d2ac2042fdfbbdccca03ee0d9c6199",
-        "trigger": "schedule"
+        "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+        "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
       "matchedPublishedPage": true,
@@ -1396,9 +1412,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14260208608,
+      "artifactId": 14262506368,
       "fresh": true,
-      "expiresAt": "2026-11-16T19:35:14.294745+00:00",
+      "expiresAt": "2026-11-16T19:49:36.747513+00:00",
       "green": false
     },
     "watchdog": {
@@ -1504,21 +1520,21 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+      "sourceCommit": "008fb4f44f9e45aedb6b51132dbb3cc93a231f44",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-16T19:19:08.072760+00:00",
+      "observedAt": "2026-11-16T19:24:41.517852+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938987915",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938987915",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
-      "trigger": "workflow_dispatch",
+      "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
@@ -1526,59 +1542,59 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID"
+        "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
       "pageQualityVersion": 1,
       "durableQueueRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/publisher-state.json",
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43926372599"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938987915"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+      "sourceCommit": "008fb4f44f9e45aedb6b51132dbb3cc93a231f44",
       "check": "role:visual-checker",
-      "status": "passed",
+      "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-16T18:53:24.493Z",
+      "observedAt": "2026-11-16T19:20:25.061Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933469245",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933469245/artifacts/14259327571",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938100122",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938100122/artifacts/14260384772",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-      "rawTrigger": "workflow_run",
-      "trigger": "managed-scheduler",
+      "rawTrigger": "workflow_dispatch",
+      "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933469245/artifacts/14259307548",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43933469245/artifacts/14259307548",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938100122/artifacts/14261336813",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938100122/artifacts/14261336813",
       "pageUrls": [
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "33f8c8f22433c93928e46ba96bc285863657aa62",
+      "sourceCommit": "008fb4f44f9e45aedb6b51132dbb3cc93a231f44",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-16T19:05:14.294745+00:00",
+      "observedAt": "2026-11-16T19:19:36.747513+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43923556626",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43923556626/artifacts/14260208608",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938106598",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/43938106598/artifacts/14262506368",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1586,6 +1602,8 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
+        "publisher-run-receipt-mismatch",
+        "publisher-unattended-proof-missing",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
