@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T02:36:11.639097+00:00",
+  "updatedAt": "2026-11-17T02:41:56.753216+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,12 +7,15 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "e160f3423d80d01651fc293a0bd8ec6270f7dfcf",
-    "trigger": "schedule"
+    "sourceCommit": "ec03fb36a3ba58edbd967b7632466e7e0b8d28f8",
+    "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
-    "verified": false,
-    "reason": "Not an automatic recovery request"
+    "verified": true,
+    "kind": "automatic-recovery",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44004214832",
+    "originEvent": "workflow_dispatch",
+    "reason": "Verified repository health workflow and GitHub Actions bot"
   },
   "publicationBlocks": [
     {
@@ -21,11 +24,13 @@
       "reason": "Editorial correction: Editorial correction original evidence changed"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
@@ -37,13 +42,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
@@ -64,13 +69,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
       "propertyId": null,
       "collection": "mansions",
@@ -78,6 +76,15 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-17T03:25:47.005194+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00"
     }
   ],
   "health": "degraded",
@@ -88,12 +95,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-17T02:36:11.562033+00:00",
+    "checkedAt": "2026-11-17T02:41:56.691549+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 102,
+    "feedsHealthy": 3,
+    "feedItemsParsed": 49,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -102,6 +109,14 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-luxury",
+        "reason": "HTTP 429"
+      },
+      {
+        "sourceId": "google-waterfront",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -138,19 +153,15 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 30,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 30
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 23,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 23
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "countrylife-property",
@@ -163,17 +174,16 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
+    "newCandidatesDiscovered": 0,
     "candidatesConsidered": 9,
     "inScopeQueueCandidates": 8,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 7,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 9,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "attempt-failed": 2,
       "quarantined-retry-exhausted": 4,
-      "retry-cooldown": 1
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -204,14 +214,14 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
         "sourceId": "robb-property",
-        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
         "collection": "waterfront",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -228,14 +238,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
         "sourceId": "robb-property",
-        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
         "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -264,18 +274,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-        "sourceId": "robb-property",
-        "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 2,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
         "sourceId": "robb-property",
         "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
@@ -286,52 +284,64 @@
         "nextAttemptAt": "2026-11-17T03:25:47.005194+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+        "sourceId": "robb-property",
+        "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-17T02:36:00.765816+00:00",
+  "lastRunAt": "2026-11-17T02:41:51.838903+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
-      "status": "ok",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
-      "items": 30
+      "status": "error",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
+      "items": 0
     },
     {
       "id": "google-waterfront",
-      "status": "ok",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
-      "items": 23
+      "status": "error",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
+      "items": 0
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T02:36:00.765816+00:00",
+      "fetchedAt": "2026-11-17T02:41:51.838903+00:00",
       "items": 29
     }
   ],
@@ -373,9 +383,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 3,
-  "duplicatesFiltered": 66,
-  "quarantinedItems": 3,
+  "googleDiscoveryItems": 0,
+  "duplicatesFiltered": 16,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-16-0cdc22e539",
