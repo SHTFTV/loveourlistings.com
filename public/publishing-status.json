@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T23:19:36.800102+00:00",
+  "updatedAt": "2026-11-17T23:25:11.451644+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "9ce0ef8734cf795fc7a5e9a23340ea64b87edfd6",
+    "sourceCommit": "9b095320e95186f9b416e5759e39a16b7f0d8025",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44197551664",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44198383903",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -79,12 +79,10 @@
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
+      "title": "Inside a Hidden Hills Hideaway",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Inside a Hidden Hills Hideaway",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-17T23:19:34.236726+00:00"
+      "reason": "HTTP Error 403: Forbidden"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/guy-dreier-palm-desert-bighorn-1238844635",
@@ -131,12 +129,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-17T23:19:36.672671+00:00",
+    "checkedAt": "2026-11-17T23:25:11.336721+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 100,
+    "feedItemsParsed": 101,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -190,10 +188,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 21,
+        "itemsParsed": 22,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 21
+          "discovery-original-link-required": 22
         }
       },
       {
@@ -210,13 +208,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 13,
     "inScopeQueueCandidates": 12,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 13,
+    "attemptedThisRun": 1,
+    "skippedThisRun": 12,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 6,
       "duplicate-property": 1,
-      "retry-cooldown": 5
+      "retry-cooldown": 4,
+      "attempt-failed": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -323,10 +322,10 @@
         "sourceId": "sothebys-property",
         "title": "Inside a Hidden Hills Hideaway",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-17T23:19:34.236726+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-18T05:25:04.146157+00:00",
         "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
@@ -380,49 +379,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-17T23:19:31.590422+00:00",
+  "lastRunAt": "2026-11-17T23:25:04.146157+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
-      "items": 21
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
+      "items": 22
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:19:31.590422+00:00",
+      "fetchedAt": "2026-11-17T23:25:04.146157+00:00",
       "items": 29
     }
   ],
@@ -465,8 +464,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 68,
-  "quarantinedItems": 1,
+  "duplicatesFiltered": 69,
+  "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-17-b495434620",
