@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-17T20:08:07.037944+00:00",
+  "checkedAt": "2026-11-17T20:13:44.704165+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "8d3c57a884bccbc58d1814f25cdeae6cffb8b47a",
+    "sourceCommit": "ac367ad6510ef220c6814375996dfaf9ca058b5a",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-17T20:07:55.358084+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44165936457",
+      "checkedAt": "2026-11-17T20:13:30.706703+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44166946224",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "237a676092a70969aadf8fb292b4034ad51932e8",
+        "sourceCommit": "14835e3a692e2047c557f0b60dd27ae5fceca0e8",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-17T20:07:55.358084+00:00",
+        "checkedAt": "2026-11-17T20:13:30.706703+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -122,14 +122,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 12,
         "inScopeQueueCandidates": 11,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 11,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 12,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "quarantined-retry-exhausted": 4,
-          "retry-cooldown": 5,
-          "attempt-failed": 1
+          "retry-cooldown": 6
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -220,18 +219,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
-            "sourceId": "robb-property",
-            "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-18T02:07:47.003122+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
             "sourceId": "robb-property",
             "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
@@ -278,12 +265,24 @@
             "nextAttemptAt": "2026-11-18T01:00:23.193274+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
+            "sourceId": "robb-property",
+            "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-18T02:07:47.003122+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-17T20:37:55.358084+00:00",
+      "expiresAt": "2026-11-17T20:43:30.706703+00:00",
       "green": false
     },
     "visual": {
@@ -1646,17 +1645,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "237a676092a70969aadf8fb292b4034ad51932e8",
+      "sourceCommit": "14835e3a692e2047c557f0b60dd27ae5fceca0e8",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-17T20:07:55.358084+00:00",
+      "observedAt": "2026-11-17T20:13:30.706703+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44165936457",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44165936457",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44166946224",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44166946224",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1678,7 +1677,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44165936457"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44166946224"
     },
     {
       "site": "loveourlistings.com",
@@ -1705,8 +1704,8 @@
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44164103744/artifacts/14365490838",
       "pageUrls": [
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/"
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
+        "https://www.loveourlistings.com/"
       ]
     },
     {
