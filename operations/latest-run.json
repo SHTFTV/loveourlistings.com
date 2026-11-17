@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-17T20:41:46.030855+00:00",
+  "startedAt": "2026-11-17T20:47:41.516132+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "36ecb2ac4f85669e569d551f8e6c898eadbf0918",
+    "sourceCommit": "1fb3597b2b72ce40160c21ad9fa6ab49d8e09bed",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44171960023",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44172965242",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,7 +74,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "items": 20,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -88,7 +88,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T20:41:46.030855+00:00",
+      "fetchedAt": "2026-11-17T20:47:41.516132+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -108,13 +108,13 @@
   ],
   "articles": [],
   "duplicates": 67,
-  "quarantined": 3,
+  "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44171067949",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44172037015",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -144,10 +144,12 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-18T02:41:46.030855+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
@@ -166,13 +168,6 @@
       "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
@@ -209,6 +204,15 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-18T02:07:47.003122+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "reviewedCandidateIntake": 5,
@@ -267,7 +271,7 @@
       "sourceId": "robb-property",
       "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "collection": "waterfront",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 4,
       "checks": 4,
       "nextAttemptAt": "2026-11-18T02:41:46.030855+00:00",
@@ -296,18 +300,6 @@
       "checks": 5,
       "nextAttemptAt": null,
       "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-      "sourceId": "robb-property",
-      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-      "collection": "mansions",
-      "outcome": "attempt-failed",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
     {
@@ -357,6 +349,18 @@
       "nextAttemptAt": "2026-11-18T02:07:47.003122+00:00",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+      "sourceId": "robb-property",
+      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+      "collection": "mansions",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
     }
   ],
   "collections": [
@@ -398,9 +402,9 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-17T20:41:54.448040+00:00",
+  "finishedAt": "2026-11-17T20:47:46.044704+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-17T20:41:54.448040+00:00",
+    "checkedAt": "2026-11-17T20:47:46.044704+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -479,14 +483,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 12,
     "inScopeQueueCandidates": 11,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 10,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 12,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
-      "quarantined-retry-exhausted": 4,
-      "attempt-failed": 2,
-      "retry-cooldown": 4
+      "quarantined-retry-exhausted": 5,
+      "retry-cooldown": 5
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -545,7 +548,7 @@
         "sourceId": "robb-property",
         "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
         "collection": "waterfront",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 4,
         "checks": 4,
         "nextAttemptAt": "2026-11-18T02:41:46.030855+00:00",
@@ -574,18 +577,6 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-        "sourceId": "robb-property",
-        "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -633,6 +624,18 @@
         "failedAttempts": 2,
         "checks": 2,
         "nextAttemptAt": "2026-11-18T02:07:47.003122+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+        "sourceId": "robb-property",
+        "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       }
