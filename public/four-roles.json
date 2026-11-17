@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-17T15:32:10.677519+00:00",
+  "checkedAt": "2026-11-17T15:37:54.442330+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "df57215e09ea383e894f04b724d6aa0e0814bac1",
+    "sourceCommit": "e0f82aacb9e4b919561d898d7b1893b953ed277e",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-17T15:31:57.158890+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44115312408",
+      "checkedAt": "2026-11-17T15:37:36.857280+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44116420773",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "90c5b60b3630a64aa22c11a417cc5df747cfbe1d",
+        "sourceCommit": "d3587e5dc96e57a6fda06996d88f1cf99fde26a2",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-17T15:31:57.158890+00:00",
+        "checkedAt": "2026-11-17T15:37:36.857280+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -121,14 +121,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 10,
         "inScopeQueueCandidates": 9,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 9,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 10,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "quarantined-retry-exhausted": 4,
-          "retry-cooldown": 3,
-          "attempt-failed": 1
+          "retry-cooldown": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -219,18 +218,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-            "sourceId": "robb-property",
-            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-17T21:31:46.494185+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
             "sourceId": "robb-property",
             "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
@@ -253,12 +240,24 @@
             "nextAttemptAt": "2026-11-17T20:40:49.245371+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+            "sourceId": "robb-property",
+            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-17T21:31:46.494185+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-17T16:01:57.158890+00:00",
+      "expiresAt": "2026-11-17T16:07:36.857280+00:00",
       "green": false
     },
     "visual": {
@@ -1599,17 +1598,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "90c5b60b3630a64aa22c11a417cc5df747cfbe1d",
+      "sourceCommit": "d3587e5dc96e57a6fda06996d88f1cf99fde26a2",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-17T15:31:57.158890+00:00",
+      "observedAt": "2026-11-17T15:37:36.857280+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44115312408",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44115312408",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44116420773",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44116420773",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1631,7 +1630,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44115312408"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44116420773"
     },
     {
       "site": "loveourlistings.com",
@@ -1657,9 +1656,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44114337893/artifacts/14343105063",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44114337893/artifacts/14343105063",
       "pageUrls": [
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
