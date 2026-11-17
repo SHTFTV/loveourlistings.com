@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-17T08:34:42.340513+00:00",
+  "checkedAt": "2026-11-17T08:40:34.530048+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "3af4b592d91636984712aa3f2a967fb6c30069a7",
+    "sourceCommit": "d778bff617a2faa8357c1b1eeef3c1bddb526699",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-17T08:34:32.859781+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44047817520",
+      "checkedAt": "2026-11-17T08:40:20.242298+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44048657905",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "81b180f750179a711c6bd76c2141d5c8dabcbc6e",
+        "sourceCommit": "81b47455c965989d911b4f2d01844316ee400137",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-17T08:34:32.859781+00:00",
+        "checkedAt": "2026-11-17T08:40:20.242298+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -121,13 +121,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 9,
         "inScopeQueueCandidates": 8,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 9,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 7,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "quarantined-retry-exhausted": 4,
-          "retry-cooldown": 3
+          "attempt-failed": 2,
+          "retry-cooldown": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -186,10 +187,10 @@
             "sourceId": "robb-property",
             "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
             "collection": "waterfront",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-17T14:40:08.145938+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -222,10 +223,10 @@
             "sourceId": "robb-property",
             "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-17T08:36:00.765816+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-17T14:40:08.145938+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -245,7 +246,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-17T09:04:32.859781+00:00",
+      "expiresAt": "2026-11-17T09:10:20.242298+00:00",
       "green": false
     },
     "visual": {
@@ -1559,17 +1560,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "81b180f750179a711c6bd76c2141d5c8dabcbc6e",
+      "sourceCommit": "81b47455c965989d911b4f2d01844316ee400137",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-17T08:34:32.859781+00:00",
+      "observedAt": "2026-11-17T08:40:20.242298+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44047817520",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44047817520",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44048657905",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44048657905",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1591,7 +1592,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44047817520"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44048657905"
     },
     {
       "site": "loveourlistings.com",
@@ -1617,9 +1618,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44046283520/artifacts/14311087803",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44046283520/artifacts/14311087803",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/",
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-0cdc22e539/"
+        "https://www.loveourlistings.com/"
       ]
     },
     {
