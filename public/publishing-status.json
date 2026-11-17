@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T06:02:46.104909+00:00",
+  "updatedAt": "2026-11-17T06:08:23.015619+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "64da9968643aac6b703e769f35178cb9d0cc0475",
+    "sourceCommit": "4cd2699a986da2175f630ebdbb92e749a0d9218b",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44027647176",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44028319960",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -95,12 +95,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-17T06:02:46.045991+00:00",
+    "checkedAt": "2026-11-17T06:08:22.867393+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 99,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 79,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -109,6 +109,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-waterfront",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -153,11 +157,9 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 20,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 20
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "countrylife-property",
@@ -295,49 +297,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-17T06:02:41.068868+00:00",
+  "lastRunAt": "2026-11-17T06:08:17.165776+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
-      "status": "ok",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
-      "items": 20
+      "status": "error",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
+      "items": 0
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T06:02:41.068868+00:00",
+      "fetchedAt": "2026-11-17T06:08:17.165776+00:00",
       "items": 29
     }
   ],
@@ -380,7 +382,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 66,
+  "duplicatesFiltered": 46,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
