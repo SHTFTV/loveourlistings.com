@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T02:13:22.839345+00:00",
+  "updatedAt": "2026-11-18T02:18:58.397114+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "47fdc5cfedb8f47fd079e0affbdf9ca3af05555e",
+    "sourceCommit": "15109bd5be7958adfef676279dfdf282c69ffe00",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44220960888",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44221649049",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -99,13 +99,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
-      "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
       "propertyId": null,
       "collection": "mansions",
@@ -149,6 +142,15 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00"
     }
   ],
   "health": "degraded",
@@ -159,7 +161,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-18T02:13:22.751929+00:00",
+    "checkedAt": "2026-11-18T02:18:58.269447+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -238,14 +240,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 14,
     "inScopeQueueCandidates": 13,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 13,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 14,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 6,
       "duplicate-property": 1,
-      "retry-cooldown": 5,
-      "attempt-failed": 1
+      "retry-cooldown": 6
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -348,18 +349,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
-        "sourceId": "robb-property",
-        "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
         "sourceId": "robb-property",
         "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
@@ -418,52 +407,64 @@
         "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
+        "sourceId": "robb-property",
+        "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 3,
+        "checks": 3,
+        "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-18T02:13:19.381969+00:00",
+  "lastRunAt": "2026-11-18T02:18:52.806356+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 21
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:13:19.381969+00:00",
+      "fetchedAt": "2026-11-18T02:18:52.806356+00:00",
       "items": 29
     }
   ],
@@ -507,7 +508,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 63,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-17-b495434620",
