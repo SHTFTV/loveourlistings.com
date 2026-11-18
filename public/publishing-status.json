@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T02:46:23.980297+00:00",
+  "updatedAt": "2026-11-18T02:52:00.754268+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "ae34457f8da743a577feaa864d88bb0bc7e6433b",
+    "sourceCommit": "f271d1931c1ebbdd3008ca117487df605a4dbe42",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225022939",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225689625",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -45,15 +45,6 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-      "propertyId": null,
-      "collection": "waterfront",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
       "collection": "mansions",
@@ -63,11 +54,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
@@ -83,6 +76,15 @@
       "propertyId": null,
       "collection": "mansions",
       "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -159,7 +161,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-18T02:46:23.898701+00:00",
+    "checkedAt": "2026-11-18T02:52:00.597867+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -238,13 +240,12 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 14,
     "inScopeQueueCandidates": 13,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 13,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 14,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 6,
       "duplicate-property": 1,
-      "attempt-failed": 1,
+      "quarantined-retry-exhausted": 7,
       "retry-cooldown": 5
     },
     "newFeaturesStored": 0,
@@ -261,18 +262,6 @@
         "checks": 1,
         "nextAttemptAt": null,
         "reason": "Cached art/news item is outside the individual-property feature scope",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-        "sourceId": "robb-property",
-        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-        "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -300,11 +289,11 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
         "sourceId": "robb-property",
-        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
         "collection": "waterfront",
-        "outcome": "attempt-failed",
+        "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
@@ -328,6 +317,18 @@
         "sourceId": "robb-property",
         "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
         "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+        "sourceId": "robb-property",
+        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+        "collection": "waterfront",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -421,49 +422,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-18T02:46:18.885612+00:00",
+  "lastRunAt": "2026-11-18T02:51:56.329500+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 21
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T02:46:18.885612+00:00",
+      "fetchedAt": "2026-11-18T02:51:56.329500+00:00",
       "items": 29
     }
   ],
@@ -507,7 +508,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 63,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-17-b495434620",
