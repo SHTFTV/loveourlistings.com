@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-18T03:08:57.898803+00:00",
+  "checkedAt": "2026-11-18T03:14:39.296250+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "77a6353356cbdfde314495938ff351e4a07be5a0",
+    "sourceCommit": "f62afc1d070d3556c527f817317d725a58e3ff41",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-18T03:08:43.474671+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228267435",
+      "checkedAt": "2026-11-18T03:14:28.704946+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228946355",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "a52366600b4b0a3b35e7271e6c33524e87087c0b",
+        "sourceCommit": "9d6466b5ef1280183e13b6f4125f8f88b24cb149",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-18T03:08:43.474671+00:00",
+        "checkedAt": "2026-11-18T03:14:28.704946+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -122,14 +122,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 14,
         "inScopeQueueCandidates": 13,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 13,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 14,
         "outcomes": {
           "not-individual-property": 1,
-          "duplicate-property": 1,
           "quarantined-retry-exhausted": 7,
-          "attempt-failed": 1,
-          "retry-cooldown": 4
+          "duplicate-property": 1,
+          "retry-cooldown": 5
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -146,18 +145,6 @@
             "nextAttemptAt": null,
             "reason": "Cached art/news item is outside the individual-property feature scope",
             "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
-            "sourceId": "robb-property",
-            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
-            "collection": "acreage",
-            "outcome": "duplicate-property",
-            "failedAttempts": 1,
-            "checks": 0,
-            "nextAttemptAt": null,
-            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
@@ -184,16 +171,16 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
             "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
             "collection": "acreage",
-            "outcome": "attempt-failed",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
@@ -216,6 +203,18 @@
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceId": "robb-property",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -307,7 +306,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-18T03:38:43.474671+00:00",
+      "expiresAt": "2026-11-18T03:44:28.704946+00:00",
       "green": false
     },
     "visual": {
@@ -1253,35 +1252,37 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-18T02:57:14.955545+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226937006",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-18T03:09:02.281939+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228335306",
+      "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "697ebbaea4da26f761fd859d28e08ef113250dcf",
+        "sourceCommit": "9d6466b5ef1280183e13b6f4125f8f88b24cb149",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "schedule"
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228267435"
       },
       "verified": false,
       "status": "failed",
       "findings": [
+        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44227592068",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228267435",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 314.915001,
+      "publisherReceiptAgeSeconds": 19.314157,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-18T02:52:00.597867+00:00",
+        "checkedAt": "2026-11-18T03:08:43.474671+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -1360,13 +1361,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 14,
         "inScopeQueueCandidates": 13,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 14,
+        "attemptedThisRun": 1,
+        "skippedThisRun": 13,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "quarantined-retry-exhausted": 7,
-          "retry-cooldown": 5
+          "attempt-failed": 1,
+          "retry-cooldown": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -1425,10 +1427,10 @@
             "sourceId": "robb-property",
             "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
             "collection": "acreage",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-18T03:04:18.287943+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -1543,9 +1545,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "44226305719",
+        "runId": "44228267435",
         "status": "passed",
-        "checkedAt": "2026-11-18T02:51:54.640295+00:00"
+        "checkedAt": "2026-11-18T03:08:33.960907+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -1559,7 +1561,7 @@
           "status": "done",
           "checkedAt": "2026-11-17T09:09:34.445721+00:00"
         },
-        "ageSeconds": 64130.000325,
+        "ageSeconds": 64837.173789,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -1567,7 +1569,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "f271d1931c1ebbdd3008ca117487df605a4dbe42",
+        "sourceCommit": "3941cd2a9e27b205d7d0241603400d711b06928b",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
@@ -1592,9 +1594,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14393481610,
+      "artifactId": 14393149698,
       "fresh": true,
-      "expiresAt": "2026-11-18T03:27:14.955545+00:00",
+      "expiresAt": "2026-11-18T03:39:02.281939+00:00",
       "green": false
     },
     "watchdog": {
@@ -1692,17 +1694,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "a52366600b4b0a3b35e7271e6c33524e87087c0b",
+      "sourceCommit": "9d6466b5ef1280183e13b6f4125f8f88b24cb149",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-18T03:08:43.474671+00:00",
+      "observedAt": "2026-11-18T03:14:28.704946+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228267435",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228267435",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228946355",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228946355",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1724,7 +1726,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228267435"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228946355"
     },
     {
       "site": "loveourlistings.com",
@@ -1758,29 +1760,30 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "697ebbaea4da26f761fd859d28e08ef113250dcf",
+      "sourceCommit": "9d6466b5ef1280183e13b6f4125f8f88b24cb149",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-18T02:57:14.955545+00:00",
+      "observedAt": "2026-11-18T03:09:02.281939+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226937006",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226937006/artifacts/14393481610",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228335306",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44228335306/artifacts/14393149698",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
+        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44227592068",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
