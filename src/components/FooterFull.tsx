@@ -30,6 +30,7 @@ const FooterFull = () => {
           <div>
             <h4 className="font-display text-sm font-bold text-foreground mb-4">Partners</h4>
             <ul className="space-y-2">
+              <li><a href="/luxury-realtor-introductions/" className="font-body text-xs text-muted-foreground hover:text-primary">Luxury realtors: introduce yourself</a></li>
               {["Agencies", "Professionals", "Heart Sign Partners", "Beewarm Mechanical"].map((s) => (
                 <li key={s}>
                   <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">
