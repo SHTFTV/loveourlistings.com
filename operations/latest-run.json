@@ -1,28 +1,28 @@
 {
-  "startedAt": "2026-11-17T23:58:36.628168+00:00",
+  "startedAt": "2026-11-18T00:04:17.281252+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "4c591fb15deace481ba794a4a1e5c8d3bde8a421",
+    "sourceCommit": "17caf41a4e161ba0ad3f140a1e7eb3d3d0c90d3d",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44203912664",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44204691994",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
       "dispositions": {
         "candidate-admitted": 1,
         "not-individual-property": 5,
-        "already-published": 2,
-        "outside-lookback": 2
+        "already-published": 1,
+        "outside-lookback": 3
       },
       "errors": [],
       "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,7 +74,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "items": 21,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -88,14 +88,14 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-17T23:58:36.628168+00:00",
+      "fetchedAt": "2026-11-18T00:04:17.281252+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
       "dispositions": {
-        "already-published": 9,
+        "already-published": 8,
         "not-individual-property": 5,
-        "outside-lookback": 15
+        "outside-lookback": 16
       },
       "errors": [
         {
@@ -107,14 +107,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 68,
+  "duplicates": 63,
   "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44203211551",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44203974329",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -123,6 +123,27 @@
       "sourceUrl": "https://robbreport.com/shelter/home-design/olson-kundig-designed-home-hawaii-kona-coast-1238830936",
       "title": "We Love This Listing: A Kona Coast Home Composed Around Lava and Courtyards",
       "reason": "Editorial correction: Editorial correction original evidence changed"
+    },
+    {
+      "sourceUrl": "https://www.realtor.com/news/unique-homes/beverly-hills-mansion-private-nightclub-dance-floor-most-expensive/",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "We Love This Listing: a Beverly Hills mansion built around performance",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.realtor.com/news/unique-homes/beverly-hills-mansion-private-nightclub-dance-floor-most-expensive/",
+      "propertyId": "castletop-ranch-25800-cox-crossing-spicewood-tx",
+      "collection": "ranches",
+      "title": "We Love This Listing: Castletop Ranch makes the journey part of the home",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.realtor.com/news/unique-homes/beverly-hills-mansion-private-nightclub-dance-floor-most-expensive/",
+      "propertyId": "drift-house-65-w-avalanche-canyon-jackson-wy",
+      "collection": "acreage",
+      "title": "We Love This Listing: Drift House gives the acreage a life of its own",
+      "reason": "Reviewed property source outside current lookback"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
@@ -224,7 +245,7 @@
       "nextAttemptAt": "2026-11-18T05:25:04.146157+00:00"
     }
   ],
-  "reviewedCandidateIntake": 5,
+  "reviewedCandidateIntake": 2,
   "newCandidatesDiscovered": 0,
   "candidateChecks": [
     {
@@ -407,7 +428,7 @@
       "name": "ranches",
       "eligible": 0,
       "newFeatures": 0,
-      "status": "no-fresh-eligible-items"
+      "status": "blocked-eligible-property"
     },
     {
       "name": "acreage",
@@ -423,9 +444,9 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-17T23:58:42.798772+00:00",
+  "finishedAt": "2026-11-18T00:04:21.383417+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-17T23:58:42.798772+00:00",
+    "checkedAt": "2026-11-18T00:04:21.383417+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -449,8 +470,8 @@
         "dispositions": {
           "candidate-admitted": 1,
           "not-individual-property": 5,
-          "already-published": 2,
-          "outside-lookback": 2
+          "already-published": 1,
+          "outside-lookback": 3
         }
       },
       {
@@ -495,9 +516,9 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "already-published": 9,
+          "already-published": 8,
           "not-individual-property": 5,
-          "outside-lookback": 15
+          "outside-lookback": 16
         }
       }
     ],
