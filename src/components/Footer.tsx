@@ -2,6 +2,7 @@ import logo from "@/assets/logo.png";
 import { NETWORK_LINKS } from "@/data/pricingMatrix";
 
 const CORE = [
+  { label: "Luxury realtors: introduce yourself", href: "/luxury-realtor-introductions/" },
   { label: "Home", href: "/" },
   { label: "Pricing & Slot Matrix", href: "/pricing" },
   { label: "Guest Post", href: "/guest-post" },
