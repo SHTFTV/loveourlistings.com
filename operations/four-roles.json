@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-18T02:52:11.341156+00:00",
+  "checkedAt": "2026-11-18T02:57:43.729547+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "b697ec5cc5f1c581c463046f3dad403874e9b86e",
+    "sourceCommit": "07b89bff05494341dedeb5b3a2089f3b852bca3a",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-18T02:52:00.597867+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
+      "checkedAt": "2026-11-18T02:57:33.066359+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226946066",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "f271d1931c1ebbdd3008ca117487df605a4dbe42",
+        "sourceCommit": "697ebbaea4da26f761fd859d28e08ef113250dcf",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-18T02:52:00.597867+00:00",
+        "checkedAt": "2026-11-18T02:57:33.066359+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -306,7 +306,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-18T03:22:00.597867+00:00",
+      "expiresAt": "2026-11-18T03:27:33.066359+00:00",
       "green": false
     },
     "visual": {
@@ -1252,20 +1252,20 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-18T02:40:47.806216+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225006178",
-      "trigger": "workflow_run",
+      "checkedAt": "2026-11-18T02:57:14.955545+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226937006",
+      "trigger": "schedule",
       "sotLoad": {
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "7430cf395780dc3124db62e467bfe59861cbe2b1",
+        "sourceCommit": "697ebbaea4da26f761fd859d28e08ef113250dcf",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "workflow_run"
+        "kind": "schedule"
       },
       "verified": false,
       "status": "failed",
@@ -1274,13 +1274,13 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44224278978",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44224278978",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 353.475268,
+      "publisherReceiptAgeSeconds": 314.915001,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-18T02:34:55.022194+00:00",
+        "checkedAt": "2026-11-18T02:52:00.597867+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -1363,9 +1363,9 @@
         "skippedThisRun": 14,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 6,
           "duplicate-property": 1,
-          "retry-cooldown": 6
+          "quarantined-retry-exhausted": 7,
+          "retry-cooldown": 5
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -1381,18 +1381,6 @@
             "checks": 1,
             "nextAttemptAt": null,
             "reason": "Cached art/news item is outside the individual-property feature scope",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-            "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1420,14 +1408,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
             "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
             "collection": "waterfront",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-18T02:41:46.030855+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -1448,6 +1436,18 @@
             "sourceId": "robb-property",
             "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
             "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+            "sourceId": "robb-property",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+            "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -1542,9 +1542,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "44224278978",
+        "runId": "44226305719",
         "status": "passed",
-        "checkedAt": "2026-11-18T02:34:48.305452+00:00"
+        "checkedAt": "2026-11-18T02:51:54.640295+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -1558,7 +1558,7 @@
           "status": "done",
           "checkedAt": "2026-11-17T09:09:34.445721+00:00"
         },
-        "ageSeconds": 63142.877849,
+        "ageSeconds": 64130.000325,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -1566,8 +1566,8 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "854c31a7573df2ea5e7918737d7281a17d4c5eb2",
-        "trigger": "schedule"
+        "sourceCommit": "f271d1931c1ebbdd3008ca117487df605a4dbe42",
+        "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
       "matchedPublishedPage": true,
@@ -1578,10 +1578,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44223036504",
-        "checkedAt": "2026-11-18T02:29:26.619Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225697277",
+        "checkedAt": "2026-11-18T02:49:26.966Z",
         "status": "passed",
-        "artifactId": 14391244140
+        "artifactId": 14392887376
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -1591,9 +1591,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14391544780,
+      "artifactId": 14393481610,
       "fresh": true,
-      "expiresAt": "2026-11-18T03:10:47.806216+00:00",
+      "expiresAt": "2026-11-18T03:27:14.955545+00:00",
       "green": false
     },
     "watchdog": {
@@ -1691,17 +1691,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "f271d1931c1ebbdd3008ca117487df605a4dbe42",
+      "sourceCommit": "697ebbaea4da26f761fd859d28e08ef113250dcf",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-18T02:52:00.597867+00:00",
+      "observedAt": "2026-11-18T02:57:33.066359+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226946066",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226946066",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
       "rawTrigger": "workflow_dispatch",
@@ -1723,7 +1723,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226946066"
     },
     {
       "site": "loveourlistings.com",
@@ -1749,28 +1749,28 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225697277/artifacts/14393161531",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225697277/artifacts/14393161531",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "7430cf395780dc3124db62e467bfe59861cbe2b1",
+      "sourceCommit": "697ebbaea4da26f761fd859d28e08ef113250dcf",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-18T02:40:47.806216+00:00",
+      "observedAt": "2026-11-18T02:57:14.955545+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225006178",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44225006178/artifacts/14391544780",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226937006",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226937006/artifacts/14393481610",
       "loadedRevision": 13,
       "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-      "rawTrigger": "workflow_run",
+      "rawTrigger": "schedule",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
@@ -1779,7 +1779,7 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44224278978",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44226305719",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
