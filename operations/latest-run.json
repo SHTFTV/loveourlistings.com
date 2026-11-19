@@ -1,28 +1,28 @@
 {
-  "startedAt": "2026-11-18T05:44:53.436629+00:00",
+  "startedAt": "2026-11-19T04:23:48.237099+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
-    "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-    "sourceCommit": "a7584deea5abec4eea140badab66c133a0d521d7",
-    "trigger": "workflow_dispatch"
+    "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
+    "sourceCommit": "5192b55fcee525e571a03ca469b1650b11bf38f6",
+    "trigger": "operator-assisted-recovery"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246357791",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/latest-run.json",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
       "dispositions": {
+        "not-individual-property": 6,
         "candidate-admitted": 1,
-        "not-individual-property": 5,
         "already-published": 1,
-        "outside-lookback": 3
+        "outside-lookback": 2
       },
       "errors": [],
       "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
@@ -31,13 +31,13 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
       "dispositions": {
-        "candidate-admitted": 7,
-        "not-individual-property": 3
+        "candidate-admitted": 6,
+        "not-individual-property": 4
       },
       "errors": [],
       "finalUrl": "https://robbreport.com/shelter/feed/"
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
-      "error": "HTTP 404"
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,12 +74,12 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
-      "items": 19,
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
+      "items": 16,
       "parseRejected": 0,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 19
+        "discovery-original-link-required": 16
       },
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -88,14 +88,14 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-18T05:44:53.436629+00:00",
+      "fetchedAt": "2026-11-19T04:23:48.237099+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
       "dispositions": {
-        "already-published": 8,
-        "not-individual-property": 5,
-        "outside-lookback": 16
+        "already-published": 10,
+        "not-individual-property": 4,
+        "outside-lookback": 15
       },
       "errors": [
         {
@@ -106,17 +106,72 @@
       "finalUrl": "https://www.countrylife.co.uk/feeds/tag/property"
     }
   ],
-  "articles": [],
+  "articles": [
+    {
+      "slug": "we-love-waterfront-2026-11-07-2cea22a9c6",
+      "title": "We Love This Listing: A Wayzata Estate Composed Around the Lake",
+      "collection": "waterfront",
+      "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-07-2cea22a9c6/",
+      "publishedAt": "2026-11-18T21:22:40-07:00",
+      "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-26-5-million-3-51-acre-wayzata-estate-on-minnesota-s-gold-coast",
+      "propertyId": null,
+      "retryOfPendingPublication": true
+    },
+    {
+      "slug": "we-love-acreage-2026-11-05-3d809cf682",
+      "title": "We Love This Listing: Portmore\u2019s Architecture, Gardens and Scottish Borders Acreage",
+      "collection": "acreage",
+      "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-05-3d809cf682/",
+      "publishedAt": "2026-11-18T21:22:40-07:00",
+      "sourceUrl": "https://www.countrylife.co.uk/property/scotland/portmore-victrian",
+      "propertyId": null,
+      "retryOfPendingPublication": true
+    },
+    {
+      "slug": "we-love-mansions-2026-11-18-7fa885f1e5",
+      "title": "We Love This Listing: An Architect\u2019s Apartment at Great Maytham Hall",
+      "collection": "mansions",
+      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-7fa885f1e5/",
+      "publishedAt": "2026-11-18T21:22:40-07:00",
+      "sourceUrl": "https://www.countrylife.co.uk/property/home-counties/sir-terry-farrells-home-goes-up-for-sale-in-a-lutyens-designed-home-that-inspired-the-secret-garden",
+      "propertyId": null,
+      "retryOfPendingPublication": true
+    },
+    {
+      "slug": "we-love-mansions-2026-11-18-319e5cb129",
+      "title": "We Love This Listing: An Arcadia Compound with Room to Gather",
+      "collection": "mansions",
+      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-319e5cb129/",
+      "publishedAt": "2026-11-18T21:23:48-07:00",
+      "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-sprawling-arcadia-estate-with-a-waterfall-koi-pond-customizable-sport-court-and-private-elevator",
+      "propertyId": null
+    },
+    {
+      "slug": "we-love-waterfront-2026-11-18-e5ae1563ae",
+      "title": "We Love This Listing: La Gorce Island\u2019s Broad Bayfront Perspective",
+      "collection": "waterfront",
+      "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-18-e5ae1563ae/",
+      "publishedAt": "2026-11-18T21:23:48-07:00",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
+      "propertyId": null
+    },
+    {
+      "slug": "we-love-mansions-2026-11-16-fbccdb4f6f",
+      "title": "We Love This Listing: The Witter Estate\u2019s Tudor Revival Character",
+      "collection": "mansions",
+      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-fbccdb4f6f/",
+      "publishedAt": "2026-11-18T21:23:48-07:00",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
+      "propertyId": null
+    }
+  ],
   "duplicates": 61,
   "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
-    "verified": true,
-    "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44245766132",
-    "originEvent": "workflow_dispatch",
-    "reason": "Verified repository health workflow and GitHub Actions bot"
+    "verified": false,
+    "reason": "Explicit owner-requested manual recovery; existing GitHub Actions runs fail at startup."
   },
   "publicationBlocks": [
     {
@@ -129,6 +184,13 @@
       "propertyId": null,
       "collection": "mansions",
       "title": "We Love This Listing: a Beverly Hills mansion built around performance",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/richard-saghian-penthouse-new-york-manhattan-1238810703",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "We Love This Listing: a Tribeca penthouse with two river horizons",
       "reason": "Reviewed property source outside current lookback"
     },
     {
@@ -146,19 +208,26 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
+      "sourceUrl": "https://www.realtor.com/news/unique-homes/kauai-kukuiula-oceanfront-luxury-homes-9m/",
+      "propertyId": "aepo-nei-18-kukuiula-kauai",
+      "collection": "beach-properties",
+      "title": "We Love This Listing: connected pavilions on Kauai\u2019s South Shore",
+      "reason": "Recovery transport rejects unreviewed origin: www.realtor.com"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-19T10:22:40.157882+00:00"
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
       "collection": "waterfront",
       "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -173,13 +242,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
-      "collection": "acreage",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+      "collection": "mansions",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00"
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
@@ -200,15 +269,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
       "propertyId": null,
       "collection": "mansions",
@@ -216,45 +276,9 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "A $170 Million Miami Beach Estate Matches Mark Zuckerberg\u2019s Miami-Dade Sale Record",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/guy-dreier-palm-desert-bighorn-1238844635",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "A Striking Palm Desert Home Designed by Guy Dreier Can Be Yours for $15.9 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00"
-    },
-    {
-      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Inside a Hidden Hills Hideaway",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-18T11:28:21.654976+00:00"
     }
   ],
-  "reviewedCandidateIntake": 2,
+  "reviewedCandidateIntake": 7,
   "newCandidatesDiscovered": 0,
   "candidateChecks": [
     {
@@ -270,6 +294,18 @@
       "duplicateOfArticleSlug": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "sourceId": "robb-property",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+      "collection": "penthouses",
+      "outcome": "retry-cooldown",
+      "failedAttempts": 1,
+      "checks": 1,
+      "nextAttemptAt": "2026-11-19T10:22:40.157882+00:00",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "sourceId": "robb-property",
       "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
@@ -279,6 +315,18 @@
       "checks": 5,
       "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-sprawling-arcadia-estate-with-a-waterfall-koi-pond-customizable-sport-court-and-private-elevator",
+      "sourceId": "reviewed-coldwell-property",
+      "title": "Tour This Sprawling Arcadia Estate With a Guest House, Customizable Sport Court, and Private Elevator",
+      "collection": "mansions",
+      "outcome": "stored-awaiting-verification",
+      "failedAttempts": 0,
+      "checks": 1,
+      "nextAttemptAt": null,
+      "reason": "New feature awaits actual deployment and live verification",
       "duplicateOfArticleSlug": null
     },
     {
@@ -294,15 +342,39 @@
       "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
       "sourceId": "robb-property",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-      "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
+      "title": "A $170 Million Miami Beach Estate Matches Mark Zuckerberg\u2019s Miami-Dade Sale Record",
+      "collection": "waterfront",
+      "outcome": "stored-awaiting-verification",
+      "failedAttempts": 1,
+      "checks": 2,
       "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "reason": "New feature awaits actual deployment and live verification",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
+      "sourceId": "robb-property",
+      "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
+      "collection": "mansions",
+      "outcome": "deferred-article-limit",
+      "failedAttempts": 0,
+      "checks": 0,
+      "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+      "reason": "Per-run article limit; independent queued item remains eligible",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+      "sourceId": "robb-property",
+      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+      "collection": "acreage",
+      "outcome": "deferred-article-limit",
+      "failedAttempts": 2,
+      "checks": 2,
+      "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+      "reason": "Per-run article limit; independent queued item remains eligible",
       "duplicateOfArticleSlug": null
     },
     {
@@ -318,14 +390,14 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "sourceId": "robb-property",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-      "collection": "acreage",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 2,
-      "checks": 2,
-      "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "collection": "mansions",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -358,11 +430,11 @@
       "sourceId": "robb-property",
       "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
       "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
+      "outcome": "stored-awaiting-verification",
       "failedAttempts": 5,
-      "checks": 5,
+      "checks": 6,
       "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "reason": "New feature awaits actual deployment and live verification",
       "duplicateOfArticleSlug": null
     },
     {
@@ -378,27 +450,15 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
-      "sourceId": "robb-property",
-      "title": "A $170 Million Miami Beach Estate Matches Mark Zuckerberg\u2019s Miami-Dade Sale Record",
-      "collection": "mansions",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 1,
-      "checks": 1,
-      "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/guy-dreier-palm-desert-bighorn-1238844635",
       "sourceId": "robb-property",
       "title": "A Striking Palm Desert Home Designed by Guy Dreier Can Be Yours for $15.9 Million",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
+      "outcome": "deferred-article-limit",
       "failedAttempts": 2,
       "checks": 2,
-      "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+      "reason": "Per-run article limit; independent queued item remains eligible",
       "duplicateOfArticleSlug": null
     },
     {
@@ -406,11 +466,11 @@
       "sourceId": "robb-property",
       "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
+      "outcome": "deferred-article-limit",
       "failedAttempts": 3,
       "checks": 3,
-      "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+      "reason": "Per-run article limit; independent queued item remains eligible",
       "duplicateOfArticleSlug": null
     },
     {
@@ -418,32 +478,32 @@
       "sourceId": "sothebys-property",
       "title": "Inside a Hidden Hills Hideaway",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
+      "outcome": "deferred-article-limit",
       "failedAttempts": 3,
       "checks": 3,
-      "nextAttemptAt": "2026-11-18T11:28:21.654976+00:00",
-      "reason": "HTTP Error 403: Forbidden",
+      "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+      "reason": "Per-run article limit; independent queued item remains eligible",
       "duplicateOfArticleSlug": null
     }
   ],
   "collections": [
     {
       "name": "waterfront",
-      "eligible": 2,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 3,
+      "newFeatures": 2,
+      "status": "built-for-publication"
     },
     {
       "name": "mansions",
-      "eligible": 9,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 10,
+      "newFeatures": 3,
+      "status": "built-for-publication"
     },
     {
       "name": "penthouses",
-      "eligible": 0,
+      "eligible": 1,
       "newFeatures": 0,
-      "status": "no-fresh-eligible-items"
+      "status": "blocked-eligible-property"
     },
     {
       "name": "ranches",
@@ -454,29 +514,29 @@
     {
       "name": "acreage",
       "eligible": 2,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "beach-properties",
       "eligible": 0,
       "newFeatures": 0,
-      "status": "no-fresh-eligible-items"
+      "status": "blocked-eligible-property"
     }
   ],
-  "status": "no-eligible-content",
-  "finishedAt": "2026-11-18T05:44:58.492459+00:00",
+  "status": "built-for-publication",
+  "finishedAt": "2026-11-19T04:24:01.868679+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-18T05:44:58.492459+00:00",
-    "runtimeState": "running",
-    "publicationOutcome": "no-eligible-content",
+    "checkedAt": "2026-11-19T04:24:01.868679+00:00",
+    "runtimeState": "operator-assisted-recovery-finished",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 98,
+    "feedItemsParsed": 95,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
-        "reason": "HTTP 404"
+        "reason": "HTTP Error 404: Not Found"
       },
       {
         "sourceId": "christies-property",
@@ -489,10 +549,10 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
+          "not-individual-property": 6,
           "candidate-admitted": 1,
-          "not-individual-property": 5,
           "already-published": 1,
-          "outside-lookback": 3
+          "outside-lookback": 2
         }
       },
       {
@@ -500,8 +560,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "candidate-admitted": 7,
-          "not-individual-property": 3
+          "candidate-admitted": 6,
+          "not-individual-property": 4
         }
       },
       {
@@ -526,10 +586,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 19,
+        "itemsParsed": 16,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 19
+          "discovery-original-link-required": 16
         }
       },
       {
@@ -537,24 +597,26 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "already-published": 8,
-          "not-individual-property": 5,
-          "outside-lookback": 16
+          "already-published": 10,
+          "not-individual-property": 4,
+          "outside-lookback": 15
         }
       }
     ],
     "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 14,
-    "inScopeQueueCandidates": 13,
-    "attemptedThisRun": 0,
+    "candidatesConsidered": 17,
+    "inScopeQueueCandidates": 16,
+    "attemptedThisRun": 3,
     "skippedThisRun": 14,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 7,
+      "retry-cooldown": 1,
+      "quarantined-retry-exhausted": 6,
+      "stored-awaiting-verification": 3,
       "duplicate-property": 1,
-      "retry-cooldown": 5
+      "deferred-article-limit": 5
     },
-    "newFeaturesStored": 0,
+    "newFeaturesStored": 6,
     "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
@@ -571,6 +633,18 @@
         "duplicateOfArticleSlug": null
       },
       {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+        "sourceId": "robb-property",
+        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+        "collection": "penthouses",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-19T10:22:40.157882+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
         "sourceId": "robb-property",
         "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
@@ -580,6 +654,18 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-sprawling-arcadia-estate-with-a-waterfall-koi-pond-customizable-sport-court-and-private-elevator",
+        "sourceId": "reviewed-coldwell-property",
+        "title": "Tour This Sprawling Arcadia Estate With a Guest House, Customizable Sport Court, and Private Elevator",
+        "collection": "mansions",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -595,15 +681,39 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
         "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
+        "title": "A $170 Million Miami Beach Estate Matches Mark Zuckerberg\u2019s Miami-Dade Sale Record",
+        "collection": "waterfront",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 1,
+        "checks": 2,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "New feature awaits actual deployment and live verification",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
+        "sourceId": "robb-property",
+        "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
+        "collection": "mansions",
+        "outcome": "deferred-article-limit",
+        "failedAttempts": 0,
+        "checks": 0,
+        "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+        "sourceId": "robb-property",
+        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+        "collection": "acreage",
+        "outcome": "deferred-article-limit",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -619,14 +729,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
         "sourceId": "robb-property",
-        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-        "collection": "acreage",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 2,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -659,11 +769,11 @@
         "sourceId": "robb-property",
         "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
         "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 5,
-        "checks": 5,
+        "checks": 6,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -679,27 +789,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
-        "sourceId": "robb-property",
-        "title": "A $170 Million Miami Beach Estate Matches Mark Zuckerberg\u2019s Miami-Dade Sale Record",
-        "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/guy-dreier-palm-desert-bighorn-1238844635",
         "sourceId": "robb-property",
         "title": "A Striking Palm Desert Home Designed by Guy Dreier Can Be Yours for $15.9 Million",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 2,
         "checks": 2,
-        "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -707,11 +805,11 @@
         "sourceId": "robb-property",
         "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 3,
         "checks": 3,
-        "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -719,13 +817,23 @@
         "sourceId": "sothebys-property",
         "title": "Inside a Hidden Hills Hideaway",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
+        "outcome": "deferred-article-limit",
         "failedAttempts": 3,
         "checks": 3,
-        "nextAttemptAt": "2026-11-18T11:28:21.654976+00:00",
-        "reason": "HTTP Error 403: Forbidden",
+        "nextAttemptAt": "2026-11-19T04:23:48.237099+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       }
     ]
+  },
+  "executionMode": "operator-assisted-recovery",
+  "newlyStoredThisRecovery": [
+    "we-love-mansions-2026-11-18-319e5cb129",
+    "we-love-waterfront-2026-11-18-e5ae1563ae",
+    "we-love-mansions-2026-11-16-fbccdb4f6f"
+  ],
+  "validationRecovery": {
+    "resolved": "Reviewed media URL now matches exact original bytes decoded from source-observed CDN derivative",
+    "previousError": "Exact source/image pairing lost"
   }
 }
