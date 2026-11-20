@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-20T15:29:20.545691+00:00",
+  "checkedAt": "2026-11-20T15:35:12.589605+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "31a700494efabf5f801e5be1e53d080e354839ab",
+    "sourceCommit": "fdb50f6dc1846d7cc2cb6447a5851fa59cf71848",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-20T15:27:43.821792+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
+      "checkedAt": "2026-11-20T15:35:00.251677+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44764600876",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "2602100e77bb72f41354a909ceb6c2b862084a2d",
+        "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -40,12 +40,12 @@
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-20T15:27:43.821792+00:00",
+        "checkedAt": "2026-11-20T15:35:00.251677+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 100,
@@ -76,8 +76,8 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "candidate-admitted": 5,
-              "already-published": 1,
+              "candidate-admitted": 4,
+              "already-published": 2,
               "not-individual-property": 4
             }
           },
@@ -120,21 +120,19 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
-        "candidatesConsidered": 18,
-        "inScopeQueueCandidates": 17,
-        "attemptedThisRun": 3,
-        "skippedThisRun": 15,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 16,
+        "inScopeQueueCandidates": 15,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 16,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 10,
-          "stored-awaiting-verification": 2,
+          "quarantined-retry-exhausted": 11,
           "duplicate-property": 1,
-          "attempt-failed": 1,
           "retry-cooldown": 3
         },
-        "newFeaturesStored": 2,
-        "verifiedPublicationsThisRun": 2,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -162,22 +160,22 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.conciergeauctions.com/blog/exclusive-belvedere-island-estate-with-golden-gate-bridge-views-to-sell-via-concierge-auctions",
-            "sourceId": "reviewed-concierge-auctions",
-            "title": "Exclusive Belvedere Island Estate with Golden Gate Bridge Views to Sell via Concierge Auctions",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
             "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
             "collection": "penthouses",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -210,9 +208,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -231,30 +229,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
-            "sourceId": "robb-property",
-            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
-            "sourceId": "robb-property",
-            "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 3,
-            "checks": 4,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -306,18 +280,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
-            "sourceId": "robb-property",
-            "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Reviewed exact-property media evidence changed",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
             "sourceId": "robb-property",
             "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
@@ -352,12 +314,24 @@
             "nextAttemptAt": "2026-11-20T21:19:53.544742+00:00",
             "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
+            "sourceId": "robb-property",
+            "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "Reviewed exact-property media evidence changed",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-20T15:57:43.821792+00:00",
+      "expiresAt": "2026-11-20T16:05:00.251677+00:00",
       "green": false
     },
     "visual": {
@@ -365,20 +339,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-20T15:07:42.422Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760029362",
+      "checkedAt": "2026-11-20T15:29:58.946Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763736425",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44759908967"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "a3ef8d4061b6830be451e41878acecc83f085e41",
+        "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -420,8 +394,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-                "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds",
+                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
                 "native": [
                   1600,
                   900
@@ -448,8 +422,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/cd6c3bf30913459aa85d.jpg",
-                "alt": "Orangery at Highfield House in Westoning, with garden-facing glazing and a roof lantern",
+                "src": "https://www.loveourlistings.com/images/source-properties/af3d58a7fd7f1a3d0130.jpg",
+                "alt": "Terraces overlooking San Francisco Bay and the skyline at 337 Belvedere Avenue",
                 "native": [
                   1600,
                   900
@@ -476,8 +450,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/f1b4cf741e5456cb18e5.jpg",
-                "alt": "View across the lawn toward the Cheshire farm buildings",
+                "src": "https://www.loveourlistings.com/images/source-properties/5cc6750930fbce908613.jpg",
+                "alt": "The Compass listing photograph shows the rooftop garden and illuminated penthouse at 427 Washington Street in Tribeca.",
                 "native": [
                   1600,
                   900
@@ -504,8 +478,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/01cc84132d7651368789.jpg",
-                "alt": "Drive and entrance of Kirkby Park",
+                "src": "https://www.loveourlistings.com/images/source-properties/277aa7c409c8ddcf91d3.jpg",
+                "alt": "Garden and approach to the red-brick house at The Quaives, Kent",
                 "native": [
                   1600,
                   900
@@ -532,8 +506,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/46aa6c3473aa72548f55.jpg",
-                "alt": "Curved timber facade of the Roundhouse at dusk",
+                "src": "https://www.loveourlistings.com/images/source-properties/c4461ec8440c731d4a3d.jpg",
+                "alt": "Aerial view across the fields and buildings of Creston Manor in California",
                 "native": [
                   1600,
                   900
@@ -560,8 +534,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/d8bd8f55c6185ce92e0e.jpg",
-                "alt": "Garden elevation of the Victorian house in Blockley",
+                "src": "https://www.loveourlistings.com/images/source-properties/5ee7a4d0a0c1493d4e9f.jpg",
+                "alt": "White facade of Denes House behind its garden wall on the village street in Burwash",
                 "native": [
                   1600,
                   900
@@ -588,8 +562,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/ebd9c1483bc016bb3562.jpg",
-                "alt": "The courtyard at Ancliff Down",
+                "src": "https://www.loveourlistings.com/images/source-properties/c962d6ac269eddf9ecd6.jpg",
+                "alt": "Former chapel facade at Alexandra House in Cowes, with the harbour visible beside it",
                 "native": [
                   1600,
                   900
@@ -616,8 +590,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/41f7111c3a11ec1cfa1f.jpg",
-                "alt": "Queen Hoo Hall and its grounds near Tewin",
+                "src": "https://www.loveourlistings.com/images/source-properties/951b87355a3db3055628.jpg",
+                "alt": "Elevated view across the roofs of Le Paradis toward Cinnamon Bay",
                 "native": [
                   1600,
                   900
@@ -644,7 +618,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "62d013bcfb65a9a7648288446998fd37788803a8426fcd14f47a2a61eda94edd"
+          "screenshotSha256": "9101b4b83fbd8168b25bb1432ddc421cf2a4875c93403e423dda021986042130"
         },
         {
           "page": "journal",
@@ -669,8 +643,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-                "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds",
+                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
                 "native": [
                   1600,
                   900
@@ -687,27 +661,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "b5ddf95e185272b58ec79bc5a1f56beca9c3f93e3e3c61150bc7469f6aa7a525"
+          "screenshotSha256": "957d5fcbb9dc06ac3176a64e21a7f0b5f39ff4602aae630f7cd6262ff96155aa"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Grangewood House opens onto the High Weald | Love Our Listings",
-            "h1": "We Love This Listing: Grangewood House opens onto the High Weald",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
-            "description": "Terraced gardens and a conservatory make the setting part of this historic Fairlight home\u2019s character.",
-            "ogTitle": "We Love This Listing: Grangewood House opens onto the High Weald | Love Our Listings",
-            "ogDescription": "Terraced gardens and a conservatory make the setting part of this historic Fairlight home\u2019s character.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-            "twitterTitle": "We Love This Listing: Grangewood House opens onto the High Weald | Love Our Listings",
-            "twitterDescription": "Terraced gardens and a conservatory make the setting part of this historic Fairlight home\u2019s character.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
+            "title": "We Love This Listing: A two-storey library at a Danbury estate | Love Our Listings",
+            "h1": "We Love This Listing: A two-storey library at a Danbury estate",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
+            "description": "The main house at 125 Long Ridge Road brings its bookshelves, bedrooms and family spaces into conversation with the land outside.",
+            "ogTitle": "We Love This Listing: A two-storey library at a Danbury estate | Love Our Listings",
+            "ogDescription": "The main house at 125 Long Ridge Road brings its bookshelves, bedrooms and family spaces into conversation with the land outside.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+            "twitterTitle": "We Love This Listing: A two-storey library at a Danbury estate | Love Our Listings",
+            "twitterDescription": "The main house at 125 Long Ridge Road brings its bookshelves, bedrooms and family spaces into conversation with the land outside.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -740,8 +714,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-                "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds",
+                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
                 "native": [
                   1600,
                   900
@@ -758,13 +732,13 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/befb1915bb0be7765272.jpg",
+            "src": "/images/source-properties/57879b27ab73590233c3.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds"
+            "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "c27c24132b949a78e9d4777741d28170e1fcd616feec6a5aedf0048f8475d252",
+          "screenshotSha256": "1ff8e39b1803f4d0c362df9c0f2b785bc613e7079cf4dffaaac45682ca5213f7",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
@@ -774,12 +748,7 @@
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 294
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 240
+              "textLength": 500
             },
             {
               "fontSize": 16,
@@ -827,8 +796,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-                "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds",
+                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
                 "native": [
                   1600,
                   900
@@ -855,8 +824,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/cd6c3bf30913459aa85d.jpg",
-                "alt": "Orangery at Highfield House in Westoning, with garden-facing glazing and a roof lantern",
+                "src": "https://www.loveourlistings.com/images/source-properties/af3d58a7fd7f1a3d0130.jpg",
+                "alt": "Terraces overlooking San Francisco Bay and the skyline at 337 Belvedere Avenue",
                 "native": [
                   1600,
                   900
@@ -877,7 +846,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "f4bb0431d53fc23be856de5d78b0d9ea89d5a2147e79da1186ab3486e17ca6cc"
+          "screenshotSha256": "70a659487b139f5e134e4594236ff267b8a1bfbd382079d6ada166a151e992d0"
         },
         {
           "page": "journal",
@@ -916,8 +885,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-                "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds",
+                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
                 "native": [
                   1600,
                   900
@@ -930,8 +899,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/cd6c3bf30913459aa85d.jpg",
-                "alt": "Orangery at Highfield House in Westoning, with garden-facing glazing and a roof lantern",
+                "src": "https://www.loveourlistings.com/images/source-properties/af3d58a7fd7f1a3d0130.jpg",
+                "alt": "Terraces overlooking San Francisco Bay and the skyline at 337 Belvedere Avenue",
                 "native": [
                   1600,
                   900
@@ -948,27 +917,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "3741d9434209de95e2c8e1e5029467c51e3fe86208765b01996f12a6d058985d"
+          "screenshotSha256": "888310a19402192a53591345acb742d5790090cedca782c367c8d4dca34c42c5"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Grangewood House opens onto the High Weald | Love Our Listings",
-            "h1": "We Love This Listing: Grangewood House opens onto the High Weald",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
-            "description": "Terraced gardens and a conservatory make the setting part of this historic Fairlight home\u2019s character.",
-            "ogTitle": "We Love This Listing: Grangewood House opens onto the High Weald | Love Our Listings",
-            "ogDescription": "Terraced gardens and a conservatory make the setting part of this historic Fairlight home\u2019s character.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-            "twitterTitle": "We Love This Listing: Grangewood House opens onto the High Weald | Love Our Listings",
-            "twitterDescription": "Terraced gardens and a conservatory make the setting part of this historic Fairlight home\u2019s character.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
+            "title": "We Love This Listing: A two-storey library at a Danbury estate | Love Our Listings",
+            "h1": "We Love This Listing: A two-storey library at a Danbury estate",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
+            "description": "The main house at 125 Long Ridge Road brings its bookshelves, bedrooms and family spaces into conversation with the land outside.",
+            "ogTitle": "We Love This Listing: A two-storey library at a Danbury estate | Love Our Listings",
+            "ogDescription": "The main house at 125 Long Ridge Road brings its bookshelves, bedrooms and family spaces into conversation with the land outside.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+            "twitterTitle": "We Love This Listing: A two-storey library at a Danbury estate | Love Our Listings",
+            "twitterDescription": "The main house at 125 Long Ridge Road brings its bookshelves, bedrooms and family spaces into conversation with the land outside.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1001,8 +970,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/befb1915bb0be7765272.jpg",
-                "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds",
+                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
+                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
                 "native": [
                   1600,
                   900
@@ -1019,13 +988,13 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/befb1915bb0be7765272.jpg",
+            "src": "/images/source-properties/57879b27ab73590233c3.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Grangewood House in Fairlight, with its stone facade and surrounding grounds"
+            "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "5ecc7fc574dcad6b431f3115febf9312828aef22f49ae492ccac66a3c602b9cb",
+          "screenshotSha256": "c362a7826987919cb676bd9c4375e679d9d922f4dc9fc90c246b834b5eed323d",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
@@ -1035,12 +1004,12 @@
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 294
+              "textLength": 500
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 240
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1051,11 +1020,67 @@
       "status": "passed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-acreage-2026-11-08-9ab7957e25",
-        "publishedAt": "2026-11-19T10:56:10-07:00",
-        "image": "/images/source-properties/befb1915bb0be7765272.jpg"
+        "slug": "we-love-acreage-2026-11-19-5c3069b40c",
+        "publishedAt": "2026-11-20T08:27:16-07:00",
+        "image": "/images/source-properties/57879b27ab73590233c3.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-acreage-2026-11-19-5c3069b40c",
+          "image": "/images/source-properties/57879b27ab73590233c3.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-12-c01394732c",
+          "image": "/images/source-properties/af3d58a7fd7f1a3d0130.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-penthouses-2026-11-19-9d290edaa5",
+          "image": "/images/source-properties/5cc6750930fbce908613.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-18-ca7a1d2747",
+          "image": "/images/source-properties/277aa7c409c8ddcf91d3.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-ranches-2026-11-11-0fcb4f734c",
+          "image": "/images/source-properties/c4461ec8440c731d4a3d.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-20-28a81bc628",
+          "image": "/images/source-properties/5ee7a4d0a0c1493d4e9f.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-waterfront-2026-11-13-04c032fb3d",
+          "image": "/images/source-properties/c962d6ac269eddf9ecd6.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-beach-properties-2026-11-16-14a06b730d",
+          "image": "/images/source-properties/951b87355a3db3055628.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-acreage-2026-11-08-9ab7957e25",
           "image": "/images/source-properties/befb1915bb0be7765272.jpg",
@@ -1400,23 +1425,23 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14639274584,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760029362/artifacts/14639484461",
+      "artifactId": 14642577544,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763736425/artifacts/14642657510",
       "fresh": true,
-      "expiresAt": "2026-11-20T15:37:42.422000+00:00",
+      "expiresAt": "2026-11-20T15:59:58.946000+00:00",
       "green": true
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-20T15:14:38.249780+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44761274175",
+      "checkedAt": "2026-11-20T15:29:25.866753+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763744794",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "19660c07a0105ca1302029b75a0fb4f9919dc6a7",
+        "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1424,7 +1449,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760888712"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552"
       },
       "verified": false,
       "status": "failed",
@@ -1432,18 +1457,18 @@
         "publisher-item-check-valves-held; intake-continues",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760888712",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760888712",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
       "publisherOutcome": "published-and-verified-with-blockers",
-      "publisherReceiptAgeSeconds": 99.665218,
+      "publisherReceiptAgeSeconds": 102.638578,
       "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-20T15:12:59.093317+00:00",
+        "checkedAt": "2026-11-20T15:27:43.821792+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 100,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -1471,7 +1496,8 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "candidate-admitted": 6,
+              "candidate-admitted": 5,
+              "already-published": 1,
               "not-individual-property": 4
             }
           },
@@ -1497,10 +1523,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 21,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 21
             }
           },
           {
@@ -1514,22 +1540,21 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 4,
-        "candidatesConsidered": 21,
-        "inScopeQueueCandidates": 20,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 17,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 18,
+        "inScopeQueueCandidates": 17,
+        "attemptedThisRun": 3,
+        "skippedThisRun": 15,
         "outcomes": {
           "not-individual-property": 1,
-          "stored-awaiting-verification": 3,
+          "quarantined-retry-exhausted": 10,
+          "stored-awaiting-verification": 2,
           "duplicate-property": 1,
           "attempt-failed": 1,
-          "quarantined-retry-exhausted": 10,
-          "deferred-attempt-budget": 3,
-          "retry-cooldown": 2
+          "retry-cooldown": 3
         },
-        "newFeaturesStored": 3,
-        "verifiedPublicationsThisRun": 3,
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -1545,10 +1570,22 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.conciergeauctions.com/blog/le-paradis-a-one-of-a-kind-st-john-estate-steps-from-cinnamon-bay-on-the-north-shore-to-sell-via-concierge-auctions",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceId": "robb-property",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.conciergeauctions.com/blog/exclusive-belvedere-island-estate-with-golden-gate-bridge-views-to-sell-via-concierge-auctions",
             "sourceId": "reviewed-concierge-auctions",
-            "title": "\u201cLe Paradis,\u201d A One-of-a-Kind St. John Estate Steps from Cinnamon Bay On The North Shore, to Sell via Concierge Auctions",
-            "collection": "beach-properties",
+            "title": "Exclusive Belvedere Island Estate with Golden Gate Bridge Views to Sell via Concierge Auctions",
+            "collection": "mansions",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
             "checks": 1,
@@ -1557,15 +1594,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/the-quirkiest-homes-for-sale-in-britain-from-a-converted-underground-reservoir-to-a-cavernous-chapel-on-the-sea",
-            "sourceId": "countrylife-property",
-            "title": "A Cowes chapel with a working waterfront past",
-            "collection": "waterfront",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+            "sourceId": "robb-property",
+            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+            "collection": "penthouses",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1581,34 +1618,22 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/tribeca-penthouse-with-rooftop-terrace-1238847765",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
             "sourceId": "robb-property",
-            "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
-            "collection": "penthouses",
-            "outcome": "attempt-failed",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-20T21:12:28.051902+00:00",
-            "reason": "Reviewed exact-property media evidence changed",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/you-will-inevitably-throw-away-something-you-later-think-you-needed-the-truth-is-you-probably-didnt-how-to-turn-downsizing-into-an-art-form",
-            "sourceId": "countrylife-property",
-            "title": "Denes House opens from a village street to a valley view",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-            "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
             "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -1629,34 +1654,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
             "sourceId": "robb-property",
-            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-            "collection": "penthouses",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "The Georgian house behind Nanteos\u2019s hotel years",
+            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 0,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-20T15:12:28.051902+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-            "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
-            "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -1669,35 +1670,11 @@
             "sourceId": "robb-property",
             "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
             "collection": "acreage",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-20T15:12:28.051902+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "checks": 4,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
-            "sourceId": "robb-property",
-            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1753,11 +1730,11 @@
             "sourceId": "robb-property",
             "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-20T15:12:28.051902+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "Reviewed exact-property media evidence changed",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1783,27 +1760,39 @@
             "nextAttemptAt": "2026-11-20T20:01:28.390298+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "The Georgian house behind Nanteos\u2019s hotel years",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-20T21:19:53.544742+00:00",
+            "reason": "HTTP Error 403: Forbidden",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "apiAccessReceipt": {
-        "runId": "44760888712",
+        "runId": "44763382552",
         "status": "passed",
-        "checkedAt": "2026-11-20T15:12:24.956849+00:00"
+        "checkedAt": "2026-11-20T15:27:13.604500+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-beach-properties-2026-11-16-14a06b730d",
+          "id": "loveourlistings.com:we-love-mansions-2026-11-12-c01394732c",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: Le Paradis looks out over Cinnamon Bay",
-          "publishedAt": "2026-11-20T08:12:28-07:00",
-          "verifiedAt": "2026-11-20T15:13:49.656848+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-16-14a06b730d/",
+          "title": "We Love This Listing: An indoor pool opens to the lawn on Belvedere Island",
+          "publishedAt": "2026-11-20T08:27:16-07:00",
+          "verifiedAt": "2026-11-20T15:28:33.135931+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-c01394732c/",
           "status": "done",
-          "checkedAt": "2026-11-20T15:13:49.762001+00:00"
+          "checkedAt": "2026-11-20T15:28:33.201306+00:00"
         },
-        "ageSeconds": 130.926252,
+        "ageSeconds": 130.679348,
         "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -1811,10 +1800,10 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "9709f8a5a5a6fb361ffb85b57c5ed1355f23b3f5",
+        "sourceCommit": "2602100e77bb72f41354a909ceb6c2b862084a2d",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-28a81bc628/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -1836,19 +1825,19 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14641079710,
+      "artifactId": 14641378906,
       "fresh": true,
-      "expiresAt": "2026-11-20T15:44:38.249780+00:00",
+      "expiresAt": "2026-11-20T15:59:25.866753+00:00",
       "green": false
     },
     "watchdog": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-20T15:15:37.203Z",
-      "runId": "12971c5d-49a9-4b66-8dad-3fddfedc375d",
+      "checkedAt": "2026-11-20T15:30:37.327Z",
+      "runId": "9072a772-aa5d-42b6-a9af-72092a7eaa1b",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_596NH4YZ9ExVj1Y9WBoeRsJWVXaY:12971c5d-49a9-4b66-8dad-3fddfedc375d",
+      "runRef": "vercel:dpl_CkJbaUKsJMn1R558z7fBA3aLzq1y:9072a772-aa5d-42b6-a9af-72092a7eaa1b",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -1860,41 +1849,44 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "19660c07a0105ca1302029b75a0fb4f9919dc6a7",
+        "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
       "verified": false,
       "findings": [
+        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
       "issues": [
+        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760888712",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44759051757",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44761274175",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
-        "expectedEventId": "loveourlistings.com:four-roles:ea7175611264cd63a30f4327",
+        "expectedEventId": "loveourlistings.com:four-roles:868eb7f3e0218ad8070a54ab",
         "deliveredAt": null,
         "pullDelivery": null,
         "ownerReadVerified": false
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "12971c5d-49a9-4b66-8dad-3fddfedc375d",
+      "probeRunId": "9072a772-aa5d-42b6-a9af-72092a7eaa1b",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
-          "id": "loveourlistings.com:four-roles:ea7175611264cd63a30f4327",
-          "fingerprint": "d0b96bd499e7200c81a3de59",
-          "blockedSince": "2026-11-20T14:45:37.348Z",
+          "id": "loveourlistings.com:four-roles:868eb7f3e0218ad8070a54ab",
+          "fingerprint": "7f778c97b8a176f2abb91472",
+          "blockedSince": "2026-11-20T15:30:37.327Z",
           "site": "loveourlistings.com",
           "type": "task_blocked",
           "cause": [
+            "supervisor-silent-stale-or-missing",
             "supervisor-reports-unresolved-failures",
             "actual-owner-alert-delivery-unverified"
           ],
@@ -1902,12 +1894,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-20T15:15:37.203Z"
+          "checkedAt": "2026-11-20T15:30:37.327Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-20T15:45:37.203000+00:00",
+      "expiresAt": "2026-11-20T16:00:37.327000+00:00",
       "green": false
     }
   },
@@ -1916,12 +1908,13 @@
   "scope": "Actual site-specific runtime/artifact receipts; no config-only or manual-publication green",
   "ownerAlerts": [
     {
-      "id": "loveourlistings.com:four-roles:ea7175611264cd63a30f4327",
-      "fingerprint": "d0b96bd499e7200c81a3de59",
-      "blockedSince": "2026-11-20T14:45:37.348Z",
+      "id": "loveourlistings.com:four-roles:868eb7f3e0218ad8070a54ab",
+      "fingerprint": "7f778c97b8a176f2abb91472",
+      "blockedSince": "2026-11-20T15:30:37.327Z",
       "site": "loveourlistings.com",
       "type": "task_blocked",
       "cause": [
+        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
@@ -1929,24 +1922,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-20T15:15:37.203Z"
+      "checkedAt": "2026-11-20T15:30:37.327Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "2602100e77bb72f41354a909ceb6c2b862084a2d",
+      "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T15:27:43.821792+00:00",
+      "observedAt": "2026-11-20T15:35:00.251677+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44764600876",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44764600876",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -1968,22 +1961,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44764600876"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "a3ef8d4061b6830be451e41878acecc83f085e41",
+      "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
       "check": "role:visual-checker",
       "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T15:07:42.422Z",
+      "observedAt": "2026-11-20T15:29:58.946Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760029362",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760029362/artifacts/14639274584",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763736425",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763736425/artifacts/14642577544",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -1991,10 +1984,10 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760029362/artifacts/14639484461",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760029362/artifacts/14639484461",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763736425/artifacts/14642657510",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763736425/artifacts/14642657510",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
+        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
         "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/"
       ]
@@ -2002,17 +1995,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "19660c07a0105ca1302029b75a0fb4f9919dc6a7",
+      "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T15:14:38.249780+00:00",
+      "observedAt": "2026-11-20T15:29:25.866753+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44761274175",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44761274175/artifacts/14641079710",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763744794",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763744794/artifacts/14641378906",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2023,22 +2016,22 @@
         "publisher-item-check-valves-held; intake-continues",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44760888712",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44763382552",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "19660c07a0105ca1302029b75a0fb4f9919dc6a7",
+      "sourceCommit": "c6f36ba668b2df7f59c1282245065f424cbacb81",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T15:15:37.203Z",
+      "observedAt": "2026-11-20T15:30:37.327Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_596NH4YZ9ExVj1Y9WBoeRsJWVXaY:12971c5d-49a9-4b66-8dad-3fddfedc375d",
+      "runRef": "vercel:dpl_CkJbaUKsJMn1R558z7fBA3aLzq1y:9072a772-aa5d-42b6-a9af-72092a7eaa1b",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2047,10 +2040,11 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
+        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44759051757",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44761274175",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
