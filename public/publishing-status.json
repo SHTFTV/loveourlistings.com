@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T18:16:53.867404+00:00",
+  "updatedAt": "2026-11-20T18:22:55.196375+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "cb59f039793d6eec5cec768ec07044d84b8b4aa5",
+    "sourceCommit": "73cdc04b84e942556a43ebb392e42512eac74c09",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44790322117",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44791283482",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -95,19 +95,19 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
       "propertyId": null,
-      "collection": "mansions",
-      "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+      "collection": "acreage",
+      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
       "propertyId": null,
-      "collection": "acreage",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+      "collection": "mansions",
+      "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -149,13 +149,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
-      "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
       "propertyId": null,
       "collection": "mansions",
@@ -181,6 +174,15 @@
       "reason": "Reviewed exact-property media evidence changed",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "health": "degraded",
@@ -191,12 +193,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-20T18:16:53.778791+00:00",
+    "checkedAt": "2026-11-20T18:22:55.118991+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 4,
-    "feedItemsParsed": 79,
+    "feedsHealthy": 5,
+    "feedItemsParsed": 102,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -205,10 +207,6 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
-      },
-      {
-        "sourceId": "google-waterfront",
-        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -255,9 +253,11 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 0,
+        "itemsParsed": 23,
         "parseRejected": 0,
-        "dispositions": {}
+        "dispositions": {
+          "discovery-original-link-required": 23
+        }
       },
       {
         "sourceId": "countrylife-property",
@@ -273,13 +273,12 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 16,
     "inScopeQueueCandidates": 15,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 15,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 16,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 11,
+      "quarantined-retry-exhausted": 12,
       "duplicate-property": 1,
-      "attempt-failed": 1,
       "retry-cooldown": 2
     },
     "newFeaturesStored": 0,
@@ -323,18 +322,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-        "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
         "sourceId": "robb-property",
         "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -345,6 +332,18 @@
         "nextAttemptAt": null,
         "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceId": "robb-property",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       },
       {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -359,10 +358,10 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
         "sourceId": "robb-property",
-        "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-        "collection": "mansions",
+        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+        "collection": "acreage",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -371,10 +370,10 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
         "sourceId": "robb-property",
-        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-        "collection": "acreage",
+        "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
+        "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -431,18 +430,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
-        "sourceId": "robb-property",
-        "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
         "sourceId": "robb-property",
         "title": "Inside Billy Joel\u2019s Expansive Property Portfolio",
@@ -477,52 +464,64 @@
         "nextAttemptAt": null,
         "reason": "Reviewed exact-property media evidence changed",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
+        "sourceId": "robb-property",
+        "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-20T18:16:24.127960+00:00",
+  "lastRunAt": "2026-11-20T18:22:26.320605+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
-      "status": "error",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
-      "items": 0
+      "status": "ok",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
+      "items": 23
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T18:16:24.127960+00:00",
+      "fetchedAt": "2026-11-20T18:22:26.320605+00:00",
       "items": 29
     }
   ],
@@ -564,9 +563,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 68,
-  "quarantinedItems": 2,
+  "googleDiscoveryItems": 1,
+  "duplicatesFiltered": 90,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-12-c01394732c",
