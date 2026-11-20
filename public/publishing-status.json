@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T12:04:40.649687+00:00",
+  "updatedAt": "2026-11-20T12:10:39.601225+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "25851a2f1dd017d576e4da0bff7c66051f2508dd",
+    "sourceCommit": "c1471a62a1a1c0d62f94e16e0a35bb8acb500490",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44731946525",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44732773654",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -69,12 +69,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/tribeca-penthouse-with-rooftop-terrace-1238847765",
+      "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-20T12:09:56.127795+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
@@ -105,12 +103,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-20T12:09:56.127795+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
@@ -159,12 +155,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
+      "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
       "propertyId": null,
       "collection": "mansions",
-      "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-20T12:09:56.127795+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
@@ -193,7 +187,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-20T12:04:40.560676+00:00",
+    "checkedAt": "2026-11-20T12:10:39.525883+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -272,13 +266,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 16,
     "inScopeQueueCandidates": 15,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 16,
+    "attemptedThisRun": 3,
+    "skippedThisRun": 13,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 9,
       "duplicate-property": 1,
-      "retry-cooldown": 5
+      "attempt-failed": 3,
+      "retry-cooldown": 2
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -325,10 +320,10 @@
         "sourceId": "robb-property",
         "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
         "collection": "penthouses",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 2,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-20T12:09:56.127795+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 3,
+        "checks": 3,
+        "nextAttemptAt": "2026-11-20T18:10:21.288659+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -373,10 +368,10 @@
         "sourceId": "robb-property",
         "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
         "collection": "penthouses",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-20T12:09:56.127795+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -445,10 +440,10 @@
         "sourceId": "robb-property",
         "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 2,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-20T12:09:56.127795+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 3,
+        "checks": 3,
+        "nextAttemptAt": "2026-11-20T18:10:21.288659+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -478,49 +473,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-20T12:04:08.310616+00:00",
+  "lastRunAt": "2026-11-20T12:10:21.288659+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 20
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T12:04:08.310616+00:00",
+      "fetchedAt": "2026-11-20T12:10:21.288659+00:00",
       "items": 29
     }
   ],
@@ -564,7 +559,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 78,
-  "quarantinedItems": 1,
+  "quarantinedItems": 4,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-08-59f8456f52",
