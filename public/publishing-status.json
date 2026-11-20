@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T15:21:17.312762+00:00",
+  "updatedAt": "2026-11-20T15:27:43.886539+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "b77af6c027e8e01c243c751866b64222cf7f4e92",
+    "sourceCommit": "2602100e77bb72f41354a909ceb6c2b862084a2d",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44761258575",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44762516901",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -59,15 +59,6 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
-      "propertyId": null,
-      "collection": "penthouses",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
       "collection": "waterfront",
@@ -77,11 +68,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-      "title": "The Georgian house behind Nanteos\u2019s hotel years",
-      "propertyId": "plas-nanteos-rhydyfelin-ceredigion",
-      "collection": "mansions",
-      "reason": "HTTP Error 403: Forbidden"
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -156,6 +149,13 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
+      "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
+      "propertyId": null,
+      "collection": "mansions",
+      "reason": "Reviewed exact-property media evidence changed"
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
       "propertyId": null,
       "collection": "mansions",
@@ -172,6 +172,15 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-20T20:01:28.390298+00:00"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+      "propertyId": "plas-nanteos-rhydyfelin-ceredigion",
+      "collection": "mansions",
+      "title": "The Georgian house behind Nanteos\u2019s hotel years",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-20T21:19:53.544742+00:00"
     }
   ],
   "health": "degraded",
@@ -182,9 +191,9 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-20T15:20:24.487775+00:00",
+    "checkedAt": "2026-11-20T15:27:43.821792+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
     "feedItemsParsed": 100,
@@ -215,7 +224,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "candidate-admitted": 6,
+          "candidate-admitted": 5,
+          "already-published": 1,
           "not-individual-property": 4
         }
       },
@@ -258,22 +268,21 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 2,
-    "candidatesConsidered": 20,
-    "inScopeQueueCandidates": 19,
-    "attemptedThisRun": 4,
-    "skippedThisRun": 16,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 18,
+    "inScopeQueueCandidates": 17,
+    "attemptedThisRun": 3,
+    "skippedThisRun": 15,
     "outcomes": {
       "not-individual-property": 1,
-      "stored-awaiting-verification": 3,
       "quarantined-retry-exhausted": 10,
-      "attempt-failed": 1,
+      "stored-awaiting-verification": 2,
       "duplicate-property": 1,
-      "deferred-attempt-budget": 2,
-      "retry-cooldown": 2
+      "attempt-failed": 1,
+      "retry-cooldown": 3
     },
-    "newFeaturesStored": 3,
-    "verifiedPublicationsThisRun": 3,
+    "newFeaturesStored": 2,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -289,22 +298,22 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.conciergeauctions.com/blog/577-acre-historic-california-ranch-winery-once-owned-by-famed-game-show-host-alex-trebek-to-sell-via-concierge-auctions",
-        "sourceId": "reviewed-concierge-auctions",
-        "title": "577-Acre Historic California Ranch-Winery Once Owned by Famed Game Show Host Alex Trebek to Sell via Concierge Auctions",
-        "collection": "ranches",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+        "sourceId": "robb-property",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "collection": "waterfront",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
         "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://thespaces.com/christine-mcvie-s-former-country-home-is-for-sale-in-kent/",
-        "sourceId": "reviewed-the-spaces",
-        "title": "Christine McVie\u2019s Kent country home is for sale - The Spaces",
-        "collection": "acreage",
+        "sourceUrl": "https://www.conciergeauctions.com/blog/exclusive-belvedere-island-estate-with-golden-gate-bridge-views-to-sell-via-concierge-auctions",
+        "sourceId": "reviewed-concierge-auctions",
+        "title": "Exclusive Belvedere Island Estate with Golden Gate Bridge Views to Sell via Concierge Auctions",
+        "collection": "mansions",
         "outcome": "stored-awaiting-verification",
         "failedAttempts": 0,
         "checks": 1,
@@ -325,30 +334,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-        "sourceId": "robb-property",
-        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-        "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-        "sourceId": "countrylife-property",
-        "title": "The Georgian house behind Nanteos\u2019s hotel years",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-20T21:19:53.544742+00:00",
-        "reason": "HTTP Error 403: Forbidden",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
         "sourceId": "robb-property",
         "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -359,18 +344,6 @@
         "nextAttemptAt": null,
         "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/tribeca-penthouse-with-rooftop-terrace-1238847765",
-        "sourceId": "robb-property",
-        "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
-        "collection": "penthouses",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 4,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
       },
       {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -425,11 +398,11 @@
         "sourceId": "robb-property",
         "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
         "collection": "acreage",
-        "outcome": "deferred-attempt-budget",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-20T15:19:53.544742+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "checks": 4,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -485,11 +458,11 @@
         "sourceId": "robb-property",
         "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
         "collection": "mansions",
-        "outcome": "deferred-attempt-budget",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-20T15:19:53.544742+00:00",
-        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "outcome": "attempt-failed",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "Reviewed exact-property media evidence changed",
         "duplicateOfArticleSlug": null
       },
       {
@@ -515,52 +488,64 @@
         "nextAttemptAt": "2026-11-20T20:01:28.390298+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+        "sourceId": "countrylife-property",
+        "title": "The Georgian house behind Nanteos\u2019s hotel years",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-20T21:19:53.544742+00:00",
+        "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-20T15:19:53.544742+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-20T15:27:16.170810+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 21
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-20T15:19:53.544742+00:00",
+      "fetchedAt": "2026-11-20T15:27:16.170810+00:00",
       "items": 29
     }
   ],
@@ -573,25 +558,25 @@
     },
     {
       "name": "mansions",
-      "eligible": 10,
+      "eligible": 11,
+      "newFeatures": 1,
+      "status": "built-for-publication"
+    },
+    {
+      "name": "penthouses",
+      "eligible": 1,
       "newFeatures": 0,
       "status": "blocked-eligible-property"
     },
     {
-      "name": "penthouses",
-      "eligible": 2,
-      "newFeatures": 1,
-      "status": "built-for-publication"
-    },
-    {
       "name": "ranches",
-      "eligible": 1,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 0,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "acreage",
-      "eligible": 4,
+      "eligible": 3,
       "newFeatures": 1,
       "status": "built-for-publication"
     },
@@ -603,7 +588,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 82,
+  "duplicatesFiltered": 86,
   "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
