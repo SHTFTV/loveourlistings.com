@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-20T23:04:10.532145+00:00",
+  "checkedAt": "2026-11-20T23:10:12.034659+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "4c64b9b3913089e6336c0c6dba0a4823f63d625f",
+    "sourceCommit": "58d919805597d636dd59f6a85a079bbaa815289f",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-20T23:03:59.313576+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44833874149",
+      "checkedAt": "2026-11-20T23:09:57.426817+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44834649854",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "8b86a3d70ff22e871552d6a7b212c100eb5fd56a",
+        "sourceCommit": "96df9cc9545f31b370aec4607fc0f897a3a616c4",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-20T23:03:59.313576+00:00",
+        "checkedAt": "2026-11-20T23:09:57.426817+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -120,17 +120,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 17,
         "inScopeQueueCandidates": 16,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 16,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 17,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 12,
           "duplicate-property": 1,
-          "attempt-failed": 1,
-          "retry-cooldown": 2
+          "retry-cooldown": 3
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -185,14 +184,14 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-21T05:03:32.610268+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -213,18 +212,6 @@
             "sourceId": "robb-property",
             "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
             "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -339,12 +326,24 @@
             "nextAttemptAt": "2026-11-21T03:21:59.593916+00:00",
             "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+            "sourceId": "robb-property",
+            "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-21T05:03:32.610268+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-20T23:33:59.313576+00:00",
+      "expiresAt": "2026-11-20T23:39:57.426817+00:00",
       "green": false
     },
     "visual": {
@@ -1913,17 +1912,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "8b86a3d70ff22e871552d6a7b212c100eb5fd56a",
+      "sourceCommit": "96df9cc9545f31b370aec4607fc0f897a3a616c4",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T23:03:59.313576+00:00",
+      "observedAt": "2026-11-20T23:09:57.426817+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44833874149",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44833874149",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44834649854",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44834649854",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -1945,7 +1944,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44833874149"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44834649854"
     },
     {
       "site": "loveourlistings.com",
@@ -1972,8 +1971,8 @@
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44832423475/artifacts/14677526389",
       "pageUrls": [
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/"
+        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
