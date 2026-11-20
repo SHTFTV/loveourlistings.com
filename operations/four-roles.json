@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-20T00:09:38.446984+00:00",
+  "checkedAt": "2026-11-20T00:15:34.062077+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "d8d36afd60eca2b65bd2d9800467603b29e38959",
+    "sourceCommit": "672d37502e9921c8478050a67644c27493d2f546",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,18 +13,18 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-20T00:09:25.874391+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589",
+      "checkedAt": "2026-11-20T00:15:22.437197+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44644278752",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "1b0ac3601e9d3ae80e66970dce1a146c85b20059",
+        "sourceCommit": "20d21a379953e7930e8e5740e8ec10cfabfe8604",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
-      "unattendedExecution": false,
+      "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": false
       },
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-20T00:09:25.874391+00:00",
+        "checkedAt": "2026-11-20T00:15:22.437197+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -119,17 +119,17 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 2,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 16,
         "inScopeQueueCandidates": 15,
         "attemptedThisRun": 4,
         "skippedThisRun": 12,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 6,
-          "attempt-failed": 4,
+          "quarantined-retry-exhausted": 7,
+          "retry-cooldown": 3,
           "duplicate-property": 1,
-          "deferred-attempt-budget": 4
+          "attempt-failed": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -164,7 +164,7 @@
             "sourceId": "robb-property",
             "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
+            "outcome": "retry-cooldown",
             "failedAttempts": 1,
             "checks": 1,
             "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
@@ -172,14 +172,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -212,7 +212,7 @@
             "sourceId": "robb-property",
             "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
+            "outcome": "retry-cooldown",
             "failedAttempts": 3,
             "checks": 3,
             "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
@@ -220,9 +220,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -236,18 +236,6 @@
             "sourceId": "robb-property",
             "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
             "collection": "acreage",
-            "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/master-shipwrights-house-in-london-1238836775",
-            "sourceId": "robb-property",
-            "title": "Mario Testino Shot Kate Moss for \u2018Vogue\u2019 Inside This Historic $6 Million Mansion in London",
-            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -284,11 +272,11 @@
             "sourceId": "robb-property",
             "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-20T06:15:03.452769+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -296,11 +284,11 @@
             "sourceId": "robb-property",
             "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -308,11 +296,11 @@
             "sourceId": "sothebys-property",
             "title": "Inside a Hidden Hills Hideaway",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -320,18 +308,30 @@
             "sourceId": "robb-property",
             "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
             "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-20T06:15:03.452769+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
+            "sourceId": "robb-property",
+            "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
             "failedAttempts": 1,
             "checks": 1,
-            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-20T00:39:25.874391+00:00",
+      "expiresAt": "2026-11-20T00:45:22.437197+00:00",
       "green": false
     },
     "visual": {
@@ -1277,13 +1277,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-18T05:45:18.408186+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246413797",
+      "checkedAt": "2026-11-20T00:09:44.623053+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643562198",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
-        "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "2951920eae09bf4cb1255691f28f292d69dfc4d3",
+        "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
+        "sourceCommit": "20d21a379953e7930e8e5740e8ec10cfabfe8604",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1291,27 +1291,29 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246357791"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589"
       },
       "verified": false,
       "status": "failed",
       "findings": [
+        "publisher-unattended-proof-missing",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
-        "some-source-feeds-failed"
+        "some-source-feeds-failed",
+        "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246357791",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246357791",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 20.494758,
+      "publisherReceiptAgeSeconds": 19.186866,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-18T05:44:58.492459+00:00",
+        "checkedAt": "2026-11-20T00:09:25.874391+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 98,
+        "feedItemsParsed": 103,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -1328,10 +1330,10 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
+              "not-individual-property": 6,
               "candidate-admitted": 1,
-              "not-individual-property": 5,
               "already-published": 1,
-              "outside-lookback": 3
+              "outside-lookback": 2
             }
           },
           {
@@ -1339,8 +1341,8 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "candidate-admitted": 7,
-              "not-individual-property": 3
+              "candidate-admitted": 5,
+              "not-individual-property": 5
             }
           },
           {
@@ -1365,10 +1367,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 19,
+            "itemsParsed": 24,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 19
+              "discovery-original-link-required": 24
             }
           },
           {
@@ -1376,22 +1378,23 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
-              "already-published": 8,
-              "not-individual-property": 5,
-              "outside-lookback": 16
+              "already-published": 10,
+              "not-individual-property": 4,
+              "outside-lookback": 15
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 14,
-        "inScopeQueueCandidates": 13,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 14,
+        "newCandidatesDiscovered": 2,
+        "candidatesConsidered": 16,
+        "inScopeQueueCandidates": 15,
+        "attemptedThisRun": 4,
+        "skippedThisRun": 12,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 7,
+          "quarantined-retry-exhausted": 6,
+          "attempt-failed": 4,
           "duplicate-property": 1,
-          "retry-cooldown": 5
+          "deferred-attempt-budget": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -1422,6 +1425,30 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/tribeca-penthouse-with-rooftop-terrace-1238847765",
+            "sourceId": "robb-property",
+            "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
+            "collection": "penthouses",
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
+            "sourceId": "robb-property",
+            "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
+            "collection": "mansions",
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
             "sourceId": "robb-property",
             "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
@@ -1432,18 +1459,6 @@
             "nextAttemptAt": null,
             "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -1458,14 +1473,38 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+            "sourceId": "robb-property",
+            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+            "collection": "penthouses",
+            "outcome": "attempt-failed",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-20T06:09:09.430359+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
             "sourceId": "robb-property",
             "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
             "collection": "acreage",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-18T09:08:36.919077+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -1494,18 +1533,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/witter-estate-bay-area-piedmont-1238838403",
-            "sourceId": "robb-property",
-            "title": "Inside an $8.3 Million Bay Area Home With Tudor Revival Grandeur",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
             "sourceId": "robb-property",
             "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
@@ -1518,27 +1545,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/george-sherman-house-florida-miami-beach-1238844775",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
             "sourceId": "robb-property",
-            "title": "A $170 Million Miami Beach Estate Matches Mark Zuckerberg\u2019s Miami-Dade Sale Record",
+            "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
+            "outcome": "deferred-attempt-budget",
             "failedAttempts": 1,
             "checks": 1,
-            "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/guy-dreier-palm-desert-bighorn-1238844635",
-            "sourceId": "robb-property",
-            "title": "A Striking Palm Desert Home Designed by Guy Dreier Can Be Yours for $15.9 Million",
-            "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-18T07:05:41.692543+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1546,11 +1561,11 @@
             "sourceId": "robb-property",
             "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-18T08:13:19.381969+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "outcome": "deferred-attempt-budget",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1558,44 +1573,56 @@
             "sourceId": "sothebys-property",
             "title": "Inside a Hidden Hills Hideaway",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-18T11:28:21.654976+00:00",
-            "reason": "HTTP Error 403: Forbidden",
+            "outcome": "deferred-attempt-budget",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
+            "sourceId": "robb-property",
+            "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
+            "collection": "mansions",
+            "outcome": "deferred-attempt-budget",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-20T00:09:09.430359+00:00",
+            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
             "duplicateOfArticleSlug": null
           }
         ]
       },
       "apiAccessReceipt": {
-        "runId": "44246357791",
+        "runId": "44643455589",
         "status": "passed",
-        "checkedAt": "2026-11-18T05:44:50.932512+00:00"
+        "checkedAt": "2026-11-20T00:09:06.530330+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-mansions-2026-11-17-b495434620",
+          "id": "loveourlistings.com:we-love-mansions-2026-11-08-59f8456f52",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: A Wiltshire Farmhouse Rethinking What Lies Behind Tradition",
-          "publishedAt": "2026-11-17T02:08:26-07:00",
-          "verifiedAt": "2026-11-17T09:09:34.248972+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
+          "title": "We Love This Listing: Highfield House makes room for separate stays",
+          "publishedAt": "2026-11-19T10:56:10-07:00",
+          "verifiedAt": "2026-11-19T18:01:26.005396+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-08-59f8456f52/",
           "status": "done",
-          "checkedAt": "2026-11-17T09:09:34.445721+00:00"
+          "checkedAt": "2026-11-19T18:01:26.151700+00:00"
         },
-        "ageSeconds": 74213.43555,
+        "ageSeconds": 22415.217979,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
-        "sha256": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
-        "sourceCommit": "a7584deea5abec4eea140badab66c133a0d521d7",
-        "trigger": "workflow_dispatch"
+        "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
+        "sourceCommit": "1363b16a32f65c7988b7087420dbfa62468833e6",
+        "trigger": "operator-assisted-recovery"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -1604,10 +1631,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44244507415",
-        "checkedAt": "2026-11-18T05:29:03.063Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246407270",
+        "checkedAt": "2026-11-18T05:45:38.104Z",
         "status": "passed",
-        "artifactId": 14399734890
+        "artifactId": 14402036472
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -1617,9 +1644,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14402445182,
-      "fresh": false,
-      "expiresAt": "2026-11-18T06:15:18.408186+00:00",
+      "artifactId": 14587732222,
+      "fresh": true,
+      "expiresAt": "2026-11-20T00:39:44.623053+00:00",
       "green": false
     },
     "watchdog": {
@@ -1733,21 +1760,21 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "1b0ac3601e9d3ae80e66970dce1a146c85b20059",
+      "sourceCommit": "20d21a379953e7930e8e5740e8ec10cfabfe8604",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T00:09:25.874391+00:00",
+      "observedAt": "2026-11-20T00:15:22.437197+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44644278752",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44644278752",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
-      "trigger": "workflow_dispatch",
+      "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
@@ -1765,7 +1792,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44644278752"
     },
     {
       "site": "loveourlistings.com",
@@ -1791,37 +1818,39 @@
       "desktopRenderRef": null,
       "phoneRenderRef": null,
       "pageUrls": [
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-b495434620/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "2951920eae09bf4cb1255691f28f292d69dfc4d3",
+      "sourceCommit": "20d21a379953e7930e8e5740e8ec10cfabfe8604",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-18T05:45:18.408186+00:00",
+      "observedAt": "2026-11-20T00:09:44.623053+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246413797",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246413797/artifacts/14402445182",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643562198",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643562198/artifacts/14587732222",
       "loadedRevision": 13,
-      "loadedHash": "73dbdf754a779b3f6f3d902f592221f640884819e4350bbb1b153f5c9612ffcd",
+      "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
+        "publisher-unattended-proof-missing",
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
-        "some-source-feeds-failed"
+        "some-source-feeds-failed",
+        "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44246357791",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44643455589",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
