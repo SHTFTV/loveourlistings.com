@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-20T21:34:21.402273+00:00",
+  "checkedAt": "2026-11-20T21:40:43.753531+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "0eda94acc78597c27a4d34f6b639873f8e08665e",
+    "sourceCommit": "10869463e8d906b8d90767b0d5af65529f304840",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-20T21:34:08.099587+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759",
+      "checkedAt": "2026-11-20T21:40:29.850224+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44822239967",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "ed852f871107158d174d9c71ac9372c09ecae916",
+        "sourceCommit": "eb21ed7172ff2970d6215ed57220d30b2505b8b8",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-20T21:34:08.099587+00:00",
+        "checkedAt": "2026-11-20T21:40:29.850224+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
-        "feedsHealthy": 5,
-        "feedItemsParsed": 103,
+        "feedsHealthy": 3,
+        "feedItemsParsed": 49,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -57,6 +57,14 @@
           {
             "sourceId": "christies-property",
             "reason": "DTD/entity declarations rejected"
+          },
+          {
+            "sourceId": "google-luxury",
+            "reason": "HTTP 503"
+          },
+          {
+            "sourceId": "google-waterfront",
+            "reason": "HTTP 503"
           }
         ],
         "sourceDispositions": [
@@ -95,19 +103,15 @@
           },
           {
             "sourceId": "google-luxury",
-            "itemsParsed": 30,
+            "itemsParsed": 0,
             "parseRejected": 0,
-            "dispositions": {
-              "discovery-original-link-required": 30
-            }
+            "dispositions": {}
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 24,
+            "itemsParsed": 0,
             "parseRejected": 0,
-            "dispositions": {
-              "discovery-original-link-required": 24
-            }
+            "dispositions": {}
           },
           {
             "sourceId": "countrylife-property",
@@ -331,7 +335,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-20T22:04:08.099587+00:00",
+      "expiresAt": "2026-11-20T22:10:29.850224+00:00",
       "green": false
     },
     "visual": {
@@ -1435,13 +1439,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-20T21:22:42.059412+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819766297",
+      "checkedAt": "2026-11-20T21:34:27.954251+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821500105",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "825e024164d24ad90b127ef69fcae63365129003",
+        "sourceCommit": "eb21ed7172ff2970d6215ed57220d30b2505b8b8",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1449,7 +1453,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819646291"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759"
       },
       "verified": false,
       "status": "failed",
@@ -1458,18 +1462,18 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819646291",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819646291",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 20.732056,
+      "publisherReceiptAgeSeconds": 20.653717,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-20T21:22:21.754859+00:00",
+        "checkedAt": "2026-11-20T21:34:08.099587+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 103,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -1524,10 +1528,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 24,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 24
             }
           },
           {
@@ -1544,14 +1548,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 16,
         "inScopeQueueCandidates": 15,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 15,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 16,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 12,
           "duplicate-property": 1,
-          "attempt-failed": 1,
-          "retry-cooldown": 1
+          "retry-cooldown": 2
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -1702,18 +1705,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "The Georgian house behind Nanteos\u2019s hotel years",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-21T03:21:59.593916+00:00",
-            "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
             "sourceId": "robb-property",
             "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
@@ -1748,13 +1739,25 @@
             "nextAttemptAt": "2026-11-21T02:04:40.286726+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "The Georgian house behind Nanteos\u2019s hotel years",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-21T03:21:59.593916+00:00",
+            "reason": "HTTP Error 403: Forbidden",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "apiAccessReceipt": {
-        "runId": "44819646291",
+        "runId": "44821387759",
         "status": "passed",
-        "checkedAt": "2026-11-20T21:21:57.124919+00:00"
+        "checkedAt": "2026-11-20T21:33:45.444867+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -1768,7 +1771,7 @@
           "status": "done",
           "checkedAt": "2026-11-20T15:28:33.201306+00:00"
         },
-        "ageSeconds": 21326.622499,
+        "ageSeconds": 22033.129523,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -1776,7 +1779,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "031f3a5bc2929293e59b953d70c6ed1a1e169e1e",
+        "sourceCommit": "825e024164d24ad90b127ef69fcae63365129003",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
@@ -1788,10 +1791,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44817042406",
-        "checkedAt": "2026-11-20T21:04:59.929Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819758654",
+        "checkedAt": "2026-11-20T21:23:00.074Z",
         "status": "passed",
-        "artifactId": 14669199100
+        "artifactId": 14671232598
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -1801,9 +1804,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14672150273,
+      "artifactId": 14671942613,
       "fresh": true,
-      "expiresAt": "2026-11-20T21:52:42.059412+00:00",
+      "expiresAt": "2026-11-20T22:04:27.954251+00:00",
       "green": false
     },
     "watchdog": {
@@ -1901,17 +1904,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "ed852f871107158d174d9c71ac9372c09ecae916",
+      "sourceCommit": "eb21ed7172ff2970d6215ed57220d30b2505b8b8",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T21:34:08.099587+00:00",
+      "observedAt": "2026-11-20T21:40:29.850224+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44822239967",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44822239967",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -1933,7 +1936,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44822239967"
     },
     {
       "site": "loveourlistings.com",
@@ -1959,25 +1962,25 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819758654/artifacts/14671646815",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819758654/artifacts/14671646815",
       "pageUrls": [
+        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-19-5c3069b40c/",
-        "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "825e024164d24ad90b127ef69fcae63365129003",
+      "sourceCommit": "eb21ed7172ff2970d6215ed57220d30b2505b8b8",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T21:22:42.059412+00:00",
+      "observedAt": "2026-11-20T21:34:27.954251+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819766297",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819766297/artifacts/14672150273",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821500105",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821500105/artifacts/14671942613",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -1989,7 +1992,7 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44819646291",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44821387759",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
