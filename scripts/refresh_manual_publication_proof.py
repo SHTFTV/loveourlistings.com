@@ -1,10 +1,12 @@
 """Project actual independently verified publications into fresh public counters."""
 import json
+import sys
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
+cloud = '--cloud' in sys.argv
 zone = ZoneInfo('America/Dawson_Creek')
 day = datetime.now(zone).date().isoformat()
 state = json.loads((ROOT / 'operations/publisher-state.json').read_text())
@@ -23,12 +25,13 @@ proof = {'schemaVersion': 1, 'site': 'loveourlistings.com', 'date': day, 'timezo
          'latestVerifiedAt': max((a['verifiedAt'] for a in verified.values()), default=None),
          'latestPublishedAt': latest['publishedAt'] if latest else None,
          'articles': today, 'verificationScope': 'Actual public article text/date/source plus journal manifest, index, feed and sitemap; source dates remain separate from new publication dates.',
-         'executionMode': 'operator-assisted-recovery',
+         'executionMode': 'existing-cloud-publisher' if cloud else 'operator-assisted-recovery',
          'unattendedExecutionVerifiedByThisRecovery': False}
 (ROOT / 'public/daily-publication-proof.json').write_text(json.dumps(proof, indent=2) + '\n')
 path = ROOT / 'public/publishing-status.json'
 status = json.loads(path.read_text())
-status['runtime'] = 'Operator-assisted recovery; unattended execution status is separate'
+if not cloud:
+    status['runtime'] = 'Operator-assisted recovery; unattended execution status is separate'
 status['verifiedAt'] = proof['latestVerifiedAt']
 status['lastVerifiedFeatures'] = today or ([latest] if latest else [])
 status['dailyPublicationProgress'] = {k: proof[k] for k in ['date', 'timezone', 'dailyTargetMinimum', 'distinctNewLiveVerifiedPosts', 'shortfall', 'targetMet', 'latestVerifiedAt', 'latestPublishedAt']}

@@ -69,6 +69,8 @@ jobs:
           python3 scripts/worker_preflight.py --fence
           git config user.name SHTFTV
           git config user.email 264305872+SHTFTV@users.noreply.github.com
+          python3 scripts/refresh_manual_publication_proof.py --cloud
+          git add public/daily-publication-proof.json
           git add operations/runtime-access.json package-lock.json public/journal public/images/journal public/images/source-properties public/sitemap.xml public/publishing-status.json src/data/latestPublished.ts src/data/articleIndex.json operations/property-media.json operations/seo-category-coverage.json operations/publisher-state.json operations/latest-run.json
           if ! git diff --cached --quiet; then
             git commit -m 'Publish original We Love This Listing features and source evidence'
@@ -84,7 +86,8 @@ jobs:
       - name: Persist verified public publication evidence
         if: steps.collect.outputs.has_articles == 'true'
         run: |
-          git add operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json
+          python3 scripts/refresh_manual_publication_proof.py --cloud
+          git add public/daily-publication-proof.json operations/publisher-state.json operations/latest-run.json public/publishing-status.json public/publication-results.json
           if ! git diff --cached --quiet; then
             git commit -m 'Record verified Love Our Listings cloud publications'
             git push origin HEAD:main
