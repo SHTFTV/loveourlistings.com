@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-20T12:10:50.827409+00:00",
+  "checkedAt": "2026-11-20T12:16:39.144849+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "a3cc23dea248b25af1e0b4abd8d09b4e3c730a2a",
+    "sourceCommit": "4eb1a7713cc81cb27bbb95a6295d27f676e9074c",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-20T12:10:39.525883+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44733503097",
+      "checkedAt": "2026-11-20T12:16:28.052506+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44734335925",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "c1471a62a1a1c0d62f94e16e0a35bb8acb500490",
+        "sourceCommit": "319c86ade2ef64cd70d8e9535ba5a9ea36984bc0",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-20T12:10:39.525883+00:00",
+        "checkedAt": "2026-11-20T12:16:28.052506+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -122,14 +122,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 16,
         "inScopeQueueCandidates": 15,
-        "attemptedThisRun": 3,
-        "skippedThisRun": 13,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 14,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 9,
+          "quarantined-retry-exhausted": 10,
           "duplicate-property": 1,
-          "attempt-failed": 3,
-          "retry-cooldown": 2
+          "retry-cooldown": 2,
+          "attempt-failed": 2
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -176,7 +176,7 @@
             "sourceId": "robb-property",
             "title": "This $25 Million Tribeca Penthouse Has a Rooftop Terrace That Covers the Entire Building",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
+            "outcome": "retry-cooldown",
             "failedAttempts": 3,
             "checks": 3,
             "nextAttemptAt": "2026-11-20T18:10:21.288659+00:00",
@@ -224,7 +224,7 @@
             "sourceId": "robb-property",
             "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
+            "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
@@ -292,26 +292,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
-            "sourceId": "robb-property",
-            "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-20T18:10:21.288659+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fort-lauderdale-39-million-waterfront-mansion-1238846643",
             "sourceId": "robb-property",
             "title": "You Can Park Your 100-Foot Yacht Behind This $39 Million Fort Lauderdale Mansion",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-20T12:15:42.118685+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-20T18:16:13.333433+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -320,10 +308,22 @@
             "sourceId": "robb-property",
             "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
             "collection": "mansions",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-20T18:16:13.333433+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/danbury-connecticut-country-estate-1238847892",
+            "sourceId": "robb-property",
+            "title": "This $12.5 Million Connecticut Estate Covers 80 Bucolic Acres",
+            "collection": "mansions",
             "outcome": "retry-cooldown",
             "failedAttempts": 3,
             "checks": 3,
-            "nextAttemptAt": "2026-11-20T12:15:42.118685+00:00",
+            "nextAttemptAt": "2026-11-20T18:10:21.288659+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           }
@@ -331,7 +331,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-20T12:40:39.525883+00:00",
+      "expiresAt": "2026-11-20T12:46:28.052506+00:00",
       "green": false
     },
     "visual": {
@@ -1757,10 +1757,10 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-20T12:00:37.844Z",
-      "runId": "26b77c82-b1dc-4ed0-b870-56236ccd65b0",
+      "checkedAt": "2026-11-20T12:15:37.301Z",
+      "runId": "55e43df6-caef-4f43-b1f4-fb3a0a20638d",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_DySNUoR6KjRGHmKqKDFQDwQm14RK:26b77c82-b1dc-4ed0-b870-56236ccd65b0",
+      "runRef": "vercel:dpl_54U8arTvZmpCvhgrFmy8isEMGQDJ:55e43df6-caef-4f43-b1f4-fb3a0a20638d",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -1772,7 +1772,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "25851a2f1dd017d576e4da0bff7c66051f2508dd",
+        "sourceCommit": "319c86ade2ef64cd70d8e9535ba5a9ea36984bc0",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -1785,8 +1785,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44731879386",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44731280579",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44733503097",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44732786239",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -1797,7 +1797,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "26b77c82-b1dc-4ed0-b870-56236ccd65b0",
+      "probeRunId": "55e43df6-caef-4f43-b1f4-fb3a0a20638d",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -1814,12 +1814,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-20T12:00:37.844Z"
+          "checkedAt": "2026-11-20T12:15:37.301Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-20T12:30:37.844000+00:00",
+      "expiresAt": "2026-11-20T12:45:37.301000+00:00",
       "green": false
     }
   },
@@ -1841,24 +1841,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-20T12:00:37.844Z"
+      "checkedAt": "2026-11-20T12:15:37.301Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "c1471a62a1a1c0d62f94e16e0a35bb8acb500490",
+      "sourceCommit": "319c86ade2ef64cd70d8e9535ba5a9ea36984bc0",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T12:10:39.525883+00:00",
+      "observedAt": "2026-11-20T12:16:28.052506+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44733503097",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44733503097",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44734335925",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44734335925",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -1880,7 +1880,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44733503097"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44734335925"
     },
     {
       "site": "loveourlistings.com",
@@ -1907,8 +1907,8 @@
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44731203571/artifacts/14627560293",
       "pageUrls": [
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/"
+        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-08-9ab7957e25/",
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
@@ -1942,16 +1942,16 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "25851a2f1dd017d576e4da0bff7c66051f2508dd",
+      "sourceCommit": "319c86ade2ef64cd70d8e9535ba5a9ea36984bc0",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-20T12:00:37.844Z",
+      "observedAt": "2026-11-20T12:15:37.301Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_DySNUoR6KjRGHmKqKDFQDwQm14RK:26b77c82-b1dc-4ed0-b870-56236ccd65b0",
+      "runRef": "vercel:dpl_54U8arTvZmpCvhgrFmy8isEMGQDJ:55e43df6-caef-4f43-b1f4-fb3a0a20638d",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -1963,7 +1963,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44731280579",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44732786239",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
