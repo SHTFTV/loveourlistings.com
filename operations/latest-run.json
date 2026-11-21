@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-21T21:30:27.968062+00:00",
+  "startedAt": "2026-11-21T21:36:17.263227+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "3d55d5572b32193085d51d31238dfd6a7684f4f8",
+    "sourceCommit": "8443da984f1c963202a35702d7d7322b23a39444",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44951852138",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44952371571",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -47,21 +47,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -75,7 +75,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "items": 24,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -89,7 +89,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T21:30:27.968062+00:00",
+      "fetchedAt": "2026-11-21T21:36:17.263227+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -109,13 +109,13 @@
   ],
   "articles": [],
   "duplicates": 100,
-  "quarantined": 3,
+  "quarantined": 2,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44951424940",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44951911047",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -244,10 +244,12 @@
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-      "title": "Two approaches to Top Farm in Laverton",
       "propertyId": "top-farm-laverton-gloucestershire",
       "collection": "acreage",
-      "reason": "HTTP Error 403: Forbidden"
+      "title": "Two approaches to Top Farm in Laverton",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-22T03:30:27.968062+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
@@ -313,13 +315,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "HTTP Error 429: Too Many Requests"
-    },
-    {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
       "propertyId": "plas-nanteos-rhydyfelin-ceredigion",
       "collection": "mansions",
@@ -330,12 +325,19 @@
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "title": "A garden wall made of glass at Sylvan Glade in Keston",
       "propertyId": "sylvan-glade-forest-drive-keston",
       "collection": "mansions",
-      "title": "A garden wall made of glass at Sylvan Glade in Keston",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00"
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+      "reason": "HTTP Error 429: Too Many Requests",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "reviewedCandidateIntake": 38,
@@ -442,7 +444,7 @@
       "sourceId": "countrylife-property",
       "title": "Two approaches to Top Farm in Laverton",
       "collection": "acreage",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 2,
       "checks": 2,
       "nextAttemptAt": "2026-11-22T03:30:27.968062+00:00",
@@ -534,18 +536,6 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-      "sourceId": "robb-property",
-      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-      "collection": "mansions",
-      "outcome": "attempt-failed",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "HTTP Error 429: Too Many Requests",
-      "duplicateOfArticleSlug": null
-    },
-    {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
       "sourceId": "countrylife-property",
       "title": "The Georgian house behind Nanteos\u2019s hotel years",
@@ -562,11 +552,23 @@
       "sourceId": "countrylife-property",
       "title": "A garden wall made of glass at Sylvan Glade in Keston",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 1,
-      "checks": 1,
-      "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 2,
+      "checks": 2,
+      "nextAttemptAt": "2026-11-22T03:36:17.263227+00:00",
       "reason": "HTTP Error 403: Forbidden",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+      "sourceId": "robb-property",
+      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+      "collection": "mansions",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "HTTP Error 429: Too Many Requests",
       "duplicateOfArticleSlug": null
     }
   ],
@@ -609,9 +611,9 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-21T21:30:43.709700+00:00",
+  "finishedAt": "2026-11-21T21:36:57.975572+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-21T21:30:43.709700+00:00",
+    "checkedAt": "2026-11-21T21:36:57.975572+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -691,14 +693,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 19,
     "inScopeQueueCandidates": 18,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 17,
+    "attemptedThisRun": 1,
+    "skippedThisRun": 18,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 14,
+      "quarantined-retry-exhausted": 15,
       "duplicate-property": 1,
-      "attempt-failed": 2,
-      "retry-cooldown": 1
+      "retry-cooldown": 1,
+      "attempt-failed": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -805,7 +807,7 @@
         "sourceId": "countrylife-property",
         "title": "Two approaches to Top Farm in Laverton",
         "collection": "acreage",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 2,
         "checks": 2,
         "nextAttemptAt": "2026-11-22T03:30:27.968062+00:00",
@@ -897,18 +899,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-        "sourceId": "robb-property",
-        "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "HTTP Error 429: Too Many Requests",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
         "sourceId": "countrylife-property",
         "title": "The Georgian house behind Nanteos\u2019s hotel years",
@@ -925,11 +915,23 @@
         "sourceId": "countrylife-property",
         "title": "A garden wall made of glass at Sylvan Glade in Keston",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-22T03:36:17.263227+00:00",
         "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+        "sourceId": "robb-property",
+        "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "HTTP Error 429: Too Many Requests",
         "duplicateOfArticleSlug": null
       }
     ]
