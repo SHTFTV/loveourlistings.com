@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T15:34:56.746946+00:00",
+  "updatedAt": "2026-11-21T15:36:42.198199+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,15 +7,12 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "8cbeb0edcf5a9a57c7a196ae6828f240a4b5fbbb",
-    "trigger": "workflow_dispatch"
+    "sourceCommit": "811954d53b839357fd921b78f3293cb795d7834c",
+    "trigger": "schedule"
   },
   "automaticTriggerProof": {
-    "verified": true,
-    "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44919313066",
-    "originEvent": "workflow_dispatch",
-    "reason": "Verified repository health workflow and GitHub Actions bot"
+    "verified": false,
+    "reason": "Not an automatic recovery request"
   },
   "publicationBlocks": [
     {
@@ -105,6 +102,15 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "propertyId": null,
       "collection": "waterfront",
@@ -123,11 +129,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-      "title": "A garden wall made of glass at Sylvan Glade in Keston",
-      "propertyId": "sylvan-glade-forest-drive-keston",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "propertyId": null,
       "collection": "mansions",
-      "reason": "HTTP Error 403: Forbidden"
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
@@ -137,24 +145,6 @@
       "reason": "HTTP Error 403: Forbidden",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-21T21:25:49.576573+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
@@ -193,13 +183,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-      "title": "The Georgian house behind Nanteos\u2019s hotel years",
-      "propertyId": "plas-nanteos-rhydyfelin-ceredigion",
-      "collection": "mansions",
-      "reason": "HTTP Error 403: Forbidden"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
       "propertyId": null,
       "collection": "mansions",
@@ -234,6 +217,24 @@
       "reason": "HTTP Error 429: Too Many Requests",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-21T21:25:49.576573+00:00"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+      "propertyId": "plas-nanteos-rhydyfelin-ceredigion",
+      "collection": "mansions",
+      "title": "The Georgian house behind Nanteos\u2019s hotel years",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "propertyId": "sylvan-glade-forest-drive-keston",
+      "collection": "mansions",
+      "title": "A garden wall made of glass at Sylvan Glade in Keston",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00"
     }
   ],
   "health": "degraded",
@@ -244,9 +245,9 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-21T15:34:03.343362+00:00",
+    "checkedAt": "2026-11-21T15:36:42.016731+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
     "feedItemsParsed": 104,
@@ -321,21 +322,19 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 3,
-    "candidatesConsidered": 21,
-    "inScopeQueueCandidates": 20,
-    "attemptedThisRun": 4,
-    "skippedThisRun": 17,
+    "newCandidatesDiscovered": 0,
+    "candidatesConsidered": 19,
+    "inScopeQueueCandidates": 18,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 19,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 13,
-      "stored-awaiting-verification": 2,
+      "quarantined-retry-exhausted": 14,
       "duplicate-property": 1,
-      "attempt-failed": 2,
-      "retry-cooldown": 2
+      "retry-cooldown": 3
     },
-    "newFeaturesStored": 2,
-    "verifiedPublicationsThisRun": 2,
+    "newFeaturesStored": 0,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -363,18 +362,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://thespaces.com/r-m-schindler-s-lovell-beach-house-is-for-sale-for-the-first-time-in-100-years/",
-        "sourceId": "reviewed-the-spaces",
-        "title": "Five concrete frames lift Lovell Beach House above the sand",
-        "collection": "beach-properties",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
         "sourceId": "robb-property",
         "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
@@ -399,15 +386,15 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://thespaces.com/for-sale-barbara-jakobson-s-art-filled-manhattan-townhouse/",
-        "sourceId": "reviewed-the-spaces",
-        "title": "The Squirrel House keeps an art collector\u2019s garden in view",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceId": "robb-property",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
         "collection": "mansions",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
         "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -435,15 +422,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-        "sourceId": "countrylife-property",
-        "title": "A garden wall made of glass at Sylvan Glade in Keston",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+        "sourceId": "robb-property",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00",
-        "reason": "HTTP Error 403: Forbidden",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -456,30 +443,6 @@
         "checks": 1,
         "nextAttemptAt": "2026-11-21T21:25:49.576573+00:00",
         "reason": "HTTP Error 403: Forbidden",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-        "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-        "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -531,18 +494,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-        "sourceId": "countrylife-property",
-        "title": "The Georgian house behind Nanteos\u2019s hotel years",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "HTTP Error 403: Forbidden",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
         "sourceId": "robb-property",
         "title": "Inside Billy Joel\u2019s Expansive Property Portfolio",
@@ -589,52 +540,76 @@
         "nextAttemptAt": "2026-11-21T21:25:49.576573+00:00",
         "reason": "HTTP Error 429: Too Many Requests",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+        "sourceId": "countrylife-property",
+        "title": "The Georgian house behind Nanteos\u2019s hotel years",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+        "sourceId": "countrylife-property",
+        "title": "A garden wall made of glass at Sylvan Glade in Keston",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00",
+        "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-21T15:33:27.778682+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-21T15:36:18.187656+00:00",
+  "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 25
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T15:33:27.778682+00:00",
+      "fetchedAt": "2026-11-21T15:36:18.187656+00:00",
       "items": 29
     }
   ],
@@ -647,9 +622,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 13,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 12,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "penthouses",
@@ -671,14 +646,14 @@
     },
     {
       "name": "beach-properties",
-      "eligible": 1,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 0,
+      "newFeatures": 0,
+      "status": "no-fresh-eligible-items"
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 99,
-  "quarantinedItems": 3,
+  "duplicatesFiltered": 101,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-beach-properties-2026-11-12-fa9163f778",
