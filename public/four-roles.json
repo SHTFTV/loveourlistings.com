@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-21T15:35:39.603587+00:00",
+  "checkedAt": "2026-11-21T15:36:51.859579+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "b9b465083d6c7ad285d576c24b272ab3cd953ca4",
+    "sourceCommit": "cb413b8d1e4d958068213ceb6da085835ef5a719",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,20 +13,21 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-21T15:34:03.343362+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44919783930",
-      "trigger": "workflow_dispatch",
+      "checkedAt": "2026-11-21T15:36:42.016731+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920049022",
+      "trigger": "schedule",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "8cbeb0edcf5a9a57c7a196ae6828f240a4b5fbbb",
-        "trigger": "workflow_dispatch"
+        "sourceCommit": "811954d53b839357fd921b78f3293cb795d7834c",
+        "trigger": "schedule"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
-        "verified": false
+        "verified": true,
+        "kind": "schedule"
       },
       "verified": false,
       "status": "failed",
@@ -40,12 +41,12 @@
         "HTTP Error 403: Forbidden",
         "HTTP Error 403: Forbidden"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-21T15:34:03.343362+00:00",
+        "checkedAt": "2026-11-21T15:36:42.016731+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 104,
@@ -120,21 +121,19 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 3,
-        "candidatesConsidered": 21,
-        "inScopeQueueCandidates": 20,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 17,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 19,
+        "inScopeQueueCandidates": 18,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 19,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 13,
-          "stored-awaiting-verification": 2,
+          "quarantined-retry-exhausted": 14,
           "duplicate-property": 1,
-          "attempt-failed": 2,
-          "retry-cooldown": 2
+          "retry-cooldown": 3
         },
-        "newFeaturesStored": 2,
-        "verifiedPublicationsThisRun": 2,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -162,18 +161,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://thespaces.com/r-m-schindler-s-lovell-beach-house-is-for-sale-for-the-first-time-in-100-years/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "Five concrete frames lift Lovell Beach House above the sand",
-            "collection": "beach-properties",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
             "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
@@ -198,15 +185,15 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://thespaces.com/for-sale-barbara-jakobson-s-art-filled-manhattan-townhouse/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "The Squirrel House keeps an art collector\u2019s garden in view",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -234,15 +221,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-            "sourceId": "countrylife-property",
-            "title": "A garden wall made of glass at Sylvan Glade in Keston",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceId": "robb-property",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00",
-            "reason": "HTTP Error 403: Forbidden",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -255,30 +242,6 @@
             "checks": 1,
             "nextAttemptAt": "2026-11-21T21:25:49.576573+00:00",
             "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -330,18 +293,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "The Georgian house behind Nanteos\u2019s hotel years",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
             "sourceId": "robb-property",
             "title": "Inside Billy Joel\u2019s Expansive Property Portfolio",
@@ -388,12 +339,36 @@
             "nextAttemptAt": "2026-11-21T21:25:49.576573+00:00",
             "reason": "HTTP Error 429: Too Many Requests",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "The Georgian house behind Nanteos\u2019s hotel years",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "HTTP Error 403: Forbidden",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+            "sourceId": "countrylife-property",
+            "title": "A garden wall made of glass at Sylvan Glade in Keston",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-21T21:33:27.778682+00:00",
+            "reason": "HTTP Error 403: Forbidden",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-21T16:04:03.343362+00:00",
+      "expiresAt": "2026-11-21T16:06:42.016731+00:00",
       "green": false
     },
     "visual": {
@@ -401,20 +376,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-21T15:13:24.291Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917989622",
+      "checkedAt": "2026-11-21T15:36:26.677Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920006721",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917775225"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44919783930"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "3853ac6ee2425a5a2d07782c5194313aba2f9410",
+        "sourceCommit": "811954d53b839357fd921b78f3293cb795d7834c",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -441,6 +416,174 @@
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+                "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/20a63e4207f62c4e792f.jpg",
+                "alt": "White upper rooms and a double-height grid of windows at Lovell Beach House in Newport Beach",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/9ad31c02305a2aebbce0.jpg",
+                "alt": "Wooden staircase and panelling in the former London Stores building in Oxted",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/d25ac05dc422a363c5d8.jpg",
+                "alt": "Central stone porch and clipped hedges at the Old School House in Badby",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/f6f1c9f82c3226ab6f01.jpg",
+                "alt": "Aerial view of Higher Hutcherleigh with the house and barns around a yard amid hedged Devon fields",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/8f5d8480ad6059548071.jpg",
+                "alt": "A chandelier above a group of pale upholstered seats and low tables in the Lancer Square penthouse",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
               {
                 "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
                 "alt": "",
@@ -496,174 +639,6 @@
                   169
                 ],
                 "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/af3d58a7fd7f1a3d0130.jpg",
-                "alt": "Terraces overlooking San Francisco Bay and the skyline at 337 Belvedere Avenue",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/5cc6750930fbce908613.jpg",
-                "alt": "The Compass listing photograph shows the rooftop garden and illuminated penthouse at 427 Washington Street in Tribeca.",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/277aa7c409c8ddcf91d3.jpg",
-                "alt": "Garden and approach to the red-brick house at The Quaives, Kent",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/c4461ec8440c731d4a3d.jpg",
-                "alt": "Aerial view across the fields and buildings of Creston Manor in California",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/5ee7a4d0a0c1493d4e9f.jpg",
-                "alt": "White facade of Denes House behind its garden wall on the village street in Burwash",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/c962d6ac269eddf9ecd6.jpg",
-                "alt": "Former chapel facade at Alexandra House in Cowes, with the harbour visible beside it",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
               }
             ],
             "captionFontSizes": [
@@ -680,7 +655,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "b51f3ad4cf469dc117fd25647e9ca3a034687c899d4ea0ff368d2444e9ba36ae"
+          "screenshotSha256": "bcc9c219bb68356eb0e8c1bc7b62da0c8a3021ed35cf291d2de0de3786f46ff7"
         },
         {
           "page": "journal",
@@ -705,8 +680,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-                "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park",
+                "src": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+                "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House",
                 "native": [
                   1600,
                   900
@@ -723,27 +698,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "13bffd93a722b89716ac0120ca15b239a991461c75326e9954d91ed4d32660e9"
+          "screenshotSha256": "9213defe4e6092d9cdd00b570e7acc8c3efeb1689b17bc4a6144f5e1df4158f0"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-21-478bbcdd42/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-ada6ac957b/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Two pavilions frame the garden at Stoke Park | Love Our Listings",
-            "h1": "We Love This Listing: Two pavilions frame the garden at Stoke Park",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-21-478bbcdd42/",
-            "description": "At Stoke Bruerne in Northamptonshire, matching buildings on either side of a pool lead remarkably different lives.",
-            "ogTitle": "We Love This Listing: Two pavilions frame the garden at Stoke Park | Love Our Listings",
-            "ogDescription": "At Stoke Bruerne in Northamptonshire, matching buildings on either side of a pool lead remarkably different lives.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-            "twitterTitle": "We Love This Listing: Two pavilions frame the garden at Stoke Park | Love Our Listings",
-            "twitterDescription": "At Stoke Bruerne in Northamptonshire, matching buildings on either side of a pool lead remarkably different lives.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
+            "title": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view | Love Our Listings",
+            "h1": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-ada6ac957b/",
+            "description": "A garden wall and a gallery wall share the light at Barbara Jakobson\u2019s former East 74th Street home.",
+            "ogTitle": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view | Love Our Listings",
+            "ogDescription": "A garden wall and a gallery wall share the light at Barbara Jakobson\u2019s former East 74th Street home.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+            "twitterTitle": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view | Love Our Listings",
+            "twitterDescription": "A garden wall and a gallery wall share the light at Barbara Jakobson\u2019s former East 74th Street home.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -776,8 +751,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-                "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park",
+                "src": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+                "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House",
                 "native": [
                   1600,
                   900
@@ -794,23 +769,23 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/6c7ef0a573985ea8de88.jpg",
+            "src": "/images/source-properties/d71ae1a5737d4caab12b.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park"
+            "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "fbf5983ea64f1bf9f78d38ef1c80508e5cf7995257218093df8d5b870c7479b7",
+          "screenshotSha256": "c4cef3b96c85f0c24a6deeced18d972a727db193bf5a1697275033edde6b3370",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 337
+              "textLength": 457
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 497
+              "textLength": 468
             },
             {
               "fontSize": 16,
@@ -858,8 +833,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-                "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park",
+                "src": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+                "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House",
                 "native": [
                   1600,
                   900
@@ -886,8 +861,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
-                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
+                "src": "https://www.loveourlistings.com/images/source-properties/20a63e4207f62c4e792f.jpg",
+                "alt": "White upper rooms and a double-height grid of windows at Lovell Beach House in Newport Beach",
                 "native": [
                   1600,
                   900
@@ -908,7 +883,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "382829b99311688ef78d5f3054426f8030857a18b8ed84d4c7fe1c472fbef47c"
+          "screenshotSha256": "c3d07659ae6fb13d42b47810ee9a753e5e059975a16a882be0e84d1aab768683"
         },
         {
           "page": "journal",
@@ -947,8 +922,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-                "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park",
+                "src": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+                "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House",
                 "native": [
                   1600,
                   900
@@ -961,8 +936,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/57879b27ab73590233c3.jpg",
-                "alt": "Aerial view across the house and woodland at 125 Long Ridge Road in Danbury",
+                "src": "https://www.loveourlistings.com/images/source-properties/20a63e4207f62c4e792f.jpg",
+                "alt": "White upper rooms and a double-height grid of windows at Lovell Beach House in Newport Beach",
                 "native": [
                   1600,
                   900
@@ -979,27 +954,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "e0b014b66d3b26c6146f841b57c83d1ba1c7d82abd1314f37a4b9ead33ef4afa"
+          "screenshotSha256": "1a9fdd10b15236823f23cc17a50c4a99a9daccdb488be1d6d530298e3f271226"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-21-478bbcdd42/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-ada6ac957b/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Two pavilions frame the garden at Stoke Park | Love Our Listings",
-            "h1": "We Love This Listing: Two pavilions frame the garden at Stoke Park",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-21-478bbcdd42/",
-            "description": "At Stoke Bruerne in Northamptonshire, matching buildings on either side of a pool lead remarkably different lives.",
-            "ogTitle": "We Love This Listing: Two pavilions frame the garden at Stoke Park | Love Our Listings",
-            "ogDescription": "At Stoke Bruerne in Northamptonshire, matching buildings on either side of a pool lead remarkably different lives.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-            "twitterTitle": "We Love This Listing: Two pavilions frame the garden at Stoke Park | Love Our Listings",
-            "twitterDescription": "At Stoke Bruerne in Northamptonshire, matching buildings on either side of a pool lead remarkably different lives.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
+            "title": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view | Love Our Listings",
+            "h1": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-ada6ac957b/",
+            "description": "A garden wall and a gallery wall share the light at Barbara Jakobson\u2019s former East 74th Street home.",
+            "ogTitle": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view | Love Our Listings",
+            "ogDescription": "A garden wall and a gallery wall share the light at Barbara Jakobson\u2019s former East 74th Street home.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+            "twitterTitle": "We Love This Listing: The Squirrel House keeps an art collector\u2019s garden in view | Love Our Listings",
+            "twitterDescription": "A garden wall and a gallery wall share the light at Barbara Jakobson\u2019s former East 74th Street home.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1032,8 +1007,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/6c7ef0a573985ea8de88.jpg",
-                "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park",
+                "src": "https://www.loveourlistings.com/images/source-properties/d71ae1a5737d4caab12b.jpg",
+                "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House",
                 "native": [
                   1600,
                   900
@@ -1050,23 +1025,23 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/6c7ef0a573985ea8de88.jpg",
+            "src": "/images/source-properties/d71ae1a5737d4caab12b.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Two sandstone pavilions face the lawn and formal pool at Stoke Park"
+            "alt": "Sitting room with artwork, a garden beyond black-framed glass and a sculptural white chair at the Squirrel House"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "3b85c12b9baed997fa5f4926ff8c7a53fd0ee578ff0de4a652e3d575f496d110",
+          "screenshotSha256": "e7dd96e7a67ed736b167ab62b1b66e7930a6ed78aa7186e34c5af0a5742be0da",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 337
+              "textLength": 457
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 497
+              "textLength": 468
             },
             {
               "fontSize": 16,
@@ -1082,11 +1057,53 @@
       "status": "passed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-acreage-2026-11-21-478bbcdd42",
-        "publishedAt": "2026-11-21T08:10:54-07:00",
-        "image": "/images/source-properties/6c7ef0a573985ea8de88.jpg"
+        "slug": "we-love-mansions-2026-11-20-ada6ac957b",
+        "publishedAt": "2026-11-21T08:33:27-07:00",
+        "image": "/images/source-properties/d71ae1a5737d4caab12b.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-20-ada6ac957b",
+          "image": "/images/source-properties/d71ae1a5737d4caab12b.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-beach-properties-2026-11-12-fa9163f778",
+          "image": "/images/source-properties/20a63e4207f62c4e792f.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-13-0b57b9d505",
+          "image": "/images/source-properties/9ad31c02305a2aebbce0.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-13-54390c78a4",
+          "image": "/images/source-properties/d25ac05dc422a363c5d8.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-15-1955c17e27",
+          "image": "/images/source-properties/f6f1c9f82c3226ab6f01.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-penthouses-2026-11-20-7c9564df05",
+          "image": "/images/source-properties/8f5d8480ad6059548071.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-acreage-2026-11-21-478bbcdd42",
           "image": "/images/source-properties/6c7ef0a573985ea8de88.jpg",
@@ -1494,10 +1511,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14712496630,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917989622/artifacts/14712452020",
+      "artifactId": 14713277131,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920006721/artifacts/14713621047",
       "fresh": true,
-      "expiresAt": "2026-11-21T15:43:24.291000+00:00",
+      "expiresAt": "2026-11-21T16:06:26.677000+00:00",
       "green": true
     },
     "supervisor": {
@@ -2022,20 +2039,20 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "8cbeb0edcf5a9a57c7a196ae6828f240a4b5fbbb",
+      "sourceCommit": "811954d53b839357fd921b78f3293cb795d7834c",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-21T15:34:03.343362+00:00",
+      "observedAt": "2026-11-21T15:36:42.016731+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44919783930",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44919783930",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920049022",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920049022",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "workflow_dispatch",
+      "rawTrigger": "schedule",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
@@ -2054,22 +2071,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44919783930"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920049022"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "3853ac6ee2425a5a2d07782c5194313aba2f9410",
+      "sourceCommit": "811954d53b839357fd921b78f3293cb795d7834c",
       "check": "role:visual-checker",
       "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-21T15:13:24.291Z",
+      "observedAt": "2026-11-21T15:36:26.677Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917989622",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917989622/artifacts/14712496630",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920006721",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920006721/artifacts/14713277131",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2077,12 +2094,12 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917989622/artifacts/14712452020",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44917989622/artifacts/14712452020",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920006721/artifacts/14713621047",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44920006721/artifacts/14713621047",
       "pageUrls": [
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-21-478bbcdd42/"
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-ada6ac957b/",
+        "https://www.loveourlistings.com/"
       ]
     },
     {
