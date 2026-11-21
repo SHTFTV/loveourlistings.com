@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T11:08:20.005538+00:00",
+  "updatedAt": "2026-11-21T11:14:21.622288+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "891237d253c9b9dc0521b9ecbf97e6b0660b0c62",
+    "sourceCommit": "34140c51c8e3089a3714a947894c98df11376857",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44897160815",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/44897661810",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -167,13 +167,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
       "propertyId": null,
       "collection": "mansions",
@@ -190,6 +183,15 @@
       "reason": "HTTP Error 403: Forbidden",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-21T15:28:45.525645+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-21T17:07:51.301844+00:00"
     }
   ],
   "health": "degraded",
@@ -200,7 +202,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-21T11:08:19.903390+00:00",
+    "checkedAt": "2026-11-21T11:14:21.520649+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -280,14 +282,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 17,
     "inScopeQueueCandidates": 16,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 16,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 17,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 12,
       "duplicate-property": 1,
-      "attempt-failed": 1,
-      "retry-cooldown": 2
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -462,18 +463,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-        "sourceId": "robb-property",
-        "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-        "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-21T17:07:51.301844+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/billy-joel-property-portfolio-1238846548",
         "sourceId": "robb-property",
         "title": "Inside Billy Joel\u2019s Expansive Property Portfolio",
@@ -496,52 +485,64 @@
         "nextAttemptAt": "2026-11-21T15:28:45.525645+00:00",
         "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
+        "sourceId": "robb-property",
+        "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 3,
+        "checks": 3,
+        "nextAttemptAt": "2026-11-21T17:07:51.301844+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-21T11:07:51.301844+00:00",
+  "lastRunAt": "2026-11-21T11:13:53.363016+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 25
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-21T11:07:51.301844+00:00",
+      "fetchedAt": "2026-11-21T11:13:53.363016+00:00",
       "items": 29
     }
   ],
@@ -585,7 +586,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 93,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-12-c01394732c",
