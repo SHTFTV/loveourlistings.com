@@ -195,8 +195,7 @@ def main(root=ROOT,fetch=get,now=None):
   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
   evidence_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH' and not row.get('evidenceGateCorrectionApplied')
   claim_gate_correction=item['url']=='https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years' and row.get('lastError')=='Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM' and not row.get('claimSupportCorrectionApplied')
-  photo_gap='1600' in (row.get('lastError') or '') or 'No usable exact-source featured photo' in (row.get('lastError') or '')
-  if (exhausted or cooling) and not photo_gap and not claim_gate_correction and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
+  if (exhausted or cooling) and not claim_gate_correction and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
    row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
    next_at=(datetime.fromisoformat(row['lastAttemptAt'])+timedelta(hours=retry.get('cooldownHours',6))).isoformat() if not exhausted and row.get('lastAttemptAt') else None
    decision(report,item,row,row['status'],row.get('lastError','Retry held'),next_at)
