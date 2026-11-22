@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-22T22:45:21.548133+00:00",
+  "startedAt": "2026-11-22T22:51:31.679234+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "19a318f408057d79243dbb9235638b62dce02cd5",
-    "trigger": "schedule"
+    "sourceCommit": "a1200b55c8acb7965eade15a129e6790a94202c0",
+    "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45079450951",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45080024183",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -47,21 +47,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -75,12 +75,12 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
-      "items": 27,
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
+      "items": 26,
       "parseRejected": 0,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 27
+        "discovery-original-link-required": 26
       },
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -89,7 +89,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T22:45:21.548133+00:00",
+      "fetchedAt": "2026-11-22T22:51:31.679234+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -108,13 +108,16 @@
     }
   ],
   "articles": [],
-  "duplicates": 108,
-  "quarantined": 4,
+  "duplicates": 107,
+  "quarantined": 1,
   "discovered": 1,
   "productionVerified": false,
   "automaticTriggerProof": {
-    "verified": false,
-    "reason": "Not an automatic recovery request"
+    "verified": true,
+    "kind": "automatic-recovery",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45079545171",
+    "originEvent": "workflow_dispatch",
+    "reason": "Verified repository health workflow and GitHub Actions bot"
   },
   "publicationBlocks": [
     {
@@ -202,6 +205,15 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
       "collection": "mansions",
@@ -211,10 +223,10 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -238,13 +250,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
@@ -257,17 +269,12 @@
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-      "title": "Two approaches to Top Farm in Laverton",
       "propertyId": "top-farm-laverton-gloucestershire",
       "collection": "acreage",
-      "reason": "HTTP Error 403: Forbidden"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-      "propertyId": null,
-      "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Two approaches to Top Farm in Laverton",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00"
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -343,10 +350,12 @@
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-      "title": "A garden wall made of glass at Sylvan Glade in Keston",
       "propertyId": "sylvan-glade-forest-drive-keston",
       "collection": "mansions",
-      "reason": "HTTP Error 403: Forbidden"
+      "title": "A garden wall made of glass at Sylvan Glade in Keston",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00"
     }
   ],
   "reviewedCandidateIntake": 45,
@@ -369,6 +378,18 @@
       "sourceId": "robb-property",
       "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
       "collection": "penthouses",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "sourceId": "robb-property",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "collection": "waterfront",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
       "checks": 5,
@@ -401,9 +422,9 @@
       "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "sourceId": "robb-property",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "collection": "waterfront",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
@@ -437,14 +458,14 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
       "sourceId": "robb-property",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
       "collection": "waterfront",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
+      "outcome": "retry-cooldown",
+      "failedAttempts": 2,
+      "checks": 2,
+      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -465,23 +486,11 @@
       "sourceId": "countrylife-property",
       "title": "Two approaches to Top Farm in Laverton",
       "collection": "acreage",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 4,
       "checks": 4,
       "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
       "reason": "HTTP Error 403: Forbidden",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-      "sourceId": "robb-property",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-      "collection": "waterfront",
-      "outcome": "attempt-failed",
-      "failedAttempts": 2,
-      "checks": 2,
-      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
     {
@@ -585,7 +594,7 @@
       "sourceId": "countrylife-property",
       "title": "A garden wall made of glass at Sylvan Glade in Keston",
       "collection": "mansions",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 4,
       "checks": 4,
       "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
@@ -632,14 +641,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-22T22:46:05.728082+00:00",
+  "finishedAt": "2026-11-22T22:52:06.791691+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-22T22:46:05.728082+00:00",
+    "checkedAt": "2026-11-22T22:52:06.791691+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 106,
+    "feedItemsParsed": 105,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -694,10 +703,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 27,
+        "itemsParsed": 26,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 27
+          "discovery-original-link-required": 26
         }
       },
       {
@@ -714,13 +723,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 20,
     "inScopeQueueCandidates": 19,
-    "attemptedThisRun": 3,
-    "skippedThisRun": 17,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 20,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 15,
       "duplicate-property": 1,
-      "attempt-failed": 3
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -743,6 +752,18 @@
         "sourceId": "robb-property",
         "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
         "collection": "penthouses",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+        "sourceId": "robb-property",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "collection": "waterfront",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -775,9 +796,9 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
         "sourceId": "robb-property",
-        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
         "collection": "waterfront",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
@@ -811,14 +832,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
         "sourceId": "robb-property",
-        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
         "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
+        "outcome": "retry-cooldown",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -839,23 +860,11 @@
         "sourceId": "countrylife-property",
         "title": "Two approaches to Top Farm in Laverton",
         "collection": "acreage",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 4,
         "checks": 4,
         "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
         "reason": "HTTP Error 403: Forbidden",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-        "sourceId": "robb-property",
-        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-        "collection": "waterfront",
-        "outcome": "attempt-failed",
-        "failedAttempts": 2,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -959,7 +968,7 @@
         "sourceId": "countrylife-property",
         "title": "A garden wall made of glass at Sylvan Glade in Keston",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 4,
         "checks": 4,
         "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
