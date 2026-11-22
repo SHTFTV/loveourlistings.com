@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T15:24:55.233843+00:00",
+  "updatedAt": "2026-11-22T15:31:03.229818+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "6d6ef33582ffc7c75fab9b30c2bc5ca58ad5d4fd",
+    "sourceCommit": "0b7677ee748f3e08d7a4d741cf270518e1582222",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45037558649",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45038186538",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -158,10 +158,12 @@
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-      "title": "Two approaches to Top Farm in Laverton",
       "propertyId": "top-farm-laverton-gloucestershire",
       "collection": "acreage",
-      "reason": "HTTP Error 403: Forbidden"
+      "title": "Two approaches to Top Farm in Laverton",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-22T21:24:01.902723+00:00"
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -237,10 +239,12 @@
     },
     {
       "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-      "title": "A garden wall made of glass at Sylvan Glade in Keston",
       "propertyId": "sylvan-glade-forest-drive-keston",
       "collection": "mansions",
-      "reason": "HTTP Error 403: Forbidden"
+      "title": "A garden wall made of glass at Sylvan Glade in Keston",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-22T21:24:01.902723+00:00"
     }
   ],
   "health": "degraded",
@@ -251,7 +255,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-22T15:24:55.135601+00:00",
+    "checkedAt": "2026-11-22T15:31:03.097900+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -331,13 +335,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 19,
     "inScopeQueueCandidates": 18,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 17,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 19,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 15,
       "duplicate-property": 1,
-      "attempt-failed": 2
+      "retry-cooldown": 2
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -456,7 +460,7 @@
         "sourceId": "countrylife-property",
         "title": "Two approaches to Top Farm in Laverton",
         "collection": "acreage",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 3,
         "checks": 3,
         "nextAttemptAt": "2026-11-22T21:24:01.902723+00:00",
@@ -564,7 +568,7 @@
         "sourceId": "countrylife-property",
         "title": "A garden wall made of glass at Sylvan Glade in Keston",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 3,
         "checks": 3,
         "nextAttemptAt": "2026-11-22T21:24:01.902723+00:00",
@@ -573,49 +577,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-22T15:24:01.902723+00:00",
+  "lastRunAt": "2026-11-22T15:30:24.852391+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 27
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T15:24:01.902723+00:00",
+      "fetchedAt": "2026-11-22T15:30:24.852391+00:00",
       "items": 29
     }
   ],
@@ -657,9 +661,9 @@
       "status": "no-fresh-eligible-items"
     }
   ],
-  "googleDiscoveryItems": 1,
-  "duplicatesFiltered": 108,
-  "quarantinedItems": 3,
+  "googleDiscoveryItems": 0,
+  "duplicatesFiltered": 109,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-waterfront-2026-11-22-13595f9cd1",
