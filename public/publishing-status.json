@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T16:02:12.812161+00:00",
+  "updatedAt": "2026-11-22T16:08:25.230732+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "79220bbf32f5e42a2b14a20f208289096333885f",
+    "sourceCommit": "41bd120e8ecc8ea89266a3c9b60bb90deeedac7f",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45041016794",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45041566191",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -103,13 +103,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-      "propertyId": null,
-      "collection": "waterfront",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
       "collection": "mansions",
@@ -171,6 +164,15 @@
       "reason": "HTTP Error 403: Forbidden",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-22T21:24:01.902723+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-22T22:01:37.648099+00:00"
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -262,12 +264,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-22T16:02:12.684357+00:00",
+    "checkedAt": "2026-11-22T16:08:25.088203+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 4,
-    "feedItemsParsed": 76,
+    "feedsHealthy": 5,
+    "feedItemsParsed": 106,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -276,10 +278,6 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
-      },
-      {
-        "sourceId": "google-luxury",
-        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -318,9 +316,11 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 0,
+        "itemsParsed": 30,
         "parseRejected": 0,
-        "dispositions": {}
+        "dispositions": {
+          "discovery-original-link-required": 30
+        }
       },
       {
         "sourceId": "google-waterfront",
@@ -341,17 +341,16 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
+    "newCandidatesDiscovered": 0,
     "candidatesConsidered": 20,
     "inScopeQueueCandidates": 19,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 19,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 20,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 15,
-      "attempt-failed": 1,
       "duplicate-property": 1,
-      "retry-cooldown": 2
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -378,18 +377,6 @@
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-        "sourceId": "robb-property",
-        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-        "collection": "waterfront",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-22T22:01:37.648099+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -487,6 +474,18 @@
         "checks": 3,
         "nextAttemptAt": "2026-11-22T21:24:01.902723+00:00",
         "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+        "sourceId": "robb-property",
+        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+        "collection": "waterfront",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-22T22:01:37.648099+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -599,49 +598,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-22T16:01:37.648099+00:00",
+  "lastRunAt": "2026-11-22T16:07:41.811165+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
-      "status": "error",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
-      "items": 0
+      "status": "ok",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
+      "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
       "items": 27
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T16:01:37.648099+00:00",
+      "fetchedAt": "2026-11-22T16:07:41.811165+00:00",
       "items": 29
     }
   ],
@@ -684,8 +683,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 79,
-  "quarantinedItems": 2,
+  "duplicatesFiltered": 109,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-waterfront-2026-11-22-13595f9cd1",
