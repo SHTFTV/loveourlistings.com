@@ -217,8 +217,11 @@ def main(root=ROOT,fetch=get,now=None):
    try:sourceImage=reviewed_media(item,root,reviewed) if reviewed else resolve_media(item['url'],root,publisher=item['publisher'])
    except Exception as media_error:
     if not art and ('1600' in str(media_error) or 'featured photo' in str(media_error).lower()):
-     from original_illustration import generate
-     generate(item,root);art=illustration_record(item,root);art_revision=hashlib.sha256(json.dumps(art,sort_keys=True).encode()).hexdigest() if art else None
+     try:
+      from original_illustration import generate
+      generate(item,root);art=illustration_record(item,root);art_revision=hashlib.sha256(json.dumps(art,sort_keys=True).encode()).hexdigest() if art else None
+     except Exception:
+      raise media_error
     if not art:raise
     sourceImage=resolve_illustration(item,root)
     if art.get('generated'):sourceImage['generatedThisRun']=True
