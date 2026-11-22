@@ -195,7 +195,8 @@ def main(root=ROOT,fetch=get,now=None):
   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
   evidence_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Source-specific original writer required: LOL_SOURCE_BODY_TITLE_MISMATCH' and not row.get('evidenceGateCorrectionApplied')
   claim_gate_correction=item['url']=='https://www.countrylife.co.uk/property/a-wonderfully-romantic-conversion-on-a-spot-thats-been-a-mill-for-1-000-years' and row.get('lastError')=='Source-specific original writer required: LOL_UNSUPPORTED_PROPERTY_CLAIM' and not row.get('claimSupportCorrectionApplied')
-  if (exhausted or cooling) and not claim_gate_correction and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
+  photo_gap='1600' in (row.get('lastError') or '') or 'No usable exact-source featured photo' in (row.get('lastError') or '')
+  if (exhausted or cooling) and not photo_gap and not claim_gate_correction and not evidence_gate_correction and not art_changed and not media_changed and not type_gate_correction:
    row['status']='quarantined-retry-exhausted' if exhausted else 'retry-cooldown'
    next_at=(datetime.fromisoformat(row['lastAttemptAt'])+timedelta(hours=retry.get('cooldownHours',6))).isoformat() if not exhausted and row.get('lastAttemptAt') else None
    decision(report,item,row,row['status'],row.get('lastError','Retry held'),next_at)
@@ -214,9 +215,13 @@ def main(root=ROOT,fetch=get,now=None):
    reviewed=record_for(item,records)
    if reviewed and reviewed.get('reviewRequired') and art and art.get('permissionMode')=='independent-concept':reviewed=None # Restricted photographs stay unused; independently generated conceptual art only.
    try:sourceImage=reviewed_media(item,root,reviewed) if reviewed else resolve_media(item['url'],root,publisher=item['publisher'])
-   except Exception:
+   except Exception as media_error:
+    if not art and ('1600' in str(media_error) or 'featured photo' in str(media_error).lower()):
+     from original_illustration import generate
+     generate(item,root);art=illustration_record(item,root);art_revision=hashlib.sha256(json.dumps(art,sort_keys=True).encode()).hexdigest() if art else None
     if not art:raise
     sourceImage=resolve_illustration(item,root)
+    if art.get('generated'):sourceImage['generatedThisRun']=True
    cached=row.get('illustrationDraft')
    revisions_path=root/'operations/illustration-editorial-revisions.json'
    revision=(json.loads(revisions_path.read_text()).get('items',{}).get(item['url']) if revisions_path.exists() else None)
@@ -241,6 +246,8 @@ def main(root=ROOT,fetch=get,now=None):
    else:a=feature(item,collection,now,cfg,sourceImage,reviewed)
    validate(a)
    content_hash=hashlib.sha256(json.dumps({k:a[k] for k in ['title','deck','paragraphs','image','source']},sort_keys=True).encode()).hexdigest()
+   if sourceImage.get('generatedThisRun'):
+    manifest_path=root/'operations/original-illustrations.json';manifest=json.loads(manifest_path.read_text());manifest['items'][item['url']]['qaContentHash']=content_hash;manifest_path.write_text(json.dumps(manifest,indent=2)+'\n');art['qaContentHash']=content_hash
    if sourceImage.get('isIllustration') and sourceImage['releaseReady'] and art.get('qaContentHash')!=content_hash:raise MediaUnavailable('Layout QA must bind exact preview content hash before publication')
    if sourceImage.get('isIllustration') and not sourceImage['releaseReady']:
     a['preview']=True;dest=root/'work/editorial-previews'/a['slug'];dest.mkdir(parents=True,exist_ok=True);(dest/'index.html').write_text(render(a,cfg['origin']))
