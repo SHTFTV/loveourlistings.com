@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-22T23:59:58.521350+00:00",
+  "startedAt": "2026-11-23T00:06:06.246720+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "ed05ffd33a98dba40d0463140fda127c820e671b",
+    "sourceCommit": "cf716400de003d79188ad4a087127bb79758769e",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45086178047",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45086754001",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -47,35 +47,28 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
-      "status": "ok",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
-      "items": 30,
-      "parseRejected": 0,
-      "discoveryOnly": true,
-      "dispositions": {
-        "discovery-original-link-required": 30
-      },
-      "errors": [],
-      "finalUrl": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "error",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
+      "error": "HTTP 429"
     },
     {
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
       "items": 26,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -89,14 +82,14 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-22T23:59:58.521350+00:00",
+      "fetchedAt": "2026-11-23T00:06:06.246720+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
       "dispositions": {
-        "not-individual-property": 5,
+        "not-individual-property": 4,
         "already-published": 10,
-        "outside-lookback": 14
+        "outside-lookback": 15
       },
       "errors": [
         {
@@ -108,14 +101,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 108,
+  "duplicates": 73,
   "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45085756850",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45086275430",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -154,6 +147,13 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
+      "sourceUrl": "https://www.realtor.com/news/unique-homes/kauai-kukuiula-oceanfront-luxury-homes-9m/",
+      "propertyId": "aepo-nei-18-kukuiula-kauai",
+      "collection": "beach-properties",
+      "title": "We Love This Listing: connected pavilions on Kauai\u2019s South Shore",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
       "sourceUrl": "https://www.countrylife.co.uk/property/scotland/portmore-victrian",
       "propertyId": null,
       "collection": "acreage",
@@ -165,6 +165,34 @@
       "propertyId": null,
       "collection": "waterfront",
       "title": "We Love This Listing: A Wayzata Estate Composed Around the Lake",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "propertyId": "kirkby-park-douglas",
+      "collection": "acreage",
+      "title": "We Love This Listing: Kirkby Park",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "propertyId": "malpas-farm-three-cottages",
+      "collection": "acreage",
+      "title": "We Love This Listing: Malpas farm",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "propertyId": "highfield-house-church-road-westoning",
+      "collection": "mansions",
+      "title": "We Love This Listing: Highfield House makes room for separate stays",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "propertyId": "grangewood-house-battery-hill-fairlight",
+      "collection": "acreage",
+      "title": "We Love This Listing: Grangewood House opens onto the High Weald",
       "reason": "Reviewed property source outside current lookback"
     },
     {
@@ -194,6 +222,13 @@
       "collection": "mansions",
       "title": "We Love This Listing: Under a Westlake Hills home, the garage takes the long view",
       "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
+      "propertyId": "sylvan-glade-forest-drive-keston",
+      "collection": "mansions",
+      "title": "We Love This Listing: A garden wall made of glass at Sylvan Glade in Keston",
+      "reason": "Reviewed property source outside current lookback"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
@@ -347,18 +382,9 @@
       "reason": "HTTP Error 429: Too Many Requests",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-      "propertyId": "sylvan-glade-forest-drive-keston",
-      "collection": "mansions",
-      "title": "A garden wall made of glass at Sylvan Glade in Keston",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00"
     }
   ],
-  "reviewedCandidateIntake": 45,
+  "reviewedCandidateIntake": 39,
   "newCandidatesDiscovered": 0,
   "candidateChecks": [
     {
@@ -588,18 +614,6 @@
       "nextAttemptAt": null,
       "reason": "HTTP Error 429: Too Many Requests",
       "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-      "sourceId": "countrylife-property",
-      "title": "A garden wall made of glass at Sylvan Glade in Keston",
-      "collection": "mansions",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 4,
-      "checks": 4,
-      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
-      "reason": "HTTP Error 403: Forbidden",
-      "duplicateOfArticleSlug": null
     }
   ],
   "collections": [
@@ -611,7 +625,7 @@
     },
     {
       "name": "mansions",
-      "eligible": 12,
+      "eligible": 11,
       "newFeatures": 0,
       "status": "blocked-eligible-property"
     },
@@ -637,18 +651,18 @@
       "name": "beach-properties",
       "eligible": 0,
       "newFeatures": 0,
-      "status": "no-fresh-eligible-items"
+      "status": "blocked-eligible-property"
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-23T00:00:37.696387+00:00",
+  "finishedAt": "2026-11-23T00:06:50.191667+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-23T00:00:37.696387+00:00",
+    "checkedAt": "2026-11-23T00:06:50.191667+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 105,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 75,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -657,6 +671,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-luxury",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -695,11 +713,9 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 30,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 30
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "google-waterfront",
@@ -714,22 +730,22 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "not-individual-property": 5,
+          "not-individual-property": 4,
           "already-published": 10,
-          "outside-lookback": 14
+          "outside-lookback": 15
         }
       }
     ],
     "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 20,
-    "inScopeQueueCandidates": 19,
+    "candidatesConsidered": 19,
+    "inScopeQueueCandidates": 18,
     "attemptedThisRun": 0,
-    "skippedThisRun": 20,
+    "skippedThisRun": 19,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 15,
       "duplicate-property": 1,
-      "retry-cooldown": 3
+      "retry-cooldown": 2
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -961,18 +977,6 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "HTTP Error 429: Too Many Requests",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-fine-homes-from-a-mansion-near-the-coast-to-a-home-that-starred-on-grand-designs",
-        "sourceId": "countrylife-property",
-        "title": "A garden wall made of glass at Sylvan Glade in Keston",
-        "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
-        "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       }
     ]
