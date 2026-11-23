@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-23T21:06:02.595616+00:00",
+  "checkedAt": "2026-11-23T21:12:11.459785+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "b6b5932948168b4e482273c3ab1be6f5116504e6",
+    "sourceCommit": "2ea61d1dfc6fbfd9e0701ea087b70294bd7d9910",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-23T21:05:50.837680+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45265999953",
+      "checkedAt": "2026-11-23T21:11:56.064116+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "0382d27267cb107b5d129b432929d981037cdc03",
+        "sourceCommit": "23fd8b82043d0b57b8f523fd3680ef4fae596552",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-23T21:05:50.837680+00:00",
+        "checkedAt": "2026-11-23T21:11:56.064116+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -119,17 +119,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 22,
         "inScopeQueueCandidates": 21,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 21,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 22,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 16,
           "duplicate-property": 1,
-          "attempt-failed": 1,
-          "retry-cooldown": 3
+          "retry-cooldown": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -184,14 +183,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-24T03:05:27.546237+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -220,15 +219,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -253,18 +252,6 @@
             "checks": 3,
             "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -398,12 +385,24 @@
             "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
+            "sourceId": "robb-property",
+            "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-24T03:05:27.546237+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-23T21:35:50.837680+00:00",
+      "expiresAt": "2026-11-23T21:41:56.064116+00:00",
       "green": false
     },
     "visual": {
@@ -2214,17 +2213,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "0382d27267cb107b5d129b432929d981037cdc03",
+      "sourceCommit": "23fd8b82043d0b57b8f523fd3680ef4fae596552",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T21:05:50.837680+00:00",
+      "observedAt": "2026-11-23T21:11:56.064116+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45265999953",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45265999953",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2246,7 +2245,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45265999953"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475"
     },
     {
       "site": "loveourlistings.com",
@@ -2272,9 +2271,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45264059920/artifacts/14861212936",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45264059920/artifacts/14861212936",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
