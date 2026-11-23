@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T19:06:28.308351+00:00",
+  "updatedAt": "2026-11-23T19:12:35.589065+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "0ad4fc778bbe0f461a70d6e92ae32c04149fae65",
+    "sourceCommit": "42a6eef175e395c448420787915fc20aa81040b0",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45244256928",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245428298",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -154,11 +154,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
-      "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
@@ -179,11 +181,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -204,15 +206,6 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
@@ -303,6 +296,15 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "retry-cooldown",
       "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00"
     }
   ],
   "health": "degraded",
@@ -313,7 +315,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-23T19:06:28.141555+00:00",
+    "checkedAt": "2026-11-23T19:12:35.433668+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -390,17 +392,16 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
+    "newCandidatesDiscovered": 0,
     "candidatesConsidered": 21,
     "inScopeQueueCandidates": 20,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 20,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 21,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 16,
       "duplicate-property": 1,
-      "attempt-failed": 1,
-      "retry-cooldown": 2
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -455,14 +456,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
         "sourceId": "robb-property",
-        "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
         "collection": "mansions",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -491,15 +492,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
         "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -524,18 +525,6 @@
         "checks": 3,
         "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-        "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -657,52 +646,64 @@
         "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+        "sourceId": "robb-property",
+        "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+        "collection": "mansions",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       }
     ]
   },
-  "lastRunAt": "2026-11-23T19:05:38.340028+00:00",
+  "lastRunAt": "2026-11-23T19:12:07.313761+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 24
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-23T19:05:38.340028+00:00",
+      "fetchedAt": "2026-11-23T19:12:07.313761+00:00",
       "items": 29
     }
   ],
@@ -746,7 +747,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 108,
-  "quarantinedItems": 2,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-ranches-2026-11-19-a0c3223869",
