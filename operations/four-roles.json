@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-23T16:59:58.973442+00:00",
+  "checkedAt": "2026-11-23T17:06:01.623399+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "f80a5d6f4e50e8a0d33258b85eb0dd797f505887",
+    "sourceCommit": "16fa42393b71369bb6c152afd54758e82148e888",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-23T16:58:53.980455+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
+      "checkedAt": "2026-11-23T17:05:47.165623+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45223694241",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "231fd98849efa913879c08da19263b5a029aeb19",
+        "sourceCommit": "76a782b3ddbecd97586c8a08687f22281cd8cf91",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -40,15 +40,15 @@
         "Reviewed property source outside current lookback",
         "Reviewed property source outside current lookback"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-23T16:58:53.980455+00:00",
+        "checkedAt": "2026-11-23T17:05:47.165623+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 100,
+        "feedItemsParsed": 99,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -76,9 +76,9 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
+              "not-individual-property": 5,
               "candidate-admitted": 4,
-              "not-individual-property": 4,
-              "already-published": 2
+              "already-published": 1
             }
           },
           {
@@ -103,10 +103,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 21,
+            "itemsParsed": 20,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 21
+              "discovery-original-link-required": 20
             }
           },
           {
@@ -131,8 +131,8 @@
           "duplicate-property": 1,
           "retry-cooldown": 2
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -377,9 +377,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-23T17:28:53.980455+00:00",
+      "expiresAt": "2026-11-23T17:35:47.165623+00:00",
       "green": false
     },
     "visual": {
@@ -1637,13 +1637,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-23T16:46:41.342590+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220275693",
+      "checkedAt": "2026-11-23T17:00:07.898376+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222727463",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "14f55d3c699bbbe8788ff1f010e6c948a8f26fe8",
+        "sourceCommit": "76a782b3ddbecd97586c8a08687f22281cd8cf91",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1651,7 +1651,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220014728"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544"
       },
       "verified": false,
       "status": "failed",
@@ -1659,18 +1659,18 @@
         "publisher-item-check-valves-held; intake-continues",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220014728",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220014728",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 26.294043,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 74.414597,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-23T16:46:15.818771+00:00",
+        "checkedAt": "2026-11-23T16:58:53.980455+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 99,
+        "feedItemsParsed": 100,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -1725,10 +1725,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 20,
+            "itemsParsed": 21,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 20
+              "discovery-original-link-required": 21
             }
           },
           {
@@ -1753,8 +1753,8 @@
           "duplicate-property": 1,
           "retry-cooldown": 2
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 4,
+        "verifiedPublicationsThisRun": 4,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2000,23 +2000,23 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45220014728",
+        "runId": "45222347544",
         "status": "passed",
-        "checkedAt": "2026-11-23T16:45:24.697930+00:00"
+        "checkedAt": "2026-11-23T16:58:01.804678+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-acreage-2026-11-23-2203e06a65",
+          "id": "loveourlistings.com:we-love-ranches-2026-11-19-a0c3223869",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: At Glenbruach, save the room under the eaves for last",
-          "publishedAt": "2026-11-23T08:16:27-07:00",
-          "verifiedAt": "2026-11-23T15:18:10.637336+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-23-2203e06a65/",
+          "title": "We Love This Listing: Fir columns divide the car collection at a Reno ranch",
+          "publishedAt": "2026-11-23T09:53:05-07:00",
+          "verifiedAt": "2026-11-23T16:59:13.454412+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-ranches-2026-11-19-a0c3223869/",
           "status": "done",
-          "checkedAt": "2026-11-23T15:18:10.949021+00:00"
+          "checkedAt": "2026-11-23T16:59:13.756463+00:00"
         },
-        "ageSeconds": 5415.53656,
+        "ageSeconds": 423.593097,
         "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -2024,10 +2024,10 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "4e063b469b420e92994d82990f42e01d543c5ab0",
+        "sourceCommit": "231fd98849efa913879c08da19263b5a029aeb19",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-22-af8aaf75b2/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2036,10 +2036,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45216612124",
-        "checkedAt": "2026-11-23T16:27:28.422Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220266386",
+        "checkedAt": "2026-11-23T16:47:04.064Z",
         "status": "passed",
-        "artifactId": 14837533013
+        "artifactId": 14840312272
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2049,19 +2049,19 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14841360218,
+      "artifactId": 14841387559,
       "fresh": true,
-      "expiresAt": "2026-11-23T17:16:41.342590+00:00",
+      "expiresAt": "2026-11-23T17:30:07.898376+00:00",
       "green": false
     },
     "watchdog": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-23T16:45:37.275Z",
-      "runId": "a4c3aba8-3512-436e-af5d-66e9f4f0edf7",
+      "checkedAt": "2026-11-23T17:00:37.415Z",
+      "runId": "0c21cc9d-0431-47e9-aaaa-6cb1bd5e8932",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_8cNPFmKY2Uv8FhZh1FGVcNXPfMaQ:a4c3aba8-3512-436e-af5d-66e9f4f0edf7",
+      "runRef": "vercel:dpl_99XuuZtmg3TUe5Ud8MmVsGnFvYAN:0c21cc9d-0431-47e9-aaaa-6cb1bd5e8932",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2073,7 +2073,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "4e063b469b420e92994d82990f42e01d543c5ab0",
+        "sourceCommit": "74bd4ac7deaaca5fbeceda8eb829e0c6d1d1ee25",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -2086,8 +2086,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45218829195",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45217858277",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220275693",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -2098,7 +2098,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "a4c3aba8-3512-436e-af5d-66e9f4f0edf7",
+      "probeRunId": "0c21cc9d-0431-47e9-aaaa-6cb1bd5e8932",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -2115,12 +2115,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-23T16:45:37.275Z"
+          "checkedAt": "2026-11-23T17:00:37.415Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-23T17:15:37.275000+00:00",
+      "expiresAt": "2026-11-23T17:30:37.415000+00:00",
       "green": false
     }
   },
@@ -2142,24 +2142,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-23T16:45:37.275Z"
+      "checkedAt": "2026-11-23T17:00:37.415Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "231fd98849efa913879c08da19263b5a029aeb19",
+      "sourceCommit": "76a782b3ddbecd97586c8a08687f22281cd8cf91",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T16:58:53.980455+00:00",
+      "observedAt": "2026-11-23T17:05:47.165623+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45223694241",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45223694241",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2181,7 +2181,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45223694241"
     },
     {
       "site": "loveourlistings.com",
@@ -2207,25 +2207,25 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220266386/artifacts/14841120646",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220266386/artifacts/14841120646",
       "pageUrls": [
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-22-af8aaf75b2/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "14f55d3c699bbbe8788ff1f010e6c948a8f26fe8",
+      "sourceCommit": "76a782b3ddbecd97586c8a08687f22281cd8cf91",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T16:46:41.342590+00:00",
+      "observedAt": "2026-11-23T17:00:07.898376+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220275693",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220275693/artifacts/14841360218",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222727463",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222727463/artifacts/14841387559",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2236,22 +2236,22 @@
         "publisher-item-check-valves-held; intake-continues",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220014728",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45222347544",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "4e063b469b420e92994d82990f42e01d543c5ab0",
+      "sourceCommit": "74bd4ac7deaaca5fbeceda8eb829e0c6d1d1ee25",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T16:45:37.275Z",
+      "observedAt": "2026-11-23T17:00:37.415Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_8cNPFmKY2Uv8FhZh1FGVcNXPfMaQ:a4c3aba8-3512-436e-af5d-66e9f4f0edf7",
+      "runRef": "vercel:dpl_99XuuZtmg3TUe5Ud8MmVsGnFvYAN:0c21cc9d-0431-47e9-aaaa-6cb1bd5e8932",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2263,7 +2263,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45217858277",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45220275693",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
