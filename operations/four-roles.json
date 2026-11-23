@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-23T15:11:03.814995+00:00",
+  "checkedAt": "2026-11-23T15:18:53.138727+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "3163c4b146fdaac716da8fc818ad7e1d02a974b6",
+    "sourceCommit": "debb779b2160464d6f876f6d081fb373e6f818c8",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-23T15:09:15.003380+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201743698",
+      "checkedAt": "2026-11-23T15:17:13.882316+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45203301571",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "f22f2ab239fd31026f256ce820ccad3418ecf038",
+        "sourceCommit": "6d56e833e5d41f56038b7b7dd111f7b4832bb517",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-23T15:09:15.003380+00:00",
+        "checkedAt": "2026-11-23T15:17:13.882316+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 97,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -103,10 +103,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 18,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 18
             }
           },
           {
@@ -120,21 +120,21 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 5,
-        "candidatesConsidered": 24,
-        "inScopeQueueCandidates": 23,
+        "newCandidatesDiscovered": 3,
+        "candidatesConsidered": 23,
+        "inScopeQueueCandidates": 22,
         "attemptedThisRun": 4,
-        "skippedThisRun": 20,
+        "skippedThisRun": 19,
         "outcomes": {
           "not-individual-property": 1,
-          "stored-awaiting-verification": 4,
-          "duplicate-property": 1,
+          "stored-awaiting-verification": 3,
           "quarantined-retry-exhausted": 15,
           "deferred-article-limit": 2,
-          "deferred-attempt-budget": 1
+          "duplicate-property": 1,
+          "attempt-failed": 1
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 3,
+        "verifiedPublicationsThisRun": 3,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -150,10 +150,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://thespaces.com/a-top-floor-apartment-by-heju-is-for-sale-in-hyeres/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "Terracotta steps lead from a Hy\u00e8res apartment to the rooftops",
-            "collection": "penthouses",
+            "sourceUrl": "https://www.countrylife.co.uk/property/scotland/some-of-the-most-spectacular-views-i-have-ever-come-across-plus-a-cinema-room-gym-and-a-bothy-at-this-delightful-scottish-escape",
+            "sourceId": "countrylife-property",
+            "title": "At Glenbruach, save the room under the eaves for last",
+            "collection": "acreage",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
             "checks": 1,
@@ -162,33 +162,21 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://thespaces.com/carl-maston-s-1980s-california-beach-house-is-for-sale-for-the-first-time/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "A window seat faces the Pacific in Carl Maston\u2019s Faria Beach house",
-            "collection": "beach-properties",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://thespaces.com/a-17th-century-welsh-cottage-with-woodlands-and-a-waterfall/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "At Pentre Ucha, a stream runs from the garden into woodland",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceId": "robb-property",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
             "collection": "waterfront",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://thespaces.com/the-cloud-house/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "The arches of Cloud House bring a little Miami to Gospel Oak",
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-outstanding-rural-homes-from-sussex-to-lancashire-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "A postwar house in Cotswold dress at Damsell Cross",
             "collection": "mansions",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
@@ -196,18 +184,6 @@
             "nextAttemptAt": null,
             "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
-            "sourceId": "robb-property",
-            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
-            "collection": "acreage",
-            "outcome": "duplicate-property",
-            "failedAttempts": 1,
-            "checks": 0,
-            "nextAttemptAt": null,
-            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
@@ -222,9 +198,21 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-outstanding-rural-homes-from-sussex-to-lancashire-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "Four walled gardens and a stone farmhouse on Halfpenny Lane",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
             "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -241,32 +229,32 @@
             "outcome": "deferred-article-limit",
             "failedAttempts": 0,
             "checks": 0,
-            "nextAttemptAt": "2026-11-23T15:08:29.632101+00:00",
+            "nextAttemptAt": "2026-11-23T15:16:27.794341+00:00",
             "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
             "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
             "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
             "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "outcome": "deferred-article-limit",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-23T15:16:27.794341+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -282,27 +270,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "Two approaches to Top Farm in Laverton",
-            "collection": "acreage",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-23T15:08:29.632101+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
             "sourceId": "robb-property",
-            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-            "collection": "waterfront",
-            "outcome": "deferred-article-limit",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-23T15:08:29.632101+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -315,6 +291,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "Two approaches to Top Farm in Laverton",
+            "collection": "acreage",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -429,7 +417,7 @@
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-23T15:39:15.003380+00:00",
+      "expiresAt": "2026-11-23T15:47:13.882316+00:00",
       "green": false
     },
     "visual": {
@@ -437,19 +425,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-23T09:03:52.098Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45143552456",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-23T15:11:31.720Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45202321620",
+      "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "schedule"
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201743698"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "c7afb24616f8892c5fa17937ea4abdef90ab856c",
+        "sourceCommit": "0047ab11ba3adcccd0868334a8a8072991d5ff81",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -476,6 +465,118 @@
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+                "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/42f5f62229db3e48678b.jpg",
+                "alt": "Stone walls, pitched roofs and the timber garden terrace of Pentre Ucha near Llansilin",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/0722aa6da995240b4273.jpg",
+                "alt": "Glazed ocean-facing elevation of Carl Maston\u2019s Faria Beach house, seen from the shore",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/37a2bd37b9663668720e.jpg",
+                "alt": "Terracotta steps and a round dining table beneath the timber ceiling of the Hy\u00e8res apartment",
+                "native": [
+                  1600,
+                  900
+                ],
+                "loaded": true,
+                "rendered": [
+                  301,
+                  169
+                ],
+                "fit": "cover"
+              },
               {
                 "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
                 "alt": "",
@@ -587,118 +688,6 @@
                   169
                 ],
                 "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/2fff1c7accaf3f2182a5.jpg",
-                "alt": "Sitting room at Casa de la Parra with pale plaster, ceiling mouldings and a broad stone arch",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/486cd11e0bdcc4f70182.jpg",
-                "alt": "Garden doors and built-in bookshelves beside a striped sofa in the Jersey Road library",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/d15edcfe5a665a49b707.jpg",
-                "alt": "Wood-framed garden doors behind tropical planting and a small outdoor table in Upper Nichols Canyon",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
-                "alt": "",
-                "native": [
-                  430,
-                  550
-                ],
-                "loaded": true,
-                "rendered": [
-                  20,
-                  26
-                ],
-                "fit": "contain"
-              },
-              {
-                "src": "https://www.loveourlistings.com/images/source-properties/78e767e8dcf83006aff3.jpg",
-                "alt": "Old Town Hall and its stone garden wall reflected in Bosham Channel",
-                "native": [
-                  1600,
-                  900
-                ],
-                "loaded": true,
-                "rendered": [
-                  301,
-                  169
-                ],
-                "fit": "cover"
               }
             ],
             "captionFontSizes": [
@@ -715,7 +704,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "80dbebe78fd02a7ae885650fbd777e4e9359d956b7a16488671cb6abdc72d99d"
+          "screenshotSha256": "6e69405c64763948c722f15ebd7383ae40deb0f0321956d2bd340c492c744acb"
         },
         {
           "page": "journal",
@@ -740,8 +729,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-                "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House",
+                "src": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+                "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak",
                 "native": [
                   1600,
                   900
@@ -758,27 +747,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "184c96c50b2c2a3a7b17ede58f470fcdef065e74ef32eacb156500703f48d8fc"
+          "screenshotSha256": "8a565f4b544074a8e68a722e3f6a045941272d30a0c5fbe427fa0d7fc5bf0bb5"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-897f4f07f6/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-4338c46f5d/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A tiled hall introduces Hye House near Battle | Love Our Listings",
-            "h1": "We Love This Listing: A tiled hall introduces Hye House near Battle",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-897f4f07f6/",
-            "description": "An oak staircase links the entrance of this Georgian house to two floors of bedrooms.",
-            "ogTitle": "We Love This Listing: A tiled hall introduces Hye House near Battle | Love Our Listings",
-            "ogDescription": "An oak staircase links the entrance of this Georgian house to two floors of bedrooms.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-            "twitterTitle": "We Love This Listing: A tiled hall introduces Hye House near Battle | Love Our Listings",
-            "twitterDescription": "An oak staircase links the entrance of this Georgian house to two floors of bedrooms.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
+            "title": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak | Love Our Listings",
+            "h1": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-4338c46f5d/",
+            "description": "In northwest London, architect Peter Morris drew on a neighbourhood church and a honeymoon in Florida to design a house for his family.",
+            "ogTitle": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak | Love Our Listings",
+            "ogDescription": "In northwest London, architect Peter Morris drew on a neighbourhood church and a honeymoon in Florida to design a house for his family.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+            "twitterTitle": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak | Love Our Listings",
+            "twitterDescription": "In northwest London, architect Peter Morris drew on a neighbourhood church and a honeymoon in Florida to design a house for his family.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -811,8 +800,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-                "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House",
+                "src": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+                "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak",
                 "native": [
                   1600,
                   900
@@ -829,23 +818,23 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/a28b61fba83ba68c8a0f.jpg",
+            "src": "/images/source-properties/f23285b920d48a48cd49.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House"
+            "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "270c6411c79acfaa28e6161fc1be67e61f3fd3dcbbad8aec7153c224e35ce3f8",
+          "screenshotSha256": "c0ebe1759b8efc4839dee877806cb845a71088a4798f3521e9baba2f21aa1ad2",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 432
+              "textLength": 452
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 477
+              "textLength": 362
             },
             {
               "fontSize": 16,
@@ -893,8 +882,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-                "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House",
+                "src": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+                "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak",
                 "native": [
                   1600,
                   900
@@ -921,8 +910,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/bb22aa222242040d158d.jpg",
-                "alt": "Exposed beams span the dining room at Lower Carden Hall above a wide sandstone hearth",
+                "src": "https://www.loveourlistings.com/images/source-properties/42f5f62229db3e48678b.jpg",
+                "alt": "Stone walls, pitched roofs and the timber garden terrace of Pentre Ucha near Llansilin",
                 "native": [
                   1600,
                   900
@@ -943,7 +932,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "e231919c1a1c5381a13196c287b02f9286fb64e341e72a6413568d3f6236d727"
+          "screenshotSha256": "92dfa80daf3b2f37ebec30a2614cd5882af7544c4fc2fe278f4d86f1a700cfe1"
         },
         {
           "page": "journal",
@@ -982,8 +971,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-                "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House",
+                "src": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+                "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak",
                 "native": [
                   1600,
                   900
@@ -996,8 +985,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/bb22aa222242040d158d.jpg",
-                "alt": "Exposed beams span the dining room at Lower Carden Hall above a wide sandstone hearth",
+                "src": "https://www.loveourlistings.com/images/source-properties/42f5f62229db3e48678b.jpg",
+                "alt": "Stone walls, pitched roofs and the timber garden terrace of Pentre Ucha near Llansilin",
                 "native": [
                   1600,
                   900
@@ -1014,27 +1003,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "fd80011424bda6335b0afe8ee5404afb734e740e9092e6e374ed8c6073bbea42"
+          "screenshotSha256": "63bc9a4cb970acd4da4e2c1355406cae443142cda5e27b33ae0f160d7508f6f4"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-897f4f07f6/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-4338c46f5d/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A tiled hall introduces Hye House near Battle | Love Our Listings",
-            "h1": "We Love This Listing: A tiled hall introduces Hye House near Battle",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-897f4f07f6/",
-            "description": "An oak staircase links the entrance of this Georgian house to two floors of bedrooms.",
-            "ogTitle": "We Love This Listing: A tiled hall introduces Hye House near Battle | Love Our Listings",
-            "ogDescription": "An oak staircase links the entrance of this Georgian house to two floors of bedrooms.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-            "twitterTitle": "We Love This Listing: A tiled hall introduces Hye House near Battle | Love Our Listings",
-            "twitterDescription": "An oak staircase links the entrance of this Georgian house to two floors of bedrooms.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
+            "title": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak | Love Our Listings",
+            "h1": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-4338c46f5d/",
+            "description": "In northwest London, architect Peter Morris drew on a neighbourhood church and a honeymoon in Florida to design a house for his family.",
+            "ogTitle": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak | Love Our Listings",
+            "ogDescription": "In northwest London, architect Peter Morris drew on a neighbourhood church and a honeymoon in Florida to design a house for his family.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+            "twitterTitle": "We Love This Listing: The arches of Cloud House bring a little Miami to Gospel Oak | Love Our Listings",
+            "twitterDescription": "In northwest London, architect Peter Morris drew on a neighbourhood church and a honeymoon in Florida to design a house for his family.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1067,8 +1056,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/a28b61fba83ba68c8a0f.jpg",
-                "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House",
+                "src": "https://www.loveourlistings.com/images/source-properties/f23285b920d48a48cd49.jpg",
+                "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak",
                 "native": [
                   1600,
                   900
@@ -1082,23 +1071,31 @@
               }
             ],
             "captionFontSizes": [],
-            "bodyFontSizes": [
-              16
-            ]
+            "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/a28b61fba83ba68c8a0f.jpg",
+            "src": "/images/source-properties/f23285b920d48a48cd49.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Patterned entrance-hall floor and red walls frame the oak staircase at Hye House"
+            "alt": "Pink arched facade of Cloud House behind a turquoise wall between brick neighbours in Gospel Oak"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "e481188f014dfd356794ea58a3fb2092fab61f046628885ee7ba241b89884143",
+          "screenshotSha256": "0674b4d48fc615e1432b44a78c38823890058f93c2e092ca05c017ebd93256b6",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 432
+              "textLength": 452
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 362
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1109,11 +1106,39 @@
       "status": "passed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-22-897f4f07f6",
-        "publishedAt": "2026-11-22T08:16:01-07:00",
-        "image": "/images/source-properties/a28b61fba83ba68c8a0f.jpg"
+        "slug": "we-love-mansions-2026-11-23-4338c46f5d",
+        "publishedAt": "2026-11-23T08:08:29-07:00",
+        "image": "/images/source-properties/f23285b920d48a48cd49.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-23-4338c46f5d",
+          "image": "/images/source-properties/f23285b920d48a48cd49.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-waterfront-2026-11-09-159f15cf66",
+          "image": "/images/source-properties/42f5f62229db3e48678b.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-beach-properties-2026-11-10-1806eae120",
+          "image": "/images/source-properties/0722aa6da995240b4273.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-penthouses-2026-11-13-5f13fe7638",
+          "image": "/images/source-properties/37a2bd37b9663668720e.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-mansions-2026-11-22-897f4f07f6",
           "image": "/images/source-properties/a28b61fba83ba68c8a0f.jpg",
@@ -1619,11 +1644,11 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14803561269,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45143552456/artifacts/14803845427",
-      "fresh": false,
-      "expiresAt": "2026-11-23T09:33:52.098000+00:00",
-      "green": false
+      "artifactId": 14831242589,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45202321620/artifacts/14831452532",
+      "fresh": true,
+      "expiresAt": "2026-11-23T15:41:31.720000+00:00",
+      "green": true
     },
     "supervisor": {
       "schemaVersion": 1,
@@ -2040,10 +2065,10 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-23T15:00:37.180Z",
-      "runId": "0f9cbb9b-70b3-4c07-a278-700310e7edc7",
+      "checkedAt": "2026-11-23T15:15:37.329Z",
+      "runId": "e8551f00-72ce-4eee-b17f-cef44954fa19",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_AUdYU2GvgCKBSL2XPUDJ7sCZs45k:0f9cbb9b-70b3-4c07-a278-700310e7edc7",
+      "runRef": "vercel:dpl_46bTZzckuf8iohk3FcNc1Eyq6Vwz:e8551f00-72ce-4eee-b17f-cef44954fa19",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2055,47 +2080,41 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "c7afb24616f8892c5fa17937ea4abdef90ab856c",
+        "sourceCommit": "6d56e833e5d41f56038b7b7dd111f7b4832bb517",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
       "verified": false,
       "findings": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
       "issues": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45109059577",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45108985425",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201743698",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201770145",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
-        "expectedEventId": "loveourlistings.com:four-roles:bd06da083d3fe2adf07ae531",
+        "expectedEventId": "loveourlistings.com:four-roles:c909f774481bc0d65b1498b9",
         "deliveredAt": null,
         "pullDelivery": null,
         "ownerReadVerified": false
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "recoveryRef": null,
-      "probeRunId": "0f9cbb9b-70b3-4c07-a278-700310e7edc7",
+      "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
+      "probeRunId": "e8551f00-72ce-4eee-b17f-cef44954fa19",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
-          "id": "loveourlistings.com:four-roles:bd06da083d3fe2adf07ae531",
-          "fingerprint": "9fd7095d8979c148376f42f6",
-          "blockedSince": "2026-11-23T04:15:37.225Z",
+          "id": "loveourlistings.com:four-roles:c909f774481bc0d65b1498b9",
+          "fingerprint": "d0b96bd499e7200c81a3de59",
+          "blockedSince": "2026-11-23T15:15:37.329Z",
           "site": "loveourlistings.com",
           "type": "task_blocked",
           "cause": [
-            "publisher-silent-stale-or-missing",
-            "supervisor-silent-stale-or-missing",
             "supervisor-reports-unresolved-failures",
             "actual-owner-alert-delivery-unverified"
           ],
@@ -2103,12 +2122,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-23T15:00:37.180Z"
+          "checkedAt": "2026-11-23T15:15:37.329Z"
         }
       ],
-      "actualSilenceObserved": true,
+      "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-23T15:30:37.180000+00:00",
+      "expiresAt": "2026-11-23T15:45:37.329000+00:00",
       "green": false
     }
   },
@@ -2117,14 +2136,12 @@
   "scope": "Actual site-specific runtime/artifact receipts; no config-only or manual-publication green",
   "ownerAlerts": [
     {
-      "id": "loveourlistings.com:four-roles:bd06da083d3fe2adf07ae531",
-      "fingerprint": "9fd7095d8979c148376f42f6",
-      "blockedSince": "2026-11-23T04:15:37.225Z",
+      "id": "loveourlistings.com:four-roles:c909f774481bc0d65b1498b9",
+      "fingerprint": "d0b96bd499e7200c81a3de59",
+      "blockedSince": "2026-11-23T15:15:37.329Z",
       "site": "loveourlistings.com",
       "type": "task_blocked",
       "cause": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
@@ -2132,24 +2149,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-23T15:00:37.180Z"
+      "checkedAt": "2026-11-23T15:15:37.329Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "f22f2ab239fd31026f256ce820ccad3418ecf038",
+      "sourceCommit": "6d56e833e5d41f56038b7b7dd111f7b4832bb517",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T15:09:15.003380+00:00",
+      "observedAt": "2026-11-23T15:17:13.882316+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201743698",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201743698",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45203301571",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45203301571",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2171,35 +2188,35 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201743698"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45203301571"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "c7afb24616f8892c5fa17937ea4abdef90ab856c",
+      "sourceCommit": "0047ab11ba3adcccd0868334a8a8072991d5ff81",
       "check": "role:visual-checker",
-      "status": "failed",
+      "status": "passed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T09:03:52.098Z",
+      "observedAt": "2026-11-23T15:11:31.720Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45143552456",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45143552456/artifacts/14803561269",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45202321620",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45202321620/artifacts/14831242589",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45143552456/artifacts/14803845427",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45143552456/artifacts/14803845427",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45202321620/artifacts/14831452532",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45202321620/artifacts/14831452532",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-897f4f07f6/",
-        "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-4338c46f5d/",
+        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
@@ -2235,16 +2252,16 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "c7afb24616f8892c5fa17937ea4abdef90ab856c",
+      "sourceCommit": "6d56e833e5d41f56038b7b7dd111f7b4832bb517",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T15:00:37.180Z",
+      "observedAt": "2026-11-23T15:15:37.329Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_AUdYU2GvgCKBSL2XPUDJ7sCZs45k:0f9cbb9b-70b3-4c07-a278-700310e7edc7",
+      "runRef": "vercel:dpl_46bTZzckuf8iohk3FcNc1Eyq6Vwz:e8551f00-72ce-4eee-b17f-cef44954fa19",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2253,15 +2270,13 @@
       "runtimeVerified": true,
       "fresh": true,
       "findings": [
-        "publisher-silent-stale-or-missing",
-        "supervisor-silent-stale-or-missing",
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45108985425",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45201770145",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
-      "recoveryRef": null,
+      "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "workerAndSupervisorSilentDetection": true
     }
   ],
