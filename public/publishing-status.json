@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T03:59:14.289966+00:00",
+  "updatedAt": "2026-11-23T15:09:15.165213+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,12 +7,15 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "ee67204ef1185a3e70de0815e9ae4e8f1292ba67",
-    "trigger": "schedule"
+    "sourceCommit": "f22f2ab239fd31026f256ce820ccad3418ecf038",
+    "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
-    "verified": false,
-    "reason": "Not an automatic recovery request"
+    "verified": true,
+    "kind": "automatic-recovery",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45109378611",
+    "originEvent": "schedule",
+    "reason": "Verified repository health workflow and GitHub Actions bot"
   },
   "publicationBlocks": [
     {
@@ -151,10 +154,10 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
       "propertyId": null,
-      "collection": "mansions",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "collection": "acreage",
+      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -169,6 +172,15 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
       "propertyId": null,
       "collection": "mansions",
@@ -178,24 +190,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-      "propertyId": null,
-      "collection": "acreage",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-      "propertyId": null,
-      "collection": "waterfront",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
       "propertyId": null,
       "collection": "mansions",
@@ -203,15 +197,6 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-      "propertyId": "top-farm-laverton-gloucestershire",
-      "collection": "acreage",
-      "title": "Two approaches to Top Farm in Laverton",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00"
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -294,12 +279,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-23T03:59:13.730229+00:00",
+    "checkedAt": "2026-11-23T15:09:15.003380+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "no-eligible-content",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 101,
+    "feedItemsParsed": 109,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -316,10 +301,10 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "not-individual-property": 6,
+          "not-individual-property": 7,
           "candidate-admitted": 1,
           "already-published": 1,
-          "outside-lookback": 2
+          "outside-lookback": 1
         }
       },
       {
@@ -327,8 +312,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "candidate-admitted": 3,
-          "not-individual-property": 5,
+          "candidate-admitted": 4,
+          "not-individual-property": 4,
           "already-published": 2
         }
       },
@@ -354,10 +339,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 22,
+        "itemsParsed": 30,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 22
+          "discovery-original-link-required": 30
         }
       },
       {
@@ -365,24 +350,26 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "not-individual-property": 4,
+          "not-individual-property": 5,
           "already-published": 10,
-          "outside-lookback": 15
+          "outside-lookback": 14
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 19,
-    "inScopeQueueCandidates": 18,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 19,
+    "newCandidatesDiscovered": 5,
+    "candidatesConsidered": 24,
+    "inScopeQueueCandidates": 23,
+    "attemptedThisRun": 4,
+    "skippedThisRun": 20,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 15,
+      "stored-awaiting-verification": 4,
       "duplicate-property": 1,
-      "retry-cooldown": 2
+      "quarantined-retry-exhausted": 15,
+      "deferred-article-limit": 2,
+      "deferred-attempt-budget": 1
     },
-    "newFeaturesStored": 0,
+    "newFeaturesStored": 4,
     "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
@@ -397,6 +384,66 @@
         "nextAttemptAt": null,
         "reason": "Cached art/news item is outside the individual-property feature scope",
         "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://thespaces.com/a-top-floor-apartment-by-heju-is-for-sale-in-hyeres/",
+        "sourceId": "reviewed-the-spaces",
+        "title": "Terracotta steps lead from a Hy\u00e8res apartment to the rooftops",
+        "collection": "penthouses",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://thespaces.com/carl-maston-s-1980s-california-beach-house-is-for-sale-for-the-first-time/",
+        "sourceId": "reviewed-the-spaces",
+        "title": "A window seat faces the Pacific in Carl Maston\u2019s Faria Beach house",
+        "collection": "beach-properties",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://thespaces.com/a-17th-century-welsh-cottage-with-woodlands-and-a-waterfall/",
+        "sourceId": "reviewed-the-spaces",
+        "title": "At Pentre Ucha, a stream runs from the garden into woodland",
+        "collection": "waterfront",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://thespaces.com/the-cloud-house/",
+        "sourceId": "reviewed-the-spaces",
+        "title": "The arches of Cloud House bring a little Miami to Gospel Oak",
+        "collection": "mansions",
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
+        "nextAttemptAt": null,
+        "reason": "New feature awaits actual deployment and live verification",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+        "sourceId": "robb-property",
+        "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+        "collection": "acreage",
+        "outcome": "duplicate-property",
+        "failedAttempts": 1,
+        "checks": 0,
+        "nextAttemptAt": null,
+        "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+        "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
@@ -423,51 +470,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
         "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
         "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
-        "sourceId": "robb-property",
-        "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
-        "collection": "acreage",
-        "outcome": "duplicate-property",
-        "failedAttempts": 1,
+        "outcome": "deferred-article-limit",
+        "failedAttempts": 0,
         "checks": 0,
-        "nextAttemptAt": null,
-        "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-        "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-        "sourceId": "robb-property",
-        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
-        "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-        "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "nextAttemptAt": "2026-11-23T15:08:29.632101+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
         "duplicateOfArticleSlug": null
       },
       {
@@ -483,21 +494,21 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
         "sourceId": "robb-property",
-        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
         "collection": "waterfront",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 2,
-        "checks": 2,
-        "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
         "sourceId": "robb-property",
-        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
         "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
@@ -511,11 +522,47 @@
         "sourceId": "countrylife-property",
         "title": "Two approaches to Top Farm in Laverton",
         "collection": "acreage",
-        "outcome": "retry-cooldown",
+        "outcome": "deferred-attempt-budget",
         "failedAttempts": 4,
         "checks": 4,
-        "nextAttemptAt": "2026-11-23T04:45:21.548133+00:00",
-        "reason": "HTTP Error 403: Forbidden",
+        "nextAttemptAt": "2026-11-23T15:08:29.632101+00:00",
+        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+        "sourceId": "robb-property",
+        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+        "collection": "waterfront",
+        "outcome": "deferred-article-limit",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-23T15:08:29.632101+00:00",
+        "reason": "Per-run article limit; independent queued item remains eligible",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+        "sourceId": "robb-property",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+        "sourceId": "robb-property",
+        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -616,70 +663,70 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-23T03:58:52.217937+00:00",
-  "status": "no-eligible-content",
+  "lastRunAt": "2026-11-23T15:08:29.632101+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
-      "items": 22
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
+      "items": 30
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-23T03:58:52.217937+00:00",
+      "fetchedAt": "2026-11-23T15:08:29.632101+00:00",
       "items": 29
     }
   ],
   "collections": [
     {
       "name": "waterfront",
-      "eligible": 3,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 4,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "mansions",
-      "eligible": 11,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 13,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "penthouses",
-      "eligible": 1,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 2,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "ranches",
@@ -695,13 +742,13 @@
     },
     {
       "name": "beach-properties",
-      "eligible": 0,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 1,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 99,
+  "googleDiscoveryItems": 6,
+  "duplicatesFiltered": 101,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
@@ -714,93 +761,16 @@
       "propertyId": "howbridge-hall-howbridge-road-witham",
       "verifiedAt": "2026-11-22T15:17:49.619741+00:00",
       "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-22-881afb76ae",
-      "title": "We Love This Listing: The coach house has its own front door at Brook House",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-881afb76ae/",
-      "publishedAt": "2026-11-22T08:16:01-07:00",
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-outstanding-rural-homes-from-sussex-to-lancashire-as-seen-in-country-life",
-      "propertyId": "brook-house-25-addingtons-road-great-barford",
-      "verifiedAt": "2026-11-22T15:17:49.619741+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-acreage-2026-11-22-5c6838e128",
-      "title": "We Love This Listing: An inglenook sets the table at Lower Carden Hall",
-      "collection": "acreage",
-      "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-22-5c6838e128/",
-      "publishedAt": "2026-11-22T08:16:01-07:00",
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-outstanding-rural-homes-from-sussex-to-lancashire-as-seen-in-country-life",
-      "propertyId": "lower-carden-hall-cheshire",
-      "verifiedAt": "2026-11-22T15:17:49.619741+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-22-897f4f07f6",
-      "title": "We Love This Listing: A tiled hall introduces Hye House near Battle",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-897f4f07f6/",
-      "publishedAt": "2026-11-22T08:16:01-07:00",
-      "sourceUrl": "https://www.countrylife.co.uk/property/six-outstanding-rural-homes-from-sussex-to-lancashire-as-seen-in-country-life",
-      "propertyId": "hye-house-royal-oak-lane-east-sussex",
-      "verifiedAt": "2026-11-22T15:17:49.619741+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-waterfront-2026-11-16-a6ee280ca4",
-      "title": "We Love This Listing: Bosham Channel runs along the Old Town Hall garden",
-      "collection": "waterfront",
-      "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-16-a6ee280ca4/",
-      "publishedAt": "2026-11-22T08:08:18-07:00",
-      "sourceUrl": "https://thespaces.com/english-village-home/",
-      "propertyId": null,
-      "verifiedAt": "2026-11-22T15:10:01.950899+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-acreage-2026-11-11-8e28ce4fb1",
-      "title": "We Love This Listing: A garden room disappears into the trees in Upper Nichols Canyon",
-      "collection": "acreage",
-      "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-8e28ce4fb1/",
-      "publishedAt": "2026-11-22T08:08:18-07:00",
-      "sourceUrl": "https://thespaces.com/a-mirrored-sauna-sits-among-the-trees-of-this-hollywood-hills-home/",
-      "propertyId": null,
-      "verifiedAt": "2026-11-22T15:10:01.950899+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-19-23926db8ce",
-      "title": "We Love This Listing: A cherrywood library opens to the lawn on Jersey Road",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-23926db8ce/",
-      "publishedAt": "2026-11-22T08:08:18-07:00",
-      "sourceUrl": "https://thespaces.com/hand-painted-botanical-murals-fill-this-edwardian-london-townhouse/",
-      "propertyId": null,
-      "verifiedAt": "2026-11-22T15:10:01.950899+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-17-553eaac949",
-      "title": "We Love This Listing: Stone archways still set the pace at Casa de la Parra",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-553eaac949/",
-      "publishedAt": "2026-11-22T08:08:18-07:00",
-      "sourceUrl": "https://thespaces.com/a-1900-mallorcan-townhouse-reveals-stone-arches-and-a-steel-staircase/",
-      "propertyId": null,
-      "verifiedAt": "2026-11-22T15:10:01.950899+00:00",
-      "executionMode": "recorded-existing-publisher"
     }
   ],
   "verifiedAt": "2026-11-22T15:17:49.619741+00:00",
   "dailyPublicationProgress": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "timezone": "America/Dawson_Creek",
     "dailyTargetMinimum": 7,
-    "distinctNewLiveVerifiedPosts": 8,
-    "shortfall": 0,
-    "targetMet": true,
+    "distinctNewLiveVerifiedPosts": 0,
+    "shortfall": 7,
+    "targetMet": false,
     "latestVerifiedAt": "2026-11-22T15:17:49.619741+00:00",
     "latestPublishedAt": "2026-11-22T08:16:01-07:00"
   }
