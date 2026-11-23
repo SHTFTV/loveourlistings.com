@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-23T19:06:44.249699+00:00",
+  "checkedAt": "2026-11-23T19:12:46.880065+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "3ec5a7d22157a92844fa602a390341f8b1e11519",
+    "sourceCommit": "36a56eed420dd9f4e1b6392e1e631674c43c2671",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-23T19:06:28.141555+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717",
+      "checkedAt": "2026-11-23T19:12:35.433668+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45246376900",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "0ad4fc778bbe0f461a70d6e92ae32c04149fae65",
+        "sourceCommit": "42a6eef175e395c448420787915fc20aa81040b0",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-23T19:06:28.141555+00:00",
+        "checkedAt": "2026-11-23T19:12:35.433668+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -120,17 +120,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 21,
         "inScopeQueueCandidates": 20,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 20,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 21,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 16,
           "duplicate-property": 1,
-          "attempt-failed": 1,
-          "retry-cooldown": 2
+          "retry-cooldown": 3
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -185,14 +184,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -221,15 +220,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -254,18 +253,6 @@
             "checks": 3,
             "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -387,12 +374,24 @@
             "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+            "sourceId": "robb-property",
+            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-23T19:36:28.141555+00:00",
+      "expiresAt": "2026-11-23T19:42:35.433668+00:00",
       "green": false
     },
     "visual": {
@@ -1678,13 +1677,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-23T18:53:55.414954+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45243157410",
+      "checkedAt": "2026-11-23T19:06:53.421363+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245449609",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "f71378028c96179d95213d8c9224e72d90bf732f",
+        "sourceCommit": "42a6eef175e395c448420787915fc20aa81040b0",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1692,7 +1691,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45242941907"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717"
       },
       "verified": false,
       "status": "failed",
@@ -1701,13 +1700,13 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45242941907",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45242941907",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 30.684662,
+      "publisherReceiptAgeSeconds": 25.820063,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-23T18:53:25.137624+00:00",
+        "checkedAt": "2026-11-23T19:06:28.141555+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -1740,8 +1739,8 @@
             "itemsParsed": 10,
             "parseRejected": 0,
             "dispositions": {
-              "not-individual-property": 5,
-              "candidate-admitted": 4,
+              "candidate-admitted": 5,
+              "not-individual-property": 4,
               "already-published": 1
             }
           },
@@ -1784,15 +1783,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 20,
-        "inScopeQueueCandidates": 19,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 21,
+        "inScopeQueueCandidates": 20,
+        "attemptedThisRun": 1,
         "skippedThisRun": 20,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 16,
           "duplicate-property": 1,
+          "attempt-failed": 1,
           "retry-cooldown": 2
         },
         "newFeaturesStored": 0,
@@ -1848,14 +1848,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-24T01:05:38.340028+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -1884,15 +1884,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -1917,6 +1917,18 @@
             "checks": 3,
             "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceId": "robb-property",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2042,9 +2054,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45242941907",
+        "runId": "45245205717",
         "status": "passed",
-        "checkedAt": "2026-11-23T18:52:39.177723+00:00"
+        "checkedAt": "2026-11-23T19:05:35.609272+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -2058,7 +2070,7 @@
           "status": "done",
           "checkedAt": "2026-11-23T16:59:13.756463+00:00"
         },
-        "ageSeconds": 7251.026332,
+        "ageSeconds": 8029.165861,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -2066,7 +2078,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "81b8ce86b62ce6a5f9b96c913e1b95a66649f6b6",
+        "sourceCommit": "f71378028c96179d95213d8c9224e72d90bf732f",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/",
@@ -2078,10 +2090,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45240870592",
-        "checkedAt": "2026-11-23T18:40:54.389Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45244273643",
+        "checkedAt": "2026-11-23T19:00:47.710Z",
         "status": "passed",
-        "artifactId": 14850802907
+        "artifactId": 14852479138
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2091,9 +2103,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14852951245,
+      "artifactId": 14852058878,
       "fresh": true,
-      "expiresAt": "2026-11-23T19:23:55.414954+00:00",
+      "expiresAt": "2026-11-23T19:36:53.421363+00:00",
       "green": false
     },
     "watchdog": {
@@ -2191,17 +2203,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "0ad4fc778bbe0f461a70d6e92ae32c04149fae65",
+      "sourceCommit": "42a6eef175e395c448420787915fc20aa81040b0",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T19:06:28.141555+00:00",
+      "observedAt": "2026-11-23T19:12:35.433668+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45246376900",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45246376900",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2223,7 +2235,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45246376900"
     },
     {
       "site": "loveourlistings.com",
@@ -2249,25 +2261,25 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45244273643/artifacts/14854100527",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45244273643/artifacts/14854100527",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "f71378028c96179d95213d8c9224e72d90bf732f",
+      "sourceCommit": "42a6eef175e395c448420787915fc20aa81040b0",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T18:53:55.414954+00:00",
+      "observedAt": "2026-11-23T19:06:53.421363+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45243157410",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45243157410/artifacts/14852951245",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245449609",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245449609/artifacts/14852058878",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2279,7 +2291,7 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45242941907",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45245205717",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
