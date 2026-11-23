@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-23T21:24:36.486831+00:00",
+  "checkedAt": "2026-11-23T21:31:00.002743+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "2ae68a3be9e780d307a5b333315b1a0b0b38b644",
+    "sourceCommit": "c2f4c707655f8bcaaea0e7aae7c810adeb9b7928",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-23T21:24:22.607475+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
+      "checkedAt": "2026-11-23T21:30:44.182260+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45270219938",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "4abda04e0547758d0d1b1c18d7bdf60e57842a71",
+        "sourceCommit": "32ff89244850c567977320aa2a4321a7d7bf0377",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-23T21:24:22.607475+00:00",
+        "checkedAt": "2026-11-23T21:30:44.182260+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 104,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -102,10 +102,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 25,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 25
             }
           },
           {
@@ -122,14 +122,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 22,
         "inScopeQueueCandidates": 21,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 20,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 22,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 16,
           "duplicate-property": 1,
-          "attempt-failed": 2,
-          "retry-cooldown": 2
+          "retry-cooldown": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -248,7 +247,7 @@
             "sourceId": "robb-property",
             "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
-            "outcome": "attempt-failed",
+            "outcome": "retry-cooldown",
             "failedAttempts": 4,
             "checks": 4,
             "nextAttemptAt": "2026-11-24T03:23:56.419538+00:00",
@@ -364,18 +363,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
-            "sourceId": "robb-property",
-            "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 2,
-            "checks": 2,
-            "nextAttemptAt": "2026-11-24T03:23:56.419538+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
             "sourceId": "robb-property",
             "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
@@ -398,12 +385,24 @@
             "nextAttemptAt": "2026-11-24T03:05:27.546237+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
+            "sourceId": "robb-property",
+            "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-24T03:23:56.419538+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-23T21:54:22.607475+00:00",
+      "expiresAt": "2026-11-23T22:00:44.182260+00:00",
       "green": false
     },
     "visual": {
@@ -1689,13 +1688,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-23T21:12:25.242046+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267220298",
+      "checkedAt": "2026-11-23T21:24:48.967089+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269348555",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "92c2a7999ce84f424e86370fb5c6b978d90d97b1",
+        "sourceCommit": "32ff89244850c567977320aa2a4321a7d7bf0377",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -1703,7 +1702,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083"
       },
       "verified": false,
       "status": "failed",
@@ -1712,18 +1711,18 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 29.738388,
+      "publisherReceiptAgeSeconds": 26.803798,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-23T21:11:56.064116+00:00",
+        "checkedAt": "2026-11-23T21:24:22.607475+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 104,
+        "feedItemsParsed": 109,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -1777,10 +1776,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 25,
+            "itemsParsed": 30,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 25
+              "discovery-original-link-required": 30
             }
           },
           {
@@ -1797,13 +1796,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 22,
         "inScopeQueueCandidates": 21,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 22,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 20,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 16,
           "duplicate-property": 1,
-          "retry-cooldown": 4
+          "attempt-failed": 2,
+          "retry-cooldown": 2
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -1922,10 +1922,10 @@
             "sourceId": "robb-property",
             "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-24T03:23:56.419538+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2042,10 +2042,10 @@
             "sourceId": "robb-property",
             "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-23T21:19:29.447079+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-24T03:23:56.419538+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2076,9 +2076,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45267060475",
+        "runId": "45269183083",
         "status": "passed",
-        "checkedAt": "2026-11-23T21:11:30.484361+00:00"
+        "checkedAt": "2026-11-23T21:23:52.099415+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -2092,7 +2092,7 @@
           "status": "done",
           "checkedAt": "2026-11-23T16:59:13.756463+00:00"
         },
-        "ageSeconds": 15561.157359,
+        "ageSeconds": 16304.825212,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -2100,7 +2100,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "0382d27267cb107b5d129b432929d981037cdc03",
+        "sourceCommit": "92c2a7999ce84f424e86370fb5c6b978d90d97b1",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/",
@@ -2112,10 +2112,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45264059920",
-        "checkedAt": "2026-11-23T20:54:18.961Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267214855",
+        "checkedAt": "2026-11-23T21:12:46.053Z",
         "status": "passed",
-        "artifactId": 14861113105
+        "artifactId": 14863372110
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2125,19 +2125,19 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14862554944,
+      "artifactId": 14863154357,
       "fresh": true,
-      "expiresAt": "2026-11-23T21:42:25.242046+00:00",
+      "expiresAt": "2026-11-23T21:54:48.967089+00:00",
       "green": false
     },
     "watchdog": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-23T21:15:37.243Z",
-      "runId": "e77a6d6d-940c-4932-8611-eb5994f3e696",
+      "checkedAt": "2026-11-23T21:30:37.216Z",
+      "runId": "c7eb9521-972c-4c3b-8387-0a21f5b73651",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_GLthA8shJNpAHXedbome2fyFkfq4:e77a6d6d-940c-4932-8611-eb5994f3e696",
+      "runRef": "vercel:dpl_4VjcthRAMXchJGqAFgvLkcrBDGRm:c7eb9521-972c-4c3b-8387-0a21f5b73651",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2149,7 +2149,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "92c2a7999ce84f424e86370fb5c6b978d90d97b1",
+        "sourceCommit": "32ff89244850c567977320aa2a4321a7d7bf0377",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -2164,8 +2164,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45265087509",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267220298",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -2176,7 +2176,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "e77a6d6d-940c-4932-8611-eb5994f3e696",
+      "probeRunId": "c7eb9521-972c-4c3b-8387-0a21f5b73651",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -2194,12 +2194,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-23T21:15:37.243Z"
+          "checkedAt": "2026-11-23T21:30:37.216Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-23T21:45:37.243000+00:00",
+      "expiresAt": "2026-11-23T22:00:37.216000+00:00",
       "green": false
     }
   },
@@ -2222,24 +2222,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-23T21:15:37.243Z"
+      "checkedAt": "2026-11-23T21:30:37.216Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "4abda04e0547758d0d1b1c18d7bdf60e57842a71",
+      "sourceCommit": "32ff89244850c567977320aa2a4321a7d7bf0377",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T21:24:22.607475+00:00",
+      "observedAt": "2026-11-23T21:30:44.182260+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45270219938",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45270219938",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2261,7 +2261,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45270219938"
     },
     {
       "site": "loveourlistings.com",
@@ -2288,24 +2288,24 @@
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267214855/artifacts/14862757961",
       "pageUrls": [
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-19-583b735553/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "92c2a7999ce84f424e86370fb5c6b978d90d97b1",
+      "sourceCommit": "32ff89244850c567977320aa2a4321a7d7bf0377",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T21:12:25.242046+00:00",
+      "observedAt": "2026-11-23T21:24:48.967089+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267220298",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267220298/artifacts/14862554944",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269348555",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269348555/artifacts/14863154357",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2317,22 +2317,22 @@
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267060475",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45269183083",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "92c2a7999ce84f424e86370fb5c6b978d90d97b1",
+      "sourceCommit": "32ff89244850c567977320aa2a4321a7d7bf0377",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T21:15:37.243Z",
+      "observedAt": "2026-11-23T21:30:37.216Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_GLthA8shJNpAHXedbome2fyFkfq4:e77a6d6d-940c-4932-8611-eb5994f3e696",
+      "runRef": "vercel:dpl_4VjcthRAMXchJGqAFgvLkcrBDGRm:c7eb9521-972c-4c3b-8387-0a21f5b73651",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2345,7 +2345,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45265087509",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45267220298",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
