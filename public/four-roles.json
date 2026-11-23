@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-23T01:02:04.935143+00:00",
+  "checkedAt": "2026-11-23T01:08:10.175097+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "05ff3da8ff00d86f1759873405177052a92982fc",
+    "sourceCommit": "cad65a3c7ac29db493744efcc3bd184a0c4274e8",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-23T01:01:52.382073+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092098981",
+      "checkedAt": "2026-11-23T01:07:56.736528+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092696238",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "098961dec126cbdc32e396843e756968c84ec0fc",
+        "sourceCommit": "db24af73261a3bc012f8ddc922a62ca2d6bb3cbb",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-23T01:01:52.382073+00:00",
+        "checkedAt": "2026-11-23T01:07:56.736528+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
-        "feedsHealthy": 4,
-        "feedItemsParsed": 79,
+        "feedsHealthy": 5,
+        "feedItemsParsed": 104,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -57,10 +57,6 @@
           {
             "sourceId": "christies-property",
             "reason": "DTD/entity declarations rejected"
-          },
-          {
-            "sourceId": "google-waterfront",
-            "reason": "HTTP 429"
           }
         ],
         "sourceDispositions": [
@@ -107,9 +103,11 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 0,
+            "itemsParsed": 25,
             "parseRejected": 0,
-            "dispositions": {}
+            "dispositions": {
+              "discovery-original-link-required": 25
+            }
           },
           {
             "sourceId": "countrylife-property",
@@ -369,7 +367,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-23T01:31:52.382073+00:00",
+      "expiresAt": "2026-11-23T01:37:56.736528+00:00",
       "green": false
     },
     "visual": {
@@ -2075,17 +2073,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "098961dec126cbdc32e396843e756968c84ec0fc",
+      "sourceCommit": "db24af73261a3bc012f8ddc922a62ca2d6bb3cbb",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-23T01:01:52.382073+00:00",
+      "observedAt": "2026-11-23T01:07:56.736528+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092098981",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092098981",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092696238",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092696238",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2107,7 +2105,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092098981"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45092696238"
     },
     {
       "site": "loveourlistings.com",
