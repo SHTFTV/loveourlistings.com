@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T16:21:36.999351+00:00",
+  "updatedAt": "2026-11-24T16:28:17.733426+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "2b3bfccbb9bf2c8542b14498fb9f59dd1dc62df5",
+    "sourceCommit": "916135907d4e6ea4122579c1c8b52afe945b3972",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45435000470",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45436222234",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -331,12 +331,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-24T16:21:36.757575+00:00",
+    "checkedAt": "2026-11-24T16:28:17.503057+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 3,
-    "feedItemsParsed": 50,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 69,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -347,12 +347,8 @@
         "reason": "DTD/entity declarations rejected"
       },
       {
-        "sourceId": "google-waterfront",
-        "reason": "HTTP 429"
-      },
-      {
         "sourceId": "countrylife-property",
-        "reason": "HTTP 404"
+        "reason": "The read operation timed out"
       }
     ],
     "sourceDispositions": [
@@ -398,9 +394,11 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 0,
+        "itemsParsed": 19,
         "parseRejected": 0,
-        "dispositions": {}
+        "dispositions": {
+          "discovery-original-link-required": 19
+        }
       },
       {
         "sourceId": "countrylife-property",
@@ -690,49 +688,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-24T16:21:03.533436+00:00",
+  "lastRunAt": "2026-11-24T16:27:12.855142+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
-      "status": "error",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
-      "items": 0
+      "status": "ok",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
+      "items": 19
     },
     {
       "id": "countrylife-property",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:21:03.533436+00:00",
+      "fetchedAt": "2026-11-24T16:27:12.855142+00:00",
       "items": 0
     }
   ],
@@ -775,7 +773,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 78,
+  "duplicatesFiltered": 97,
   "quarantinedItems": 0,
   "lastVerifiedFeatures": [
     {
