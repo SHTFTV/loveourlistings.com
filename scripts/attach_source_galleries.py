@@ -67,14 +67,16 @@ def country_life_urls(html, article):
     return best[1]
 
 def spaces_urls(html):
-    cut = html.find('TBXJga_related')
-    if cut < 0:
-        cut = html.lower().find('related stories')
-    chunk = html[:cut] if cut > 0 else html
-    found = []
-    for src in re.findall(r'src="(https://system\.tiquo\.app/api/storage/[A-Za-z0-9-]+)"', chunk):
-        if src not in found:
-            found.append(src)
+    found=[]
+    for m in re.finditer(r'src="(https://system\.tiquo\.app/api/storage/[A-Za-z0-9-]+)"', html):
+        window=html[max(0,m.start()-700):m.start()]
+        if 'jlTXBG' in window:
+            continue
+        classes=' '.join(re.findall(r'class="([^"]+)"', window)[-6:])
+        if not any(k in classes for k in ('nkIojG_gallery','nkIojG_slide','rt-image','TBXJga_heroWide')):
+            continue
+        if m.group(1) not in found:
+            found.append(m.group(1))
     return found
 
 def urls_for(article, html):
