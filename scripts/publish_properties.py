@@ -16,6 +16,20 @@ ROOT=Path(__file__).resolve().parents[1];UTC=timezone.utc
 E=lambda x:html.escape(str(x),quote=True)
 PROPERTY_TYPES=r'\b(?:inside|home|house|mansion|estate|compound|townhouse|penthouse|tudor|cottage|residence|retreat|castle|manor|tower|conversion)\b'
 ILLUSTRATION_DISCLOSURE_HTML='<p class="lol-note">Original illustration — not the property</p>'
+def reviewed_media_retry(item, records, row):
+ record=records.get(source_key(item)) if item.get('propertyId') else records.get(item['url'])
+ if not record or not record.get('media') or record.get('summaryHash')!=item['summaryHash']:
+  return None,False
+ revision=hashlib.sha256(json.dumps(record,sort_keys=True).encode()).hexdigest()
+ previous=row.get('reviewedMediaRevision')
+ if item.get('propertyId') and not previous and row.get('lastAttemptAt'):
+  # Older multi-property queue entries did not store a revision. Only a later
+  # independent review can reopen their cooldown or exhausted retry budget.
+  try:changed=datetime.fromisoformat(record['reviewedAt'])>datetime.fromisoformat(row['lastAttemptAt'])
+  except (KeyError,TypeError,ValueError):changed=False
+  return revision,changed
+ return revision,revision!=previous
+
 def category(item):
  t=(item['title']+' '+item['summary'][:750]).lower()
  if '/art-collectibles/' in item.get('url',''):return None
@@ -201,8 +215,7 @@ def main(root=ROOT,fetch=get,now=None):
    row['status']='already-featured-property';row['duplicateOfArticleSlug']=identity_record['duplicateOfArticleSlug'];report['duplicates']+=1;decision(report,item,row,'duplicate-property','Exact property already featured: '+identity_record['duplicateOfArticleSlug']);continue
   art=illustration_record(item,root);art_revision=hashlib.sha256(json.dumps(art,sort_keys=True).encode()).hexdigest() if art else None
   art_changed=bool(art and row.get('illustrationRevision')!=art_revision)
-  media_record=records.get(item['url']);media_revision=hashlib.sha256(json.dumps(media_record,sort_keys=True).encode()).hexdigest() if media_record and media_record.get('media') and media_record.get('summaryHash')==item['summaryHash'] else None
-  media_changed=bool(media_revision and row.get('reviewedMediaRevision')!=media_revision)
+  media_revision,media_changed=reviewed_media_retry(item,records,row)
   type_gate_correction=item.get('sourceId')=='countrylife-property' and row.get('lastError')=='Not a supported individual property story' and category(item) is not None and not row.get('typeGateCorrectionApplied')
   exhausted=row.get('attempts',0)>=retry.get('maxAttempts',5)
   cooling=bool(row.get('lastAttemptAt') and now-datetime.fromisoformat(row['lastAttemptAt'])<timedelta(hours=retry.get('cooldownHours',6)))
