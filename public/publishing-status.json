@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T15:17:44.172566+00:00",
+  "updatedAt": "2026-11-24T15:24:33.498170+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
+    "sourceCommit": "38be2d59ea4e13ac1160b1291035c60adab9d3a2",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422401556",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423949315",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -188,6 +188,15 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+      "propertyId": null,
+      "collection": "acreage",
+      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
       "propertyId": null,
       "collection": "waterfront",
@@ -201,15 +210,6 @@
       "propertyId": null,
       "collection": "mansions",
       "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-      "propertyId": null,
-      "collection": "acreage",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -278,6 +278,13 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
+      "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
+      "propertyId": null,
+      "collection": "mansions",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
       "propertyId": null,
       "collection": "mansions",
@@ -322,12 +329,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-24T15:16:45.648411+00:00",
+    "checkedAt": "2026-11-24T15:24:33.229218+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 97,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 69,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -336,6 +343,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "countrylife-property",
+        "reason": "HTTP 404"
       }
     ],
     "sourceDispositions": [
@@ -381,38 +392,33 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 18,
+        "itemsParsed": 19,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 18
+          "discovery-original-link-required": 19
         }
       },
       {
         "sourceId": "countrylife-property",
-        "itemsParsed": 29,
-        "parseRejected": 1,
-        "dispositions": {
-          "already-published": 11,
-          "not-individual-property": 4,
-          "outside-lookback": 14
-        }
+        "itemsParsed": 0,
+        "parseRejected": 0,
+        "dispositions": {}
       }
     ],
-    "newCandidatesDiscovered": 1,
-    "candidatesConsidered": 26,
-    "inScopeQueueCandidates": 25,
-    "attemptedThisRun": 4,
-    "skippedThisRun": 22,
+    "newCandidatesDiscovered": 0,
+    "candidatesConsidered": 22,
+    "inScopeQueueCandidates": 21,
+    "attemptedThisRun": 1,
+    "skippedThisRun": 21,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 15,
-      "stored-awaiting-verification": 4,
       "duplicate-property": 1,
-      "deferred-article-limit": 1,
+      "attempt-failed": 1,
       "retry-cooldown": 4
     },
-    "newFeaturesStored": 4,
-    "verifiedPublicationsThisRun": 4,
+    "newFeaturesStored": 0,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -464,16 +470,16 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://thespaces.com/a-glass-winter-garden-crowns-this-1980s-belgian-house-by-bruno-albert/",
-        "sourceId": "reviewed-the-spaces",
-        "title": "A glass winter garden opens the roof at Maison H",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+        "sourceId": "robb-property",
+        "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
         "collection": "acreage",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
+        "outcome": "duplicate-property",
+        "failedAttempts": 1,
+        "checks": 0,
         "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
+        "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+        "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -500,16 +506,16 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
         "sourceId": "robb-property",
-        "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
         "collection": "acreage",
-        "outcome": "duplicate-property",
-        "failedAttempts": 1,
-        "checks": 0,
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
         "nextAttemptAt": null,
-        "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-        "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       },
       {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
@@ -536,18 +542,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-        "sourceId": "robb-property",
-        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-        "collection": "acreage",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
         "sourceId": "sothebys-property",
         "title": "Inside a Hidden Hills Hideaway",
@@ -560,18 +554,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-        "sourceId": "countrylife-property",
-        "title": "Two approaches to Top Farm in Laverton",
-        "collection": "acreage",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 5,
-        "checks": 6,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
         "sourceId": "robb-property",
         "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
@@ -581,18 +563,6 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-        "sourceId": "countrylife-property",
-        "title": "The old estate laundry houses the kitchen at Home Farm",
-        "collection": "acreage",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 1,
-        "checks": 2,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -644,18 +614,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-        "sourceId": "countrylife-property",
-        "title": "The Georgian house behind Nanteos\u2019s hotel years",
-        "collection": "mansions",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 5,
-        "checks": 6,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
         "sourceId": "robb-property",
         "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
@@ -672,11 +630,11 @@
         "sourceId": "robb-property",
         "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
         "collection": "mansions",
-        "outcome": "deferred-article-limit",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-24T15:16:09.727917+00:00",
-        "reason": "Per-run article limit; independent queued item remains eligible",
+        "outcome": "attempt-failed",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-24T21:23:55.581352+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -729,50 +687,50 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-24T15:16:09.727917+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-24T15:23:55.581352+00:00",
+  "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
-      "items": 18
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
+      "items": 19
     },
     {
       "id": "countrylife-property",
-      "status": "ok",
-      "fetchedAt": "2026-11-24T15:16:09.727917+00:00",
-      "items": 29
+      "status": "error",
+      "fetchedAt": "2026-11-24T15:23:55.581352+00:00",
+      "items": 0
     }
   ],
   "collections": [
@@ -784,9 +742,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 16,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 15,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "penthouses",
@@ -802,9 +760,9 @@
     },
     {
       "name": "acreage",
-      "eligible": 5,
-      "newFeatures": 3,
-      "status": "built-for-publication"
+      "eligible": 2,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "beach-properties",
@@ -814,7 +772,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 103,
+  "duplicatesFiltered": 97,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
