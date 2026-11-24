@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T20:41:28.702988+00:00",
+  "updatedAt": "2026-11-24T20:48:01.299632+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "fecedec1235dba0d33db2999d24779103ea98880",
+    "sourceCommit": "e12348b902f84ae238683055a67fb76916b2bdb1",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482340599",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45483437157",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -288,21 +288,17 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
+      "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
       "propertyId": null,
       "collection": "mansions",
-      "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+      "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
       "propertyId": null,
       "collection": "mansions",
-      "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
@@ -340,7 +336,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-24T20:41:28.454215+00:00",
+    "checkedAt": "2026-11-24T20:48:01.064348+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -419,13 +415,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 23,
     "inScopeQueueCandidates": 22,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 23,
+    "attemptedThisRun": 2,
+    "skippedThisRun": 21,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 16,
       "duplicate-property": 1,
-      "retry-cooldown": 5
+      "retry-cooldown": 3,
+      "attempt-failed": 2
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -652,10 +649,10 @@
         "sourceId": "robb-property",
         "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-25T02:47:18.074348+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -664,10 +661,10 @@
         "sourceId": "robb-property",
         "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -709,49 +706,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-24T20:40:47.592769+00:00",
+  "lastRunAt": "2026-11-24T20:47:18.074348+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 30
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T20:40:47.592769+00:00",
+      "fetchedAt": "2026-11-24T20:47:18.074348+00:00",
       "items": 29
     }
   ],
@@ -793,9 +790,9 @@
       "status": "blocked-eligible-property"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 119,
-  "quarantinedItems": 1,
+  "googleDiscoveryItems": 1,
+  "duplicatesFiltered": 118,
+  "quarantinedItems": 3,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-beach-properties-2026-11-24-fa9163f778",
