@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-24T16:40:13.971885+00:00",
+  "startedAt": "2026-11-24T16:46:30.121772+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "766c8a5b93ac26e27273a7aae02aafa5bbcbb476",
+    "sourceCommit": "9e3e579b582fc9c773706707b43c14301d99d965",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45439748124",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45440955142",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,22 +73,15 @@
     {
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
-      "status": "ok",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
-      "items": 30,
-      "parseRejected": 0,
-      "discoveryOnly": true,
-      "dispositions": {
-        "discovery-original-link-required": 30
-      },
-      "errors": [],
-      "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "error",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
+      "error": "HTTP 429"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:40:13.971885+00:00",
+      "fetchedAt": "2026-11-24T16:46:30.121772+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -107,14 +100,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 119,
-  "quarantined": 2,
+  "duplicates": 89,
+  "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45438749528",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45439939414",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -253,13 +246,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
-      "propertyId": null,
-      "collection": "waterfront",
-      "reason": "HTTP Error 403: Forbidden"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
       "collection": "mansions",
@@ -330,6 +316,15 @@
       "reason": "HTTP Error 403: Forbidden",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
@@ -432,7 +427,7 @@
     }
   ],
   "reviewedCandidateIntake": 50,
-  "newCandidatesDiscovered": 1,
+  "newCandidatesDiscovered": 0,
   "candidateChecks": [
     {
       "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
@@ -456,18 +451,6 @@
       "checks": 5,
       "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-      "sourceId": "sothebys-property",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
-      "collection": "waterfront",
-      "outcome": "attempt-failed",
-      "failedAttempts": 1,
-      "checks": 1,
-      "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00",
-      "reason": "HTTP Error 403: Forbidden",
       "duplicateOfArticleSlug": null
     },
     {
@@ -575,6 +558,18 @@
       "failedAttempts": 5,
       "checks": 5,
       "nextAttemptAt": null,
+      "reason": "HTTP Error 403: Forbidden",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "sourceId": "sothebys-property",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "collection": "waterfront",
+      "outcome": "retry-cooldown",
+      "failedAttempts": 1,
+      "checks": 1,
+      "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00",
       "reason": "HTTP Error 403: Forbidden",
       "duplicateOfArticleSlug": null
     },
@@ -750,14 +745,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-24T16:40:46.067184+00:00",
+  "finishedAt": "2026-11-24T16:47:01.266346+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-24T16:40:46.067184+00:00",
+    "checkedAt": "2026-11-24T16:47:01.266346+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 109,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 79,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -766,6 +761,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-waterfront",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -811,11 +810,9 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 30,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 30
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "countrylife-property",
@@ -828,17 +825,16 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
+    "newCandidatesDiscovered": 0,
     "candidatesConsidered": 23,
     "inScopeQueueCandidates": 22,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 22,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 23,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 16,
-      "attempt-failed": 1,
       "duplicate-property": 1,
-      "retry-cooldown": 4
+      "retry-cooldown": 5
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -866,18 +862,6 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-        "sourceId": "sothebys-property",
-        "title": "Inside a Singular Waterfront Villa in Palm Beach",
-        "collection": "waterfront",
-        "outcome": "attempt-failed",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00",
-        "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
       {
@@ -985,6 +969,18 @@
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
+        "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+        "sourceId": "sothebys-property",
+        "title": "Inside a Singular Waterfront Villa in Palm Beach",
+        "collection": "waterfront",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00",
         "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
