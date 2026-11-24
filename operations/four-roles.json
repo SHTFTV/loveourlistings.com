@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T20:48:19.634004+00:00",
+  "checkedAt": "2026-11-24T20:54:43.369324+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "c469c70cca47058b8c44051c4309d995d95e8981",
+    "sourceCommit": "7c62ad26f90271aa461fe6dfabe8b232b3b29fe2",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T20:48:01.064348+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750",
+      "checkedAt": "2026-11-24T20:54:27.170769+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45485440611",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "e12348b902f84ae238683055a67fb76916b2bdb1",
+        "sourceCommit": "fe768b7eafad93823d13f7bbf6acdac502406579",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T20:48:01.064348+00:00",
+        "checkedAt": "2026-11-24T20:54:27.170769+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 100,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -102,10 +102,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 21,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 21
             }
           },
           {
@@ -122,14 +122,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 23,
         "inScopeQueueCandidates": 22,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 21,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 23,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 16,
+          "quarantined-retry-exhausted": 17,
           "duplicate-property": 1,
-          "retry-cooldown": 3,
-          "attempt-failed": 2
+          "retry-cooldown": 4
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -352,30 +351,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
-            "sourceId": "robb-property",
-            "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-25T02:47:18.074348+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
-            "sourceId": "robb-property",
-            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
@@ -410,12 +385,36 @@
             "nextAttemptAt": "2026-11-25T02:09:28.445232+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
+            "sourceId": "robb-property",
+            "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-25T02:47:18.074348+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+            "sourceId": "robb-property",
+            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-24T21:18:01.064348+00:00",
+      "expiresAt": "2026-11-24T21:24:27.170769+00:00",
       "green": false
     },
     "visual": {
@@ -1989,13 +1988,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-24T20:35:31.619434+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482361838",
+      "checkedAt": "2026-11-24T20:48:27.468567+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484569971",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "fecedec1235dba0d33db2999d24779103ea98880",
+        "sourceCommit": "fe768b7eafad93823d13f7bbf6acdac502406579",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -2003,7 +2002,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482123186"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750"
       },
       "verified": false,
       "status": "failed",
@@ -2013,18 +2012,18 @@
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482123186",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482123186",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 29.678146,
+      "publisherReceiptAgeSeconds": 27.141677,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-24T20:35:02.515594+00:00",
+        "checkedAt": "2026-11-24T20:48:01.064348+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 100,
+        "feedItemsParsed": 109,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -2078,10 +2077,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 21,
+            "itemsParsed": 30,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 21
+              "discovery-original-link-required": 30
             }
           },
           {
@@ -2098,13 +2097,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 23,
         "inScopeQueueCandidates": 22,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 23,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 21,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 16,
           "duplicate-property": 1,
-          "retry-cooldown": 5
+          "retry-cooldown": 3,
+          "attempt-failed": 2
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -2331,10 +2331,10 @@
             "sourceId": "robb-property",
             "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-25T02:47:18.074348+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2343,10 +2343,10 @@
             "sourceId": "robb-property",
             "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2389,9 +2389,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45482123186",
+        "runId": "45484347750",
         "status": "passed",
-        "checkedAt": "2026-11-24T20:34:15.439694+00:00"
+        "checkedAt": "2026-11-24T20:47:16.070553+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -2405,7 +2405,7 @@
           "status": "done",
           "checkedAt": "2026-11-24T17:00:00.915128+00:00"
         },
-        "ageSeconds": 13232.605243,
+        "ageSeconds": 14008.554743,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -2413,7 +2413,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "fc636cc472d6c44a361f1246113510fd52e7a78a",
+        "sourceCommit": "fecedec1235dba0d33db2999d24779103ea98880",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
@@ -2425,10 +2425,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45479105186",
-        "checkedAt": "2026-11-24T20:17:18.152Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482352824",
+        "checkedAt": "2026-11-24T20:35:48.800Z",
         "status": "failed",
-        "artifactId": 14960022791
+        "artifactId": 14961604689
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2438,9 +2438,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14962745263,
+      "artifactId": 14964067135,
       "fresh": true,
-      "expiresAt": "2026-11-24T21:05:31.619434+00:00",
+      "expiresAt": "2026-11-24T21:18:27.468567+00:00",
       "green": false
     },
     "watchdog": {
@@ -2538,17 +2538,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "e12348b902f84ae238683055a67fb76916b2bdb1",
+      "sourceCommit": "fe768b7eafad93823d13f7bbf6acdac502406579",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T20:48:01.064348+00:00",
+      "observedAt": "2026-11-24T20:54:27.170769+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45485440611",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45485440611",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2570,7 +2570,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45485440611"
     },
     {
       "site": "loveourlistings.com",
@@ -2606,25 +2606,25 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482352824/artifacts/14961549949",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482352824/artifacts/14961549949",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/"
+        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+        "https://www.loveourlistings.com/journal/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "fecedec1235dba0d33db2999d24779103ea98880",
+      "sourceCommit": "fe768b7eafad93823d13f7bbf6acdac502406579",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T20:35:31.619434+00:00",
+      "observedAt": "2026-11-24T20:48:27.468567+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482361838",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482361838/artifacts/14962745263",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484569971",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484569971/artifacts/14964067135",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2637,7 +2637,7 @@
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45482123186",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45484347750",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
