@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-24T05:18:08.312657+00:00",
+  "startedAt": "2026-11-24T05:25:06.223222+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "d0bcba1385c2ea08966a6acc349d68794cbe15d5",
+    "sourceCommit": "da0874257ebfa0bb7aacdafedc28d5a55fa621b2",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45332284287",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45333122080",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,7 +74,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "items": 22,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -88,7 +88,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T05:18:08.312657+00:00",
+      "fetchedAt": "2026-11-24T05:25:06.223222+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -106,26 +106,15 @@
       "finalUrl": "https://www.countrylife.co.uk/feeds/tag/property"
     }
   ],
-  "articles": [
-    {
-      "slug": "we-love-penthouses-2026-11-18-4317cc04a6",
-      "title": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek",
-      "collection": "penthouses",
-      "url": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
-      "publishedAt": "2026-11-23T22:15:47-07:00",
-      "sourceUrl": "https://resident.com/real-estate/2026/11/18/cherry-creek-four-seasons-private-residence-denver-colorado",
-      "propertyId": null,
-      "retryOfPendingPublication": true
-    }
-  ],
-  "duplicates": 104,
+  "articles": [],
+  "duplicates": 103,
   "quarantined": 1,
-  "discovered": 0,
-  "productionVerified": true,
+  "discovered": 1,
+  "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45331630358",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45332492191",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -740,8 +729,8 @@
     {
       "name": "penthouses",
       "eligible": 1,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "ranches",
@@ -762,12 +751,12 @@
       "status": "blocked-eligible-property"
     }
   ],
-  "status": "published-and-verified-with-blockers",
-  "finishedAt": "2026-11-24T05:18:29.909192+00:00",
+  "status": "no-eligible-content",
+  "finishedAt": "2026-11-24T05:25:50.077518+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-24T05:18:29.909192+00:00",
+    "checkedAt": "2026-11-24T05:25:50.077518+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
     "feedItemsParsed": 101,
@@ -852,8 +841,8 @@
       "duplicate-property": 1,
       "retry-cooldown": 4
     },
-    "newFeaturesStored": 1,
-    "verifiedPublicationsThisRun": 1,
+    "newFeaturesStored": 0,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -1133,6 +1122,5 @@
         "duplicateOfArticleSlug": null
       }
     ]
-  },
-  "verifiedAt": "2026-11-24T05:18:47.548813+00:00"
+  }
 }
