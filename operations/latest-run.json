@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-24T16:58:57.043147+00:00",
+  "startedAt": "2026-11-24T17:06:13.436612+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "2d439c709c6001a6b5784f5c50a8217022ff3025",
+    "sourceCommit": "872756cacc9ef7ec7817d0161ee37d77b95775b5",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45443320598",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45444714125",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -31,7 +31,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,12 +74,12 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
-      "items": 19,
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
+      "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 19
+        "discovery-original-link-required": 30
       },
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -88,7 +88,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T16:58:57.043147+00:00",
+      "fetchedAt": "2026-11-24T17:06:13.436612+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -106,26 +106,15 @@
       "finalUrl": "https://www.countrylife.co.uk/feeds/tag/property"
     }
   ],
-  "articles": [
-    {
-      "slug": "we-love-beach-properties-2026-11-24-fa9163f778",
-      "title": "We Love This Listing: Schindler's Lovell Beach House comes up for sale",
-      "collection": "beach-properties",
-      "url": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
-      "publishedAt": "2026-11-24T08:55:00-08:00",
-      "sourceUrl": "https://thespaces.com/r-m-schindler-s-lovell-beach-house-is-for-sale-for-the-first-time-in-100-years/",
-      "propertyId": null,
-      "retryOfPendingPublication": true
-    }
-  ],
-  "duplicates": 108,
+  "articles": [],
+  "duplicates": 119,
   "quarantined": 1,
   "discovered": 0,
-  "productionVerified": true,
+  "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45442341735",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45443693700",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -758,19 +747,19 @@
     {
       "name": "beach-properties",
       "eligible": 0,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     }
   ],
-  "status": "published-and-verified-with-blockers",
-  "finishedAt": "2026-11-24T16:59:35.794769+00:00",
+  "status": "no-eligible-content",
+  "finishedAt": "2026-11-24T17:07:05.732226+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-24T16:59:35.794769+00:00",
+    "checkedAt": "2026-11-24T17:07:05.732226+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 98,
+    "feedItemsParsed": 109,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -824,10 +813,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 19,
+        "itemsParsed": 30,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 19
+          "discovery-original-link-required": 30
         }
       },
       {
@@ -852,8 +841,8 @@
       "duplicate-property": 1,
       "retry-cooldown": 5
     },
-    "newFeaturesStored": 1,
-    "verifiedPublicationsThisRun": 1,
+    "newFeaturesStored": 0,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -1133,6 +1122,5 @@
         "duplicateOfArticleSlug": null
       }
     ]
-  },
-  "verifiedAt": "2026-11-24T17:00:00.384801+00:00"
+  }
 }
