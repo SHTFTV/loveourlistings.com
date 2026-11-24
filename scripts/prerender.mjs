@@ -34,11 +34,19 @@ for(const a of articles){
  html=html.replaceAll('https://loveourlistings.com','https://www.loveourlistings.com');
  // Repair literal escaped punctuation in visible legacy HTML without altering datePublished.
  html=html.replace(/\\u([0-9a-f]{4})/gi,(m,h)=>{const n=parseInt(h,16);return n>=0x80?String.fromCharCode(n):m});
- const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Love Our Listings',item:origin+'/'},{'@type':'ListItem',position:2,name:a.collection.replaceAll('-',' '),item:origin+'/collections/'+a.collection},{'@type':'ListItem',position:3,name:a.title,item:origin+a.canonicalPath}]};
+ const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Love Our Listings',item:origin+'/'},{'@type':'ListItem',position:2,name:a.collection==='seller-guides'?'The magazine':a.collection.replaceAll('-',' '),item:a.collection==='seller-guides'?origin+'/#journal':origin+'/collections/'+a.collection},{'@type':'ListItem',position:3,name:a.title,item:origin+a.canonicalPath}]};
  html=html.replace('</head>',ld(graph)+ld(breadcrumb)+'</head>');fs.writeFileSync(file,html);
 }
 let sitemap=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8').replaceAll('https://loveourlistings.com','https://www.loveourlistings.com');
 for(const p of propertyCollections){const url=origin+'/collections/'+p.slug;if(!sitemap.includes('<loc>'+url+'</loc>'))sitemap=sitemap.replace('</urlset>','<url><loc>'+url+'</loc></url></urlset>');}
+for(const guide of articles.filter(a=>a.collection==='seller-guides')){
+ const url=origin+guide.canonicalPath;
+ if(!sitemap.includes('<loc>'+url+'</loc>'))sitemap=sitemap.replace('</urlset>','<url><loc>'+escape(url)+'</loc></url></urlset>');
+ const feedFile=path.join(dist,'journal','feed.xml');
+ const feed=fs.readFileSync(feedFile,'utf8');
+ const item='<item><title>'+escape(guide.title)+'</title><link>'+escape(url)+'</link><guid>'+escape(url)+'</guid><description>'+escape(guide.deck)+'</description><pubDate>'+new Date(guide.publishedAt).toUTCString()+'</pubDate></item>';
+ if(!feed.includes('<link>'+url+'</link>'))fs.writeFileSync(feedFile,feed.replace('</channel>',item+'</channel>'));
+}
 fs.writeFileSync(path.join(dist,'sitemap.xml'),sitemap);
 fs.writeFileSync(path.join(dist,'robots.txt'),'User-agent: *\nAllow: /\n\nSitemap: '+origin+'/sitemap.xml\n');
 fs.writeFileSync(path.join(dist,'404.html'),'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Page not found | Love Our Listings</title><link rel="stylesheet" href="/magazine-article-v1.css"></head><body><main><p>LOVE OUR LISTINGS</p><h1>Page not found</h1><p>The address may have changed. Explore the magazine or choose a collection.</p><a href="/">Return to Love Our Listings</a><nav>'+propertyCollections.map(p=>'<a href="/collections/'+p.slug+'">'+escape(p.title)+'</a>').join(' · ')+'</nav></main></body></html>');

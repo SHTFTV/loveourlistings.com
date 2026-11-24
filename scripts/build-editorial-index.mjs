@@ -23,12 +23,13 @@ const extra={
  'black-point-honolulu-oceanfront':['beach-properties'],
  'diamond-head-oceanfront-connected-rooms':['beach-properties'],
 };
+const sellerGuides=new Set(['abbotsford-luxury-real-estate-agent-raphaelle-beaudoin']);
 const knownPrimary={'the-pod-severna-park-waterfront':'waterfront','hanapepe-loop-oahu-island-home':'waterfront','diamond-head-oceanfront-connected-rooms':'waterfront'};
 const articles=[];
 for(const dir of fs.readdirSync(path.join(root,'public/journal'),{withFileTypes:true}).filter(x=>x.isDirectory())){
  const file=path.join(root,'public/journal',dir.name,'index.html');if(!fs.existsSync(file))continue;
  const html=fs.readFileSync(file,'utf8'),slug=dir.name,record=media.get(slug),article=html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)?.[1]||html;
- const collection=record?.collection||article.match(/href="\/collections\/([a-z-]+)"[^>]*>Explore the/i)?.[1]||knownPrimary[slug];
+ const collection=record?.collection||article.match(/href="\/collections\/([a-z-]+)"[^>]*>Explore the/i)?.[1]||knownPrimary[slug]||(sellerGuides.has(slug)?'seller-guides':null);
  if(!collection)throw new Error('Missing reviewed taxonomy for '+slug);
  const publishedAt=html.match(/"datePublished"\s*:\s*"([^"]+)"/)?.[1]||prior.find(x=>x.slug===slug)?.datePublished;
  if(!publishedAt)throw new Error('Missing original publication date for '+slug);
@@ -54,7 +55,7 @@ for(const dir of fs.readdirSync(path.join(root,'public/journal'),{withFileTypes:
  const watch=article.match(/https:\/\/(?:www\.)?youtube\.com\/watch\?v=[\w-]+/)?.[0]||((article.match(/youtube\.com\/embed\/([\w-]+)/)?.[1])? 'https://www.youtube.com/watch?v='+article.match(/youtube\.com\/embed\/([\w-]+)/)[1]:null);
  const caption=decode(figure.match(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/i)?.[1].replace(/<[^>]+>/g,'')||'');
  const canonical=html.match(/rel="canonical"[^>]+href="https:\/\/(?:www\.)?loveourlistings\.com([^"#]+)"/)?.[1]||'/journal/'+slug+'/';
- articles.push({slug,title,deck:meta(html,'description'),publishedAt,dateLabel:new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:publishedAt.length===10?'UTC':'America/Vancouver'}).format(new Date(publishedAt)),collection,collections:[...new Set([collection,...(extra[slug]||[])])],canonicalPath:canonical,image,photos,imageAlt:approved?(sourceImage.sourceImageAlt||title):caption,imageCredit:approved?sourceImage.credit:caption,imageSourceUrl:approved?sourceImage.sourceUrl:null,imageWidth:approved?sourceImage.width:1200,imageHeight:approved?sourceImage.height:700,sourceMediaKind:approved?(sourceImage.isIllustration?"original-editorial-illustration":sourceImage.selection):null,watchUrl:watch,sourceDerived,sourceImageStatus:approved?sourceImage.status:sourceDerived?'not-verified':'original-editorial',tourCredit:watch?(caption.match(/Original film: ([^.]+)\./)?.[1]||caption.match(/Original listing tour from ([^,]+),/)?.[1]||'Original publisher tour'):null,sourceImageEvidence:approved?sourceImage.originalImageUrl:null});
+ articles.push({slug,title,deck:meta(html,'description'),publishedAt,dateLabel:new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:publishedAt.length===10?'UTC':'America/Vancouver'}).format(new Date(publishedAt)),collection,collections:sellerGuides.has(slug)?[]:[...new Set([collection,...(extra[slug]||[])])],canonicalPath:canonical,image,photos,imageAlt:approved?(sourceImage.sourceImageAlt||title):caption,imageCredit:approved?sourceImage.credit:caption,imageSourceUrl:approved?sourceImage.sourceUrl:null,imageWidth:approved?sourceImage.width:sellerGuides.has(slug)?1600:1200,imageHeight:approved?sourceImage.height:sellerGuides.has(slug)?900:700,sourceMediaKind:approved?(sourceImage.isIllustration?"original-editorial-illustration":sourceImage.selection):null,watchUrl:watch,sourceDerived,sourceImageStatus:approved?sourceImage.status:sourceDerived?'not-verified':'original-editorial',tourCredit:watch?(caption.match(/Original film: ([^.]+)\./)?.[1]||caption.match(/Original listing tour from ([^,]+),/)?.[1]||'Original publisher tour'):null,sourceImageEvidence:approved?sourceImage.originalImageUrl:null});
 }
 articles.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
 fs.mkdirSync(path.join(root,'src/data'),{recursive:true});
@@ -64,4 +65,3 @@ const preferred={acreage:'grant-ranch-oklahoma-working-land','beach-properties':
 const coverage=slugs.map(collection=>{const suitable=articles.filter(a=>a.collections.includes(collection));if(!suitable.length)throw new Error('No genuine existing feature for '+collection);const a=suitable.find(x=>x.slug===preferred[collection])||suitable[0];return {collection,articleSlug:a.slug,title:a.title,publishedAt:a.publishedAt,verifiedPropertyMedia:a.sourceImageStatus==='verified-public-source',sourceImageStatus:a.sourceImageStatus,articleCount:suitable.length,selection:'Existing genuine suitable feature; retain original publication date, never claim it is newly published today'};});
 fs.mkdirSync(path.join(root,'operations'),{recursive:true});fs.writeFileSync(path.join(root,'operations/seo-category-coverage.json'),JSON.stringify({generatedAt:new Date().toISOString(),articleCount:articles.length,collections:coverage},null,2)+'\n');
 console.log('Built editorial index:',articles.length,'existing articles and6genuine category features; verified property media:',coverage.filter(x=>x.verifiedPropertyMedia).length);
-

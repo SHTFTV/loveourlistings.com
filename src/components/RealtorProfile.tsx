@@ -24,6 +24,7 @@ interface RealtorProfileProps {
   phone: string;
   email?: string;
   address: string;
+  sellerGuide?: string;
   website?: string;
   websiteLabel?: string;
   googleReviews?: string;
@@ -43,6 +44,7 @@ const RealtorProfile = ({
   phone,
   email,
   address,
+  sellerGuide,
   website,
   websiteLabel,
   googleReviews,
@@ -180,6 +182,11 @@ const RealtorProfile = ({
               </div>
             )}
 
+            {sellerGuide && (
+              <a className="font-semibold text-primary underline underline-offset-4" href={sellerGuide}>
+                Read the Abbotsford luxury home seller guide
+              </a>
+            )}
             {website && (
               <div className="flex items-center gap-3">
                 <ExternalLink className="w-4 h-4 text-primary shrink-0" />
