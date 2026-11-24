@@ -4,6 +4,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from reviewed_properties import source_key
 
 ROOT = Path(__file__).resolve().parents[1]
 cloud = '--cloud' in sys.argv
@@ -16,13 +17,26 @@ for run in state['runs']:
     if run.get('productionVerified') and run.get('verifiedAt'):
         for article in run.get('articles', []):
             verified[article['slug']] = {**article, 'verifiedAt': run['verifiedAt'], 'executionMode': run.get('executionMode', 'recorded-existing-publisher')}
-today = sorted((a for a in verified.values() if datetime.fromisoformat(a['publishedAt']).astimezone(zone).date().isoformat() == day), key=lambda a: a['publishedAt'], reverse=True)
+# A new journal URL can repeat an already verified source event. Keep its
+# publication receipt, but credit only the first publication of each property
+# on that source. Property IDs distinguish separate houses in one roundup.
+sources = {article['slug']: article['source'] for article in state['articles']}
+seen = set()
+distinct = {}
+for article in sorted(verified.values(), key=lambda a: datetime.fromisoformat(a['publishedAt'])):
+    source = sources.get(article['slug']) or {'url': article.get('sourceUrl'), 'propertyId': article.get('propertyId')}
+    identity = source_key(source) if source.get('url') else article['slug']
+    if identity in seen:
+        continue
+    seen.add(identity)
+    distinct[article['slug']] = article
+today = sorted((a for a in distinct.values() if datetime.fromisoformat(a['publishedAt']).astimezone(zone).date().isoformat() == day), key=lambda a: datetime.fromisoformat(a['publishedAt']), reverse=True)
 target = sop['publicationCadence']['dailyTargetMinimum']
-latest = max(verified.values(), key=lambda a: a['publishedAt']) if verified else None
+latest = max(distinct.values(), key=lambda a: datetime.fromisoformat(a['publishedAt'])) if distinct else None
 proof = {'schemaVersion': 1, 'site': 'loveourlistings.com', 'date': day, 'timezone': zone.key,
          'dailyTargetMinimum': target, 'distinctNewLiveVerifiedPosts': len(today),
          'shortfall': max(0, target - len(today)), 'targetMet': len(today) >= target,
-         'latestVerifiedAt': max((a['verifiedAt'] for a in verified.values()), default=None),
+         'latestVerifiedAt': max((a['verifiedAt'] for a in distinct.values()), default=None),
          'latestPublishedAt': latest['publishedAt'] if latest else None,
          'articles': today, 'verificationScope': 'Actual public article text/date/source plus journal manifest, index, feed and sitemap; source dates remain separate from new publication dates.',
          'executionMode': 'existing-cloud-publisher' if cloud else 'operator-assisted-recovery',
