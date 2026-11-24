@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T15:18:28.698035+00:00",
+  "checkedAt": "2026-11-24T15:24:47.537797+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "d34d553ae86bd366d6c6ac7ccac00a5edfd4f289",
+    "sourceCommit": "0c6501d96ef8c2d271db682b373bfa375955f94e",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T15:16:45.648411+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
+      "checkedAt": "2026-11-24T15:24:33.229218+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45424970463",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
+        "sourceCommit": "38be2d59ea4e13ac1160b1291035c60adab9d3a2",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -40,15 +40,15 @@
         "Reviewed property source outside current lookback",
         "Reviewed property source outside current lookback"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T15:16:45.648411+00:00",
+        "checkedAt": "2026-11-24T15:24:33.229218+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
-        "feedsHealthy": 5,
-        "feedItemsParsed": 97,
+        "feedsHealthy": 4,
+        "feedItemsParsed": 69,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -57,6 +57,10 @@
           {
             "sourceId": "christies-property",
             "reason": "DTD/entity declarations rejected"
+          },
+          {
+            "sourceId": "countrylife-property",
+            "reason": "HTTP 404"
           }
         ],
         "sourceDispositions": [
@@ -102,38 +106,33 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 18,
+            "itemsParsed": 19,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 18
+              "discovery-original-link-required": 19
             }
           },
           {
             "sourceId": "countrylife-property",
-            "itemsParsed": 29,
-            "parseRejected": 1,
-            "dispositions": {
-              "already-published": 11,
-              "not-individual-property": 4,
-              "outside-lookback": 14
-            }
+            "itemsParsed": 0,
+            "parseRejected": 0,
+            "dispositions": {}
           }
         ],
-        "newCandidatesDiscovered": 1,
-        "candidatesConsidered": 26,
-        "inScopeQueueCandidates": 25,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 22,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 22,
+        "inScopeQueueCandidates": 21,
+        "attemptedThisRun": 1,
+        "skippedThisRun": 21,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 15,
-          "stored-awaiting-verification": 4,
           "duplicate-property": 1,
-          "deferred-article-limit": 1,
+          "attempt-failed": 1,
           "retry-cooldown": 4
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -185,16 +184,16 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://thespaces.com/a-glass-winter-garden-crowns-this-1980s-belgian-house-by-bruno-albert/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "A glass winter garden opens the roof at Maison H",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceId": "robb-property",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
             "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -221,16 +220,16 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
             "sourceId": "robb-property",
-            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
             "collection": "acreage",
-            "outcome": "duplicate-property",
-            "failedAttempts": 1,
-            "checks": 0,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
@@ -257,18 +256,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-            "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-            "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
             "sourceId": "sothebys-property",
             "title": "Inside a Hidden Hills Hideaway",
@@ -281,18 +268,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "Two approaches to Top Farm in Laverton",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 5,
-            "checks": 6,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
             "sourceId": "robb-property",
             "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
@@ -302,18 +277,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "The old estate laundry houses the kitchen at Home Farm",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 1,
-            "checks": 2,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -365,18 +328,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "The Georgian house behind Nanteos\u2019s hotel years",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 5,
-            "checks": 6,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
             "sourceId": "robb-property",
             "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
@@ -393,11 +344,11 @@
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
             "collection": "mansions",
-            "outcome": "deferred-article-limit",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-24T15:16:09.727917+00:00",
-            "reason": "Per-run article limit; independent queued item remains eligible",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-24T21:23:55.581352+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -450,9 +401,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-24T15:46:45.648411+00:00",
+      "expiresAt": "2026-11-24T15:54:33.229218+00:00",
       "green": false
     },
     "visual": {
@@ -2021,13 +1972,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-24T15:02:36.541485+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420838134",
+      "checkedAt": "2026-11-24T15:18:37.523191+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423965670",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "9c3c4d80eaae86dd5e705ee2964c9fe783263c19",
+        "sourceCommit": "38be2d59ea4e13ac1160b1291035c60adab9d3a2",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -2035,29 +1986,27 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420562939"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694"
       },
       "verified": false,
       "status": "failed",
       "findings": [
-        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45419286108",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420562939",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 27.582826,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 112.483122,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-24T15:02:09.705496+00:00",
+        "checkedAt": "2026-11-24T15:16:45.648411+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 97,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -2111,10 +2060,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 18,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 18
             }
           },
           {
@@ -2128,19 +2077,21 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 24,
-        "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 24,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 26,
+        "inScopeQueueCandidates": 25,
+        "attemptedThisRun": 4,
+        "skippedThisRun": 22,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 17,
+          "quarantined-retry-exhausted": 15,
+          "stored-awaiting-verification": 4,
           "duplicate-property": 1,
-          "retry-cooldown": 5
+          "deferred-article-limit": 1,
+          "retry-cooldown": 4
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 4,
+        "verifiedPublicationsThisRun": 4,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2168,18 +2119,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
-            "sourceId": "robb-property",
-            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
-            "collection": "acreage",
-            "outcome": "duplicate-property",
-            "failedAttempts": 1,
-            "checks": 0,
-            "nextAttemptAt": null,
-            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
             "sourceId": "robb-property",
             "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
@@ -2204,15 +2143,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-            "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "sourceUrl": "https://thespaces.com/a-glass-winter-garden-crowns-this-1980s-belgian-house-by-bruno-albert/",
+            "sourceId": "reviewed-the-spaces",
+            "title": "A glass winter garden opens the roof at Maison H",
             "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2240,16 +2179,16 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "Two approaches to Top Farm in Laverton",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceId": "robb-property",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
             "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
             "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
@@ -2276,6 +2215,18 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceId": "robb-property",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
             "sourceId": "sothebys-property",
             "title": "Inside a Hidden Hills Hideaway",
@@ -2288,6 +2239,18 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "Two approaches to Top Farm in Laverton",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 5,
+            "checks": 6,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
             "sourceId": "robb-property",
             "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
@@ -2297,6 +2260,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "The old estate laundry houses the kitchen at Home Farm",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 1,
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2352,11 +2327,11 @@
             "sourceId": "countrylife-property",
             "title": "The Georgian house behind Nanteos\u2019s hotel years",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 5,
-            "checks": 5,
+            "checks": 6,
             "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2376,11 +2351,11 @@
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 3,
             "checks": 3,
-            "nextAttemptAt": "2026-11-24T15:15:26.145353+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "nextAttemptAt": "2026-11-24T15:16:09.727917+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2434,34 +2409,34 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45420562939",
+        "runId": "45423448694",
         "status": "passed",
-        "checkedAt": "2026-11-24T15:01:15.207355+00:00"
+        "checkedAt": "2026-11-24T15:16:02.379210+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-penthouses-2026-11-18-4317cc04a6",
+          "id": "loveourlistings.com:we-love-acreage-2026-11-24-6acd3a4911",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek",
-          "publishedAt": "2026-11-23T22:15:47-07:00",
-          "verifiedAt": "2026-11-24T05:18:47.548813+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
+          "title": "We Love This Listing: A glass winter garden opens the roof at Maison H",
+          "publishedAt": "2026-11-24T08:16:09-07:00",
+          "verifiedAt": "2026-11-24T15:17:43.598973+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-24-6acd3a4911/",
           "status": "done",
-          "checkedAt": "2026-11-24T05:18:47.807741+00:00"
+          "checkedAt": "2026-11-24T15:17:44.194842+00:00"
         },
-        "ageSeconds": 35210.712029,
-        "inspectionRequired": true,
+        "ageSeconds": 149.518152,
+        "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "fcdd4846c2c100d6557d73473ecd308bb6e9305c",
+        "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-15-cd97299284/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2470,10 +2445,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564",
-        "checkedAt": "2026-11-24T14:49:31.024Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357",
+        "checkedAt": "2026-11-24T15:11:09.896Z",
         "status": "failed",
-        "artifactId": 14933945221
+        "artifactId": 14934901521
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2483,9 +2458,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 14933428666,
-      "fresh": false,
-      "expiresAt": "2026-11-24T15:32:36.541485+00:00",
+      "artifactId": 14936765369,
+      "fresh": true,
+      "expiresAt": "2026-11-24T15:48:37.523191+00:00",
       "green": false
     },
     "watchdog": {
@@ -2583,17 +2558,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
+      "sourceCommit": "38be2d59ea4e13ac1160b1291035c60adab9d3a2",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T15:16:45.648411+00:00",
+      "observedAt": "2026-11-24T15:24:33.229218+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45424970463",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45424970463",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2615,7 +2590,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45424970463"
     },
     {
       "site": "loveourlistings.com",
@@ -2644,39 +2619,37 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357/artifacts/14934521547",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357/artifacts/14934521547",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/",
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/"
+        "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "9c3c4d80eaae86dd5e705ee2964c9fe783263c19",
+      "sourceCommit": "38be2d59ea4e13ac1160b1291035c60adab9d3a2",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T15:02:36.541485+00:00",
+      "observedAt": "2026-11-24T15:18:37.523191+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420838134",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420838134/artifacts/14933428666",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423965670",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423965670/artifacts/14936765369",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
-        "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45419286108",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
