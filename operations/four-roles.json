@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T14:05:09.092264+00:00",
+  "checkedAt": "2026-11-24T14:11:23.898419+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "4c4d578dea08ca745d373800c121066c233cb67b",
+    "sourceCommit": "0f79a2f2e86b34822e7f07ff27d502daba40f426",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T14:04:54.884311+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45409960822",
+      "checkedAt": "2026-11-24T14:11:06.678402+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45411098920",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "4bb1f25b530c0ae6722653fab077a92caf734ee9",
+        "sourceCommit": "f12d72ec08692e343120308762cd3cff38a8fa78",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T14:04:54.884311+00:00",
+        "checkedAt": "2026-11-24T14:11:06.678402+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -119,17 +119,16 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 24,
         "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 23,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 24,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 17,
           "duplicate-property": 1,
-          "attempt-failed": 1,
-          "retry-cooldown": 4
+          "retry-cooldown": 5
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -184,14 +183,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/marcella-landing-deer-valley-townhouse-1238858523",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-24T20:04:19.485767+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -220,15 +219,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -253,18 +252,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -422,12 +409,24 @@
             "nextAttemptAt": "2026-11-24T15:27:54.237127+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/marcella-landing-deer-valley-townhouse-1238858523",
+            "sourceId": "robb-property",
+            "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-24T20:04:19.485767+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-24T14:34:54.884311+00:00",
+      "expiresAt": "2026-11-24T14:41:06.678402+00:00",
       "green": false
     },
     "visual": {
@@ -2475,17 +2474,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "4bb1f25b530c0ae6722653fab077a92caf734ee9",
+      "sourceCommit": "f12d72ec08692e343120308762cd3cff38a8fa78",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T14:04:54.884311+00:00",
+      "observedAt": "2026-11-24T14:11:06.678402+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45409960822",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45409960822",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45411098920",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45411098920",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2507,7 +2506,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45409960822"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45411098920"
     },
     {
       "site": "loveourlistings.com",
@@ -2536,8 +2535,8 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45407920354/artifacts/14925248900",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45407920354/artifacts/14925248900",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
         "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
         "https://www.loveourlistings.com/journal/"
       ]
     },
