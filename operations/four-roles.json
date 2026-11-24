@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T22:34:59.990649+00:00",
+  "checkedAt": "2026-11-24T22:41:29.766762+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "b995cff93a7e79aeeef6ac4de669628ded9f1c68",
+    "sourceCommit": "6d70d6d070db44bfbb10dddabe0b3ac31a001fdf",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T22:34:43.790155+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45502073927",
+      "checkedAt": "2026-11-24T22:41:13.129764+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45503066645",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "53047e9293dab8923cebf0b936ee93ffe16a9995",
+        "sourceCommit": "948aaf48c400ebb26275917396bb358fe3445060",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T22:34:43.790155+00:00",
+        "checkedAt": "2026-11-24T22:41:13.129764+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -122,13 +122,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 24,
         "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 24,
+        "attemptedThisRun": 1,
+        "skippedThisRun": 23,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 18,
           "duplicate-property": 1,
-          "retry-cooldown": 4
+          "attempt-failed": 1,
+          "retry-cooldown": 3
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -259,10 +260,10 @@
             "sourceId": "sothebys-property",
             "title": "Inside a Singular Waterfront Villa in Palm Beach",
             "collection": "waterfront",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 2,
+            "checks": 2,
+            "nextAttemptAt": "2026-11-25T04:40:36.825209+00:00",
             "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
@@ -426,7 +427,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-24T23:04:43.790155+00:00",
+      "expiresAt": "2026-11-24T23:11:13.129764+00:00",
       "green": false
     },
     "visual": {
@@ -2561,17 +2562,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "53047e9293dab8923cebf0b936ee93ffe16a9995",
+      "sourceCommit": "948aaf48c400ebb26275917396bb358fe3445060",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T22:34:43.790155+00:00",
+      "observedAt": "2026-11-24T22:41:13.129764+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45502073927",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45502073927",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45503066645",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45503066645",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2593,7 +2594,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45502073927"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45503066645"
     },
     {
       "site": "loveourlistings.com",
@@ -2629,9 +2630,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45501270223/artifacts/14969338987",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45501270223/artifacts/14969338987",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/"
       ]
     },
     {
