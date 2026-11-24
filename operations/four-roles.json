@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T15:10:39.124437+00:00",
+  "checkedAt": "2026-11-24T15:18:28.698035+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "ec03b91b55ae2f0fb41860cf755ae5709b84638e",
+    "sourceCommit": "d34d553ae86bd366d6c6ac7ccac00a5edfd4f289",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T15:08:48.302813+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45421851765",
+      "checkedAt": "2026-11-24T15:16:45.648411+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "a14ffff0c9a1d2727f3a158e6ecbbeb21866bf7e",
+        "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T15:08:48.302813+00:00",
+        "checkedAt": "2026-11-24T15:16:45.648411+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
-        "feedsHealthy": 4,
-        "feedItemsParsed": 69,
+        "feedsHealthy": 5,
+        "feedItemsParsed": 97,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -57,10 +57,6 @@
           {
             "sourceId": "christies-property",
             "reason": "DTD/entity declarations rejected"
-          },
-          {
-            "sourceId": "countrylife-property",
-            "reason": "HTTP 404"
           }
         ],
         "sourceDispositions": [
@@ -106,34 +102,38 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 19,
+            "itemsParsed": 18,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 19
+              "discovery-original-link-required": 18
             }
           },
           {
             "sourceId": "countrylife-property",
-            "itemsParsed": 0,
-            "parseRejected": 0,
-            "dispositions": {}
+            "itemsParsed": 29,
+            "parseRejected": 1,
+            "dispositions": {
+              "already-published": 11,
+              "not-individual-property": 4,
+              "outside-lookback": 14
+            }
           }
         ],
-        "newCandidatesDiscovered": 4,
-        "candidatesConsidered": 28,
-        "inScopeQueueCandidates": 27,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 26,
+        "inScopeQueueCandidates": 25,
         "attemptedThisRun": 4,
-        "skippedThisRun": 24,
+        "skippedThisRun": 22,
         "outcomes": {
           "not-individual-property": 1,
-          "stored-awaiting-verification": 3,
-          "quarantined-retry-exhausted": 17,
-          "attempt-failed": 1,
+          "quarantined-retry-exhausted": 15,
+          "stored-awaiting-verification": 4,
           "duplicate-property": 1,
-          "retry-cooldown": 5
+          "deferred-article-limit": 1,
+          "retry-cooldown": 4
         },
-        "newFeaturesStored": 3,
-        "verifiedPublicationsThisRun": 3,
+        "newFeaturesStored": 4,
+        "verifiedPublicationsThisRun": 4,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -149,18 +149,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.conciergeauctions.com/blog/grand-oceanfront-residence-in-vero-beachs-prestigious-estate-section-to-sell-via-concierge-auctions",
-            "sourceId": "reviewed-concierge-auctions",
-            "title": "From the front lawn, a straight line to the Atlantic in Vero Beach",
-            "collection": "beach-properties",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
             "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
@@ -170,18 +158,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "The old estate laundry houses the kitchen at Home Farm",
-            "collection": "acreage",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-24T21:08:03.365974+00:00",
-            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -197,21 +173,21 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.fancypantshomes.com/celebrity-homes/youtube-famous-family-the-beverly-halls-suburban-vegas-mansion/",
-            "sourceId": "reviewed-fancy-pants-homes",
-            "title": "A long hearth anchors the living room at 1 Sanctuary Peak Court",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
             "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.fancypantshomes.com/luxury/texas-estate-has-everything-a-music-superstar-could-want-near-austin/",
-            "sourceId": "reviewed-fancy-pants-homes",
-            "title": "In Fischer, a recording room is built into the Hill Country",
+            "sourceUrl": "https://thespaces.com/a-glass-winter-garden-crowns-this-1980s-belgian-house-by-bruno-albert/",
+            "sourceId": "reviewed-the-spaces",
+            "title": "A glass winter garden opens the roof at Maison H",
             "collection": "acreage",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
@@ -233,15 +209,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
             "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -269,15 +245,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
             "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -293,30 +269,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-            "sourceId": "robb-property",
-            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
-            "sourceId": "countrylife-property",
-            "title": "Two approaches to Top Farm in Laverton",
-            "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
             "sourceId": "sothebys-property",
             "title": "Inside a Hidden Hills Hideaway",
@@ -329,6 +281,18 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "Two approaches to Top Farm in Laverton",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 5,
+            "checks": 6,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
             "sourceId": "robb-property",
             "title": "The Juilliard School\u2019s Namesake Family Built This $18 Million N.Y.C. Carriage House in 1893",
@@ -338,6 +302,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.countrylife.co.uk/property/six-superb-homes-for-sale-from-cotswolds-cottages-to-an-ivy-clad-mansion-with-27-bedrooms-as-seen-in-country-life",
+            "sourceId": "countrylife-property",
+            "title": "The old estate laundry houses the kitchen at Home Farm",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 1,
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -393,11 +369,11 @@
             "sourceId": "countrylife-property",
             "title": "The Georgian house behind Nanteos\u2019s hotel years",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 5,
-            "checks": 5,
+            "checks": 6,
             "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -417,11 +393,11 @@
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
+            "outcome": "deferred-article-limit",
             "failedAttempts": 3,
             "checks": 3,
-            "nextAttemptAt": "2026-11-24T15:15:26.145353+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "nextAttemptAt": "2026-11-24T15:16:09.727917+00:00",
+            "reason": "Per-run article limit; independent queued item remains eligible",
             "duplicateOfArticleSlug": null
           },
           {
@@ -476,7 +452,7 @@
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-24T15:38:48.302813+00:00",
+      "expiresAt": "2026-11-24T15:46:45.648411+00:00",
       "green": false
     },
     "visual": {
@@ -484,20 +460,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-24T14:49:31.024Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564",
+      "checkedAt": "2026-11-24T15:11:09.896Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418092128"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45421851765"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "93a09843a8f075c8d38bfa9be754425bbc4dd63e",
+        "sourceCommit": "ec03b91b55ae2f0fb41860cf755ae5709b84638e",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -945,7 +921,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "db13b2e9fc2cb6f2edb8351a9af91a68552a3741317ccd925813718d7d51a029"
+          "screenshotSha256": "0cb76049a0a40d6544a197cbd3caaa1228cf227326a52a46ae376634a9134825"
         },
         {
           "page": "journal",
@@ -970,11 +946,11 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
-                "alt": "Rendering of the Cherry Creek Four Seasons Private Residence building in Denver",
+                "src": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
+                "alt": "Rack-mounted recording equipment in the control room at Studios at Fischer",
                 "native": [
-                  2000,
-                  1250
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
@@ -988,27 +964,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "f0e3650c2e32fd9a3549fe3c2889ef152b4441e005c97c5ed1b4053112353d40"
+          "screenshotSha256": "5abcffda16ba0c2eb48e0d2d4269d38beea4020242aaa680e91bc3e8d434f5aa"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek | Love Our Listings",
-            "h1": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
-            "description": "In Denver's Cherry Creek, Four Seasons is planning its first standalone residences in Colorado. The pictures are renderings by Binyan Studios.",
-            "ogTitle": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek | Love Our Listings",
-            "ogDescription": "In Denver&#x27;s Cherry Creek, Four Seasons is planning its first standalone residences in Colorado. The pictures are renderings by Binyan Studios.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
-            "twitterTitle": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek | Love Our Listings",
-            "twitterDescription": "In Denver&#x27;s Cherry Creek, Four Seasons is planning its first standalone residences in Colorado. The pictures are renderings by Binyan Studios.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
+            "title": "We Love This Listing: In Fischer, a recording room is built into the Hill Country | Love Our Listings",
+            "h1": "We Love This Listing: In Fischer, a recording room is built into the Hill Country",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/",
+            "description": "At 3711 FM 484, the musicians can sleep on the property and work in a live room set into the earth.",
+            "ogTitle": "We Love This Listing: In Fischer, a recording room is built into the Hill Country | Love Our Listings",
+            "ogDescription": "At 3711 FM 484, the musicians can sleep on the property and work in a live room set into the earth.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
+            "twitterTitle": "We Love This Listing: In Fischer, a recording room is built into the Hill Country | Love Our Listings",
+            "twitterDescription": "At 3711 FM 484, the musicians can sleep on the property and work in a live room set into the earth.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1027,30 +1003,44 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-588329072b7366137c95.jpg",
-                "alt": "Rendering of a lobby with warm wood and stone at the Cherry Creek Four Seasons residences",
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
                 "native": [
-                  2000,
-                  1000
+                  430,
+                  550
                 ],
                 "loaded": true,
                 "rendered": [
-                  537,
-                  269
+                  28,
+                  36
+                ],
+                "fit": "fill"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
                 ],
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-b6b57083f1b8f9199fe2.jpg",
-                "alt": "Rendering of a garden-view library with bookshelves and lounge seating",
+                "src": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
+                "alt": "Rack-mounted recording equipment in the control room at Studios at Fischer",
                 "native": [
-                  2000,
-                  2000
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
-                  537,
-                  537
+                  1090,
+                  613
                 ],
                 "fit": "contain"
               }
@@ -1059,18 +1049,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
-            "width": 2000,
-            "height": 1250,
-            "alt": "Rendering of the Cherry Creek Four Seasons Private Residence building in Denver"
+            "src": "/images/source-properties/2bd93d0c488b6d68045e.jpg",
+            "width": 1600,
+            "height": 900,
+            "alt": "Rack-mounted recording equipment in the control room at Studios at Fischer"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "5a1c7cf193fca1aef934b76f1f9570c9c5fe44e9b1f769b44b17b48dca778de2",
+          "screenshotSha256": "b3893d9a4668ad1184553873c5d54b4ecee00ff53ef09ee785364d2da460c639",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 331
+              "textLength": 423
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 435
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "desktop-article-body.jpg"
@@ -1205,7 +1205,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "d9d22de42e80be99f71628a5ccc8bfff61c5fdf35ddd6ba21d3e6103178f7f2e"
+          "screenshotSha256": "34390bbc7d61cac069a5c6ccebdf7b51a8fd01da9138e7d9d98d062c26e5561a"
         },
         {
           "page": "journal",
@@ -1244,11 +1244,11 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
-                "alt": "Rendering of the Cherry Creek Four Seasons Private Residence building in Denver",
+                "src": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
+                "alt": "Rack-mounted recording equipment in the control room at Studios at Fischer",
                 "native": [
-                  2000,
-                  1250
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
@@ -1258,8 +1258,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/7919a404a4a861b1550f.jpg",
-                "alt": "Four cars in a wood-lined garage with long illuminated ceiling strips and an elevator door",
+                "src": "https://www.loveourlistings.com/images/source-properties/e20baea9757159c56d49.jpg",
+                "alt": "Light-filled Henderson living room with a long sofa opposite a stone fireplace and glass entrance doors",
                 "native": [
                   1600,
                   900
@@ -1276,27 +1276,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "74b89887e3994253951cbdadf30dfe7bfdd9cfdeb8939df153e60fa8e3f0b919"
+          "screenshotSha256": "a9b2f6605f4d4a34c7e852e2d2d9e3637839f970ad04214d640d2a9a0b4a9316"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek | Love Our Listings",
-            "h1": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
-            "description": "In Denver's Cherry Creek, Four Seasons is planning its first standalone residences in Colorado. The pictures are renderings by Binyan Studios.",
-            "ogTitle": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek | Love Our Listings",
-            "ogDescription": "In Denver&#x27;s Cherry Creek, Four Seasons is planning its first standalone residences in Colorado. The pictures are renderings by Binyan Studios.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
-            "twitterTitle": "We Love This Listing: Four Seasons brings 42 private residences to Cherry Creek | Love Our Listings",
-            "twitterDescription": "In Denver&#x27;s Cherry Creek, Four Seasons is planning its first standalone residences in Colorado. The pictures are renderings by Binyan Studios.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
+            "title": "We Love This Listing: In Fischer, a recording room is built into the Hill Country | Love Our Listings",
+            "h1": "We Love This Listing: In Fischer, a recording room is built into the Hill Country",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/",
+            "description": "At 3711 FM 484, the musicians can sleep on the property and work in a live room set into the earth.",
+            "ogTitle": "We Love This Listing: In Fischer, a recording room is built into the Hill Country | Love Our Listings",
+            "ogDescription": "At 3711 FM 484, the musicians can sleep on the property and work in a live room set into the earth.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
+            "twitterTitle": "We Love This Listing: In Fischer, a recording room is built into the Hill Country | Love Our Listings",
+            "twitterDescription": "At 3711 FM 484, the musicians can sleep on the property and work in a live room set into the earth.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1315,30 +1315,44 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-588329072b7366137c95.jpg",
-                "alt": "Rendering of a lobby with warm wood and stone at the Cherry Creek Four Seasons residences",
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
                 "native": [
-                  2000,
-                  1000
+                  430,
+                  550
                 ],
                 "loaded": true,
                 "rendered": [
-                  342,
-                  171
+                  28,
+                  36
+                ],
+                "fit": "fill"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
                 ],
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-b6b57083f1b8f9199fe2.jpg",
-                "alt": "Rendering of a garden-view library with bookshelves and lounge seating",
+                "src": "https://www.loveourlistings.com/images/source-properties/2bd93d0c488b6d68045e.jpg",
+                "alt": "Rack-mounted recording equipment in the control room at Studios at Fischer",
                 "native": [
-                  2000,
-                  2000
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
                   342,
-                  342
+                  192
                 ],
                 "fit": "contain"
               }
@@ -1347,18 +1361,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
-            "width": 2000,
-            "height": 1250,
-            "alt": "Rendering of the Cherry Creek Four Seasons Private Residence building in Denver"
+            "src": "/images/source-properties/2bd93d0c488b6d68045e.jpg",
+            "width": 1600,
+            "height": 900,
+            "alt": "Rack-mounted recording equipment in the control room at Studios at Fischer"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "ae907c11df4a91b0944772c64c4fd0556880df749b5c1e6c9e9eabe442845986",
+          "screenshotSha256": "518d812aa36cb330c3c3a80c23e8defc135462f180a6a601a4e487e9873bdaa0",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 331
+              "textLength": 423
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 435
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1372,11 +1396,32 @@
       "status": "failed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-penthouses-2026-11-18-4317cc04a6",
-        "publishedAt": "2026-11-23T22:15:47-07:00",
-        "image": "/images/source-properties/gallery-81e842f99f748fd903ef.jpg"
+        "slug": "we-love-acreage-2026-11-11-bd6a15fcba",
+        "publishedAt": "2026-11-24T08:08:03-07:00",
+        "image": "/images/source-properties/2bd93d0c488b6d68045e.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-acreage-2026-11-11-bd6a15fcba",
+          "image": "/images/source-properties/2bd93d0c488b6d68045e.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-11-6c4dc5905b",
+          "image": "/images/source-properties/e20baea9757159c56d49.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-beach-properties-2026-11-11-88d4142bf4",
+          "image": "/images/source-properties/57490eda162d9b9e1404.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-penthouses-2026-11-18-4317cc04a6",
           "image": "/images/source-properties/gallery-81e842f99f748fd903ef.jpg",
@@ -1966,10 +2011,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 14933945221,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564/artifacts/14933855408",
+      "artifactId": 14934901521,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357/artifacts/14934521547",
       "fresh": true,
-      "expiresAt": "2026-11-24T15:19:31.024000+00:00",
+      "expiresAt": "2026-11-24T15:41:09.896000+00:00",
       "green": false
     },
     "supervisor": {
@@ -2439,7 +2484,7 @@
         "independent visual role artifact"
       ],
       "artifactId": 14933428666,
-      "fresh": true,
+      "fresh": false,
       "expiresAt": "2026-11-24T15:32:36.541485+00:00",
       "green": false
     },
@@ -2447,10 +2492,10 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-24T15:00:37.280Z",
-      "runId": "ba7d22c8-5d52-4671-96d7-4b519d6f944e",
+      "checkedAt": "2026-11-24T15:15:37.300Z",
+      "runId": "0cdfe4c2-ce1f-4a5b-a8d0-eee7b6f770a8",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_3fW25yxAyrYxeKea6D2LnzEWPqvW:ba7d22c8-5d52-4671-96d7-4b519d6f944e",
+      "runRef": "vercel:dpl_FdAcFevTPoH7hNoRTNB1aeespMkD:0cdfe4c2-ce1f-4a5b-a8d0-eee7b6f770a8",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2462,7 +2507,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "91ba13004add9856fd832b1fb0601d5a36637841",
+        "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -2475,8 +2520,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45419286108",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418320110",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45421851765",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420838134",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -2487,7 +2532,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "ba7d22c8-5d52-4671-96d7-4b519d6f944e",
+      "probeRunId": "0cdfe4c2-ce1f-4a5b-a8d0-eee7b6f770a8",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -2504,12 +2549,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-24T15:00:37.280Z"
+          "checkedAt": "2026-11-24T15:15:37.300Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-24T15:30:37.280000+00:00",
+      "expiresAt": "2026-11-24T15:45:37.300000+00:00",
       "green": false
     }
   },
@@ -2531,24 +2576,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-24T15:00:37.280Z"
+      "checkedAt": "2026-11-24T15:15:37.300Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "a14ffff0c9a1d2727f3a158e6ecbbeb21866bf7e",
+      "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T15:08:48.302813+00:00",
+      "observedAt": "2026-11-24T15:16:45.648411+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45421851765",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45421851765",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2570,22 +2615,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45421851765"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45423448694"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "93a09843a8f075c8d38bfa9be754425bbc4dd63e",
+      "sourceCommit": "ec03b91b55ae2f0fb41860cf755ae5709b84638e",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T14:49:31.024Z",
+      "observedAt": "2026-11-24T15:11:09.896Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564/artifacts/14933945221",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357/artifacts/14934901521",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2596,12 +2641,12 @@
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564/artifacts/14933855408",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418307564/artifacts/14933855408",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357/artifacts/14934521547",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45422424357/artifacts/14934521547",
       "pageUrls": [
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-11-bd6a15fcba/"
       ]
     },
     {
@@ -2623,7 +2668,7 @@
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": true,
+      "fresh": false,
       "findings": [
         "publisher-run-receipt-mismatch",
         "publisher-item-check-valves-held; intake-continues",
@@ -2637,16 +2682,16 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "91ba13004add9856fd832b1fb0601d5a36637841",
+      "sourceCommit": "8118a7a7d076e2045dc735786548d5a667c8d569",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T15:00:37.280Z",
+      "observedAt": "2026-11-24T15:15:37.300Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_3fW25yxAyrYxeKea6D2LnzEWPqvW:ba7d22c8-5d52-4671-96d7-4b519d6f944e",
+      "runRef": "vercel:dpl_FdAcFevTPoH7hNoRTNB1aeespMkD:0cdfe4c2-ce1f-4a5b-a8d0-eee7b6f770a8",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2658,7 +2703,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418320110",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45420838134",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
