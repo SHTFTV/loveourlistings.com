@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T14:42:42.535399+00:00",
+  "checkedAt": "2026-11-24T14:49:06.951162+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "b0e834ba7a3762a56582881bc4ae775183594d49",
+    "sourceCommit": "93a09843a8f075c8d38bfa9be754425bbc4dd63e",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T14:42:31.001060+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45416882676",
+      "checkedAt": "2026-11-24T14:48:47.853798+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418092128",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "f40cd406d9210482f9295930c3c3c4c4d20dd88e",
+        "sourceCommit": "f95b2c423fd59147102c8afe95836ee4665c17b0",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T14:42:31.001060+00:00",
+        "checkedAt": "2026-11-24T14:48:47.853798+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
-        "feedsHealthy": 3,
-        "feedItemsParsed": 49,
+        "feedsHealthy": 5,
+        "feedItemsParsed": 109,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -57,14 +57,6 @@
           {
             "sourceId": "christies-property",
             "reason": "DTD/entity declarations rejected"
-          },
-          {
-            "sourceId": "google-luxury",
-            "reason": "HTTP 503"
-          },
-          {
-            "sourceId": "google-waterfront",
-            "reason": "HTTP 503"
           }
         ],
         "sourceDispositions": [
@@ -102,15 +94,19 @@
           },
           {
             "sourceId": "google-luxury",
-            "itemsParsed": 0,
+            "itemsParsed": 30,
             "parseRejected": 0,
-            "dispositions": {}
+            "dispositions": {
+              "discovery-original-link-required": 30
+            }
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 0,
+            "itemsParsed": 30,
             "parseRejected": 0,
-            "dispositions": {}
+            "dispositions": {
+              "discovery-original-link-required": 30
+            }
           },
           {
             "sourceId": "countrylife-property",
@@ -126,14 +122,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 24,
         "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 22,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 24,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 17,
           "duplicate-property": 1,
-          "attempt-failed": 2,
-          "retry-cooldown": 3
+          "retry-cooldown": 5
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -368,30 +363,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
-            "sourceId": "robb-property",
-            "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
-            "sourceId": "robb-property",
-            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
@@ -426,12 +397,36 @@
             "nextAttemptAt": "2026-11-24T20:04:19.485767+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
+            "sourceId": "robb-property",
+            "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
+            "sourceId": "robb-property",
+            "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-24T20:41:49.324360+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-24T15:12:31.001060+00:00",
+      "expiresAt": "2026-11-24T15:18:47.853798+00:00",
       "green": false
     },
     "visual": {
@@ -2401,10 +2396,10 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-24T14:30:37.304Z",
-      "runId": "eca51f4d-a4ac-4e19-9f4f-6196db90568f",
+      "checkedAt": "2026-11-24T14:45:37.617Z",
+      "runId": "de386c11-9b23-4c10-a447-a36c09f4bcc9",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_4VzZ3h2AAwPhPw9vX6cGYvURV9Lo:eca51f4d-a4ac-4e19-9f4f-6196db90568f",
+      "runRef": "vercel:dpl_2DSBiqTnciga1fnhXoenRpwA1XiL:de386c11-9b23-4c10-a447-a36c09f4bcc9",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2416,7 +2411,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "dd4646a2ec9b9f478398116a48ff63c11188831d",
+        "sourceCommit": "f95b2c423fd59147102c8afe95836ee4665c17b0",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -2429,8 +2424,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45414536557",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45413574109",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45416882676",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45415929762",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -2441,7 +2436,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "eca51f4d-a4ac-4e19-9f4f-6196db90568f",
+      "probeRunId": "de386c11-9b23-4c10-a447-a36c09f4bcc9",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -2458,12 +2453,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-24T14:30:37.304Z"
+          "checkedAt": "2026-11-24T14:45:37.617Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-24T15:00:37.304000+00:00",
+      "expiresAt": "2026-11-24T15:15:37.617000+00:00",
       "green": false
     }
   },
@@ -2485,24 +2480,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-24T14:30:37.304Z"
+      "checkedAt": "2026-11-24T14:45:37.617Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "f40cd406d9210482f9295930c3c3c4c4d20dd88e",
+      "sourceCommit": "f95b2c423fd59147102c8afe95836ee4665c17b0",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T14:42:31.001060+00:00",
+      "observedAt": "2026-11-24T14:48:47.853798+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45416882676",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45416882676",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418092128",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418092128",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2524,7 +2519,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45416882676"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45418092128"
     },
     {
       "site": "loveourlistings.com",
@@ -2553,8 +2548,8 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45414757502/artifacts/14930088467",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45414757502/artifacts/14930088467",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-18-4317cc04a6/"
       ]
     },
@@ -2590,16 +2585,16 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "dd4646a2ec9b9f478398116a48ff63c11188831d",
+      "sourceCommit": "f95b2c423fd59147102c8afe95836ee4665c17b0",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T14:30:37.304Z",
+      "observedAt": "2026-11-24T14:45:37.617Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_4VzZ3h2AAwPhPw9vX6cGYvURV9Lo:eca51f4d-a4ac-4e19-9f4f-6196db90568f",
+      "runRef": "vercel:dpl_2DSBiqTnciga1fnhXoenRpwA1XiL:de386c11-9b23-4c10-a447-a36c09f4bcc9",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2611,7 +2606,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45413574109",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45415929762",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
