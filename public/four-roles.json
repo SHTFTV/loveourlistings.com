@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-24T21:20:08.500257+00:00",
+  "checkedAt": "2026-11-24T21:26:09.883633+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "841b3ca4dbdcc90221862dfd325c68b70c469bf9",
+    "sourceCommit": "0c7e5a6c602f650107b2843f8c91189e139873e1",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-24T21:19:53.562482+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45489826696",
+      "checkedAt": "2026-11-24T21:25:54.954569+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45490903265",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "5d3bc45d86a7169a928a512b42f1e49b7859f478",
+        "sourceCommit": "6c17e25af532d9850bc1774189b959b1328ccac7",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-24T21:19:53.562482+00:00",
+        "checkedAt": "2026-11-24T21:25:54.954569+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedItemsParsed": 100,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -102,10 +102,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 21,
             "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 30
+              "discovery-original-link-required": 21
             }
           },
           {
@@ -122,13 +122,14 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 24,
         "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 24,
+        "attemptedThisRun": 1,
+        "skippedThisRun": 23,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 17,
           "duplicate-property": 1,
-          "retry-cooldown": 5
+          "retry-cooldown": 4,
+          "attempt-failed": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -355,10 +356,10 @@
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-24T21:23:55.581352+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -426,7 +427,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-24T21:49:53.562482+00:00",
+      "expiresAt": "2026-11-24T21:55:54.954569+00:00",
       "green": false
     },
     "visual": {
@@ -2561,17 +2562,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "5d3bc45d86a7169a928a512b42f1e49b7859f478",
+      "sourceCommit": "6c17e25af532d9850bc1774189b959b1328ccac7",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-24T21:19:53.562482+00:00",
+      "observedAt": "2026-11-24T21:25:54.954569+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45489826696",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45489826696",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45490903265",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45490903265",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2593,7 +2594,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45489826696"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45490903265"
     },
     {
       "site": "loveourlistings.com",
@@ -2629,9 +2630,9 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45488923489/artifacts/14964539530",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45488923489/artifacts/14964539530",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+        "https://www.loveourlistings.com/",
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/"
+        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/"
       ]
     },
     {
