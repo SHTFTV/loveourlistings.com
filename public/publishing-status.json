@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T22:34:44.028631+00:00",
+  "updatedAt": "2026-11-24T22:41:13.299476+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "53047e9293dab8923cebf0b936ee93ffe16a9995",
+    "sourceCommit": "948aaf48c400ebb26275917396bb358fe3445060",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45501260069",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45502252675",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -216,12 +216,10 @@
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00"
+      "reason": "HTTP Error 403: Forbidden"
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -349,7 +347,7 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-24T22:34:43.790155+00:00",
+    "checkedAt": "2026-11-24T22:41:13.129764+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -428,13 +426,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 24,
     "inScopeQueueCandidates": 23,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 24,
+    "attemptedThisRun": 1,
+    "skippedThisRun": 23,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 18,
       "duplicate-property": 1,
-      "retry-cooldown": 4
+      "attempt-failed": 1,
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -565,10 +564,10 @@
         "sourceId": "sothebys-property",
         "title": "Inside a Singular Waterfront Villa in Palm Beach",
         "collection": "waterfront",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-24T22:40:13.971885+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-25T04:40:36.825209+00:00",
         "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
@@ -730,49 +729,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-24T22:33:59.066741+00:00",
+  "lastRunAt": "2026-11-24T22:40:36.825209+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 22
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-24T22:33:59.066741+00:00",
+      "fetchedAt": "2026-11-24T22:40:36.825209+00:00",
       "items": 29
     }
   ],
@@ -816,7 +815,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 111,
-  "quarantinedItems": 1,
+  "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-acreage-2026-11-24-6acd3a4911",
