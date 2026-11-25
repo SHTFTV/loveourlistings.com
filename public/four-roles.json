@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-25T15:07:34.681846+00:00",
+  "checkedAt": "2026-11-25T15:15:30.492608+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "eba3251a719a1eb295479cdfc587abac14dd84cd",
+    "sourceCommit": "71f21e5d6fb973e529c47458da262cb65ab1be71",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-25T15:05:52.477668+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641072407",
+      "checkedAt": "2026-11-25T15:13:54.297968+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45642561042",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "c6c3be53d83301dbf24b61707ecdf2f2f24a810c",
+        "sourceCommit": "55e48d192400a357df135c1c1457a13df278d2d8",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-25T15:05:52.477668+00:00",
+        "checkedAt": "2026-11-25T15:13:54.297968+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
-        "feedsHealthy": 5,
-        "feedItemsParsed": 109,
+        "feedsHealthy": 3,
+        "feedItemsParsed": 49,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -57,6 +57,14 @@
           {
             "sourceId": "christies-property",
             "reason": "DTD/entity declarations rejected"
+          },
+          {
+            "sourceId": "google-luxury",
+            "reason": "HTTP 503"
+          },
+          {
+            "sourceId": "google-waterfront",
+            "reason": "HTTP 503"
           }
         ],
         "sourceDispositions": [
@@ -93,19 +101,15 @@
           },
           {
             "sourceId": "google-luxury",
-            "itemsParsed": 30,
+            "itemsParsed": 0,
             "parseRejected": 0,
-            "dispositions": {
-              "discovery-original-link-required": 30
-            }
+            "dispositions": {}
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 30,
+            "itemsParsed": 0,
             "parseRejected": 0,
-            "dispositions": {
-              "discovery-original-link-required": 30
-            }
+            "dispositions": {}
           },
           {
             "sourceId": "countrylife-property",
@@ -118,21 +122,20 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 6,
-        "candidatesConsidered": 31,
-        "inScopeQueueCandidates": 30,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 27,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 27,
+        "inScopeQueueCandidates": 26,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 25,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 19,
-          "stored-awaiting-verification": 4,
+          "stored-awaiting-verification": 2,
           "duplicate-property": 1,
-          "deferred-attempt-budget": 2,
           "retry-cooldown": 4
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -160,18 +163,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.horseandhound.co.uk/equine/broadgate-farm-property-for-sale",
-            "sourceId": "reviewed-horse-and-hound",
-            "title": "At Broadgate Farm, eight paddocks and two homes share ten acres",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
             "sourceId": "robb-property",
             "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
@@ -184,45 +175,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://theweek.com/culture-life/property/6-homes-in-oakland-california",
-            "sourceId": "reviewed-the-week-us",
-            "title": "A tree sets the course for arrival at an Oakland Hills manor",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://www.elledecor.com/celebrity-style/luxury-real-estate/a74491360/real-estate-roundup-nov-20/",
             "sourceId": "reviewed-elle-decor",
-            "title": "The pool follows a curve at Leuthold House in New Canaan",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-            "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.elledecor.com/celebrity-style/luxury-real-estate/a74491360/real-estate-roundup-nov-20/",
-            "sourceId": "reviewed-elle-decor",
-            "title": "The arches at the Cloisters trace a garden path in Palm Springs",
+            "title": "At Sword Gate House, the harbour comes into the dining room",
             "collection": "mansions",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
@@ -244,6 +199,42 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+            "sourceId": "robb-property",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.fancypantshomes.com/luxury/1950s-water-tank-becomes-a-luxury-wine-cellar-sedona-arizona-estate/",
+            "sourceId": "reviewed-fancy-pants-homes",
+            "title": "A Sedona neighbourhood\u2019s old water tank now holds wine",
+            "collection": "mansions",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceId": "robb-property",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
             "sourceId": "robb-property",
             "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
@@ -256,22 +247,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.elledecor.com/celebrity-style/luxury-real-estate/a74491360/real-estate-roundup-nov-20/",
-            "sourceId": "reviewed-elle-decor",
-            "title": "At Sword Gate House, the harbour comes into the dining room",
-            "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 0,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-25T15:05:04.884910+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-            "collection": "acreage",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -289,30 +268,6 @@
             "checks": 4,
             "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
             "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.fancypantshomes.com/luxury/1950s-water-tank-becomes-a-luxury-wine-cellar-sedona-arizona-estate/",
-            "sourceId": "reviewed-fancy-pants-homes",
-            "title": "A Sedona neighbourhood\u2019s old water tank now holds wine",
-            "collection": "mansions",
-            "outcome": "deferred-attempt-budget",
-            "failedAttempts": 0,
-            "checks": 0,
-            "nextAttemptAt": "2026-11-25T15:05:04.884910+00:00",
-            "reason": "Bounded run budget; durable rotation resumes another item next cycle",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -511,7 +466,7 @@
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-25T15:35:52.477668+00:00",
+      "expiresAt": "2026-11-25T15:43:54.297968+00:00",
       "green": false
     },
     "visual": {
@@ -519,20 +474,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-25T14:47:41.947Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637848811",
+      "checkedAt": "2026-11-25T15:08:11.095Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641592112",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637647433"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641072407"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "d086ecdc3dc3189278f99fa50aead61746f80073",
+        "sourceCommit": "55e48d192400a357df135c1c1457a13df278d2d8",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -980,7 +935,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "5ee89e81998e0f522bfc4861bc1f2a3118829ea8b637ecd01b3c388b7bee4d28"
+          "screenshotSha256": "99571b7837d4324719982ba26f6c18a9b35592d0b4e999b877d3ee06a899aba5"
         },
         {
           "page": "journal",
@@ -1005,8 +960,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
-                "alt": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
+                "src": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
+                "alt": "Illuminated arches and palm trees framing a lawn at the Cloisters in Palm Springs",
                 "native": [
                   1600,
                   900
@@ -1023,27 +978,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "938d26a5978b6c6b3117405860c9a65cdb0c569f23f9eea24e92b2e60f0e9bc3"
+          "screenshotSha256": "5cc456de217a43bee783e794d87b797b4157f5f4e04b4c7c2b14b0eef42f280f"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-26f842e71a/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
-            "h1": "We Love This Listing: A Cornish Lodge with Its Own Identity",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
-            "description": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
-            "ogTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
-            "ogDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
-            "twitterTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
-            "twitterDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "title": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs | Love Our Listings",
+            "h1": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-26f842e71a/",
+            "description": "Liberace\u2019s former desert home began as a bed-and-breakfast. Its walls enclose a series of courtyards.",
+            "ogTitle": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs | Love Our Listings",
+            "ogDescription": "Liberace\u2019s former desert home began as a bed-and-breakfast. Its walls enclose a series of courtyards.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
+            "twitterTitle": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs | Love Our Listings",
+            "twitterDescription": "Liberace\u2019s former desert home began as a bed-and-breakfast. Its walls enclose a series of courtyards.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1090,8 +1045,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
-                "alt": "we love waterfront 2026 11 25 6c2ce8e04d",
+                "src": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
+                "alt": "Illuminated arches and palm trees framing a lawn at the Cloisters in Palm Springs",
                 "native": [
                   1600,
                   900
@@ -1108,33 +1063,23 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "src": "/images/source-properties/666a58822e4b8a47d5f3.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love waterfront 2026 11 25 6c2ce8e04d"
+            "alt": "Illuminated arches and palm trees framing a lawn at the Cloisters in Palm Springs"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "b5974c828cc6eaf3c953adc24c925e004ec22040682c8edbc3ecd0b2efd2144b",
+          "screenshotSha256": "18499973c0c95d77fb93e16cacdf824c87680c8cf2350412e711e9d16e752f3e",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 287
+              "textLength": 386
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 297
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 269
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 272
+              "textLength": 447
             },
             {
               "fontSize": 16,
@@ -1282,9 +1227,7 @@
           "viewport": "phone",
           "width": 390,
           "height": 844,
-          "findings": [
-            "visible-property-photo-native-below1600x900"
-          ],
+          "findings": [],
           "http": 200,
           "metrics": {
             "title": "The Journal | Love Our Listings",
@@ -1315,8 +1258,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
-                "alt": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
+                "src": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
+                "alt": "Illuminated arches and palm trees framing a lawn at the Cloisters in Palm Springs",
                 "native": [
                   1600,
                   900
@@ -1329,11 +1272,11 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-                "alt": "Living room of the Lovell Beach House looking out to the Pacific",
+                "src": "https://www.loveourlistings.com/images/source-properties/7ea13e2e5b62a88295ac.jpg",
+                "alt": "Curving pool and cantilevered upper roof at Leuthold House in New Canaan",
                 "native": [
-                  1333,
-                  2000
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
@@ -1347,27 +1290,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "e3ff32ce48110be3e9811e570a581083b4b0d1f2126c0b693017de3aaa5561f3"
+          "screenshotSha256": "f4ac62779d404c5e3b1c63d1b45feda24d9d2bb1c1d25b740af388d0d1c857a6"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-26f842e71a/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
-            "h1": "We Love This Listing: A Cornish Lodge with Its Own Identity",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
-            "description": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
-            "ogTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
-            "ogDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
-            "twitterTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
-            "twitterDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "title": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs | Love Our Listings",
+            "h1": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-26f842e71a/",
+            "description": "Liberace\u2019s former desert home began as a bed-and-breakfast. Its walls enclose a series of courtyards.",
+            "ogTitle": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs | Love Our Listings",
+            "ogDescription": "Liberace\u2019s former desert home began as a bed-and-breakfast. Its walls enclose a series of courtyards.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
+            "twitterTitle": "We Love This Listing: The arches at the Cloisters trace a garden path in Palm Springs | Love Our Listings",
+            "twitterDescription": "Liberace\u2019s former desert home began as a bed-and-breakfast. Its walls enclose a series of courtyards.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1414,8 +1357,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
-                "alt": "we love waterfront 2026 11 25 6c2ce8e04d",
+                "src": "https://www.loveourlistings.com/images/source-properties/666a58822e4b8a47d5f3.jpg",
+                "alt": "Illuminated arches and palm trees framing a lawn at the Cloisters in Palm Springs",
                 "native": [
                   1600,
                   900
@@ -1432,28 +1375,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "src": "/images/source-properties/666a58822e4b8a47d5f3.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love waterfront 2026 11 25 6c2ce8e04d"
+            "alt": "Illuminated arches and palm trees framing a lawn at the Cloisters in Palm Springs"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "4d5a03bd2d30d3f059890763fdd4e6353b1df4599b55a8124c15c0003cee34f7",
+          "screenshotSha256": "e99b88058bd771ea1700cbedbfa18ec26753139a2e60a60896ccf37835f7fc1c",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 287
+              "textLength": 386
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 297
+              "textLength": 447
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 269
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1462,18 +1405,45 @@
       "findings": [
         "published-archive/we-love-beach-properties-2026-11-24-fa9163f778: native-below1600x900",
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
-        "desktop/home: visible-property-photo-native-below1600x900",
-        "phone/journal: visible-property-photo-native-below1600x900"
+        "desktop/home: visible-property-photo-native-below1600x900"
       ],
       "verified": false,
       "status": "failed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-waterfront-2026-11-25-6c2ce8e04d",
-        "publishedAt": "2026-11-25T02:05:29-07:00",
-        "image": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg"
+        "slug": "we-love-mansions-2026-11-20-26f842e71a",
+        "publishedAt": "2026-11-25T08:05:04-07:00",
+        "image": "/images/source-properties/666a58822e4b8a47d5f3.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-20-26f842e71a",
+          "image": "/images/source-properties/666a58822e4b8a47d5f3.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-20-fb202c9cd6",
+          "image": "/images/source-properties/7ea13e2e5b62a88295ac.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-23-7d26285c6b",
+          "image": "/images/source-properties/8d9c53b62618ee4800d9.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-23-f0e7fa67c6",
+          "image": "/images/source-properties/7f0aa6abf59efd0f7ebb.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-waterfront-2026-11-25-6c2ce8e04d",
           "image": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
@@ -2126,10 +2096,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15033123243,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637848811/artifacts/15033083337",
+      "artifactId": 15033434175,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641592112/artifacts/15033878840",
       "fresh": true,
-      "expiresAt": "2026-11-25T15:17:41.947000+00:00",
+      "expiresAt": "2026-11-25T15:38:11.095000+00:00",
       "green": false
     },
     "supervisor": {
@@ -2609,7 +2579,7 @@
         "independent visual role artifact"
       ],
       "artifactId": 15035192092,
-      "fresh": true,
+      "fresh": false,
       "expiresAt": "2026-11-25T15:29:52.629621+00:00",
       "green": false
     },
@@ -2708,17 +2678,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "c6c3be53d83301dbf24b61707ecdf2f2f24a810c",
+      "sourceCommit": "55e48d192400a357df135c1c1457a13df278d2d8",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-25T15:05:52.477668+00:00",
+      "observedAt": "2026-11-25T15:13:54.297968+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641072407",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641072407",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45642561042",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45642561042",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2740,22 +2710,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641072407"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45642561042"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "d086ecdc3dc3189278f99fa50aead61746f80073",
+      "sourceCommit": "55e48d192400a357df135c1c1457a13df278d2d8",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-25T14:47:41.947Z",
+      "observedAt": "2026-11-25T15:08:11.095Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637848811",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637848811/artifacts/15033123243",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641592112",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641592112/artifacts/15033434175",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2765,14 +2735,13 @@
       "findings": [
         "published-archive/we-love-beach-properties-2026-11-24-fa9163f778: native-below1600x900",
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
-        "desktop/home: visible-property-photo-native-below1600x900",
-        "phone/journal: visible-property-photo-native-below1600x900"
+        "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637848811/artifacts/15033083337",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45637848811/artifacts/15033083337",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641592112/artifacts/15033878840",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45641592112/artifacts/15033878840",
       "pageUrls": [
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-26f842e71a/",
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
         "https://www.loveourlistings.com/journal/"
       ]
     },
@@ -2795,7 +2764,7 @@
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": true,
+      "fresh": false,
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
         "verified-publication-older-than-two-hours-inspect-intake-and-queue",
