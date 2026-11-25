@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-25T09:08:23.382485+00:00",
+  "checkedAt": "2026-11-25T09:14:45.558527+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "e906afd1e70206ab691f6028af6a549a885cc917",
+    "sourceCommit": "7106b7a8dbd2619eedd90c13f71bb8eaa2c72f59",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-25T09:06:43.468583+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
+      "checkedAt": "2026-11-25T09:14:29.035942+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45583344382",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "6a1472c7ad1c2637b98226a6d27a7a8a65b56a75",
+        "sourceCommit": "57c797242f2c639eaf58d9b68a0be99a483e02b7",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -40,12 +40,12 @@
         "Reviewed property source outside current lookback",
         "Reviewed property source outside current lookback"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-25T09:06:43.468583+00:00",
+        "checkedAt": "2026-11-25T09:14:29.035942+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 98,
@@ -112,27 +112,25 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
-              "candidate-admitted": 1,
-              "already-published": 10,
+              "already-published": 11,
               "not-individual-property": 4,
               "outside-lookback": 14
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
-        "candidatesConsidered": 25,
-        "inScopeQueueCandidates": 24,
-        "attemptedThisRun": 1,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 24,
+        "inScopeQueueCandidates": 23,
+        "attemptedThisRun": 0,
         "skippedThisRun": 24,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 19,
           "duplicate-property": 1,
-          "stored-awaiting-verification": 1,
           "retry-cooldown": 3
         },
-        "newFeaturesStored": 1,
-        "verifiedPublicationsThisRun": 1,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -172,18 +170,6 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/the-lodge-at-the-idyllic-cornish-beach-house-where-about-time-was-filmed-has-come-up-for-sale-for-the-first-time-ever",
-            "sourceId": "countrylife-property",
-            "title": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
-            "collection": "waterfront",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
             "sourceId": "robb-property",
             "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
@@ -196,10 +182,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
             "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-            "collection": "acreage",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -208,10 +194,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
             "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-            "collection": "waterfront",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -437,9 +423,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-25T09:36:43.468583+00:00",
+      "expiresAt": "2026-11-25T09:44:29.035942+00:00",
       "green": false
     },
     "visual": {
@@ -447,20 +433,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-25T08:48:49.839Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579483281",
+      "checkedAt": "2026-11-25T09:08:49.256Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582531031",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579317558"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "93cb7ecce87cb749ad723f89f9f3b624b31fc9ac",
+        "sourceCommit": "e906afd1e70206ab691f6028af6a549a885cc917",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -908,7 +894,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "edc6cee2993899623376f219b9ef358c10782309bbcc73b872a4e40680745c8e"
+          "screenshotSha256": "5ee89e81998e0f522bfc4861bc1f2a3118829ea8b637ecd01b3c388b7bee4d28"
         },
         {
           "page": "journal",
@@ -916,9 +902,7 @@
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
-          "findings": [
-            "visible-property-photo-native-below1600x900"
-          ],
+          "findings": [],
           "http": 200,
           "metrics": {
             "title": "The Journal | Love Our Listings",
@@ -935,11 +919,11 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-                "alt": "Living room of the Lovell Beach House looking out to the Pacific",
+                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+                "alt": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
                 "native": [
-                  1333,
-                  2000
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
@@ -953,30 +937,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "1e2bbc3d93d5dd11a66dadcbf565e167918d0c51e1fd79e75dc041733de53cb4"
+          "screenshotSha256": "938d26a5978b6c6b3117405860c9a65cdb0c569f23f9eea24e92b2e60f0e9bc3"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
-          "findings": [
-            "visible-property-photo-native-below1600x900",
-            "published-article-image-mismatch-or-quality"
-          ],
+          "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Schindler's Lovell Beach House comes up for sale | Love Our Listings",
-            "h1": "We Love This Listing: Schindler's Lovell Beach House comes up for sale",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
-            "description": "On the sand at Newport Beach, the 1926 house RM Schindler designed for Dr Philip Lovell is listed for $18.8 million. These photographs are of that house.",
-            "ogTitle": "We Love This Listing: Schindler&#x27;s Lovell Beach House comes up for sale | Love Our Listings",
-            "ogDescription": "On the sand at Newport Beach, the 1926 house RM Schindler designed for Dr Philip Lovell is listed for $18.8 million. These photographs are of that house.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-            "twitterTitle": "We Love This Listing: Schindler&#x27;s Lovell Beach House comes up for sale | Love Our Listings",
-            "twitterDescription": "On the sand at Newport Beach, the 1926 house RM Schindler designed for Dr Philip Lovell is listed for $18.8 million. These photographs are of that house.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
+            "title": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
+            "h1": "We Love This Listing: A Cornish Lodge with Its Own Identity",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
+            "description": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
+            "ogTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
+            "ogDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "twitterTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
+            "twitterDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -995,30 +976,44 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-6b027f5837930cc00c80.jpg",
-                "alt": "Built-in sofa and shelving in the Lovell Beach House living room",
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
                 "native": [
-                  1200,
-                  1600
+                  430,
+                  550
                 ],
                 "loaded": true,
                 "rendered": [
-                  537,
-                  716
+                  28,
+                  36
+                ],
+                "fit": "fill"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
                 ],
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-90c8e4ae01529623f5b5.jpg",
-                "alt": "Green chairs beside the beach window wall at the Lovell Beach House",
+                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+                "alt": "we love waterfront 2026 11 25 6c2ce8e04d",
                 "native": [
-                  1200,
-                  1600
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
-                  537,
-                  716
+                  1090,
+                  613
                 ],
                 "fit": "contain"
               }
@@ -1027,28 +1022,33 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-            "width": 1333,
-            "height": 2000,
-            "alt": "Living room of the Lovell Beach House looking out to the Pacific"
+            "src": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "width": 1600,
+            "height": 900,
+            "alt": "we love waterfront 2026 11 25 6c2ce8e04d"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "a18c1a07ca86093a77e43b3d49f1ffb7079cc6d994489e99ea9698617d7a3a31",
+          "screenshotSha256": "b5974c828cc6eaf3c953adc24c925e004ec22040682c8edbc3ecd0b2efd2144b",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 311
+              "textLength": 287
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 432
+              "textLength": 297
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 219
+              "textLength": 269
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 272
             },
             {
               "fontSize": 16,
@@ -1229,11 +1229,11 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-                "alt": "Living room of the Lovell Beach House looking out to the Pacific",
+                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+                "alt": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
                 "native": [
-                  1333,
-                  2000
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
@@ -1243,11 +1243,11 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/5267b25651205cf23aaf.jpg",
-                "alt": "Ivy covers one side of the columned entrance to Plas Nanteos beside the carriage drive",
+                "src": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
+                "alt": "Living room of the Lovell Beach House looking out to the Pacific",
                 "native": [
-                  1600,
-                  900
+                  1333,
+                  2000
                 ],
                 "loaded": true,
                 "rendered": [
@@ -1261,30 +1261,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "1de885de7027bf80dd6dabdb995eff00109a611754f65f229b7ea42f71c298d6"
+          "screenshotSha256": "e3ff32ce48110be3e9811e570a581083b4b0d1f2126c0b693017de3aaa5561f3"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
-          "findings": [
-            "visible-property-photo-native-below1600x900",
-            "published-article-image-mismatch-or-quality"
-          ],
+          "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Schindler's Lovell Beach House comes up for sale | Love Our Listings",
-            "h1": "We Love This Listing: Schindler's Lovell Beach House comes up for sale",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
-            "description": "On the sand at Newport Beach, the 1926 house RM Schindler designed for Dr Philip Lovell is listed for $18.8 million. These photographs are of that house.",
-            "ogTitle": "We Love This Listing: Schindler&#x27;s Lovell Beach House comes up for sale | Love Our Listings",
-            "ogDescription": "On the sand at Newport Beach, the 1926 house RM Schindler designed for Dr Philip Lovell is listed for $18.8 million. These photographs are of that house.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-            "twitterTitle": "We Love This Listing: Schindler&#x27;s Lovell Beach House comes up for sale | Love Our Listings",
-            "twitterDescription": "On the sand at Newport Beach, the 1926 house RM Schindler designed for Dr Philip Lovell is listed for $18.8 million. These photographs are of that house.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
+            "title": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
+            "h1": "We Love This Listing: A Cornish Lodge with Its Own Identity",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
+            "description": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
+            "ogTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
+            "ogDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "twitterTitle": "We Love This Listing: A Cornish Lodge with Its Own Identity | Love Our Listings",
+            "twitterDescription": "Country Life\u2019s account of The Lodge at Porthpean House reveals a compact coastal home with a thoughtfully divided plan.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1303,16 +1300,44 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/gallery-6b027f5837930cc00c80.jpg",
-                "alt": "Built-in sofa and shelving in the Lovell Beach House living room",
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
                 "native": [
-                  1200,
-                  1600
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  28,
+                  36
+                ],
+                "fit": "fill"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/love-logo-clean-v6.webp",
+                "alt": "",
+                "native": [
+                  430,
+                  550
+                ],
+                "loaded": true,
+                "rendered": [
+                  20,
+                  26
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "https://www.loveourlistings.com/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+                "alt": "we love waterfront 2026 11 25 6c2ce8e04d",
+                "native": [
+                  1600,
+                  900
                 ],
                 "loaded": true,
                 "rendered": [
                   342,
-                  456
+                  192
                 ],
                 "fit": "contain"
               }
@@ -1321,18 +1346,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
-            "width": 1333,
-            "height": 2000,
-            "alt": "Living room of the Lovell Beach House looking out to the Pacific"
+            "src": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+            "width": 1600,
+            "height": 900,
+            "alt": "we love waterfront 2026 11 25 6c2ce8e04d"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "e5df8e0a76d62aa8564d9f442d42ba4d1cb83609fd747b1009db5984de5c46e9",
+          "screenshotSha256": "4d5a03bd2d30d3f059890763fdd4e6353b1df4599b55a8124c15c0003cee34f7",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 311
+              "textLength": 287
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 297
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 269
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1342,22 +1377,24 @@
         "published-archive/we-love-beach-properties-2026-11-24-fa9163f778: native-below1600x900",
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900",
-        "desktop/journal: visible-property-photo-native-below1600x900",
-        "desktop/article: visible-property-photo-native-below1600x900",
-        "desktop/article: published-article-image-mismatch-or-quality",
-        "phone/journal: visible-property-photo-native-below1600x900",
-        "phone/article: visible-property-photo-native-below1600x900",
-        "phone/article: published-article-image-mismatch-or-quality"
+        "phone/journal: visible-property-photo-native-below1600x900"
       ],
       "verified": false,
       "status": "failed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-beach-properties-2026-11-24-fa9163f778",
-        "publishedAt": "2026-11-24T08:55:00-08:00",
-        "image": "/images/source-properties/gallery-3a024f048efb841fa9e8.jpg"
+        "slug": "we-love-waterfront-2026-11-25-6c2ce8e04d",
+        "publishedAt": "2026-11-25T02:05:29-07:00",
+        "image": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-waterfront-2026-11-25-6c2ce8e04d",
+          "image": "/images/source-properties/44a8b0b875cbbe3a3dac.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-beach-properties-2026-11-24-fa9163f778",
           "image": "/images/source-properties/gallery-3a024f048efb841fa9e8.jpg",
@@ -2003,48 +2040,48 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15006415735,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579483281/artifacts/15005274295",
+      "artifactId": 15006514451,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582531031/artifacts/15007780504",
       "fresh": true,
-      "expiresAt": "2026-11-25T09:18:49.839000+00:00",
+      "expiresAt": "2026-11-25T09:38:49.256000+00:00",
       "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-25T08:50:15.939962+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579771715",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-25T09:08:31.637153+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582540092",
+      "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "e0f2d972a04b9b2238bf5402eecb2d1f16d44f7f",
+        "sourceCommit": "57c797242f2c639eaf58d9b68a0be99a483e02b7",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "schedule"
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002"
       },
       "verified": false,
       "status": "failed",
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579317558",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579317558",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 138.762284,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 108.555633,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-25T08:47:57.856850+00:00",
+        "checkedAt": "2026-11-25T09:06:43.468583+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 98,
@@ -2111,25 +2148,27 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
+              "candidate-admitted": 1,
               "already-published": 10,
               "not-individual-property": 4,
-              "outside-lookback": 15
+              "outside-lookback": 14
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 24,
-        "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 25,
+        "inScopeQueueCandidates": 24,
+        "attemptedThisRun": 1,
         "skippedThisRun": 24,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 19,
           "duplicate-property": 1,
+          "stored-awaiting-verification": 1,
           "retry-cooldown": 3
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 1,
+        "verifiedPublicationsThisRun": 1,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2169,15 +2208,15 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-            "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "sourceUrl": "https://www.countrylife.co.uk/property/the-lodge-at-the-idyllic-cornish-beach-house-where-about-time-was-filmed-has-come-up-for-sale-for-the-first-time-ever",
+            "sourceId": "countrylife-property",
+            "title": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
             "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2205,9 +2244,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
             "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -2229,9 +2268,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
             "sourceId": "robb-property",
-            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -2253,15 +2292,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-            "sourceId": "sothebys-property",
-            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceId": "robb-property",
+            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00",
-            "reason": "HTTP Error 403: Forbidden",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2273,6 +2312,18 @@
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
+            "reason": "HTTP Error 403: Forbidden",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+            "sourceId": "sothebys-property",
+            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "collection": "waterfront",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00",
             "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
@@ -2423,34 +2474,34 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45579317558",
+        "runId": "45582054002",
         "status": "passed",
-        "checkedAt": "2026-11-25T08:47:17.939267+00:00"
+        "checkedAt": "2026-11-25T09:05:26.503410+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-beach-properties-2026-11-24-fa9163f778",
+          "id": "loveourlistings.com:we-love-waterfront-2026-11-25-6c2ce8e04d",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: Schindler's Lovell Beach House comes up for sale",
-          "publishedAt": "2026-11-24T08:55:00-08:00",
-          "verifiedAt": "2026-11-24T17:00:00.384801+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+          "title": "We Love This Listing: A Cornish Lodge with Its Own Identity",
+          "publishedAt": "2026-11-25T02:05:29-07:00",
+          "verifiedAt": "2026-11-25T09:07:34.920394+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
           "status": "done",
-          "checkedAt": "2026-11-24T17:00:00.915128+00:00"
+          "checkedAt": "2026-11-25T09:07:35.434437+00:00"
         },
-        "ageSeconds": 57316.814628,
-        "inspectionRequired": true,
+        "ageSeconds": 183.44163,
+        "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "e53d21ab311bce37fb786e4b958602846620b52e",
+        "sourceCommit": "6a1472c7ad1c2637b98226a6d27a7a8a65b56a75",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2472,9 +2523,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15006256383,
-      "fresh": false,
-      "expiresAt": "2026-11-25T09:20:15.939962+00:00",
+      "artifactId": 15007071919,
+      "fresh": true,
+      "expiresAt": "2026-11-25T09:38:31.637153+00:00",
       "green": false
     },
     "watchdog": {
@@ -2572,17 +2623,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "6a1472c7ad1c2637b98226a6d27a7a8a65b56a75",
+      "sourceCommit": "57c797242f2c639eaf58d9b68a0be99a483e02b7",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-25T09:06:43.468583+00:00",
+      "observedAt": "2026-11-25T09:14:29.035942+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45583344382",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45583344382",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2604,22 +2655,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45583344382"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "93cb7ecce87cb749ad723f89f9f3b624b31fc9ac",
+      "sourceCommit": "e906afd1e70206ab691f6028af6a549a885cc917",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-25T08:48:49.839Z",
+      "observedAt": "2026-11-25T09:08:49.256Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579483281",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579483281/artifacts/15006415735",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582531031",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582531031/artifacts/15006514451",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2630,48 +2681,42 @@
         "published-archive/we-love-beach-properties-2026-11-24-fa9163f778: native-below1600x900",
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900",
-        "desktop/journal: visible-property-photo-native-below1600x900",
-        "desktop/article: visible-property-photo-native-below1600x900",
-        "desktop/article: published-article-image-mismatch-or-quality",
-        "phone/journal: visible-property-photo-native-below1600x900",
-        "phone/article: visible-property-photo-native-below1600x900",
-        "phone/article: published-article-image-mismatch-or-quality"
+        "phone/journal: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579483281/artifacts/15005274295",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579483281/artifacts/15005274295",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582531031/artifacts/15007780504",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582531031/artifacts/15007780504",
       "pageUrls": [
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-beach-properties-2026-11-24-fa9163f778/"
+        "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
+        "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "e0f2d972a04b9b2238bf5402eecb2d1f16d44f7f",
+      "sourceCommit": "57c797242f2c639eaf58d9b68a0be99a483e02b7",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-25T08:50:15.939962+00:00",
+      "observedAt": "2026-11-25T09:08:31.637153+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579771715",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579771715/artifacts/15006256383",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582540092",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582540092/artifacts/15007071919",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45579317558",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
