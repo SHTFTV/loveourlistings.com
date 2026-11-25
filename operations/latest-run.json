@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-25T08:59:34.959377+00:00",
+  "startedAt": "2026-11-25T09:05:29.311930+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "0b99e285ba7708f76458a82af1fbe5db8cfd08e3",
+    "sourceCommit": "6a1472c7ad1c2637b98226a6d27a7a8a65b56a75",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45581130966",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45582054002",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,12 +73,12 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
-      "items": 30,
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
+      "items": 19,
       "parseRejected": 0,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 30
+        "discovery-original-link-required": 19
       },
       "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
@@ -87,14 +87,15 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:59:34.959377+00:00",
+      "fetchedAt": "2026-11-25T09:05:29.311930+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
       "dispositions": {
+        "candidate-admitted": 1,
         "already-published": 10,
         "not-individual-property": 4,
-        "outside-lookback": 15
+        "outside-lookback": 14
       },
       "errors": [
         {
@@ -105,15 +106,25 @@
       "finalUrl": "https://www.countrylife.co.uk/feeds/tag/property"
     }
   ],
-  "articles": [],
-  "duplicates": 116,
+  "articles": [
+    {
+      "slug": "we-love-waterfront-2026-11-25-6c2ce8e04d",
+      "title": "We Love This Listing: A Cornish Lodge with Its Own Identity",
+      "collection": "waterfront",
+      "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-25-6c2ce8e04d/",
+      "publishedAt": "2026-11-25T02:05:29-07:00",
+      "sourceUrl": "https://www.countrylife.co.uk/property/the-lodge-at-the-idyllic-cornish-beach-house-where-about-time-was-filmed-has-come-up-for-sale-for-the-first-time-ever",
+      "propertyId": null
+    }
+  ],
+  "duplicates": 104,
   "quarantined": 1,
-  "discovered": 0,
+  "discovered": 1,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45580356636",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45581230932",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -259,15 +270,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-      "propertyId": null,
-      "collection": "waterfront",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
       "propertyId": null,
       "collection": "mansions",
@@ -286,10 +288,10 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -304,10 +306,10 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -322,13 +324,13 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00"
+      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -338,6 +340,15 @@
       "reason": "HTTP Error 403: Forbidden",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
@@ -449,7 +460,7 @@
     }
   ],
   "reviewedCandidateIntake": 49,
-  "newCandidatesDiscovered": 0,
+  "newCandidatesDiscovered": 1,
   "candidateChecks": [
     {
       "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
@@ -488,15 +499,15 @@
       "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-      "sourceId": "robb-property",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "sourceUrl": "https://www.countrylife.co.uk/property/the-lodge-at-the-idyllic-cornish-beach-house-where-about-time-was-filmed-has-come-up-for-sale-for-the-first-time-ever",
+      "sourceId": "countrylife-property",
+      "title": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
       "collection": "waterfront",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
+      "outcome": "stored-awaiting-verification",
+      "failedAttempts": 0,
+      "checks": 1,
       "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "reason": "New feature awaits actual deployment and live verification",
       "duplicateOfArticleSlug": null
     },
     {
@@ -524,9 +535,9 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "sourceId": "robb-property",
-      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
       "collection": "waterfront",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
@@ -548,9 +559,9 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "sourceId": "robb-property",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "collection": "waterfront",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
@@ -572,15 +583,15 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-      "sourceId": "sothebys-property",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+      "sourceId": "robb-property",
+      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
       "collection": "waterfront",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 3,
-      "checks": 3,
-      "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00",
-      "reason": "HTTP Error 403: Forbidden",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
     {
@@ -592,6 +603,18 @@
       "failedAttempts": 5,
       "checks": 5,
       "nextAttemptAt": null,
+      "reason": "HTTP Error 403: Forbidden",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "sourceId": "sothebys-property",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "collection": "waterfront",
+      "outcome": "retry-cooldown",
+      "failedAttempts": 3,
+      "checks": 3,
+      "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00",
       "reason": "HTTP Error 403: Forbidden",
       "duplicateOfArticleSlug": null
     },
@@ -743,9 +766,9 @@
   "collections": [
     {
       "name": "waterfront",
-      "eligible": 4,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 5,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "mansions",
@@ -778,15 +801,15 @@
       "status": "blocked-eligible-property"
     }
   ],
-  "status": "no-eligible-content",
-  "finishedAt": "2026-11-25T08:59:55.228162+00:00",
+  "status": "built-for-publication",
+  "finishedAt": "2026-11-25T09:06:43.468583+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-25T08:59:55.228162+00:00",
+    "checkedAt": "2026-11-25T09:06:43.468583+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "no-eligible-content",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 109,
+    "feedItemsParsed": 98,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -839,10 +862,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 30,
+        "itemsParsed": 19,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 30
+          "discovery-original-link-required": 19
         }
       },
       {
@@ -850,24 +873,26 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
+          "candidate-admitted": 1,
           "already-published": 10,
           "not-individual-property": 4,
-          "outside-lookback": 15
+          "outside-lookback": 14
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 24,
-    "inScopeQueueCandidates": 23,
-    "attemptedThisRun": 0,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 25,
+    "inScopeQueueCandidates": 24,
+    "attemptedThisRun": 1,
     "skippedThisRun": 24,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 19,
       "duplicate-property": 1,
+      "stored-awaiting-verification": 1,
       "retry-cooldown": 3
     },
-    "newFeaturesStored": 0,
+    "newFeaturesStored": 1,
     "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
@@ -908,15 +933,15 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-        "sourceId": "robb-property",
-        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+        "sourceUrl": "https://www.countrylife.co.uk/property/the-lodge-at-the-idyllic-cornish-beach-house-where-about-time-was-filmed-has-come-up-for-sale-for-the-first-time-ever",
+        "sourceId": "countrylife-property",
+        "title": "The lodge at the idyllic Cornish beach house where 'About Time' was filmed has come up for sale for the first time ever",
         "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -944,9 +969,9 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
         "sourceId": "robb-property",
-        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+        "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
         "collection": "waterfront",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
@@ -968,9 +993,9 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
         "sourceId": "robb-property",
-        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+        "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
         "collection": "waterfront",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
@@ -992,15 +1017,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-        "sourceId": "sothebys-property",
-        "title": "Inside a Singular Waterfront Villa in Palm Beach",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+        "sourceId": "robb-property",
+        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
         "collection": "waterfront",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00",
-        "reason": "HTTP Error 403: Forbidden",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -1012,6 +1037,18 @@
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
+        "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+        "sourceId": "sothebys-property",
+        "title": "Inside a Singular Waterfront Villa in Palm Beach",
+        "collection": "waterfront",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 3,
+        "checks": 3,
+        "nextAttemptAt": "2026-11-25T11:40:12.087303+00:00",
         "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
