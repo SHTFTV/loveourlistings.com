@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-25T11:44:42.285614+00:00",
+  "startedAt": "2026-11-25T11:50:49.914723+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "84b23a6d0d5b83a8f7d248a7a98c07610931fff1",
+    "sourceCommit": "d4c3d9bd7ebdb0833befd064e8a408b48957f299",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45607220434",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45608135941",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,7 +73,7 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "items": 19,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -87,7 +87,7 @@
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T11:44:42.285614+00:00",
+      "fetchedAt": "2026-11-25T11:50:49.914723+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -107,13 +107,13 @@
   ],
   "articles": [],
   "duplicates": 106,
-  "quarantined": 4,
+  "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45606417756",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45607350066",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -332,10 +332,12 @@
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "propertyId": null,
       "collection": "waterfront",
-      "reason": "HTTP Error 403: Forbidden"
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/juilliard-carriage-house-new-york-manhattan-1238844109",
@@ -419,20 +421,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
-      "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/marcella-landing-deer-valley-townhouse-1238858523",
-      "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
-      "propertyId": null,
-      "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
       "propertyId": null,
       "collection": "mansions",
@@ -440,6 +428,24 @@
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/marcella-landing-deer-valley-townhouse-1238858523",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00"
     }
   ],
   "reviewedCandidateIntake": 49,
@@ -582,7 +588,7 @@
       "sourceId": "sothebys-property",
       "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "collection": "waterfront",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 4,
       "checks": 4,
       "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
@@ -698,11 +704,23 @@
       "duplicateOfArticleSlug": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
+      "sourceId": "robb-property",
+      "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
+      "collection": "mansions",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
       "sourceId": "robb-property",
       "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
       "collection": "mansions",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 3,
       "checks": 3,
       "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
@@ -714,22 +732,10 @@
       "sourceId": "robb-property",
       "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
       "collection": "mansions",
-      "outcome": "attempt-failed",
+      "outcome": "retry-cooldown",
       "failedAttempts": 4,
       "checks": 4,
       "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
-      "sourceId": "robb-property",
-      "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
-      "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     }
@@ -773,9 +779,9 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-25T11:45:09.657523+00:00",
+  "finishedAt": "2026-11-25T11:51:30.656899+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-25T11:45:09.657523+00:00",
+    "checkedAt": "2026-11-25T11:51:30.656899+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
@@ -853,13 +859,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 24,
     "inScopeQueueCandidates": 23,
-    "attemptedThisRun": 3,
-    "skippedThisRun": 21,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 24,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 19,
       "duplicate-property": 1,
-      "attempt-failed": 3
+      "retry-cooldown": 3
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -1002,7 +1008,7 @@
         "sourceId": "sothebys-property",
         "title": "Inside a Singular Waterfront Villa in Palm Beach",
         "collection": "waterfront",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 4,
         "checks": 4,
         "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
@@ -1118,11 +1124,23 @@
         "duplicateOfArticleSlug": null
       },
       {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
+        "sourceId": "robb-property",
+        "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
         "sourceId": "robb-property",
         "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 3,
         "checks": 3,
         "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
@@ -1134,22 +1152,10 @@
         "sourceId": "robb-property",
         "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 4,
         "checks": 4,
         "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/notting-hill-blue-door-london-home-lists-1238850057",
-        "sourceId": "robb-property",
-        "title": "The London Home Behind the Famous Blue Door in \u2018Notting Hill\u2019 Lists for $10 Million",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       }
