@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-25T13:25:23.313958+00:00",
+  "startedAt": "2026-11-25T13:31:32.724144+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "55ae5da2c1f64283cb713715aef46633f4c1b1c3",
+    "sourceCommit": "17163f12a80064d9a450c428e96d3d387a783d1a",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45623364101",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45624416935",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -72,22 +72,15 @@
     {
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
-      "status": "ok",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
-      "items": 19,
-      "parseRejected": 0,
-      "discoveryOnly": true,
-      "dispositions": {
-        "discovery-original-link-required": 19
-      },
-      "errors": [],
-      "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "error",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
+      "error": "HTTP 429"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T13:25:23.313958+00:00",
+      "fetchedAt": "2026-11-25T13:31:32.724144+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -106,14 +99,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 106,
+  "duplicates": 87,
   "quarantined": 1,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45622454989",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45623510967",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -779,14 +772,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-25T13:25:49.825487+00:00",
+  "finishedAt": "2026-11-25T13:32:12.830041+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-25T13:25:49.825487+00:00",
+    "checkedAt": "2026-11-25T13:32:12.830041+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 98,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 79,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -795,6 +788,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-waterfront",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -839,11 +836,9 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 19,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 19
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "countrylife-property",
