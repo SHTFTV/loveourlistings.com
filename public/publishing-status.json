@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T08:17:33.901266+00:00",
+  "updatedAt": "2026-11-25T08:23:37.361359+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "fb9d7472c09c3b35b6566e340266ee2f5710dc8a",
+    "sourceCommit": "5f23ead183fb2e1ff276d35a504b85b0c436ee8d",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45574123792",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45575009603",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -64,6 +64,13 @@
       "collection": "acreage",
       "title": "We Love This Listing: Portmore\u2019s Architecture, Gardens and Scottish Borders Acreage",
       "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-sprawling-arcadia-estate-with-a-waterfall-koi-pond-customizable-sport-court-and-private-elevator",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "We Love This Listing: An Arcadia Compound with Room to Gather",
+      "reason": "HTTP Error 403: Forbidden"
     },
     {
       "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-26-5-million-3-51-acre-wayzata-estate-on-minnesota-s-gold-coast",
@@ -356,12 +363,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-25T08:17:33.529171+00:00",
+    "checkedAt": "2026-11-25T08:23:36.952114+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 98,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 69,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -370,6 +377,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-luxury",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -406,18 +417,16 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 30,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 30
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 19,
+        "itemsParsed": 20,
         "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 19
+          "discovery-original-link-required": 20
         }
       },
       {
@@ -736,49 +745,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-25T08:16:54.564884+00:00",
+  "lastRunAt": "2026-11-25T08:23:07.949757+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
-      "status": "ok",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
-      "items": 30
+      "status": "error",
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
+      "items": 0
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
-      "items": 19
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
+      "items": 20
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T08:16:54.564884+00:00",
+      "fetchedAt": "2026-11-25T08:23:07.949757+00:00",
       "items": 29
     }
   ],
@@ -821,7 +830,7 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 105,
+  "duplicatesFiltered": 75,
   "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
