@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T06:11:10.257229+00:00",
+  "updatedAt": "2026-11-26T06:17:22.606214+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "e37facff36b7534b6637b331a22952bf3d1ec95d",
+    "sourceCommit": "68ad1c2cff4ad56e9bfad6acc9532217071aee1e",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45765738598",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45766463791",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -409,12 +409,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-26T06:11:09.958570+00:00",
+    "checkedAt": "2026-11-26T06:17:22.126054+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 90,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 77,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -423,6 +423,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-luxury",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -459,18 +463,16 @@
       },
       {
         "sourceId": "google-luxury",
-        "itemsParsed": 30,
+        "itemsParsed": 0,
         "parseRejected": 0,
-        "dispositions": {
-          "discovery-original-link-required": 30
-        }
+        "dispositions": {}
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 11,
-        "parseRejected": 0,
+        "itemsParsed": 28,
+        "parseRejected": 2,
         "dispositions": {
-          "discovery-original-link-required": 11
+          "discovery-original-link-required": 28
         }
       },
       {
@@ -813,49 +815,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-26T06:10:28.629821+00:00",
+  "lastRunAt": "2026-11-26T06:16:47.343475+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
-      "status": "ok",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
-      "items": 30
+      "status": "error",
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
+      "items": 0
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
-      "items": 11
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
+      "items": 28
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:10:28.629821+00:00",
+      "fetchedAt": "2026-11-26T06:16:47.343475+00:00",
       "items": 29
     }
   ],
@@ -898,8 +900,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 98,
-  "quarantinedItems": 1,
+  "duplicatesFiltered": 85,
+  "quarantinedItems": 3,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-20-f069586c6c",
