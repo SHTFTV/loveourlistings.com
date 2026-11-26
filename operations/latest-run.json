@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-26T06:35:25.576849+00:00",
+  "startedAt": "2026-11-26T06:41:33.042798+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "7b5daa75be40a8395b7f68a5c6042927f4a16d20",
+    "sourceCommit": "53ba88dae2daeb2f557622c7a17ec13f4dc627f2",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45769203824",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45769911242",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -72,31 +72,15 @@
     {
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
-      "status": "ok",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
-      "items": 28,
-      "parseRejected": 2,
-      "discoveryOnly": true,
-      "dispositions": {
-        "discovery-original-link-required": 28
-      },
-      "errors": [
-        {
-          "title": "Waterfront Key - 99.co",
-          "reason": "Missing substantive source summary"
-        },
-        {
-          "title": "Waterfront Waves - 99.co",
-          "reason": "Missing substantive source summary"
-        }
-      ],
-      "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
+      "status": "error",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
+      "error": "HTTP 429"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T06:35:25.576849+00:00",
+      "fetchedAt": "2026-11-26T06:41:33.042798+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -115,14 +99,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 115,
+  "duplicates": 87,
   "quarantined": 3,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45768590156",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45769307238",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -331,12 +315,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -484,12 +466,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
+      "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/marcella-landing-deer-valley-townhouse-1238858523",
@@ -590,10 +570,10 @@
       "sourceId": "robb-property",
       "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
       "collection": "penthouses",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 1,
-      "checks": 1,
-      "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 2,
+      "checks": 2,
+      "nextAttemptAt": "2026-11-26T12:41:33.042798+00:00",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -794,10 +774,10 @@
       "sourceId": "robb-property",
       "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 4,
-      "checks": 4,
-      "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -865,14 +845,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-26T06:35:53.600313+00:00",
+  "finishedAt": "2026-11-26T06:42:04.952170+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-26T06:35:53.600313+00:00",
+    "checkedAt": "2026-11-26T06:42:04.952170+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
-    "feedsHealthy": 5,
-    "feedItemsParsed": 107,
+    "feedsHealthy": 4,
+    "feedItemsParsed": 79,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -881,6 +861,10 @@
       {
         "sourceId": "christies-property",
         "reason": "DTD/entity declarations rejected"
+      },
+      {
+        "sourceId": "google-waterfront",
+        "reason": "HTTP 429"
       }
     ],
     "sourceDispositions": [
@@ -925,11 +909,9 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 28,
-        "parseRejected": 2,
-        "dispositions": {
-          "discovery-original-link-required": 28
-        }
+        "itemsParsed": 0,
+        "parseRejected": 0,
+        "dispositions": {}
       },
       {
         "sourceId": "countrylife-property",
@@ -945,13 +927,14 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 26,
     "inScopeQueueCandidates": 25,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 26,
+    "attemptedThisRun": 2,
+    "skippedThisRun": 24,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
       "quarantined-retry-exhausted": 21,
-      "retry-cooldown": 3
+      "attempt-failed": 2,
+      "retry-cooldown": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -1034,10 +1017,10 @@
         "sourceId": "robb-property",
         "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
         "collection": "penthouses",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-26T12:41:33.042798+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -1238,10 +1221,10 @@
         "sourceId": "robb-property",
         "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
