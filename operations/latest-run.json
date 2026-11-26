@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-26T08:27:55.408172+00:00",
+  "startedAt": "2026-11-26T08:34:09.193527+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "6715554e4613cc8a8305b9bd40709704170f1f64",
+    "sourceCommit": "9940c76ee5fbcf0e5526ff04b3aa5bb434b0c413",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45783335611",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45784221751",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,21 +73,30 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
-      "items": 10,
-      "parseRejected": 0,
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
+      "items": 28,
+      "parseRejected": 2,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 10
+        "discovery-original-link-required": 28
       },
-      "errors": [],
+      "errors": [
+        {
+          "title": "Waterfront Key - 99.co",
+          "reason": "Missing substantive source summary"
+        },
+        {
+          "title": "Waterfront Waves - 99.co",
+          "reason": "Missing substantive source summary"
+        }
+      ],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T08:27:55.408172+00:00",
+      "fetchedAt": "2026-11-26T08:34:09.193527+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -106,14 +115,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 97,
-  "quarantined": 1,
+  "duplicates": 115,
+  "quarantined": 3,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45782602271",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45783476159",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -856,14 +865,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-26T08:28:29.844917+00:00",
+  "finishedAt": "2026-11-26T08:34:36.657488+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-26T08:28:29.844917+00:00",
+    "checkedAt": "2026-11-26T08:34:36.657488+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 89,
+    "feedItemsParsed": 107,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -916,10 +925,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 10,
-        "parseRejected": 0,
+        "itemsParsed": 28,
+        "parseRejected": 2,
         "dispositions": {
-          "discovery-original-link-required": 10
+          "discovery-original-link-required": 28
         }
       },
       {
