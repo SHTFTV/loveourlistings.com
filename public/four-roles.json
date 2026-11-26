@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-26T19:17:01.655195+00:00",
+  "checkedAt": "2026-11-26T19:23:21.894516+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "a8d85b482d0fd1927e014a314e7432338d85f72c",
+    "sourceCommit": "6e2e7d2c47465bcb2758ce29798fc62c2c10331a",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,21 +13,20 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-26T19:16:42.477381+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-26T19:23:07.847127+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883115398",
+      "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "9dad82af776d3aed378dc3d4fd17a7eced36449c",
-        "trigger": "schedule"
+        "sourceCommit": "cc9d934860635a6d6673b5cb35dcbc0c3f9a7fc0",
+        "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
-        "verified": true,
-        "kind": "schedule"
+        "verified": false
       },
       "verified": false,
       "status": "failed",
@@ -44,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-26T19:16:42.477381+00:00",
+        "checkedAt": "2026-11-26T19:23:07.847127+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 107,
+        "feedItemsParsed": 89,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -102,10 +101,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 28,
-            "parseRejected": 2,
+            "itemsParsed": 10,
+            "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 28
+              "discovery-original-link-required": 10
             }
           },
           {
@@ -122,13 +121,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 25,
         "inScopeQueueCandidates": 24,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 23,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 25,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 21,
+          "quarantined-retry-exhausted": 22,
           "duplicate-property": 1,
-          "attempt-failed": 2
+          "retry-cooldown": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -147,34 +146,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
-            "sourceId": "robb-property",
-            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-            "collection": "penthouses",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
             "sourceId": "robb-property",
             "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
             "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-            "sourceId": "robb-property",
-            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -195,14 +170,26 @@
             "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
-            "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+            "sourceId": "robb-property",
+            "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -219,18 +206,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
             "sourceId": "robb-property",
             "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
@@ -240,6 +215,30 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+            "sourceId": "robb-property",
+            "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+            "collection": "penthouses",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceId": "robb-property",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -427,7 +426,7 @@
             "sourceId": "robb-property",
             "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
             "collection": "mansions",
-            "outcome": "attempt-failed",
+            "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
@@ -438,7 +437,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-26T19:46:42.477381+00:00",
+      "expiresAt": "2026-11-26T19:53:07.847127+00:00",
       "green": false
     },
     "visual": {
@@ -446,20 +445,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-26T17:18:14.829Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866499707",
+      "checkedAt": "2026-11-26T19:17:30.609Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866318057"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "511d37333e585b0806b7215ef07a3e99478a7322",
+        "sourceCommit": "a8d85b482d0fd1927e014a314e7432338d85f72c",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -2131,51 +2130,51 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15139404255,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866499707/artifacts/15139594189",
-      "fresh": false,
-      "expiresAt": "2026-11-26T17:48:14.829000+00:00",
+      "artifactId": 15148430910,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746/artifacts/15147761265",
+      "fresh": true,
+      "expiresAt": "2026-11-26T19:47:30.609000+00:00",
       "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-26T17:17:55.242758+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866507010",
-      "trigger": "workflow_dispatch",
+      "checkedAt": "2026-11-26T19:22:33.204087+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883156820",
+      "trigger": "workflow_run",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "1845c3a4cd1acba12903e0d2b30431e74a4a2425",
+        "sourceCommit": "cc9d934860635a6d6673b5cb35dcbc0c3f9a7fc0",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866318057"
+        "kind": "workflow_run"
       },
       "verified": false,
       "status": "failed",
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
+        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866318057",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866318057",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 27.754925,
+      "publisherReceiptAgeSeconds": 351.501124,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-26T17:17:28.120227+00:00",
+        "checkedAt": "2026-11-26T19:16:42.477381+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 89,
+        "feedItemsParsed": 107,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -2228,10 +2227,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 10,
-            "parseRejected": 0,
+            "itemsParsed": 28,
+            "parseRejected": 2,
             "dispositions": {
-              "discovery-original-link-required": 10
+              "discovery-original-link-required": 28
             }
           },
           {
@@ -2248,13 +2247,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 25,
         "inScopeQueueCandidates": 24,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 25,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 23,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 21,
           "duplicate-property": 1,
-          "retry-cooldown": 2
+          "attempt-failed": 2
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -2325,10 +2324,10 @@
             "sourceId": "robb-property",
             "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
             "collection": "penthouses",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-26T18:41:39.714470+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2553,19 +2552,19 @@
             "sourceId": "robb-property",
             "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
             "collection": "mansions",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-26T18:47:55.456756+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           }
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45866318057",
+        "runId": "45882283564",
         "status": "passed",
-        "checkedAt": "2026-11-26T17:16:43.031273+00:00"
+        "checkedAt": "2026-11-26T19:15:47.808187+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -2579,16 +2578,16 @@
           "status": "done",
           "checkedAt": "2026-11-26T15:21:28.704413+00:00"
         },
-        "ageSeconds": 7083.361167,
-        "inspectionRequired": false,
+        "ageSeconds": 14561.293479,
+        "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "73a11140d56a5c4c07244d4fdd68e25d47cf884c",
-        "trigger": "workflow_dispatch"
+        "sourceCommit": "9dad82af776d3aed378dc3d4fd17a7eced36449c",
+        "trigger": "schedule"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
       "matchedPublishedPage": true,
@@ -2599,10 +2598,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45863628674",
-        "checkedAt": "2026-11-26T16:59:02.258Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746",
+        "checkedAt": "2026-11-26T19:17:30.609Z",
         "status": "failed",
-        "artifactId": 15139501372
+        "artifactId": 15148430910
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2612,9 +2611,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15139773848,
-      "fresh": false,
-      "expiresAt": "2026-11-26T17:47:55.242758+00:00",
+      "artifactId": 15147527849,
+      "fresh": true,
+      "expiresAt": "2026-11-26T19:52:33.204087+00:00",
       "green": false
     },
     "watchdog": {
@@ -2720,20 +2719,20 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "9dad82af776d3aed378dc3d4fd17a7eced36449c",
+      "sourceCommit": "cc9d934860635a6d6673b5cb35dcbc0c3f9a7fc0",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T19:16:42.477381+00:00",
+      "observedAt": "2026-11-26T19:23:07.847127+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883115398",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883115398",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
@@ -2752,67 +2751,68 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883115398"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "511d37333e585b0806b7215ef07a3e99478a7322",
+      "sourceCommit": "a8d85b482d0fd1927e014a314e7432338d85f72c",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T17:18:14.829Z",
+      "observedAt": "2026-11-26T19:17:30.609Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866499707",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866499707/artifacts/15139404255",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746/artifacts/15148430910",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
         "published-archive/we-love-beach-properties-2026-11-24-fa9163f778: native-below1600x900",
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866499707/artifacts/15139594189",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866499707/artifacts/15139594189",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746/artifacts/15147761265",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882461746/artifacts/15147761265",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
         "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
         "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "1845c3a4cd1acba12903e0d2b30431e74a4a2425",
+      "sourceCommit": "cc9d934860635a6d6673b5cb35dcbc0c3f9a7fc0",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T17:17:55.242758+00:00",
+      "observedAt": "2026-11-26T19:22:33.204087+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866507010",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866507010/artifacts/15139773848",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883156820",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883156820/artifacts/15147527849",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "workflow_dispatch",
+      "rawTrigger": "workflow_run",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
+        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45866318057",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
