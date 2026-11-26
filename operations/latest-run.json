@@ -1,26 +1,26 @@
 {
-  "startedAt": "2026-11-25T16:09:24.540071+00:00",
+  "startedAt": "2026-11-26T00:39:17.088803+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "a0a6d98b324d1f3037d9d58bf59e90a0f1bfaf08",
-    "trigger": "workflow_dispatch"
+    "sourceCommit": "1f09adb205d0feb8dfb2413a66a3e9da3e247d16",
+    "trigger": "schedule"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45651380349",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45730226479",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
       "dispositions": {
-        "candidate-admitted": 2,
         "not-individual-property": 6,
+        "candidate-admitted": 2,
         "outside-lookback": 2
       },
       "errors": [],
@@ -30,13 +30,13 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
       "dispositions": {
-        "not-individual-property": 4,
-        "candidate-admitted": 6
+        "candidate-admitted": 6,
+        "not-individual-property": 4
       },
       "errors": [],
       "finalUrl": "https://robbreport.com/shelter/feed/"
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,28 +73,37 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
-      "items": 30,
-      "parseRejected": 0,
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
+      "items": 28,
+      "parseRejected": 2,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 30
+        "discovery-original-link-required": 28
       },
-      "errors": [],
+      "errors": [
+        {
+          "title": "Waterfront Key - 99.co",
+          "reason": "Missing substantive source summary"
+        },
+        {
+          "title": "Waterfront Waves - 99.co",
+          "reason": "Missing substantive source summary"
+        }
+      ],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-25T16:09:24.540071+00:00",
+      "fetchedAt": "2026-11-26T00:39:17.088803+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
       "dispositions": {
-        "already-published": 11,
+        "already-published": 10,
         "not-individual-property": 4,
-        "outside-lookback": 14
+        "outside-lookback": 15
       },
       "errors": [
         {
@@ -106,16 +115,13 @@
     }
   ],
   "articles": [],
-  "duplicates": 123,
-  "quarantined": 1,
-  "discovered": 0,
+  "duplicates": 112,
+  "quarantined": 7,
+  "discovered": 3,
   "productionVerified": false,
   "automaticTriggerProof": {
-    "verified": true,
-    "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45651338686",
-    "originEvent": "schedule",
-    "reason": "Verified repository health workflow and GitHub Actions bot"
+    "verified": false,
+    "reason": "Not an automatic recovery request"
   },
   "publicationBlocks": [
     {
@@ -201,6 +207,13 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
+      "sourceUrl": "https://www.conciergeauctions.com/blog/577-acre-historic-california-ranch-winery-once-owned-by-famed-game-show-host-alex-trebek-to-sell-via-concierge-auctions",
+      "propertyId": null,
+      "collection": "ranches",
+      "title": "We Love This Listing: Creston Manor puts five residences to work on a California ranch",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/5-formula-1-worthy-garages-in-homes-around-the-world/",
       "propertyId": "515-rhodes-road-reno-nevada",
       "collection": "ranches",
@@ -236,6 +249,13 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
+      "sourceUrl": "https://thespaces.com/a-mirrored-sauna-sits-among-the-trees-of-this-hollywood-hills-home/",
+      "propertyId": null,
+      "collection": "acreage",
+      "title": "We Love This Listing: A garden room disappears into the trees in Upper Nichols Canyon",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
       "sourceUrl": "https://thespaces.com/carl-maston-s-1980s-california-beach-house-is-for-sale-for-the-first-time/",
       "propertyId": null,
       "collection": "beach-properties",
@@ -250,13 +270,32 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "sourceUrl": "https://www.conciergeauctions.com/blog/grand-oceanfront-residence-in-vero-beachs-prestigious-estate-section-to-sell-via-concierge-auctions",
+      "propertyId": null,
+      "collection": "beach-properties",
+      "title": "We Love This Listing: From the front lawn, a straight line to the Atlantic in Vero Beach",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.fancypantshomes.com/luxury/texas-estate-has-everything-a-music-superstar-could-want-near-austin/",
+      "propertyId": null,
+      "collection": "acreage",
+      "title": "We Love This Listing: In Fischer, a recording room is built into the Hill Country",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://www.fancypantshomes.com/celebrity-homes/youtube-famous-family-the-beverly-halls-suburban-vegas-mansion/",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "We Love This Listing: A long hearth anchors the living room at 1 Sanctuary Peak Court",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
@@ -272,6 +311,15 @@
       "propertyId": null,
       "collection": "mansions",
       "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -323,12 +371,10 @@
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
-      "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00"
+      "reason": "HTTP Error 403: Forbidden"
     },
     {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
@@ -431,34 +477,21 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
+      "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/marcella-landing-deer-valley-townhouse-1238858523",
-      "propertyId": null,
-      "collection": "mansions",
       "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/joseph-barbera-house-los-angeles-studio-city-1238859717",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-25T20:02:56.774212+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     }
   ],
-  "reviewedCandidateIntake": 55,
-  "newCandidatesDiscovered": 0,
+  "reviewedCandidateIntake": 50,
+  "newCandidatesDiscovered": 1,
   "candidateChecks": [
     {
       "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
@@ -473,14 +506,14 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
       "sourceId": "robb-property",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
       "collection": "penthouses",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
+      "outcome": "attempt-failed",
+      "failedAttempts": 1,
+      "checks": 1,
+      "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -521,6 +554,18 @@
       "duplicateOfArticleSlug": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "sourceId": "robb-property",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+      "collection": "penthouses",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "sourceId": "robb-property",
       "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
@@ -585,10 +630,10 @@
       "sourceId": "sothebys-property",
       "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "collection": "waterfront",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 4,
-      "checks": 4,
-      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
       "reason": "HTTP Error 403: Forbidden",
       "duplicateOfArticleSlug": null
     },
@@ -729,10 +774,10 @@
       "sourceId": "robb-property",
       "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 3,
-      "checks": 3,
-      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 4,
+      "checks": 4,
+      "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -741,10 +786,10 @@
       "sourceId": "robb-property",
       "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 4,
-      "checks": 4,
-      "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -753,11 +798,11 @@
       "sourceId": "robb-property",
       "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
       "collection": "mansions",
-      "outcome": "retry-cooldown",
+      "outcome": "deferred-attempt-budget",
       "failedAttempts": 1,
       "checks": 1,
-      "nextAttemptAt": "2026-11-25T20:02:56.774212+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "nextAttemptAt": "2026-11-26T00:39:17.088803+00:00",
+      "reason": "Bounded run budget; durable rotation resumes another item next cycle",
       "duplicateOfArticleSlug": null
     }
   ],
@@ -776,7 +821,7 @@
     },
     {
       "name": "penthouses",
-      "eligible": 1,
+      "eligible": 2,
       "newFeatures": 0,
       "status": "blocked-eligible-property"
     },
@@ -800,14 +845,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-25T16:09:57.802280+00:00",
+  "finishedAt": "2026-11-26T00:40:11.494490+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-25T16:09:57.802280+00:00",
+    "checkedAt": "2026-11-26T00:40:11.494490+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 109,
+    "feedItemsParsed": 107,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -824,8 +869,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "candidate-admitted": 2,
           "not-individual-property": 6,
+          "candidate-admitted": 2,
           "outside-lookback": 2
         }
       },
@@ -834,8 +879,8 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "not-individual-property": 4,
-          "candidate-admitted": 6
+          "candidate-admitted": 6,
+          "not-individual-property": 4
         }
       },
       {
@@ -860,10 +905,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 30,
-        "parseRejected": 0,
+        "itemsParsed": 28,
+        "parseRejected": 2,
         "dispositions": {
-          "discovery-original-link-required": 30
+          "discovery-original-link-required": 28
         }
       },
       {
@@ -871,22 +916,23 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "already-published": 11,
+          "already-published": 10,
           "not-individual-property": 4,
-          "outside-lookback": 14
+          "outside-lookback": 15
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 25,
-    "inScopeQueueCandidates": 24,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 25,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 26,
+    "inScopeQueueCandidates": 25,
+    "attemptedThisRun": 4,
+    "skippedThisRun": 22,
     "outcomes": {
       "not-individual-property": 1,
+      "attempt-failed": 4,
       "quarantined-retry-exhausted": 19,
       "duplicate-property": 1,
-      "retry-cooldown": 4
+      "deferred-attempt-budget": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -905,14 +951,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
         "sourceId": "robb-property",
-        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+        "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
         "collection": "penthouses",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
+        "outcome": "attempt-failed",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -945,6 +991,18 @@
         "sourceId": "robb-property",
         "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
         "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+        "sourceId": "robb-property",
+        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+        "collection": "penthouses",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -1017,10 +1075,10 @@
         "sourceId": "sothebys-property",
         "title": "Inside a Singular Waterfront Villa in Palm Beach",
         "collection": "waterfront",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
@@ -1161,10 +1219,10 @@
         "sourceId": "robb-property",
         "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-26T06:39:17.088803+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -1173,10 +1231,10 @@
         "sourceId": "robb-property",
         "title": "This $14 Million Deer Valley Townhouse Comes With a Combined Ski and Golf Membership",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-25T17:44:42.285614+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -1185,11 +1243,11 @@
         "sourceId": "robb-property",
         "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
         "collection": "mansions",
-        "outcome": "retry-cooldown",
+        "outcome": "deferred-attempt-budget",
         "failedAttempts": 1,
         "checks": 1,
-        "nextAttemptAt": "2026-11-25T20:02:56.774212+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "nextAttemptAt": "2026-11-26T00:39:17.088803+00:00",
+        "reason": "Bounded run budget; durable rotation resumes another item next cycle",
         "duplicateOfArticleSlug": null
       }
     ]
