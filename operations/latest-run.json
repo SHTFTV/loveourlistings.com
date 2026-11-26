@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-26T19:15:50.100928+00:00",
+  "startedAt": "2026-11-26T19:22:19.251994+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "9dad82af776d3aed378dc3d4fd17a7eced36449c",
-    "trigger": "schedule"
+    "sourceCommit": "cc9d934860635a6d6673b5cb35dcbc0c3f9a7fc0",
+    "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882283564",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45883115398",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,30 +73,21 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
-      "items": 28,
-      "parseRejected": 2,
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
+      "items": 10,
+      "parseRejected": 0,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 28
+        "discovery-original-link-required": 10
       },
-      "errors": [
-        {
-          "title": "Waterfront Key - 99.co",
-          "reason": "Missing substantive source summary"
-        },
-        {
-          "title": "Waterfront Waves - 99.co",
-          "reason": "Missing substantive source summary"
-        }
-      ],
+      "errors": [],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T19:15:50.100928+00:00",
+      "fetchedAt": "2026-11-26T19:22:19.251994+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -115,13 +106,16 @@
     }
   ],
   "articles": [],
-  "duplicates": 121,
-  "quarantined": 5,
-  "discovered": 1,
+  "duplicates": 104,
+  "quarantined": 1,
+  "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
-    "verified": false,
-    "reason": "Not an automatic recovery request"
+    "verified": true,
+    "kind": "automatic-recovery",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45882451962",
+    "originEvent": "workflow_dispatch",
+    "reason": "Verified repository health workflow and GitHub Actions bot"
   },
   "publicationBlocks": [
     {
@@ -291,19 +285,19 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
-      "collection": "penthouses",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+      "collection": "waterfront",
+      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
       "propertyId": null,
-      "collection": "waterfront",
-      "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "collection": "penthouses",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -318,13 +312,6 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
-      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
-      "propertyId": null,
-      "collection": "penthouses",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
       "propertyId": null,
       "collection": "waterfront",
@@ -334,20 +321,29 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
       "propertyId": null,
       "collection": "acreage",
       "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00"
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -488,10 +484,12 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/joseph-barbera-house-los-angeles-studio-city-1238859717",
-      "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
       "propertyId": null,
       "collection": "mansions",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
     }
   ],
   "reviewedCandidateIntake": 55,
@@ -510,34 +508,10 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
-      "sourceId": "robb-property",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-      "collection": "penthouses",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "sourceId": "robb-property",
       "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
       "collection": "waterfront",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-      "sourceId": "robb-property",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-      "collection": "mansions",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
       "checks": 5,
@@ -558,14 +532,26 @@
       "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
       "sourceId": "robb-property",
-      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
       "collection": "penthouses",
-      "outcome": "attempt-failed",
-      "failedAttempts": 4,
-      "checks": 4,
-      "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "sourceId": "robb-property",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "collection": "mansions",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -582,18 +568,6 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "sourceId": "robb-property",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "duplicateOfArticleSlug": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
       "sourceId": "robb-property",
       "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
@@ -603,6 +577,30 @@
       "checks": 5,
       "nextAttemptAt": null,
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "sourceId": "robb-property",
+      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+      "collection": "penthouses",
+      "outcome": "retry-cooldown",
+      "failedAttempts": 4,
+      "checks": 4,
+      "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "sourceId": "robb-property",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "collection": "mansions",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
       "duplicateOfArticleSlug": null
     },
     {
@@ -790,7 +788,7 @@
       "sourceId": "robb-property",
       "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
       "collection": "mansions",
-      "outcome": "attempt-failed",
+      "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
       "checks": 5,
       "nextAttemptAt": null,
@@ -837,14 +835,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-26T19:16:42.477381+00:00",
+  "finishedAt": "2026-11-26T19:23:07.847127+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-26T19:16:42.477381+00:00",
+    "checkedAt": "2026-11-26T19:23:07.847127+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 107,
+    "feedItemsParsed": 89,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -897,10 +895,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 28,
-        "parseRejected": 2,
+        "itemsParsed": 10,
+        "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 28
+          "discovery-original-link-required": 10
         }
       },
       {
@@ -917,13 +915,13 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 25,
     "inScopeQueueCandidates": 24,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 23,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 25,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 21,
+      "quarantined-retry-exhausted": 22,
       "duplicate-property": 1,
-      "attempt-failed": 2
+      "retry-cooldown": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -942,34 +940,10 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
-        "sourceId": "robb-property",
-        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-        "collection": "penthouses",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
         "sourceId": "robb-property",
         "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
         "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
-        "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-        "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -990,14 +964,26 @@
         "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
         "sourceId": "robb-property",
-        "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
         "collection": "penthouses",
-        "outcome": "attempt-failed",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceId": "robb-property",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -1014,18 +1000,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-        "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
         "sourceId": "robb-property",
         "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
@@ -1035,6 +1009,30 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+        "sourceId": "robb-property",
+        "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+        "collection": "penthouses",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-27T01:15:50.100928+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+        "sourceId": "robb-property",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -1222,7 +1220,7 @@
         "sourceId": "robb-property",
         "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
         "collection": "mansions",
-        "outcome": "attempt-failed",
+        "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
