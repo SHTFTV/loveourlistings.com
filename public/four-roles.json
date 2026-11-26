@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-26T15:22:29.524883+00:00",
+  "checkedAt": "2026-11-26T15:28:45.095368+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "e75100969ebd5278bebc917cc0282e68b5dac015",
+    "sourceCommit": "2e07446a080b2caa40ae67e8ad88af83811cfa2b",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-26T15:20:28.900131+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516",
+      "checkedAt": "2026-11-26T15:28:29.361697+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45849297114",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "af237352322007885829091e0c1dcf8d807be3c3",
+        "sourceCommit": "8fcbbe09cbe43910567b0d5db61e51c21b8dd29c",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -40,12 +40,12 @@
         "Reviewed property source outside current lookback",
         "Reviewed property source outside current lookback"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-26T15:20:28.900131+00:00",
+        "checkedAt": "2026-11-26T15:28:29.361697+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 88,
@@ -118,20 +118,19 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 2,
-        "candidatesConsidered": 29,
-        "inScopeQueueCandidates": 28,
-        "attemptedThisRun": 4,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 25,
+        "inScopeQueueCandidates": 24,
+        "attemptedThisRun": 0,
         "skippedThisRun": 25,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 21,
-          "stored-awaiting-verification": 4,
-          "retry-cooldown": 2,
-          "duplicate-property": 1
+          "duplicate-property": 1,
+          "retry-cooldown": 2
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -159,15 +158,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://theweek.com/culture-life/property/6-homes-for-big-family-dinners",
-            "sourceId": "reviewed-the-week-us",
-            "title": "The dining table has room to breathe at Compo Mill Cove",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceId": "robb-property",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
             "collection": "waterfront",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -183,16 +182,16 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://thespaces.com/frank-lloyd-wright-house/",
-            "sourceId": "reviewed-the-spaces",
-            "title": "At Eppstein House, the woods are never far from the living room",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+            "sourceId": "robb-property",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
             "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
           },
           {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
@@ -207,9 +206,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
             "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -228,42 +227,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
-            "sourceId": "robb-property",
-            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
-            "collection": "acreage",
-            "outcome": "duplicate-property",
-            "failedAttempts": 1,
-            "checks": 0,
-            "nextAttemptAt": null,
-            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-            "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-            "sourceId": "robb-property",
-            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -291,10 +254,22 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
-            "sourceId": "sothebys-property",
-            "title": "Inside a Hidden Hills Hideaway",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+            "sourceId": "robb-property",
+            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
             "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+            "sourceId": "sothebys-property",
+            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -303,10 +278,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
             "sourceId": "sothebys-property",
-            "title": "Inside a Singular Waterfront Villa in Palm Beach",
-            "collection": "waterfront",
+            "title": "Inside a Hidden Hills Hideaway",
+            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -324,30 +299,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.fancypantshomes.com/luxury/powerboat-racer-megamansion-with-car-gallery-and-suspended-wellness-room/",
-            "sourceId": "reviewed-fancy-pants-homes",
-            "title": "An opening on each side of a Miami living room lets the bay breeze through",
-            "collection": "waterfront",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 1,
-            "checks": 2,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
-            "sourceId": "robb-property",
-            "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 5,
-            "checks": 6,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -484,9 +435,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-26T15:50:28.900131+00:00",
+      "expiresAt": "2026-11-26T15:58:29.361697+00:00",
       "green": false
     },
     "visual": {
@@ -494,20 +445,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-26T15:00:41.969Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844624483",
+      "checkedAt": "2026-11-26T15:22:56.066Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848429858",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844444450"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "6f38239d2166e6a020cfadfc78823f89a85059b0",
+        "sourceCommit": "e75100969ebd5278bebc917cc0282e68b5dac015",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -980,8 +931,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
-                "alt": "Art Deco Miami meets strawberry blancmange London: This is the most eye-catching house we've ever seen",
+                "src": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
+                "alt": "A double-sided concrete fireplace and dark lounge chairs in Kevin Durant\u2019s Paradise Valley house",
                 "native": [
                   1600,
                   900
@@ -998,27 +949,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "8ddaceb8b5db4ad8894d13d954888939e854dbe9356f442c560549c0bfae8b47"
+          "screenshotSha256": "6a415b7ada9695c6abd726492cfbed170fd76d799ccf4e44c61f504e059bc1c0"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco | Love Our Listings",
-            "h1": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
-            "description": "In Gospel Oak, a Miami-inspired home makes a case for colour that goes far beyond the front door.",
-            "ogTitle": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco | Love Our Listings",
-            "ogDescription": "In Gospel Oak, a Miami-inspired home makes a case for colour that goes far beyond the front door.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
-            "twitterTitle": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco | Love Our Listings",
-            "twitterDescription": "In Gospel Oak, a Miami-inspired home makes a case for colour that goes far beyond the front door.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
+            "title": "We Love This Listing: Concrete and water frame a Paradise Valley home | Love Our Listings",
+            "h1": "We Love This Listing: Concrete and water frame a Paradise Valley home",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
+            "description": "A double-sided fireplace gives the open living room a centre in Jack DeBartolo\u2019s single-level Paradise Valley house.",
+            "ogTitle": "We Love This Listing: Concrete and water frame a Paradise Valley home | Love Our Listings",
+            "ogDescription": "A double-sided fireplace gives the open living room a centre in Jack DeBartolo\u2019s single-level Paradise Valley house.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
+            "twitterTitle": "We Love This Listing: Concrete and water frame a Paradise Valley home | Love Our Listings",
+            "twitterDescription": "A double-sided fireplace gives the open living room a centre in Jack DeBartolo\u2019s single-level Paradise Valley house.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1065,8 +1016,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
-                "alt": "we love mansions 2026 11 26 764933a948",
+                "src": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
+                "alt": "A double-sided concrete fireplace and dark lounge chairs in Kevin Durant\u2019s Paradise Valley house",
                 "native": [
                   1600,
                   900
@@ -1083,33 +1034,23 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/2946863bef8059e1011a.jpg",
+            "src": "/images/source-properties/77a060dfc7868547952c.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love mansions 2026 11 26 764933a948"
+            "alt": "A double-sided concrete fireplace and dark lounge chairs in Kevin Durant\u2019s Paradise Valley house"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "e522f1919e1f8b903fb10623ffe823225f03d8a4d1b1e8a23d975d703d9995e7",
+          "screenshotSha256": "d90a9c467b2a277e025ce77875cd30c1fc48c50d543421e437feec494d700df2",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 309
+              "textLength": 347
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 289
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 339
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 275
+              "textLength": 544
             },
             {
               "fontSize": 16,
@@ -1288,8 +1229,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
-                "alt": "Art Deco Miami meets strawberry blancmange London: This is the most eye-catching house we've ever seen",
+                "src": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
+                "alt": "A double-sided concrete fireplace and dark lounge chairs in Kevin Durant\u2019s Paradise Valley house",
                 "native": [
                   1600,
                   900
@@ -1302,8 +1243,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/c0305cdd7dbf70194ec8.jpg",
-                "alt": "Terraced red exterior at La Aguilera with trees and red rock formations in the distance",
+                "src": "https://www.loveourlistings.com/images/source-properties/906c7deb210d0531aafe.jpg",
+                "alt": "View past the kitchen island and living room to the pool and open bay at the Light House in Miami",
                 "native": [
                   1600,
                   900
@@ -1320,27 +1261,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "35304f98fbeb437265e57d6bb3267204ffe3f80ded446ae8c57d9bfc48fc6e0a"
+          "screenshotSha256": "614827a0d7287800430f532160dd797023a42b218b277a2961e1284611452d88"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco | Love Our Listings",
-            "h1": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
-            "description": "In Gospel Oak, a Miami-inspired home makes a case for colour that goes far beyond the front door.",
-            "ogTitle": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco | Love Our Listings",
-            "ogDescription": "In Gospel Oak, a Miami-inspired home makes a case for colour that goes far beyond the front door.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
-            "twitterTitle": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco | Love Our Listings",
-            "twitterDescription": "In Gospel Oak, a Miami-inspired home makes a case for colour that goes far beyond the front door.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
+            "title": "We Love This Listing: Concrete and water frame a Paradise Valley home | Love Our Listings",
+            "h1": "We Love This Listing: Concrete and water frame a Paradise Valley home",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
+            "description": "A double-sided fireplace gives the open living room a centre in Jack DeBartolo\u2019s single-level Paradise Valley house.",
+            "ogTitle": "We Love This Listing: Concrete and water frame a Paradise Valley home | Love Our Listings",
+            "ogDescription": "A double-sided fireplace gives the open living room a centre in Jack DeBartolo\u2019s single-level Paradise Valley house.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
+            "twitterTitle": "We Love This Listing: Concrete and water frame a Paradise Valley home | Love Our Listings",
+            "twitterDescription": "A double-sided fireplace gives the open living room a centre in Jack DeBartolo\u2019s single-level Paradise Valley house.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1387,8 +1328,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/2946863bef8059e1011a.jpg",
-                "alt": "we love mansions 2026 11 26 764933a948",
+                "src": "https://www.loveourlistings.com/images/source-properties/77a060dfc7868547952c.jpg",
+                "alt": "A double-sided concrete fireplace and dark lounge chairs in Kevin Durant\u2019s Paradise Valley house",
                 "native": [
                   1600,
                   900
@@ -1405,28 +1346,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/2946863bef8059e1011a.jpg",
+            "src": "/images/source-properties/77a060dfc7868547952c.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love mansions 2026 11 26 764933a948"
+            "alt": "A double-sided concrete fireplace and dark lounge chairs in Kevin Durant\u2019s Paradise Valley house"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "d6ab2e19bc97d8aa0fa1b8532c2e5904fafea710b4774a9aa1bc205ed4ac15df",
+          "screenshotSha256": "485c389fe126ff1f0a8a6b0fc6a87e95af9967a707769907eb223d0710fddfa0",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 309
+              "textLength": 347
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 289
+              "textLength": 544
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 339
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1441,11 +1382,53 @@
       "status": "failed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-26-764933a948",
-        "publishedAt": "2026-11-26T02:04:51-07:00",
-        "image": "/images/source-properties/2946863bef8059e1011a.jpg"
+        "slug": "we-love-mansions-2026-11-18-5d216fdaa7",
+        "publishedAt": "2026-11-26T08:19:53-07:00",
+        "image": "/images/source-properties/77a060dfc7868547952c.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-18-5d216fdaa7",
+          "image": "/images/source-properties/77a060dfc7868547952c.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-waterfront-2026-11-13-e011cfa830",
+          "image": "/images/source-properties/906c7deb210d0531aafe.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-26-b318e3e3bd",
+          "image": "/images/source-properties/131c5077f84beba87ad0.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-waterfront-2026-11-16-92207a255d",
+          "image": "/images/source-properties/63d5e14956aa39022064.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-25-f9770bd68c",
+          "image": "/images/source-properties/a35d5895e7835be448fa.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-17-5c5cfcab88",
+          "image": "/images/source-properties/aca750224132f223380f.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-mansions-2026-11-26-764933a948",
           "image": "/images/source-properties/2946863bef8059e1011a.jpg",
@@ -2147,23 +2130,23 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15130835844,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844624483/artifacts/15131645770",
+      "artifactId": 15131729383,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848429858/artifacts/15131809205",
       "fresh": true,
-      "expiresAt": "2026-11-26T15:30:41.969000+00:00",
+      "expiresAt": "2026-11-26T15:52:56.066000+00:00",
       "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-26T15:06:36.683709+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845713109",
+      "checkedAt": "2026-11-26T15:22:38.010727+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848437340",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "60221c2d847db688b027ccb0b152d52d3f234009",
+        "sourceCommit": "8fcbbe09cbe43910567b0d5db61e51c21b8dd29c",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -2171,25 +2154,24 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845518809"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516"
       },
       "verified": false,
       "status": "failed",
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845518809",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845518809",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 25.195899,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 129.734998,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-26T15:06:12.085980+00:00",
+        "checkedAt": "2026-11-26T15:20:28.900131+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 88,
@@ -2262,19 +2244,20 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 26,
-        "inScopeQueueCandidates": 25,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 26,
+        "newCandidatesDiscovered": 2,
+        "candidatesConsidered": 29,
+        "inScopeQueueCandidates": 28,
+        "attemptedThisRun": 4,
+        "skippedThisRun": 25,
         "outcomes": {
           "not-individual-property": 1,
-          "duplicate-property": 1,
-          "quarantined-retry-exhausted": 22,
-          "retry-cooldown": 2
+          "quarantined-retry-exhausted": 21,
+          "stored-awaiting-verification": 4,
+          "retry-cooldown": 2,
+          "duplicate-property": 1
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 4,
+        "verifiedPublicationsThisRun": 4,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2290,30 +2273,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
-            "sourceId": "robb-property",
-            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
-            "collection": "acreage",
-            "outcome": "duplicate-property",
-            "failedAttempts": 1,
-            "checks": 0,
-            "nextAttemptAt": null,
-            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
-            "sourceId": "robb-property",
-            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
             "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
@@ -2323,6 +2282,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://theweek.com/culture-life/property/6-homes-for-big-family-dinners",
+            "sourceId": "reviewed-the-week-us",
+            "title": "The dining table has room to breathe at Compo Mill Cove",
+            "collection": "waterfront",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2338,27 +2309,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-            "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "sourceUrl": "https://thespaces.com/frank-lloyd-wright-house/",
+            "sourceId": "reviewed-the-spaces",
+            "title": "At Eppstein House, the woods are never far from the living room",
             "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
-            "sourceId": "robb-property",
-            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2370,6 +2329,18 @@
             "failedAttempts": 3,
             "checks": 3,
             "nextAttemptAt": "2026-11-26T18:41:39.714470+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
+            "sourceId": "robb-property",
+            "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2386,9 +2357,21 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
             "sourceId": "robb-property",
-            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+            "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+            "collection": "acreage",
+            "outcome": "duplicate-property",
+            "failedAttempts": 1,
+            "checks": 0,
+            "nextAttemptAt": null,
+            "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
+            "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
+            "sourceId": "robb-property",
+            "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -2410,10 +2393,34 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-            "sourceId": "sothebys-property",
-            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceId": "robb-property",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceId": "robb-property",
+            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
+            "sourceId": "sothebys-property",
+            "title": "Inside a Hidden Hills Hideaway",
+            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -2422,10 +2429,10 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-hidden-hills-hideaway",
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
             "sourceId": "sothebys-property",
-            "title": "Inside a Hidden Hills Hideaway",
-            "collection": "mansions",
+            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -2446,15 +2453,27 @@
             "duplicateOfArticleSlug": null
           },
           {
+            "sourceUrl": "https://www.fancypantshomes.com/luxury/powerboat-racer-megamansion-with-car-gallery-and-suspended-wellness-room/",
+            "sourceId": "reviewed-fancy-pants-homes",
+            "title": "An opening on each side of a Miami living room lets the bay breeze through",
+            "collection": "waterfront",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 1,
+            "checks": 2,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/kevin-durant-house-arizona-paradise-valley-1238846772",
             "sourceId": "robb-property",
             "title": "NBA All-Star Kevin Durant Relists His Modern Mansion in Arizona\u2019s Paradise Valley for $14 Million",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 5,
-            "checks": 5,
+            "checks": 6,
             "nextAttemptAt": null,
-            "reason": "Reviewed exact-property media evidence changed",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2592,34 +2611,34 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "45845518809",
+        "runId": "45847949516",
         "status": "passed",
-        "checkedAt": "2026-11-26T15:05:32.361399+00:00"
+        "checkedAt": "2026-11-26T15:19:49.548646+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-mansions-2026-11-26-764933a948",
+          "id": "loveourlistings.com:we-love-waterfront-2026-11-16-92207a255d",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: Cloud House\u2019s Colourful Take on London Art Deco",
-          "publishedAt": "2026-11-26T02:04:51-07:00",
-          "verifiedAt": "2026-11-26T09:07:03.570728+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
+          "title": "We Love This Listing: The dining table has room to breathe at Compo Mill Cove",
+          "publishedAt": "2026-11-26T08:19:53-07:00",
+          "verifiedAt": "2026-11-26T15:21:28.043482+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-waterfront-2026-11-16-92207a255d/",
           "status": "done",
-          "checkedAt": "2026-11-26T09:07:04.506117+00:00"
+          "checkedAt": "2026-11-26T15:21:28.704413+00:00"
         },
-        "ageSeconds": 21706.540962,
-        "inspectionRequired": true,
+        "ageSeconds": 165.971584,
+        "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "bb03129adab43a30580034a04431f31b40ab04b0",
+        "sourceCommit": "af237352322007885829091e0c1dcf8d807be3c3",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2641,9 +2660,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15129933524,
-      "fresh": false,
-      "expiresAt": "2026-11-26T15:36:36.683709+00:00",
+      "artifactId": 15130989576,
+      "fresh": true,
+      "expiresAt": "2026-11-26T15:52:38.010727+00:00",
       "green": false
     },
     "watchdog": {
@@ -2741,17 +2760,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "af237352322007885829091e0c1dcf8d807be3c3",
+      "sourceCommit": "8fcbbe09cbe43910567b0d5db61e51c21b8dd29c",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T15:20:28.900131+00:00",
+      "observedAt": "2026-11-26T15:28:29.361697+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45849297114",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45849297114",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2773,22 +2792,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45849297114"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "6f38239d2166e6a020cfadfc78823f89a85059b0",
+      "sourceCommit": "e75100969ebd5278bebc917cc0282e68b5dac015",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T15:00:41.969Z",
+      "observedAt": "2026-11-26T15:22:56.066Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844624483",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844624483/artifacts/15130835844",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848429858",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848429858/artifacts/15131729383",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2800,41 +2819,40 @@
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844624483/artifacts/15131645770",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45844624483/artifacts/15131645770",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848429858/artifacts/15131809205",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848429858/artifacts/15131809205",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-26-764933a948/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
+        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "60221c2d847db688b027ccb0b152d52d3f234009",
+      "sourceCommit": "8fcbbe09cbe43910567b0d5db61e51c21b8dd29c",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T15:06:36.683709+00:00",
+      "observedAt": "2026-11-26T15:22:38.010727+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845713109",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845713109/artifacts/15129933524",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848437340",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45848437340/artifacts/15130989576",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45845518809",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45847949516",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
