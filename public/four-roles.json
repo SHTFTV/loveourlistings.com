@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-26T06:48:27.590630+00:00",
+  "checkedAt": "2026-11-26T06:54:45.952380+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "5e10f03781d5073b289f868df6bddc4bc57af129",
+    "sourceCommit": "a2f1addd18e9a881ce136011718885067aec5f9e",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-26T06:48:11.889329+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770635783",
+      "checkedAt": "2026-11-26T06:54:28.657217+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45771351644",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "d57c069e8b3e7a018cca397de1fc5f59a01eb850",
+        "sourceCommit": "487fb94794bd9bcd45a6ebd205adfa8d1ef85300",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-26T06:48:11.889329+00:00",
+        "checkedAt": "2026-11-26T06:54:28.657217+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 91,
+        "feedItemsParsed": 107,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -101,10 +101,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 12,
-            "parseRejected": 0,
+            "itemsParsed": 28,
+            "parseRejected": 2,
             "dispositions": {
-              "discovery-original-link-required": 12
+              "discovery-original-link-required": 28
             }
           },
           {
@@ -121,14 +121,13 @@
         "newCandidatesDiscovered": 0,
         "candidatesConsidered": 26,
         "inScopeQueueCandidates": 25,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 25,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 26,
         "outcomes": {
           "not-individual-property": 1,
           "duplicate-property": 1,
           "quarantined-retry-exhausted": 22,
-          "retry-cooldown": 1,
-          "attempt-failed": 1
+          "retry-cooldown": 2
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -423,18 +422,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/joseph-barbera-house-los-angeles-studio-city-1238859717",
-            "sourceId": "robb-property",
-            "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
-            "collection": "mansions",
-            "outcome": "attempt-failed",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-26T12:47:37.981217+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/la-reve-jae-omar-beverly-hills-estate-1238858451",
             "sourceId": "robb-property",
             "title": "Inside a $24 Million Beverly Hills Estate Inspired by Designer Jae Omar\u2019s Time in Paris",
@@ -445,12 +432,24 @@
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/joseph-barbera-house-los-angeles-studio-city-1238859717",
+            "sourceId": "robb-property",
+            "title": "Inside a $12 Million L.A. Estate That Once Belonged to Legendary Cartoonist Joseph Barbera",
+            "collection": "mansions",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 3,
+            "checks": 3,
+            "nextAttemptAt": "2026-11-26T12:47:37.981217+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
           }
         ]
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-26T07:18:11.889329+00:00",
+      "expiresAt": "2026-11-26T07:24:28.657217+00:00",
       "green": false
     },
     "visual": {
@@ -458,20 +457,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-26T06:29:42.299Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767893923",
+      "checkedAt": "2026-11-26T06:53:31.617Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770750350",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767768508"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770635783"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "10a4ac45258c493eeb0fb4368dc080d6b3dc0529",
+        "sourceCommit": "487fb94794bd9bcd45a6ebd205adfa8d1ef85300",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -2094,10 +2093,10 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15092593052,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767893923/artifacts/15092802328",
+      "artifactId": 15094725542,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770750350/artifacts/15094630851",
       "fresh": true,
-      "expiresAt": "2026-11-26T06:59:42.299000+00:00",
+      "expiresAt": "2026-11-26T07:23:31.617000+00:00",
       "green": false
     },
     "supervisor": {
@@ -2696,17 +2695,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "d57c069e8b3e7a018cca397de1fc5f59a01eb850",
+      "sourceCommit": "487fb94794bd9bcd45a6ebd205adfa8d1ef85300",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T06:48:11.889329+00:00",
+      "observedAt": "2026-11-26T06:54:28.657217+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770635783",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770635783",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45771351644",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45771351644",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2728,22 +2727,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770635783"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45771351644"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "10a4ac45258c493eeb0fb4368dc080d6b3dc0529",
+      "sourceCommit": "487fb94794bd9bcd45a6ebd205adfa8d1ef85300",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-26T06:29:42.299Z",
+      "observedAt": "2026-11-26T06:53:31.617Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767893923",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767893923/artifacts/15092593052",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770750350",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770750350/artifacts/15094725542",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2755,12 +2754,12 @@
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767893923/artifacts/15092802328",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45767893923/artifacts/15092802328",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770750350/artifacts/15094630851",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45770750350/artifacts/15094630851",
       "pageUrls": [
-        "https://www.loveourlistings.com/",
+        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-12-9c5e7adf7c/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/"
       ]
     },
     {
