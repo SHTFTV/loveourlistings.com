@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T09:07:04.504575+00:00",
+  "updatedAt": "2026-11-26T09:13:59.826380+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "4f65ca0ff90587c3eae3224e759e3c84cb6e0880",
+    "sourceCommit": "b9cdbacd889e054e27696cb372ab35a8b638973d",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45787826243",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45789086758",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -203,6 +203,15 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
       "propertyId": null,
       "collection": "acreage",
@@ -230,11 +239,11 @@
       "nextAttemptAt": "2026-11-26T12:41:33.042798+00:00"
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -248,11 +257,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
       "propertyId": null,
       "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -262,15 +271,6 @@
       "collection": "waterfront",
       "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -409,12 +409,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-26T09:05:44.564950+00:00",
+    "checkedAt": "2026-11-26T09:13:59.443688+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 88,
+    "feedItemsParsed": 107,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -467,10 +467,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 9,
-        "parseRejected": 0,
+        "itemsParsed": 28,
+        "parseRejected": 2,
         "dispositions": {
-          "discovery-original-link-required": 9
+          "discovery-original-link-required": 28
         }
       },
       {
@@ -478,27 +478,25 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "candidate-admitted": 1,
-          "already-published": 10,
+          "already-published": 11,
           "not-individual-property": 4,
           "outside-lookback": 14
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
-    "candidatesConsidered": 27,
-    "inScopeQueueCandidates": 26,
-    "attemptedThisRun": 1,
+    "newCandidatesDiscovered": 0,
+    "candidatesConsidered": 26,
+    "inScopeQueueCandidates": 25,
+    "attemptedThisRun": 0,
     "skippedThisRun": 26,
     "outcomes": {
       "not-individual-property": 1,
       "duplicate-property": 1,
       "quarantined-retry-exhausted": 22,
-      "stored-awaiting-verification": 1,
       "retry-cooldown": 2
     },
-    "newFeaturesStored": 1,
-    "verifiedPublicationsThisRun": 1,
+    "newFeaturesStored": 0,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -550,15 +548,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/london/art-deco-miami-meets-strawberry-blancmange-london-in-the-most-eye-popping-house-weve-seen-in-well-pretty-much-ever",
-        "sourceId": "countrylife-property",
-        "title": "Art Deco Miami meets strawberry blancmange London: This is the most eye-catching house we've ever seen",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceId": "robb-property",
+        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
         "collection": "mansions",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
         "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -598,15 +596,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/rena-bransten-house-san-francisco-1238836641",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
         "sourceId": "robb-property",
-        "title": "Art Dealer Rena Bransten\u2019s Longtime San Francisco Home Hits the Market for $8.8 Million",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -622,15 +620,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
         "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
         "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -643,18 +641,6 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "HTTP Error 403: Forbidden",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-        "sourceId": "robb-property",
-        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -827,49 +813,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-26T09:04:51.568410+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-26T09:13:15.502226+00:00",
+  "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
-      "items": 9
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
+      "items": 28
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T09:04:51.568410+00:00",
+      "fetchedAt": "2026-11-26T09:13:15.502226+00:00",
       "items": 29
     }
   ],
@@ -882,9 +868,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 18,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 17,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "penthouses",
@@ -912,8 +898,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 96,
-  "quarantinedItems": 1,
+  "duplicatesFiltered": 116,
+  "quarantinedItems": 3,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-mansions-2026-11-26-764933a948",
