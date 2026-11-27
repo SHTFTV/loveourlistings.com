@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:54:55.079881+00:00",
+  "updatedAt": "2026-11-27T14:01:19.568205+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "ca3d8fa6e5c6dd8ad169267a66913adb4a5b5df3",
+    "sourceCommit": "ed850942165422fe29d051230558fd826245f420",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010347734",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011231801",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -233,13 +233,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -260,10 +258,10 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+      "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -282,6 +280,15 @@
       "propertyId": null,
       "collection": "mansions",
       "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -421,12 +428,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-27T13:54:54.502420+00:00",
+    "checkedAt": "2026-11-27T14:01:19.192220+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 90,
+    "feedItemsParsed": 107,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -479,10 +486,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 11,
-        "parseRejected": 0,
+        "itemsParsed": 28,
+        "parseRejected": 2,
         "dispositions": {
-          "discovery-original-link-required": 11
+          "discovery-original-link-required": 28
         }
       },
       {
@@ -496,14 +503,15 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 24,
-    "inScopeQueueCandidates": 23,
-    "attemptedThisRun": 0,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 25,
+    "inScopeQueueCandidates": 24,
+    "attemptedThisRun": 1,
     "skippedThisRun": 24,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 23
+      "quarantined-retry-exhausted": 23,
+      "attempt-failed": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -558,14 +566,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
         "sourceId": "robb-property",
-        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+        "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
         "collection": "penthouses",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
+        "outcome": "attempt-failed",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -594,9 +602,9 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
         "sourceId": "robb-property",
-        "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+        "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
         "collection": "penthouses",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
@@ -622,6 +630,18 @@
         "sourceId": "robb-property",
         "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
         "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+        "sourceId": "robb-property",
+        "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+        "collection": "penthouses",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -799,49 +819,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-27T13:54:23.551261+00:00",
+  "lastRunAt": "2026-11-27T14:00:36.473748+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
-      "items": 11
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
+      "items": 28
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-27T13:54:23.551261+00:00",
+      "fetchedAt": "2026-11-27T14:00:36.473748+00:00",
       "items": 29
     }
   ],
@@ -860,7 +880,7 @@
     },
     {
       "name": "penthouses",
-      "eligible": 2,
+      "eligible": 3,
       "newFeatures": 0,
       "status": "blocked-eligible-property"
     },
@@ -884,8 +904,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 99,
-  "quarantinedItems": 1,
+  "duplicatesFiltered": 116,
+  "quarantinedItems": 4,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-waterfront-2026-11-16-92207a255d",
