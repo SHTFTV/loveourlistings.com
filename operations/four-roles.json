@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-27T14:01:38.262661+00:00",
+  "checkedAt": "2026-11-27T14:07:40.716781+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "cd4ff4765f644af2db42d3d3840d80a8ca176d9a",
+    "sourceCommit": "ca199331db8766a52bcd2b345b3f274dc4657c44",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-27T14:01:19.192220+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036",
+      "checkedAt": "2026-11-27T14:07:26.389025+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012946350",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "ed850942165422fe29d051230558fd826245f420",
+        "sourceCommit": "d9fd388d5e5b4554b7dc5680d324119fd2a66e8a",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,7 +43,7 @@
       "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-27T14:01:19.192220+00:00",
+        "checkedAt": "2026-11-27T14:07:26.389025+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
@@ -118,15 +118,15 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
+        "newCandidatesDiscovered": 0,
         "candidatesConsidered": 25,
         "inScopeQueueCandidates": 24,
-        "attemptedThisRun": 1,
-        "skippedThisRun": 24,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 25,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 23,
-          "attempt-failed": 1
+          "retry-cooldown": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -181,14 +181,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
-            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
+            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
-            "failedAttempts": 1,
-            "checks": 1,
-            "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -217,9 +217,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
             "sourceId": "robb-property",
-            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+            "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
             "collection": "penthouses",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -253,14 +253,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
             "sourceId": "robb-property",
-            "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
             "collection": "penthouses",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
+            "outcome": "retry-cooldown",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -436,7 +436,7 @@
       },
       "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-27T14:31:19.192220+00:00",
+      "expiresAt": "2026-11-27T14:37:26.389025+00:00",
       "green": false
     },
     "visual": {
@@ -2139,13 +2139,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-27T13:49:10.506189+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010361634",
+      "checkedAt": "2026-11-27T14:01:46.039655+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012179143",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "ca3d8fa6e5c6dd8ad169267a66913adb4a5b5df3",
+        "sourceCommit": "d9fd388d5e5b4554b7dc5680d324119fd2a66e8a",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -2153,7 +2153,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010214788"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036"
       },
       "verified": false,
       "status": "failed",
@@ -2163,18 +2163,18 @@
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010214788",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010214788",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036",
       "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 23.77591,
+      "publisherReceiptAgeSeconds": 27.46697,
       "publisherOperationalStatus": "no-eligible-content",
       "queueProgress": {
-        "checkedAt": "2026-11-27T13:48:47.292034+00:00",
+        "checkedAt": "2026-11-27T14:01:19.192220+00:00",
         "runtimeState": "running",
         "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 89,
+        "feedItemsParsed": 107,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -2227,10 +2227,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 10,
-            "parseRejected": 0,
+            "itemsParsed": 28,
+            "parseRejected": 2,
             "dispositions": {
-              "discovery-original-link-required": 10
+              "discovery-original-link-required": 28
             }
           },
           {
@@ -2244,14 +2244,15 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 24,
-        "inScopeQueueCandidates": 23,
-        "attemptedThisRun": 0,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 25,
+        "inScopeQueueCandidates": 24,
+        "attemptedThisRun": 1,
         "skippedThisRun": 24,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 23
+          "quarantined-retry-exhausted": 23,
+          "attempt-failed": 1
         },
         "newFeaturesStored": 0,
         "verifiedPublicationsThisRun": 0,
@@ -2306,14 +2307,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
             "sourceId": "robb-property",
-            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
+            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
             "collection": "penthouses",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2342,9 +2343,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
             "sourceId": "robb-property",
-            "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+            "title": "An Upper East Side Townhouse With a Carriage House Hits the Market for $12 Million",
             "collection": "penthouses",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -2370,6 +2371,18 @@
             "sourceId": "robb-property",
             "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
             "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/fisher-island-penthouse-florida-1238863135",
+            "sourceId": "robb-property",
+            "title": "This $85 Million Fisher Island Penthouse Has a 7,300-Square-Foot Roof Terrace With a Heated Pool",
+            "collection": "penthouses",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -2548,9 +2561,9 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "46010214788",
+        "runId": "46011967036",
         "status": "passed",
-        "checkedAt": "2026-11-27T13:48:11.017600+00:00"
+        "checkedAt": "2026-11-27T14:00:32.211479+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
@@ -2564,7 +2577,7 @@
           "status": "done",
           "checkedAt": "2026-11-26T15:21:28.704413+00:00"
         },
-        "ageSeconds": 80958.539215,
+        "ageSeconds": 81713.95715,
         "inspectionRequired": true,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -2572,7 +2585,7 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "f6b7311e7d81424d33412881d661fb6a197c17f3",
+        "sourceCommit": "ca3d8fa6e5c6dd8ad169267a66913adb4a5b5df3",
         "trigger": "workflow_dispatch"
       },
       "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
@@ -2584,10 +2597,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46008600627",
-        "checkedAt": "2026-11-27T13:37:25.736Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011243499",
+        "checkedAt": "2026-11-27T13:55:44.203Z",
         "status": "failed",
-        "artifactId": 15202650762
+        "artifactId": 15203488009
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2597,9 +2610,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15203931422,
+      "artifactId": 15204063495,
       "fresh": true,
-      "expiresAt": "2026-11-27T14:19:10.506189+00:00",
+      "expiresAt": "2026-11-27T14:31:46.039655+00:00",
       "green": false
     },
     "watchdog": {
@@ -2697,17 +2710,17 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "ed850942165422fe29d051230558fd826245f420",
+      "sourceCommit": "d9fd388d5e5b4554b7dc5680d324119fd2a66e8a",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-27T14:01:19.192220+00:00",
+      "observedAt": "2026-11-27T14:07:26.389025+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012946350",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012946350",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2729,7 +2742,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012946350"
     },
     {
       "site": "loveourlistings.com",
@@ -2759,25 +2772,25 @@
       "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011243499/artifacts/15203852788",
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011243499/artifacts/15203852788",
       "pageUrls": [
-        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-5d216fdaa7/",
+        "https://www.loveourlistings.com/journal/",
         "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "ca3d8fa6e5c6dd8ad169267a66913adb4a5b5df3",
+      "sourceCommit": "d9fd388d5e5b4554b7dc5680d324119fd2a66e8a",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-27T13:49:10.506189+00:00",
+      "observedAt": "2026-11-27T14:01:46.039655+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010361634",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010361634/artifacts/15203931422",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012179143",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46012179143/artifacts/15204063495",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2790,7 +2803,7 @@
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46010214788",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46011967036",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
