@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-27T18:12:03.858980+00:00",
+  "startedAt": "2026-11-27T18:18:40.243626+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "59461010942c02fab335faf2ce3ad2b4399677b9",
+    "sourceCommit": "61de549eac05b6f1fbe65d1b8a602ec6a29632bf",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46047599589",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46048450523",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,21 +74,26 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
-      "items": 11,
-      "parseRejected": 0,
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
+      "items": 29,
+      "parseRejected": 1,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 11
+        "discovery-original-link-required": 29
       },
-      "errors": [],
+      "errors": [
+        {
+          "title": "Waterfront Key - 99.co",
+          "reason": "Missing substantive source summary"
+        }
+      ],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-27T18:12:03.858980+00:00",
+      "fetchedAt": "2026-11-27T18:18:40.243626+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -107,14 +112,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 106,
-  "quarantined": 1,
+  "duplicates": 125,
+  "quarantined": 2,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46046935284",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46047772576",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -165,13 +170,6 @@
       "collection": "acreage",
       "title": "We Love This Listing: Portmore\u2019s Architecture, Gardens and Scottish Borders Acreage",
       "reason": "Reviewed property source outside current lookback"
-    },
-    {
-      "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-sprawling-arcadia-estate-with-a-waterfall-koi-pond-customizable-sport-court-and-private-elevator",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "We Love This Listing: An Arcadia Compound with Room to Gather",
-      "reason": "HTTP Error 403: Forbidden"
     },
     {
       "sourceUrl": "https://www.coldwellbankerluxury.com/editorial/tour-this-26-5-million-3-51-acre-wayzata-estate-on-minnesota-s-gold-coast",
@@ -512,7 +510,7 @@
       "nextAttemptAt": null
     }
   ],
-  "reviewedCandidateIntake": 58,
+  "reviewedCandidateIntake": 59,
   "newCandidatesDiscovered": 0,
   "candidateChecks": [
     {
@@ -831,14 +829,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-27T18:12:55.604848+00:00",
+  "finishedAt": "2026-11-27T18:19:19.839466+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-27T18:12:55.604848+00:00",
+    "checkedAt": "2026-11-27T18:19:19.839466+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 90,
+    "feedItemsParsed": 108,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -892,10 +890,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 11,
-        "parseRejected": 0,
+        "itemsParsed": 29,
+        "parseRejected": 1,
         "dispositions": {
-          "discovery-original-link-required": 11
+          "discovery-original-link-required": 29
         }
       },
       {
