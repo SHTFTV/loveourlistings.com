@@ -1,27 +1,27 @@
 {
-  "startedAt": "2026-11-26T23:57:58.831607+00:00",
+  "startedAt": "2026-11-27T00:04:07.052459+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "3175641ba93d3ebe1303bcbe9acb4e58971fafac",
+    "sourceCommit": "7aaaf6b82a37c7dbd1a747a69cc44104879ac9c6",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45913938734",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45914517801",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
       "dispositions": {
-        "not-individual-property": 6,
+        "not-individual-property": 5,
         "candidate-admitted": 2,
-        "outside-lookback": 2
+        "outside-lookback": 3
       },
       "errors": [],
       "finalUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/"
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -45,21 +45,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -73,28 +73,37 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
-      "items": 10,
-      "parseRejected": 0,
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
+      "items": 28,
+      "parseRejected": 2,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 10
+        "discovery-original-link-required": 28
       },
-      "errors": [],
+      "errors": [
+        {
+          "title": "Waterfront Key - 99.co",
+          "reason": "Missing substantive source summary"
+        },
+        {
+          "title": "Waterfront Waves - 99.co",
+          "reason": "Missing substantive source summary"
+        }
+      ],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-26T23:57:58.831607+00:00",
+      "fetchedAt": "2026-11-27T00:04:07.052459+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
       "dispositions": {
-        "already-published": 11,
+        "already-published": 9,
         "not-individual-property": 4,
-        "outside-lookback": 14
+        "outside-lookback": 16
       },
       "errors": [
         {
@@ -106,14 +115,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 104,
-  "quarantined": 1,
+  "duplicates": 116,
+  "quarantined": 3,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45913465842",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/45914013697",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -208,6 +217,13 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
+      "sourceUrl": "https://www.conciergeauctions.com/blog/exclusive-belvedere-island-estate-with-golden-gate-bridge-views-to-sell-via-concierge-auctions",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "We Love This Listing: An indoor pool opens to the lawn on Belvedere Island",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/5-formula-1-worthy-garages-in-homes-around-the-world/",
       "propertyId": "515-rhodes-road-reno-nevada",
       "collection": "ranches",
@@ -240,6 +256,13 @@
       "propertyId": "sylvan-glade-forest-drive-keston",
       "collection": "mansions",
       "title": "We Love This Listing: A garden wall made of glass at Sylvan Glade in Keston",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
+      "sourceUrl": "https://thespaces.com/r-m-schindler-s-lovell-beach-house-is-for-sale-for-the-first-time-in-100-years/",
+      "propertyId": null,
+      "collection": "beach-properties",
+      "title": "We Love This Listing: Five concrete frames lift Lovell Beach House above the sand",
       "reason": "Reviewed property source outside current lookback"
     },
     {
@@ -285,10 +308,26 @@
       "reason": "Reviewed property source outside current lookback"
     },
     {
+      "sourceUrl": "https://www.fancypantshomes.com/luxury/1950s-water-tank-becomes-a-luxury-wine-cellar-sedona-arizona-estate/",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "We Love This Listing: A Sedona neighbourhood\u2019s old water tank now holds wine",
+      "reason": "Reviewed property source outside current lookback"
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/sam-altman-property-portfolio-1238833448",
       "propertyId": null,
       "collection": "waterfront",
       "title": "Inside Sam Altman\u2019s $125 Million Property Portfolio",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+      "propertyId": null,
+      "collection": "acreage",
+      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -316,15 +355,6 @@
       "propertyId": null,
       "collection": "waterfront",
       "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-      "propertyId": null,
-      "collection": "acreage",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -492,7 +522,7 @@
       "nextAttemptAt": null
     }
   ],
-  "reviewedCandidateIntake": 55,
+  "reviewedCandidateIntake": 52,
   "newCandidatesDiscovered": 0,
   "candidateChecks": [
     {
@@ -520,16 +550,16 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
       "sourceId": "robb-property",
-      "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
       "collection": "acreage",
-      "outcome": "duplicate-property",
-      "failedAttempts": 1,
-      "checks": 0,
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
       "nextAttemptAt": null,
-      "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-      "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
@@ -560,18 +590,6 @@
       "sourceId": "robb-property",
       "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
       "collection": "waterfront",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-      "sourceId": "robb-property",
-      "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-      "collection": "acreage",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
       "checks": 5,
@@ -823,7 +841,7 @@
     },
     {
       "name": "acreage",
-      "eligible": 2,
+      "eligible": 1,
       "newFeatures": 0,
       "status": "blocked-eligible-property"
     },
@@ -835,14 +853,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-26T23:58:28.224433+00:00",
+  "finishedAt": "2026-11-27T00:04:38.167226+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-26T23:58:28.224433+00:00",
+    "checkedAt": "2026-11-27T00:04:38.167226+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 89,
+    "feedItemsParsed": 107,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -859,9 +877,9 @@
         "itemsParsed": 10,
         "parseRejected": 0,
         "dispositions": {
-          "not-individual-property": 6,
+          "not-individual-property": 5,
           "candidate-admitted": 2,
-          "outside-lookback": 2
+          "outside-lookback": 3
         }
       },
       {
@@ -895,10 +913,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 10,
-        "parseRejected": 0,
+        "itemsParsed": 28,
+        "parseRejected": 2,
         "dispositions": {
-          "discovery-original-link-required": 10
+          "discovery-original-link-required": 28
         }
       },
       {
@@ -906,21 +924,20 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "already-published": 11,
+          "already-published": 9,
           "not-individual-property": 4,
-          "outside-lookback": 14
+          "outside-lookback": 16
         }
       }
     ],
     "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 25,
-    "inScopeQueueCandidates": 24,
+    "candidatesConsidered": 24,
+    "inScopeQueueCandidates": 23,
     "attemptedThisRun": 0,
-    "skippedThisRun": 25,
+    "skippedThisRun": 24,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 22,
-      "duplicate-property": 1,
       "retry-cooldown": 1
     },
     "newFeaturesStored": 0,
@@ -952,16 +969,16 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/drift-house-jackson-hole-snake-river-frontage-1238834148",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
         "sourceId": "robb-property",
-        "title": "A Jackson Hole Estate With 43 Acres of Snake River Frontage Lists for $37.5 Million",
+        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
         "collection": "acreage",
-        "outcome": "duplicate-property",
-        "failedAttempts": 1,
-        "checks": 0,
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
         "nextAttemptAt": null,
-        "reason": "Exact property already featured: we-love-acreage-2026-11-03-91994921fc",
-        "duplicateOfArticleSlug": "we-love-acreage-2026-11-03-91994921fc"
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
       },
       {
         "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
@@ -992,18 +1009,6 @@
         "sourceId": "robb-property",
         "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
         "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-        "sourceId": "robb-property",
-        "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
-        "collection": "acreage",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
