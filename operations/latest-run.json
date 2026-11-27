@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-27T20:00:25.463130+00:00",
+  "startedAt": "2026-11-27T20:06:48.279279+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "256ad9bbc0221e9512076aa3fba011792fe9d5b3",
+    "sourceCommit": "13538d14af759681aba564fb4b5f29ccd204fa3d",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46060551892",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46061317727",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,21 +74,26 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
-      "items": 11,
-      "parseRejected": 0,
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
+      "items": 29,
+      "parseRejected": 1,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 11
+        "discovery-original-link-required": 29
       },
-      "errors": [],
+      "errors": [
+        {
+          "title": "Waterfront Key - 99.co",
+          "reason": "Missing substantive source summary"
+        }
+      ],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-27T20:00:25.463130+00:00",
+      "fetchedAt": "2026-11-27T20:06:48.279279+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -107,14 +112,14 @@
     }
   ],
   "articles": [],
-  "duplicates": 107,
-  "quarantined": 1,
+  "duplicates": 125,
+  "quarantined": 3,
   "discovered": 0,
   "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46059979218",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46060706691",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -335,12 +340,10 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
@@ -561,10 +564,10 @@
       "sourceId": "robb-property",
       "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "collection": "penthouses",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 1,
-      "checks": 1,
-      "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00",
+      "outcome": "attempt-failed",
+      "failedAttempts": 2,
+      "checks": 2,
+      "nextAttemptAt": "2026-11-28T02:06:48.279279+00:00",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
@@ -824,14 +827,14 @@
     }
   ],
   "status": "no-eligible-content",
-  "finishedAt": "2026-11-27T20:01:05.681994+00:00",
+  "finishedAt": "2026-11-27T20:07:45.880316+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-27T20:01:05.681994+00:00",
+    "checkedAt": "2026-11-27T20:07:45.880316+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 90,
+    "feedItemsParsed": 108,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -885,10 +888,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 11,
-        "parseRejected": 0,
+        "itemsParsed": 29,
+        "parseRejected": 1,
         "dispositions": {
-          "discovery-original-link-required": 11
+          "discovery-original-link-required": 29
         }
       },
       {
@@ -905,12 +908,12 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 23,
     "inScopeQueueCandidates": 22,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 23,
+    "attemptedThisRun": 1,
+    "skippedThisRun": 22,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 21,
-      "retry-cooldown": 1
+      "attempt-failed": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -969,10 +972,10 @@
         "sourceId": "robb-property",
         "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
         "collection": "penthouses",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 1,
-        "checks": 1,
-        "nextAttemptAt": "2026-11-27T20:00:36.473748+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 2,
+        "checks": 2,
+        "nextAttemptAt": "2026-11-28T02:06:48.279279+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
