@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T12:19:54.670035+00:00",
+  "updatedAt": "2026-11-28T12:26:33.381093+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,12 +7,15 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
-    "trigger": "schedule"
+    "sourceCommit": "9db87cac2955c68a3b016dfb1b8a304303e8f137",
+    "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
-    "verified": false,
-    "reason": "Not an automatic recovery request"
+    "verified": true,
+    "kind": "automatic-recovery",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144171513",
+    "originEvent": "workflow_dispatch",
+    "reason": "Verified repository health workflow and GitHub Actions bot"
   },
   "publicationBlocks": [
     {
@@ -278,19 +281,12 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "propertyId": null,
       "collection": "penthouses",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-      "propertyId": null,
-      "collection": "waterfront",
-      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
@@ -302,11 +298,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
       "propertyId": null,
       "collection": "waterfront",
-      "title": "Inside a Singular Waterfront Villa in Palm Beach",
-      "reason": "HTTP Error 403: Forbidden",
+      "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -316,6 +312,15 @@
       "collection": "mansions",
       "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+      "propertyId": null,
+      "collection": "waterfront",
+      "title": "Inside a Singular Waterfront Villa in Palm Beach",
+      "reason": "HTTP Error 403: Forbidden",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -436,12 +441,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-28T12:18:55.310472+00:00",
+    "checkedAt": "2026-11-28T12:26:32.760831+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 93,
+    "feedItemsParsed": 108,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -495,10 +500,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 14,
-        "parseRejected": 0,
+        "itemsParsed": 29,
+        "parseRejected": 1,
         "dispositions": {
-          "discovery-original-link-required": 14
+          "discovery-original-link-required": 29
         }
       },
       {
@@ -506,26 +511,24 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
-          "candidate-admitted": 1,
+          "already-published": 10,
           "not-individual-property": 4,
-          "already-published": 9,
           "outside-lookback": 15
         }
       }
     ],
-    "newCandidatesDiscovered": 1,
-    "candidatesConsidered": 21,
-    "inScopeQueueCandidates": 20,
-    "attemptedThisRun": 2,
-    "skippedThisRun": 19,
+    "newCandidatesDiscovered": 0,
+    "candidatesConsidered": 20,
+    "inScopeQueueCandidates": 19,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 20,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 18,
-      "stored-awaiting-verification": 1,
-      "attempt-failed": 1
+      "retry-cooldown": 1
     },
-    "newFeaturesStored": 1,
-    "verifiedPublicationsThisRun": 1,
+    "newFeaturesStored": 0,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -565,38 +568,14 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.countrylife.co.uk/property/overseas/youve-got-mail-and-weve-got-the-house-meg-ryans-on-screen-apartment-is-for-sale",
-        "sourceId": "countrylife-property",
-        "title": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
-        "collection": "mansions",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
         "sourceId": "robb-property",
         "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
         "collection": "penthouses",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 4,
         "checks": 4,
         "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-        "sourceId": "robb-property",
-        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-        "collection": "waterfront",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -613,15 +592,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-        "sourceId": "sothebys-property",
-        "title": "Inside a Singular Waterfront Villa in Palm Beach",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+        "sourceId": "robb-property",
+        "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
         "collection": "waterfront",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
-        "reason": "HTTP Error 403: Forbidden",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -634,6 +613,18 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+        "sourceId": "sothebys-property",
+        "title": "Inside a Singular Waterfront Villa in Palm Beach",
+        "collection": "waterfront",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
       {
@@ -782,49 +773,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-28T12:17:43.206930+00:00",
-  "status": "published-and-verified-with-blockers",
+  "lastRunAt": "2026-11-28T12:25:59.753713+00:00",
+  "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
-      "items": 14
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
+      "items": 29
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
+      "fetchedAt": "2026-11-28T12:25:59.753713+00:00",
       "items": 29
     }
   ],
@@ -837,9 +828,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 15,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 14,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "penthouses",
@@ -866,8 +857,8 @@
       "status": "blocked-eligible-property"
     }
   ],
-  "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 103,
+  "googleDiscoveryItems": 1,
+  "duplicatesFiltered": 118,
   "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
