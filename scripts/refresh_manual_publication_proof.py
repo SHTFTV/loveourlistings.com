@@ -21,11 +21,20 @@ for run in state['runs']:
 # publication receipt, but credit only the first publication of each property
 # on that source. Property IDs distinguish separate houses in one roundup.
 sources = {article['slug']: article['source'] for article in state['articles']}
+# Editorial review can identify the same listing event across different sources.
+event_path = ROOT / 'operations/duplicate-publication-events.json'
+repeat_events = json.loads(event_path.read_text()) if event_path.exists() else {}
 seen = set()
 distinct = {}
 for article in sorted(verified.values(), key=lambda a: datetime.fromisoformat(a['publishedAt'])):
     source = sources.get(article['slug']) or {'url': article.get('sourceUrl'), 'propertyId': article.get('propertyId')}
     identity = source_key(source) if source.get('url') else article['slug']
+    repeat = repeat_events.get(article['slug'])
+    if repeat and source.get('url') == repeat['sourceUrl']:
+        original_slug = repeat['duplicateOfArticleSlug']
+        if original_slug in distinct and sources.get(original_slug, {}).get('url') == repeat['originalSourceUrl']:
+            seen.add(identity)
+            continue
     if identity in seen:
         continue
     seen.add(identity)
