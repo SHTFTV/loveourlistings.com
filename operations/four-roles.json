@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-28T12:20:43.955913+00:00",
+  "checkedAt": "2026-11-28T12:26:46.480221+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "d5601ca3d74db32bcd49e0d1faf1dee6626dd601",
+    "sourceCommit": "ee974ecabcf510a710f14b266c22796b05e2d8b3",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,21 +13,20 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-28T12:18:55.310472+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-28T12:26:32.760831+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144607974",
+      "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
-        "trigger": "schedule"
+        "sourceCommit": "9db87cac2955c68a3b016dfb1b8a304303e8f137",
+        "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
-        "verified": true,
-        "kind": "schedule"
+        "verified": false
       },
       "verified": false,
       "status": "failed",
@@ -41,15 +40,15 @@
         "Reviewed property source outside current lookback",
         "Reviewed property source outside current lookback"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-28T12:18:55.310472+00:00",
+        "checkedAt": "2026-11-28T12:26:32.760831+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 93,
+        "feedItemsParsed": 108,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -103,10 +102,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 14,
-            "parseRejected": 0,
+            "itemsParsed": 29,
+            "parseRejected": 1,
             "dispositions": {
-              "discovery-original-link-required": 14
+              "discovery-original-link-required": 29
             }
           },
           {
@@ -114,26 +113,24 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
-              "candidate-admitted": 1,
+              "already-published": 10,
               "not-individual-property": 4,
-              "already-published": 9,
               "outside-lookback": 15
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
-        "candidatesConsidered": 21,
-        "inScopeQueueCandidates": 20,
-        "attemptedThisRun": 2,
-        "skippedThisRun": 19,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 20,
+        "inScopeQueueCandidates": 19,
+        "attemptedThisRun": 0,
+        "skippedThisRun": 20,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 18,
-          "stored-awaiting-verification": 1,
-          "attempt-failed": 1
+          "retry-cooldown": 1
         },
-        "newFeaturesStored": 1,
-        "verifiedPublicationsThisRun": 1,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -173,38 +170,14 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.countrylife.co.uk/property/overseas/youve-got-mail-and-weve-got-the-house-meg-ryans-on-screen-apartment-is-for-sale",
-            "sourceId": "countrylife-property",
-            "title": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
             "sourceId": "robb-property",
             "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
             "collection": "penthouses",
-            "outcome": "attempt-failed",
+            "outcome": "retry-cooldown",
             "failedAttempts": 4,
             "checks": 4,
             "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-            "sourceId": "robb-property",
-            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -221,15 +194,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-            "sourceId": "sothebys-property",
-            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceId": "robb-property",
+            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -242,6 +215,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+            "sourceId": "sothebys-property",
+            "title": "Inside a Singular Waterfront Villa in Palm Beach",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -390,9 +375,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-28T12:48:55.310472+00:00",
+      "expiresAt": "2026-11-28T12:56:32.760831+00:00",
       "green": false
     },
     "visual": {
@@ -400,19 +385,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-28T10:25:32.556Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-28T12:21:16.654Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144178618",
+      "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "schedule"
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
+        "sourceCommit": "d5601ca3d74db32bcd49e0d1faf1dee6626dd601",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -860,7 +846,7 @@
             ]
           },
           "screenshot": "desktop-home.jpg",
-          "screenshotSha256": "c9c34c0d1758e3f4556419c58b8ea65824d2f3b18b63509b633b60fc65769710"
+          "screenshotSha256": "671f4df0785e7d4f7566dfeec253ac5c7a17fa2c9fc3db61d052f74056c07933"
         },
         {
           "page": "journal",
@@ -885,8 +871,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-                "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house",
+                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+                "alt": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
                 "native": [
                   1600,
                   900
@@ -903,27 +889,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "8307049a899d1eaab70628c0fae869ed92a0744caf653507f3b0aafb624fff34"
+          "screenshotSha256": "829e05042b34ed1537d4c7489f9bdc009ef84cf5b3c59b4924680a468563291b"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A garden separates two very different rooms on East 91st Street | Love Our Listings",
-            "h1": "We Love This Listing: A garden separates two very different rooms on East 91st Street",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
-            "description": "A detached, wood-lined carriage house shares the bluestone garden of a six-story Carnegie Hill townhouse.",
-            "ogTitle": "We Love This Listing: A garden separates two very different rooms on East 91st Street | Love Our Listings",
-            "ogDescription": "A detached, wood-lined carriage house shares the bluestone garden of a six-story Carnegie Hill townhouse.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-            "twitterTitle": "We Love This Listing: A garden separates two very different rooms on East 91st Street | Love Our Listings",
-            "twitterDescription": "A detached, wood-lined carriage house shares the bluestone garden of a six-story Carnegie Hill townhouse.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
+            "title": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
+            "h1": "We Love This Listing: The Townhouse Behind a New York Screen Romance",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
+            "description": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
+            "ogTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
+            "ogDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+            "twitterTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
+            "twitterDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -970,8 +956,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-                "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house",
+                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+                "alt": "we love mansions 2026 11 28 c95d7b57a3",
                 "native": [
                   1600,
                   900
@@ -988,23 +974,33 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/ea740453950dd297eddc.jpg",
+            "src": "/images/source-properties/72681bdd658da85175d6.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house"
+            "alt": "we love mansions 2026 11 28 c95d7b57a3"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "d7b1f5d004d0e84d788e8b6fa7420475365afb0c633b4ed10c744af541b2fb6f",
+          "screenshotSha256": "298656d7647f464a2f7286ecc9de4dce1b4877d12e0ef85306d3a9128ecaa75e",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 414
+              "textLength": 317
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 492
+              "textLength": 284
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 334
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": "normal",
+              "textLength": 310
             },
             {
               "fontSize": 16,
@@ -1144,7 +1140,7 @@
             ]
           },
           "screenshot": "phone-home.jpg",
-          "screenshotSha256": "d9d22de42e80be99f71628a5ccc8bfff61c5fdf35ddd6ba21d3e6103178f7f2e"
+          "screenshotSha256": "34390bbc7d61cac069a5c6ccebdf7b51a8fd01da9138e7d9d98d062c26e5561a"
         },
         {
           "page": "journal",
@@ -1183,8 +1179,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-                "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house",
+                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+                "alt": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
                 "native": [
                   1600,
                   900
@@ -1197,8 +1193,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/1ecda33892e30b58484e.jpg",
-                "alt": "Formal lawn, stone urns and a central path at the entrance of the Hill Road estate",
+                "src": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
+                "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house",
                 "native": [
                   1600,
                   900
@@ -1215,27 +1211,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "731aabb358b42f4aa65b464dd36ea1a436f55b4780c5e042e9146cd122c04913"
+          "screenshotSha256": "32fb21aed66ada346dd03a2716ca7a6824f35ac5b4f29f74dda77a298429f32a"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: A garden separates two very different rooms on East 91st Street | Love Our Listings",
-            "h1": "We Love This Listing: A garden separates two very different rooms on East 91st Street",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
-            "description": "A detached, wood-lined carriage house shares the bluestone garden of a six-story Carnegie Hill townhouse.",
-            "ogTitle": "We Love This Listing: A garden separates two very different rooms on East 91st Street | Love Our Listings",
-            "ogDescription": "A detached, wood-lined carriage house shares the bluestone garden of a six-story Carnegie Hill townhouse.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-            "twitterTitle": "We Love This Listing: A garden separates two very different rooms on East 91st Street | Love Our Listings",
-            "twitterDescription": "A detached, wood-lined carriage house shares the bluestone garden of a six-story Carnegie Hill townhouse.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
+            "title": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
+            "h1": "We Love This Listing: The Townhouse Behind a New York Screen Romance",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
+            "description": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
+            "ogTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
+            "ogDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+            "twitterTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
+            "twitterDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1282,8 +1278,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-                "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house",
+                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+                "alt": "we love mansions 2026 11 28 c95d7b57a3",
                 "native": [
                   1600,
                   900
@@ -1300,28 +1296,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/ea740453950dd297eddc.jpg",
+            "src": "/images/source-properties/72681bdd658da85175d6.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house"
+            "alt": "we love mansions 2026 11 28 c95d7b57a3"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "00896c6b6c942f45c3fca911c062243b5410d09d3ca8b9a7d09f1ee7e463afe1",
+          "screenshotSha256": "6e52b20b7509222f3e73df2678ee3547c443bc1a79e9fff17b5ece057abe060e",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 414
+              "textLength": 317
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 492
+              "textLength": 284
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 258
+              "textLength": 334
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1336,11 +1332,18 @@
       "status": "failed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-18-0395b3c45b",
-        "publishedAt": "2026-11-27T08:17:27-07:00",
-        "image": "/images/source-properties/ea740453950dd297eddc.jpg"
+        "slug": "we-love-mansions-2026-11-28-c95d7b57a3",
+        "publishedAt": "2026-11-28T05:17:43-07:00",
+        "image": "/images/source-properties/72681bdd658da85175d6.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-28-c95d7b57a3",
+          "image": "/images/source-properties/72681bdd658da85175d6.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-mansions-2026-11-18-0395b3c45b",
           "image": "/images/source-properties/ea740453950dd297eddc.jpg",
@@ -2133,49 +2136,48 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15259276816,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399/artifacts/15259816142",
-      "fresh": false,
-      "expiresAt": "2026-11-28T10:55:32.556000+00:00",
+      "artifactId": 15262918886,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144178618/artifacts/15263107386",
+      "fresh": true,
+      "expiresAt": "2026-11-28T12:51:16.654000+00:00",
       "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-28T08:02:02.845136+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46123893823",
-      "trigger": "schedule",
+      "checkedAt": "2026-11-28T12:20:50.866096+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144183526",
+      "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
+        "sourceCommit": "9db87cac2955c68a3b016dfb1b8a304303e8f137",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
-        "kind": "schedule"
+        "kind": "verified-same-publisher-dispatch",
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457"
       },
       "verified": false,
       "status": "failed",
       "findings": [
-        "publisher-heartbeat-stale-or-missing",
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46100432315",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46100432315",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 18312.523916,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 115.953376,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-28T02:56:50.794412+00:00",
+        "checkedAt": "2026-11-28T12:18:55.310472+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 93,
@@ -2243,24 +2245,26 @@
             "itemsParsed": 29,
             "parseRejected": 1,
             "dispositions": {
+              "candidate-admitted": 1,
               "not-individual-property": 4,
               "already-published": 9,
-              "outside-lookback": 16
+              "outside-lookback": 15
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 20,
-        "inScopeQueueCandidates": 19,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 20,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 21,
+        "inScopeQueueCandidates": 20,
+        "attemptedThisRun": 2,
+        "skippedThisRun": 19,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 18,
-          "retry-cooldown": 1
+          "stored-awaiting-verification": 1,
+          "attempt-failed": 1
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 1,
+        "verifiedPublicationsThisRun": 1,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2300,15 +2304,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+            "sourceUrl": "https://www.countrylife.co.uk/property/overseas/youve-got-mail-and-weve-got-the-house-meg-ryans-on-screen-apartment-is-for-sale",
+            "sourceId": "countrylife-property",
+            "title": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
             "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2316,10 +2320,10 @@
             "sourceId": "robb-property",
             "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
             "collection": "penthouses",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 3,
-            "checks": 3,
-            "nextAttemptAt": "2026-11-28T08:10:30.481338+00:00",
+            "outcome": "attempt-failed",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
@@ -2336,15 +2340,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
             "sourceId": "robb-property",
-            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2357,6 +2361,18 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "HTTP Error 403: Forbidden",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+            "sourceId": "robb-property",
+            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+            "collection": "mansions",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2506,34 +2522,34 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "46100432315",
+        "runId": "46143911457",
         "status": "passed",
-        "checkedAt": "2026-11-28T02:56:15.444023+00:00"
+        "checkedAt": "2026-11-28T12:17:41.025264+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-penthouses-2026-11-25-a78790d186",
+          "id": "loveourlistings.com:we-love-mansions-2026-11-28-c95d7b57a3",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: A Fisher Island penthouse with a garden on the roof",
-          "publishedAt": "2026-11-27T08:17:27-07:00",
-          "verifiedAt": "2026-11-27T15:19:08.728746+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-25-a78790d186/",
+          "title": "We Love This Listing: The Townhouse Behind a New York Screen Romance",
+          "publishedAt": "2026-11-28T05:17:43-07:00",
+          "verifiedAt": "2026-11-28T12:19:53.949698+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
           "status": "done",
-          "checkedAt": "2026-11-27T15:19:09.447233+00:00"
+          "checkedAt": "2026-11-28T12:19:54.671918+00:00"
         },
-        "ageSeconds": 60276.491679,
-        "inspectionRequired": true,
+        "ageSeconds": 188.407149,
+        "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "db953939801b7474ab2e3e93736d1d4284ad3f19",
+        "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
         "trigger": "schedule"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2542,10 +2558,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46100385392",
-        "checkedAt": "2026-11-28T02:55:55.987Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399",
+        "checkedAt": "2026-11-28T10:25:32.556Z",
         "status": "failed",
-        "artifactId": 15244379185
+        "artifactId": 15259276816
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2555,9 +2571,9 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15254907109,
-      "fresh": false,
-      "expiresAt": "2026-11-28T08:32:02.845136+00:00",
+      "artifactId": 15263156273,
+      "fresh": true,
+      "expiresAt": "2026-11-28T12:50:50.866096+00:00",
       "green": false
     },
     "watchdog": {
@@ -2663,20 +2679,20 @@
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
+      "sourceCommit": "9db87cac2955c68a3b016dfb1b8a304303e8f137",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T12:18:55.310472+00:00",
+      "observedAt": "2026-11-28T12:26:32.760831+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144607974",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144607974",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
       "fresh": true,
@@ -2695,69 +2711,67 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144607974"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
+      "sourceCommit": "d5601ca3d74db32bcd49e0d1faf1dee6626dd601",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T10:25:32.556Z",
+      "observedAt": "2026-11-28T12:21:16.654Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399/artifacts/15259276816",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144178618",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144178618/artifacts/15262918886",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
         "published-archive/we-love-beach-properties-2026-11-24-fa9163f778: native-below1600x900",
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399/artifacts/15259816142",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46135077399/artifacts/15259816142",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144178618/artifacts/15263107386",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144178618/artifacts/15263107386",
       "pageUrls": [
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
+      "sourceCommit": "9db87cac2955c68a3b016dfb1b8a304303e8f137",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T08:02:02.845136+00:00",
+      "observedAt": "2026-11-28T12:20:50.866096+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46123893823",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46123893823/artifacts/15254907109",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144183526",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46144183526/artifacts/15263156273",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-      "rawTrigger": "schedule",
+      "rawTrigger": "workflow_dispatch",
       "trigger": "managed-scheduler",
       "runtimeVerified": true,
-      "fresh": false,
+      "fresh": true,
       "findings": [
-        "publisher-heartbeat-stale-or-missing",
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46100432315",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46143911457",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
