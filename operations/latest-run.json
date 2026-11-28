@@ -1,20 +1,20 @@
 {
-  "startedAt": "2026-11-28T15:06:35.443138+00:00",
+  "startedAt": "2026-11-28T15:14:43.225777+00:00",
   "sopVersion": 13,
   "sotLoad": {
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "e7388744174946ad6806ba16e2fc25e7f3f7a64b",
+    "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
     "trigger": "workflow_dispatch"
   },
-  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+  "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158812728",
   "sources": [
     {
       "id": "sothebys-property",
       "url": "https://www.sothebysrealty.com/extraordinary-living-blog/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -30,7 +30,7 @@
       "id": "robb-property",
       "url": "https://robbreport.com/shelter/feed/",
       "status": "ok",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
       "items": 10,
       "parseRejected": 0,
       "discoveryOnly": false,
@@ -46,21 +46,21 @@
       "id": "mansion-global",
       "url": "https://www.mansionglobal.com/rss/luxury-real-estate-news",
       "status": "error",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
       "error": "HTTP 404"
     },
     {
       "id": "christies-property",
       "url": "https://www.christiesrealestate.com/blog/feed/",
       "status": "error",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
       "error": "DTD/entity declarations rejected"
     },
     {
       "id": "google-luxury",
       "url": "https://news.google.com/rss/search?q=luxury%20mansion%20property%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
       "items": 30,
       "parseRejected": 0,
       "discoveryOnly": true,
@@ -74,21 +74,26 @@
       "id": "google-waterfront",
       "url": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen",
       "status": "ok",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
-      "items": 15,
-      "parseRejected": 0,
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
+      "items": 29,
+      "parseRejected": 1,
       "discoveryOnly": true,
       "dispositions": {
-        "discovery-original-link-required": 15
+        "discovery-original-link-required": 29
       },
-      "errors": [],
+      "errors": [
+        {
+          "title": "Waterfront Key - 99.co",
+          "reason": "Missing substantive source summary"
+        }
+      ],
       "finalUrl": "https://news.google.com/rss/search?q=waterfront%20property%20listing%20when%3A14d&hl=en-CA&gl=CA&ceid=CA%3Aen"
     },
     {
       "id": "countrylife-property",
       "url": "https://www.countrylife.co.uk/feeds/tag/property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T15:06:35.443138+00:00",
+      "fetchedAt": "2026-11-28T15:14:43.225777+00:00",
       "items": 29,
       "parseRejected": 1,
       "discoveryOnly": false,
@@ -108,50 +113,32 @@
   ],
   "articles": [
     {
-      "slug": "we-love-acreage-2026-11-23-85e97e0c06",
-      "title": "We Love This Listing: Heavy ceiling beams lend a Fair Oaks sitting room its scale",
-      "collection": "acreage",
-      "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-23-85e97e0c06/",
-      "publishedAt": "2026-11-28T08:06:35-07:00",
-      "sourceUrl": "https://www.realtor.com/news/unique-homes/gov-gavin-newsom-cuts-price-of-sacramento-area-estate-by-half-a-million/",
-      "propertyId": null
-    },
-    {
-      "slug": "we-love-penthouses-2026-11-16-6a7322bc78",
-      "title": "We Love This Listing: A bedroom door opens onto the skyline at the Hit Factory",
-      "collection": "penthouses",
-      "url": "https://www.loveourlistings.com/journal/we-love-penthouses-2026-11-16-6a7322bc78/",
-      "publishedAt": "2026-11-28T08:06:35-07:00",
-      "sourceUrl": "https://www.elledecor.com/celebrity-style/celebrity-homes/a74441330/lady-gaga-manhattan-penthouse-sale/",
-      "propertyId": null
-    },
-    {
-      "slug": "we-love-mansions-2026-11-22-c8175e7de0",
-      "title": "We Love This Listing: A skylight follows the dining table in Santa Monica Canyon",
+      "slug": "we-love-mansions-2026-11-20-c9d5b16143",
+      "title": "We Love This Listing: Curved cabinetry gives a Johns Island kitchen its shape",
       "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-22-c8175e7de0/",
-      "publishedAt": "2026-11-28T08:06:35-07:00",
-      "sourceUrl": "https://www.realtor.com/news/unique-homes/renovated-santa-monica-canyon-retreat-for-sale/",
+      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-20-c9d5b16143/",
+      "publishedAt": "2026-11-28T08:14:43-07:00",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
       "propertyId": null
     },
     {
-      "slug": "we-love-mansions-2026-11-23-379e7bd90f",
-      "title": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office",
+      "slug": "we-love-mansions-2026-11-23-9c0b10a9c3",
+      "title": "We Love This Listing: The bay fills a living-room corner in Pacific Heights",
       "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
-      "publishedAt": "2026-11-28T08:06:35-07:00",
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
+      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-9c0b10a9c3/",
+      "publishedAt": "2026-11-28T08:14:43-07:00",
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
       "propertyId": null
     }
   ],
-  "duplicates": 105,
-  "quarantined": 1,
+  "duplicates": 123,
+  "quarantined": 3,
   "discovered": 0,
-  "productionVerified": true,
+  "productionVerified": false,
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157620542",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158342648",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -409,10 +396,44 @@
       "nextAttemptAt": null
     },
     {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+      "propertyId": null,
+      "collection": "penthouses",
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00"
+    },
+    {
+      "sourceUrl": "https://moneyweek.com/spending-it/properties/properties-for-sale-with-home-offices",
+      "title": "At Berth on Anglesey, the walk to work ends in an old farm building",
+      "propertyId": "berth-llanfaethlu-holyhead-anglesey",
+      "collection": "acreage",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
       "propertyId": null,
       "collection": "waterfront",
       "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -427,38 +448,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-      "propertyId": null,
-      "collection": "penthouses",
-      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00"
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
       "propertyId": null,
       "collection": "waterfront",
       "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "reason": "HTTP Error 403: Forbidden",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -499,28 +493,10 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-      "reason": "HTTP Error 429: Too Many Requests",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
       "propertyId": null,
       "collection": "mansions",
       "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
       "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
@@ -562,8 +538,8 @@
       "nextAttemptAt": null
     }
   ],
-  "reviewedCandidateIntake": 55,
-  "newCandidatesDiscovered": 3,
+  "reviewedCandidateIntake": 57,
+  "newCandidatesDiscovered": 1,
   "candidateChecks": [
     {
       "sourceUrl": "https://robbreport.com/shelter/art-collectibles/renaissance-church-facade-spain-reward-1238834153",
@@ -590,39 +566,39 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://www.realtor.com/news/unique-homes/gov-gavin-newsom-cuts-price-of-sacramento-area-estate-by-half-a-million/",
-      "sourceId": "reviewed-realtor-property",
-      "title": "Heavy ceiling beams lend a Fair Oaks sitting room its scale",
-      "collection": "acreage",
-      "outcome": "stored-awaiting-verification",
-      "failedAttempts": 0,
-      "checks": 1,
-      "nextAttemptAt": null,
-      "reason": "New feature awaits actual deployment and live verification",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://www.elledecor.com/celebrity-style/celebrity-homes/a74441330/lady-gaga-manhattan-penthouse-sale/",
-      "sourceId": "reviewed-elle-decor",
-      "title": "A bedroom door opens onto the skyline at the Hit Factory",
-      "collection": "penthouses",
-      "outcome": "stored-awaiting-verification",
-      "failedAttempts": 0,
-      "checks": 1,
-      "nextAttemptAt": null,
-      "reason": "New feature awaits actual deployment and live verification",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://www.realtor.com/news/unique-homes/renovated-santa-monica-canyon-retreat-for-sale/",
-      "sourceId": "reviewed-realtor-property",
-      "title": "A skylight follows the dining table in Santa Monica Canyon",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+      "sourceId": "robb-property",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
       "collection": "mansions",
-      "outcome": "stored-awaiting-verification",
-      "failedAttempts": 0,
-      "checks": 1,
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
       "nextAttemptAt": null,
-      "reason": "New feature awaits actual deployment and live verification",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+      "sourceId": "robb-property",
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
+      "collection": "penthouses",
+      "outcome": "retry-cooldown",
+      "failedAttempts": 4,
+      "checks": 4,
+      "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://moneyweek.com/spending-it/properties/properties-for-sale-with-home-offices",
+      "sourceId": "reviewed-moneyweek-uk",
+      "title": "At Berth on Anglesey, the walk to work ends in an old farm building",
+      "collection": "acreage",
+      "outcome": "attempt-failed",
+      "failedAttempts": 1,
+      "checks": 1,
+      "nextAttemptAt": "2026-11-28T21:14:43.225777+00:00",
+      "reason": "HTTP Error 403: Forbidden",
       "duplicateOfArticleSlug": null
     },
     {
@@ -630,6 +606,18 @@
       "sourceId": "robb-property",
       "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
       "collection": "waterfront",
+      "outcome": "quarantined-retry-exhausted",
+      "failedAttempts": 5,
+      "checks": 5,
+      "nextAttemptAt": null,
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "duplicateOfArticleSlug": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+      "sourceId": "robb-property",
+      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+      "collection": "mansions",
       "outcome": "quarantined-retry-exhausted",
       "failedAttempts": 5,
       "checks": 5,
@@ -650,30 +638,6 @@
       "duplicateOfArticleSlug": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-      "sourceId": "robb-property",
-      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-      "collection": "penthouses",
-      "outcome": "retry-cooldown",
-      "failedAttempts": 4,
-      "checks": 4,
-      "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "sourceId": "robb-property",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "duplicateOfArticleSlug": null
-    },
-    {
       "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
       "sourceId": "sothebys-property",
       "title": "Inside a Singular Waterfront Villa in Palm Beach",
@@ -683,18 +647,6 @@
       "checks": 5,
       "nextAttemptAt": null,
       "reason": "HTTP Error 403: Forbidden",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-      "sourceId": "robb-property",
-      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-      "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "duplicateOfArticleSlug": null
     },
     {
@@ -750,18 +702,6 @@
       "sourceId": "robb-property",
       "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
       "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
-      "failedAttempts": 5,
-      "checks": 5,
-      "nextAttemptAt": null,
-      "reason": "HTTP Error 429: Too Many Requests",
-      "duplicateOfArticleSlug": null
-    },
-    {
-      "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
-      "sourceId": "robb-property",
-      "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
-      "collection": "mansions",
       "outcome": "stored-awaiting-verification",
       "failedAttempts": 5,
       "checks": 6,
@@ -786,11 +726,11 @@
       "sourceId": "robb-property",
       "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
       "collection": "mansions",
-      "outcome": "quarantined-retry-exhausted",
+      "outcome": "stored-awaiting-verification",
       "failedAttempts": 5,
-      "checks": 5,
+      "checks": 6,
       "nextAttemptAt": null,
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "reason": "New feature awaits actual deployment and live verification",
       "duplicateOfArticleSlug": null
     },
     {
@@ -851,15 +791,15 @@
     },
     {
       "name": "mansions",
-      "eligible": 15,
+      "eligible": 13,
       "newFeatures": 2,
       "status": "built-for-publication"
     },
     {
       "name": "penthouses",
-      "eligible": 2,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "eligible": 1,
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "ranches",
@@ -870,8 +810,8 @@
     {
       "name": "acreage",
       "eligible": 2,
-      "newFeatures": 1,
-      "status": "built-for-publication"
+      "newFeatures": 0,
+      "status": "blocked-eligible-property"
     },
     {
       "name": "beach-properties",
@@ -880,15 +820,15 @@
       "status": "blocked-eligible-property"
     }
   ],
-  "status": "published-and-verified-with-blockers",
-  "finishedAt": "2026-11-28T15:07:18.822954+00:00",
+  "status": "built-for-publication",
+  "finishedAt": "2026-11-28T15:15:16.382588+00:00",
   "queueProgress": {
-    "checkedAt": "2026-11-28T15:07:18.822954+00:00",
+    "checkedAt": "2026-11-28T15:15:16.382588+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "published-and-verified",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 94,
+    "feedItemsParsed": 108,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -942,10 +882,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 15,
-        "parseRejected": 0,
+        "itemsParsed": 29,
+        "parseRejected": 1,
         "dispositions": {
-          "discovery-original-link-required": 15
+          "discovery-original-link-required": 29
         }
       },
       {
@@ -959,19 +899,20 @@
         }
       }
     ],
-    "newCandidatesDiscovered": 3,
-    "candidatesConsidered": 23,
-    "inScopeQueueCandidates": 22,
-    "attemptedThisRun": 4,
-    "skippedThisRun": 19,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 20,
+    "inScopeQueueCandidates": 19,
+    "attemptedThisRun": 3,
+    "skippedThisRun": 17,
     "outcomes": {
       "not-individual-property": 1,
-      "quarantined-retry-exhausted": 17,
-      "stored-awaiting-verification": 4,
-      "retry-cooldown": 1
+      "quarantined-retry-exhausted": 15,
+      "retry-cooldown": 1,
+      "attempt-failed": 1,
+      "stored-awaiting-verification": 2
     },
-    "newFeaturesStored": 4,
-    "verifiedPublicationsThisRun": 4,
+    "newFeaturesStored": 2,
+    "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
       {
@@ -999,39 +940,39 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://www.realtor.com/news/unique-homes/gov-gavin-newsom-cuts-price-of-sacramento-area-estate-by-half-a-million/",
-        "sourceId": "reviewed-realtor-property",
-        "title": "Heavy ceiling beams lend a Fair Oaks sitting room its scale",
-        "collection": "acreage",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.elledecor.com/celebrity-style/celebrity-homes/a74441330/lady-gaga-manhattan-penthouse-sale/",
-        "sourceId": "reviewed-elle-decor",
-        "title": "A bedroom door opens onto the skyline at the Hit Factory",
-        "collection": "penthouses",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
-        "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://www.realtor.com/news/unique-homes/renovated-santa-monica-canyon-retreat-for-sale/",
-        "sourceId": "reviewed-realtor-property",
-        "title": "A skylight follows the dining table in Santa Monica Canyon",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+        "sourceId": "robb-property",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
-        "outcome": "stored-awaiting-verification",
-        "failedAttempts": 0,
-        "checks": 1,
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
         "nextAttemptAt": null,
-        "reason": "New feature awaits actual deployment and live verification",
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+        "sourceId": "robb-property",
+        "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
+        "collection": "penthouses",
+        "outcome": "retry-cooldown",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://moneyweek.com/spending-it/properties/properties-for-sale-with-home-offices",
+        "sourceId": "reviewed-moneyweek-uk",
+        "title": "At Berth on Anglesey, the walk to work ends in an old farm building",
+        "collection": "acreage",
+        "outcome": "attempt-failed",
+        "failedAttempts": 1,
+        "checks": 1,
+        "nextAttemptAt": "2026-11-28T21:14:43.225777+00:00",
+        "reason": "HTTP Error 403: Forbidden",
         "duplicateOfArticleSlug": null
       },
       {
@@ -1039,6 +980,18 @@
         "sourceId": "robb-property",
         "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
         "collection": "waterfront",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+        "sourceId": "robb-property",
+        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+        "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
@@ -1059,30 +1012,6 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-        "sourceId": "robb-property",
-        "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-        "collection": "penthouses",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 4,
-        "checks": 4,
-        "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-        "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-        "duplicateOfArticleSlug": null
-      },
-      {
         "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
         "sourceId": "sothebys-property",
         "title": "Inside a Singular Waterfront Villa in Palm Beach",
@@ -1092,18 +1021,6 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "HTTP Error 403: Forbidden",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-        "sourceId": "robb-property",
-        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-        "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -1159,18 +1076,6 @@
         "sourceId": "robb-property",
         "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
         "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
-        "nextAttemptAt": null,
-        "reason": "HTTP Error 429: Too Many Requests",
-        "duplicateOfArticleSlug": null
-      },
-      {
-        "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
-        "sourceId": "robb-property",
-        "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
-        "collection": "mansions",
         "outcome": "stored-awaiting-verification",
         "failedAttempts": 5,
         "checks": 6,
@@ -1195,11 +1100,11 @@
         "sourceId": "robb-property",
         "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
         "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
+        "outcome": "stored-awaiting-verification",
         "failedAttempts": 5,
-        "checks": 5,
+        "checks": 6,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -1251,6 +1156,5 @@
         "duplicateOfArticleSlug": null
       }
     ]
-  },
-  "verifiedAt": "2026-11-28T15:08:21.002735+00:00"
+  }
 }
