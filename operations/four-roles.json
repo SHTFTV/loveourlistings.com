@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-28T15:24:32.605323+00:00",
+  "checkedAt": "2026-11-28T15:31:14.140412+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "f217127e91a4836af748473579514e53e2b8fb05",
+    "sourceCommit": "f0be8fc3267688344101ea03f800ddd800c1f950",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-28T15:22:52.418729+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
+      "checkedAt": "2026-11-28T15:30:56.781375+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46160142017",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "86be1149f92f486cc8d940e5399870c666430818",
+        "sourceCommit": "b683265b20a416d206bd41c5eb8a5841fe05edcd",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -40,12 +40,12 @@
         "Reviewed property source outside current lookback",
         "Reviewed property source outside current lookback"
       ],
-      "outcome": "published-and-verified-with-blockers",
+      "outcome": "no-eligible-content",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-28T15:22:52.418729+00:00",
+        "checkedAt": "2026-11-28T15:30:56.781375+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "published-and-verified",
+        "publicationOutcome": "no-eligible-content",
         "feedsChecked": 7,
         "feedsHealthy": 5,
         "feedItemsParsed": 94,
@@ -119,19 +119,18 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 1,
-        "candidatesConsidered": 19,
-        "inScopeQueueCandidates": 18,
-        "attemptedThisRun": 1,
+        "newCandidatesDiscovered": 0,
+        "candidatesConsidered": 18,
+        "inScopeQueueCandidates": 17,
+        "attemptedThisRun": 0,
         "skippedThisRun": 18,
         "outcomes": {
           "not-individual-property": 1,
           "quarantined-retry-exhausted": 15,
-          "retry-cooldown": 2,
-          "stored-awaiting-verification": 1
+          "retry-cooldown": 2
         },
-        "newFeaturesStored": 1,
-        "verifiedPublicationsThisRun": 1,
+        "newFeaturesStored": 0,
+        "verifiedPublicationsThisRun": 0,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -183,15 +182,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.realtor.com/news/trends/north-carolina-hoarders-house-sells-after-restoration/",
-            "sourceId": "reviewed-realtor-property",
-            "title": "At Greensboro\u2019s Julian Price House, the plasterwork survived a change of use",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceId": "robb-property",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
             "duplicateOfArticleSlug": null
           },
           {
@@ -219,15 +218,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
             "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -240,18 +239,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-            "sourceId": "robb-property",
-            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -364,9 +351,9 @@
           }
         ]
       },
-      "operationalStatus": "published-and-verified-with-blockers",
+      "operationalStatus": "no-eligible-content",
       "fresh": true,
-      "expiresAt": "2026-11-28T15:52:52.418729+00:00",
+      "expiresAt": "2026-11-28T16:00:56.781375+00:00",
       "green": false
     },
     "visual": {
@@ -2153,13 +2140,13 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-28T15:09:33.696500+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699",
+      "checkedAt": "2026-11-28T15:24:41.456029+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159707968",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "322ea31606ae14760ed7db8bfe1db99ca8ab997c",
+        "sourceCommit": "b683265b20a416d206bd41c5eb8a5841fe05edcd",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -2167,7 +2154,7 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705"
       },
       "verified": false,
       "status": "failed",
@@ -2176,13 +2163,13 @@
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
       "publisherOutcome": "published-and-verified-with-blockers",
-      "publisherReceiptAgeSeconds": 135.309188,
+      "publisherReceiptAgeSeconds": 109.577832,
       "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-28T15:07:18.822954+00:00",
+        "checkedAt": "2026-11-28T15:22:52.418729+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
@@ -2258,19 +2245,19 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 3,
-        "candidatesConsidered": 23,
-        "inScopeQueueCandidates": 22,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 19,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 19,
+        "inScopeQueueCandidates": 18,
+        "attemptedThisRun": 1,
+        "skippedThisRun": 18,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 17,
-          "stored-awaiting-verification": 4,
-          "retry-cooldown": 1
+          "quarantined-retry-exhausted": 15,
+          "retry-cooldown": 2,
+          "stored-awaiting-verification": 1
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 1,
+        "verifiedPublicationsThisRun": 1,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2298,33 +2285,33 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.realtor.com/news/unique-homes/gov-gavin-newsom-cuts-price-of-sacramento-area-estate-by-half-a-million/",
-            "sourceId": "reviewed-realtor-property",
-            "title": "Heavy ceiling beams lend a Fair Oaks sitting room its scale",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.elledecor.com/celebrity-style/celebrity-homes/a74441330/lady-gaga-manhattan-penthouse-sale/",
-            "sourceId": "reviewed-elle-decor",
-            "title": "A bedroom door opens onto the skyline at the Hit Factory",
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+            "sourceId": "robb-property",
+            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
             "collection": "penthouses",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.realtor.com/news/unique-homes/renovated-santa-monica-canyon-retreat-for-sale/",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
+            "sourceId": "robb-property",
+            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "collection": "acreage",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.realtor.com/news/trends/north-carolina-hoarders-house-sells-after-restoration/",
             "sourceId": "reviewed-realtor-property",
-            "title": "A skylight follows the dining table in Santa Monica Canyon",
+            "title": "At Greensboro\u2019s Julian Price House, the plasterwork survived a change of use",
             "collection": "mansions",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 0,
@@ -2346,27 +2333,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/cesare-rovatti-designed-tuscan-villa-for-sale-1238836783",
-            "sourceId": "robb-property",
-            "title": "An 11-Acre Estate by Acclaimed Italian Designer Cesare Rovatti Can Now Be Yours for $4.3 Million",
+            "sourceUrl": "https://moneyweek.com/spending-it/properties/properties-for-sale-with-home-offices",
+            "sourceId": "reviewed-moneyweek-uk",
+            "title": "At Berth on Anglesey, the walk to work ends in an old farm building",
             "collection": "acreage",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-            "sourceId": "robb-property",
-            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-            "collection": "penthouses",
             "outcome": "retry-cooldown",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-28T21:14:43.225777+00:00",
+            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2454,45 +2429,9 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/south-carolina-kiawah-river-estate-1238849563",
-            "sourceId": "robb-property",
-            "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "HTTP Error 429: Too Many Requests",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
-            "sourceId": "robb-property",
-            "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
-            "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 5,
-            "checks": 6,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/dana-point-oceanfront-estate-1238852052",
             "sourceId": "robb-property",
             "title": "This $65 Million California Mansion Comes With Over 100 Feet of Beach Frontage",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/david-chamberlain-house-san-francisco-1238856663",
-            "sourceId": "robb-property",
-            "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
             "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -2552,23 +2491,23 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "46158083469",
+        "runId": "46159491705",
         "status": "passed",
-        "checkedAt": "2026-11-28T15:06:33.681470+00:00"
+        "checkedAt": "2026-11-28T15:22:18.912842+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-acreage-2026-11-23-85e97e0c06",
+          "id": "loveourlistings.com:we-love-mansions-2026-11-25-bc406acfe0",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: Heavy ceiling beams lend a Fair Oaks sitting room its scale",
-          "publishedAt": "2026-11-28T08:06:35-07:00",
-          "verifiedAt": "2026-11-28T15:08:21.002735+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-23-85e97e0c06/",
+          "title": "We Love This Listing: At Greensboro\u2019s Julian Price House, the plasterwork survived a change of use",
+          "publishedAt": "2026-11-28T08:22:20-07:00",
+          "verifiedAt": "2026-11-28T15:23:48.135385+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-25-bc406acfe0/",
           "status": "done",
-          "checkedAt": "2026-11-28T15:08:21.823208+00:00"
+          "checkedAt": "2026-11-28T15:23:49.064101+00:00"
         },
-        "ageSeconds": 179.28885,
+        "ageSeconds": 142.358675,
         "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
@@ -2576,10 +2515,10 @@
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "e7388744174946ad6806ba16e2fc25e7f3f7a64b",
+        "sourceCommit": "86be1149f92f486cc8d940e5399870c666430818",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-25-bc406acfe0/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2588,10 +2527,10 @@
         "christies-property"
       ],
       "visualReceipt": {
-        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540",
-        "checkedAt": "2026-11-28T14:49:25.290Z",
+        "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869",
+        "checkedAt": "2026-11-28T15:09:51.808Z",
         "status": "failed",
-        "artifactId": 15267663071
+        "artifactId": 15268981055
       },
       "checksExecuted": [
         "actual publisher run and durable receipt pairing",
@@ -2601,19 +2540,19 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15268851393,
+      "artifactId": 15268858811,
       "fresh": true,
-      "expiresAt": "2026-11-28T15:39:33.696500+00:00",
+      "expiresAt": "2026-11-28T15:54:41.456029+00:00",
       "green": false
     },
     "watchdog": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-28T15:15:37.535Z",
-      "runId": "d0ab5f4c-675b-46be-84f3-22d306665a40",
+      "checkedAt": "2026-11-28T15:30:37.207Z",
+      "runId": "90d27336-c9e5-41bf-9d65-d87567c2ecfa",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_Ed9PPiMjnZkJCrW3qki5o6ciCNoM:d0ab5f4c-675b-46be-84f3-22d306665a40",
+      "runRef": "vercel:dpl_e8AFaDd4t9AXMPHLeE1EioUKxZQh:90d27336-c9e5-41bf-9d65-d87567c2ecfa",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2625,7 +2564,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
+        "sourceCommit": "b683265b20a416d206bd41c5eb8a5841fe05edcd",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -2640,8 +2579,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -2652,7 +2591,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "d0ab5f4c-675b-46be-84f3-22d306665a40",
+      "probeRunId": "90d27336-c9e5-41bf-9d65-d87567c2ecfa",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -2670,12 +2609,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-28T15:15:37.535Z"
+          "checkedAt": "2026-11-28T15:30:37.207Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-28T15:45:37.535000+00:00",
+      "expiresAt": "2026-11-28T16:00:37.207000+00:00",
       "green": false
     }
   },
@@ -2698,24 +2637,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-28T15:15:37.535Z"
+      "checkedAt": "2026-11-28T15:30:37.207Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "86be1149f92f486cc8d940e5399870c666430818",
+      "sourceCommit": "b683265b20a416d206bd41c5eb8a5841fe05edcd",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T15:22:52.418729+00:00",
+      "observedAt": "2026-11-28T15:30:56.781375+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46160142017",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46160142017",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2737,7 +2676,7 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46160142017"
     },
     {
       "site": "loveourlistings.com",
@@ -2768,24 +2707,24 @@
       "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869/artifacts/15268896393",
       "pageUrls": [
         "https://www.loveourlistings.com/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
-        "https://www.loveourlistings.com/journal/"
+        "https://www.loveourlistings.com/journal/",
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "322ea31606ae14760ed7db8bfe1db99ca8ab997c",
+      "sourceCommit": "b683265b20a416d206bd41c5eb8a5841fe05edcd",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T15:09:33.696500+00:00",
+      "observedAt": "2026-11-28T15:24:41.456029+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699/artifacts/15268851393",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159707968",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159707968/artifacts/15268858811",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2797,22 +2736,22 @@
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46159491705",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
+      "sourceCommit": "b683265b20a416d206bd41c5eb8a5841fe05edcd",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T15:15:37.535Z",
+      "observedAt": "2026-11-28T15:30:37.207Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_Ed9PPiMjnZkJCrW3qki5o6ciCNoM:d0ab5f4c-675b-46be-84f3-22d306665a40",
+      "runRef": "vercel:dpl_e8AFaDd4t9AXMPHLeE1EioUKxZQh:90d27336-c9e5-41bf-9d65-d87567c2ecfa",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2825,7 +2764,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
