@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T02:56:51.409191+00:00",
+  "updatedAt": "2026-11-28T12:18:55.708090+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,7 +7,7 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "db953939801b7474ab2e3e93736d1d4284ad3f19",
+    "sourceCommit": "3760cd4e2619c946d21c70e00e8fc00a0765e8b1",
     "trigger": "schedule"
   },
   "automaticTriggerProof": {
@@ -277,22 +277,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-      "propertyId": null,
-      "collection": "mansions",
-      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-      "retryStatus": "quarantined-retry-exhausted",
-      "nextAttemptAt": null
-    },
-    {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "propertyId": null,
       "collection": "penthouses",
-      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-      "retryStatus": "retry-cooldown",
-      "nextAttemptAt": "2026-11-28T08:10:30.481338+00:00"
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
@@ -304,11 +293,11 @@
       "nextAttemptAt": null
     },
     {
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
       "propertyId": null,
       "collection": "mansions",
-      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+      "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -318,6 +307,15 @@
       "collection": "waterfront",
       "title": "Inside a Singular Waterfront Villa in Palm Beach",
       "reason": "HTTP Error 403: Forbidden",
+      "retryStatus": "quarantined-retry-exhausted",
+      "nextAttemptAt": null
+    },
+    {
+      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+      "propertyId": null,
+      "collection": "mansions",
+      "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
       "retryStatus": "quarantined-retry-exhausted",
       "nextAttemptAt": null
     },
@@ -438,9 +436,9 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-28T02:56:50.794412+00:00",
+    "checkedAt": "2026-11-28T12:18:55.310472+00:00",
     "runtimeState": "running",
-    "publicationOutcome": "no-eligible-content",
+    "publicationOutcome": "built-for-publication",
     "feedsChecked": 7,
     "feedsHealthy": 5,
     "feedItemsParsed": 93,
@@ -508,23 +506,25 @@
         "itemsParsed": 29,
         "parseRejected": 1,
         "dispositions": {
+          "candidate-admitted": 1,
           "not-individual-property": 4,
           "already-published": 9,
-          "outside-lookback": 16
+          "outside-lookback": 15
         }
       }
     ],
-    "newCandidatesDiscovered": 0,
-    "candidatesConsidered": 20,
-    "inScopeQueueCandidates": 19,
-    "attemptedThisRun": 0,
-    "skippedThisRun": 20,
+    "newCandidatesDiscovered": 1,
+    "candidatesConsidered": 21,
+    "inScopeQueueCandidates": 20,
+    "attemptedThisRun": 2,
+    "skippedThisRun": 19,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 18,
-      "retry-cooldown": 1
+      "stored-awaiting-verification": 1,
+      "attempt-failed": 1
     },
-    "newFeaturesStored": 0,
+    "newFeaturesStored": 1,
     "verifiedPublicationsThisRun": 0,
     "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
     "candidateChecks": [
@@ -565,15 +565,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-        "sourceId": "robb-property",
-        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
+        "sourceUrl": "https://www.countrylife.co.uk/property/overseas/youve-got-mail-and-weve-got-the-house-meg-ryans-on-screen-apartment-is-for-sale",
+        "sourceId": "countrylife-property",
+        "title": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
         "collection": "mansions",
-        "outcome": "quarantined-retry-exhausted",
-        "failedAttempts": 5,
-        "checks": 5,
+        "outcome": "stored-awaiting-verification",
+        "failedAttempts": 0,
+        "checks": 1,
         "nextAttemptAt": null,
-        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+        "reason": "New feature awaits actual deployment and live verification",
         "duplicateOfArticleSlug": null
       },
       {
@@ -581,10 +581,10 @@
         "sourceId": "robb-property",
         "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
         "collection": "penthouses",
-        "outcome": "retry-cooldown",
-        "failedAttempts": 3,
-        "checks": 3,
-        "nextAttemptAt": "2026-11-28T08:10:30.481338+00:00",
+        "outcome": "attempt-failed",
+        "failedAttempts": 4,
+        "checks": 4,
+        "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
         "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
@@ -601,15 +601,15 @@
         "duplicateOfArticleSlug": null
       },
       {
-        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
         "sourceId": "robb-property",
-        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+        "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
         "collection": "mansions",
         "outcome": "quarantined-retry-exhausted",
         "failedAttempts": 5,
         "checks": 5,
         "nextAttemptAt": null,
-        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+        "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
         "duplicateOfArticleSlug": null
       },
       {
@@ -622,6 +622,18 @@
         "checks": 5,
         "nextAttemptAt": null,
         "reason": "HTTP Error 403: Forbidden",
+        "duplicateOfArticleSlug": null
+      },
+      {
+        "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+        "sourceId": "robb-property",
+        "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+        "collection": "mansions",
+        "outcome": "quarantined-retry-exhausted",
+        "failedAttempts": 5,
+        "checks": 5,
+        "nextAttemptAt": null,
+        "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
         "duplicateOfArticleSlug": null
       },
       {
@@ -770,49 +782,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-28T02:56:16.894158+00:00",
-  "status": "no-eligible-content",
+  "lastRunAt": "2026-11-28T12:17:43.206930+00:00",
+  "status": "built-for-publication",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 14
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:56:16.894158+00:00",
+      "fetchedAt": "2026-11-28T12:17:43.206930+00:00",
       "items": 29
     }
   ],
@@ -825,9 +837,9 @@
     },
     {
       "name": "mansions",
-      "eligible": 14,
-      "newFeatures": 0,
-      "status": "blocked-eligible-property"
+      "eligible": 15,
+      "newFeatures": 1,
+      "status": "built-for-publication"
     },
     {
       "name": "penthouses",
@@ -856,7 +868,7 @@
   ],
   "googleDiscoveryItems": 0,
   "duplicatesFiltered": 103,
-  "quarantinedItems": 1,
+  "quarantinedItems": 2,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-penthouses-2026-11-25-a78790d186",
@@ -868,82 +880,16 @@
       "propertyId": null,
       "verifiedAt": "2026-11-27T15:19:08.728746+00:00",
       "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-16-bf4ffcf151",
-      "title": "We Love This Listing: A straight garden path leads to a gilded dining room in Winnetka",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-16-bf4ffcf151/",
-      "publishedAt": "2026-11-27T08:17:27-07:00",
-      "sourceUrl": "https://theweek.com/culture-life/property/6-homes-for-big-family-dinners",
-      "propertyId": "919-hill-road-winnetka-illinois",
-      "verifiedAt": "2026-11-27T15:19:08.728746+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-18-0395b3c45b",
-      "title": "We Love This Listing: A garden separates two very different rooms on East 91st Street",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-18-0395b3c45b/",
-      "publishedAt": "2026-11-27T08:17:27-07:00",
-      "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/carnegie-hill-townhouse-new-york-city-1238845941",
-      "propertyId": null,
-      "verifiedAt": "2026-11-27T15:19:08.728746+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-acreage-2026-11-17-7db01dbd00",
-      "title": "We Love This Listing: A wall of arched windows brings the garden to Hillandale\u2019s pool",
-      "collection": "acreage",
-      "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-17-7db01dbd00/",
-      "publishedAt": "2026-11-27T08:09:35-07:00",
-      "sourceUrl": "https://www.elledecor.com/celebrity-style/luxury-real-estate/a74400546/gilded-age-estates-for-sale/",
-      "propertyId": "hillandale-hunt-and-hunt-stamford",
-      "verifiedAt": "2026-11-27T15:11:15.160811+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-23-4542779a87",
-      "title": "We Love This Listing: At a Montclair house, guests arrive on the middle floor",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-4542779a87/",
-      "publishedAt": "2026-11-27T08:09:35-07:00",
-      "sourceUrl": "https://theweek.com/culture-life/property/6-homes-in-oakland-california",
-      "propertyId": "5606-la-salle-avenue-montclair-oakland",
-      "verifiedAt": "2026-11-27T15:11:15.160811+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-17-8d720899b5",
-      "title": "We Love This Listing: Two gardens offer different views at Chelsea\u2019s Van Ness House",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-8d720899b5/",
-      "publishedAt": "2026-11-27T08:09:35-07:00",
-      "sourceUrl": "https://www.elledecor.com/celebrity-style/luxury-real-estate/a74400546/gilded-age-estates-for-sale/",
-      "propertyId": "van-ness-house-333-west-20th-chelsea",
-      "verifiedAt": "2026-11-27T15:11:15.160811+00:00",
-      "executionMode": "recorded-existing-publisher"
-    },
-    {
-      "slug": "we-love-mansions-2026-11-17-8e6c77272f",
-      "title": "We Love This Listing: Carved timber surrounds the table at 9 East 88th Street",
-      "collection": "mansions",
-      "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-17-8e6c77272f/",
-      "publishedAt": "2026-11-27T08:09:35-07:00",
-      "sourceUrl": "https://www.elledecor.com/celebrity-style/luxury-real-estate/a74400546/gilded-age-estates-for-sale/",
-      "propertyId": "9-east-88th-street-manhattan-beaux-arts",
-      "verifiedAt": "2026-11-27T15:11:15.160811+00:00",
-      "executionMode": "recorded-existing-publisher"
     }
   ],
   "verifiedAt": "2026-11-27T15:19:08.728746+00:00",
   "dailyPublicationProgress": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "timezone": "America/Dawson_Creek",
     "dailyTargetMinimum": 7,
-    "distinctNewLiveVerifiedPosts": 7,
-    "shortfall": 0,
-    "targetMet": true,
+    "distinctNewLiveVerifiedPosts": 0,
+    "shortfall": 7,
+    "targetMet": false,
     "latestVerifiedAt": "2026-11-27T15:19:08.728746+00:00",
     "latestPublishedAt": "2026-11-27T08:17:27-07:00"
   }
