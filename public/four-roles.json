@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "site": "loveourlistings.com",
-  "checkedAt": "2026-11-28T15:09:27.037221+00:00",
+  "checkedAt": "2026-11-28T15:16:58.698585+00:00",
   "sotLoad": {
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "92632e19ee1d5d9f1b4bd594111a0f50f6207f3f",
+    "sourceCommit": "d580c0660af2c0a868a40c8003257bfce23fcf99",
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
   },
   "roles": {
@@ -13,14 +13,14 @@
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "publisher",
-      "checkedAt": "2026-11-28T15:07:18.822954+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "checkedAt": "2026-11-28T15:15:16.382588+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158812728",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "e7388744174946ad6806ba16e2fc25e7f3f7a64b",
+        "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
         "trigger": "workflow_dispatch"
       },
       "runtimeVerified": true,
@@ -43,12 +43,12 @@
       "outcome": "published-and-verified-with-blockers",
       "runtimeHealth": "running",
       "queueProgress": {
-        "checkedAt": "2026-11-28T15:07:18.822954+00:00",
+        "checkedAt": "2026-11-28T15:15:16.382588+00:00",
         "runtimeState": "running",
         "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 94,
+        "feedItemsParsed": 108,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -102,10 +102,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 15,
-            "parseRejected": 0,
+            "itemsParsed": 29,
+            "parseRejected": 1,
             "dispositions": {
-              "discovery-original-link-required": 15
+              "discovery-original-link-required": 29
             }
           },
           {
@@ -119,19 +119,20 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 3,
-        "candidatesConsidered": 23,
-        "inScopeQueueCandidates": 22,
-        "attemptedThisRun": 4,
-        "skippedThisRun": 19,
+        "newCandidatesDiscovered": 1,
+        "candidatesConsidered": 20,
+        "inScopeQueueCandidates": 19,
+        "attemptedThisRun": 3,
+        "skippedThisRun": 17,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 17,
-          "stored-awaiting-verification": 4,
-          "retry-cooldown": 1
+          "quarantined-retry-exhausted": 15,
+          "retry-cooldown": 1,
+          "attempt-failed": 1,
+          "stored-awaiting-verification": 2
         },
-        "newFeaturesStored": 4,
-        "verifiedPublicationsThisRun": 4,
+        "newFeaturesStored": 2,
+        "verifiedPublicationsThisRun": 2,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -159,39 +160,39 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://www.realtor.com/news/unique-homes/gov-gavin-newsom-cuts-price-of-sacramento-area-estate-by-half-a-million/",
-            "sourceId": "reviewed-realtor-property",
-            "title": "Heavy ceiling beams lend a Fair Oaks sitting room its scale",
-            "collection": "acreage",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.elledecor.com/celebrity-style/celebrity-homes/a74441330/lady-gaga-manhattan-penthouse-sale/",
-            "sourceId": "reviewed-elle-decor",
-            "title": "A bedroom door opens onto the skyline at the Hit Factory",
-            "collection": "penthouses",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
-            "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.realtor.com/news/unique-homes/renovated-santa-monica-canyon-retreat-for-sale/",
-            "sourceId": "reviewed-realtor-property",
-            "title": "A skylight follows the dining table in Santa Monica Canyon",
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
+            "sourceId": "robb-property",
+            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
             "collection": "mansions",
-            "outcome": "stored-awaiting-verification",
-            "failedAttempts": 0,
-            "checks": 1,
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
             "nextAttemptAt": null,
-            "reason": "New feature awaits actual deployment and live verification",
+            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
+            "sourceId": "robb-property",
+            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
+            "collection": "penthouses",
+            "outcome": "retry-cooldown",
+            "failedAttempts": 4,
+            "checks": 4,
+            "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://moneyweek.com/spending-it/properties/properties-for-sale-with-home-offices",
+            "sourceId": "reviewed-moneyweek-uk",
+            "title": "At Berth on Anglesey, the walk to work ends in an old farm building",
+            "collection": "acreage",
+            "outcome": "attempt-failed",
+            "failedAttempts": 1,
+            "checks": 1,
+            "nextAttemptAt": "2026-11-28T21:14:43.225777+00:00",
+            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -199,6 +200,18 @@
             "sourceId": "robb-property",
             "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
+            "sourceId": "robb-property",
+            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
+            "collection": "mansions",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
@@ -219,30 +232,6 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-            "sourceId": "robb-property",
-            "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
-            "collection": "penthouses",
-            "outcome": "retry-cooldown",
-            "failedAttempts": 4,
-            "checks": 4,
-            "nextAttemptAt": "2026-11-28T18:17:43.206930+00:00",
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/luxury-real-estate-sports-communities-formula-1-1238779781",
-            "sourceId": "robb-property",
-            "title": "Luxury Real Estate\u2019s Newest Amenity Is a Prime View of Major Sporting Events",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "Source-specific original writer required: LOL_SOURCE_BODY_SUBSTANCE_INVALID",
-            "duplicateOfArticleSlug": null
-          },
-          {
             "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
             "sourceId": "sothebys-property",
             "title": "Inside a Singular Waterfront Villa in Palm Beach",
@@ -252,18 +241,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "HTTP Error 403: Forbidden",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/villa-amari-peloponnese-greece-lists-1238836625",
-            "sourceId": "robb-property",
-            "title": "This $5.4 Million Home on Greece\u2019s Peloponnese Peninsula Hugs the Hillside Above the Ionian Sea",
-            "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
             "duplicateOfArticleSlug": null
           },
           {
@@ -319,18 +296,6 @@
             "sourceId": "robb-property",
             "title": "This $8.5 Million South Carolina Home Pairs Classic Lowcountry Architecture With Maximalist Design",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "HTTP Error 429: Too Many Requests",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/beatty-bening-former-house-beverly-hills-1238850803",
-            "sourceId": "robb-property",
-            "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
-            "collection": "mansions",
             "outcome": "stored-awaiting-verification",
             "failedAttempts": 5,
             "checks": 6,
@@ -355,11 +320,11 @@
             "sourceId": "robb-property",
             "title": "A San Francisco Mansion Long Owned by a Prominent Civic Leader Lists for $35 Million",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 5,
-            "checks": 5,
+            "checks": 6,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -414,7 +379,7 @@
       },
       "operationalStatus": "published-and-verified-with-blockers",
       "fresh": true,
-      "expiresAt": "2026-11-28T15:37:18.822954+00:00",
+      "expiresAt": "2026-11-28T15:45:16.382588+00:00",
       "green": false
     },
     "visual": {
@@ -422,20 +387,20 @@
       "site": "loveourlistings.com",
       "role": "visual",
       "checkerSha256": "5b2b91ca80c20aa618b7fc09252d5ca815a5587d1c35370536359e35ed3b2153",
-      "checkedAt": "2026-11-28T14:49:25.290Z",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540",
+      "checkedAt": "2026-11-28T15:09:51.808Z",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869",
       "trigger": "workflow_dispatch",
       "runtimeVerified": true,
       "unattendedExecution": true,
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156491605"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469"
       },
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "bd46884d38875ffee95d5ee873cb0299346f1e67",
+        "sourceCommit": "92632e19ee1d5d9f1b4bd594111a0f50f6207f3f",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "checks": [
@@ -908,8 +873,8 @@
             "overflow": false,
             "visibleImages": [
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
-                "alt": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
+                "src": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
+                "alt": "Rows of purple seats facing the screen in the theatre created from Warren Beatty\u2019s former office",
                 "native": [
                   1600,
                   900
@@ -926,27 +891,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "desktop-journal.jpg",
-          "screenshotSha256": "829e05042b34ed1537d4c7489f9bdc009ef84cf5b3c59b4924680a468563291b"
+          "screenshotSha256": "2be2396970efcb6ef81478d7b71c5a434fb8c0ce6f3bdcf6d478e39ce32804d1"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
           "viewport": "desktop",
           "width": 1440,
           "height": 1000,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
-            "h1": "We Love This Listing: The Townhouse Behind a New York Screen Romance",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
-            "description": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
-            "ogTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
-            "ogDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
-            "twitterTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
-            "twitterDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+            "title": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office | Love Our Listings",
+            "h1": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
+            "description": "Two projection screens from different chapters of the house help explain how a family home became a place to show films.",
+            "ogTitle": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office | Love Our Listings",
+            "ogDescription": "Two projection screens from different chapters of the house help explain how a family home became a place to show films.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
+            "twitterTitle": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office | Love Our Listings",
+            "twitterDescription": "Two projection screens from different chapters of the house help explain how a family home became a place to show films.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -993,8 +958,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
-                "alt": "we love mansions 2026 11 28 c95d7b57a3",
+                "src": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
+                "alt": "Rows of purple seats facing the screen in the theatre created from Warren Beatty\u2019s former office",
                 "native": [
                   1600,
                   900
@@ -1011,33 +976,23 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/72681bdd658da85175d6.jpg",
+            "src": "/images/source-properties/cc9da793bd8119afc45b.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love mansions 2026 11 28 c95d7b57a3"
+            "alt": "Rows of purple seats facing the screen in the theatre created from Warren Beatty\u2019s former office"
           },
           "screenshot": "desktop-article.jpg",
-          "screenshotSha256": "298656d7647f464a2f7286ecc9de4dce1b4877d12e0ef85306d3a9128ecaa75e",
+          "screenshotSha256": "5e34686db86d7ef30bee866d840bcf3f2999b11dda6f99510d3cd220d0965851",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 317
+              "textLength": 367
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 284
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 334
-            },
-            {
-              "fontSize": 16,
-              "lineHeight": "normal",
-              "textLength": 310
+              "textLength": 415
             },
             {
               "fontSize": 16,
@@ -1216,8 +1171,8 @@
                 "fit": "fill"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
-                "alt": "You\u2019ve Got Mail, and we\u2019ve got the house: Meg Ryan's on-screen apartment is for sale",
+                "src": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
+                "alt": "Rows of purple seats facing the screen in the theatre created from Warren Beatty\u2019s former office",
                 "native": [
                   1600,
                   900
@@ -1230,8 +1185,8 @@
                 "fit": "cover"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/ea740453950dd297eddc.jpg",
-                "alt": "Douglas fir panels and a ladder to the loft in the Carnegie Hill carriage house",
+                "src": "https://www.loveourlistings.com/images/source-properties/36798d0aa82390a9144d.jpg",
+                "alt": "Skylights over a wood dining table beside a black kitchen wall and an island in Santa Monica",
                 "native": [
                   1600,
                   900
@@ -1248,27 +1203,27 @@
             "bodyFontSizes": []
           },
           "screenshot": "phone-journal.jpg",
-          "screenshotSha256": "32fb21aed66ada346dd03a2716ca7a6824f35ac5b4f29f74dda77a298429f32a"
+          "screenshotSha256": "23357ab276ab917c61c2bdc55433cc2c2ce2d753f41ca801e280d3620284d1b5"
         },
         {
           "page": "article",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
+          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
           "viewport": "phone",
           "width": 390,
           "height": 844,
           "findings": [],
           "http": 200,
           "metrics": {
-            "title": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
-            "h1": "We Love This Listing: The Townhouse Behind a New York Screen Romance",
-            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
-            "description": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
-            "ogTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
-            "ogDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
-            "ogImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
-            "twitterTitle": "We Love This Listing: The Townhouse Behind a New York Screen Romance | Love Our Listings",
-            "twitterDescription": "A red-brick Upper West Side townhouse pairs a memorable film fa\u00e7ade with a more layered residential story.",
-            "twitterImage": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
+            "title": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office | Love Our Listings",
+            "h1": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office",
+            "canonical": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
+            "description": "Two projection screens from different chapters of the house help explain how a family home became a place to show films.",
+            "ogTitle": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office | Love Our Listings",
+            "ogDescription": "Two projection screens from different chapters of the house help explain how a family home became a place to show films.",
+            "ogImage": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
+            "twitterTitle": "We Love This Listing: The screening room off Mulholland Drive was once Warren Beatty\u2019s office | Love Our Listings",
+            "twitterDescription": "Two projection screens from different chapters of the house help explain how a family home became a place to show films.",
+            "twitterImage": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
             "favicon": "https://www.loveourlistings.com/favicon.png",
             "overflow": false,
             "visibleImages": [
@@ -1315,8 +1270,8 @@
                 "fit": "contain"
               },
               {
-                "src": "https://www.loveourlistings.com/images/source-properties/72681bdd658da85175d6.jpg",
-                "alt": "we love mansions 2026 11 28 c95d7b57a3",
+                "src": "https://www.loveourlistings.com/images/source-properties/cc9da793bd8119afc45b.jpg",
+                "alt": "Rows of purple seats facing the screen in the theatre created from Warren Beatty\u2019s former office",
                 "native": [
                   1600,
                   900
@@ -1333,28 +1288,28 @@
             "bodyFontSizes": []
           },
           "articleHero": {
-            "src": "/images/source-properties/72681bdd658da85175d6.jpg",
+            "src": "/images/source-properties/cc9da793bd8119afc45b.jpg",
             "width": 1600,
             "height": 900,
-            "alt": "we love mansions 2026 11 28 c95d7b57a3"
+            "alt": "Rows of purple seats facing the screen in the theatre created from Warren Beatty\u2019s former office"
           },
           "screenshot": "phone-article.jpg",
-          "screenshotSha256": "6e52b20b7509222f3e73df2678ee3547c443bc1a79e9fff17b5ece057abe060e",
+          "screenshotSha256": "c5e6e59a1a2d3cad4c5cf32818d92b8620f35846647da16b312a98ef3f2eaa92",
           "bodyTextMetrics": [
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 317
+              "textLength": 367
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 284
+              "textLength": 415
             },
             {
               "fontSize": 16,
               "lineHeight": "normal",
-              "textLength": 334
+              "textLength": 258
             }
           ],
           "bodyScreenshot": "phone-article-body.jpg"
@@ -1369,11 +1324,39 @@
       "status": "failed",
       "scope": "Actual Chromium desktop/phone rendering, loaded images/cards, DOM readability/overflow, metadata and screenshots. Does not grant the separate protected illustration QA approval.",
       "article": {
-        "slug": "we-love-mansions-2026-11-28-c95d7b57a3",
-        "publishedAt": "2026-11-28T05:17:43-07:00",
-        "image": "/images/source-properties/72681bdd658da85175d6.jpg"
+        "slug": "we-love-mansions-2026-11-23-379e7bd90f",
+        "publishedAt": "2026-11-28T08:06:35-07:00",
+        "image": "/images/source-properties/cc9da793bd8119afc45b.jpg"
       },
       "archiveImageChecks": [
+        {
+          "slug": "we-love-mansions-2026-11-23-379e7bd90f",
+          "image": "/images/source-properties/cc9da793bd8119afc45b.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-mansions-2026-11-22-c8175e7de0",
+          "image": "/images/source-properties/36798d0aa82390a9144d.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-penthouses-2026-11-16-6a7322bc78",
+          "image": "/images/source-properties/68858d839ada0ff5ff82.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
+        {
+          "slug": "we-love-acreage-2026-11-23-85e97e0c06",
+          "image": "/images/source-properties/efc911f74e6236842fcd.jpg",
+          "width": 1600,
+          "height": 900,
+          "status": "passed"
+        },
         {
           "slug": "we-love-mansions-2026-11-28-c95d7b57a3",
           "image": "/images/source-properties/72681bdd658da85175d6.jpg",
@@ -2173,23 +2156,23 @@
           "status": "passed"
         }
       ],
-      "artifactId": 15267663071,
-      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540/artifacts/15267942239",
+      "artifactId": 15268981055,
+      "renderArtifactRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869/artifacts/15268896393",
       "fresh": true,
-      "expiresAt": "2026-11-28T15:19:25.290000+00:00",
+      "expiresAt": "2026-11-28T15:39:51.808000+00:00",
       "green": false
     },
     "supervisor": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "supervisor",
-      "checkedAt": "2026-11-28T14:55:09.035847+00:00",
-      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653",
+      "checkedAt": "2026-11-28T15:09:33.696500+00:00",
+      "runUrl": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699",
       "trigger": "workflow_dispatch",
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "302aac2aa1a28fa84b108a32176adbfb1a591a84",
+        "sourceCommit": "322ea31606ae14760ed7db8bfe1db99ca8ab997c",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "runtimeVerified": true,
@@ -2197,28 +2180,27 @@
       "automaticOriginProof": {
         "verified": true,
         "kind": "verified-same-publisher-dispatch",
-        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157014404"
+        "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469"
       },
       "verified": false,
       "status": "failed",
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157014404",
-      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157014404",
-      "publisherOutcome": "no-eligible-content",
-      "publisherReceiptAgeSeconds": 24.464182,
-      "publisherOperationalStatus": "no-eligible-content",
+      "publisherRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "publisherReceiptRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "publisherOutcome": "published-and-verified-with-blockers",
+      "publisherReceiptAgeSeconds": 135.309188,
+      "publisherOperationalStatus": "published-and-verified-with-blockers",
       "queueProgress": {
-        "checkedAt": "2026-11-28T14:54:44.974264+00:00",
+        "checkedAt": "2026-11-28T15:07:18.822954+00:00",
         "runtimeState": "running",
-        "publicationOutcome": "no-eligible-content",
+        "publicationOutcome": "published-and-verified",
         "feedsChecked": 7,
         "feedsHealthy": 5,
-        "feedItemsParsed": 108,
+        "feedItemsParsed": 94,
         "feedErrors": [
           {
             "sourceId": "mansion-global",
@@ -2272,10 +2254,10 @@
           },
           {
             "sourceId": "google-waterfront",
-            "itemsParsed": 29,
-            "parseRejected": 1,
+            "itemsParsed": 15,
+            "parseRejected": 0,
             "dispositions": {
-              "discovery-original-link-required": 29
+              "discovery-original-link-required": 15
             }
           },
           {
@@ -2289,18 +2271,19 @@
             }
           }
         ],
-        "newCandidatesDiscovered": 0,
-        "candidatesConsidered": 20,
-        "inScopeQueueCandidates": 19,
-        "attemptedThisRun": 0,
-        "skippedThisRun": 20,
+        "newCandidatesDiscovered": 3,
+        "candidatesConsidered": 23,
+        "inScopeQueueCandidates": 22,
+        "attemptedThisRun": 4,
+        "skippedThisRun": 19,
         "outcomes": {
           "not-individual-property": 1,
-          "quarantined-retry-exhausted": 18,
+          "quarantined-retry-exhausted": 17,
+          "stored-awaiting-verification": 4,
           "retry-cooldown": 1
         },
-        "newFeaturesStored": 0,
-        "verifiedPublicationsThisRun": 0,
+        "newFeaturesStored": 4,
+        "verifiedPublicationsThisRun": 4,
         "checkValveScope": "Held individual items do not stop intake or other collections; nextAttemptAt is earliest retry eligibility, not a promise of execution",
         "candidateChecks": [
           {
@@ -2319,6 +2302,54 @@
             "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/anthony-hsieh-house-orange-county-newport-coast-1238841546",
             "sourceId": "robb-property",
             "title": "Mortgage Mogul Anthony Hsieh Lists His Orange County Mansion at a Record-Breaking $125 Million",
+            "collection": "waterfront",
+            "outcome": "quarantined-retry-exhausted",
+            "failedAttempts": 5,
+            "checks": 5,
+            "nextAttemptAt": null,
+            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.realtor.com/news/unique-homes/gov-gavin-newsom-cuts-price-of-sacramento-area-estate-by-half-a-million/",
+            "sourceId": "reviewed-realtor-property",
+            "title": "Heavy ceiling beams lend a Fair Oaks sitting room its scale",
+            "collection": "acreage",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.elledecor.com/celebrity-style/celebrity-homes/a74441330/lady-gaga-manhattan-penthouse-sale/",
+            "sourceId": "reviewed-elle-decor",
+            "title": "A bedroom door opens onto the skyline at the Hit Factory",
+            "collection": "penthouses",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://www.realtor.com/news/unique-homes/renovated-santa-monica-canyon-retreat-for-sale/",
+            "sourceId": "reviewed-realtor-property",
+            "title": "A skylight follows the dining table in Santa Monica Canyon",
+            "collection": "mansions",
+            "outcome": "stored-awaiting-verification",
+            "failedAttempts": 0,
+            "checks": 1,
+            "nextAttemptAt": null,
+            "reason": "New feature awaits actual deployment and live verification",
+            "duplicateOfArticleSlug": null
+          },
+          {
+            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
+            "sourceId": "robb-property",
+            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
@@ -2364,15 +2395,15 @@
             "duplicateOfArticleSlug": null
           },
           {
-            "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
-            "sourceId": "robb-property",
-            "title": "This $5.2 Million Scottish Castle on 134 Waterfront Acres Comes With Two Private Islands",
+            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
+            "sourceId": "sothebys-property",
+            "title": "Inside a Singular Waterfront Villa in Palm Beach",
             "collection": "waterfront",
             "outcome": "quarantined-retry-exhausted",
             "failedAttempts": 5,
             "checks": 5,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2385,18 +2416,6 @@
             "checks": 5,
             "nextAttemptAt": null,
             "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
-            "duplicateOfArticleSlug": null
-          },
-          {
-            "sourceUrl": "https://www.sothebysrealty.com/extraordinary-living-blog/inside-a-singular-waterfront-villa-in-palm-beach",
-            "sourceId": "sothebys-property",
-            "title": "Inside a Singular Waterfront Villa in Palm Beach",
-            "collection": "waterfront",
-            "outcome": "quarantined-retry-exhausted",
-            "failedAttempts": 5,
-            "checks": 5,
-            "nextAttemptAt": null,
-            "reason": "HTTP Error 403: Forbidden",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2464,11 +2483,11 @@
             "sourceId": "robb-property",
             "title": "This $15 Million Beverly Hills Home Was Once Owned by Warren Beatty and Annette Bening",
             "collection": "mansions",
-            "outcome": "quarantined-retry-exhausted",
+            "outcome": "stored-awaiting-verification",
             "failedAttempts": 5,
-            "checks": 5,
+            "checks": 6,
             "nextAttemptAt": null,
-            "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+            "reason": "New feature awaits actual deployment and live verification",
             "duplicateOfArticleSlug": null
           },
           {
@@ -2546,34 +2565,34 @@
         ]
       },
       "apiAccessReceipt": {
-        "runId": "46157014404",
+        "runId": "46158083469",
         "status": "passed",
-        "checkedAt": "2026-11-28T14:54:12.772134+00:00"
+        "checkedAt": "2026-11-28T15:06:33.681470+00:00"
       },
       "publicationFreshness": {
         "inspectionThresholdSeconds": 7200,
         "lastVerifiedPublication": {
-          "id": "loveourlistings.com:we-love-mansions-2026-11-28-c95d7b57a3",
+          "id": "loveourlistings.com:we-love-acreage-2026-11-23-85e97e0c06",
           "site": "loveourlistings.com",
-          "title": "We Love This Listing: The Townhouse Behind a New York Screen Romance",
-          "publishedAt": "2026-11-28T05:17:43-07:00",
-          "verifiedAt": "2026-11-28T12:19:53.949698+00:00",
-          "url": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
+          "title": "We Love This Listing: Heavy ceiling beams lend a Fair Oaks sitting room its scale",
+          "publishedAt": "2026-11-28T08:06:35-07:00",
+          "verifiedAt": "2026-11-28T15:08:21.002735+00:00",
+          "url": "https://www.loveourlistings.com/journal/we-love-acreage-2026-11-23-85e97e0c06/",
           "status": "done",
-          "checkedAt": "2026-11-28T12:19:54.671918+00:00"
+          "checkedAt": "2026-11-28T15:08:21.823208+00:00"
         },
-        "ageSeconds": 9446.58504,
-        "inspectionRequired": true,
+        "ageSeconds": 179.28885,
+        "inspectionRequired": false,
         "scope": "Two-hour inspection trigger; never bypass individual editorial or media holds"
       },
       "deployedSotLoad": {
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "785df05367d123f991d206a70543f42180615b33",
+        "sourceCommit": "e7388744174946ad6806ba16e2fc25e7f3f7a64b",
         "trigger": "workflow_dispatch"
       },
-      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
+      "checkedPublishedPage": "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
       "matchedPublishedPage": true,
       "actualSourceApiDeploymentPublicationChecks": true,
       "sourceCount": 7,
@@ -2595,19 +2614,19 @@
         "source and publication failures",
         "independent visual role artifact"
       ],
-      "artifactId": 15268216731,
+      "artifactId": 15268851393,
       "fresh": true,
-      "expiresAt": "2026-11-28T15:25:09.035847+00:00",
+      "expiresAt": "2026-11-28T15:39:33.696500+00:00",
       "green": false
     },
     "watchdog": {
       "schemaVersion": 1,
       "site": "loveourlistings.com",
       "role": "watchdog",
-      "checkedAt": "2026-11-28T15:00:37.411Z",
-      "runId": "646cc5a0-b33e-4937-8d91-16966f979b83",
+      "checkedAt": "2026-11-28T15:15:37.535Z",
+      "runId": "d0ab5f4c-675b-46be-84f3-22d306665a40",
       "runUrl": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "runRef": "vercel:dpl_DpYjKeegWHiDJA3hKq6aFAmpMjke:646cc5a0-b33e-4937-8d91-16966f979b83",
+      "runRef": "vercel:dpl_Ed9PPiMjnZkJCrW3qki5o6ciCNoM:d0ab5f4c-675b-46be-84f3-22d306665a40",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "trigger": "managed-scheduler",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
@@ -2619,7 +2638,7 @@
       "sotLoad": {
         "version": 13,
         "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-        "sourceCommit": "302aac2aa1a28fa84b108a32176adbfb1a591a84",
+        "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
         "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json"
       },
       "status": "failed",
@@ -2634,8 +2653,8 @@
         "supervisor-reports-unresolved-failures"
       ],
       "workerAndSupervisorSilentDetection": true,
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157014404",
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156056661",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653",
       "ownerAlertDelivery": {
         "verified": false,
         "receiptUrl": null,
@@ -2646,7 +2665,7 @@
       },
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
-      "probeRunId": "646cc5a0-b33e-4937-8d91-16966f979b83",
+      "probeRunId": "d0ab5f4c-675b-46be-84f3-22d306665a40",
       "probeScope": "Private labeled controlled heartbeat test, not a production outage or publication recovery",
       "alerts": [
         {
@@ -2664,12 +2683,12 @@
           "owner": "Existing Command Center / owner alert receiver",
           "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
           "deliveryStatus": "pending-unverified",
-          "checkedAt": "2026-11-28T15:00:37.411Z"
+          "checkedAt": "2026-11-28T15:15:37.535Z"
         }
       ],
       "actualSilenceObserved": false,
       "fresh": true,
-      "expiresAt": "2026-11-28T15:30:37.411000+00:00",
+      "expiresAt": "2026-11-28T15:45:37.535000+00:00",
       "green": false
     }
   },
@@ -2692,24 +2711,24 @@
       "owner": "Existing Command Center / owner alert receiver",
       "nextAction": "Resolve actual failed dependencies and deliver this exact event through existing authorized route",
       "deliveryStatus": "pending-unverified",
-      "checkedAt": "2026-11-28T15:00:37.411Z"
+      "checkedAt": "2026-11-28T15:15:37.535Z"
     }
   ],
   "receipts": [
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "e7388744174946ad6806ba16e2fc25e7f3f7a64b",
+      "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
       "check": "role:worker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T15:07:18.822954+00:00",
+      "observedAt": "2026-11-28T15:15:16.382588+00:00",
       "actorId": "loveourlistings-publisher-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/property-publisher.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158812728",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158812728",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2731,22 +2750,22 @@
       "deduplicationRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/prior-posts.json",
       "leaseRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/.github/workflows/property-publisher.yml",
       "boundedRetryRef": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
-      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469"
+      "isolationRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158812728"
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "bd46884d38875ffee95d5ee873cb0299346f1e67",
+      "sourceCommit": "92632e19ee1d5d9f1b4bd594111a0f50f6207f3f",
       "check": "role:visual-checker",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T14:49:25.290Z",
+      "observedAt": "2026-11-28T15:09:51.808Z",
       "actorId": "loveourlistings-visual-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-visual.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540/artifacts/15267663071",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869/artifacts/15268981055",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2758,28 +2777,28 @@
         "published-archive/we-love-penthouses-2026-11-18-4317cc04a6: nonstandard1600x900-output",
         "desktop/home: visible-property-photo-native-below1600x900"
       ],
-      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540/artifacts/15267942239",
-      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156574540/artifacts/15267942239",
+      "desktopRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869/artifacts/15268896393",
+      "phoneRenderRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158349869/artifacts/15268896393",
       "pageUrls": [
+        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-23-379e7bd90f/",
         "https://www.loveourlistings.com/journal/",
-        "https://www.loveourlistings.com/journal/we-love-mansions-2026-11-28-c95d7b57a3/",
         "https://www.loveourlistings.com/"
       ]
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "302aac2aa1a28fa84b108a32176adbfb1a591a84",
+      "sourceCommit": "322ea31606ae14760ed7db8bfe1db99ca8ab997c",
       "check": "role:supervisor",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T14:55:09.035847+00:00",
+      "observedAt": "2026-11-28T15:09:33.696500+00:00",
       "actorId": "loveourlistings-supervisor-workflow",
       "executionProvider": "GitHub Actions",
       "schedulerIdentity": ".github/workflows/role-supervisor.yml",
-      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653",
-      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653/artifacts/15268216731",
+      "runRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699",
+      "proofRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158354699/artifacts/15268851393",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
       "rawTrigger": "workflow_dispatch",
@@ -2788,26 +2807,25 @@
       "fresh": true,
       "findings": [
         "publisher-item-check-valves-held; intake-continues",
-        "verified-publication-older-than-two-hours-inspect-intake-and-queue",
         "some-source-feeds-failed",
         "visual-check-failed-stale-or-missing"
       ],
-      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157014404",
+      "checkedWorkerRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46158083469",
       "actualSourceApiDeploymentPublicationChecks": true
     },
     {
       "site": "loveourlistings.com",
       "repository": "SHTFTV/loveourlistings.com",
-      "sourceCommit": "302aac2aa1a28fa84b108a32176adbfb1a591a84",
+      "sourceCommit": "ab00e3e7fd488a8036698b4e122426982ee77464",
       "check": "role:independent-watchdog",
       "status": "failed",
       "environment": "production",
       "synthetic": false,
-      "observedAt": "2026-11-28T15:00:37.411Z",
+      "observedAt": "2026-11-28T15:15:37.535Z",
       "actorId": "loveourlistings-independent-vercel-watchdog",
       "executionProvider": "Vercel Functions / Cron",
       "schedulerIdentity": "Vercel Cron Jobs: /api/role-watchdog",
-      "runRef": "vercel:dpl_DpYjKeegWHiDJA3hKq6aFAmpMjke:646cc5a0-b33e-4937-8d91-16966f979b83",
+      "runRef": "vercel:dpl_Ed9PPiMjnZkJCrW3qki5o6ciCNoM:d0ab5f4c-675b-46be-84f3-22d306665a40",
       "proofRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "loadedRevision": 13,
       "loadedHash": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
@@ -2820,7 +2838,7 @@
         "supervisor-reports-unresolved-failures",
         "actual-owner-alert-delivery-unverified"
       ],
-      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46156056661",
+      "checkedSupervisorRunRef": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46157095653",
       "failureInjectionRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
       "ownerDeliveryRef": null,
       "recoveryRef": "https://vercel.com/colins-projects-208e3ca1/loveourlistings-com/logs",
