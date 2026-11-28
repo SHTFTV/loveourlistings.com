@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T02:11:07.401201+00:00",
+  "updatedAt": "2026-11-28T02:17:32.323863+00:00",
   "runtime": "GitHub Actions cloud workflow",
   "scheduleUTC": "43 * * * *",
   "sopVersion": 13,
@@ -7,13 +7,13 @@
     "canonicalSource": "https://github.com/SHTFTV/loveourlistings.com/blob/main/operations/site-sop.json",
     "version": 13,
     "sha256": "b47fb8891998c6882edca349f61f66807d5c88a9d0357f89c5fb7033ab5b7b01",
-    "sourceCommit": "517327ca66afd65ac3d1224b272354833ede884c",
+    "sourceCommit": "fcfa11ad29a81b2a992b5bdcccaebc3e64471e71",
     "trigger": "workflow_dispatch"
   },
   "automaticTriggerProof": {
     "verified": true,
     "kind": "automatic-recovery",
-    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46096283766",
+    "originRun": "https://github.com/SHTFTV/loveourlistings.com/actions/runs/46096812627",
     "originEvent": "workflow_dispatch",
     "reason": "Verified repository health workflow and GitHub Actions bot"
   },
@@ -290,10 +290,12 @@
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/celebrity-homes/lists/paris-hilton-property-portfolio-1238846702",
-      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
       "propertyId": null,
       "collection": "penthouses",
-      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling"
+      "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
+      "reason": "No usable exact-source featured photo: Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling; Native source image must support1600x900 without upscaling",
+      "retryStatus": "retry-cooldown",
+      "nextAttemptAt": "2026-11-28T08:10:30.481338+00:00"
     },
     {
       "sourceUrl": "https://robbreport.com/shelter/homes-for-sale/glenborrodale-castle-scotland-for-sale-1238849485",
@@ -439,12 +441,12 @@
     "nextAction": "Verify exact current role incident and labeled canary in the existing Command Center reader; no new ingress or credentials required"
   },
   "queueProgress": {
-    "checkedAt": "2026-11-28T02:11:07.113299+00:00",
+    "checkedAt": "2026-11-28T02:17:32.033454+00:00",
     "runtimeState": "running",
     "publicationOutcome": "no-eligible-content",
     "feedsChecked": 7,
     "feedsHealthy": 5,
-    "feedItemsParsed": 108,
+    "feedItemsParsed": 93,
     "feedErrors": [
       {
         "sourceId": "mansion-global",
@@ -498,10 +500,10 @@
       },
       {
         "sourceId": "google-waterfront",
-        "itemsParsed": 29,
-        "parseRejected": 1,
+        "itemsParsed": 14,
+        "parseRejected": 0,
         "dispositions": {
-          "discovery-original-link-required": 29
+          "discovery-original-link-required": 14
         }
       },
       {
@@ -518,12 +520,12 @@
     "newCandidatesDiscovered": 0,
     "candidatesConsidered": 20,
     "inScopeQueueCandidates": 19,
-    "attemptedThisRun": 1,
-    "skippedThisRun": 19,
+    "attemptedThisRun": 0,
+    "skippedThisRun": 20,
     "outcomes": {
       "not-individual-property": 1,
       "quarantined-retry-exhausted": 18,
-      "attempt-failed": 1
+      "retry-cooldown": 1
     },
     "newFeaturesStored": 0,
     "verifiedPublicationsThisRun": 0,
@@ -582,7 +584,7 @@
         "sourceId": "robb-property",
         "title": "Inside Paris Hilton\u2019s $73 Million Property Portfolio",
         "collection": "penthouses",
-        "outcome": "attempt-failed",
+        "outcome": "retry-cooldown",
         "failedAttempts": 3,
         "checks": 3,
         "nextAttemptAt": "2026-11-28T08:10:30.481338+00:00",
@@ -771,49 +773,49 @@
       }
     ]
   },
-  "lastRunAt": "2026-11-28T02:10:30.481338+00:00",
+  "lastRunAt": "2026-11-28T02:16:57.522810+00:00",
   "status": "no-eligible-content",
   "sources": [
     {
       "id": "sothebys-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
       "items": 10
     },
     {
       "id": "robb-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
       "items": 10
     },
     {
       "id": "mansion-global",
       "status": "error",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
       "items": 0
     },
     {
       "id": "christies-property",
       "status": "error",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
       "items": 0
     },
     {
       "id": "google-luxury",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
       "items": 30
     },
     {
       "id": "google-waterfront",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
-      "items": 29
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
+      "items": 14
     },
     {
       "id": "countrylife-property",
       "status": "ok",
-      "fetchedAt": "2026-11-28T02:10:30.481338+00:00",
+      "fetchedAt": "2026-11-28T02:16:57.522810+00:00",
       "items": 29
     }
   ],
@@ -856,8 +858,8 @@
     }
   ],
   "googleDiscoveryItems": 0,
-  "duplicatesFiltered": 118,
-  "quarantinedItems": 3,
+  "duplicatesFiltered": 103,
+  "quarantinedItems": 1,
   "lastVerifiedFeatures": [
     {
       "slug": "we-love-penthouses-2026-11-25-a78790d186",
